@@ -1,0 +1,10 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_employee_checklist_user,employee.checklist.user,model_employee_checklist,hr.group_hr_user,1,1,1,1
+access_hr_employee_checklist_emp,employee.checklist.emp,model_employee_checklist,base.group_user,1,0,0,0
+access_hr_employee_document_employee,hr.employee.document_employee,model_hr_employee_document,base.group_user,1,0,0,0
+access_hr_employee_document_manager,hr.employee.document_manager,model_hr_employee_document,hr.group_hr_manager,1,1,1,1
+access_hr_employee_document_user,hr.employee.document_user,model_hr_employee_document,hr.group_hr_user,1,1,1,0
+access_membership_types_hr,Access.membership_types_hr,model_membership_types,hr.group_hr_user,1,1,1,1
+access_membership_types_emp,Access.membership_types_emp,model_membership_types,base.group_user,1,0,0,0
+access_membership_categorys_hr,Access.membership_categorys_hr,model_membership_categorys,hr.group_hr_user,1,1,1,1
+access_membership_categorys_emp,Access.membership_categorys_emp,model_membership_categorys,base.group_user,1,0,0,0

@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        inheriting hr_employee form view
+        <record model="ir.ui.view" id="hr_employee_salary_scale_inherited_form_view">
+            <field name="name">hr.employee.form.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='bank_info']" position="after">
+                    <group col="2">
+                        <group string="Salary Scale" name="salary_scale">
+                            <field name="salary_scale" widget="selection" readonly="1"/>
+                            <field name="salary_level" widget="selection" readonly="1"/>
+                            <field name="salary_group" widget="selection" readonly="1"/>
+                            <field name="salary_degree" widget="selection" readonly="1"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

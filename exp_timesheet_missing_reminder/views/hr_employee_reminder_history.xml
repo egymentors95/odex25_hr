@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Hr Reminder History form view-->
+        <record id="hr_employee_history_reminder" model="ir.ui.view">
+            <field name="name">hr.employee.form.history.reminder</field>
+            <field name="model">hr.employee.history.reminder</field>
+            <field name="arch" type="xml">
+                <form create="0" delete="0" edit="false">
+                    <sheet>
+                        <group>
+                            <field name="employee_id"/>
+                            <field name="date"/>
+                            <field name="is_completed_timesheet"/>
+                        </group>
+                        <group>
+                            <field name="actual_hour"/>
+                            <field name="entered_hour"/>
+                            <field name="break_hour"/>
+                            <field name="overtime_hour"/>
+                            <field name="miss_hour"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Hr Reminder History tree view-->
+        <record id="hr_employee_history_reminder_tree" model="ir.ui.view">
+            <field name="name">hr.employee.form.history.reminder.tree</field>
+            <field name="model">hr.employee.history.reminder</field>
+            <field name="arch" type="xml">
+                <tree create="0" delete="0" edit="false">
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="hr_employee_reminder_history_action">
+            <field name="name">Hr employee reminder</field>
+            <field name="res_model">hr.employee.history.reminder</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_hr_employee_history_reminder" name="History Reminder"
+                  parent="hr_timesheet.menu_hr_time_tracking"
+                  action="hr_employee_reminder_history_action"
+                  sequence="8"/>
+    </data>
+</odoo>

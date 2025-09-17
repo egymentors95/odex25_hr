@@ -1,0 +1,493 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* exp_timesheet_missing_reminder
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-19 07:00+0000\n"
+"PO-Revision-Date: 2022-09-19 07:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: exp_timesheet_missing_reminder
+#: model:mail.template,body_html:exp_timesheet_missing_reminder.timesheet_monthly_reminder_email_notify
+msgid ""
+"\n"
+"                \n"
+"                      <div style=\"text-align: right;direction:rtl\">\n"
+"                         <p style=\"text-align: right\">السادة الفضلاء:}</p>\n"
+"                        <p style=\"text-align: left\">حفظهم الله،،</p>\n"
+"                        <p style=\"font-size: 1.1em;text-align: right\">\n"
+"                            السلام عليكم ورحمة الله.\n"
+"                        </p>\n"
+"                        <p style=\"font-size: 1.1em;text-align: right\">\n"
+"                           الرجاء تعبئة الايام المفقوده\n"
+"                        </p><br/>\n"
+"                        <p style=\"font-size: 1em;text-align: right\">\n"
+"                        </p><br/>\n"
+"                        <p style=\"font-size: 1.1em;text-align: right\">\n"
+"                            <a href=\"${user.company_id.website}\">${user.company_id.name}</a>\n"
+"                        </p>\n"
+"                    </div>\n"
+"                \n"
+"            "
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model:mail.template,body_html:exp_timesheet_missing_reminder.timesheet_daily_reminder_email_notify
+msgid ""
+"\n"
+"                \n"
+"                    <div style=\"text-align: right;direction:rtl\">\n"
+"                         <p style=\"text-align: right\">السادة الفضلاء:}</p>\n"
+"                        <p style=\"text-align: left\">حفظهم الله،،</p>\n"
+"                        <p style=\"font-size: 1.1em;text-align: right\">\n"
+"                            السلام عليكم ورحمة الله.\n"
+"\n"
+"                        </p>\n"
+"                        <p style=\"font-size: 1.1em;text-align: right\">\n"
+"                           الرجاء تعبئة الايام المفقوده\n"
+"                        </p><br/>\n"
+"                        <p style=\"font-size: 1em;text-align: right\">\n"
+"                        </p><br/>\n"
+"                        <p style=\"font-size: 1.1em;text-align: right\">\n"
+" <a href=\"${user.company_id.website}\">${user.company_id.name}</a>\n"
+"                        </p>\n"
+"                    </div>\n"
+"                \n"
+"            "
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model:mail.template,subject:exp_timesheet_missing_reminder.timesheet_week_reminder_email_notify
+msgid "  تذكير اسبوعي بتقرير المهام اليومية  "
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model:mail.template,subject:exp_timesheet_missing_reminder.timesheet_monthly_reminder_email_notify
+msgid "  تذكير شهري بتقرير المهام اليومية  "
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model:mail.template,subject:exp_timesheet_missing_reminder.timesheet_daily_reminder_email_notify
+msgid "  تذكير يومي بتقرير المهام اليومية  "
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.actions.report,name:exp_timesheet_missing_reminder.action_report_reminded
+msgid "\"Reminded Employee"
+msgstr "تذكير الموظفين"
+
+#. module: exp_timesheet_missing_reminder
+#: model:mail.template,body_html:exp_timesheet_missing_reminder.timesheet_week_reminder_email_notify
+msgid ""
+"<div>\n"
+"                        <p>السلام عليكم ورحمة الله</p>\n"
+"                        <br/>\n"
+"                        <p>  السيد\\ة  test2  مع التحية</p>\n"
+"                        <br/>\n"
+"                        <p> تقرير الأعمال اليومي الخاص بكم في النظام لم يغط  الأوقات المطلوبة منكم حسب الجدول التالي:\n"
+"\n"
+"، نأمل إبداء الأسباب خلال \n"
+"يوم واحد فقط للنظر فيها، وفي حال لم ترسل الأسباب أو أرسلت ولم تكن مقنعة نظاما، سيتم خصم ساعات الغياب من راتبك الشهري.\n"
+"إن عدم تغطية الأوقات الفعلية لكم بدون أسباب مقبولة منكم هو تقصير تستحقون عليه الإنذار. </p>\n"
+"                        </div>\n"
+"                        <center>\n"
+"                          <table style=\"margin-top:30px;color:#666666;border: 1px solid black\">\n"
+"                                <thead>\n"
+"                                    <tr style=\"color:#9A6C8E; font-size:12px;border: 1px solid black\">\n"
+"                                        <th style=\"border: 1px solid gray\" text-align:right\" align=\"center\">الساعات</th>\n"
+"                                        <th style=\"border: 1px solid gray\" text-align:right\" align=\"center\">التاريخ</th>\n"
+"                                        <th style=\"border: 1px solid gray\" text-align:right;\" align=\"center\">الايام</th>\n"
+"                                    </tr>\n"
+"                                </thead>\n"
+"                                <tbody>\n"
+"                                % for line in [['2022-09-11', 'Sunday', 8.0, 8.0, 0.0], ['2022-09-12', 'Monday', 8.0, 8.0, 0.0], ['2022-09-13', 'Tuesday', 8.0, 8.0, 0.0], ['2022-09-14', 'Wednesday', 8.0, 8.0, 0.0], ['2022-09-15', 'Thursday', 8.0, 8.0, 0.0]]:\n"
+"                                    <tr style=\"border: 1px solid gray\">\n"
+"                                     <td style=\"padding: 20px;margin:5px;border: 1px solid gray\" align=\"left\">\n"
+"                                                      ${line[2]}\n"
+"                                                  </td>\n"
+"                                        <td style=\"padding: 20px;margin:5px;border: 1px solid gray\" align=\"left\">\n"
+"                                            ${line[0]}\n"
+"                                        </td>\n"
+"                                        <td style=\"padding: 20px;margin:5px;border: 1px solid gray\" align=\"right\">\n"
+"                                        ${line[1]}\n"
+"                                        </td>\n"
+"                                    </tr>\n"
+"                                % endfor\n"
+"                                </tbody>\n"
+"                            </table>\n"
+"                            </center>\n"
+"                        "
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.approve_timesheet_view
+msgid "<span>All selected Timesheet will be Approved Are You Sure?</span>"
+msgstr "<span>هل انت متاكد من إعتماد هذه الجداول الزمنية؟</span>"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__actual_hour
+msgid "Actual"
+msgstr "الساعات الفعلية"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model,name:exp_timesheet_missing_reminder.model_account_analytic_line
+msgid "Analytic Line"
+msgstr "البند التحليلي"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.actions.act_window,name:exp_timesheet_missing_reminder.action_approve_multi_timesheet
+#: model:ir.model,name:exp_timesheet_missing_reminder.model_approve_multi_timesheet
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.approve_timesheet_view
+msgid "Approve Multi Timesheet"
+msgstr "إعتماد الجداول الزمنية"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__break_hour
+msgid "Break Hour"
+msgstr "ساعات الراحة"
+
+#. module: exp_timesheet_missing_reminder
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.approve_timesheet_view
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.wizard_reminded_employees_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_resource_calendar__check_timesheet
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.resource_calendar_inherited_timesheet_form
+msgid "Check Timesheet"
+msgstr "الربط مع الجداول الزمنية"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_approve_multi_timesheet__create_uid
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__create_uid
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_timesheet_reminded__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_approve_multi_timesheet__create_date
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__create_date
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_timesheet_reminded__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_timesheet_reminded__date_from
+msgid "Date From"
+msgstr "تاريخ البداية"
+
+#. module: exp_timesheet_missing_reminder
+#: code:addons/exp_timesheet_missing_reminder/wizard/timesheet_reminder_report.py:0
+#, python-format
+msgid "Date From Must Be Greater Than Date To"
+msgstr "يجب ان يكون تاريخ البداية قبل تاريخ النهاية"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_timesheet_reminded__date_to
+msgid "Date To"
+msgstr "التاريخ للإنتهاء"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_timesheet_reminded__department_ids
+msgid "Department"
+msgstr "الهيكل الإداري"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_account_analytic_line__display_name
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_approve_multi_timesheet__display_name
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__display_name
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_timesheet_sheet__display_name
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_report_exp_timesheet_missing_reminder_reminded_report_template__display_name
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_resource_calendar__display_name
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_timesheet_reminded__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model,name:exp_timesheet_missing_reminder.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__employee_id
+msgid "Employee Name"
+msgstr "اسم الموظف"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__entered_hour
+msgid "Entered Hour"
+msgstr "الساعات المدخلة"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.ui.menu,name:exp_timesheet_missing_reminder.menu_hr_employee_history_reminder
+msgid "History Reminder"
+msgstr "حركة التذكير بالجداول الزمنية"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.actions.act_window,name:exp_timesheet_missing_reminder.hr_employee_reminder_history_action
+msgid "Hr employee reminder"
+msgstr "حركة التذكير بالجداول الزمنية"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_account_analytic_line__id
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_approve_multi_timesheet__id
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee__id
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__id
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_timesheet_sheet__id
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_report_exp_timesheet_missing_reminder_reminded_report_template__id
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_resource_calendar__id
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_timesheet_reminded__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__is_completed_timesheet
+msgid "Is completed Timesheet"
+msgstr "جدول زمني كامل"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_account_analytic_line____last_update
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_approve_multi_timesheet____last_update
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder____last_update
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_timesheet_sheet____last_update
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_report_exp_timesheet_missing_reminder_reminded_report_template____last_update
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_resource_calendar____last_update
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_timesheet_reminded____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_approve_multi_timesheet__write_uid
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__write_uid
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_timesheet_reminded__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_approve_multi_timesheet__write_date
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__write_date
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_timesheet_reminded__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.actions.server,name:exp_timesheet_missing_reminder.day_reminder_mail_ir_actions_server
+#: model:ir.cron,cron_name:exp_timesheet_missing_reminder.day_reminder_mail
+#: model:ir.cron,name:exp_timesheet_missing_reminder.day_reminder_mail
+msgid "Late Email Reminder Day"
+msgstr "تذكير بالمهام بإيميل يومي "
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.actions.server,name:exp_timesheet_missing_reminder.monthly_reminder_mail_ir_actions_server
+#: model:ir.cron,cron_name:exp_timesheet_missing_reminder.monthly_reminder_mail
+#: model:ir.cron,name:exp_timesheet_missing_reminder.monthly_reminder_mail
+msgid "Late Email Reminder Month"
+msgstr "تذكير بالمهام بإيميل شهري "
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.actions.server,name:exp_timesheet_missing_reminder.week_reminder_mail_ir_actions_server
+#: model:ir.cron,cron_name:exp_timesheet_missing_reminder.week_reminder_mail
+#: model:ir.cron,name:exp_timesheet_missing_reminder.week_reminder_mail
+msgid "Late Email Reminder Week"
+msgstr "تذكير بالمهام بإيميل اسبوعي "
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__miss_hour
+msgid "Miss Hour"
+msgstr "الساعات الغير مدخلة"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee_history_reminder__overtime_hour
+msgid "Overtime Hour"
+msgstr "الساعات الاضافية"
+
+#. module: exp_timesheet_missing_reminder
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.wizard_reminded_employees_form
+msgid "Print"
+msgstr "طباعة PDF"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.actions.act_window,name:exp_timesheet_missing_reminder.wizard_reminded_employees_action
+msgid "Reminded Employees"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.ui.menu,name:exp_timesheet_missing_reminder.report_reminded_employees_menu
+msgid "Reminded Employees Report"
+msgstr "تقرير تذكير الجداول الزمنية"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model,name:exp_timesheet_missing_reminder.model_resource_calendar
+msgid "Resource Working Time"
+msgstr "فترة عمل المورد"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_hr_employee__skipp_timesheet_reminder
+msgid "Skip Timesheet Reminder"
+msgstr "عدم التذكير بالمهام"
+
+#. module: exp_timesheet_missing_reminder
+#: code:addons/exp_timesheet_missing_reminder/models/extend_hr_timesheet.py:0
+#: code:addons/exp_timesheet_missing_reminder/models/extend_hr_timesheet.py:0
+#: code:addons/exp_timesheet_missing_reminder/models/extend_hr_timesheet.py:0
+#: code:addons/exp_timesheet_missing_reminder/models/extend_hr_timesheet.py:0
+#, python-format
+msgid "Sorry You Can Not Request The TimeSheet Lines %s Earlier Date."
+msgstr "للآسف, لا يمكنك طلب  عناصر الجداول الزمنية بتاريخ %s سابق"
+
+#. module: exp_timesheet_missing_reminder
+#: code:addons/exp_timesheet_missing_reminder/models/extend_hr_timesheet.py:0
+#, python-format
+msgid "Sorry You Can Not Request The TimeSheet Lines %s The Day After %s Hour"
+msgstr ""
+"للآسف, لا يمكنك طلب  عناصر الجداول الزمنية بتاريخ %s اليوم بعد الساعة %s"
+
+#. module: exp_timesheet_missing_reminder
+#: code:addons/exp_timesheet_missing_reminder/models/extend_hr_timesheet.py:0
+#, python-format
+msgid "Sorry You Can Not Request The TimeSheet Lines %s date in advance."
+msgstr "للآسف, لا يمكنك طلب  عناصر الجداول الزمنية بتاريخ %s مقدما"
+
+#. module: exp_timesheet_missing_reminder
+#: code:addons/exp_timesheet_missing_reminder/models/extend_hr_timesheet.py:0
+#, python-format
+msgid "Sorry You TimeSheet Lines %s Not In The TimeSheet Period."
+msgstr "للآسف,تاريخ عناصر الجداول الزمنية %s ليست في فترة الجدول الزمني"
+
+#. module: exp_timesheet_missing_reminder
+#: code:addons/exp_timesheet_missing_reminder/models/extend_hr_timesheet.py:0
+#, python-format
+msgid "Sorry, The Timesheet to Days Before It must be greater than zero."
+msgstr "عذرًا ، يجب أن يكون الجدول الزمني إلى الأيام السابقة أكبر من صفر"
+
+#. module: exp_timesheet_missing_reminder
+#: code:addons/exp_timesheet_missing_reminder/models/extend_hr_timesheet.py:0
+#, python-format
+msgid "Sorry, The Timesheet to Hours Before It must be greater than zero."
+msgstr "عذرًا ، يجب أن يكون الجدول الزمني للساعات السابقة أكبر من صفر"
+
+#. module: exp_timesheet_missing_reminder
+#: code:addons/exp_timesheet_missing_reminder/models/extend_hr_timesheet.py:0
+#, python-format
+msgid "Sorry, The Timesheet to Hours Before It must be less than 24 Hour."
+msgstr "عذرًا ، يجب أن يكون الجدول الزمني للساعات السابقة اقل من 24 ساعة"
+
+#. module: exp_timesheet_missing_reminder
+#: code:addons/exp_timesheet_missing_reminder/models/approve_multi.py:0
+#, python-format
+msgid "There is No Timesheet in Confirm state to Approve."
+msgstr "لا توجد جداول زمنية في حالة انتظار موافقة حتى تعتمد."
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,help:exp_timesheet_missing_reminder.field_resource_calendar__exc_user_id
+msgid "This User To Request Timesheet for Exception all Rules"
+msgstr "يقوم هذا المستخدم بالإستثناء من القواعد لطلب الجداول الزمنية للموظفين"
+
+#. module: exp_timesheet_missing_reminder
+#: model_terms:ir.actions.act_window,help:exp_timesheet_missing_reminder.action_approve_multi_timesheet
+msgid "This wizard will Approve all selected timesheet"
+msgstr "هذا المعالج لاعتماد اكثر من جداول زمنية مع بعض"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_resource_calendar__timesheet_day_before
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.resource_calendar_inherited_timesheet_form
+msgid "Timesheet Days Before"
+msgstr "طلب جدول الزمنية قبل ايام"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_resource_calendar__timesheet_hour_before
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.resource_calendar_inherited_timesheet_form
+msgid "Timesheet Hours Before"
+msgstr "طلب جدول الزمنية قبل الساعة"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model,name:exp_timesheet_missing_reminder.model_hr_timesheet_sheet
+msgid "Timesheet Sheet"
+msgstr "سجل الدوام"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,help:exp_timesheet_missing_reminder.field_resource_calendar__timesheet_day_before
+msgid "To Request Timesheet for Previous days Not Exceed these Days"
+msgstr "لطلب الجداول الزمنية لايام سابقة عدم تجاوز هذه الايام"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,help:exp_timesheet_missing_reminder.field_resource_calendar__timesheet_hour_before
+msgid "To Request Timesheet for Previous days, Not to Exceed This Hour"
+msgstr "لطلب الجداول الزمنية لايام سابقة بعدم تجاوز هذا الزمن"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model.fields,field_description:exp_timesheet_missing_reminder.field_resource_calendar__exc_user_id
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.resource_calendar_inherited_timesheet_form
+msgid "User Exception"
+msgstr "لإستثناء الموظفين"
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model,name:exp_timesheet_missing_reminder.model_hr_employee_history_reminder
+msgid "hr.employee.history.reminder"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model,name:exp_timesheet_missing_reminder.model_report_exp_timesheet_missing_reminder_reminded_report_template
+msgid "report.exp_timesheet_missing_reminder.reminded_report_template"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model:ir.model,name:exp_timesheet_missing_reminder.model_timesheet_reminded
+msgid "timesheet.reminded"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.reminded_report_template
+msgid "إلى"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.reminded_report_template
+msgid "الموظف"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.reminded_report_template
+msgid "تقرير عدد مرات تذكير الموظفين"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.reminded_report_template
+msgid "عدد الساعات المدخله"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.reminded_report_template
+msgid "عدد الساعات المنسية"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.reminded_report_template
+msgid "عدد مرات التذكير"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.reminded_report_template
+msgid "ملاحظات"
+msgstr ""
+
+#. module: exp_timesheet_missing_reminder
+#: model_terms:ir.ui.view,arch_db:exp_timesheet_missing_reminder.reminded_report_template
+msgid "من تاريخ"
+msgstr ""

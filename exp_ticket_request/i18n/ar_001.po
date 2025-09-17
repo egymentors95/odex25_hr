@@ -1,0 +1,796 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* exp_ticket_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 06:45+0000\n"
+"PO-Revision-Date: 2022-09-13 06:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request_type__account_debit_id
+msgid "Account Debit"
+msgstr "الحساب المدين"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__account_no
+msgid "Account No."
+msgstr "رقم الحساب"
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Account move"
+msgstr "القيود المحاسبيه"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__agent_name
+msgid "Agent Name"
+msgstr "اسم الوكالة"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__air_line
+msgid "AirLine"
+msgstr "خطوط الطيران"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request_type__allowance_name
+msgid "Allowance Name"
+msgstr "اسم البدل"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__from_hr
+#, python-format
+msgid "Another Employee"
+msgstr "موظف آخر"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__ar_agent_name
+msgid "Arabic Agent Name"
+msgstr "اسم الوكالة بالعربي"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline__ar_name
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline_city__ar_name
+msgid "Arabic Name"
+msgstr "الاسم بالعربي"
+
+#. module: exp_ticket_request
+#: model:ir.model,name:exp_ticket_request.model_ir_attachment
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__attach_ids
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Attachments"
+msgstr "المُرفقات"
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "BirthDay"
+msgstr "تاريخ الميلاد"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__ticket_degree__business
+msgid "Business"
+msgstr "أعمال"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__code
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline__code
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline_city__code
+msgid "Code"
+msgstr "الرمز"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__company_id
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline__company_id
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline_city__company_id
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__contact_person
+msgid "Contact Person"
+msgstr "الشخص المتصل"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__contract_duration
+msgid "Contract Duration"
+msgstr "مده العقد"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__contract_end_date
+msgid "Contract End Date"
+msgstr "تاريخ نهاية العقد"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__contract_start_date
+msgid "Contract Start Date"
+msgstr "تاريخ بداية العقد"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__contract_type
+msgid "Contract Type"
+msgstr "نوع العقد"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__cost_of_tickets
+msgid "Cost Of Tickets"
+msgstr "تكلفة التذكرة"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__create_uid
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline__create_uid
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline_city__create_uid
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__create_uid
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request_type__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__create_date
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline__create_date
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline_city__create_date
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__create_date
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request_type__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__department_id
+msgid "Department"
+msgstr "الهيكل الإداري"
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Dependants"
+msgstr "المعالين"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__destination
+msgid "Destination"
+msgstr "الوجهـــات"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__state__submit
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+#, python-format
+msgid "Direct Manager"
+msgstr "انتظار المدير المباشر"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__display_name
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline__display_name
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline_city__display_name
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_dependent__display_name
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__display_name
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request_type__display_name
+#: model:ir.model.fields,field_description:exp_ticket_request.field_ir_attachment__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#, python-format
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__mail
+msgid "E-mail"
+msgstr "البريد الالكتروني"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__ticket_degree__economic
+msgid "Economic"
+msgstr "اقتصاد"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__employee_id
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_tree_view
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#, python-format
+msgid "Employee \"%s\" has no contract"
+msgstr "عقد \"%s\" ليست للموظف"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__employee_dependant
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Employee Dependants"
+msgstr "الموظفين المعالين"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,help:exp_ticket_request.field_hr_ticket_request__contract_end_date
+msgid "End date of the contract (if it's a fixed-term contract)."
+msgstr "تاريخ انتهاء العقد (إذا كان عقدًا محدد المدة)."
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__estimated_ticket_amount
+#, python-format
+msgid "Estimated Cost of Ticket"
+msgstr "تقديرات التذكرة"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__fax
+msgid "Fax No."
+msgstr "رقم الفاكس"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__state__done
+#, python-format
+msgid "Financial Manager"
+msgstr "التصديق النهائي"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__ticket_degree__first
+msgid "First"
+msgstr "الاولى"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__ticket_degree__first_reduced
+msgid "First reduced"
+msgstr "خفض أولا"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__request_for__employee
+msgid "For Employee Only"
+msgstr "للموظف فقط"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__request_for__all
+msgid "For Employee and Family"
+msgstr "للموظف والعائلة"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__request_for__family
+msgid "For Family Only"
+msgstr "للعائلة فقط"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__state__review
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+#, python-format
+msgid "Government Relations"
+msgstr "انتظار العلاقات الحكومية"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__state__confirm
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+#, python-format
+msgid "HR Manager"
+msgstr "انتظار الموارد البشرية"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__id
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline__id
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline_city__id
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_dependent__id
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__id
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request_type__id
+#: model:ir.model.fields,field_description:exp_ticket_request.field_ir_attachment__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,help:exp_ticket_request.field_hr_ticket_request__message_needaction
+#: model:ir.model.fields,help:exp_ticket_request.field_hr_ticket_request__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,help:exp_ticket_request.field_hr_ticket_request__message_has_error
+#: model:ir.model.fields,help:exp_ticket_request.field_hr_ticket_request__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Job"
+msgstr "العمل"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__job_id
+msgid "Job Title"
+msgstr "مسمي وظيفي"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__journal_id
+#, python-format
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent____last_update
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline____last_update
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline_city____last_update
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_dependent____last_update
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request____last_update
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request_type____last_update
+#: model:ir.model.fields,field_description:exp_ticket_request.field_ir_attachment____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__write_uid
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline__write_uid
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline_city__write_uid
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__write_uid
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__write_date
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline__write_date
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline_city__write_date
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__write_date
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__leave_ticket
+msgid "Leave Ticket"
+msgstr "تذاكر اجازة"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__position_type__consultant_director
+#, python-format
+msgid "Managerial"
+msgstr "إداري"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__contract_type__marriage
+msgid "Married"
+msgstr "متزوج"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__mission_check
+msgid "Mission Check"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Mission/Training Not Holiday?"
+msgstr "انتداب/تدريب وليس إجازة؟"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__mobile
+msgid "Mobile"
+msgstr "الجوال"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__move_id
+msgid "Move"
+msgstr "القيد"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__airline_agent__sur_name__mr
+msgid "Mr"
+msgstr "السيد"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__airline_agent__sur_name__mrs
+msgid "Mrs"
+msgstr "السيدة"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline__name
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_airline_city__name
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request_type__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__nationality_id
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__position_type__normal
+#, python-format
+msgid "Normal Job"
+msgstr "وظيفة عادية"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__note
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,help:exp_ticket_request.field_hr_ticket_request__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,help:exp_ticket_request.field_hr_ticket_request__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,help:exp_ticket_request.field_hr_ticket_request__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__ticket_degree__other
+msgid "Other"
+msgstr "اخرى"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__passport_no
+msgid "Passport"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Passport Expiration"
+msgstr "تاريخ انتهاء الجواز"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__passport_expiry_date
+msgid "Passport Expiry Date"
+msgstr "تاريخ انتهاء الجواز"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__passport_issue_date
+msgid "Passport Issue Date."
+msgstr "تاريخ استخراج الجواز"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__passport_issue_place
+msgid "Passport Issue Place"
+msgstr "مكان اصدار جواز السفر"
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Passport Number"
+msgstr "رقم الجواز"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__position_type
+#, python-format
+msgid "Position Type"
+msgstr "نوع الجواز"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__airline_agent__sur_name__president
+msgid "President"
+msgstr "رئيس"
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Re-Draft"
+msgstr "إعادة مسوده"
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#, python-format
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__request_date
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__request_for
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_tree_view
+#, python-format
+msgid "Request For"
+msgstr "المستفيد من الطلب"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__request_type
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_tree_view
+msgid "Request Type"
+msgstr "نوع الطلب"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#, python-format
+msgid "Set This User For Employee Profile"
+msgstr "هذا المستخدم ليس لديه موظف مرتبط"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__contract_type__single
+msgid "Single"
+msgstr "اعزب"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,help:exp_ticket_request.field_hr_ticket_request__contract_start_date
+msgid "Start date of the contract."
+msgstr "تاريخ بداية العقد"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__state
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_tree_view
+msgid "Status"
+msgstr "الحالة "
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Submit"
+msgstr "ارســال"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__sur_name
+msgid "Sur Name"
+msgstr "Sur Name"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_airline_agent__telephone
+msgid "Telephone"
+msgstr "جوال"
+
+#. module: exp_ticket_request
+#: model:ir.model.constraint,message:exp_ticket_request.constraint_airline_agent_code_code_unique
+msgid "The agency code must be unique per company !"
+msgstr "يجب أن يكون رمز الوكالة فريدًا لكل شركة!"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#, python-format
+msgid "There is no total for rule : %s"
+msgstr " %s ليس هنالك قيمة للاستحقاق"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__ticket_check
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request_type__ticket_check
+msgid "Ticket Check"
+msgstr "حجز تذكرة"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__ticket_date
+msgid "Ticket Date"
+msgstr "تاريخ التذكرة"
+
+#. module: exp_ticket_request
+#: model:ir.actions.act_window,name:exp_ticket_request.hr_ticket_request_action
+#: model:ir.model,name:exp_ticket_request.model_hr_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_ir_attachment__ticket_request_id
+#: model:ir.ui.menu,name:exp_ticket_request.hr_ticket_request_menu
+msgid "Ticket Request"
+msgstr "طلب تذكرة"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_dependent__ticket_request_line
+msgid "Ticket Request Line"
+msgstr "طلب التذكرة"
+
+#. module: exp_ticket_request
+#: model:ir.ui.menu,name:exp_ticket_request.hr_employee_ticket_menu
+msgid "Ticketing"
+msgstr "تذاكر السفر"
+
+#. module: exp_ticket_request
+#: model:ir.ui.menu,name:exp_ticket_request.hr_employee_ticket_settining_menu
+msgid "Ticketing Settings"
+msgstr "إعـــدادات التذاكــر"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__ticket_degree
+msgid "Tickets Degree"
+msgstr "درجة التذكرة"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__travel_agent
+msgid "Travel Agent"
+msgstr "وكيل سفر"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__validators_user_ids
+msgid "Validators"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,help:exp_ticket_request.field_hr_ticket_request__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#, python-format
+msgid "Wrong percentage base or quantity defined for salary rule %s (%s)."
+msgstr "خطا في ادخال نسبة الاستحقاقات %s (%s)."
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#, python-format
+msgid "Wrong quantity defined for salary rule %s (%s)."
+msgstr " %s (%s)خطأ التاكد من تعريف قاعده الرواتب "
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#, python-format
+msgid "You are single, can not request ticket for family"
+msgstr "الموظف اعزب لايمكن طلب تذكرة للعائله"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#, python-format
+msgid "You can not cancel account move \"%s\" in state not draft"
+msgstr "لايمكن الغاء القيدالمحاسبي %s اذا كان في حالة غير مبدئي"
+
+#. module: exp_ticket_request
+#: code:addons/exp_ticket_request/models/hr_ticketing.py:0
+#, python-format
+msgid "You can not delete record in state not in draft"
+msgstr "لايمكن حذف السجل في وضع غير مسوده"
+
+#. module: exp_ticket_request
+#: model:ir.model,name:exp_ticket_request.model_airline_agent
+msgid "airline.agent"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model,name:exp_ticket_request.model_hr_airline
+msgid "hr.airline"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model,name:exp_ticket_request.model_hr_airline_city
+msgid "hr.airline.city"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model,name:exp_ticket_request.model_hr_ticket_dependent
+msgid "hr.ticket.dependent"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model,name:exp_ticket_request.model_hr_ticket_request_type
+msgid "hr.ticket.request.type"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_tree_view
+msgid "ticket request"
+msgstr "طلب تذكرة"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request__journal_id
+msgid "دفتر اليومية"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__state__refuse
+msgid "مرفوض"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model:ir.model.fields.selection,name:exp_ticket_request.selection__hr_ticket_request__state__draft
+msgid "مسودة"
+msgstr ""
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid "Are you sure to Rest To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المسوده؟"
+
+
+#. module: exp_ticket_request
+#: model_terms:ir.ui.view,arch_db:exp_ticket_request.hr_ticket_request_form
+msgid ""
+"The Amount of the Ticket is calculated according the type of request or the "
+"class of the ticket destination"
+msgstr "تحسب قيمة التذكرة حسب اسم الاستحقاق في نوع الطلب او حسب درجة التذكرة من الوجهة"
+
+#. module: exp_ticket_request
+#: model:ir.model.fields,field_description:exp_ticket_request.field_hr_ticket_request_type__analytic_account_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"

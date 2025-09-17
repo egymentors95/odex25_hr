@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="contract_form_view" model="ir.ui.view">
+            <field name="name">Contract.Extension</field>
+            <field name="model">hr.contract.extension</field>
+            <field name="arch" type="xml">
+                <form string="Contract Extension">
+                    <header>
+                        <button name="confirm" string="Confirm" class="oe_highlight" type="object" states="draft"
+                                groups="hr.group_hr_user"/>
+                        <!--########## Employee Confirm ###############/-->
+                        <button string="Employee Confirm" name="emp_confirm"  type="object"
+                                class="oe_highlight" groups="base.group_user" attrs="{'invisible':['|',('state','!=','emp_confirm'),('type','!=','extension')]}"/>
+                        <button name="refused" string="Refused" class="oe_highlight" type="object"
+                                groups="base.group_user" attrs="{'invisible':['|',('state','!=','emp_confirm'),('type','!=','extension')]}"/>
+                        <!--#################### End ###################/-->
+                        <button name="direct_manager" string="Direct Manager" class="oe_highlight" type="object" states="confirm"
+                                groups="hr_base.group_division_manager"/>
+                        <button name="refused" string="Refused" class="oe_highlight" type="object" states="confirm"
+                                groups="hr_base.group_division_manager"/>
+
+                        <button name="hr_approve" string="HR Approve" class="oe_highlight" type="object" states="direct_manager"
+                                groups="hr.group_hr_user"/>
+                        <button name="refused" string="Refused" class="oe_highlight" type="object" states="direct_manager"
+                                groups="hr.group_hr_user"/>
+
+                        <button name="draft_state" string="Re-Draft" class="oe_highlight" type="object"
+                                states="refused,hr_approve"
+                                groups="hr.group_hr_user" confirm="Are you sure to Reset To Draft This Record?"/>
+
+                        <field name="state" widget="statusbar"/>
+                    </header>
+
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="employee_id" class="oe_edit_only"/>
+                            <h1>
+                                <field name="employee_id"  attrs="{'readonly':[('state','!=','draft')]}" domain="[('state','=','open')]"/>
+                            </h1>
+                        </div>
+
+                        <group  col="4" string="Employee Information">
+                            <!--field name="employee_no" string="Employee Number" readonly="1"/-->
+                            <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                            <field name="contract_id" required="1" readonly="1" force_save="1"/>
+                            <field name="department_id"  readonly="1" force_save="1"/>
+                            <field name="old_date_from"  readonly="1" force_save="1"/>
+                            <field name="old_date_to"  readonly="1" force_save="1"/>
+                            <field name="type" required="1" attrs="{'readonly':[('state','not in',['draft','confirm'])]}"/>
+                            <field name="end_date" string='End Date' attrs="{'readonly':[('state','not in',['draft','confirm'])],
+                                     'invisible':[('type','!=','end')],'required':[('type','=','end')]}"/>
+                        </group>
+                        <group  col="4" string="Extension Information" attrs="{'invisible':[('type','!=','extension')]}">
+                            <field name="date_from"  attrs="{'readonly':[('state','not in',['draft','confirm'])],'required':[('type','=','extension')]}"/>
+                            <field name="date_to"  attrs="{'readonly':[('state','not in',['draft','confirm'])],'required':[('type','=','extension')]}"/>
+                        </group>
+                        <group  string="Comments">
+                            <field name="comments"  attrs="{'readonly':[('state','not in',['draft','confirm'])]}" required="1"/>
+                        </group>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="contract_tree_view" model="ir.ui.view">
+            <field name="name">Contract.Extension.Tree</field>
+            <field name="model">hr.contract.extension</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'refused'" decoration-info="state == 'draft'" string="Contract Extension">
+                    <field name="employee_no" string="Employee Number"/>
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="type"/>
+                    <field name="state" string="State"/>
+                </tree>
+            </field>
+        </record>
+        <record id="contract_search_view" model="ir.ui.view">
+            <field name="name">Contract.Extension.search</field>
+            <field name="model">hr.contract.extension</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id"/>
+                    <field name="employee_no"/>
+                    <field name="department_id"/>
+                    <field name="type"/>
+                    <field name="state"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="extension_action_view" model="ir.actions.act_window">
+            <field name="name">Contract Extension</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.contract.extension</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+
+            </field>
+        </record>
+
+        <menuitem id="contract_extension_menu" name="Contract Extension" parent="hr.menu_hr_main"
+                  action="extension_action_view"
+                  sequence="3"/>
+    </data>
+</odoo>

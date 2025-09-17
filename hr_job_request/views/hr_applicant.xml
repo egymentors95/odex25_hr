@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_applicant_view_form_inherit" model="ir.ui.view">
+            <field name="name">hr.applicant.form.inherit</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+            <field name="priority">100</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='description']" position="after">
+                    <notebook>
+                    <page string="Employee Applicant Questions">
+                         <field name="applicants_id" string="Applicant Questions" required="True" />
+                         <!--field name="start_compute" string="Invisible field to call compute function" invisible="1"/-->
+
+                        <field name="standard_applicant_employee_line_ids" string="" >
+                            <tree editable="bottom">
+                                <field name="number" string="Number Question" force_save="1"/>
+                                <field name="question" string="Question" force_save="1"/>
+                                <field name="answer" string="Answer Question"  force_save="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                    </notebook>
+                </xpath>
+
+            </field>
+        </record>
+
+       <record id="applicant_questions_form_view" model="ir.ui.view">
+            <field name="name">applicant questions form view</field>
+            <field name="model">applicant.questions</field>
+            <field name="arch" type="xml">
+                <form string="Applicant Questions">
+                    <group>
+                        <field name="name" string="Questions Name" required="1"/>
+                    </group>
+
+                    <field name="standard_applicant_id" string="">
+                        <tree editable="bottom">
+                            <field name="number" string="Number" required="1"/>
+                            <field name="question" string="Question" required="1"/>
+                        </tree>
+                    </field>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_applicant_question_action" model="ir.actions.act_window">
+            <field name="name">Question applicant</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">applicant.questions</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p>
+                <p>
+                    <!-- More details about what a user can do with this object will be OK -->
+                </p>
+            </field>
+        </record>
+<!--Question applicant  -->
+        <menuitem name="Employee Applicant Questions" id="hr_applicant_question"
+                  parent="hr_recruitment.menu_hr_recruitment_configuration" action="hr_applicant_question_action" sequence="14"/>
+
+
+    </data>
+</odoo>

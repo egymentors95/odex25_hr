@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record model="ir.ui.view" id="buy_vacation_form_view">
+            <field name="name">Buy Vacation</field>
+            <field name="model">buy.vacation</field>
+            <field name="arch" type="xml">
+                <form>
+                     <header>
+                        <button name="send" string="Send" class="oe_highlight" type="object" states="draft"/>
+
+                        <button name="d_manager" string="Direct Manager" class="oe_highlight" type="object"
+                                states="send" groups="hr_base.group_division_manager"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object" 
+                                states="send" groups="hr_base.group_division_manager"/>
+
+                        <button name="m_manager" string="Department Manager" class="oe_highlight" type="object"
+                                states="d_manager" groups="hr_base.group_department_manager"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object" 
+                                states="d_manager" groups="hr_base.group_department_manager"/>
+
+
+                        <button name="hr_manager" string="HR Manager" class="oe_highlight" type="object"
+                                states="m_manager" groups="hr.group_hr_manager"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object" 
+                                states="m_manager" groups="hr.group_hr_manager"/>
+
+                        <button name="approve" string="Approved" class="oe_highlight" type="object"
+                                states="hr_manager" groups="hr_base.group_executive_manager"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object" 
+                                states="hr_manager" groups="hr_base.group_executive_manager"/>
+
+                        <button name="draft_state" string="Set To Draft" class="oe_highlight" type="object"
+                                states="approve,refuse" groups="hr.group_hr_manager"
+                                confirm="Are you sure to Reset To Draft This Record?"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,send,d_manager,m_manager,hr_manager,approve,pay,refuse"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="job_id"/>
+                                <field name="department_id"/>
+                                <field name="date" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+                            </group>
+                            <group>
+                                <field name="leave_balance" force_save="1" readonly="1"/>
+                                <field name="monthly_salary" force_save="1" readonly="1"/>
+                                <field name="leave_buy" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+                                <field name="leave_amount" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+                                <field name="journal_id"
+                                       attrs="{'invisible':[('state','not in',('hr_manager','approve','m_manager'))], 'readonly':[('state','!=','m_manager')], 'required': [('state', '=', 'm_manager')]}"/>
+                                <field name="account_debit_id"
+                                       attrs="{'invisible':[('state','not in',('hr_manager','approve','m_manager'))], 'readonly':[('state','!=','m_manager')], 'required': [('state', '=', 'm_manager')]}"/>
+                                <field name="account_move_id" readonly="1"
+                                       attrs="{'invisible':[('state','!=','approve')]}"/>
+                            </group>
+                            <field name="notes" nolabel="1" colspan="4" placeholder="Add a notes..." attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                        <notebook>
+                            <page string="Attachments" name="attachments">
+                                <field name="attach_ids" string="Attachments"
+                                       attrs="{'readonly':[('state','!=','draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="name" string="attachment Name"/>
+                                        <field name="datas" string="file content" widget="binary"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="buy_vacation_tree_view">
+            <field name="name">Buy Vacation</field>
+            <field name="model">buy.vacation</field>
+            <field name="arch" type="xml">
+                <tree decoration-success="state=='approve'" decoration-danger="state == 'refuse'"
+                      decoration-info="state == 'draft'">
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <field name="leave_buy"/>
+                    <field name="leave_amount"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="buy_vacation_action">
+            <field name="name">Buy Vacation</field>
+            <field name="res_model">buy.vacation</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="buy_vacation_tree_view"/>
+        </record>
+
+        <!-- Loans menu -->
+        <menuitem name="Buy Vacation" id="buy_vacation_menu_item"
+                  parent="hr_holidays_community.menu_hr_holidays_my_leaves"
+                  action="buy_vacation_action" sequence="6"/>
+
+    </data>
+</odoo>

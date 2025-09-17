@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="loan_payment_suspension_form_view" model="ir.ui.view">
+            <field name="name">Loan Payment &amp; Suspension Form</field>
+            <field name="model">hr.loan.payment.suspension</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Submit" name="action_submit" states="draft" type="object" class="oe_highlight"
+                                groups="base.group_user"/>
+
+                        <button string="Payroll Officer Approve" name="action_confirm" states="submit" type="object" class="oe_highlight"
+                                groups="hr_loans_salary_advance.group_loan_manager"/>
+                        <button string="Refuse" name="action_refuse" states="submit" type="object" class="oe_highlight"
+                                groups="hr_loans_salary_advance.group_loan_manager"/>
+
+                        <button string="HR Manager Approve" name="action_approve" states="confirm" type="object" class="oe_highlight"
+                                groups="hr.group_hr_manager"/>
+                        <button string="Refuse" name="action_refuse" states="confirm" type="object" class="oe_highlight"
+                                groups="hr.group_hr_manager"/>
+
+                        <button string="Reset to Draft" name="action_reset" states="refuse,approve" type="object" class="oe_highlight"
+                                groups="hr.group_hr_manager" confirm="Are you sure to Reset To Draft This Record?"/>
+
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet string="Loan Payment &amp; Rescheduling">
+                        <group col="1">
+                            <group string="Loan Info" attrs="{'readonly': [('state','!=','draft')]}" col="4" colspan="2">
+                                <field name="employee_id" attrs="{'readonly': [('state','!=','draft')]}" colspan="4"/>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1" colspan="4"/>
+                                <field name="loan_id" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="date" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="remaining_loan_amount" string="Remaining Amount" readonly="1"/>
+                                <field name="type" attrs="{'readonly': [('state','!=','draft')]}"/>
+                                <field name="move_id"
+                                       attrs="{'invisible': [('type','!=','payment'),('state','!=','approve')]}"/>
+                            </group>
+                            <group string="Payment Details" attrs="{'invisible': [('type','!=','payment')]}"
+                                   col="4" colspan="2">
+                                <field name="amount"
+                                       attrs="{'required': [('type','==','payment')],'readonly': [('state','!=','draft')]}"/>
+                                <field name="payment_type"
+                                       attrs="{'required': [('type','==','payment')], 'readonly': [('state','!=','draft')]}"/>
+                                <field name="installment_ids" force_save="1"
+                                       attrs="{'readonly': ['|', ('payment_type','!=','flexible'),('state','!=','draft')]}"
+                                       nolabel="1" colspan="4"/>
+                            </group>
+                            <group string="Rescheduling Details" attrs="{'invisible': [('type','!=','suspension')]}"
+                                   colspan="4">
+                                <field name="suspend_ids" nolabel="1" colspan="4"
+                                       attrs="{'readonly': [('state','!=','draft')]}">
+                                    <tree string="Active Loan Installment"  editable="top">
+                                        <field name="installment_id"
+                                               context="{'suspend_ids':parent.suspend_ids,
+                                                            'unpaid': True,
+                                                            'loan_id':parent.loan_id}" />
+                                        <field name="installment_date" readonly="1" force_save="1"/>
+                                        <field name="date_new" required="1"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="loan_payment_suspension_tree_view">
+            <field name="name">Loan Payment &amp; Rescheduling Tree</field>
+            <field name="model">hr.loan.payment.suspension</field>
+            <field name="arch" type="xml">
+                <tree decoration-success="state=='approve'" decoration-danger="state == 'refuse'" decoration-info="state == 'draft'" string="Loan Payment &amp; Rescheduling">
+                    <field name="date"/>
+                    <field name="employee_id"/>
+                    <field name="loan_id"/>
+                    <field name="type"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="loan_payment_suspension_action">
+            <field name="name">Loan Payment &amp; Rescheduling</field>
+            <field name="res_model">hr.loan.payment.suspension</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="loan_payment_suspension_menu"
+                  name="Loan Payment &amp; Rescheduling"
+                  parent="loans_menu_id"
+                  sequence="2"
+                  action="loan_payment_suspension_action"/>
+    </data>
+</odoo>

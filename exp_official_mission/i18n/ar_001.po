@@ -1,0 +1,2785 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* exp_official_mission
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 06:47+0000\n"
+"PO-Revision-Date: 2022-09-13 06:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "%s %s ending"
+msgstr "إنتهاء %s %s"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "1- Section 1-2 is FULLY COMPLETED before submission."
+msgstr "1- الصفحة 1-2 مكتمل بالكامل قبل التقديم."
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid ""
+"2- Approvals from Superior and HOD have been OBTAINED before submission."
+msgstr "2- تم الحصول على الموافقات من المدير المباشر و رئيس الهيكل الإداري قبل التقديم."
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "3- Submission is done 14 days before commencement of Training."
+msgstr "3- يتم التقديم قبل 14 يومًا من بدء التدريب."
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "4- Support course details are attached together upon submission."
+msgstr "4- يتم إرفاق تفاصيل  الدعم و التدريب معًا عند التقديم."
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid ""
+"<div>\n"
+"                        <p>Dear %s,</p>\n"
+"                        <br/>\n"
+"                        <p>Greetings, we kindly inform you that the %s of the employee %s will end tomorrow.</p>\n"
+"                        <br/>\n"
+"                         <p>Best regards,</p>"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid ""
+"<i class=\"fa fa-check-square-o\"/> Training\n"
+"                                            <i class=\"fa fa-square-o\"/> Workshop\n"
+"                                            <br/>\n"
+"                                            <i class=\"fa fa-square-o\"/> Seminar/Conference\n"
+"                                            <i class=\"fa fa-square-o\"/> Other"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid ""
+"<i class=\"fa fa-square-o\"/> Training\n"
+"                                            <i class=\"fa fa-check-square-o\"/> Workshop\n"
+"                                            <br/>\n"
+"                                            <i class=\"fa fa-square-o\"/> Seminar/Conference\n"
+"                                            <i class=\"fa fa-square-o\"/> Other"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid ""
+"<i class=\"fa fa-square-o\"/> Training\n"
+"                                            <i class=\"fa fa-square-o\"/> Workshop\n"
+"                                            <br/>\n"
+"                                            <i class=\"fa fa-check-square-o\"/> Seminar/Conference\n"
+"                                            <i class=\"fa fa-square-o\"/> Other"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid ""
+"<i class=\"fa fa-square-o\"/> Training\n"
+"                                            <i class=\"fa fa-square-o\"/> Workshop\n"
+"                                            <br/>\n"
+"                                            <i class=\"fa fa-square-o\"/> Seminar/Conference\n"
+"                                            <i class=\"fa fa-check-square-o\"/> Other"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid ""
+"<i class=\"fa fa-square-o\"/> Yes\n"
+"                                        <i class=\"fa fa-square-o\"/> No\n"
+"                                        ."
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "<span>الحد الاعلى للأيجار</span>"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "<span>تأمين سيارة باالايجار</span>"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "<span>عدد الايام</span>"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "<span>نوع السيارة</span>"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "<strong>1.Application</strong>"
+msgstr "<strong>1.تفاصيل التدريب</strong>"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "<strong>2.Objective To Attend</strong>"
+msgstr "<strong>2.الهدف من الحضور</strong>"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "<strong>3.Final Review</strong>"
+msgstr "<strong>3.مراجعة نهائية</strong>"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "<strong>4.Approval</strong>"
+msgstr "<strong>4.التصديق</strong>"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__account_id
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Account"
+msgstr "بند الصرف"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__account_move_id
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_line_form_view
+msgid "Account Move"
+msgstr "القيود المحاسبيه"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Account move"
+msgstr "القيود المحاسبيه"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__move_type__accounting
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+#, python-format
+msgid "Accounting"
+msgstr "الحسابات"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_needaction
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_needaction
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_needaction
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_needaction
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_employee__active_mission_id
+msgid "Active Mission"
+msgstr "المهام والتدريب الحالي"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__activity_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__activity_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__activity_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__activity_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__activity_state
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__activity_state
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__activity_state
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__activity_state
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__activity_type_icon
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__activity_type_icon
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__activity_type_icon
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__activity_type_icon
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__allowance_id
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__type_of_payment__allowance
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+#, python-format
+msgid "Allowance"
+msgstr "الاستحقاقات"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__advantage_id
+msgid "Allowance Employee"
+msgstr "استحقاق الموظف"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Allownace Name"
+msgstr "اسم الاستحقاق"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__amount
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_hr_employee_appraisal
+#: model:ir.model,name:exp_official_mission.model_hr_group_employee_appraisal
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__appraisal_id
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Appraisal"
+msgstr "تقـييم الموظف"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__appraisal_check
+msgid "Appraisal Check"
+msgstr "فحص التقييم"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "HR Approve"
+msgstr "تصديق الموارد البشرية"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__approved_by
+msgid "Approved By"
+msgstr "تصديق بـ"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Approved By CEO"
+msgstr "معتمده بواسطة المدير التنفيذي"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+msgid "Are you sure to Reset To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المسوده؟"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__attach_ids
+msgid "Attach"
+msgstr "روابط"
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_ir_attachment
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_attachment_count
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_attachment_count
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_attachment_count
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_attachment_count
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_oficial_mission_line_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.hr_employees_training_lines_form
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.hr_employees_training_lines_tree
+msgid "Attachments"
+msgstr "المُرفقات"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__balance
+msgid "Balance"
+msgstr "الرصيد"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__car_insurance
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Car Insurance"
+msgstr "تأمين سيارة الإيجار"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__car_type
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Car Type"
+msgstr "نوع السيارة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+msgid "Category"
+msgstr "التصنيف"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Category:"
+msgstr "التصنيف:"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__name
+msgid "Class "
+msgstr "الفئة "
+
+#. module: exp_official_mission
+#: model_terms:ir.actions.act_window,help:exp_official_mission.hr_official_mission_action_hr_employee
+msgid "Click to add a official mission."
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.actions.act_window,help:exp_official_mission.hr_training_action_hr_employee
+msgid "Click to add a training."
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__code
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Comments"
+msgstr "ملاحظات"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__company_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__company_id
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Company"
+msgstr "الشركة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__train_category__conference
+#, python-format
+msgid "Conference"
+msgstr "مؤتمر"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_employee__work_state__consultation
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__work_state__consultation
+#, python-format
+msgid "Consultation"
+msgstr "إستشارة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__country_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__country_id
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Country"
+msgstr "الدولـــة"
+
+#. module: exp_official_mission
+#: model:ir.actions.act_window,name:exp_official_mission.employee_course_name_action
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__course_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__course_name
+#: model:ir.ui.menu,name:exp_official_mission.employee_course_name_menu
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_course_name_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+msgid "Course Name"
+msgstr " أسماء الدورات التدريبية"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Course Title:"
+msgstr "اسم  التدريب"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Course fee:"
+msgstr "تكلفة التدريب"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_job__course_ids
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_hr_job_cours_form_inherit
+msgid "Courses"
+msgstr "المسار التدريبي"
+
+#. module: exp_official_mission
+#: model_terms:ir.actions.act_window,help:exp_official_mission.employee_course_name_action
+msgid "Create New Course Name"
+msgstr "إنشاء كورس جديد"
+
+#. module: exp_official_mission
+#: model_terms:ir.actions.act_window,help:exp_official_mission.mission_destination_action
+msgid "Create New Destination"
+msgstr "انشاء نوع وجهة "
+
+#. module: exp_official_mission
+#: model_terms:ir.actions.act_window,help:exp_official_mission.ticket_class_action
+msgid "Create New Ticket Class"
+msgstr "انشاء نوع فئة تذكرة"
+
+#. module: exp_official_mission
+#: model_terms:ir.actions.act_window,help:exp_official_mission.ticket_request_type_action
+msgid "Create New Ticket Request Type"
+msgstr "انشاء نوع طلب تذكرة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__create_uid
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__create_uid
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__create_uid
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__create_uid
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__create_uid
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination_line__create_uid
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__create_date
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__create_date
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__create_date
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__create_date
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__create_date
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination_line__create_date
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__date
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__date_duration
+msgid "Date Duration"
+msgstr "الفترة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Date Form Must Be Less than Date To"
+msgstr "تاريخ البداية يجب ان يكون قبل او يساوي تاريخ النهاية"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__date_from
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__date_from
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+msgid "Date From"
+msgstr "تاريخ البداية"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+msgid "Date Request"
+msgstr "تاريخ الطلب"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+msgid "Date Requestt"
+msgstr "التاريخ "
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__date_to
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__date_to
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+msgid "Date To"
+msgstr "تاريخ النهاية"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Date from"
+msgstr "تاريخ البداية"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Date to"
+msgstr "تاريخ النهاية"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Date(s) of event:"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "Date:"
+msgstr ": التاريخ"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__day_price
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__day_price
+msgid "Day Price"
+msgstr "مبلغ اليوم"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Day price"
+msgstr "مبلغ اليوم"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__days
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#, python-format
+msgid "Days"
+msgstr "الأيام"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_employee__work_state__delegate
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__work_state__delegate
+#, python-format
+msgid "Delegation"
+msgstr "إيفاد"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__department_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__department_id2
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_mission_filter
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_training
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_especially_hours
+msgid "Department"
+msgstr "الهيكل الإداري"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#, python-format
+msgid "Department Manager"
+msgstr "تصديق مدير الادارة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_employee__work_state__depute
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__work_state__depute
+#, python-format
+msgid "Deputation"
+msgstr "تكليف"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Designation"
+msgstr "المنصب"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__destination
+#: model:ir.ui.menu,name:exp_official_mission.mission_destination_menu
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.mission_destination_form_class_view
+msgid "Destination"
+msgstr "الوجهــــة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination_line__destination_id
+msgid "Destination "
+msgstr "الوجهــــة"
+
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Direct Manager Approve"
+msgstr "تصديق المدير المباشر"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_attendance_transaction__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_employee_appraisal__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_group_employee_appraisal__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_job__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_ticket_request__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_ir_attachment__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination_line__display_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+msgid "Duration"
+msgstr "المدة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Duration Days"
+msgstr "المدة بالايــام"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Duration Hours"
+msgstr "المدة بالساعات"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__duration_type
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__duration_type
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Duration Type"
+msgstr "نوع الفترة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Duration type"
+msgstr "نوع الفترة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__early_exit
+msgid "Early Exit"
+msgstr "زمن خروج مبكر"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_employee__work_state__emission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__work_state__emission
+#, python-format
+msgid "Emission"
+msgstr "إبتعاث"
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_hr_employee
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__employee_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__employee_id
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_mission_filter
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_training
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_especially_hours
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid ""
+"Employee \"%s\" has no contract Please create contract to add line to "
+"advantages"
+msgstr ""
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Employee %s has already take this course."
+msgstr "الموظف %s قام بأخذ الدورة التدريبية مسبقآ"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Employee %s, The course does not follow the career record"
+msgstr "الموظف  %s , الدورة لا تتبع للسجل الوظيفي"
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: exp_official_mission
+#: model:ir.actions.act_window,name:exp_official_mission.employee_training_action
+#: model:ir.ui.menu,name:exp_official_mission.employee_training_menu_item
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+msgid "Employee Training"
+msgstr "الدورات التدريبية"
+
+#. module: exp_official_mission
+#: model:ir.actions.act_window,name:exp_official_mission.employee_official_mission_action
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_tree_view
+msgid "Employee official mission"
+msgstr "الانتدابات ومهام العمل"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_oficial_mission_line_tree_view
+msgid "Employee official mission Line"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model:ir.model.fields,field_description:exp_official_mission.field_training_appraisal_wizard__employee_ids
+msgid "Employees"
+msgstr "الموظفين"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__type_of_mission__external
+#, python-format
+msgid "External"
+msgstr "خارجية"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__fees_amount
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Fees Amount"
+msgstr "مصاريف اخرى"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Financial Details"
+msgstr "التفاصيل المالية"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__type_of_payment__fixed
+#, python-format
+msgid "Fixed amount"
+msgstr "مبلغ ثابت"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_follower_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_follower_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_follower_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_follower_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_channel_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_channel_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_channel_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_channel_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_partner_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_partner_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_partner_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_partner_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,help:exp_official_mission.field_employee_course_name__activity_type_icon
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission__activity_type_icon
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission_employee__activity_type_icon
+#: model:ir.model.fields,help:exp_official_mission.field_mission_destination__activity_type_icon
+#: model:ir.model.fields,help:exp_official_mission.field_ticket_class__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__ticket_cash_request_for__all
+#, python-format
+msgid "For Employee And Family Only"
+msgstr "للموظف والعائلة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__ticket_cash_request_for__employee
+#, python-format
+msgid "For Employee Only"
+msgstr "للموظف فقط"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__ticket_cash_request_for__family
+#, python-format
+msgid "For Family Only"
+msgstr "للعائلة فقط"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "General Information"
+msgstr "المعلومات العامة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#, python-format
+msgid "HR Officer Approval"
+msgstr "مسوؤل الموارد البشرية"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#, python-format
+msgid "HR Approval"
+msgstr "الموارد البشرية"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__hour_duration
+msgid "Hour Duration"
+msgstr "الفترة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__hour_from
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__hour_from
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Hour From"
+msgstr "من الساعة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__hour_price
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__hour_price
+msgid "Hour Price"
+msgstr "مبلغ الساعة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__hour_to
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__hour_to
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Hour To"
+msgstr "الى الساعة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Hour from"
+msgstr "من الساعة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Hour price"
+msgstr "مبلغ الساعة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Hour to"
+msgstr "الى الساعة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Hour to must be greater than hour from."
+msgstr "يجب ان تكون الساعة الى اكبر من الساعة من"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__hours
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#, python-format
+msgid "Hours"
+msgstr "عدد الساعات"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_attendance_transaction__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_contract__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_employee__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_employee_appraisal__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_group_employee_appraisal__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_job__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_ticket_request__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_ir_attachment__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination_line__id
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,help:exp_official_mission.field_employee_course_name__activity_exception_icon
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission__activity_exception_icon
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission_employee__activity_exception_icon
+#: model:ir.model.fields,help:exp_official_mission.field_mission_destination__activity_exception_icon
+#: model:ir.model.fields,help:exp_official_mission.field_ticket_class__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,help:exp_official_mission.field_employee_course_name__message_needaction
+#: model:ir.model.fields,help:exp_official_mission.field_employee_course_name__message_unread
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission__message_needaction
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission__message_unread
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission_employee__message_needaction
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission_employee__message_unread
+#: model:ir.model.fields,help:exp_official_mission.field_mission_destination__message_needaction
+#: model:ir.model.fields,help:exp_official_mission.field_mission_destination__message_unread
+#: model:ir.model.fields,help:exp_official_mission.field_ticket_class__message_needaction
+#: model:ir.model.fields,help:exp_official_mission.field_ticket_class__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,help:exp_official_mission.field_employee_course_name__message_has_error
+#: model:ir.model.fields,help:exp_official_mission.field_employee_course_name__message_has_sms_error
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission__message_has_error
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission__message_has_sms_error
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission_employee__message_has_error
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission_employee__message_has_sms_error
+#: model:ir.model.fields,help:exp_official_mission.field_mission_destination__message_has_error
+#: model:ir.model.fields,help:exp_official_mission.field_mission_destination__message_has_sms_error
+#: model:ir.model.fields,help:exp_official_mission.field_ticket_class__message_has_error
+#: model:ir.model.fields,help:exp_official_mission.field_ticket_class__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_employee__work_state__work
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__work_state__work
+#, python-format
+msgid "In work"
+msgstr "في العمل"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Internal"
+msgstr "داخلية"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_is_follower
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_is_follower
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_is_follower
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_is_follower
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__issuing_ticket
+msgid "Issuing Ticket"
+msgstr "إصدار تذكرة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Issuing Ticket?"
+msgstr "إصدار تذكرة؟"
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_hr_job
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__job_ids
+msgid "Jobs"
+msgstr "الوظائف"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__journal_id
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_attendance_transaction____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_employee_appraisal____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_group_employee_appraisal____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_job____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_ticket_request____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_ir_attachment____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination_line____last_update
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__write_uid
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__write_uid
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__write_uid
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__write_uid
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__write_uid
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination_line__write_uid
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__write_date
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__write_date
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__write_date
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__write_date
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__write_date
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination_line__write_date
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_employee__work_state__legation
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__work_state__legation
+#, python-format
+msgid "Legation"
+msgstr "إنتداب"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__max_of_employee
+msgid "Max Of Employee"
+msgstr "الحد الأعلى للموظفين"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__max_rent
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Max Rent"
+msgstr "الحد الأعل للإيجار"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Max Trainees"
+msgstr "اقصى عدد للمتدربين"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__max_amount
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Maximum Amount"
+msgstr "أقصى مبلغ"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__maximum_days
+msgid "Maximum Days"
+msgstr "الأيام القصوى"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__maximum_hours
+msgid "Maximum Hours"
+msgstr "اقصى ساعات"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__max_request_number
+msgid "Maximum Requests"
+msgstr "أقصى عدد مرات"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Maximum days"
+msgstr "الأيام القصوى"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Maximum hours"
+msgstr "اقصى ساعات"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_has_error
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_has_error
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_has_error
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_has_error
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__min_of_employee
+msgid "Min Of Employee"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Min Trainees"
+msgstr "اقل عدد للمتدربين"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_attendance_transaction__is_official
+#: model:ir.model.fields,field_description:exp_official_mission.field_ir_attachment__mission_id
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__process_type__mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_training_inherit
+#, python-format
+msgid "Mission"
+msgstr "مهام العمل"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_employee__mission_count
+msgid "Mission Count"
+msgstr "عدد المهام"
+
+#. module: exp_official_mission
+#: model:ir.actions.act_window,name:exp_official_mission.mission_destination_action
+msgid "Mission Destination"
+msgstr "الوجهة"
+
+#. module: exp_official_mission
+#: model:ir.actions.report,name:exp_official_mission.official_mission_action_report
+msgid "Mission Form"
+msgstr "نموذج الانتدابات ومهام العمل"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__mission_place
+msgid "Mission Place"
+msgstr "مكان المهمة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__mission_purpose
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+msgid "Mission Purpose"
+msgstr "الغرض من المهمة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_attendance_transaction__official_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_ticket_request__mission_request_id
+msgid "Mission Request"
+msgstr "طلب المهمة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_attendance_transaction__mission_name
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__mission_type
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_line_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_oficial_mission_line_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.mission_type_settings_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_mission_filter
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_training
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_especially_hours
+msgid "Mission Type"
+msgstr "نوع المهمة"
+
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Mission place"
+msgstr "مكان المهمة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__move_type
+msgid "Move Type"
+msgstr "صرف المستحق"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Move type"
+msgstr "صرف المستحق"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__name
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__name
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.mission_destination_form_class_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.ticket_form_class_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.ticket_request_type_form_class_view
+msgid "Name of Class..."
+msgstr "اسم الفئة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Name of mission"
+msgstr "اسم المهمة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Name(as per ID)"
+msgstr "الاسم (حسب المعرف)"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__activity_summary
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__activity_summary
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__activity_summary
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__activity_summary
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__activity_type_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__activity_type_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__activity_type_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__activity_type_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "No"
+msgstr "لا"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "No."
+msgstr ".لا"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "No:"
+msgstr "لا:"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Number of hours to must be greater than hours from"
+msgstr "ساعة البداية يجب ان تكون قبل ساعة النهاية"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,help:exp_official_mission.field_employee_course_name__message_needaction_counter
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission__message_needaction_counter
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission_employee__message_needaction_counter
+#: model:ir.model.fields,help:exp_official_mission.field_mission_destination__message_needaction_counter
+#: model:ir.model.fields,help:exp_official_mission.field_ticket_class__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,help:exp_official_mission.field_employee_course_name__message_has_error_counter
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission__message_has_error_counter
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission_employee__message_has_error_counter
+#: model:ir.model.fields,help:exp_official_mission.field_mission_destination__message_has_error_counter
+#: model:ir.model.fields,help:exp_official_mission.field_ticket_class__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,help:exp_official_mission.field_employee_course_name__message_unread_counter
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission__message_unread_counter
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission_employee__message_unread_counter
+#: model:ir.model.fields,help:exp_official_mission.field_mission_destination__message_unread_counter
+#: model:ir.model.fields,help:exp_official_mission.field_ticket_class__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__official_mission_id
+#: model:ir.ui.menu,name:exp_official_mission.employee_official_mission_menu_item
+msgid "Official Mission"
+msgstr "الانتداب"
+
+#. module: exp_official_mission
+#: model:ir.actions.act_window,name:exp_official_mission.hr_official_mission_action_hr_employee
+msgid "Official Mission Action"
+msgstr "مهام العمل للموظف"
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_hr_official_mission
+msgid "Official mission"
+msgstr "الانتدابات ومهام العمل"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Organiser"
+msgstr "الجهة المنفذة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Organiser/Provider:"
+msgstr "منظم / المصدر:"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#, python-format
+msgid "Other"
+msgstr "أخـــرى"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.custom_external_layout_standard
+msgid ""
+"Page:\n"
+"                        <span class=\"page\"/>\n"
+"                        of\n"
+"                        <span class=\"topage\"/>"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__partner_id
+msgid "Partner"
+msgstr "الشريك"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__move_type__payroll
+#, python-format
+msgid "Payroll"
+msgstr "الرواتب"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid ""
+"Please make sure the following conditions are met before submitting to "
+"Training and Development:"
+msgstr "يرجى التأكد من استيفاء الشروط التالية قبل تقديمها إلى التدريب والتطوير:"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination_line__price
+msgid "Price"
+msgstr "سعر"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__process_type
+msgid "Process Type"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Processed By(HR Manager)"
+msgstr "معالجتها بواسطة (مدير الموارد البشرية)"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "RE-Draft"
+msgstr "إرجاع لمبدئي"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Re-Compute"
+msgstr "حســـاب"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#, python-format
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__refused_by
+msgid "Refused By"
+msgstr "رفض بواسطة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__related_with_financial
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__related_with_financial
+msgid "Related With Financial"
+msgstr "لديها مستحقات مالية"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Related with financial"
+msgstr "ذات الصلة المالية"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Remarks"
+msgstr "ملاحظات"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Remarks:"
+msgstr "ملاحظات"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__rent_days
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Rent Days"
+msgstr "عدد الأيام"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+msgid "Requirement Mission"
+msgstr "متطلبــات المهمة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Requirement Training"
+msgstr "متطلبــات التدريب"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Request To %s Employee %s"
+msgstr "طلب الـ %s للموظف  %s"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__activity_user_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__activity_user_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__activity_user_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__activity_user_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_employee__work_state__secondment
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__work_state__secondment
+#, python-format
+msgid "Secondment"
+msgstr "إعارة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__self_car
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Self Car"
+msgstr "السيارة الخاصة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__train_category__seminar
+#, python-format
+msgid "Seminar"
+msgstr "سمنار"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Send"
+msgstr "إنتظار المدير المباشر"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Sorry The Employee %s Actually Has Overtime Amount For this Period"
+msgstr "للأسف الموظف  %s لا يستحق بدل إنتداب فعليآ  لدية إستحقاق عمل اضافي خلال هذه الفترة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Sorry The Employee %s Actually On Holiday For this Period"
+msgstr "للأسف الموظف %s فعليا في إجازة هذه الفترة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Sorry The Employee %s Actually On %s For this Time"
+msgstr "للأسف الموظف %s فعليا في %s خلال هذه الفترة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Sorry The Employee %s Actually On Permission For this Period"
+msgstr "للأسف الموظف  %s فعليا في اذن هذه الفترة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid ""
+"Sorry the maximum Amount allow for %s is %s and employee %s has Greater than"
+" Maximum Amount."
+msgstr "عفواً  الحد الاقصى لمبلغ %s هو %s وقد تجازو الموظف %s هذا المبلغ."
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid ""
+"Sorry the maximum allowed times for %s is %s and employee %s has already "
+"reached it."
+msgstr "عفواً  الحد الاقصى لطلب %s هو %s وقد إستوفى الموظف %s هذا العدد."
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid ""
+"Sorry the total allowed Period for %s is %s months and employee %s can take "
+"up to %s days only while it currently requesting %s days."
+msgstr "عفوًا المدة المسموح بها ل%s هي %s شهر. الموظف %s يمكنه اخذ حتى %s يوم كحد أقصى والفترة المطلوبة حاليا هي %s يوم."
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Sorry, The Number Of Employees Should Not Be Less Than: %s"
+msgstr "للأسف، يجب ان لا يقل عدد الموظفين عن هذا الحد : %s"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Sorry, The number of Employees Should Not Be exceeded: %s"
+msgstr "للأسف، يجب ان لا يتجاوز عدد الموظفين هذا الحد : %s"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__special_hours
+msgid "Special Hours"
+msgstr "ساعات خاصة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__state
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__state
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_mission_filter
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_training
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_especially_hours
+msgid "State"
+msgstr "الحالة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_oficial_mission_line_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+msgid "Status"
+msgstr "الحالة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,help:exp_official_mission.field_employee_course_name__activity_state
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission__activity_state
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission_employee__activity_state
+#: model:ir.model.fields,help:exp_official_mission.field_mission_destination__activity_state
+#: model:ir.model.fields,help:exp_official_mission.field_ticket_class__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Submit"
+msgstr "إرســال"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Supported By(Immediate Manager)"
+msgstr "بدعم من (المدير المباشر)"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "The Max Or Min Number Of Employees Must be Greater than Zero"
+msgstr "الحد الأعلى او الأقل لعدد الموظفين يجب ان يكون اكبر من الصفر"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "The Request cannot Be completed without Employees"
+msgstr "لايمكن اتمام الطلب دون ادخال موظفين"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid ""
+"The maximum number of employees must be greater than the minimum number of "
+"employees"
+msgstr "الحد الأعلى لعدد الموظفين يجب ان يكون اكبر من الحد الأدني للعدد الموظفين"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "There is no total for rule : %s"
+msgstr " %s :ليس ههنالك قيمة للاستحقاق"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__ticket_cash_request_for
+msgid "Ticket Cash Request For"
+msgstr "طلب تذكرة نقدية ل"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__ticket_cash_request_type
+msgid "Ticket Cash Request Type"
+msgstr "نوع طلب التذاكر النقدية"
+
+#. module: exp_official_mission
+#: model:ir.actions.act_window,name:exp_official_mission.ticket_class_action
+#: model:ir.ui.menu,name:exp_official_mission.ticket_class_menu
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.ticket_form_class_view
+msgid "Ticket Class"
+msgstr "فئات التذاكر"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_contract__ticket_class_id
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination_line__ticket_class_id
+msgid "Ticket Class "
+msgstr "فئات التذاكر"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__ticket_insurance
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Ticket Insurance"
+msgstr "تأمين التذكرة"
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_hr_ticket_request
+msgid "Ticket Request"
+msgstr "طلب تذكرة"
+
+#. module: exp_official_mission
+#: model:ir.actions.act_window,name:exp_official_mission.ticket_request_type_action
+#: model:ir.ui.menu,name:exp_official_mission.ticket_request_type_menu
+msgid "Ticket Request Type"
+msgstr "انواع طلبات التذاكر"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.ticket_request_type_form_class_view
+msgid "Ticket Request type"
+msgstr "انواع طلبات التذاكر"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__class_ids
+msgid "Ticket class"
+msgstr "فئات التذاكر"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Ticket/Cash Request For"
+msgstr "طلب التذكرة لـ"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Ticket/Cash Request Type"
+msgstr "نوع طلب التذكرة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__total_hours
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_line_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.hr_employees_training_lines_form
+msgid "Total Hours"
+msgstr "مجموع الساعات"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_attendance_transaction__total_mission_hours
+msgid "Total Mission Hours"
+msgstr "ساعات المهمة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__total_months
+msgid "Total Periods in Months"
+msgstr "إجمالي الفترات بالشهور"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__train_category
+msgid "Train Category"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__train_cost_emp
+msgid "Train Cost Emp"
+msgstr ""
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_group_employee_appraisal__mission_id
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_training_inherit
+#, python-format
+msgid "Training"
+msgstr "دورة تدريبية"
+
+#. module: exp_official_mission
+#: model:ir.actions.act_window,name:exp_official_mission.hr_training_action_hr_employee
+msgid "Training Action"
+msgstr "التدريب للموظف"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__Training_cost
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Training Cost"
+msgstr "تكلفة مركز التدريب"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__Tra_cost_invo_id
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Training Cost Invoice"
+msgstr "فاتورة مركز التدريب"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_employee__training_count
+msgid "Training Count"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.actions.report,name:exp_official_mission.official_tran_action_report
+msgid "Training Form"
+msgstr "نموذج التدريب"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Training Purpose"
+msgstr "تفاصيل الدورة التدريبية"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Training Requisition Form"
+msgstr "نموذج طلب تدريب"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__type_of_mission
+msgid "Type Of Mission"
+msgstr "نوع المهمة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__type_of_payment
+msgid "Type Of Payment"
+msgstr "طريقة الحساب"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Type of mission"
+msgstr "نوع المهمة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Type of payment"
+msgstr "طريقة الحساب"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,help:exp_official_mission.field_employee_course_name__activity_exception_decoration
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission__activity_exception_decoration
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission_employee__activity_exception_decoration
+#: model:ir.model.fields,help:exp_official_mission.field_mission_destination__activity_exception_decoration
+#: model:ir.model.fields,help:exp_official_mission.field_ticket_class__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_unread
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_unread
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_unread
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_unread
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__message_unread_counter
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__message_unread_counter
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__message_unread_counter
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__message_unread_counter
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Verified By (CSSO)"
+msgstr "تحقق منها بواسطة(CSSO)"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "Verified By (HOD)"
+msgstr "تحقق منها بواسطة مدير الهيكل الإداري"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__visa
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Visa"
+msgstr "التأشيرات"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid ""
+"We as per details stated in below would like to attend the programme above "
+"mentioned:"
+msgstr "نحن حسب التفاصيل المذكورة أدناه نود حضور البرنامج المذكور أعلاه:"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_course_name__website_message_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__website_message_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__website_message_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__website_message_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_ticket_class__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,help:exp_official_mission.field_employee_course_name__website_message_ids
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission__website_message_ids
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission_employee__website_message_ids
+#: model:ir.model.fields,help:exp_official_mission.field_mission_destination__website_message_ids
+#: model:ir.model.fields,help:exp_official_mission.field_ticket_class__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_employee__work_state
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__work_state
+msgid "Work Status"
+msgstr "الوضع الحالي"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__train_category__workshop
+#, python-format
+msgid "Workshop"
+msgstr "ورشة عمل"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Wrong Time Format.!"
+msgstr "صيغة الوقت خطآ.!"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Wrong percentage base or quantity defined for salary rule %s (%s)."
+msgstr " %s (%s)خطأ التاكد نسبة قاعده الرواتب "
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Wrong quantity defined for salary rule %s (%s)."
+msgstr " %s (%s)خطأ التاكد من تعريف قاعده الرواتب "
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Yes"
+msgstr "نعم"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid ""
+"You Can Not Delete Course Name, Because There is a Related Employee Training"
+msgstr "لايمكن حذف اسم الكورس وهناك دورات تدريبية مرتبطه به"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid ""
+"You Can Not Delete Destination Name, Because There is a Related Employee "
+"Missions"
+msgstr "لايمكن حذف اسم الوجهة وهناك مهام عمل  مرتبطه بها"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid ""
+"You Can Not Delete Mission Type, Because There is a Related other record"
+msgstr "لايمكن حذف إعداد المهام وهناك سجل  مرتبطة بها"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid ""
+"You Can Not Delete Ticket Class, Because There is a Related Employee "
+"Contract"
+msgstr "لايمكن حذف فئة التذكرة وهناك عقد موظف  مرتبطه بها"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "You can not delete record in state not in draft"
+msgstr "لا يمكن حذف السجل اذا كان في حالة غير مبدئي"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid ""
+"You can not re-draft official mission because account Invoice with ID \"%s\""
+" in state Not Draft"
+msgstr "لا يمكن ارجاع للحالة المبدئية اذاكان فاتورة التدريب\"%s\" في حالة غير مبدئي"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid ""
+"You can not re-draft official mission because account move with ID \"%s\" in"
+" state Posted"
+msgstr "لا يمكن ارجاع للحالة المبدئية اذاكان القيد المحاسبي\"%s\" في حالة غير مبدئي"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "You do not have account or journal in mission type \"%s\" "
+msgstr "لا يوجد اعداد حساب او يومية لـ \\%s\\ "
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "attachment Name"
+msgstr "اسم المرفق"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "date"
+msgstr "التاريخ"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "date form must be less than date to"
+msgstr "تاريخ البداية يجب ان يكون قبل او يساوي تاريخ النهاية"
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_employee_course_name
+msgid "employee.course.name"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "file content"
+msgstr "محتوى الملف"
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_hr_attendance_transaction
+msgid "hr.attendance.transaction"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_hr_official_mission_employee
+msgid "hr.official.mission.employee"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_hr_official_mission_type
+msgid "hr.official.mission.type"
+msgstr ""
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "mission duration must be less than \"%s\" maximum days in mission type \"%s\" "
+msgstr "يجب ان تكون الفترة اقل من او يساوي \\%s\\ وهي اقصى عدد ايام لـ \\%s\\ "
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid ""
+"mission duration must be less than \"%s\" maximum hours in mission type "
+"\"%s\" "
+msgstr "يجب ان تكون الفترة اقل من او يساوي \\%s\\ وهي اقصى عدد ساعات لـ \\%s\\ "
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_mission_destination
+msgid "mission.destination"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_mission_destination_line
+msgid "mission.destination.line"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_tran_report_template
+msgid "name"
+msgstr "الاسم"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Company working calendar is not configured."
+msgstr "لم يتم ضبط تقويم عمل الشركة."
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__working_days
+msgid "Working Days Only"
+msgstr "أيام عمل فقط"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_employee__work_state__others
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__work_state__others
+#, python-format
+msgid "others"
+msgstr "أخرى"
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_ticket_class
+msgid "ticket.class"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "إعتماد و توجيه سعادة الرئيس التنفيذي"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "إلى"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "اخرى:"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid ""
+"ارجو التكرم بإعتماد تكليف الموظفين المذكورين ادناه لتنفيذ هذه المهمة و ذلك "
+"خلال الفترة المحددة و بإستخدام متطلبات المهمة حسب ما تم ذكره ادناه."
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "استخدام السيارة الخاصة:"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "اسم نائب الادراة الطالبة"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "اشارة الى حاجة إدارة"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__duration_type__days
+msgid "الأيام"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "الادارة"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "التإشيرات:"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "التاريخ"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_employee__work_state__training
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__process_type__training
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__train_category__training
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__work_state__training
+msgid "التدريب"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "التوقيع"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__duration_type__hours
+msgid "الساعات"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "السلام عليكم و رحمة الله و بركاته ,,,"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "المسمى الوظيفي"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "الموضوع تعميد تكليف موظف/موظفين في مهمة رسمية"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "الموظف"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "الي تنفيذ مهمة"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "تامين تذاكر السفر و تحديد خط السير:"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__type_of_mission__internal
+msgid "داخلي"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "ساعة"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "سعادة الرئيس التنفيذي لشركة"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "سلمه الله,,"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "ضع صح"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "عدد الايام"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "عدد الساعات"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__train_category__other
+msgid "غير ذلك"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__issuing_ticket__no
+msgid "لا"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "متطلبات المهمة"
+msgstr ""
+
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__state__send
+msgid "Waiting Direct Manager"
+msgstr "إنتظار المدير المباشر"
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__state__direct_manager
+#, python-format
+msgid "Waiting Department Manager"
+msgstr "إنتظار مدير الادارة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__state__depart_manager
+#, python-format
+msgid "Wait HR Department"
+msgstr "إنتظار الموارد البشرية"
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__state__hr_aaproval
+#, python-format
+msgid "Wait Approval"
+msgstr "إنتظار التصديق"
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__state__approve
+#, python-format
+msgid "Approved"
+msgstr "تم التصديق"
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__state__refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "من"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__issuing_ticket__yes
+msgid "نعم"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.official_mission_report_template
+msgid "يوم"
+msgstr ""
+
+#. module: exp_official_mission
+#: model:ir.actions.act_window,name:exp_official_mission.employee_especially_hours_action
+#: model:ir.ui.menu,name:exp_official_mission.employee_especially_hours_menu_item
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_tree_view
+msgid "Employee Especially Hours"
+msgstr "مهام العمل"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__employee_id
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_mission_filter
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_training
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_especially_hours
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_tree_view
+msgid "Responsible"
+msgstr "مقدم الطلب"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__reference
+msgid "Reference Number"
+msgstr "الرقم المرجعي"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.mission_type_settings_tree_view
+msgid "Mission Name"
+msgstr "الاسم"
+
+#. module: exp_official_mission
+#: model:ir.actions.act_window,name:exp_official_mission.employee_mission_type_settings_action
+#: model:ir.ui.menu,name:exp_official_mission.mission_type_settings_menu_item
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.mission_type_settings_tree_view
+msgid "Mission Type Settings"
+msgstr "إعداد مهام العمل"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Allowance Name"
+msgstr "إسم البدل"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_mission_destination__destination_type
+msgid "Destination Type"
+msgstr "نوع الوجهة"
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__destination_type__mission
+msgid "Mission"
+msgstr "مهام عمل"
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__destination_type__training
+msgid "Training"
+msgstr "دورة تدريبية"
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__destination_type__ticket
+msgid "Ticket"
+msgstr "تذاكر سفر"
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__destination_type__all
+msgid "All"
+msgstr "الكـــل"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__employee_no
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_especially_hours_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_mission_filter
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_training
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_especially_hours
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_mission_filter
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_training
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_especially_hours
+msgid "My Requests"
+msgstr "طلبـاتي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_mission_filter
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_training
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_filter_especially_hours
+msgid "Branch"
+msgstr "الفروع"
+
+#. module: exp_official_mission
+#: model:ir.ui.menu,name:exp_official_mission.hr_employee_training_main_menu
+#, python-format
+msgid "Training"
+msgstr "التدريب"
+
+#. module: exp_official_mission
+#: model:res.groups,name:exp_official_mission.group_hr_training_user
+msgid "Training User"
+msgstr "مسوؤل التدريب"
+
+#. module: exp_official_mission
+#: model:res.groups,name:exp_official_mission.group_hr_training_manager
+msgid "Training Manager"
+msgstr "مدير التدريب"
+
+
+
+#. module: exp_official_mission
+#: model:ir.ui.menu,name:exp_official_mission.hr_employee_official_mission_menu
+msgid "Employees Training Courses"
+msgstr "الدورات التدربية للموظفين"
+
+#. module: exp_official_mission
+#: model:ir.ui.menu,name:exp_official_mission.hr_official_mission_config_menu
+msgid "Configurations"
+msgstr "الاعدادات"
+
+#. module: exp_official_mission
+#: model:ir.actions.act_window,name:exp_official_mission.hr_employees_training_lines_action
+msgid "Employees Official Mission"
+msgstr ""
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.hr_employees_training_lines_form
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.hr_employees_training_lines_tree
+msgid "Employee Status"
+msgstr "الحالة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission__state__draft
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_employee__status__draft
+#, python-format
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.hr_employees_training_lines_form
+msgid "Approve"
+msgstr "موافقة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_employee__status__approved
+#, python-format
+msgid "Approved"
+msgstr "تمت الموافقة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_employee__status__done
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.hr_employees_training_lines_form
+#, python-format
+msgid "Done"
+msgstr "تم الحضور"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.hr_employees_training_lines_form
+msgid "Refuse"
+msgstr "رفض"
+
+
+#. module: exp_official_mission
+#: model:ir.ui.menu,name:exp_official_mission.hr_employee_training_types_config_menu
+msgid "Training Types"
+msgstr "انواع التدريب"
+
+#. module: exp_official_mission
+#: model:ir.ui.menu,name:exp_official_mission.hr_official_mission_report_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: exp_official_mission
+#: model:ir.ui.menu,name:hr_base_reports.employee_training_report_menu
+msgid "Training Report"
+msgstr "تقرير التدريب"
+
+#. module: exp_official_mission
+#: model:ir.module.category,description:exp_official_mission.module_category_hr_employee_training
+msgid "Helps to Manage Employee Training Process..."
+msgstr "يساعد في إدارة عملية تدريب الموظفين"
+
+#. module: exp_official_mission
+#: model_terms:ir.actions.act_window,help:exp_official_mission.hr_employees_training_lines_action
+msgid "Click to add a Employee Training Course."
+msgstr "اضغط لإضافة دورة تدريبية للموظف"
+
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.hr_employees_training_lines_form
+msgid "Set to Draft"
+msgstr "ارجاع الى مسودة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Add Employees"
+msgstr "إضافة موظفين"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_employee_mission_selection_wizard__employee_ids
+msgid "Employees"
+msgstr "الموظفين"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_mission_selection_wizard_form
+msgid "Add"
+msgstr "إضافه"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_employee_mission_selection_wizard_form
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_training_appraisal_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Add Employees to Mission"
+msgstr "إضافة موظفين للدورة التدريبية"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "You must Approve all Employees Line First."
+msgstr "يجب عمل تصديق لجميع الموظفين اولا"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__trainer_id
+msgid "Trainer"
+msgstr "المدرب"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__training_details
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__training_details
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Training Details"
+msgstr "تفاصيل الدورة التدريبية"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Training Table"
+msgstr "جدول الدورة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Description"
+msgstr "وصف"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Trainer"
+msgstr "المدرب"
+
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.actions.act_window,name:exp_official_mission.action_training_appraisal_wizard
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.view_training_appraisal_wizard_form
+#, python-format
+msgid "Training Course Appraisal"
+msgstr "تقييم الدورة التدريبية"
+
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_appraisal_result__appraisal_plan_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_training_appraisal_wizard__appraisal_plan_id
+msgid "Appraisal Plan"
+msgstr "خطة التقييم"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_employee_appraisal__mission_id
+msgid "Training Course"
+msgstr "الدورة التدريبية"
+
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_employee_appraisal__course_name
+msgid "Course Name"
+msgstr " اسم الدورة التدريبية"
+
+#. module: exp_official_mission
+#: model:ir.model,name:exp_official_mission.model_appraisal_result
+#: model:ir.model.fields,field_description:exp_official_mission.field_appraisal_plan__appraisal_result_ids
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_employee__appraisal_result
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+msgid "Appraisal Result"
+msgstr "نتيجة التقييم"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_training_form_view
+#, python-format
+msgid "Employees Appraisal"
+msgstr "تقييم الموظفين"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_employee__status__direct_manager
+#, python-format
+msgid "Waiting Direct Manager"
+msgstr "في انتظار المدير المباشر"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission__hr_nomination
+msgid "HR Nomination"
+msgstr "الترشيح بواسطة الموارد البشرية"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Sorry, The Approval For The Direct Manager '%s' Only OR HR Manager!"
+msgstr "للأسف، لموافقة المدير المباشر '%s' فقط او مدير الموارد البشرية !"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+msgid "Sorry, The Refuse For The Direct Manager '%s' Only OR HR Manager!"
+msgstr "للأسف، لرفض المدير المباشر '%s' فقط او مدير الموارد البشرية !"
+
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Sorry, The Approval For The Department Manager %s Only OR HR Manager!"
+msgstr "للأسف، لموافقة مدير الادارة '%s' فقط او مدير الموارد البشرية !"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+msgid "Sorry, The Refuse For The Department Manager %s Only OR HR Manager"
+msgstr "للأسف، لرفض مدير الادارة '%s' فقط او مدير الموارد البشرية !"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__max_days_year
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Max Days Year"
+msgstr "اقصى ايام للسنة"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Sorry The Employee %s, The Number of Requests Cannot Exceed %s Maximum Days Per year."
+msgstr "للأسف الموظف %s, لايمكن تجاوز عدد ايام الطلبات %s يوم وهي اقصى أيام للإنتدابات بالسنة."
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "The mission date %(date)s must be between destination's date from %(date_from)s and date to %(date_to)s."
+msgstr "يجب أن يكون تاريخ المهمة %(date)s بين تاريخ البداية %(date_from)s وتاريخ النهاية %(date_to)s للوجهة."
+
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Sorry The Employee %s Cannot Exceed %s Days, This Maximum Days Per year."
+msgstr "للأسف الموظف %s, لايمكن تجاوز عدد %s يوم, وهي اقصى أيام للإنتدابات بالسنة."
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__approve_by
+msgid "Approve By"
+msgstr "تصديق بواسطة"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Accounting Info"
+msgstr "اعداد الحسابات"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__transfer_by_emp_type
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Transfer By Emp Type"
+msgstr "ترحيل حسب نوع الموظف"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_mission_type_account__emp_type_id
+msgid "Employee Type"
+msgstr "نوع الموظف"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_mission_type_account__debit_account_id
+msgid "Debit Account"
+msgstr "بند الصرف"
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "You Must Enter The Journal Name Mission Type %s."
+msgstr "يجب إدخال اعدادات اسم دفتر اليومية لـ %s."
+
+#. module: exp_official_mission
+#: code:addons/exp_official_mission/models/hr_official_mission.py:0
+#, python-format
+msgid "Employee %s, The Mission %s Has No Account Setting Base On Employee Type."
+msgstr "الموظف %s,لايوجد إعدادات بند الصرف لـ %s حسب نوع الموظف."
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__approve_by__direct_manager
+msgid "Direct Manager"
+msgstr "المدير المباشر"
+
+#. module: exp_official_mission
+#: model:ir.model.fields.selection,name:exp_official_mission.selection__hr_official_mission_type__approve_by__depart_manager
+msgid "HR Department"
+msgstr "الموارد البشرية"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__analytic_account_id
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_hr_official_mission_type__absent_attendance
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+msgid "Absent Attendance"
+msgstr "غياب الحضور"
+
+#. module: exp_official_mission
+#: model_terms:ir.ui.view,arch_db:exp_official_mission.employee_official_mission_type_form_view
+#: model:ir.model.fields,help:exp_official_mission.field_hr_official_mission_type__absent_attendance
+msgid "If there are no attendance, this day will be absent."
+msgstr "في حالة عدم وجود حضور، سيتم اعتبار اليوم غياب"
+
+
+#. module: exp_official_mission
+#: model:ir.model.fields,field_description:exp_official_mission.field_res_partner_training
+msgid "Training"
+msgstr "تدريب"

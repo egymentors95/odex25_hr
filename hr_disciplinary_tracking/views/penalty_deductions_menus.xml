@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <!-- Penalty & Deductions menu  -->
+        <menuitem name="Penalty &amp; Deductions" id="penalty_deductions" parent="hr.menu_hr_root"
+                  sequence="5"
+                  groups="hr_base.group_division_manager,hr.group_hr_user,hr_base.group_executive_manager,hr_base.group_general_manager,base.group_user"/>
+
+        <!-- Penalty & Deductions sub_menu  Penalty Register-->
+        <menuitem name="Penalty Register" id="penalty_egister" parent="hr_disciplinary_tracking.penalty_deductions"
+                  sequence="1" action="penalty_register_action"/>
+
+        <!-- Penalty & Deductions sub_menu  Employee Deductions>
+        <menuitem name="Employee Deductions" id="employee_deductions"
+                  parent="hr_disciplinary_tracking.penalty_deductions"
+                  sequence="2" action="employee_deductions_action"/-->
+
+
+        <!-- Penalty & Deductions sub_menu  configuration-->
+        <menuitem name="Configuration" id="penalty_configuration" parent="hr_disciplinary_tracking.penalty_deductions"
+                  sequence="3" groups="hr.group_hr_user"/>
+
+        <!-- Penalty & Deductions sub_menu  penalty-->
+        <menuitem name="penalty" id="penalty_type" parent="hr_disciplinary_tracking.penalty_configuration"
+                  sequence="3" action="penalty_type_action" groups="hr.group_hr_user"/>
+
+        <!-- Penalty & Deductions sub_sub_menu  from configuration-->
+        <menuitem name="Punishmnet" id="hr_punishmnet" parent="hr_disciplinary_tracking.penalty_configuration"
+                  sequence="3" action="hr_punishment_action" groups="hr.group_hr_user"/>
+        <!--sequence="3" action="penalty_configuration_action"/>-->
+        <menuitem name="Penalty Reports" id="penalty_reports" groups="hr.group_hr_user"
+                  parent="hr_disciplinary_tracking.penalty_deductions" sequence="5"/>
+
+    </data>
+</odoo>

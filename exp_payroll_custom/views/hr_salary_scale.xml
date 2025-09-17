@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="salary_scale_filter_view" model="ir.ui.view">
+            <field name="name">salary.scale.filter.view</field>
+            <field name="model">hr.payroll.structure</field>
+            <field name="arch" type="xml">
+                <search string="Search Salary Scale">
+                    <field name="name" filter_domain="[('name','ilike',self)]"/>
+                    <separator/>
+                    <filter string="Scale" name="scale" domain="[('type','=', 'scale')]"/>
+                    <filter string="Level" name="level" domain="[('type','=', 'level')]"/>
+                    <filter string="Group" name="group" domain="[('type','=', 'group')]"/>
+                    <filter string="Degree" name="degree" domain="[('type','=', 'degree')]"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="salary_scale_record_action" model="ir.actions.act_window">
+            <field name="name">Salary Scale</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.payroll.structure</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('type','=','scale')]</field>
+            <field name="context">{'default_type':'scale', 'search_default_scale': 1}</field>
+            <field name="search_view_id" ref="salary_scale_filter_view"/>
+        </record>
+
+        <record id="salary_scale_form_view" model="ir.ui.view">
+            <field name="name">Salary Scale</field>
+            <field name="model">hr.payroll.structure</field>
+            <field name="inherit_id" ref="exp_hr_payroll.view_hr_employee_grade_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[1]" position="replace">
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button"
+                                   options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
+                        </button>
+                    </div>
+                    <div class="oe_title oe_left">
+                        <div class="oe_edit_only">
+                            <label for="name"/>
+                        </div>
+                        <h1>
+                            <field name="name" default_focus="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="code"/>
+                        <field name="salary_scale_id"
+                               attrs="{'invisible':[('type','=','scale')], 'required':[('type','!=','scale')]}"
+                               domain="[('type','=','scale')]" context="{'default_type': 'scale'}"/>
+                        <field name="salary_scale_level_id"
+                               attrs="{'invisible':[('type','in',('level', 'scale'))], 'required':[('type','not in',('level','scale'))]}"
+                               domain="[('type','=','level')]"
+                               context="{'default_type': 'level'}"/>
+                        <field name="salary_scale_group_id"
+                               attrs="{'invisible':[('type','!=','degree')], 'required':[('type','=','degree')]}"
+                               domain="[('type','=','group')]" context="{'default_type': 'group'}"/>
+                        <field name="company_id" groups="base.group_multi_company" readonly="1" options="{'no_create': True}"/>
+
+                    </group>
+                    <group name="salary_scale">
+                        <group>
+                            <!--                                  <field name="code" string="Code"/>-->
+                            <field name="base_salary" required="1" attrs="{'invisible':[('type', '!=', 'degree')]}"/>
+                            <field name="level_num" required="1" attrs="{'invisible':[('type', '!=', 'scale')]}"/>
+                            <field name="retirement_age" required="1" attrs="{'invisible':[('type', '!=', 'scale')]}"/>
+                        </group>
+                        <group>
+                            <field name="start_date" attrs="{'invisible':[('type', '!=', 'scale')]}"/>
+                            <field name="end_date" attrs="{'invisible':[('type', '!=', 'scale')]}"/>
+                            <field name="transfer_type"
+                                   attrs="{'invisible':[('type', '!=', 'scale')], 'required': [('type','=','scale')]}"/>
+                            <field name="analytic_account_id" string="Analytic Account"  
+                                   attrs="{'invisible':[('type', '!=', 'scale')]}"/>
+                            <field name="groups_number" attrs="{'invisible':[('type', '!=', 'level')]}"
+                                   required="1"/>
+                            <field name="degree_number" required="1" attrs="{'invisible':[('type', '!=', 'group')]}"/>
+                            <field name="gread_min" attrs="{'invisible':[('type', '!=', 'group')]}"/>
+                            <field name="gread_max" attrs="{'invisible':[('type', '!=', 'group')]}"/>
+                            <field name="interval_time" attrs="{'invisible':[('type', '!=', 'degree')]}"/>
+                            <field name="type" invisible="1"/>
+                        </group>
+                    </group>
+                </xpath>
+
+                <xpath expr="//notebook" position="replace">
+                    <notebook attrs="{'invisible':[('type', '!=', 'scale')]}">
+                        <page name="salary_scale_levels" string="Salary Scale Levels">
+                            <field name="salary_scale_levels_ids"
+                                   readonly="1" required="1"/>
+                        </page>
+                        <page name="salary_scale_level_groups" string="Salary Scale Level Groups">
+                            <field name="salary_scale_level_groups_ids"
+                                   readonly="1" required="1"/>
+                        </page>
+                        <page name="salary_scale_level_degrees" string="Salary Scale Level Degrees">
+                            <field name="salary_scale_level_degrees_ids"
+                                   readonly="1" required="1"/>
+                        </page>
+                        <page name="salary_rules" string="Benefits and discounts">
+                            <field name="rule_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="code"/>
+                                    <field name="category_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

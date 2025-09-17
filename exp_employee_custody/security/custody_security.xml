@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="custom_employee_custody_emp_rule" model="ir.rule">
+            <field name="name">Employee: views custody</field>
+            <field name="model_id" ref="model_custom_employee_custody"/>
+            <field name="domain_force">[('employee_id.user_id','=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="custom_employee_custody_division_mgr_rule" model="ir.rule">
+            <field name="name">Division manager: views custody of its subordinates</field>
+            <field name="model_id" ref="model_custom_employee_custody"/>
+            <field name="domain_force">['|',('employee_id.parent_id.user_id','=', user.id),('employee_id.coach_id.user_id','=', user.id)]</field>
+            <field name="groups"
+                   eval="[(4, ref('hr_base.group_department_manager')),(4, ref('hr_base.group_division_manager')),]"/>
+        </record>
+
+        <record id="custom_employee_custody_hr_rule" model="ir.rule">
+            <field name="name">Allow HR : views custody of all employees</field>
+            <field name="model_id" ref="model_custom_employee_custody"/>
+            <field name="domain_force">[(1 ,'=', 1)]</field>
+            <field name="groups" eval="[(4, ref('hr_base.group_executive_manager')),
+                                        (4, ref('hr_base.group_general_manager')),
+                                        (4, ref('hr.group_hr_manager')),
+                                        (4, ref('hr.group_hr_user'))]"/>
+        </record>
+
+        <record id="hr_custody_receiving_emp_rule" model="ir.rule">
+            <field name="name">Employee: views its custody receiving records</field>
+            <field name="model_id" ref="model_hr_custody_receiving"/>
+            <field name="domain_force">[('employee_id.user_id','=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="hr_custody_receiving_division_mgr_rule" model="ir.rule">
+            <field name="name">Division manager: views custody receiving records of its subordinates</field>
+            <field name="model_id" ref="model_hr_custody_receiving"/>
+            <field name="domain_force">['|',('employee_id.parent_id.user_id','=', user.id),('employee_id.coach_id.user_id','=', user.id)]</field>
+            <field name="groups"
+                   eval="[(4, ref('hr_base.group_department_manager')),(4, ref('hr_base.group_division_manager')),]"/>
+        </record>
+
+        <record id="hr_custody_receiving_hr_rule" model="ir.rule">
+            <field name="name">Allow HR : views custody receiving records of all employees</field>
+            <field name="model_id" ref="model_hr_custody_receiving"/>
+            <field name="domain_force">[(1 ,'=', 1)]</field>
+            <field name="groups" eval="[(3, ref('hr_base.group_account_manager')),
+                                        (4, ref('hr_base.group_executive_manager')),
+                                        (4, ref('hr_base.group_general_manager')),
+                                        (4, ref('hr.group_hr_manager')),
+                                        (4, ref('hr.group_hr_user'))]"/>
+        </record>
+
+
+    </data>
+</odoo>

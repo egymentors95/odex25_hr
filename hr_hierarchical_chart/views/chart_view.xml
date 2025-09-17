@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="hr_action_hierarchical_department" model="ir.actions.client">
+            <field name="name">Hierarchical Chart Of Department</field>
+            <field name="tag">hr_department_view</field>
+            <field name="context">{'model': 'hr.department'}</field>
+        </record>
+
+        <menuitem id="menu_hierarchical_chart_department" name="Department Chart"
+                  action="hr_action_hierarchical_department"
+                  parent="hr.menu_human_resources_configuration" sequence="6" groups="hr.group_hr_user"
+
+        />
+        <record id="hr_action_hierarchical_scale" model="ir.actions.client">
+            <field name="name">Hierarchical Chart Of Salary Scale</field>
+            <field name="tag">hr_hierarchical_view</field>
+            <field name="context">{'model': 'hr.payroll.structure'}</field>
+        </record>
+
+        <menuitem id="menu_hierarchical_chart_scale" name="Scale Chart" action="hr_action_hierarchical_scale"
+                  parent="exp_payroll_custom.salary_scale_main_menu" groups="exp_hr_payroll.group_hr_payroll_user"/>
+
+
+<!--        <record id="hr_employee_view_form_inherit_org_chart" model="ir.ui.view">-->
+<!--            <field name="name">hr.employee.view.form.inherit.org_chart</field>-->
+<!--            <field name="model">hr.employee</field>-->
+<!--            <field name="inherit_id" ref="hr.view_employee_form"/>-->
+<!--            <field name="arch" type="xml">-->
+<!--                <xpath expr="//div[@id='o_employee_right']" position="replace">-->
+<!--                </xpath>-->
+<!--                <xpath expr="//notebook//page[@name='hr_settings']" position="after">-->
+
+<!--                    <page string="Organization Chart">-->
+<!--                        <style type="text/css">-->
+<!--                            .not-active {-->
+<!--                            pointer-events: none;-->
+<!--                            cursor: default;-->
+<!--                            }-->
+<!--                        </style>-->
+<!--                        <div id="o_employee_right" style="pointer-events:none;">-->
+<!--                            &lt;!&ndash;                        <h4 class="o_org_chart_title mb16 mt0">Organization Chart</h4>&ndash;&gt;-->
+<!--                            <field class="not-active" name="child_ids" widget="hr_org_chart"/>-->
+<!--                        </div>-->
+<!--                    </page>-->
+<!--                </xpath>-->
+<!--            </field>-->
+<!--        </record>-->
+    </data>
+</odoo>

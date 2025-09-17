@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_termination_emp,hr.termination.emp,model_hr_termination,base.group_user,1,1,1,0
+access_hr_termination,hr.termination.hr.manager,model_hr_termination,hr.group_hr_manager,1,1,1,1
+access_hr_employee,hr.employee,hr.model_hr_employee,base.group_user,1,0,0,0
+access_hr_termination_type_emp,hr.termination.type.emp,model_hr_termination_type,base.group_user,1,0,0,0
+access_hr_termination_type_manager,hr.termination.type.manager,model_hr_termination_type,,hr.group_hr_manager,1,1,1,1
+access_hr_salary_rule_emp,hr.salary.rule.line.emp,model_hr_salary_rule_line,base.group_user,1,1,0,0
+access_hr_termination_patch,hr.termination.patch.hr.user,model_hr_termination_patch,hr.group_hr_user,1,1,1,1
+access_hr_termination_duration,hr.termination.duration.hr.manager,model_hr_termination_duration,hr.group_hr_manager,1,1,1,1
+access_hr_salary_rule_line_manager,hr.salary.rule.line.hr.manager,model_hr_salary_rule_line,hr.group_hr_manager,1,1,1,1
+access_hr_termination_report_emp,hr.termination.report.emp,model_hr_termination_report,base.group_user,1,1,1,0
+access_employee_termination_report_emp,employee.termination.report.emp,model_employee_termination_report,base.group_user,1,1,1,0

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_circular_decision">
+        <t t-call="web.html_container">
+            <t t-call="hr_base.hr_layout">
+                <t t-foreach="docs" t-as="o">
+                    <style>
+                        @font-face {font-family: "Sakkal Majalla"; src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                        format("embedded-opentype"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype");
+                        }
+
+                    </style>
+                    <div class="page" style="font-family:'Sakkal Majalla'!important;font-size:18pt;direction:rtl">
+                        <div>
+                            <h3>
+                                <right>
+                                    <span t-esc="o.date" style="font-size:14pt"/>
+                                </right>
+                            </h3>
+                            <h3>
+                                <strong>
+                                    <center>
+                                        <span t-field="o.name"/>
+                                    </center>
+                                </strong>
+                            </h3>
+                        </div>
+                        <br></br>
+                        <div class="row mb64">
+                            <div t-if="o.terms" style="margin: 40px ;">
+                                <span t-field="o.terms"/>
+                                <!--div align="left" style="margin: 40px ;">
+                                    <span t-field="env.user.company_id.hr_manager_id.user_id.sign_signature"
+                                          t-field-options='{"widget": "image","style":"width: 90px;height:90px;"}'/>
+                                    </div-->
+
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

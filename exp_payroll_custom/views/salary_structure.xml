@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- Salary Structure >
+
+        <record id="structure_base" model="hr.payroll.structure">
+            <field name="code">Scale</field>
+            <field name="name">Salary Scale</field>
+            <field name="transfer_type">all</field>
+            <field name="rule_ids" eval="[(6, 0, [ref('hr_rule_basic'), ref('hr_rule_house'),ref('hr_rule_transport'),ref('hr_rule_gosi')])]"/>
+            <field name="company_id" ref="base.main_company"/>
+        </record-->
+        <!-- advance salary rule -->
+
+
+        <!--record id="hr_rule_basic" model="hr.salary.rule">
+            <field name="name">Basic Salary</field>
+            <field name="sequence" eval="1"/>
+            <field name="code">BASIC Salary</field>
+            <field name="category_id" ref="exp_hr_payroll.ALW"/>
+            <field name="rules_type">salary</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.salary</field>
+        </record>
+
+        <record id="hr_rule_house" model="hr.salary.rule">
+            <field name="name">House Allowance</field>
+            <field name="sequence" eval="2"/>
+            <field name="code">House</field>
+            <field name="category_id" ref="exp_hr_payroll.ALW"/>
+            <field name="salary_type">fixed</field>
+            <field name="related_benefits_discounts" eval="[(6, 0, [ref('hr_rule_basic')])]"/>
+            <field name="rules_type">house</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">percentage</field>
+            <field name="amount_percentage">25</field>
+        </record>
+
+        <record id="hr_rule_transport" model="hr.salary.rule">
+            <field name="name">Transport Allowance</field>
+            <field name="sequence" eval="3"/>
+            <field name="code">Transport</field>
+            <field name="category_id" ref="exp_hr_payroll.ALW"/>
+            <field name="salary_type">fixed</field>
+            <field name="related_benefits_discounts" eval="[(6, 0, [ref('hr_rule_basic')])]"/>
+            <field name="rules_type">transport</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">percentage</field>
+            <field name="amount_percentage">10</field>
+        </record>
+
+        <record id="hr_rule_gosi" model="hr.salary.rule">
+            <field name="name">GOSI Deduction</field>
+            <field name="sequence" eval="4"/>
+            <field name="code">GOSI</field>
+            <field name="category_id" ref="exp_hr_payroll.DED"/>
+            <field name="rules_type">insurnce</field>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result=0
+if contract.employee_id.check_nationality==True and contract.is_gosi_deducted=='yes':
+   result =contract.salary*0.0975
+
+if result > 4387.5:
+   result= 4387.5
+else:
+   result=result</field>
+        </record-->
+
+
+    </data>
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="salary_scale_promotion_form_view" model="ir.ui.view">
+            <field name="name">Salary Scale sequence</field>
+            <field name="model">hr.payroll.structure</field>
+            <field name="inherit_id" ref="exp_payroll_custom.salary_scale_form_view"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//field[@name='interval_time']" position="replace">
+                </xpath>
+                 <xpath expr="//field[@name='type']" position="before">
+                     <field name="time_margin" attrs="{'invisible':[('type', '!=', 'degree')],
+                                                        'required': [('type', '=', 'degree')]}"/>
+                 </xpath>
+             </field>
+        </record>
+    </data>
+</odoo>

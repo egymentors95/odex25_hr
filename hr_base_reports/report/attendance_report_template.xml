@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <template id="employee_attendance_report">
+			<t t-call="web.html_container">
+				<t t-call="hr_base.hr_layout">
+				      <style>
+				            @font-face {font-family: "Sakkal Majalla"; src:
+				            url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+				            url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+				            format("embedded-opentype"),
+				            url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+				            url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+				            url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"); }
+				        </style>
+					<div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+						<table class="table table-condensed table-bordered">
+                    <br></br>                    <br></br>
+							<thead class="text-center">
+								<tr style="width:100%;">
+									<th colspan="17" class="text-center" style="font-size:20px">  Attendance Transaction Report <span t-esc="date_from"/> - <span t-esc="date_to"/></th>
+								</tr>
+								<tr style="background-color: #263f79;width:100%;">
+									<th style="text-align:center;color:#FFFFFF">#</th>
+									<th style="text-align:center;color:#FFFFFF">Date</th>
+									<th style="text-align:center;color:#FFFFFF">Employee ID</th>
+									<th style="text-align:center;color:#FFFFFF">Employee Name</th>
+									<th style="text-align:center;color:#FFFFFF">Department</th>
+									<th style="text-align:center;color:#FFFFFF">Job Title</th>
+									<!--									<th >Swap In Date</th>-->
+									<th style="text-align:center;color:#FFFFFF">Swap In Time</th>
+									<th style="text-align:center;color:#FFFFFF">Swap out Time</th>
+									<th style="text-align:center;color:#FFFFFF">Lateness Hours</th>
+									<th style="text-align:center;color:#FFFFFF">Extra Hours</th>
+									<th style="text-align:center;color:#FFFFFF">Leave Name</th>
+									<th style="text-align:center;color:#FFFFFF">Excuse Start Time</th>
+									<th style="text-align:center;color:#FFFFFF">Excuse End Time</th>
+									<th style="text-align:center;color:#FFFFFF">Total Employee Late Hours</th>
+									<th style="text-align:center;color:#FFFFFF">Total Late Department</th>
+									<th style="text-align:center;color:#FFFFFF">Total Cost</th>
+								</tr>
+							</thead>
+							<tbody class="text-center">
+								<t t-set="sequence" t-value="0"/>
+								<t t-foreach="docs[0]" t-as="o">
+									<t t-set="attendance_value" t-value="o.get_attendance_value(o.employee_id,docs[1])"/>
+									<t t-set="start" t-value="o.employee_id.get_time_permission(o.personal_permission_id)"/>
+									<tr>
+										<td>
+											<t t-set="sequence" t-value="sequence +1"/>
+											<t t-esc="sequence"/>
+										</td>
+										<td style="text-align:center;white-space: nowrap;">
+											<span t-esc="o.date"/>
+										</td>
+										<td>
+											<span t-esc="o.employee_id.emp_no"/>
+										</td>
+										<td>
+											<span t-esc="o.employee_id.name"/>
+										</td>
+										<td>
+											<t t-esc="o.employee_id.department_id.name"/>
+										</td>
+										<td>
+											<t t-esc="o.employee_id.job_id.name"/>
+										</td>
+										<td>
+											<t t-esc="'%02d:%02d' % (int(str(o.sign_in).split('.')[0]), int(float(str('%.2f' % o.sign_in).split('.')[1])/100*60))"/>
+										</td>
+										<td>
+											<t t-esc="'%02d:%02d' % (int(str(o.sign_out).split('.')[0]), int(float(str('%.2f' % o.sign_out).split('.')[1])/100*60))"/>
+										</td>
+										<td>
+											<t t-esc="'%02d:%02d' % (int(str(o.lateness).split('.')[0]), int(float(str('%.2f' % o.lateness).split('.')[1])/100*60))"/>
+										</td>
+										<td>
+											<t t-esc="'%02d:%02d' % (int(str(o.additional_hours).split('.')[0]), int(float(str('%.2f' % o.additional_hours).split('.')[1])/100*60))"/>
+										</td>
+										<td>
+											<span t-esc="o.holiday_name.name"/>
+										</td>
+										<td>
+											<t t-if="o.personal_permission_id">
+												<span t-esc="start[0]"/>
+											</t>
+										</td>
+										<td>
+											<t t-if="o.personal_permission_id">
+												<span t-esc="start[1]"/>
+											</t>
+										</td>
+										<td>
+											<t t-esc="'%02d:%02d' % (int(str(round(o.break_duration + o.lateness+o.approve_exit_out)).split('.')[0]), int(float(str('%.2f' % round( o.break_duration + o.lateness+o.approve_exit_out)).split('.')[1])/100*60))"/>
+										</td>
+										<td>
+											<t t-esc="'%02d:%02d' % (int(str(attendance_value[1]).split('.')[0]), int(float(str('%.2f' % attendance_value[1]).split('.')[1])/100*60))"/>
+										</td>
+										<td>
+											<span t-esc="round((o.break_duration + o.lateness+o.approve_exit_out)*attendance_value[0])"/>
+										</td>
+									</tr>
+								</t>
+							</tbody>
+						</table>
+					</div>
+				</t>
+			</t>
+		</template>
+
+        <record id="paperformat_attendance_landscape" model="report.paperformat">
+            <field name="name">PF Attendance Landscape</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">15</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">20</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="employee_attendance_report_act" model="ir.actions.report">
+            <field name="model">hr.attendance.transaction</field>
+            <field name="name">Attendance Transaction</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_base_reports.employee_attendance_report</field>
+            <field name="report_file">hr_base_reports.employee_attendance_report</field>
+            <field name="paperformat_id" ref="paperformat_attendance_landscape"/>
+        </record>
+        <record id="employee_attendance_report_act_xlsx" model="ir.actions.report">
+            <field name="model">hr.attendance.transaction</field>
+            <field name="name">Attendance Transaction Report</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_base_reports.employee_attendance_report_xlsx</field>
+            <field name="report_file">hr_base_reports.employee_attendance_report_xlsx</field>
+        </record>
+    </data>
+</odoo>

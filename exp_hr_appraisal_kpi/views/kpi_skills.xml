@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Skill Form View -->
+    <record id="view_skill_form" model="ir.ui.view">
+        <field name="name">skill.form</field>
+        <field name="model">skill.skill</field>
+        <field name="arch" type="xml">
+            <form string="Skill">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                    </group>
+                    <notebook>
+                        <page string="Items">
+                        <field   widget="section_and_note_one2many" name="items_ids">       
+                            <tree editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="display_type" invisible="1"/>
+                                    <field name="item_id"/>
+                                    <field widget="section_and_note_text" name="name"/>
+                                    <field name="level"/>
+                                  <control>
+                                        <create name="add_product_control" string="Add a Item "/>
+                                        <create name="add_section_control" string="Add a section " context="{'default_display_type': 'line_section'}"/>
+                                        <create name="add_note_control" string="Add a note" context="{'default_display_type': 'line_note'}"/>
+                                    </control>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <!-- Skill Tree View -->
+    <record id="view_skill_tree" model="ir.ui.view">
+        <field name="name">skill.tree</field>
+        <field name="model">skill.skill</field>
+        <field name="arch" type="xml">
+            <tree string="Skills">
+                <field name="name"/>
+                <field name="description"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="skill_search_view" model="ir.ui.view">
+        <field name="name">kpi.skill.search</field>
+        <field name="model">skill.skill</field>
+        <field name="arch" type="xml">
+            <search string="Skill">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="skill_act_window" model="ir.actions.act_window">
+        <field name="name">Skills</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">skill.skill</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                There is no examples click here to add new Skill.
+            </p>
+        </field>
+    </record>
+    <!--        form inherit -->
+    <!-- Inherit Form View to Modify it -->
+    <record id="hr_job_from_extend" model="ir.ui.view">
+        <field name="name">hr.job.extend</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//notebook" position="inside">
+                <page string="Skills">
+                    <field name="item_job_ids" domain="[('display_type','=',False)]"/>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+    <record id="item_tree_view_tree" model="ir.ui.view">
+        <field name="name">item.tree.view.tree</field>
+        <field name="model">skill.item</field>
+        <field name="arch" type="xml">
+            <tree string="item_tree_tree">
+                 <field name="skill_id"/>
+                <field name="item_id"/>
+                <field name="name"/>
+                <field name="level"/>
+                <field name="mark" invisible="1"/>
+            </tree>
+        </field>
+    </record>
+    <!-- Inherit the menu -->
+<!--    <record model="ir.ui.menu" id="hr_base_reports.appraisal_report_menu">-->
+<!--        <field name="groups_id" eval="[(4, ref('exp_hr_appraisal.group_appraisal_user,exp_hr_appraisal.group_appraisal_manager'))]"/>-->
+<!--    </record>-->
+    <!--        end from -->
+    <menuitem name="Skills" id="skill_menu" sequence="1" parent="exp_hr_appraisal_kpi.menu_kpi_goal_skill" groups="exp_hr_appraisal.group_appraisal_user,exp_hr_appraisal.group_appraisal_manager"
+               action="skill_act_window"/>
+
+
+</odoo>

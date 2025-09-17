@@ -1,0 +1,612 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="report_payroll_bank_pdf_docx">
+            <t t-call="web.html_container">
+                <t t-call="hr_base.hr_layout" translation="off">
+                    <style>
+                        @font-face {font-family: "Sakkal Majalla"; src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                        format("embedded-opentype"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype");
+                        }
+
+                    </style>
+                    <div class="page" style="font-family: 'Sakkal Majalla'!important;font-size:14pt;direction:rtl">
+                        <t t-set="sequence" t-value="0"/>
+                        <t t-foreach="data" t-as="v">
+                            <h3 style="text-align: center;color: font-weight: bold;">
+                                <strong t-if="v['report_type']=='salary'">مسير البنك للرواتب</strong>
+                                <strong t-if="v['report_type']=='allowance'">مسير البنك للحوافز</strong>
+                                <strong t-if="v['report_type']=='overtime'">مسير البنك للعمل الإضافي</strong>
+                                <strong t-if="v['report_type']=='training'">مسير البنك للتدريب</strong>
+                                <strong t-if="v['report_type']=='mission'">مسير البنك لمهام العمل</strong>
+                                <br/>
+                                <span t-esc="date_from"/>
+                                ---
+                                <span t-esc="date_to"/>
+                            </h3>
+                            <p t-if="v['no_details']==False"
+                               style="text-align:right;font-weight:bold;padding:0px; line-height: 1.1;">
+                                <span>بنك :</span>
+                                <span t-esc="v['bank']"/>
+                            </p>
+                            <t t-if="bank_type=='rajhi'">
+                                <table class="table table-condensed table-bordered">
+                                    <thead style="margin-top:0px;background: #3e5d7f;text-align: center;color: #ffffff;valign: middle;"
+                                           class="text-center">
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            رقم الموظف
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            إسم الموظف
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            رقم الحساب
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            البنك
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            المبلغ
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            الهوية
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            الراتب الأساسي
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            بدل السكن
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            بدلات أخرى
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            الخصم
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="v['docs']" t-as="o">
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['ID']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Name']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Account #']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Bank']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="'%.2f'% o['Salary']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['National']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Basic']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Housing']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Other']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Deduction']"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <p style="page-break-after:always"></p>
+                            </t>
+                            <t t-elif="bank_type=='alahli'">
+                                <table class="table table-condensed table-bordered">
+                                    <thead style="margin-top:0px;background: #3e5d7f;text-align: center;color: #ffffff;valign: middle;"
+                                           class="text-center">
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Bank
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Account Number
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Total Salary
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Transaction Reference
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Employee Name
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            National ID/Iqama ID
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Employee Address
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Basic Salary
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Housing Allowance
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Other Earnings
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Deductions
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="v['docs']" t-as="o">
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Bank']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Account #']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="'%.2f'% o['Salary']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['ID']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Name']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['National']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Address']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Basic']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Housing']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Other']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Deduction']"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <p style="page-break-after:always"></p>
+                            </t>
+                            <t t-elif="bank_type=='riyadh'">
+                                <table class="table table-condensed table-bordered">
+                                    <thead style="margin-top:0px;background: #3e5d7f;text-align: center;color: #ffffff;valign: middle;"
+                                           class="text-center">
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            SN
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            هوية المستفيد/ المرجع
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            المستفيد / اسم الموظف
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            رقم الحساب
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            رمز البنك
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            إجمالي المبلغ
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            الراتب الأساسي
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            بدل السكن
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            دخل آخر
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            الخصومات
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            العنوان
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            العملة
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            الحالة
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            وصف الدفع
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            مرجع الدفع
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="v['docs']" t-as="o">
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <t t-set="sequence" t-value="sequence +1"/>
+                                                <t t-esc="sequence"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['National']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Name']"/>
+
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['ID']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Bank']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="'%.2f'% o['Salary']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Basic']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Basic']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Housing']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Housing']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Other']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Deduction']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Address']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['currency']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Pay Description']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['ID']"/>
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <p style="page-break-after:always"></p>
+                            </t>
+
+
+                        </t>
+
+                    </div>
+                </t>
+            </t>
+        </template>
+        <template id="report_payroll_bank_pdf">
+            <t t-call="web.html_container">
+                <t t-call="hr_base.hr_layout" translation="off">
+                    <style>
+                        @font-face {font-family: "Sakkal Majalla"; src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                        format("embedded-opentype"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype");
+                        }
+
+                    </style>
+                    <div class="page" style="font-family: 'Sakkal Majalla'!important;font-size:14pt;direction:rtl">
+                        <t t-set="sequence" t-value="0"/>
+                        <t t-foreach="data" t-as="v">
+                            <h3 style="text-align: center;color: font-weight: bold;">
+                                <strong t-if="v['report_type']=='salary'">مسير البنك للرواتب</strong>
+                                <strong t-if="v['report_type']=='allowance'">مسير البنك للحوافز</strong>
+                                <strong t-if="v['report_type']=='overtime'">مسير البنك للعمل الإضافي</strong>
+                                <strong t-if="v['report_type']=='training'">مسير البنك للتدريب</strong>
+                                <strong t-if="v['report_type']=='mission'">مسير البنك لمهام العمل</strong>
+                                <br/>
+                                <span t-esc="date_from"/>
+                                ---
+                                <span t-esc="date_to"/>
+                            </h3>
+                            <p t-if="v['no_details']==False"
+                               style="text-align:right;font-weight:bold;padding:0px; line-height: 1.1;">
+                                <span>بنك :</span>
+                                <span t-esc="v['bank']"/>
+                            </p>
+                            <t t-if="bank_type=='rajhi'">
+                                <table class="table table-condensed table-bordered">
+                                    <thead style="margin-top:0px;background: #3e5d7f;text-align: center;color: #ffffff;valign: middle;"
+                                           class="text-center">
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            رقم الموظف
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            إسم الموظف
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            رقم الحساب
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            البنك
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            المبلغ
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            الهوية
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            الراتب الأساسي
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            بدل السكن
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            بدلات أخرى
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            الخصم
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="v['docs']" t-as="o">
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['ID']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Name']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Account #']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Bank']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="'%.2f'% o['Salary']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['National']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Basic']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Housing']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Other']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Deduction']"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <p style="page-break-after:always"></p>
+                            </t>
+                            <t t-elif="bank_type=='alahli'">
+                                <table class="table table-condensed table-bordered">
+                                    <thead style="margin-top:0px;background: #3e5d7f;text-align: center;color: #ffffff;valign: middle;"
+                                           class="text-center">
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Bank
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Account Number
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Total Salary
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Transaction Reference
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Employee Name
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            National ID/Iqama ID
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Employee Address
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Basic Salary
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Housing Allowance
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Other Earnings
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            Deductions
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="v['docs']" t-as="o">
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Bank']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Account #']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="'%.2f'% o['Salary']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['ID']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Name']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['National']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Address']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Basic']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Housing']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Other']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Deduction']"/>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <p style="page-break-after:always"></p>
+                            </t>
+                            <t t-elif="bank_type=='riyadh'">
+                                <table class="table table-condensed table-bordered">
+                                    <thead style="margin-top:0px;background: #3e5d7f;text-align: center;color: #ffffff;valign: middle;"
+                                           class="text-center">
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            SN
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            هوية المستفيد/ المرجع
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            المستفيد / اسم الموظف
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            رقم الحساب
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            رمز البنك
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            إجمالي المبلغ
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            الراتب الأساسي
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            بدل السكن
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            دخل آخر
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            الخصومات
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            العنوان
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            العملة
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            الحالة
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            وصف الدفع
+                                        </th>
+                                        <th style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-align:center;">
+                                            مرجع الدفع
+                                        </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr t-foreach="v['docs']" t-as="o">
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <t t-set="sequence" t-value="sequence +1"/>
+                                                <t t-esc="sequence"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['National']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Name']"/>
+
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['ID']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Bank']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="'%.2f'% o['Salary']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Basic']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Basic']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Housing']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Housing']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Other']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Deduction']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Address']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['currency']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['Pay Description']"/>
+                                            </td>
+                                            <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap">
+                                                <span t-esc="o['ID']"/>
+                                            </td>
+
+
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <p style="page-break-after:always"></p>
+                            </t>
+
+
+                        </t>
+
+                    </div>
+                </t>
+            </t>
+        </template>
+
+    </data>
+</odoo>

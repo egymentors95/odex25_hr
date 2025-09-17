@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_payslip_details_inherit"
+              inherit_id="exp_hr_payroll.report_payslip_details">
+
+        <xpath expr="//div/table[2]/tbody" position="after">
+            <tr>
+                <td colspan="2">
+                    <strong>NET</strong>
+                </td>
+                <td class="text-right">
+                    <strong>
+                        <span t-esc="sum([h['total'] for h in get_details_by_rule_category.get(o.id, []) if not h['level']==0 ])"
+                              t-esc-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/>
+                    </strong>
+                </td>
+            </tr>
+        </xpath>
+
+        <xpath expr="//div/table[3]/tbody/tr" position="after">
+            <tr >
+                <td colspan="3"><strong>NET</strong></td>
+                <td class="text-right">
+                    <strong><span t-esc="sum([p['total'] for p in get_lines_by_contribution_register.get(o.id, []) ])"
+                                    t-esc-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/>
+                    </strong>
+                </td>
+                <td class="text-right">
+                    <strong><span t-esc="sum([p['total'] for p in get_lines_by_contribution_register.get(o.id, []) ])"
+                                    t-esc-options='{"widget": "monetary", "display_currency": o.company_id.currency_id}'/>
+                    </strong>
+                </td>
+            </tr>
+        </xpath>
+    </template>
+
+</odoo>

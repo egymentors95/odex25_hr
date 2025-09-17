@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record model="report.paperformat" id="paperformat_payslips_batches_recap_report">
+            <field name="name">paperformat.payslips.batches.recap.report</field>
+            <field name="default" eval="True"/>
+            <field name="format">A3</field>
+            <field name="page_width">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">30</field>
+            <field name="margin_right">5</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">20</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <template id="hr_payslip_run_report_pdf_template">
+            <t t-call="web.html_container">
+                <t t-call="web.internal_layout">
+                    <t t-call="web.external_layout">
+                        <table class="table table-condensed table-bordered" style="width: 100%">
+                            <thead>
+                                <thead>
+                                    <th class="text-center" style="width: 2%;background:#e9ebee;color:#003c79">
+                                        #
+                                    </th>
+                                    <th class="text-center" style="width: 4%;background:#e9ebee;color:#003c79">
+                                        Employee No
+                                    </th>
+                                    <th class="text-center" style="width: 4%;background:#e9ebee;color:#003c79">
+                                        Employee
+                                    </th>
+                                    <th class="text-center" style="width: 4%;background:#e9ebee;color:#003c79">
+                                        Total Allowance
+                                    </th>
+                                    <th class="text-center" style="width: 4%;background:#e9ebee;color:#003c79">
+                                        Total Deduction
+                                    </th>
+                                    <th class="text-center" style="width: 4%;background:#e9ebee;color:#003c79">
+                                        Total Net
+                                    </th>
+                                </thead>
+
+                            </thead>
+                            <tbody>
+                                <t t-set="sequence" t-value="0"/>
+                                <t t-foreach="docs" t-as="doc">
+                                    <t t-foreach="doc['slip_ids']" t-as='o'>
+                                        <tr>
+                                            <td>
+                                                <t t-set="sequence" t-value="sequence +1"/>
+                                                <t t-esc="sequence"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.employee_id.emp_no"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.employee_id.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.total_allowances"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.total_deductions"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.total_sum"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+
+                            </tbody>
+                        </table>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+        <!-- QWeb Reports -->
+        <!-- NAME & FILE_NAME should be the same -->
+        <record id="hr_payslip_run_report_pdf"  model="ir.actions.report">
+            <field name="model">hr.payslip.run</field>
+            <field name="name">Payslips Batches Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">exp_payroll_custom.hr_payslip_run_report_pdf_template</field>
+            <field name="report_file">exp_payroll_custom.hr_payslip_run_report_pdf_template</field>
+            <field name="paperformat_id" ref="paperformat_payslips_batches_recap_report"/>
+        </record>
+    </data>
+</odoo>

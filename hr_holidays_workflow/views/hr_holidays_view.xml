@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="edit_holiday_status_tree_workflow" model="ir.ui.view">
+            <field name="name">hr.holidays.tree</field>
+            <field name="model">hr.holidays</field>
+            <field name="priority">100</field>
+            <field name="inherit_id" ref="hr_holidays_community.view_holiday"/>
+            <field name="arch" type="xml">
+
+                <xpath  expr="//field[@name='state']" position="attributes">
+                    <attribute name="invisible" >1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='state']"   position="before">
+                    <field name="stage_id" />
+                </xpath>
+            </field>
+        </record>
+
+
+        <record id="hr_holidays_ext_form_view_workflow" model="ir.ui.view">
+            <field name="name">hr_holidays_ext_form_view_workflow</field>
+            <field name="model">hr.holidays</field>
+            <field name="inherit_id" ref="hr_holidays_community.edit_holiday_new"/>
+            <field name="priority">100</field>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook/page" position="inside">
+                    <field name="btn_string" invisible="1"/>
+                    <field name="stage_ids" invisible="1"/>
+                    <field name="double_validation" invisible="1"/>
+                    <field name="workflow_ids" widget="one2many_list" invisible="1">
+                        <tree  editable="bottom">
+                            <field name="stage_id" />
+                            <field name="sequence" />
+                            <field name="btn_string" />
+                            <field name="approved" />
+                            <field name="next" />
+                            <field name="group_id" />
+
+                        </tree>
+                    </field>
+                </xpath>
+                <xpath expr="//button[@name='financial_manager']"   position="replace">
+                    <button string="Last Approve" name="financial_manager" states="approved" type="object"
+                            groups="hr_holidays_community.group_hr_holidays_user"
+                            class="oe_highlight"/>
+                    <button string="Refuse" name="refuse" states="approved" type="object"
+                            groups="hr_holidays_community.group_hr_holidays_user" class="oe_highlight"/>
+                    <button string="HR Manager" name="financial_manager" type="object"
+                            attrs="{'invisible':['|',('state','!=','validate'),('double_validation','=',True)]}"
+                            groups="hr_holidays_community.group_hr_holidays_user"
+                            class="oe_highlight"/>
+                    <button string="HR Manager" name="financial_manager" type="object"
+                            attrs="{'invisible':['|','|',('double_validation','!=',True),('state','!=','validate'),('type','=','remove'),]}"
+                            groups="hr_holidays_community.group_hr_holidays_user"
+                            class="oe_highlight"/>
+                    <button string="Approved" name="approved" type="object"
+                            attrs="{'invisible':[('show_button','!=',True)]}"
+                            class="oe_highlight"/>
+
+                </xpath>
+                <header position="inside">
+                    <field name="show_button" invisible="1"/>
+                    <field name="stage_id" widget="statusbar" class="oe_highlight" attrs="{'invisible':['|',('workflow_ids','=',False),('type','!=','remove')]}"
+                    />
+                </header>
+                <field name="state" position="attributes">
+                    <attribute name="attrs">{'invisible':[('type','!=','add')]}</attribute>
+                </field>
+
+            </field>
+        </record>
+    </data>
+</odoo>

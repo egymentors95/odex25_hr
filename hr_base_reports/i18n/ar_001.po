@@ -1,0 +1,2476 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_base_reports
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-06-22 09:00+0000\n"
+"PO-Revision-Date: 2023-06-22 09:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+msgid ""
+"<br/>\n"
+"                    <strong>As shown below we have deduct</strong>\n"
+"                    <br/>"
+msgstr ""
+"<br/>\n"
+"                    <strong> وكما هو موضح أعلاه تم خصم عدد أيام وذلك حسب البيان التالي : </strong>\n"
+"                    <br/>"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+msgid ""
+"<br/>\n"
+"                    <strong>From</strong>"
+msgstr ""
+"<br/>\n"
+"                    <strong> من </strong>"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_employee_reward_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_leaves_of_employee_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_offer_job_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_overtime_requests_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_penalty_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_termination_template
+msgid "<strong style=\"color:#003c79\">From</strong>:"
+msgstr "<strong style=\"color:#003c79\">من</strong>:"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_employee_reward_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_leaves_of_employee_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_offer_job_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_overtime_requests_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_penalty_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_termination_template
+msgid "<strong style=\"color:#003c79\">To</strong>:"
+msgstr "<strong style=\"color:#003c79\"> إلى</strong>:"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+msgid "<strong>Employee :</strong>"
+msgstr "<strong> للموظف : </strong>"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+msgid "<strong>Identity Number :</strong>"
+msgstr "<strong> هوية رقم : </strong>"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+msgid "<strong>To</strong>"
+msgstr "<strong> إلى </strong>"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__absence
+msgid "Absence"
+msgstr "الغياب"
+
+#. module: hr_base_reports
+#: model:ir.actions.act_window,name:hr_base_reports.absence_report_actions
+#: model:ir.actions.report,name:hr_base_reports.employee_absence_report_act
+#: model:ir.actions.report,name:hr_base_reports.employee_absence_report_act_xlsx
+#: model:ir.ui.menu,name:hr_base_reports.absence_report_menu
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_absence_report
+msgid "Absence Report"
+msgstr "تقرير الغياب"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+msgid "Air Ticket Cost"
+msgstr "تكلفة التذكرة"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__fingerprint_report__report_type__all
+msgid "All Employees"
+msgstr "كل الموظفين"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/reward_employee_report_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_employee_reward_template
+#, python-format
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#, python-format
+msgid "Annual Cost"
+msgstr "التكلفة السنوية"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__appraisal
+msgid "Appraisal"
+msgstr "التقييم"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/appraisal_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_appraisal_report
+#, python-format
+msgid "Appraisal Plan"
+msgstr "خطة التقييم"
+
+#. module: hr_base_reports
+#: model:ir.actions.act_window,name:hr_base_reports.appraisal_report_actions
+#: model:ir.actions.report,name:hr_base_reports.employee_appraisal_report_act
+#: model:ir.ui.menu,name:hr_base_reports.appraisal_report_menu
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_appraisal_report
+msgid "Appraisal Report"
+msgstr "تقرير التقييم"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__attendance
+msgid "Attendance"
+msgstr "الحضور"
+
+#. module: hr_base_reports
+#: model:ir.actions.act_window,name:hr_base_reports.employee_attendance_report_actions
+msgid "Attendance Report"
+msgstr "تقرير الحضور"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.employee_attendance_report_act
+msgid "Attendance Transaction"
+msgstr "سجل الحضور والانصراف"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.employee_attendance_report_act_xlsx
+#: model:ir.ui.menu,name:hr_base_reports.employee_attendance_report_menu
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+msgid "Attendance Transaction Report"
+msgstr "تقرير سجل الحضور والانصراف"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#, python-format
+msgid "Bank"
+msgstr "البنك"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+msgid "Basic salary"
+msgstr "الراتب الاساسي"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#, python-format
+msgid "Birth Date"
+msgstr "تاريخ الميلاد"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__fingerprint_report__report_type__by_employee
+msgid "By Employee"
+msgstr "لكل موظف على حد"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_cost_report_form
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report_view_form
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.form_hr_leave_report_wizard
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.form_view_overtime_report_of_employee_wizard
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report_view_form
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.penalty_report_form_view
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.termination_report_view
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.view_department_job_wizard
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.view_employee_reward_wizard
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employees_cost_report_wizard_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employees_cost_report__cause_type
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_termination_wizard__cause_type
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_termination_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.termination_report_view
+msgid "Cause Type"
+msgstr "سبب الانهاء"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_cost_wizard.py:0
+#, python-format
+msgid "Choose Date From and Date To"
+msgstr "الرجاء اختيار التاريخ من و  التاريخ الى "
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#, python-format
+msgid "City"
+msgstr "المدينة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/re_entery_report.py:0
+#, python-format
+msgid "Cost"
+msgstr "التكلفة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#, python-format
+msgid "Cost Of Course"
+msgstr "تكلفة الدورة التدريبية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#, python-format
+msgid "Cost Of Day"
+msgstr "تكلفة اليوم"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#, python-format
+msgid "Cost Of Ticket"
+msgstr "تكلفة التذكرة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#, python-format
+msgid "Country"
+msgstr "دولة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#, python-format
+msgid "Course Location"
+msgstr "موقع التدريب "
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#, python-format
+msgid "Course Organization"
+msgstr "منظم التدريب"
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__create_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_fingerprint_report__create_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_department_job_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_leave_reports_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_offer_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_reward_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_termination_wizard__create_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report__create_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report_of_employee__create_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_penalty_deduction_wizard__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__create_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_fingerprint_report__create_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_department_job_wizard__create_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_leave_reports_wizard__create_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_offer_wizard__create_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_reward_wizard__create_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_termination_wizard__create_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report__create_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report_of_employee__create_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_penalty_deduction_wizard__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#, python-format
+msgid "Current Grade"
+msgstr "الدرجة الحالية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#, python-format
+msgid "Current Job Title"
+msgstr "الوظيفة الحالية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#, python-format
+msgid "Current Salary"
+msgstr "المرتب الحالى"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#, python-format
+msgid "Daily Wage"
+msgstr "راتب اليوم"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#, python-format
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__date_from
+#: model:ir.model.fields,field_description:hr_base_reports.field_fingerprint_report__date_from
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_leave_reports_wizard__date_from
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_offer_wizard__date_from
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_reward_wizard__date_from
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_termination_wizard__date_from
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report__date_from
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report_of_employee__date_from
+#: model:ir.model.fields,field_description:hr_base_reports.field_penalty_deduction_wizard__date_from
+msgid "Date From"
+msgstr "تاريخ البداية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_cost_wizard.py:0
+#, python-format
+msgid "Date From must be less than or equal Date To"
+msgstr "تاريخ من يجب ان يكون اكبر من تاريخ الى"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#, python-format
+msgid "Date Of Course"
+msgstr "تاريخ التدريب"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/loan_report.py:0
+#, python-format
+msgid "Date Of Loan"
+msgstr "تاريخ السلفة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/iqama_report.py:0
+#: code:addons/hr_base_reports/report/re_entery_report.py:0
+#, python-format
+msgid "Date Of Payment"
+msgstr "تاريخ الدفع"
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__date_to
+#: model:ir.model.fields,field_description:hr_base_reports.field_fingerprint_report__date_to
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_leave_reports_wizard__date_to
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_offer_wizard__date_to
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_reward_wizard__date_to
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_termination_wizard__date_to
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report__date_to
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report_of_employee__date_to
+#: model:ir.model.fields,field_description:hr_base_reports.field_penalty_deduction_wizard__date_to
+msgid "Date To"
+msgstr "تاريخ النهاية"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.form_hr_leave_report_wizard
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.form_view_overtime_report_of_employee_wizard
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.penalty_report_form_view
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.termination_report_view
+msgid "Date from"
+msgstr "تاريخ البداية"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_loan_report
+msgid "Date of Loan"
+msgstr "تاريخ السلفة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/handover_reprt.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_handover_report
+#, python-format
+msgid "Date of Resignation"
+msgstr "تاريخ الاستقالة"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.form_hr_leave_report_wizard
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.form_view_overtime_report_of_employee_wizard
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.penalty_report_form_view
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.termination_report_view
+msgid "Date to"
+msgstr "تاريخ النهاية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_training_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#, python-format
+msgid "Day"
+msgstr "اليوم"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#, python-format
+msgid "Days Number"
+msgstr "عدد الأيام"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#: code:addons/hr_base_reports/report/appraisal_report.py:0
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: code:addons/hr_base_reports/report/handover_reprt.py:0
+#: code:addons/hr_base_reports/report/iqama_report.py:0
+#: code:addons/hr_base_reports/report/loan_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/report/overtime_report.py:0
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#: code:addons/hr_base_reports/report/re_entery_report.py:0
+#: code:addons/hr_base_reports/report/saudi_report.py:0
+#: code:addons/hr_base_reports/wizard/leave_reports.py:0
+#: code:addons/hr_base_reports/wizard/penalty_deduction_of_employee.py:0
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__department_ids
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_offer_wizard__department_id
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_reward_wizard__department_id
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report__department_ids
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report_of_employee__department_id
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.department_job_report_view
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_appraisal_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_cost_report_form
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_handover_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_loan_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_overtime_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_saudi_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.form_view_overtime_report_of_employee_wizard
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_leaves_of_employee_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_offer_job_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_overtime_requests_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_penalty_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_termination_template
+#, python-format
+msgid "Department"
+msgstr "الهيكل الاداري"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#: model:ir.actions.act_window,name:hr_base_reports.employee_cost_report_action
+#: model:ir.model,name:hr_base_reports.model_employee_cost_report
+#: model:ir.ui.menu,name:hr_base_reports.employee_cost_report_menu
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_cost_report
+#, python-format
+msgid "Department Cost Report"
+msgstr "تقرير تكلفة الإدارة"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_department_report
+msgid "Department Job Of Employees"
+msgstr "تقرير الهيكل الاداري والوظائف"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_department_report_xlsx
+msgid "Department Job Of Employees excel Report"
+msgstr "تقرير الهيكل الاداري والوظائف"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_department_job_report_view
+msgid "Department Job Report View"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_hr_department_job_wizard
+msgid "Department Job Wizard"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/reward_employee_report_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_employee_reward_template
+#, python-format
+msgid "Department Name"
+msgstr "اسم الهيكل الاداري"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#, python-format
+msgid "Department Total Cost"
+msgstr "التكلفة الكلية للقسم"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.view_department_job_wizard
+msgid "Department and Job Report"
+msgstr "تقرير الهيكل الاداري والوظائف"
+
+#. module: hr_base_reports
+#: model:ir.actions.act_window,name:hr_base_reports.action_hr_department_wizard
+msgid "Department and Jobs Report"
+msgstr "تقرير الهيكل الاداري والوظائف"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/hr_departments_wizard.py:0
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__hr_department_job_wizard__report_type__departments
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report_view_form
+#, python-format
+msgid "Departments"
+msgstr "الهيكل الاداري"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.department_job_report_view
+msgid "Departments And jobs Of Employee Report"
+msgstr "تقرير الهيكل الاداري والوظائف"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/penalty_deduction_of_employee.py:0
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__penalty_deduction_wizard__report_type__deprivation
+#, python-format
+msgid "Deprivation of promotion and promotion"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_fingerprint_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_department_job_wizard__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_leave_reports_wizard__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_offer_wizard__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_reward_wizard__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_termination_wizard__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report_of_employee__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_penalty_deduction_wizard__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_department_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_employee_reward_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_job_offer_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_leaves_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_report_overtime_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_report_penalty_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_report_termination_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_department_job_report_view__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_absence_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_absence_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_appraisal_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_appraisal_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_attendance_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_attendance_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_cost_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_cost_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_executions_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_executions_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_general_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_general_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_handover_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_handover_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_iqama_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_iqama_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_loan_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_loan_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_mission_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_mission_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_overtime_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_overtime_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_promotion_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_promotion_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_re_entry_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_re_entry_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_saudi_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_saudi_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_training_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_training_report_xlsx__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_fingerprint_action_report_xls__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_fingerprint_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_overtime_action_report_xls__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_overtime_report__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_employee_reward_template__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_leaves_of_employee_template__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_offer_job_template__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_overtime_requests_template__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_penalty_template__display_name
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_termination_template__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+#, python-format
+msgid "Effective Hours"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: code:addons/hr_base_reports/wizard/leave_reports.py:0
+#: code:addons/hr_base_reports/wizard/penalty_deduction_of_employee.py:0
+#: model:ir.model,name:hr_base_reports.model_hr_employee
+#: model:ir.model.fields,field_description:hr_base_reports.field_fingerprint_report__employee_ids
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report__employee_ids
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_cost_report_form
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_leaves_of_employee_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_offer_job_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_overtime_requests_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_penalty_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_termination_template
+#, python-format
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_absence_report
+msgid "Employee Absence Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#, python-format
+msgid "Employee Absence Transaction"
+msgstr "تقرير الغياب"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/appraisal_report.py:0
+#: code:addons/hr_base_reports/report/appraisal_report.py:0
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_appraisal_report
+#, python-format
+msgid "Employee Appraisal Report"
+msgstr "تقرير تقييم الموظف"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_attendance_report
+msgid "Employee Attendance Report"
+msgstr "سجل الحضور والانصراف"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#, python-format
+msgid "Employee Attendance Transaction"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#: code:addons/hr_base_reports/report/overtime_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_overtime_report
+#, python-format
+msgid "Employee Basic Wage"
+msgstr "الراتب الاساسى"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__employee_cost
+msgid "Employee Cost"
+msgstr "تكلفة الإدارة"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.employee_cost_report_act
+#: model:ir.actions.report,name:hr_base_reports.employee_cost_report_act_xlsx
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_cost_report
+msgid "Employee Cost Report"
+msgstr "تقرير تكلفة الإدارة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#, python-format
+msgid "Employee Excuse Transaction"
+msgstr "تقرير الاستئذان"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_executions_report
+msgid "Employee Executions Report"
+msgstr "تقرير الاستئذان"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#, python-format
+msgid "Employee GOSI"
+msgstr "نسبة التأمينات"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: model:ir.actions.act_window,name:hr_base_reports.employee_general_report_action
+#: model:ir.actions.report,name:hr_base_reports.employee_general_report_act
+#: model:ir.actions.report,name:hr_base_reports.employee_general_report_act_xlsx
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_general_report
+#, python-format
+msgid "Employee General Report"
+msgstr "تقرير عام"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/handover_reprt.py:0
+#: model:ir.actions.act_window,name:hr_base_reports.employee_handover_report_action
+#: model:ir.actions.report,name:hr_base_reports.employee_handover_report_act
+#: model:ir.actions.report,name:hr_base_reports.employee_handover_report_act_xlsx
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_handover_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_handover_report
+#, python-format
+msgid "Employee Handover Report"
+msgstr "تقرير الإستقالات"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#: code:addons/hr_base_reports/report/appraisal_report.py:0
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: code:addons/hr_base_reports/report/handover_reprt.py:0
+#: code:addons/hr_base_reports/report/iqama_report.py:0
+#: code:addons/hr_base_reports/report/loan_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#: code:addons/hr_base_reports/report/re_entery_report.py:0
+#: code:addons/hr_base_reports/report/saudi_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_handover_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_loan_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_saudi_report
+#, python-format
+msgid "Employee ID"
+msgstr " رقم الموظف"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_iqama_report
+msgid "Employee Iqama Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/loan_report.py:0
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_loan_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_loan_report
+#, python-format
+msgid "Employee Loan Report"
+msgstr "تقرير السلفة/القروض"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: model:ir.actions.act_window,name:hr_base_reports.employee_mission_report_actions
+#: model:ir.actions.report,name:hr_base_reports.employee_mission_report_act
+#: model:ir.actions.report,name:hr_base_reports.employee_mission_report_act_xlsx
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_mission_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#, python-format
+msgid "Employee Mission Report"
+msgstr "تقرير مهام العمل"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#: code:addons/hr_base_reports/report/appraisal_report.py:0
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: code:addons/hr_base_reports/report/handover_reprt.py:0
+#: code:addons/hr_base_reports/report/iqama_report.py:0
+#: code:addons/hr_base_reports/report/loan_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/report/overtime_report.py:0
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#: code:addons/hr_base_reports/report/re_entery_report.py:0
+#: code:addons/hr_base_reports/report/saudi_report.py:0
+#: code:addons/hr_base_reports/wizard/reward_employee_report_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_appraisal_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_handover_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_loan_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_overtime_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_saudi_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_employee_reward_template
+#, python-format
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/reward_employee_report_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_employee_reward_template
+#, python-format
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/overtime_report.py:0
+#: code:addons/hr_base_reports/report/overtime_report.py:0
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_overtime_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_overtime_requests_template
+#, python-format
+msgid "Employee Overtime Report"
+msgstr "تقرير الاجر الاضافى "
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_report_overtime_requests_template
+msgid "Employee Overtime Requests Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_promotion_report
+msgid "Employee Promotion Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_re_entry_report
+msgid "Employee Re-entry Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/reward_employee_report_wizard.py:0
+#: model:ir.actions.act_window,name:hr_base_reports.action_hr_reward_wizard
+#, python-format
+msgid "Employee Reward Report"
+msgstr "تقرير مكافآه الموظفين"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_report_employee_reward_template
+msgid "Employee Reward Template Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#, python-format
+msgid "Employee Salary"
+msgstr "راتب الموظف"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_saudi_report
+msgid "Employee Saudi Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: model:ir.actions.act_window,name:hr_base_reports.employee_training_report_actions
+#: model:ir.actions.report,name:hr_base_reports.employee_training_report_act
+#: model:ir.actions.report,name:hr_base_reports.employee_training_report_act_xlsx
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_training_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_training_report
+#, python-format
+msgid "Employee Training Report"
+msgstr "تقرير التدريب "
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__employee_ids
+#: model:ir.model.fields,field_description:hr_base_reports.field_employees_cost_report__employee_ids
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employees_cost_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report_view_form
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report_view_form
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_offer_job_template
+msgid "Employees Job Offer Report"
+msgstr "تقرير عروض التوظيف"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_employee_reward_template
+msgid "Employees Reward Report"
+msgstr "تقرير مكافآه الموظف"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#, python-format
+msgid "Employer GOSI"
+msgstr "نسبة التأمينات للشركة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/leave_reports.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_leaves_of_employee_template
+#, python-format
+msgid "End Date"
+msgstr "تاريخ النهاية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#, python-format
+msgid "End Of Trip"
+msgstr "نهاية المهمة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#, python-format
+msgid "End Training"
+msgstr "نهاية التدريب"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+#, python-format
+msgid "Excuse End Time"
+msgstr "نهاية الاذن"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.employee_executions_report_act
+#: model:ir.actions.report,name:hr_base_reports.employee_executions_report_act_xlsx
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_executions_report
+msgid "Excuse Report"
+msgstr "تقرير الاستئذان"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+#, python-format
+msgid "Excuse Start Time"
+msgstr "بداية الاذن"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__executions
+msgid "Execution"
+msgstr "الاذن"
+
+#. module: hr_base_reports
+#: model:ir.actions.act_window,name:hr_base_reports.executions_report_actions
+#: model:ir.ui.menu,name:hr_base_reports.executions_report_menu
+msgid "Executions Report"
+msgstr "تقرير الاستئذان"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#, python-format
+msgid "Extra Hour"
+msgstr "الساعات الاضافية"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+msgid "Extra Hours"
+msgstr "الساعات الاضافية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: model:ir.actions.act_window,name:hr_base_reports.fingerprint_report_wizard
+#: model:ir.actions.report,name:hr_base_reports.action_fingerprint_report
+#: model:ir.model,name:hr_base_reports.model_fingerprint_report
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_fingerprint_report
+#: model:ir.ui.menu,name:hr_base_reports.fingerprint_report_menu
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#, python-format
+msgid "Fingerprint Report"
+msgstr " تقرير البصمة"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+msgid "Fingerprint Report For"
+msgstr " تقرير البصمة للموظف"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#, python-format
+msgid "Fingerprint Report For "
+msgstr " تقرير البصمة للموظف"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+msgid "From"
+msgstr "من"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#, python-format
+msgid "From date"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__general
+msgid "General"
+msgstr "عام"
+
+#. module: hr_base_reports
+#: model:ir.ui.menu,name:hr_base_reports.employee_general_report_menu
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+msgid "General Report"
+msgstr "تقرير عام"
+
+#. module: hr_base_reports
+#: model:ir.ui.menu,name:hr_base_reports.hr_department_job_form_wizard_menu
+msgid "HR Departments and Jobs OF Employee"
+msgstr "تقرير الهيكل الاداري والوظائف"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__handover
+msgid "Hand Over"
+msgstr "التسليم والتسلم"
+
+#. module: hr_base_reports
+#: model:ir.ui.menu,name:hr_base_reports.employee_handover_report_menu
+msgid "Handover Report"
+msgstr "تقرير الإستقالات"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+#, python-format
+msgid "Holiday"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/leave_reports.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_leaves_of_employee_template
+#, python-format
+msgid "Holiday Type"
+msgstr "نوع الإجازة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_training_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#, python-format
+msgid "Hour"
+msgstr "ساعة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+#, python-format
+msgid "Hour Rate"
+msgstr ""
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_overtime_requests_template
+msgid "Hours number"
+msgstr "عدد الساعات"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#, python-format
+msgid "House Allowance"
+msgstr "بدل السكن"
+
+#. module: hr_base_reports
+#: model:ir.ui.menu,name:hr_base_reports.main_reports_menu
+msgid "Human Resources Reports"
+msgstr "تقارير الموارد البشرية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#, python-format
+msgid "IBN"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_fingerprint_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_department_job_wizard__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_leave_reports_wizard__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_offer_wizard__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_reward_wizard__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_termination_wizard__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report_of_employee__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_penalty_deduction_wizard__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_department_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_employee_reward_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_job_offer_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_leaves_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_report_overtime_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_report_penalty_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_report_termination_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_department_job_report_view__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_absence_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_absence_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_appraisal_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_appraisal_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_attendance_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_attendance_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_cost_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_cost_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_executions_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_executions_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_general_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_general_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_handover_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_handover_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_iqama_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_iqama_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_loan_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_loan_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_mission_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_mission_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_overtime_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_overtime_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_promotion_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_promotion_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_re_entry_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_re_entry_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_saudi_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_saudi_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_training_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_training_report_xlsx__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_fingerprint_action_report_xls__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_fingerprint_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_overtime_action_report_xls__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_overtime_report__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_employee_reward_template__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_leaves_of_employee_template__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_offer_job_template__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_overtime_requests_template__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_penalty_template__id
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_termination_template__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_appraisal_report
+msgid "ID Number"
+msgstr "رقم الموظف"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#, python-format
+msgid "Identification Number"
+msgstr "رقم الهوية"
+
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/iqama_report.py:0
+#, python-format
+msgid "Identity Expiry Date"
+msgstr "تاريخ نهاية الهوية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/iqama_report.py:0
+#: model:ir.actions.act_window,name:hr_base_reports.iqama_report_actions
+#: model:ir.ui.menu,name:hr_base_reports.iqama_report_menu
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_iqama_report
+#, python-format
+msgid "Identity Report"
+msgstr "تقرير تجديد  الهوية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__overtime_report__overtime_place__inside
+#, python-format
+msgid "Inside"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/loan_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_loan_report
+#, python-format
+msgid "Installment Amount"
+msgstr "مبلغ القسط"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#, python-format
+msgid "Iqama"
+msgstr "الهوية"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__iqama
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+#, python-format
+msgid "Identity"
+msgstr "الهوية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_leave_reports_wizard__job_id
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_offer_wizard__job_id
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_reward_wizard__job_id
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report_of_employee__job_id
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+#, python-format
+msgid "Job"
+msgstr "العمل"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_report_job_offer
+msgid "Job Offer report"
+msgstr "تقرير عروض الوظائف"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_job_offer_report_xlsx
+msgid "Job Offers Of Employees"
+msgstr "تقرير عروض الوظائف"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#: code:addons/hr_base_reports/report/appraisal_report.py:0
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: code:addons/hr_base_reports/report/handover_reprt.py:0
+#: code:addons/hr_base_reports/report/iqama_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/report/overtime_report.py:0
+#: code:addons/hr_base_reports/report/re_entery_report.py:0
+#: code:addons/hr_base_reports/wizard/reward_employee_report_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.department_job_report_view
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_appraisal_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_handover_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_overtime_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.form_view_overtime_report_of_employee_wizard
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_employee_reward_template
+#, python-format
+msgid "Job Title"
+msgstr "الوظيفة"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_offer_job_template
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_overtime_requests_template
+msgid "Job title"
+msgstr "الوظيفة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/hr_departments_wizard.py:0
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__hr_department_job_wizard__report_type__jobs
+#, python-format
+msgid "Jobs"
+msgstr "الوظائف"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/hr_departments_wizard.py:0
+#, python-format
+msgid "Jobs Of Employees"
+msgstr "وظائف الموظفين"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#: code:addons/hr_base_reports/report/appraisal_report.py:0
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: code:addons/hr_base_reports/report/handover_reprt.py:0
+#: code:addons/hr_base_reports/report/iqama_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#: code:addons/hr_base_reports/report/re_entery_report.py:0
+#: code:addons/hr_base_reports/report/saudi_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_appraisal_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_handover_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_saudi_report
+#, python-format
+msgid "Join Date"
+msgstr "تاريخ الانضمام"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/handover_reprt.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_handover_report
+#, python-format
+msgid "Last Date"
+msgstr "اخر يوم عمل"
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_fingerprint_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_department_job_wizard____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_leave_reports_wizard____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_offer_wizard____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_reward_wizard____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_termination_wizard____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report_of_employee____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_penalty_deduction_wizard____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_department_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_employee_reward_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_job_offer_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_leaves_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_report_overtime_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_report_penalty_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_action_report_termination_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_department_job_report_view____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_absence_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_absence_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_appraisal_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_appraisal_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_attendance_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_attendance_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_cost_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_cost_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_executions_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_executions_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_general_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_general_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_handover_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_handover_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_iqama_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_iqama_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_loan_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_loan_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_mission_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_mission_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_overtime_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_overtime_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_promotion_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_promotion_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_re_entry_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_re_entry_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_saudi_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_saudi_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_training_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_employee_training_report_xlsx____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_fingerprint_action_report_xls____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_fingerprint_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_overtime_action_report_xls____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_overtime_report____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_employee_reward_template____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_leaves_of_employee_template____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_offer_job_template____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_overtime_requests_template____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_penalty_template____last_update
+#: model:ir.model.fields,field_description:hr_base_reports.field_report_hr_base_reports_report_termination_template____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__write_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_fingerprint_report__write_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_department_job_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_leave_reports_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_offer_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_reward_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_termination_wizard__write_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report__write_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report_of_employee__write_uid
+#: model:ir.model.fields,field_description:hr_base_reports.field_penalty_deduction_wizard__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__write_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_fingerprint_report__write_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_department_job_wizard__write_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_leave_reports_wizard__write_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_offer_wizard__write_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_reward_wizard__write_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_termination_wizard__write_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report__write_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report_of_employee__write_date
+#: model:ir.model.fields,field_description:hr_base_reports.field_penalty_deduction_wizard__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+#, python-format
+msgid "Lateness Hours"
+msgstr "ساعات التاخير"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#, python-format
+msgid "Leave Balance"
+msgstr "رصيد الاجازات"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+#, python-format
+msgid "Leave Name"
+msgstr "إسم الإجازة"
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_leave_reports_wizard__leave_type_id
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.form_hr_leave_report_wizard
+msgid "Leave Type"
+msgstr "نوع الإجازة"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_leaves_report_xlsx
+msgid "Leave report XLSX"
+msgstr "طباعة Excel"
+
+#. module: hr_base_reports
+#: model:ir.ui.menu,name:hr_base_reports.leave_reports_wizard_menu
+msgid "Leave reports"
+msgstr "تقرير الاجازات"
+
+#. module: hr_base_reports
+#: model:ir.actions.act_window,name:hr_base_reports.action_hr_leave_report_wizard
+msgid "Leaves Report"
+msgstr "تقرير الاجازات"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_hr_leave_reports_wizard
+msgid "Leaves Wizard"
+msgstr "تقرير الاجازات"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_report_leaves_of_employee_template
+msgid "Leaves of Employee Template Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_leaves_report
+msgid "Leaves report"
+msgstr "تقرير الاجازات"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/appraisal_report.py:0
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: code:addons/hr_base_reports/report/handover_reprt.py:0
+#: code:addons/hr_base_reports/report/iqama_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/report/re_entery_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_appraisal_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_handover_report
+#, python-format
+msgid "Line Manager"
+msgstr "المدير المباشر"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__loan
+msgid "Loan"
+msgstr "القروض"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/loan_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_loan_report
+#, python-format
+msgid "Loan Due Date"
+msgstr "تاريخ انتهاء السلفة"
+
+#. module: hr_base_reports
+#: model:ir.actions.act_window,name:hr_base_reports.loan_report_actions
+#: model:ir.actions.report,name:hr_base_reports.employee_loan_report_act
+#: model:ir.actions.report,name:hr_base_reports.employee_loan_report_act_xlsx
+#: model:ir.ui.menu,name:hr_base_reports.loan_report_menu
+msgid "Loan Report"
+msgstr "تقارير السلف والقروض"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/loan_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_loan_report
+#, python-format
+msgid "Loan Type"
+msgstr "نوع السلفة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/appraisal_report.py:0
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: code:addons/hr_base_reports/report/handover_reprt.py:0
+#: code:addons/hr_base_reports/report/iqama_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#: code:addons/hr_base_reports/report/re_entery_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_appraisal_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_handover_report
+#, python-format
+msgid "Location"
+msgstr "المكان"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/re_entery_report.py:0
+#, python-format
+msgid "Members"
+msgstr "الافراد"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#, python-format
+msgid "Minute"
+msgstr "دقائق"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__mission
+msgid "Mission"
+msgstr "المهام"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+msgid "Mission Days Number"
+msgstr "عدد أيام المهمة"
+
+#. module: hr_base_reports
+#: model:ir.ui.menu,name:hr_base_reports.employee_mission_report_menu
+msgid "Mission Report"
+msgstr "تقرير المهام"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#, python-format
+msgid "Mission Type"
+msgstr "نوع المهمة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+#, python-format
+msgid "Name"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/iqama_report.py:0
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#: code:addons/hr_base_reports/report/re_entery_report.py:0
+#: code:addons/hr_base_reports/report/saudi_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_saudi_report
+#, python-format
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/saudi_report.py:0
+#, python-format
+msgid "Non Saudi"
+msgstr "غير سعودي"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_saudi_report
+msgid "Non Saudi Employee"
+msgstr "الموظفين غير السعوديين"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#, python-format
+msgid "Number"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#, python-format
+msgid "Number Of Excuse"
+msgstr " عدد الطلبات"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/leave_reports.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_leaves_of_employee_template
+#, python-format
+msgid "Number of days"
+msgstr "عدد الايام"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/overtime_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_overtime_report
+#, python-format
+msgid "OT"
+msgstr "اجر اضافى"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_report_offer_job_template
+msgid "Offer Job Template"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_hr_offer_wizard
+msgid "Offer Wizard"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_hr_official_mission
+msgid "Official mission"
+msgstr "الانتدابات ومهام العمل"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#, python-format
+msgid "Other Benefits"
+msgstr "بدلات اخرى"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__overtime_report__overtime_place__outside
+#, python-format
+msgid "Outside"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/loan_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_loan_report
+#, python-format
+msgid "Outstanding"
+msgstr " الرصيد المتبقى "
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#, python-format
+msgid "Overall Excuse"
+msgstr " عدد الساعات"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__overtime
+msgid "Overtime"
+msgstr "الاجر الاضافى"
+
+#. module: hr_base_reports
+#: model:ir.ui.menu,name:hr_base_reports.employee_overtime_report_menu
+msgid "Overtime / Month"
+msgstr "تقرير الاجر"
+
+#. module: hr_base_reports
+#: model:ir.actions.act_window,name:hr_base_reports.employee_overtime_report_action
+msgid "Overtime /Month"
+msgstr "تقارير الاجر الاضافى "
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_overtime_report__overtime_place
+msgid "Overtime Place"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: model:ir.actions.act_window,name:hr_base_reports.overtime_report_wizard
+#: model:ir.actions.report,name:hr_base_reports.action_overtime_report
+#: model:ir.actions.report,name:hr_base_reports.employee_appraisal_report_act_xlsx
+#: model:ir.actions.report,name:hr_base_reports.employee_overtime_report_act
+#: model:ir.actions.report,name:hr_base_reports.employee_overtime_report_act_xlsx
+#: model:ir.model,name:hr_base_reports.model_overtime_report
+#: model:ir.ui.menu,name:hr_base_reports.overtime_report_menu
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_overtime_report
+#, python-format
+msgid "Overtime Report"
+msgstr "تقرير العمل الاضافي"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+msgid "Overtime Report From"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.actions.act_window,name:hr_base_reports.action_overtime_report_of_employee_wizard
+msgid "Overtime Report of employee"
+msgstr "تقرير العمل الاضافي"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_report_overtime
+msgid "Overtime report"
+msgstr "تقرير العمل الاضافى"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_report_overtime_xlsx
+msgid "Overtime report XLSX"
+msgstr "طباعة Excel"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_overtime_report_of_employee
+#: model:ir.ui.menu,name:hr_base_reports.overtime_report_wizard_menu
+msgid "Overtime report of employee"
+msgstr "تقرير العمل الاضافي"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_offer_job_template
+msgid "Page:"
+msgstr "الصفحة:"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/loan_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_loan_report
+#, python-format
+msgid "Paid Amount"
+msgstr "الملبغ المدفوع"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/penalty_deduction_of_employee.py:0
+#: code:addons/hr_base_reports/wizard/penalty_deduction_of_employee.py:0
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__penalty_deduction_wizard__report_type__penalty
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_penalty_template
+#, python-format
+msgid "Penalty"
+msgstr "المخالفات"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_penalty_deduction_wizard
+#: model:ir.ui.menu,name:hr_base_reports.penalty_deduction_report_wizard_menu
+msgid "Penalty Deduction of employee"
+msgstr "تقرير المخالفات والجزاءات"
+
+#. module: hr_base_reports
+#: model:ir.actions.act_window,name:hr_base_reports.action_penalty_report
+msgid "Penalty Report"
+msgstr "تقرير المخالفات والجزاءات"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_report_penalty_template
+msgid "Penalty Template Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_report_penalty
+msgid "Penalty report"
+msgstr "تقرير المخالفات والجزاءات"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_report_penalty_xlsx
+msgid "Penalty report XLSX"
+msgstr "طباعة Excel"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#, python-format
+msgid "Per Diems"
+msgstr "اجر اليوم"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/appraisal_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_appraisal_report
+#, python-format
+msgid "Performance Grade"
+msgstr "درجة التقييم"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#, python-format
+msgid "Period Of Course"
+msgstr "فترة التدريب"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/loan_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_loan_report
+#, python-format
+msgid "Period Of installment"
+msgstr "عدد الأقساط"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#, python-format
+msgid "Previous Grade"
+msgstr "الدرجة السابقة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#, python-format
+msgid "Previous Job Title"
+msgstr "الوظيفة السابقة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#, python-format
+msgid "Previous Line Manager"
+msgstr "المدير السابق"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#, python-format
+msgid "Previous Salary"
+msgstr "الراتب السابق"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report_view_form
+msgid "Print"
+msgstr ""
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_cost_report_form
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report_view_form
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employees_cost_report_wizard_view
+msgid "Print Excel"
+msgstr "طباعة Excel"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report_view_form
+msgid "Print Excel Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.form_hr_leave_report_wizard
+msgid "Print Leave PDF"
+msgstr "طباعة PDF"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.form_hr_leave_report_wizard
+msgid "Print Leave XLSX"
+msgstr "طباعة Excel"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.form_view_overtime_report_of_employee_wizard
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.penalty_report_form_view
+msgid "Print Overtime PDF"
+msgstr "طباعة PDF"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.form_view_overtime_report_of_employee_wizard
+
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.penalty_report_form_view
+msgid "Print Overtime XLSX"
+msgstr "طباعة Excel"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_cost_report_form
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employees_cost_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report_view_form
+msgid "Print PDF"
+msgstr "طباعة PDF"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.view_employee_reward_wizard
+msgid "Print Report Excel"
+msgstr "طباعة Excel"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.view_department_job_wizard
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.view_employee_reward_wizard
+msgid "Print Report PDF"
+msgstr "طباعة PDF"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.termination_report_view
+msgid "Print Termination PDF"
+msgstr "طباعة PDF"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.termination_report_view
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.view_department_job_wizard
+msgid "Print report excel"
+msgstr "طباعة Excel"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.fingerprint_action_report_xls
+#: model:ir.actions.report,name:hr_base_reports.overtime_action_report_xls
+msgid "Print to XLSX"
+msgstr "طباعة Excel"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__promotion
+msgid "Promotion"
+msgstr "الترقيات"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#: model:ir.actions.act_window,name:hr_base_reports.promotion_report_actions
+#: model:ir.actions.report,name:hr_base_reports.employee_promotion_report_act
+#: model:ir.actions.report,name:hr_base_reports.employee_promotion_report_act_xlsx
+#: model:ir.ui.menu,name:hr_base_reports.promotion_report_menu
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_promotion_report
+#, python-format
+msgid "Promotion Report"
+msgstr "تقرير الترقيات"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_penalty_template
+msgid "Punishment"
+msgstr "الجزاءات"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/penalty_deduction_of_employee.py:0
+#, python-format
+msgid "Punishment type"
+msgstr "نوع العقوبة"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__re_entry
+msgid "Re-Entry"
+msgstr "الخروج والعودة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/re_entery_report.py:0
+#: model:ir.actions.report,name:hr_base_reports.employee_re_entry_report_act
+#: model:ir.actions.report,name:hr_base_reports.employee_re_entry_report_act_xlsx
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_re_entry_report
+#, python-format
+msgid "Re-Entry Report"
+msgstr "تقرير الخروج والعودة"
+
+#. module: hr_base_reports
+#: model:ir.actions.act_window,name:hr_base_reports.re_entry_report_actions
+#: model:ir.ui.menu,name:hr_base_reports.re_entry_report_menu
+msgid "Re-entry Report"
+msgstr "تقرير الخروج والعودة"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_termination_template
+msgid "Reason"
+msgstr "السبب"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/handover_reprt.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_handover_report
+#, python-format
+msgid "Reason of Resignation"
+msgstr "سبب انهاء الخدمة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#, python-format
+msgid "Reference Number"
+msgstr "الرقم المرجعي"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+#, python-format
+msgid "Regular"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__report_type
+#: model:ir.model.fields,field_description:hr_base_reports.field_fingerprint_report__report_type
+#: model:ir.model.fields,field_description:hr_base_reports.field_hr_department_job_wizard__report_type
+#: model:ir.model.fields,field_description:hr_base_reports.field_penalty_deduction_wizard__report_type
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.penalty_report_form_view
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.view_department_job_wizard
+msgid "Report Type"
+msgstr "نوع التقرير"
+
+#. module: hr_base_reports
+#: model:ir.ui.menu,name:hr_base_reports.appraisal_report_root_menu
+#: model:ir.ui.menu,name:hr_base_reports.employee_request_root_report_menu
+#: model:ir.ui.menu,name:hr_base_reports.loan_report_root_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__request_type_id
+msgid "Request Type"
+msgstr "نوع الطلب"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/reward_employee_report_wizard.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_employee_reward_template
+#, python-format
+msgid "Reward Reason"
+msgstr "سبب المكافآه"
+
+#. module: hr_base_reports
+#: model:ir.ui.menu,name:hr_base_reports.hr_reward_reports_wizard_menu
+msgid "Reward Reports Of Employee"
+msgstr "مكافأة الموظف"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_hr_reward_wizard
+msgid "Reward Wizard"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+#, python-format
+msgid "Salary"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_report_sales_report
+msgid "Sales report"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/saudi_report.py:0
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__saudi
+#, python-format
+msgid "Saudi"
+msgstr "تقرير السعودة"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_saudi_report
+msgid "Saudi Employee"
+msgstr "الموظفيين السعوديين"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/saudi_report.py:0
+#: model:ir.actions.act_window,name:hr_base_reports.employee_saudi_report_actions
+#: model:ir.actions.report,name:hr_base_reports.employee_iqama_report_act
+#: model:ir.actions.report,name:hr_base_reports.employee_iqama_report_act_xlsx
+#: model:ir.actions.report,name:hr_base_reports.employee_saudi_report_act
+#: model:ir.actions.report,name:hr_base_reports.employee_saudi_report_act_xlsx
+#: model:ir.ui.menu,name:hr_base_reports.employee_saudi_report_menu
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_saudi_report
+#, python-format
+msgid "Saudi Report"
+msgstr "تقرير السعودة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+#, python-format
+msgid "Sequence"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__old
+msgid "Show Old"
+msgstr "السابقة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#, python-format
+msgid "Sign In"
+msgstr "الحضور"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#, python-format
+msgid "Sign Out"
+msgstr " الإنصراف"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/leave_reports.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.report_leaves_of_employee_template
+#, python-format
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#, python-format
+msgid "Start Trip"
+msgstr "بداية المهمة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/report/re_entery_report.py:0
+#, python-format
+msgid "Status"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+#, python-format
+msgid "Swap In Time"
+msgstr "زمن الدخول"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#, python-format
+msgid "Swap Out Time"
+msgstr "زمن الخروج"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+msgid "Swap out Time"
+msgstr "زمن الخروج"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/penalty_deduction_of_employee.py:0
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__penalty_deduction_wizard__report_type__termination
+#, python-format
+msgid "Termination"
+msgstr "انهاء الخدمة"
+
+#. module: hr_base_reports
+#: model:ir.actions.act_window,name:hr_base_reports.action_hr_termination_wizard
+msgid "Termination Report"
+msgstr "تقرير انهاء الخدمة"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_report_termination_template
+msgid "Termination Template Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_report_termination
+msgid "Termination report"
+msgstr "تقرير انهاء الخدمة"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_report_termination_xlsx
+msgid "Termination report XLSX"
+msgstr "طباعة Excel"
+
+#. module: hr_base_reports
+#: model:ir.ui.menu,name:hr_base_reports.termination_reports_wizard_menu
+msgid "Termination reports"
+msgstr "تقرير انهاء الخدمة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/iqama_report.py:0
+#, python-format
+msgid "The Amount"
+msgstr "المبلغ"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#, python-format
+msgid "The Year Of Promotion"
+msgstr "سنة الترقية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: code:addons/hr_base_reports/wizard/hr_penalty_report.py:0
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#, python-format
+msgid "There is no Data"
+msgstr "لا توجد بيانات"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#, python-format
+msgid "Ticket Cost"
+msgstr "تكلفة التذكرة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#, python-format
+msgid "Time"
+msgstr "الوقت"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#, python-format
+msgid "Title Of Course"
+msgstr "عنوان الدورة التدريبة"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+msgid "To"
+msgstr "إلى "
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#, python-format
+msgid "To date"
+msgstr "إلى تاريخ"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/report/overtime_report.py:0
+#: code:addons/hr_base_reports/report/saudi_report.py:0
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: code:addons/hr_base_reports/wizard/hr_departments_wizard.py:0
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.department_job_report_view
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_overtime_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+#, python-format
+msgid "Total"
+msgstr "المجموع"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#, python-format
+msgid "Total Absence"
+msgstr "عدد أيام الغياب"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#, python-format
+msgid "Total Absence Days"
+msgstr "مجموع ايام الغياب"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/loan_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_loan_report
+#, python-format
+msgid "Total Balance"
+msgstr "قيمة السلفة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: code:addons/hr_base_reports/report/mission_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_mission_report
+#, python-format
+msgid "Total Cost"
+msgstr "التكلفة الكلية"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#, python-format
+msgid "Total Deduction"
+msgstr "اجمالي الخصومات"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#, python-format
+msgid "Total Early Exit"
+msgstr "عدد ساعات التأخير"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+#, python-format
+msgid "Total Employee Late Hours"
+msgstr " مجموع ساعات التاخير الموظف "
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/overtime_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report
+#, python-format
+msgid "Total Hours"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/attendance_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_attendance_report
+#, python-format
+msgid "Total Late Department"
+msgstr "مجموع ساعات تاخير الهيكل الاداري"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#, python-format
+msgid "Total Lateness"
+msgstr "إجمالي التأخيرات"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_saudi_report
+msgid "Total Number of Employee"
+msgstr "إجمالي عدد الموظفيين"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#, python-format
+msgid "Total Working Hours"
+msgstr "إجمالي ساعات العمل"
+
+#. module: hr_base_reports
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__employee_cost_report__report_type__training
+msgid "Training"
+msgstr "التدريب"
+
+#. module: hr_base_reports
+#: model:ir.ui.menu,name:hr_base_reports.employee_training_report_menu
+msgid "Training Report"
+msgstr "تقرير التدريب"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/employee_cost_report.py:0
+#: code:addons/hr_base_reports/report/employee_general_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employee_general_report
+#, python-format
+msgid "Transportation Allowance"
+msgstr "بدل النقل"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: code:addons/hr_base_reports/wizard/employee_fingerprint_report.py:0
+#: model:ir.model.fields,field_description:hr_base_reports.field_employee_cost_report__mission_type
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report
+#, python-format
+msgid "Type"
+msgstr "طريقة البصمة"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/absence_execuse.py:0
+#, python-format
+msgid "Type Of Excuse"
+msgstr "نوع الاذن"
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/penalty_deduction_of_employee.py:0
+#: model:ir.model.fields.selection,name:hr_base_reports.selection__penalty_deduction_wizard__report_type__warning
+#, python-format
+msgid "Warning"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_action_department_report_xlsx
+msgid "XLSX Action Department Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_action_employee_reward_report_xlsx
+msgid "XLSX Action Employee Reward Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_action_job_offer_report_xlsx
+msgid "XLSX Action Job Offer Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_action_leaves_report_xlsx
+msgid "XLSX Action Leaves Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_action_report_penalty_xlsx
+msgid "XLSX Action Penalty Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_absence_report_xlsx
+msgid "XLSX Employee Absence Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_appraisal_report_xlsx
+msgid "XLSX Employee Appraisal Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_attendance_report_xlsx
+msgid "XLSX Employee Attendance Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_cost_report_xlsx
+msgid "XLSX Employee Cost Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_executions_report_xlsx
+msgid "XLSX Employee Executions Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_general_report_xlsx
+msgid "XLSX Employee General Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_handover_report_xlsx
+msgid "XLSX Employee Handover Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_iqama_report_xlsx
+msgid "XLSX Employee Iqama Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_loan_report_xlsx
+msgid "XLSX Employee Loan Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_mission_report_xlsx
+msgid "XLSX Employee Mission Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_overtime_report_xlsx
+msgid "XLSX Employee Overtime Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_action_report_overtime_xlsx
+msgid "XLSX Employee Overtime Requests Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_promotion_report_xlsx
+msgid "XLSX Employee Promotion Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_re_entry_report_xlsx
+msgid "XLSX Employee Re-entry Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_saudi_report_xlsx
+msgid "XLSX Employee Saudi Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_employee_training_report_xlsx
+msgid "XLSX Employee Training Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_fingerprint_action_report_xls
+msgid "XLSX Fingerprint Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_action_report_termination_xlsx
+msgid "XLSX Termination Report"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/report/promotion_report.py:0
+#, python-format
+msgid "current Line Manager"
+msgstr "المدير الحالى"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.view_employee_reward_wizard
+msgid "employee Reward Report"
+msgstr "تقرير مكافآه الموظف"
+
+#. module: hr_base_reports
+#: model:ir.actions.report,name:hr_base_reports.action_employee_reward_report_xlsx
+#: model:ir.actions.report,name:hr_base_reports.action_report_employee_reward
+msgid "employee Reward report"
+msgstr "تقرير مكافآه الموظف"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_hr_attendance_transaction
+msgid "hr.attendance.transaction"
+msgstr ""
+
+#. module: hr_base_reports
+#: code:addons/hr_base_reports/wizard/hr_departments_wizard.py:0
+#, python-format
+msgid "jobs"
+msgstr "الوظائف"
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employees_cost_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.fingerprint_report_view_form
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.overtime_report_view_form
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.view_department_job_wizard
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.view_employee_reward_wizard
+msgid "or"
+msgstr "او"
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_overtime_action_report_xls
+msgid "report.hr_base_reports.overtime_action_report_xls"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_report_hr_base_reports_overtime_report
+msgid "report.hr_base_reports.overtime_report"
+msgstr ""
+
+#. module: hr_base_reports
+#: model:ir.model,name:hr_base_reports.model_hr_termination_wizard
+msgid "termination Wizard"
+msgstr ""
+
+#. module: hr_base_reports
+#: model_terms:ir.ui.view,arch_db:hr_base_reports.employees_cost_report_wizard_view
+msgid "Employee Cost Report"
+msgstr "تقرير تكلفة الموظف"
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employees_cost_report__salary_date_to
+msgid "Salary Date To"
+msgstr "حساب اخر راتب الى"
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employees_cost_report__salary_date_from
+msgid "Salary Date From"
+msgstr "حساب اخر راتب من"
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employees_cost_report__allowance_ids
+msgid "Allowance"
+msgstr "الإستحقاقات"
+
+#. module: hr_base_reports
+#: model:ir.actions.act_window,name:hr_base_reports.employee_cost_report_wizard_action
+#: model:ir.ui.menu,name:hr_base_reports.parent_termination_report_employees
+msgid "Employee cost Report"
+msgstr "تقرير تكلفة الموظف"
+
+#. module: hr_base_reports
+#: model:ir.model.fields,field_description:hr_base_reports.field_employees_cost_report__end_date
+msgid "End Of Service"
+msgstr "سبب الانهاء"

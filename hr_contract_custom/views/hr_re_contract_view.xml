@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- Top menu item -->
+        <record id="open_view_re_contracting_form" model="ir.actions.act_window">
+            <field name="name">Re-Contracting</field>
+            <field name="res_model">hr.re.contract</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="view_re-contracting_form" model="ir.ui.view">
+            <field name="name">re-contracting</field>
+            <field name="model">hr.re.contract</field>
+            <field name="arch" type="xml">
+                <form string="Contracting">
+                    <header>
+                        <button name="action_submit" string="Submit" states="draft" type="object" class="oe_highlight"
+                                groups="hr.group_hr_user"/>
+
+                        <button name="action_direct_manager" string="Direct Manager" states="submitted" type="object"
+                                groups="hr_base.group_division_manager" class="oe_highlight"/>
+                        <button name="action_refuse" string="Refuse" states="submitted"  type="object" class="oe_highlight"
+                                groups="hr_base.group_division_manager"/>
+
+                        <button name="action_hr_manager" string="HR Manager" states="direct_manager" type="object"
+                                class="oe_highlight" groups="hr.group_hr_manager" />
+                        <button name="action_refuse" string="Refuse" states="direct_manager"  type="object" class="oe_highlight"
+                                groups="hr.group_hr_manager" />
+
+
+                        <button name="action_done" string="Re-Contract" states="hr_manager" type="object" class="oe_highlight"
+                                groups="hr.group_hr_manager" />
+                       <button name="action_refuse" string="Refuse" states="hr_manager"  type="object" class="oe_highlight"
+                                groups="hr.group_hr_manager" />
+
+
+                        <button name="action_set_to_draft" string="Set To Draft" states="refuse,done" type="object" class="oe_highlight"
+                                groups="hr.group_hr_manager" confirm="Are you sure to Reset To Draft This Record?"/>
+
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="employee_id" class="oe_inline"/>
+                            <h2>
+                                <field name="employee_id" domain="[('active','=',True)]" required="1"
+                                       class="oe_inline" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </h2>
+                        </div>
+                        <group>
+                            <group>
+
+                                <field name="date" attrs="{'readonly':[('state','!=','draft')]}" string="Date Request" required="1"/>
+                                <field name="job_id"  readonly="1"/>
+                                <field name="department_id" readonly="1"/>
+                                <field name="hire_date" readonly="1"/>
+                                <field name="contract_id"
+                                       options="{'no_create': True, 'no_create_edit':True,'no_open': True}"
+                                       readonly="1"/>
+
+                                <field name="start_date" readonly="1"/>
+                                <field name="eoc_date" readonly="1"/>
+                                <field name="iqama_end_date" readonly="1"/>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                            </group>
+
+                            <group>
+                                <field name="last_renewal" string="Last Renewal?"/>
+                                <field name="contract_type" required="1" string="Contract Type" attrs="{'readonly':[('state','not in',('draft','submitted','direct_manager'))]}"/>
+                                <field name="effective_date" attrs="{'required':[('state','in',['submitted','direct_manager'])],
+                                            'readonly':[('state','not in',('draft','submitted','direct_manager'))]}"/>
+                                <field name="new_contract_start_date" string="New Contract Start Date"
+                                       attrs="{'required':[('state','in',['submitted','direct_manager'])],
+                                               'readonly':[('state','not in',('draft','submitted','direct_manager'))]}"/>
+                                <field name="new_contract_end_date" string="New Contract End Date"
+                                       attrs="{'required':[('state','in',['submitted','direct_manager']),('contract_type','=','temporary')],
+                                               'readonly':[('state','not in',('draft','submitted','direct_manager'))]}"/>
+
+                            </group>
+
+                        </group>
+
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="view_re-contracting_tree">
+            <field name="name">re-contracting</field>
+            <field name="model">hr.re.contract</field>
+            <field name="arch" type="xml">
+                <tree decoration-success="state=='done'" decoration-info="state == 'draft'" string="Contracting">
+                    <field name="employee_id"  />
+                    <field name="date" />
+                    <field name="effective_date" />
+                    <field name="state" string="State" />
+                </tree>
+            </field>
+        </record>
+
+        <menuitem parent="hr.menu_hr_root" name="Re-Contract" id="hr_employee_re_contract_menu" sequence="12"/>
+        <menuitem parent="hr_employee_re_contract_menu" id="hr_employee_re_contract_menu_sub" name="Contract"
+                  action="open_view_re_contracting_form"/>
+    </data>
+</odoo>

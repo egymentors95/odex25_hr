@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+<data>
+<template id="report_payroll_bank_pdf_docx"><t t-foreach="data" t-as="v"><t>IFH,IFILE,CSV,ABCD5953001,SASABBGSA003888815,<t><t t-esc="random_char"/></t><t t-set="date_value" t-value="pay_date"/><t t-esc="date_value.replace('-', '').replace('/', '').replace(':', '')"/>00,</t><t t-esc="datestamp" widget="datetime"></t>,<t><t t-esc="timestamp" widget="datetime"></t></t><t>,P,1.0,</t><t><t t-esc="number_of_records"/></t>
+<t>BATHDR,ACH-CR,<t><t t-esc="counter"/></t>,,,,<t><t t-esc="salary_type"/></t>,Salary,,@1ST@,<t t-set="date_value" t-value="pay_date"/><t t-esc="date_value.replace('-', '').replace('/', '')"/>,00<t t-esc="company_pay_no"></t>,<t t-esc="currency"></t>,<t t-esc="round(total_amount_salary,2)"></t>,,,,,,,<t t-esc="company_id"></t>,<t><t t-esc="company_hr_no"/></t>,<t><t t-esc="company_registry"/></t>,,,,<t><t t-esc="random_char2"/></t><t t-set="date_value" t-value="timestamp" widget="datetime"/><t t-esc="date_value.replace('-', '').replace('/', '').replace(':', '')"/>00</t><t t-if="bank_type=='rajhi'"><t t-foreach="v['docs']" t-as="o"><t></t>
+<t>SECPTY,</t><t><t t-esc="o['Account #']"/></t>,<t><t t-esc="o['Name']"/></t>,<t><t t-esc="o['ID']"/></t>,<t><t t-esc="o['Bank']"/></t>,,,<t><t t-esc="'%.2f'% o['Salary']"/></t>,,,,,,,N,N,,,,,,@SACH@,<t><t t-esc="o['National']"/></t>,<t><t t-esc="'%.2f'% o['Basic']"/></t>,<t><t t-esc="'%.2f'% o['Housing']"/></t><t>,<t t-esc="'%.2f'% o['Other']"/></t>,<t><t t-esc="'%.2f'% o['Deduction']"/></t>,<t>salary of <t t-esc="pay_slip"/></t></t></t>
+<t t-elif="bank_type=='alahli'"><t t-foreach="v['docs']" t-as="o"><t></t>
+<t>SECPTY,</t><t><t t-esc="o['Account #']"/></t>,<t><t t-esc="o['Name']"/></t>,<t><t t-esc="o['ID']"/></t>,<t><t t-esc="o['Bank']"/></t>,,,<t><t t-esc="'%.2f'% o['Salary']"/></t>,,,,,,,N,N,,,,,,@SACH@,<t><t t-esc="o['National']"/></t>,<t><t t-esc="'%.2f'% o['Basic']"/></t>,<t><t t-esc="'%.2f'% o['Housing']"/></t><t>,<t t-esc="'%.2f'% o['Other']"/></t>,<t><t t-esc="'%.2f'% o['Deduction']"/></t>,<t>salary of <t t-esc="pay_slip"/></t></t></t>
+<t t-elif="bank_type=='riyadh'"><t t-foreach="v['docs']" t-as="o"><t></t>
+<t>SECPTY,</t><t><t t-esc="o+['Account #']"/></t>,<t><t t-esc="o['Name']"/></t>,<t><t t-esc="o['ID']"/></t>,<t><t t-esc="o['Bank']"/></t>,,,<t><t t-esc="'%.2f'% o['Salary']"/></t>,,,,,,,N,N,,,,,,@SACH@,<t><t t-esc="o['National']"/></t>,<t><t t-esc="'%.2f'% o['Basic']"/></t>,<t><t t-esc="'%.2f'% o['Housing']"/></t><t>,<t t-esc="'%.2f'% o['Other']"/></t>,<t><t t-esc="'%.2f'% o['Deduction']"/></t>,<t>salary of <t t-esc="pay_slip"/></t></t></t></t>
+</template>
+</data>
+</odoo>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <template id="report_employee_identify_2">
+        <t t-call="web.html_container" t-translation="off">
+            <div class="header">
+                <div class="row text-center">
+                    <!--<img src="/hr_custom_workflow/static/img/header.png" style="width:100%;" class="text-center"/>-->
+                </div>
+            </div>
+            <t t-foreach="docs" t-as="doc">
+                <div class="article" style="font-family:'Sakkal Majalla'!important;font-size:18pt;direction:rtl">
+                    <style>
+                        @font-face {font-family: "Sakkal Majalla"; src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                        format("embedded-opentype"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype");
+                        }
+                        #content-table thead tr th{
+                        background-color: rgb(20,166,156);
+                        border: 1px solid #222;
+                        vertical-align: middle;
+                        font-weight: bold;
+                        text-align:center;
+                        color: #fff;
+                        padding: 10px 0;
+                        font-size: 16pt;
+                        }
+                        #content-table td{
+                        font-family: 'Sakkal Majalla'!important;
+                        }
+                        #content-table thead tr th{
+                        width: 50%;
+                        font-family: 'Sakkal Majalla'!important;
+                        }
+                        #content-table tbody tr td{
+                        border: 1px solid;
+                        vertical-align: middle;
+                        padding: 9px 0;
+                        text-align: center;
+                        font-size:14pt;
+                        }
+                        #content-table tbody tr td:last-child{
+                        direction: ltr;
+                        background-color: rgb(230, 230, 231);
+                        color: #222;
+                        font-weight: bold;
+                        width: 25%;
+                        }
+                        #content-table tbody tr td:first-child{
+                        direction: rtl;
+                        background-color: rgb(230, 230, 231);
+                        color: #222;
+                        font-weight: bold;
+                        width: 25%;
+                        }
+                    </style>
+
+                    <div class="OutlineElement Rtl SCXW182515882 BCX2">
+                        <h3 style="font-weight:bold;margin-bottom: 60px;text-align:center;font-family: 'Sakkal Majalla'!important;color:rgb(77, 168, 178);font-size: 20pt;margin-top: 0;">
+                            <span>شهادة تعريف</span>
+                            |
+                            <span>Employment Certificate</span>
+                        </h3>
+                    </div>
+                    <table class="table table-borderless"
+                           style="margin-bottom: 5px; font-family: 'Sakkal Majalla' !important; font-size: 13pt; background-size: 35%; background-position: right; background-repeat: no-repeat;">
+                        <tr style="border:0;">
+                            <td style="text-align:right;width:50%;padding-left:10px;padding-right: 10px;">
+                                <p style="font-weight: bold;color: #333;margin-bottom: 5px;">
+                                    <span style="border-bottom: 1px solid #333;">مقدم إلى:</span>
+                                    <span t-esc="doc.destination.name"/>
+                                </p>
+                                <span>نفيدكم بأن الموظف الموضح هويته أدناه يعمل لدى</span>
+                                <span style="font-weight: bold;"><span t-esc="env.user.sudo().company_id.name"/>-
+                                </span>
+                                <span>ولا يزال على رأس العمل حتى تاريخه و أعطيت له هذه الشهادة بناء على</span>
+                                <span>طلبه دون أدنى مسئولية.</span>
+                            </td>
+                            <td style="direction:ltr;text-align:left;border:0;width:50%;padding-right: 10px;padding-left:10px;">
+                                <p style="font-weight: bold;color: #333;margin-bottom: 5px;">
+                                    <span style="border-bottom: 1px solid #333;">Addressed To:</span>
+                                    <span t-esc="doc.destination.english_name"/>
+                                </p>
+                                <span>This is to certify that Below-mentioned employee is working in</span>
+                                <span style="font-weight: bold;">
+                                    <span t-esc="env.user.sudo().company_id.english_name"/>
+                                    -
+                                </span>
+                                <span>This certification is issued upon the request of the employee without any
+                                    obligation
+                                </span>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <div class="OutlineElement Rtl SCXW182515882 BCX2">
+                        <div class="TableContainer SCXW182515882 BCX2">
+                            <center>
+                                <table id="content-table" aria-rowcount="12" border="1"
+                                       class="Table Rtl TableWordWrap SCXW182515882 BCX2"
+                                       style="margin-right:10%; font-size: 8pt; width: 90%;">
+                                    <thead>
+                                        <tr>
+                                            <th colspan="2">تعريف عمل</th>
+                                            <th colspan="2">Certificate of Employment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="SCXW182515882 BCX2">
+                                        <tr>
+                                            <td style="width: 20%;">التاريخ</td>
+                                            <td colspan="2">
+                                                <span t-esc="doc.date"/>
+                                            </td>
+                                            <td style="width: 20%;">Date</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 20%;">رقم الموظف</td>
+                                            <td colspan="2">
+                                                <span t-esc="doc.employee_id.emp_no"/>
+                                            </td>
+                                            <td style="width: 20%;">Emp No.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 20%;">اسم الموظف</td>
+                                            <td>
+                                                <span t-esc="doc.employee_id.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="doc.employee_id.english_name"/>
+                                            </td>
+                                            <td style="width: 20%;">Name</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 20%;">الوظيفة الحالية</td>
+                                            <td colspan="2">
+                                                <span t-esc="doc.employee_id.job_id.name"/>
+                                            </td>
+                                            <td style="width: 20%;">Position</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 20%;">رقم الهوية</td>
+                                            <td colspan="2">
+                                                <span t-esc="doc.employee_id.saudi_number.saudi_id or doc.employee_id.iqama_number.iqama_id"/>
+                                            </td>
+                                            <td style="width: 20%;">ID No.</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 20%;">الجنسية</td>
+                                            <td colspan="2">
+                                                <span t-esc="doc.employee_id.country_id.name"/>
+                                            </td>
+                                            <td style="width: 20%;">Nationality</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 20%;">تاريخ التعيين</td>
+                                            <td colspan="2">
+                                                <span t-esc="doc.employee_id.contract_id.hiring_date"/>
+                                            </td>
+                                            <td style="width: 20%;">Hire Date</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="width: 20%;">الراتب الشهري الإجمالي</td>
+                                            <td colspan="2">
+                                                <span t-esc="round(doc.employee_id.contract_id.total_net,2)"/>
+                                                <span>ريال</span>
+                                            </td>
+                                            <td style="width: 20%;">Total Salary / month</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </center>
+                        </div>
+
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <!--                        todo start -->
+                        <!--                        <div class="">-->
+                        <!--                            <div style="float:left;margin-left:15px;" class="left">-->
+                        <!--                                <span t-field="env.user.sudo().company_id.hr_manager_id.user_id.sign_signature" t-options="{&quot;widget&quot;: &quot;image&quot;,&quot;style&quot;:&quot;width: 90px;height:90px;&quot;}"/>-->
+                        <!--                            </div>-->
+                        <!--                            <div style="float:right" class="signature right">-->
+                        <!--                                <span t-field="env.user.sudo().company_id.hr_manager_id.user_id.sign_initials" t-options="{&quot;widget&quot;: &quot;image&quot;,&quot;style&quot;:&quot;width: 200px;height:70px;&quot;}"/>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!--                        todo end -->
+                        <h4 style="text-align: center; font-size: 14pt; margin-top: 10px;">
+                            <span>مدير إدارة الموارد البشرية</span>
+                            <br/>
+                            <span>Director of Human Resource</span>
+                            <br/>
+                            <span t-esc="env.user.sudo().company_id.hr_manager_id.name"/>
+                        </h4>
+                        <!--                        <div class="column">-->
+                        <!--                            <div align="center">-->
+                        <!--                                <span t-field="env.user.sudo().company_id.hr_manager_id.user_id.sign_signature"-->
+                        <!--                                      t-field-options='{"widget": "image","style":"width: 90px;height:90px;"}'/>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!--                        <br/>-->
+                        <!--                        <table class="table table-borderless"-->
+                        <!--                               style="border-spacing: 0px;padding:0px;margin:0px;margin-top:115px;font-family:'Sakkal Majalla'!important;font-size:9pt"-->
+                        <!--                               dir="rtl">-->
+                        <!--                            <tr style="border:0;">-->
+                        <!--                                <td style="text-align:right;border:0;width:50%;padding:0px;margin:0px;">-->
+                        <!--                                    <span>طبع بواسطة :</span>-->
+                        <!--                                    <span t-esc="user.name"/>-->
+                        <!--                                </td>-->
+                        <!--                                <td style="text-align:left;border:0;width:50%;padding:0px;margin:0px;direction:ltr">-->
+                        <!--                                    <span>Printed By :</span>-->
+                        <!--                                    <span t-esc="user.name"/>-->
+                        <!--                                </td>-->
+                        <!--                            </tr>-->
+
+                        <!--                        </table>-->
+
+                        <!--div class="row" style="font-family: 'Sakkal Majalla'!important;">
+                            <div class="col-xs-5">
+                                <p style="direction: ltr;">* <span>Any Alteration or erasures will void this form</span></p>
+                            </div>
+                            <div class="col-xs-3"/>
+                            <div class="col-xs-4">
+                                <p>* <span>اي قشط او تعديل يلغي هذه الشهادة</span></p>
+                            </div>
+                        </div-->
+
+                    </div>
+
+                </div>
+            </t>
+            <div class="footer">
+                <div class="row text-center">
+                    <!--<img src="/hr_custom_workflow/static/img/footer.png" style="width:100%;" class="text-center"/>-->
+                </div>
+            </div>
+        </t>
+    </template>
+    <record id="action_report_employee_identify_2" model="ir.actions.report">
+        <field name="model">employee.other.request</field>
+        <field name="name">Employee Identify Without Details</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">employee_requests.report_employee_identify_2</field>
+        <field name="report_file">employee_requests.report_employee_identify_2</field>
+        <field name="groups_id" eval="[(4, ref('hr.group_hr_user'))]"/>
+    </record>
+</odoo>

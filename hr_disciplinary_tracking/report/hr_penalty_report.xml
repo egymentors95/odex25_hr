@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="hr_penalty_report">
+        <t t-call="web.html_container">
+            <t t-call="hr_base.hr_layout">
+            <div class="page">
+                <div class="oe_structure"/>
+                <style>
+                    .page{
+                        font-family: Times New Roman;;
+                    }
+                    table{
+                        width :100%;
+                        border : 1px solid black;
+                        border-collapse : collapse;
+                        font-size : 13pt;
+
+                    }
+                    th{
+                        border : 1px solid black;
+                        background-color : #a7c4f2;
+                        text-align : center;
+                        padding : 5px;
+                    }
+                    td{
+                        border : 1px solid black;
+                        text-align : center;
+                        padding : 3px;
+                    }
+                    .cr_t{
+                        text-align : center;
+                    }
+                    tr{
+                        page-break-inside:avoid;
+                        page-break-after:auto ;
+                    }
+
+                </style>
+                <center>
+                    <h3>HR Penalty Report from <t t-esc="date_from"/> To <t t-esc="date_to"/> </h3>
+                </center>
+                <br/>
+                <t t-foreach="docs" t-as="doc">
+                    <t t-set="count" t-value="1"/>
+                    <center>
+                        <strong>Penalty:<t t-esc="doc['penalty'].name"/></strong>
+                    </center>
+                    <br/>
+                    <table>
+                        <tr>
+                            <th>Sequence</th>
+                            <th>Iqama</th>
+                            <th>Name</th>
+                            <th>Nationality</th>
+                            <th>Job</th>
+                            <th>Department</th>
+                            <th>First Hiring Date</th>
+                            <th>Punishment Date</th>
+                            <th>Reason</th>
+                            <th>Deduction</th>
+                            <th>Notes</th>
+                        </tr>
+                        <tbody>
+                            <t t-foreach="doc['lines']" t-as="line">
+                                <tr>
+                                    <td><t t-esc="count"/></td>
+                                    <td><t t-if="line.employee_id.country_id.code== 'SA'">
+                                        <t t-esc="line.employee_id.saudi_number.saudi_id"/>
+                                    </t>
+                                        <t t-else="">
+                                            <t t-esc="line.employee_id.iqama_number.iqama_id"/>
+                                        </t>
+                                    </td>
+                                    <td style="width: 1.5in;"><t t-esc="line.employee_id.name"/></td>
+                                    <td><t t-esc="line.employee_id.country_id.name"/></td>
+                                    <td><t t-esc="line.employee_id.job_id.name"/></td>
+                                    <td><t t-esc="line.employee_id.department_id.name"/></td>
+                                    <td><t t-esc="line.employee_id.first_hiring_date"/></td>
+                                    <td><t t-esc="line.date"/></td>
+                                    <td>
+                                        <t t-foreach="line.punishment_id" t-as="punishment">
+                                            <t t-esc="punishment.name"/><br/>
+                                        </t>
+                                    </td>
+                                    <td><t t-esc="line.deduction_amount"/></td>
+                                    <td></td>
+
+                                </tr>
+                                <t t-set="count" t-value="count+1"/>
+                            </t>
+                         </tbody>
+                    </table>
+                    <br/> <br/>
+                </t>
+                <div class="oe_structure"/>
+            </div>
+        </t>
+        </t>
+    </template>
+
+    <record id="action_hr_penalty_report" model="ir.actions.report">
+        <field name="model">hr.penalty.ss</field>
+        <field name="name">HR Penalty Report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_disciplinary_tracking.hr_penalty_report</field>
+        <field name="report_file">hr_disciplinary_tracking.hr_penalty_report</field>
+    </record>
+    <record id="hr_penalty_action_report_xls" model="ir.actions.report">
+        <field name="model">hr.penalty.ss</field>
+        <field name="name">Print to XLSX</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">hr_disciplinary_tracking.hr_penalty_action_report_xls</field>
+        <field name="report_file">HR Penalty Report</field>
+    </record>
+
+</odoo>

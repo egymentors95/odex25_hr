@@ -1,0 +1,148 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="action_hr_termination_wizard" model="ir.actions.act_window">
+            <field name="name">Termination Report</field>
+            <field name="res_model">hr.termination.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <record id="termination_report_view" model="ir.ui.view">
+            <field name="name">Termination Wizard</field>
+            <field name="model">hr.termination.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <group>
+                            <field name="date_from" string="Date from" required="1"/>
+                            <field name="cause_type" string="Cause Type" required="1"/>
+                        </group>
+                        <group>
+                            <field name="date_to" string="Date to" required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Print Termination PDF" name="get_report" type="object"
+                                class="oe_highlight" icon="fa-download"/>
+                        <button name="get_reportxlsxs" type="object" default_focus="1"
+                                string="Print report excel" class="oe_highlight" icon="fa-download"/>
+                        <button string="Cancel" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record model="report.paperformat" id="paperformat_attendance_recap_report">
+            <field name="name">paperformat.attendance.recap.report</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_width">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">30</field>
+            <field name="margin_right">5</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">20</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <!--pdf report-->
+        <record id="action_report_termination" model="ir.actions.report">
+            <field name="name">Termination report</field>
+            <field name="model">hr.termination.wizard</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_base_reports.report_termination_template</field>
+            <field name="report_file">hr_base_reports.report_termination_template</field>
+            <field name="paperformat_id" ref="hr_base_reports.paperformat_attendance_recap_report"/>
+        </record>
+
+        <!--xlsx report-->
+        <record id="action_report_termination_xlsx" model="ir.actions.report">
+            <field name="model">hr.termination.wizard</field>
+            <field name="name">Termination report XLSX</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_base_reports.action_report_termination_xlsx</field>
+            <field name="report_file">hr_base_reports.action_report_termination_xlsx</field>
+        </record>
+        <template id="report_termination_template">
+            <t t-call="web.html_container">
+                <t t-call="hr_base.hr_layout">
+                    <style>
+                        @font-face {font-family: "Sakkal Majalla"; src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                        format("embedded-opentype"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"); }
+                    </style>
+                    <div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+                        <h4 class="text-center">
+                            <strong style="color:#003c79">From</strong>:
+                            <span style="color:#999">
+                                <t t-esc="date_start"/>
+                            </span>
+                            <strong style="color:#003c79">To</strong>:
+                            <span style="color:#999">
+                                <t t-esc="date_end"/>
+                            </span>
+                        </h4>
+
+                            <table class="table table-condensed table-bordered" style="width: 100%">
+                                <thead>
+                                    <thead>
+                                        <th class="text-center" style="width: 20%;background:#e9ebee;color:#003c79">Employee
+                                        </th>
+                                        <th class="text-center" style="width: 20%;background:#e9ebee;color:#003c79">Department
+                                        </th>
+                                        <th class="text-center" style="width: 20%;background:#e9ebee;color:#003c79">Cause Type
+                                        </th>
+                                        <th class="text-center" style="width: 20%;background:#e9ebee;color:#003c79">Reason</th>
+                                    </thead>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="docs" t-as="doc">
+                                        <tr>
+                                            <td>
+                                                <span t-esc="doc['employee']"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="doc['department']"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="doc['cause_type']"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="doc['reason']"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                    </div>
+                </t>
+            </t>
+
+        </template>
+    </data>
+</odoo>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="overtime_report">
+        <t t-call="hr_base.hr_layout">
+            <div class="page">
+            <div class="oe_structure"/>
+            <style>
+                .page{
+                    font-family: Times New Roman;;
+                }
+                table{
+                    width :100%;
+                    border : 1px solid black;
+                    border-collapse : collapse;
+                    font-size : 13pt;
+
+                }
+                th{
+                    border : 1px solid black;
+                    background-color : #a7c4f2;
+                    text-align : center;
+                    padding : 5px;
+                }
+                td{
+                    border : 1px solid black;
+                    text-align : center;
+                    padding : 3px;
+                }
+                .cr_t{
+                    text-align : center;
+                }
+                tr{
+                    page-break-inside:avoid;
+                    page-break-after:auto ;
+                }
+
+            </style>
+            <center>
+                <h3>Overtime Report From <t t-esc="date_from"/> To <t t-esc="date_to"/></h3>
+            </center>
+            <br/>
+            <t t-set="count" t-value="1"/>
+            <t t-set="total_workdays_hours" t-value="0"/>
+            <t t-set="total_vacation_hours" t-value="0"/>
+            <t t-set="total_daily_hours" t-value="0"/>
+            <t t-set="total_holiday_hours" t-value="0"/>
+            <t t-set="total" t-value="0"/>
+                <table>
+                     <tr>
+                         <th colspan="7"><t t-esc="overtime_place"/></th>
+                         <th colspan="10"><t t-esc="print_date"/></th>
+                     </tr>
+                    <tr>
+                        <th rowspan="2">Sequence</th>
+                        <th rowspan="2">Identity</th>
+                        <th rowspan="2">Name</th>
+                        <th rowspan="2">Job</th>
+                        <th rowspan="2">Salary</th>
+                        <th  colspan="2">Hour Rate</th>
+                        <th colspan="5">Effective Hours</th>
+                        <th rowspan="2">Notes</th>
+
+                    </tr>
+                    <tr>
+                        <th>Regular</th>
+                        <th>Holiday</th>
+                        <th>Regular</th>
+                        <th>Holiday</th>
+                        <th colspan="2">Total Hours</th>
+                        <th>Total</th>
+                     </tr>
+                    <tbody>
+                        <t t-foreach="docs" t-as="doc">
+                            <tr>
+                                <td><t t-esc="count"/></td>
+                                <td>
+                                    <t t-if="doc['employee_id'].country_id.code=='SA'">
+                                        <t t-esc="doc['employee_id'].saudi_number.saudi_id"/>
+                                    </t>
+                                    <t t-else="">
+                                      <t t-esc="doc['employee_id'].iqama_number.iqama_id"/>
+                                    </t>
+                                </td>
+                                <td style="width: 1.5in;"><t t-esc="doc['employee_id'].name"/></td>
+                                <td><t t-esc="doc['employee_id'].job_id.name"/></td>
+                                <td><t t-esc="doc['employee_id'].contract_id.total_allowance" t-esc-options="{'widget': 'float', 'precision': 2}"/></td>
+                                <td><t t-esc="doc['daily_hourly_rate']" t-esc-options="{'widget': 'float', 'precision': 2}"/></td>
+                                <td><t t-esc="doc['holiday_hourly_rate']" t-esc-options="{'widget': 'float', 'precision': 2}"/></td>
+                                <td><t t-esc="doc['over_time_workdays_hours']"/></td>
+                                <td><t t-esc="doc['over_time_vacation_hours']"/></td>
+
+                                <!--td><t t-esc="doc['over_time_workdays_hours'] * doc['daily_hourly_rate']" t-esc-options="{'widget': 'float', 'precision': 2}"/></td>
+                                <td><t t-esc="doc['holiday_hourly_rate'] * doc['over_time_vacation_hours']" t-esc-options="{'widget': 'float', 'precision': 2}"/></td>
+                                <td><t t-esc="doc['over_time_workdays_hours'] * doc['daily_hourly_rate'] + doc['holiday_hourly_rate'] * doc['over_time_vacation_hours']" t-esc-options="{'widget': 'float', 'precision': 2}"/></td-->
+                                <td><t t-esc="doc['daily_amount']" t-esc-options="{'widget': 'float', 'precision': 2}"/></td>
+                                <td><t t-esc="doc['vacation_amount']" t-esc-options="{'widget': 'float', 'precision': 2}"/></td>
+                                <td><t t-esc="doc['price_hour']" t-esc-options="{'widget': 'float', 'precision': 2}"/></td>
+                                <td></td>
+                            </tr>
+                            <t t-set="count" t-value="count+1"/>
+
+                            <!--t t-set="total_workdays_hours" t-value="total_workdays_hours+doc['over_time_workdays_hours']"/>
+                            <t t-set="total_vacation_hours" t-value="total_vacation_hours+doc['over_time_vacation_hours']"/-->
+                            <t t-set="total_workdays_hours" t-value="total_workdays_hours+doc['daily_amount']"/>
+                            <t t-set="total_vacation_hours" t-value="total_vacation_hours+doc['vacation_amount']"/>
+
+
+                            <!--t t-set="total_daily_hours" t-value="total_daily_hours + doc['over_time_workdays_hours'] * doc['daily_hourly_rate']"  t-esc-options="{'widget': 'float', 'precision': 2}"/>
+
+                            <t t-set="total_holiday_hours" t-value="total_holiday_hours+doc['holiday_hourly_rate'] * doc['over_time_vacation_hours']" t-esc-options="{'widget': 'float', 'precision': 2}"/-->
+                            <t t-set="total_daily_hours" t-value="total_daily_hours + doc['daily_amount']"  t-esc-options="{'widget': 'float', 'precision': 2}"/>
+
+
+
+                            <t t-set="total_holiday_hours" t-value="total_holiday_hours + doc['vacation_amount']" t-esc-options="{'widget': 'float', 'precision': 2}"/>
+
+                            <t t-set="total" t-value="total + total_daily_hours + total_holiday_hours" t-esc-options="{'widget': 'float', 'precision': 2}"/>
+                        </t>
+                        <tr style="background-color : #a7c4f2;">
+                            <td colspan="9">Total</td>
+                            <td><t t-esc="total_daily_hours" t-esc-options="{'widget': 'float', 'precision': 2}"/></td>
+                            <td><t t-esc="total_holiday_hours" t-esc-options="{'widget': 'float', 'precision': 2}"/></td>
+                            <td><t t-esc="total" t-esc-options="{'widget': 'float', 'precision': 2}"/></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br/>
+            <div class="oe_structure"/>
+        </div>
+        </t>
+    </template>
+
+    <report
+            id="action_overtime_report"
+            model="employee.overtime.request"
+            string="Overtime Report"
+            report_type="qweb-pdf"
+            name="hr_base_reports.overtime_report"
+            file="hr_base_reports.overtime_report"
+             menu="False"
+
+    />
+    <report
+            id="overtime_action_report_xls"
+            model="employee.overtime.request"
+            string="Print to XLSX"
+            report_type="xlsx"
+            name="hr_base_reports.overtime_action_report_xls"
+            file="Overtime Report"
+            attachment_use="False"
+            menu="False"
+    />
+
+</odoo>

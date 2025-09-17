@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!--        Ticket request type-->
+        <record id="ticket_request_type_form_class_view" model="ir.ui.view">
+            <field name="name">ticket.request.type.form.view</field>
+            <field name="model">hr.ticket.request.type</field>
+            <field name="arch" type="xml">
+                <form string="Ticket Request type">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <label for="name" class="oe_edit_only"/>
+                                <field name="name" placeholder=" Name of Class..."/>
+                            </h1>
+                        </div>
+                        <group col="4">
+                             <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                            <field name="ticket_check"/>
+                            <field name="allowance_name"/>
+                            <field name="account_debit_id"/>
+                            <field name="analytic_account_id"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="ticket_request_type_tree_class_view" model="ir.ui.view">
+            <field name="name">ticket.request.type.tree.view</field>
+            <field name="model">hr.ticket.request.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                     <field name="ticket_check"/>
+                            <field name="allowance_name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="ticket_request_type_action" model="ir.actions.act_window">
+            <field name="name">Ticket Request Type</field>
+            <field name="res_model">hr.ticket.request.type</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create New Ticket Request Type
+                </p>
+            </field>
+        </record>
+        <menuitem id="ticket_request_type_menu" parent="exp_ticket_request.hr_employee_ticket_settining_menu"
+                  name="Ticket Request Type" sequence="2" action="ticket_request_type_action"/>
+  <!--        Ticket Class-->
+        <record id="ticket_form_class_view" model="ir.ui.view">
+            <field name="name">ticket.form.view</field>
+            <field name="model">ticket.class</field>
+            <field name="arch" type="xml">
+                <form string="Ticket Class">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <label for="name" class="oe_edit_only"/>
+                                <field name="name" placeholder=" Name of Class..."/>
+                            </h1>
+                        </div>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="ticket_tree_class_view" model="ir.ui.view">
+            <field name="name">ticket.tree.view</field>
+            <field name="model">ticket.class</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+        <record id="ticket_class_action" model="ir.actions.act_window">
+            <field name="name">Ticket Class</field>
+            <field name="res_model">ticket.class</field>
+
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create New Ticket Class
+                </p>
+            </field>
+        </record>
+        <menuitem id="ticket_class_menu" parent="exp_ticket_request.hr_employee_ticket_settining_menu"
+                  name="Ticket Class" sequence="3" action="ticket_class_action"/>
+
+                <!--        Mission Destination-->
+        <record id="mission_destination_form_class_view" model="ir.ui.view">
+            <field name="name">mission.destination.form.view</field>
+            <field name="model">mission.destination</field>
+            <field name="arch" type="xml">
+                <form string="Destination">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <label for="name" class="oe_edit_only"/>
+                                <field name="name" placeholder=" Name of Class..." required="1"/>
+                            </h1>
+                        </div>
+
+                        <group>
+                            <field name="code"/>
+                            <field name="country_id"/>
+                            <field name="destination_type" required="1"/>
+                        </group>
+                        <group>
+                            <field name="class_ids"  nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="ticket_class_id" domain="[('id','not in',parent.class_ids)]"/>
+                                    <field name="price"/>
+                                </tree>
+                            </field>
+
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+           <record id="mission_destination_tree_view" model="ir.ui.view">
+            <field name="name">mission.destination.tree.view</field>
+            <field name="model">mission.destination</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+        <record id="mission_destination_action" model="ir.actions.act_window">
+            <field name="name">Mission Destination</field>
+            <field name="res_model">mission.destination</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create New Destination
+                </p>
+            </field>
+        </record>
+        <menuitem id="mission_destination_menu" parent="exp_ticket_request.hr_employee_ticket_settining_menu"
+                  name="Destination" sequence="4" action="mission_destination_action"/>
+
+    </data>
+</odoo>

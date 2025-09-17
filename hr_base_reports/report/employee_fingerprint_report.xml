@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <template id="fingerprint_report">
+        <t t-call="web.html_container">
+            <t t-if="report_type == 'all'">
+                <div class="page">
+                    <div class="oe_structure"/>
+                    <style>
+                        .page{
+                        font-family: Times New Roman;;
+                        }
+                        table{
+                        width :100%;
+                        border : 1px solid black;
+                        border-collapse : collapse;
+                        font-size : 13pt;
+                        page-break-after:auto;
+
+                        }
+                        th{
+                        border : 1px solid black;
+                        background-color : #a7c4f2;
+                        text-align : center;
+                        padding : 5px;
+                        }
+                        td{
+                        border : 1px solid black;
+                        text-align : center;
+                        padding : 3px;
+                        page-break-inside:avoid;
+                        page-break-after:auto;
+                        }
+                        .cr_t{
+                        text-align : center;
+                        }
+                        tr{
+                        page-break-inside:avoid;
+                        page-break-after:auto ;
+                        }
+
+                    </style>
+                    <t t-foreach="docs" t-as="doc">
+                        <center>
+                            <h3>Fingerprint Report For
+                                <strong>
+                                    <t t-esc="doc['employee_id'].name"/>
+                                </strong>
+                                From
+                                <t t-esc="date_from"/>
+                                To
+                                <t t-esc="date_to"/>
+                            </h3>
+                        </center>
+                        <t t-set="count" t-value="1"/>
+                        <t t-set="total_working_hours" t-value="0"/>
+                        <t t-set="total_lateness" t-value="0"/>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th rowspan="3">Day</th>
+                                    <th rowspan="3">Date</th>
+                                    <th colspan="3">Sign In</th>
+                                    <th colspan="3">Sign Out</th>
+                                    <th rowspan="3">Total Working Hours</th>
+                                    <th rowspan="3">Total Lateness</th>
+                                    <th rowspan="3">Notes</th>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Time</th>
+                                    <th rowspan="1" colspan="1">Type</th>
+                                    <th colspan="2">Time</th>
+                                    <th rowspan="1" colspan="1">Type</th>
+                                </tr>
+                                <tr>
+                                    <th>Hour</th>
+                                    <th>Minute</th>
+                                    <th></th>
+                                    <th>Hour</th>
+                                    <th>Minute</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="doc['transactions']" t-as="tr">
+                                    <t t-if="tr['transaction_ids']">
+                                        <t t-foreach="tr['transaction_ids']" t-as="transaction">
+                                            <tr>
+                                                <td>
+                                                    <t t-esc="count"/>
+                                                </td>
+                                                <td>
+                                                    <t t-esc="transaction['date']"/>
+                                                </td>
+                                                <td>
+                                                    <t t-esc="transaction['sign_in_hour']"
+                                                       t-options='{"widget": "float_time"}'/>
+                                                </td>
+                                                <td>
+                                                    <t t-esc="transaction['sign_in_minute']"
+                                                       t-options='{"widget": "float_time"}'/>
+                                                </td>
+                                                <td></td>
+                                                <td>
+                                                    <t t-esc="transaction['sign_out_hour']"
+                                                       t-options='{"widget": "float_time"}'/>
+                                                </td>
+                                                <td>
+                                                    <t t-esc="transaction['sign_out_minute']"
+                                                       t-options='{"widget": "float_time"}'/>
+                                                </td>
+                                                <td></td>
+                                                <td>
+                                                    <t t-esc="transaction['working_hours']"
+                                                       t-options='{"widget": "float_time"}'/>
+                                                </td>
+                                                <td>
+                                                    <t t-esc="transaction['lateness']"
+                                                       t-options='{"widget": "float_time"}'/>
+                                                </td>
+                                                <td></td>
+                                            </tr>
+                                            <t t-set="count" t-value="count+1"/>
+                                            <t t-set="total_working_hours"
+                                               t-value="total_working_hours+transaction['working_hours']"
+                                               t-options='{"widget": "float_time"}'/>
+                                            <t t-set="total_lateness" t-value="total_lateness+transaction['lateness']"
+                                               t-options='{"widget": "float_time"}'/>
+                                        </t>
+                                    </t>
+                                    <t t-else="">
+                                        <tr>
+                                            <td>
+                                                <t t-esc="count"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="tr['date']"/>
+                                            </td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </tbody>
+                            <tr>
+                                <td colspan="8">Total</td>
+                                <td>
+                                    <t t-esc="total_working_hours" t-options='{"widget": "float_time"}'/>
+                                </td>
+                                <td>
+                                    <t t-esc="total_lateness" t-options='{"widget": "float_time"}'/>
+                                </td>
+                                <td></td>
+                            </tr>
+
+                        </table>
+                        <br/>
+                        <br/>
+                    </t>
+                </div>
+            </t>
+            <t t-else="">
+                <style>
+                    .page{
+                    font-family: Times New Roman;;
+                    }
+                    table{
+                    width :100%;
+                    border : 1px solid black;
+                    border-collapse : collapse;
+                    font-size : 13pt;
+                    page-break-after:auto;
+
+                    }
+                    th{
+                    border : 1px solid black;
+                    background-color : #a7c4f2;
+                    text-align : center;
+                    padding : 5px;
+                    }
+                    td{
+                    border : 1px solid black;
+                    text-align : center;
+                    padding : 3px;
+                    page-break-inside:avoid;
+                    page-break-after:auto;
+                    }
+                    .cr_t{
+                    text-align : center;
+                    }
+                    tr{
+                    page-break-inside:avoid;
+                    page-break-after:auto ;
+                    }
+                </style>
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        <div class="oe_structure"/>
+                        <center>
+                            <h3>Fingerprint Report</h3>
+                        </center>
+                        <div class="row col-md-6">
+                            <strong>Employee :</strong>
+                            <t t-esc="doc['employee_id'].name"/>
+                        </div>
+                        <div class="row col-md-6">
+                            <strong>Identity Number :</strong>
+                            <t t-if="doc['employee_id'].country_id.code== 'SA'">
+                                <t t-esc="doc['employee_id'].saudi_number.saudi_id"/>
+                            </t>
+                            <t t-else="">
+                                <t t-esc="doc['employee_id'].iqama_number.iqama_id"/>
+                            </t>
+
+                        </div>
+                    </div>
+                    <br/>
+                    <strong>From</strong>
+                    <t t-esc="date_from"/>
+                    <strong>To</strong>
+                    <t t-esc="date_to"/>
+                    <br/>
+                    <t t-set="total_lateness" t-value="0"/>
+                    <t t-set="total_early_exit" t-value="0"/>
+                    <t t-set="total_absence" t-value="0"/>
+                    <br/>
+                    <table>
+                        <t t-foreach="range(0,len(doc['transactions']))" t-as="ln">
+                            <tr>
+                                <t t-foreach="doc['transactions'][ln]" t-as="tr">
+                                    <t t-if="tr['transaction_ids']">
+                                        <t t-foreach="tr['transaction_ids']" t-as="transaction">
+                                            <th>
+                                                <t t-esc="transaction['date']"/>
+                                            </th>
+                                        </t>
+                                    </t>
+                                    <t t-else="">
+                                        <th>
+                                            <t t-esc="tr['date']"/>
+                                        </th>
+                                    </t>
+                                </t>
+                            </tr>
+                            <tr>
+                                <t t-foreach="doc['transactions'][ln]" t-as="tr">
+                                    <t t-if="tr['transaction_ids']">
+                                        <t t-foreach="tr['transaction_ids']" t-as="transaction">
+                                            <td>
+                                                <t t-esc="transaction['sign_in']" t-options='{"widget": "float_time"}'/>
+                                                <br/>
+                                                <t t-esc="transaction['sign_out']"
+                                                   t-options='{"widget": "float_time"}'/>
+                                            </td>
+                                            <t t-set="total_lateness" t-value="total_lateness+transaction['lateness']"/>
+                                            <t t-set="total_exit_early"
+                                               t-value="total_early_exit+transaction['early_exit']"/>
+                                            <t t-if="transaction['is_absent']">
+                                                <t t-set="total_absence" t-value="total_absence+1"/>
+                                            </t>
+                                        </t>
+                                    </t>
+                                    <t t-else="">
+                                        <td></td>
+                                    </t>
+                                </t>
+                            </tr>
+                        </t>
+                    </table>
+                    <br/>
+                    <strong>As shown below we have deduct</strong>
+                    <br/>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Day</th>
+                                <th>Total Lateness</th>
+                                <th>Total Early Exit</th>
+                                <th>Total Absence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <t t-esc="print_date"/>
+                                </td>
+                                <td>
+                                    <t t-esc="total_lateness" t-options='{"widget": "float_time"}'/>
+                                </td>
+                                <td>
+                                    <t t-esc="total_early_exit" t-options='{"widget": "float_time"}'/>
+                                </td>
+                                <td>
+                                    <t t-esc="total_absence"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </t>
+            </t>
+        </t>
+
+    </template>
+    <record id="action_fingerprint_report" model="ir.actions.report">
+        <field name="model">hr.employee</field>
+        <field name="name">Fingerprint Report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_base_reports.fingerprint_report</field>
+        <field name="report_file">hr_base_reports.fingerprint_report</field>
+    </record>
+    <record id="fingerprint_action_report_xls" model="ir.actions.report">
+        <field name="model">hr.employee</field>
+        <field name="name">Print to XLSX</field>
+        <field name="report_type">xlsx</field>
+        <field name="report_name">hr_base_reports.fingerprint_action_report_xls</field>
+        <field name="report_file">hr_base_reports.fingerprint_action_report_xls</field>
+    </record>
+
+</odoo>

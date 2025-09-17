@@ -1,0 +1,51 @@
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="kpi_item_tree_extend" model="ir.ui.view">
+        <field name="name">kpi.item.tree.extend</field>
+        <field name="model">kpi.item</field>
+        <field name="inherit_id" ref="kpi_scorecard.kpi_item_view_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='formula_warning']"  position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+        </field>
+    </record>
+    <record id="hpi_item_extend" model="ir.ui.view">
+        <field name="name">kpi.form.extend</field>
+        <field name="model">kpi.item</field>
+        <field name="inherit_id" ref="kpi_scorecard.kpi_item_view_form"/>
+        <field name="arch" type="xml">
+<!--            add new tab -->
+            <xpath expr="//field[@name='formula_warning']"  position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='formula']"  position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//h2"  position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='category_id']" position="after">
+                <field name="department_item_id"/>
+                <field name="responsible_item_id"/>
+                <field name="method_of_calculate"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Marks" groups="base.group_user,exp_hr_appraisal.group_appraisal_user,exp_hr_appraisal.group_appraisal_manager,exp_hr_appraisal.group_appraisal_employee">
+                    <field name="mark_ids">
+                        <tree editable="bottom">
+                            <field name="choiec" width="12"/>
+                            <field name="target" string="From(Done)" width="12"/>
+                            <field name="to" width="12"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+            <xpath expr="//notebook/page[2]" position="attributes">
+                <attribute name="groups">kpi_scorecard.group_kpi_admin</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,134 @@
+<odoo>
+    <data>
+        <template id="payslip_monthly_report">
+            <t t-call="web.html_container">
+                <t t-call="hr_base.hr_layout">
+                    <style>
+                        @font-face {font-family: "Sakkal Majalla"; src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                        format("embedded-opentype"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype");
+                        }
+                        table td {
+                            font-size: 12pt;
+                        }
+                    </style>
+                    <div class="page" style="font-family: 'Sakkal Majalla'!important;font-size:15pt;">
+                        <t t-if="exception==False">
+                            <h3 class="text-center">
+                                <span t-esc="title"/>
+                            </h3>
+                            <h4 class="text-center">
+                                <span t-esc="date_from"/>
+                                -
+                                <span t-esc="date_to"/>
+                            </h4>
+                            <br/>
+                            <table class="table table-condensed table-bordered" style="width: 100%">
+                                <t t-foreach="docs" t-as="doc">
+                                    <t t-if="doc['count']=='#'">
+                                        <thead style="background: #3e5d7f;text-align: center;
+                                                  color: #ffffff;font-family:'Sakkal Majalla'!important: middle;">
+                                            <span t-foreach="doc" t-as="clm">
+                                                <th>
+                                                    <span t-esc="doc[clm]"/>
+                                                </th>
+                                            </span>
+                                        </thead>
+                                    </t>
+                                    <t t-if="doc['count']!='#'">
+                                        <tbody style="text-align: justify; padding: 0.7em;font-family:'Sakkal Majalla'!important;">
+                                            <span t-foreach="doc" t-as="clm">
+                                                <t t-if="doc_last">
+                                                    <td style="font-weight: bold; ">
+                                                        <t t-if=" isinstance(doc[clm] , float) ">
+                                                            <span t-esc="'%.2f'%doc[clm]"/>
+                                                        </t>
+                                                        <t t-else="">
+                                                            <span t-esc="doc[clm]"/>
+                                                        </t>
+                                                    </td>
+                                                </t>
+                                                <t t-else="">
+                                                    <td>
+                                                        <t t-if=" isinstance(doc[clm] , float) ">
+                                                            <span t-esc="'%.2f'%doc[clm]"/>
+                                                        </t>
+                                                        <t t-else="">
+                                                            <span t-esc="doc[clm]"/>
+                                                        </t>
+                                                    </td>
+                                                </t>
+                                            </span>
+                                        </tbody>
+                                    </t>
+                                </t>
+                            </table>
+                        </t>
+                        <t t-if="exception==True">
+                            <h3 class="text-center">
+                                <span t-esc="title"/>
+                            </h3>
+                            <h4 class="text-center">
+                                <span t-esc="date_from"/>
+                                -
+                                <span t-esc="date_to"/>
+                            </h4>
+                            <t t-foreach="docs" t-as="doc">
+                                <h4 class="text-center">
+                                    <span t-esc="doc['rule']"/>
+                                </h4>
+                                <table class="table table-condensed table-bordered" style="width: 100%">
+                                    <t t-foreach="doc['lines']" t-as="line">
+                                        <t t-if="line['count']=='#'">
+                                            <thead style="text-align:center; background: #3e5d7f;color: #ffffff;
+                                                      font-family:'Sakkal Majalla'!important;">
+                                                <span t-foreach="line" t-as="clm">
+                                                    <th>
+                                                        <span t-esc="line[clm]"/>
+                                                    </th>
+                                                </span>
+                                            </thead>
+                                        </t>
+                                        <t t-if="line['count']!='#'">
+                                            <tbody style="text-align: justify; padding: 0.7em;font-family:'Sakkal Majalla'!important;">
+                                                <t t-if="line_last">
+                                                    <span t-foreach="line" t-as="clm">
+                                                        <td style="font-weight: bold;">
+                                                            <t t-if=" isinstance(line[clm] , float) ">
+                                                                <span t-esc="'%.2f'%line[clm]"/>
+                                                            </t>
+                                                            <t t-else="">
+                                                                <span t-esc="line[clm]"/>
+                                                            </t>
+                                                        </td>
+                                                    </span>
+                                                </t>
+                                                <t t-else="">
+                                                    <span t-foreach="line" t-as="clm">
+                                                        <td>
+                                                            <t t-if=" isinstance(line[clm] , float) ">
+                                                                <span t-esc="'%.2f'%line[clm]"/>
+                                                            </t>
+                                                            <t t-else="">
+                                                                <span t-esc="line[clm]"/>
+                                                            </t>
+                                                        </td>
+                                                    </span>
+                                                </t>
+                                            </tbody>
+                                        </t>
+                                    </t>
+                                </table>
+                            </t>
+
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

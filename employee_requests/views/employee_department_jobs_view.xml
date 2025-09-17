@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="employee_department_jobs_action" model="ir.actions.act_window">
+            <field name="name">Employee Department and Jobs</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.department.jobs</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name= "context">{"search_default_my_request":1}</field>		
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Employee Departments and jobs
+                </p>
+            </field>
+        </record>
+
+      <record model="ir.ui.view" id="view_department_jobs_calendar">
+            <field name="name">employee.department.jobs.calendar</field>
+            <field name="model">employee.department.jobs</field>
+            <field name="arch" type="xml">
+                <calendar string="Employee Department and Jobs" date_start="date" color="date">
+
+                    <field name="date" type="measure"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="employee_department_jobs_form_view" model="ir.ui.view">
+            <field name="name">employee.department.jobs.form.view</field>
+            <field name="model">employee.department.jobs</field>
+            <field name="arch" type="xml">
+                <form string="Employee Departments and jobs">
+                    <header>
+                        <button name="confirm" string="Department Manager" class="oe_highlight" states="draft" type="object"
+                                groups="hr.group_hr_user,hr_base.group_division_manager"/>
+
+                        <button name="hr_officer" string="HR Officer" class="oe_highlight" states="confirm" type="object"
+                                groups="hr.group_hr_user"/>
+                        <button name="refused" string="Refused" class="oe_highlight" states="confirm" type="object"
+                                groups="hr.group_hr_user"/>
+
+                        <button name="confirm2" string="Department Manager2" class="oe_highlight" states="hr_officer" type="object"
+                                groups="hr.group_hr_user,hr_base.group_division_manager"/>
+                        <button name="refused" string="Refused" class="oe_highlight" states="hr_officer" type="object"
+                                groups="hr.group_hr_user,hr_base.group_division_manager"/>
+
+                        <button name="hr_manager" string="HR Manager" class="oe_highlight" states="confirm2" type="object"
+                                groups="hr.group_hr_manager"/>
+                        <button name="refused" string="Refused" class="oe_highlight" states="confirm2" type="object"
+                                groups="hr.group_hr_manager"/>
+
+                        <button name="approved" string="Approved" class="oe_highlight" states="hr_manager" type="object"
+                                groups="hr_base.group_executive_manager,hr_base.group_general_manager"/>
+                        <button name="refused" string="Refused" class="oe_highlight" states="hr_manager" type="object"
+                                groups="hr_base.group_executive_manager,hr_base.group_general_manager"/>
+
+                        <button name="draft" string="Re-draft" class="oe_highlight" states="approved,refused" type="object"
+                                groups="hr.group_hr_manager" confirm="Are you sure to Reset To Draft This Record?"/>
+                        <button name="print_report" string="Print Report" class="oe_highlight"
+                                attrs="{'invisible':['|',('state','!=','approved'),('promotion_type','=', 'job')]}" type="object"/>
+                        <field name="state" widget="statusbar" statusbar_colors="{'KEY_IS_STATE':'VALUE_IS_COLOR'}"/>
+                    </header>
+                    <sheet>
+                        <group>
+                             <field name="employee_id" string="Employee Name" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}" colspan="4"/>
+                                <field name="employee_no" string="Employee Number" readonly="1"/>
+                        </group>
+                        <group>
+                            <group>
+                                 <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                                 <field name="promotion_type" string="Promotion Type" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="new_department_id" string="New Department"
+                                       attrs="{'readonly':[('state','!=','draft')],
+                                       'invisible':[('promotion_type','not in',['department','both'])],
+                                       'required':[('promotion_type','in',['department','both'])]}"/>
+                                <field name="new_manager_id" string="New Manager" readonly="1" force_save="1"
+                                       attrs="{'invisible':[('promotion_type','not in',['department','both'])]}"/>
+                                <field name="new_job_id" string="New job"
+                                       attrs="{'readonly':[('state','!=','draft')],
+                                       'invisible':[('promotion_type','not in',['job','both'])],
+                                       'required':[('promotion_type','in',['job','both'])]}"/>
+                                <field name="date" string="Procedure Date" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+
+                            </group>
+                            <group>
+                                <field name="last_record" string="Is Last Record?" readonly="1"/>
+                                <!--field name="old_department_id" string="Old department" invisible="1"/-->
+                                <field name="old_department_2_id" string="Old department" readonly="1" force_save="1"/>
+                                <field name="old_manager_id" string="Old Manager" readonly="1" force_save="1"/>
+                                <!--field name="old_job_id" string="Old Job" invisible="1"/-->
+                                <field name="old_job_2_id" string="Old Job" readonly="1" force_save="1"/>
+                                <field name="old_job_date" string="Old Job Date" readonly="1" force_save="1"
+                                             attrs="{'invisible':[('promotion_type','not in',['job','both'])]}"/>
+                                <label for="service_year" string="Duration"/>
+                                <div>
+                                    <field name="service_year"  readonly="1" force_save="1" class="oe_inline" />Years
+                                    <field name="service_month"  readonly="1" force_save="1" class="oe_inline" />Months
+                                    <field name="service_day"  readonly="1" force_save="1" class="oe_inline" />Days
+                                </div>
+                            </group>
+                        </group>
+                        <separator string="Comment"/>
+                        <field name="comment" string="Comment" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="employee_department_jobs_tree_view" model="ir.ui.view">
+            <field name="name">employee.department.jobs.tree.view</field>
+            <field name="model">employee.department.jobs</field>
+            <field name="arch" type="xml">
+                <tree decoration-info="state == 'draft'" string="Employee Departments and jobs">
+                    <field name="employee_no" string="Employee Number"/>
+                    <field name="employee_id" string="Employee name"/>
+                    <field name="promotion_type" string="Promotion Type"/>
+                    <field name="new_department_id" string="New department"/>
+                    <field name="new_job_id" string="New Job"/>
+                    <field name="date" string="Date"/>
+                    <field name="state" string="State"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--employee_department_jobs_filter -->
+        <record id="employee_department_jobs_filter" model="ir.ui.view">
+            <field name="name">Employee Department and Jobs</field>
+            <field name="model">employee.department.jobs</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search>
+                  <field name="employee_id"/>
+                  <field name="employee_no"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <filter name="group_type" string="Promotion Type" domain="[]" context="{'group_by': 'promotion_type'}"/>
+                        <filter name="group_state" string="State" domain="[]" context="{'group_by': 'state'}"/>
+                    </group>
+                    <separator/>
+                        <filter string="My Requests" name="my_request" domain="[('employee_id.user_id', '=', uid)]"/>
+                    <separator/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

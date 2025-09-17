@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="contract_form_view_appraisal" model="ir.ui.view">
+            <field name="name">Contract.Extension.appraisal</field>
+            <field name="model">hr.contract.extension</field>
+            <field name="inherit_id" ref="hr_contract_custom.contract_form_view"/>
+            <field name="arch" type="xml">
+                <field name="type" position="after">
+                    <field name="appraisal_id" string="Appraisal Extension" attrs="{'readonly':[('state','not in',['draft','confirm'])]}"
+                           domain = "[('employee_id', '=', employee_id), ('appraisal_type', '=', 'trial')]"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>

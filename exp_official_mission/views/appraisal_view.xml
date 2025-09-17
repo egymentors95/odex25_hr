@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="hr_employee_appraisal_mission_inherited_form" model="ir.ui.view">
+            <field name="name">hr.employee.appraisal.mission.form.inherit</field>
+            <field name="model">hr.group.employee.appraisal</field>
+            <field name="inherit_id" ref="exp_hr_appraisal.employee_appraisal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='totals_appraisal_result']" position="after">
+                    <field name="mission_id"  attrs="{'invisible':[('appraisal_type','not in',['mission','training'])]}"/>
+                </xpath>
+            </field>
+        </record>
+
+         <record id="employee_appraisal_inherit" model="ir.ui.view">
+            <field name="name">employee.appraisal.form.inherit</field>
+            <field name="model">hr.employee.appraisal</field>
+            <field name="inherit_id" ref="exp_hr_appraisal.hr_appraisal_form_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='appraisal_type']" position="after">
+                    <field name="mission_id" attrs="{'invisible':[('appraisal_type','!=', 'training')]}"/>
+                    <field name="course_name"  attrs="{'invisible':[('appraisal_type','!=', 'training')]}"/>
+
+                </xpath>
+
+            </field>
+        </record>
+
+
+
+    </data>
+</odoo>

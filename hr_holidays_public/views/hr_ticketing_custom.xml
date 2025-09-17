@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+
+        <record id="hr_ticket_custom_view" model="ir.ui.view">
+            <field name="name">hr.ticket.form.inherit</field>
+            <field name="model">hr.ticket.request</field>
+            <field name="priority" eval="16"/>
+            <field name="inherit_id" ref="exp_ticket_request.hr_ticket_request_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='mission_check']" position="after">
+                    <field name="leave_request_id" widget="selection"
+                           attrs="{'readonly': [('state', '!=', 'draft')],'required':[('request_for','in',['employee','all']),
+                                    ('mission_check','=',False)],'invisible':['|',('request_for','=','family'),('mission_check','=',True)]}"
+                          domain = "[('employee_id', '=', employee_id),('state', '=', 'validate1'), ('type', '=', 'remove'),
+                                    ('issuing_ticket','=','yes')]"/>
+
+                    <field name="vacation_start_date" readonly="1" 
+                               attrs="{'invisible':['|',('request_for','=','family'),('mission_check','=',True)]}"/>
+                    <field name="vacation_end_date" readonly="1" 
+                               attrs="{'invisible':['|',('request_for','=','family'),('mission_check','=',True)]}"/>
+                    <field name="vacation_duration" readonly="1" 
+                                attrs="{'invisible':['|',('request_for','=','family'),('mission_check','=',True)]}"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

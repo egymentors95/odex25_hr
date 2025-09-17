@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <record id="kpi_period_form_extend" model="ir.ui.view">
+      <field name="name">kpi.period.form.extend</field>
+      <field name="model">kpi.period</field>
+      <field name="inherit_id" ref="kpi_scorecard.kpi_period_view_form"/>
+      <field name="arch" type="xml">
+
+          <xpath expr="//page[1]" position="attributes">
+              <attribute name="groups">kpi_scorecard.group_kpi_admin</attribute>
+          </xpath>
+          <xpath expr="//page[2]" position="attributes">
+              <attribute name="groups">kpi_scorecard.group_kpi_admin</attribute>
+          </xpath>
+          <xpath expr="//button[@name='%(kpi_scorecard.kpi_copy_template_action)d']" position="attributes">
+              <attribute name="groups">kpi_scorecard.group_kpi_admin</attribute>
+          </xpath>
+          <xpath expr="//page[2]" position="after">
+              <page string="Goals Period">
+                  <field name="kpi_goals_periods_ids">
+                      <tree editable="bottom">
+                          <field  name="sequence" width="4"/>
+                          <field  name="name" width="8"/>
+                          <field name="date_start_k" width="12"/>
+                          <field name="date_end_k" width="12"/>
+                          <button string="Create Apprisal"   width="" class="oe_highlight" type="object" name="create_apprisal_goals_employee"/>
+
+                      </tree>
+                  </field>
+              </page>
+              <page string="Skills Period">
+
+                  <field name="kpi_periods_ids">
+                      <tree editable="bottom">
+                          <field  name="name" width="12"/>
+                          <field  name="date_start_k" width="12"/>
+                          <field    name="date_end_k" width="12"/>
+                      </tree>
+                  </field>
+              </page>
+          </xpath>
+      </field>
+  </record>
+</odoo>

@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_payroll_raise_hr_user,hr.payroll.raise.hr.user,exp_payroll_promotion.model_hr_payroll_raise,hr.group_hr_user,1,1,1,1
+access_hr_payroll_nomination_hr_user,hr.payroll.nomination.hr.user,exp_payroll_promotion.model_hr_payroll_nomination,hr.group_hr_user,1,1,1,1
+access_hr_payroll_promotion_setting_hr_user,hr.payroll.promotion.setting.hr.user,exp_payroll_promotion.model_hr_payroll_promotion_setting,hr.group_hr_user,1,1,1,1
+access_hr_promotion_current_group_hr_user,hr.promotion.current.group.hr.user,exp_payroll_promotion.model_hr_promotion_current_group,hr.group_hr_user,1,1,1,1
+access_hr_promotion_previous_group_hr_user,hr.promotion.previous.group.hr.user,exp_payroll_promotion.model_hr_promotion_previous_group,hr.group_hr_user,1,1,1,1
+access_hr_promotion_deterrent_penalty_hr_user,hr.promotion.deterrent.penalty.hr.user,exp_payroll_promotion.model_hr_promotion_deterrent_penalty,hr.group_hr_user,1,1,1,1

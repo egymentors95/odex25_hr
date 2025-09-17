@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+            <!-- Form View -->
+            <record id="view_emplo_goals_form" model="ir.ui.view">
+                <field name="name">years.employee.goals.form1</field>
+                <field name="model">years.employee.goals</field>
+                <field name="arch" type="xml">
+                    <form string="Year Employee Goals">
+                        <header>
+                            <button string="Start Apprisal" states="draft" class="oe_highlight" type="object" name="apprisal"/>
+                            <button string="Close" states='apprisal' class="oe_highlight" type="object" name="action_close"/>
+                            <button string="Set To Dratt" states='apprisal,close'  type="object" name="action_set_to_dratt"/>
+                            <field name="state" required="1" statusbar_visible="draft,apprisal,close" widget="statusbar"/>
+                        </header>
+                        <sheet>
+                            <group>
+                                <group>
+                                    <field  name="year_id" required="1"/>
+                                    <field  name="employee_id" required="1"/>
+                                    <field  name="department_id" required="1"/>
+                                    <field  required="1" name="job_id"/>
+                                </group>
+                                <group>
+                                    <field required="1" name="category_id"/>
+                                    <field required="1" name="kpi_id"  domain="[('category_id', '=',category_id)]"/>
+                                    <field required="1" name="responsible_item_id"/>
+                                    <field required="1" name="year_target"/>
+                                    <field required="1" invisible='1' name="method_of_calculate"/>
+                                    <field name="done" attrs="{'readonly': [('method_of_calculate', '!=', 'undefined')],'invisible':[('state','=','draft')]}"/>
+                                    <field name="choiec" atrrs="{'invisible':[('state','=','draft')]}"/>
+                                    <field required="1" name="weight"/>
+                                    <field name="first_period_traget" invisible="1"/>
+                                    <field name="second_period_traget" invisible="1"/>
+                                    <field name="third_period_traget" invisible="1"/>
+                                    <field name="fourth_period_traget" invisible="1"/>
+                                </group>
+                            </group>
+                            <notebook>
+                                <page string="Period">
+                                    <field name="goals_period_ids" attrs="{'readonly':[('state','=','close')]}">
+                                        <tree create="0" editable="bottom">
+                                            <field  name="period_goals_id" width="12" options='{"no_open": False,"no_create_edit": True,"no_create":True}'/>
+                                            <field  sum='Totat Traget' name="target" width="12"/>
+                                            <field name="done" width="12"  attrs="{'column_invisible': [('parent.state', 'in', ['draft'])]}"/>
+                                            <field name="mark_evaluation" width="12" attrs="{'column_invisible': [('parent.state', 'in', ['draft'])]}"/>
+                                        </tree>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </sheet>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </form>
+                </field>
+            </record>
+
+            <!-- Tree View -->
+            <record id="view_year_goals_employee_tree1" model="ir.ui.view">
+                <field name="name">years.employee.goals.tree1</field>
+                <field name="model">years.employee.goals</field>
+                <field name="arch" type="xml">
+                    <tree  string="Year Employee Goals">
+                        <field name="employee_id"/>
+                        <field name="department_id"/>
+                        <field name="job_id"/>
+                        <field name="year_id"/>
+                        <field name="category_id"/>
+                        <field name="kpi_id"/>
+                        <field name="responsible_item_id"/>
+                        <field name="weight"/>
+                        <field name="done" />
+                        <field name="year_target" sum="Total"/>
+                        <field name="state" decoration-info="state == 'draft'" decoration-primary="state== 'apprisal'" decoration-success="state== 'close'" widget="badge"/>
+                    </tree>
+                </field>
+            </record>
+
+            <!-- Menu Action -->
+            <record id="action_year_goal_emp" model="ir.actions.act_window">
+                <field name="name">Employee Goals</field>
+                <field name="res_model">years.employee.goals</field>
+                <field name="view_mode">tree,form</field>
+            </record>
+
+            <!-- Menu Item -->
+            <menuitem groups="exp_hr_appraisal_kpi.group_appraisal_responsabil,exp_hr_appraisal.group_appraisal_manager,exp_hr_appraisal.group_appraisal_user" id="menu_year_employee_goals_list" sequence="2" name="Employee Goals" parent="exp_hr_appraisal_kpi.menu_kpi_goal_skill" action="action_year_goal_emp"/>
+</odoo>

@@ -1,0 +1,161 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="hr_lateness_absence_overtime_action">
+            <field name="name">Approval Of Attendance</field>
+            <field name="res_model">hr.attendance.report</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record model="ir.ui.view" id="employee_lateness_absense_overtime_form_view">
+            <field name="name">Approval Of Attendance</field>
+            <field name="model">hr.attendance.report</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_send_email" string="Send Email" type="object" class="oe_highlight"  groups="hr.group_hr_user"  attrs="{'invisible': ['|', ('state', 'not in', ['approved', 'generated', 'confirmed']), ('send_email', '=', True)]}"/>
+
+                        <button name="generate_report" string="Generate Report" class="oe_highlight" type="object"
+                                states="draft" groups="hr.group_hr_user"/>
+
+                        <button name="confirmed" string="HR Manager Approval" class="oe_highlight" type="object"
+                                states="generated" groups="hr.group_hr_manager"/>
+                        <button name="refused" string="Refused" class="oe_highlight" type="object"
+                                states="generated" groups="hr.group_hr_manager"
+                                confirm="Are you sure to Refuse this Request?"/>
+
+                        <button name="approved" string="Approved" class="oe_highlight" type="object"
+                                states="confirmed" groups="hr_base.group_general_manager,hr_base.group_executive_manager"/>
+                        <button name="refused" string="Refused" class="oe_highlight" type="object"
+                                states="confirmed" groups="hr_base.group_general_manager,hr_base.group_executive_manager"
+                                confirm="Are you sure to Refuse this Request?"/>
+
+                        <button name="set_to_draft" string="Set To Draft" class="oe_highlight" type="object"
+                                states="approved,refused" groups="hr.group_hr_manager" confirm="Are you sure to Reset To Draft This Record?"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <div class="oe_title">
+                                <label for="name" class="oe_edit_only"/>
+                                <h1>
+                                    <field name="name"/>
+                                </h1>
+                            </div>
+                            <group>
+                                <field name="available_employee_ids" invisible="1"/>
+                                <field name="date_from" string="Attendance Date From" required="True" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="deduct_date_from" string="Deduction Date From" required="True" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="date_to" string="Attendance Date To" required="True" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="deduct_date_to" string="Deduction Date To" required="True" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="calendar_ids" widget="many2many_tags" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="send_email" attrs="{'invisible': [('send_email', '=', False)]}"/>
+
+
+                        </group>
+                        <notebook>
+                            <page string="Report Details">
+                                <field name="line_ids" nolabel="1" attrs="{'readonly':[('state','!=','generated')]}">
+                                    <tree editable="bottom" decoration-danger="total_deduction &gt; 0">
+                                        <field name="employee_name" string="Employee Name" readonly="1"/>
+                                        <field name="delay" string="Delay" widget="float_time" readonly="1" sum="Total:"/>
+                                        <field name="exist_hours" string="Early Exist" widget="float_time" readonly="1" sum="Total:"/>
+                                        <field name="total_permission_hours" string="Permission Hours" widget="float_time" readonly="1" sum="Total:" optional="show"/>
+                                        <field name="actual_absent_hours" string="Actual Absent Hours" widget="float_time" readonly="1" sum="Total:" />
+                                        <field name="missing_punch_hours" string="Missing Punch Hours" widget="float_time" readonly="1" sum="Total:" />
+                                        <field name="extra_break_duration" string="Extra Break Duration" widget="float_time" readonly="1" sum="Total:"/>
+                                        <field name="mission_by_days" string="Mission Hours" widget="float_time" readonly="1" sum="Total:" optional="show"/>
+                                        <field name="leave" string="Holiday Hours" widget="float_time" readonly="1" sum="Total:" optional="show"/>
+                                        <field name="absent" string="Absent Hours" widget="float_time" readonly="1" sum="Total:"/>
+                                        <field name="additional_hours" string="Additional Hours" widget="float_time" readonly="1" sum="Total:"/>
+                                        <field name="absent_days_by_hr" string="Absent Hours By HR" widget="float_time" sum="Total:"/>
+                                        <field name="dummy_field" invisible="1" widget="float_time" sum="Total:"/>
+                                        <field name="total_hours" string="Total Absence Hours" widget="float_time" readonly="1" force_save="1" sum="Total:"/>
+                                        <field name="total_amount" string="Total Salary" readonly="1" sum="Total:" optional="show"/>
+                                        <field name="amount_per_hour" string="Amount Per Hour" readonly="1" sum="Total:" optional="show"/>
+                                        <field name="total_deduction" string="Total Deduction" readonly="1" force_save="1" sum="Total:"/>
+                                    </tree>
+                                    <form>
+                                        <sheet>
+                                            <group>
+                                                <field name="employee_name" string="Employee Name"/>
+                                                <field name="delay" string="Delay" widget="float_time"/>
+                                                <field name="leave" string="Leave" widget="float_time"/>
+                                                <field name="exist_hours" string="Early Exist" widget="float_time"/>
+                                                <field name="total_permission_hours" string="Permission Hours" widget="float_time"/>
+                                                <field name="actual_absent_hours" string="Actual Absent Hours" widget="float_time"/>
+                                                <field name="missing_punch_hours" string="Missing Punch Hours" widget="float_time"/>
+
+                                                <field name="extra_break_duration" string="Extra Break Duration" widget="float_time"/>
+                                                <field name="mission_by_days" string="Missions By Days" widget="float_time"/>
+                                                <field name="absent" string="Absent" widget="float_time"/>
+                                                <field name="absent_days_by_hr" string="Absent Days By HR" widget="float_time"/>
+                                                <field name="total_hours" string="Total Working Hours" widget="float_time" force_save="1"/>
+                                                <field name="additional_hours" string="Additional Hours" widget="float_time" force_save="1"/>
+                                                <field name="total_amount" string="Total Salary"/>
+                                                <field name="amount_per_hour" string="Amount Per Hour"/>
+                                                <field name="total_deduction" string="Total Deduction" force_save="1"/>
+                                                <field name="dummy_field" invisible="1"/>
+                                                <field name="advantage_id" readonly="1" string="Deduction Employee"/>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                            <page string="Departments">
+                                <field name="department_ids" widget="many2many" attrs="{'readonly':[('state','!=','draft')]}"/>
+
+                            </page>
+                                <page string="Employees">
+
+                                <field name="selected_employee_ids"
+                                       widget="many2many"
+                                       domain="[('id', 'in', available_employee_ids)]"
+                                       string="Select Employee"
+                                       context="{'search_default_available_employees': True}"
+                                       options="{'no_create': True}"
+                                />
+
+
+
+
+
+
+
+                                </page>
+
+                        </notebook>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_lateness_attendance_overtime_tree_view">
+            <field name="name">Lateness Attendance OverTime</field>
+            <field name="model">hr.attendance.report</field>
+            <field name="arch" type="xml">
+                <tree decoration-success="state=='approved'" decoration-danger="state == 'refused'" decoration-info="state == 'draft'" >
+                    <field name="name"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="calendar_ids" widget="many2many_tags"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+         <record id="action_report_employee_clearance_details" model="ir.actions.report">
+            <field name="model">hr.clearance.form</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="name">نموذج إخلاء طرف</field>
+            <field name="report_name">employee_requests.employee_clearance_details_template</field>
+            <field name="report_file">employee_requests.employee_clearance_details_template</field>
+         </record>
+
+        <record id="action_report_employee_clearance" model="ir.actions.report">
+            <field name="model">hr.clearance.form</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="name">employee Clearance</field>
+            <field name="report_name">employee_requests.employee_clearance_form_template</field>
+            <field name="report_file">employee_requests.employee_clearance_form_template</field>
+        </record>
+
+
+    </data>
+</odoo>

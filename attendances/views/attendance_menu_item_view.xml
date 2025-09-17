@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <menuitem id="menu_hr_attendance_configurations" name="Configuration"
+                  parent="hr_attendance.menu_hr_attendance_root"
+                  groups="hr_attendance.group_hr_attendance_user"
+                  sequence="50"/>
+
+        <menuitem name="Lateness,Absence &amp;Overtime" id="employee_lateness_absence_overtime_menu_item"
+                  parent="hr_attendance.menu_hr_attendance_root"
+                  action="hr_lateness_absence_overtime_action"
+                  groups="hr_attendance.group_hr_attendance_user,hr_base.group_general_manager,hr_base.group_executive_manager"
+                  sequence="4"/>
+
+        <menuitem name="Attendance Transactions" id="employee_attendance_transaction_menu_item"
+                  parent="hr_attendance.menu_hr_attendance_root"
+                  action="hr_attendance_transaction_action"
+                  sequence="3" groups="base.group_user"/>
+
+        <menuitem name="Lateness Reasons" id="employee_lateness_reasons_menu_item"
+                  parent="hr_attendance.menu_hr_attendance_root"
+                  action="hr_lateness_reasons_action"
+                  sequence="6"/>
+        <menuitem name=" Attendance Registration" id="hr_attendance_register_menu_item"
+                  parent="hr_attendance.menu_hr_attendance_root"
+                  action="hr_attendance_register_action"
+                  sequence="5"/>
+        <menuitem name="Attendance Configuration" id="resource_calendar_inherited_menu_item"
+                  parent="menu_hr_attendance_configurations"
+                  action="resource_calendar_inherited_action"
+                  sequence="4"/>
+        <menuitem name="Attendance Reasons" id="attendance_action_reason_menu_item"
+                  parent="menu_hr_attendance_configurations"
+                  action="attendance_action_reason_action"
+                  sequence="2"/>
+        <menuitem name="Attendances" id="attendance_custom_menu_item"
+                  parent="hr_attendance.menu_hr_attendance_root"
+                  action="attendance_custom_action"
+                  sequence="2"/>
+        <menuitem name="Get Missing Attendances" id="hr_attendance_wizard_menu_item"
+                  parent="hr_attendance.menu_hr_attendance_root"
+                  action="hr_attendance_wizard_action"
+                  groups="hr_attendance.group_hr_attendance_user"
+                  sequence="9"/>
+
+        <menuitem id="hr_attendance.menu_hr_attendance_settings" name="Setting"
+                  parent="menu_hr_attendance_configurations" action="hr_attendance.action_hr_attendance_settings"
+                  groups="hr_attendance.group_hr_attendance_manager"
+                  sequence="1"/>
+
+        <record model="ir.ui.menu" id="hr_attendance.menu_hr_attendance_manage_attendances">
+            <field name="name">Record to hide menu</field>
+            <field name="groups_id" eval="[(6,0,[ref('make_invisible')])]"/>
+        </record>
+
+        <record model="ir.ui.menu" id="hr_attendance.menu_hr_attendance_report">
+            <field name="name">Record to hide menu</field>
+            <field name="groups_id" eval="[(6,0,[ref('make_invisible')])]"/>
+        </record>
+
+        <menuitem id="hr_attendance.menu_hr_attendance_root" name="Attendances" parent="hr.menu_hr_root" sequence="5"
+                  groups="hr_attendance.group_hr_attendance"/>
+
+
+    </data>
+</odoo>

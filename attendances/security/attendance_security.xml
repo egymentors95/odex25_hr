@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--###################################### attendance register start ##### -->
+    <record id="hr_attendance_register_emp_rule" model="ir.rule">
+        <field name="name">Employee: views its own attendance register</field>
+        <field name="model_id" ref="model_hr_attendance_register"/>
+        <field name="domain_force">[('employee_id.user_id','=',user.id)]</field>
+        <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+    </record>
+
+    <record id="hr_attendance_register_manager_rule" model="ir.rule">
+        <field name="name">Manager: views attendance register of its subordinates</field>
+        <field name="model_id" ref="model_hr_attendance_register"/>
+        <field name="domain_force">['|',('employee_id.department_id.manager_id.user_id','child_of', [user.id]),
+            ('employee_id.department_id.parent_id.manager_id.user_id','child_of', [user.id])]
+        </field>
+        <field name="groups"
+               eval="[(4, ref('hr_base.group_department_manager')),(4, ref('hr_base.group_division_manager'))]"/>
+    </record>
+
+    <record id="hr_attendance_register_all_rule" model="ir.rule">
+        <field name="name">Manager: views attendance registers of all employee</field>
+        <field name="model_id" ref="model_hr_attendance_register"/>
+        <field name="domain_force">[(1 ,'=', 1)]</field>
+        <field name="groups" eval="[(4, ref('hr_attendance.group_hr_attendance_manager'))]"/>
+    </record>
+
+    <record id="hr_attendance_register_all_emp_rule" model="ir.rule">
+        <field name="name">Manager: views attendance registers all employee</field>
+        <field name="model_id" ref="model_hr_attendance_register"/>
+        <field name="domain_force">[('all_employees' ,'=', True)]</field>
+        <field name="groups" eval="[(4, ref('hr_attendance.group_hr_attendance_manager'))]"/>
+    </record>
+
+    <record id="hr_attendance_register_comp_rule" model="ir.rule">
+        <field name="name">attendance register company rule</field>
+        <field name="model_id" ref="model_hr_attendance_register"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+
+<!--############## attendance register end /lateness reasons start##### -->
+
+    <record id="hr_reasons_lateness_emp_rule" model="ir.rule">
+        <field name="name">Employee: views its lateness reasons</field>
+        <field name="model_id" ref="model_hr_reasons_lateness"/>
+        <field name="domain_force">[('employee_id.user_id','=',user.id)]</field>
+        <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+    </record>
+
+    <record id="hr_reasons_lateness_manager_rule" model="ir.rule">
+        <field name="name">Manager: views lateness reasons of its subordinates</field>
+        <field name="model_id" ref="model_hr_reasons_lateness"/>
+        <field name="domain_force">['|',('employee_id.department_id.manager_id.user_id','child_of', [user.id]),
+            ('employee_id.department_id.parent_id.manager_id.user_id','child_of', [user.id])]
+        </field>
+        <field name="groups"
+               eval="[(4, ref('hr_base.group_department_manager')),(4, ref('hr_base.group_division_manager'))]"/>
+    </record>
+
+    <record id="hr_reasons_lateness_all_rule" model="ir.rule">
+        <field name="name">Manager: views lateness reasons of all employees</field>
+        <field name="model_id" ref="model_hr_reasons_lateness"/>
+        <field name="domain_force">[(1 ,'=', 1)]</field>
+        <field name="groups" eval="[(4, ref('hr_attendance.group_hr_attendance_manager'))]"/>
+    </record>
+
+    <record id="hr_reasons_lateness_comp_rule" model="ir.rule">
+        <field name="name">lateness reasons company rule</field>
+        <field name="model_id" ref="model_hr_reasons_lateness"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+<!--################ lateness reasons end/ attendance transactions start ##### -->
+
+    <record id="hr_attendance_transaction_emp_rule" model="ir.rule">
+        <field name="name">Employee: views its attendance transactions</field>
+        <field name="model_id" ref="model_hr_attendance_transaction"/>
+        <field name="domain_force">[('employee_id.user_id','=',user.id)]</field>
+        <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+    </record>
+
+    <record id="hr_attendance_transaction_manager_rule" model="ir.rule">
+        <field name="name">Manager: views attendance transactions of its subordinates</field>
+        <field name="model_id" ref="model_hr_attendance_transaction"/>
+        <field name="domain_force">['|',('employee_id.department_id.manager_id.user_id','child_of', [user.id]),
+            ('employee_id.department_id.parent_id.manager_id.user_id','child_of', [user.id])]
+        </field>
+        <field name="groups"
+               eval="[(4, ref('hr_base.group_department_manager')),(4, ref('hr_base.group_division_manager'))]"/>
+    </record>
+
+    <record id="hr_attendance_transaction_all_rule" model="ir.rule">
+        <field name="name">Manager: views attendance transactions of all employees</field>
+        <field name="model_id" ref="model_hr_attendance_transaction"/>
+        <field name="domain_force">[(1 ,'=', 1)]</field>
+        <field name="groups" eval="[(4, ref('hr_attendance.group_hr_attendance_manager'))]"/>
+    </record>
+
+
+    <record id="hr_attendance_transaction_comp_rule" model="ir.rule">
+        <field name="name">attendance result line company rule</field>
+        <field name="model_id" ref="model_hr_attendance_transaction"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+<!--###################################### attendance transactions end/attendance start ##### -->
+
+    <record id="attendance_attendance_emp_rule" model="ir.rule">
+        <field name="name">Employee: views its attendance attendance</field>
+        <field name="model_id" ref="model_attendance_attendance"/>
+        <field name="domain_force">[('employee_id.user_id','=',user.id)]</field>
+        <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+    </record>
+
+    <record id="attendance_attendance_manager_rule" model="ir.rule">
+        <field name="name">Manager: views attendance attendance of its subordinates</field>
+        <field name="model_id" ref="model_attendance_attendance"/>
+        <field name="domain_force">['|',('employee_id.department_id.manager_id.user_id','child_of', [user.id]),
+            ('employee_id.department_id.parent_id.manager_id.user_id','child_of', [user.id])]
+        </field>
+        <field name="groups"
+               eval="[(4, ref('hr_base.group_department_manager')),(4, ref('hr_base.group_division_manager'))]"/>
+    </record>
+
+    <record id="attendance_attendance_all_rule" model="ir.rule">
+        <field name="name">Manager: views attendance attendance of all employees</field>
+        <field name="model_id" ref="model_attendance_attendance"/>
+        <field name="domain_force">[(1 ,'=', 1)]</field>
+        <field name="groups" eval="[(4, ref('hr_attendance.group_hr_attendance_manager'))]"/>
+    </record>
+
+    <record id="attendance_attendance_comp_rule" model="ir.rule">
+        <field name="name">attendance result line company rule</field>
+        <field name="model_id" ref="model_attendance_attendance"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+<!--###################################### attendance attendance end ##### -->
+
+    <record id="hr_attendance_report_comp_rule" model="ir.rule">
+        <field name="name">hr.attendance.report company rule</field>
+        <field name="model_id" ref="model_hr_attendance_report"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record model="res.groups" id="base.group_user">
+        <field name="implied_ids" eval="[(4, ref('hr_attendance.group_hr_attendance'))]"/>
+    </record>
+
+    <record id="hr.group_hr_user" model="res.groups">
+        <field name="implied_ids" eval="[(4,ref('hr_attendance.group_hr_attendance_manager'))]"/>
+    </record>
+
+    <record id="hr_attendance.hr_attendance_rule_attendance_employee" model="ir.rule">
+        <field name="name">user: modify own attendance only</field>
+        <field name="perm_read" eval="1"/>
+    </record>
+
+    <data noupdate="1">
+        <record id="make_invisible" model="res.groups">
+            <field name="name">Invisible</field>
+        </record>
+
+    </data>
+</odoo>

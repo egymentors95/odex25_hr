@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="employee_apprisal_extend" model="ir.ui.view">
+            <field name="name">employee.apprisal.form.extend</field>
+            <field name="model">hr.employee.appraisal</field>
+            <field name="inherit_id" ref="exp_hr_appraisal.hr_appraisal_form_view"/>
+            <field name="priority" eval="8"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='appraisal_result']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='appraisal_date']" position="after">
+                    <field name="year_id"/>
+                    <field name="goals_mark"/>
+                    <field name="skill_mark"/>
+                    <field name="total_score"/>
+                    <field name="appraisal_result"/>
+                </xpath>
+                <xpath expr="//field[@name='great_level']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='level_achieved']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='level_achieved_percentage']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+
+                <xpath expr="//field[@name='manager_appraisal_line_id']" position="replace">
+                    <!--                    <attribute name="invisible">1</attribute>-->
+                </xpath>
+                <xpath expr="//field[@name='appraisal_plan_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='appraisal_type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='standard_appraisal_employee_line_ids']" position="replace">
+                    <!--                    <attribute name="invisible">1</attribute>-->
+                </xpath>
+                <xpath expr="//field[@name='is_manager']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_from']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//sheet/group[2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//button[@name='recompute_values_level_achieved']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='employee_id']" position="after">
+                    <field name="manager_id"/>
+                    <field name="department_id"/>
+                    <field name="job_id"/>
+                </xpath>
+
+                <xpath expr="//sheet/group[1]" position="after">
+                    <group>
+                        <group>
+                            <button name="compute_apprisal" string="Compute Apprisal" type="object" class="oe_highlight"
+                                    icon="fa-cogs"/>
+                        </group>
+                    </group>
+                    <notebook>
+
+                        <page string="Goals">
+                            <field name="goal_ids">
+                                <tree create="0" delete="0" editable="bottom">
+                                    <field name="kpi_id" width="12"
+                                           options='{"no_open": False,"no_create_edit": True,"no_create":True}'/>
+                                    <field name="weight" sum="Total Weight" width="12"/>
+                                    <field name="year_target" sum="Total Target" width="12"/>
+                                    <field name="done" width="12"/>
+                                    <field name="choiec" width="12"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Skills">
+                            <field name="skill_ids">
+                                <tree create="0" delete="0" editable="bottom">
+                                    <field readonly="1" force_save='1' name="item_id" width="12"
+                                           options='{"no_open": True,"no_create_edit": True}'/>
+                                    <field readonly="1" force_save='1' name="name" width="12"/>
+                                    <field readonly="1" force_save='1' name="level" width="12"/>
+                                    <field force_save='1' name="mark_avg" width="12"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Notes">
+                            <field widget="html" required="0" name="notes"/>
+                        </page>
+                    </notebook>
+
+                </xpath>
+
+            </field>
+        </record>
+        <record id="employee_apprisal_view_tree" model="ir.ui.view">
+            <field name="name">employee_apprisal.extend.view.tree</field>
+            <field name="model">hr.employee.appraisal</field>
+            <field name="inherit_id" ref="exp_hr_appraisal.hr_appraisal_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='is_manager']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='appraisal_plan_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='employee_id']" position="after">
+                    <field name="manager_id"/>
+                    <field name="department_id"/>
+                    <field name="job_id"/>
+                    <field name="year_id"/>
+                </xpath>
+                <xpath expr="//field[@name='state']" position="before">
+                    <field name="skill_mark"/>
+                    <field name="goals_mark"/>
+                    <field name="total_score"/>
+                    <field name="apprisal_result"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="employee_apprisal_view_tree2" model="ir.ui.view">
+            <field name="name">employee_apprisal.extend.view.tree</field>
+            <field name="model">hr.group.employee.appraisal</field>
+            <field name="inherit_id" ref="exp_hr_appraisal.employee_appraisal_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='totals_great_level']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='totals_level_achieved']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='totals_level_achieved_percentage']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='totals_appraisal_result']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='appraisal_plan_id']" position="replace">
+                    <field name="year_id"/>
+                </xpath>
+
+            </field>
+        </record>
+        <!-- Inherit Form View to Modify it -->
+        <record id="group_employee_apprisal_extend" model="ir.ui.view">
+            <field name="name">employee.apprisal.group.extend</field>
+            <field name="model">hr.group.employee.appraisal</field>
+            <field name="inherit_id" ref="exp_hr_appraisal.employee_appraisal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="after">
+                    <field name="year_id"/>
+                </xpath>
+                <xpath expr="//field[@name='appraisal_plan_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='appraisal_type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='totals_great_level']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='totals_level_achieved']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='totals_level_achieved_percentage']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='totals_appraisal_result']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='state']" position="attributes">
+                    <attribute name="statusbar_visible">
+                        draft,gen_appraisal,finish_appraisal,hr_approval,gm_approval,done
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='appraisal_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//separator[2]" position="replace">
+                </xpath>
+                <xpath expr="//separator[1]" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='employee_ids']"  position="replace">
+                    <notebook>
+                        <page string="Employees">
+                            <field name="employee_ids" string="" attrs="{'readonly':[('state','!=','draft')]}">
+                                <tree>
+                                    <field name="name" string="Employee name"/>
+                                    <field name="department_id" string="Department"/>
+                                    <field name="job_id" string="Job title"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Apprisal">
+                            <field name="appraisal_ids" string=""
+                                   attrs="{'invisible':[('state','=','draft')],'readonly':[('state','!=','draft')]}">
+                                <tree editable="bottom">
+                                    <field name="employee_id" width='12' string="Employee"/>
+                                    <field name="department_id" width='12' string=""/>
+                                    <field name="appraisal_date" width='12' string=""/>
+                                    <field name="year_id" width='12' string=""/>
+                                    <field name="skill_mark" width='12' string=""/>
+                                    <field name="goals_mark" width='12' string=""/>
+                                    <field name="total_score" width='12' string=""/>
+                                    <field name="apprisal_result" width='12' string=""/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

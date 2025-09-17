@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="hr_view_form_inherit_resources_permissions" model="ir.ui.view">
+            <field name="name">resource.calendar.form.inherit.permissions</field>
+            <field name="model">resource.calendar</field>
+            <field name="inherit_id" ref="hr_base.hr_calendar_view_form_inherit"/>
+            <field name="priority">50</field>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='over_time_base']/group"   position="inside">
+                    <field name="holiday_permission_deducted"/>
+                </xpath>
+            </field>
+        </record>
+        <record id="attendance_hr_view_form_inherit_resources_permissions" model="ir.ui.view">
+            <field name="name">resource.calendar.form.inherit.permissions</field>
+            <field name="model">resource.calendar</field>
+            <field name="inherit_id" ref="attendances.resource_calendar_inherited_form"/>
+            <field name="priority">100</field>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='over_time_not_full']/group"   position="inside">
+                    <field name="holiday_permission_deducted"/>
+                </xpath>
+                <xpath expr="//page[@name='over_time_full']/group"   position="inside">
+                    <field name="holiday_permission_deducted"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,1353 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* exp_hr_appraisal
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 06:40+0000\n"
+"PO-Revision-Date: 2022-09-13 06:40+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_complete_appraisal__accrued_degree_id
+msgid "Accrued Degree"
+msgstr "الدرجة المستحقة"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal_line__accrued_greed
+msgid "Accrued Greed"
+msgstr "الدرجة المستحقة"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_needaction
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_needaction
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_needaction
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_needaction
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_needaction
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__activity_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__activity_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__activity_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__activity_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__activity_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__activity_state
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__activity_state
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__activity_state
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__activity_state
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__activity_state
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__activity_type_icon
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__activity_type_icon
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__activity_type_icon
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__activity_type_icon
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__activity_type_icon
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model,name:exp_hr_appraisal.model_hr_employee_appraisal
+#: model:ir.model,name:exp_hr_appraisal.model_hr_group_employee_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__appraisal_id
+#: model:ir.module.category,name:exp_hr_appraisal.module_category_hr_appraisal
+#: model:ir.ui.menu,name:exp_hr_appraisal.appraisal_menu_id
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+#: model:ir.model,name:exp_hr_appraisal.model_appraisal_setting
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_setting__appraisal_id
+msgid "Appraisal"
+msgstr "تقييـم الموظفين"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__appraisal_date
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_setting_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_tree_view
+msgid "Appraisal Date"
+msgstr "تاريخ التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.model,name:exp_hr_appraisal.model_appraisal_degree
+msgid "Appraisal Degree"
+msgstr "درجات التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_contract_extension__appraisal_id
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.contract_form_view_appraisal
+msgid "Appraisal Extension"
+msgstr "تقييم فترة التجربة"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_tree_view
+msgid "Appraisal For Employees Group"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal__appraisal_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete__appraisal_name
+msgid "Appraisal Name"
+msgstr "اسم التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_setting__appraisal_plan_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__appraisal_plan_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__appraisal_plan_id
+msgid "Appraisal Plan"
+msgstr "خطة التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.actions.act_window,name:exp_hr_appraisal.appraisal_result_action
+#: model:ir.model,name:exp_hr_appraisal.model_appraisal_result
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_contract__appraisal_result_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__appraisal_result
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_re_contract__evaluation_grade_id
+#: model:ir.ui.menu,name:exp_hr_appraisal.appraisal_result_menu
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_result_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_result_tree_view
+msgid "Appraisal Result"
+msgstr "نتيجة التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_setting__appraisal_type
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__appraisal_type
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__appraisal_type
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "Appraisal Type"
+msgstr "نوع التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.actions.act_window,name:exp_hr_appraisal.appraisal_degree_action
+#: model:ir.ui.menu,name:exp_hr_appraisal.appraisal_degree_menu
+msgid "Appraisal degree"
+msgstr "نوع التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.actions.act_window,name:exp_hr_appraisal.employee_appraisal_action
+#: model:ir.ui.menu,name:exp_hr_appraisal.employee_appraisal_menu_item
+msgid "Appraisal for employees"
+msgstr "تقييم الموظفين"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/employees_appraisal.py:0
+#, python-format
+msgid "Appraisal for employees \"%s\" is not in state done"
+msgstr "ليس في حالة تم \"%s\" تقييم الموظفين"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.manager_appraisal_complete_line_form_view
+msgid "Appraisal name"
+msgstr "اسم التقييم"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "Appraisal original"
+msgstr "التقييم "
+
+#. module: exp_hr_appraisal
+#: model:ir.actions.act_window,name:exp_hr_appraisal.appraisal_plan_action_view
+#: model:ir.model,name:exp_hr_appraisal.model_appraisal_plan
+#: model:ir.ui.menu,name:exp_hr_appraisal.appraisal_plan_menu
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_tree_view
+msgid "Appraisal plan"
+msgstr "خطة التقييم"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.adding_appraisal_to_contract
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_tree_view
+msgid "Appraisal result"
+msgstr "نتيجة التقييم"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "Approve"
+msgstr "إعتماد"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_attachment_count
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_attachment_count
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_attachment_count
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_attachment_count
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_attachment_count
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_employee_appraisal__state__closed
+#, python-format
+msgid "Closed"
+msgstr "مغلق"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.manager_appraisal_complete_line_form_view
+msgid "Complete Manager Appraisal"
+msgstr "اكمال التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.ui.menu,name:exp_hr_appraisal.appraisal_configuration
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__create_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__create_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_result__create_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__create_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_complete_appraisal__create_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__create_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__create_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal__create_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete__create_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete_line__create_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__create_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal__create_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal_line__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__create_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__create_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_result__create_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__create_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_complete_appraisal__create_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__create_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__create_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal__create_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete__create_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete_line__create_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__create_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal__create_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal_line__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model,name:exp_hr_appraisal.model_customize_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete_line__customize_appraisal_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__customize_appraisal_id
+msgid "Customize Appraisal"
+msgstr "اعداد التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__customize_appraisal_line_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_complete_appraisal__customize_appraisal_line_id
+msgid "Customize Appraisal Line"
+msgstr "عناصر الاعداد"
+
+#. module: exp_hr_appraisal
+#: model:ir.model,name:exp_hr_appraisal.model_customize_complete_appraisal
+msgid "Customize complete Appraisal"
+msgstr "تقييم الموظفين"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_setting__date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__date
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_tree_view
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__date_from
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__date_to
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "Date To"
+msgstr "الي تاريخ"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__degree_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_complete_appraisal__degree_id
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.manager_appraisal_complete_line_form_view
+msgid "Degree"
+msgstr "الدرجة"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.manager_appraisal_complete_line_form_view
+msgid "Degree level"
+msgstr "مستوى الدرجة"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__department_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_setting__department_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__department_id
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_setting_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_tree_view
+msgid "Department"
+msgstr "الهيكل الإداري"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/employees_appraisal.py:0
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_group_employee_appraisal__state__hr_approval
+#, python-format
+msgid "Department Manager"
+msgstr "انتظار الموارد البشرية"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+msgid "Department Manager Approval"
+msgstr "مدير الادارة"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/employees_appraisal.py:0
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_group_employee_appraisal__state__finish_appraisal
+#, python-format
+msgid "Direct Manager"
+msgstr "انتظار مدير الادارة"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+msgid "Direct Manager Appraisal"
+msgstr "المدير المباشر"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.manager_appraisal_complete_line_form_view
+msgid "Discard"
+msgstr "تجاهل"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_result__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_complete_appraisal__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_contract_extension__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_re_contract__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete_line__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal__display_name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal_line__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#: code:addons/exp_hr_appraisal/models/employees_appraisal.py:0
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+#, python-format
+msgid "Done"
+msgstr "اعتماد التقييم"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#: code:addons/exp_hr_appraisal/models/employees_appraisal.py:0
+#: code:addons/exp_hr_appraisal/models/appraisal_settings.py:0
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__appraisal_setting__state__draft
+#, python-format
+msgid "Draft"
+msgstr "مسوده"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_setting__employee_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__employee_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__employee_ids
+#: model:res.groups,name:exp_hr_appraisal.group_appraisal_employee
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: exp_hr_appraisal
+#: model:ir.actions.act_window,name:exp_hr_appraisal.hr_appraisal_action
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__employee_appraisal
+#: model:ir.ui.menu,name:exp_hr_appraisal.hr_appraisal_menu
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_tree_view
+msgid "Employee Appraisal"
+msgstr "تقيمات الموظف"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_employee_appraisal__state__employee_confirmation
+msgid "Employee Confirmation"
+msgstr "موافقة الموظف"
+
+#. module: exp_hr_appraisal
+#: model:ir.model,name:exp_hr_appraisal.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__employee_protest
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__employee_protest
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete_line__has_employee_protest
+msgid "Employee Protest"
+msgstr "السماح للموظف بالإعتراض"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_tree_view
+msgid "Employee name"
+msgstr "إسم الموظف"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_tree_view
+msgid "End Result"
+msgstr "النتيجة النهائية"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.adding_appraisal_to_re_contract
+msgid "Evaluation Grade"
+msgstr "نتيجة اخر تقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_follower_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_follower_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_follower_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_follower_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_follower_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_channel_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_channel_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_channel_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_channel_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_channel_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_partner_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_partner_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_partner_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_partner_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_partner_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_degree__activity_type_icon
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_plan__activity_type_icon
+#: model:ir.model.fields,help:exp_hr_appraisal.field_customize_appraisal__activity_type_icon
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_employee_appraisal__activity_type_icon
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_group_employee_appraisal__activity_type_icon
+#: model:ir.model.fields,help:exp_hr_appraisal.field_manager_appraisal_line__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__appraisal_setting__appraisal_type__general
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_employee_appraisal__appraisal_type__general
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_group_employee_appraisal__appraisal_type__general
+msgid "General"
+msgstr "عــــام"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/employees_appraisal.py:0
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_group_employee_appraisal__state__gen_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#, python-format
+msgid "Generate Appraisal"
+msgstr "انشاء تقييم الموظفين"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__great_degree_level
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__great_degree_level
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_complete_appraisal__great_degree_level
+msgid "Great Degree Level"
+msgstr "معيار مستوى الدرجة"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__great_level
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__great_level
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal__great_level
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete__great_level
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete_line__great_level
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__great_level
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal__great_level
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal_line__great_level
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "Great Level"
+msgstr "الدرجة الكاملة"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_degree_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_degree_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.manager_appraisal_complete_line_form_view
+msgid "Great level"
+msgstr "الدرجة الكاملة"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__greed
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_complete_appraisal__greed
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal_line__greed
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_degree_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_degree_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "Greed"
+msgstr "الدرجة المحققة"
+
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal_line__priority
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "priority"
+msgstr " التقييم "
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/employees_appraisal.py:0
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_group_employee_appraisal__state__gm_approval
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#, python-format
+msgid "HR Approval"
+msgstr "انتظار الاعتماد النهائي"
+
+#. module: exp_hr_appraisal
+#: model:ir.module.category,description:exp_hr_appraisal.module_category_hr_appraisal
+msgid "Helps to evaluate employees..."
+msgstr "مساعدة الموظف للتقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_result__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_complete_appraisal__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_contract__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_contract_extension__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_re_contract__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete_line__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal__id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal_line__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_degree__activity_exception_icon
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_plan__activity_exception_icon
+#: model:ir.model.fields,help:exp_hr_appraisal.field_customize_appraisal__activity_exception_icon
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_employee_appraisal__activity_exception_icon
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_group_employee_appraisal__activity_exception_icon
+#: model:ir.model.fields,help:exp_hr_appraisal.field_manager_appraisal_line__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_degree__message_needaction
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_degree__message_unread
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_plan__message_needaction
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_plan__message_unread
+#: model:ir.model.fields,help:exp_hr_appraisal.field_customize_appraisal__message_needaction
+#: model:ir.model.fields,help:exp_hr_appraisal.field_customize_appraisal__message_unread
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_employee_appraisal__message_needaction
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_employee_appraisal__message_unread
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_group_employee_appraisal__message_needaction
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_group_employee_appraisal__message_unread
+#: model:ir.model.fields,help:exp_hr_appraisal.field_manager_appraisal_line__message_needaction
+#: model:ir.model.fields,help:exp_hr_appraisal.field_manager_appraisal_line__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_degree__message_has_error
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_degree__message_has_sms_error
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_plan__message_has_error
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_plan__message_has_sms_error
+#: model:ir.model.fields,help:exp_hr_appraisal.field_customize_appraisal__message_has_error
+#: model:ir.model.fields,help:exp_hr_appraisal.field_customize_appraisal__message_has_sms_error
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_employee_appraisal__message_has_error
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_employee_appraisal__message_has_sms_error
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_group_employee_appraisal__message_has_error
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_group_employee_appraisal__message_has_sms_error
+#: model:ir.model.fields,help:exp_hr_appraisal.field_manager_appraisal_line__message_has_error
+#: model:ir.model.fields,help:exp_hr_appraisal.field_manager_appraisal_line__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_is_follower
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_is_follower
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_is_follower
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_is_follower
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_is_follower
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__is_manager
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__is_manager
+msgid "Is Manager"
+msgstr "تقييم مدارء"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+msgid "Is manager"
+msgstr "تقييم مدارء"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_tree_view
+msgid "Is manager?"
+msgstr "تقييم مدراء?"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+msgid "Job title"
+msgstr "الوظيفة"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_result____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_complete_appraisal____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_contract_extension____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_re_contract____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete_line____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal____last_update
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__write_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__write_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_result__write_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__write_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_complete_appraisal__write_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__write_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__write_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal__write_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete__write_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete_line__write_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__write_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal__write_uid
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal_line__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__write_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__write_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_result__write_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__write_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_complete_appraisal__write_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__write_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__write_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal__write_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete__write_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete_line__write_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__write_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal__write_date
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal_line__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__level_achieved
+msgid "Level Achieved"
+msgstr "الدرجة المحققة"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__level_achieved_percentage
+msgid "Level Achieved Percentage"
+msgstr "نسبة التقييم %"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "Level achieved"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "Level achieved percentage"
+msgstr "الدرجة المحققة"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_setting__manager_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__manager_id
+#: model:res.groups,name:exp_hr_appraisal.group_appraisal_manager
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_tree_view
+msgid "Manager"
+msgstr "المدير"
+
+#. module: exp_hr_appraisal
+#: model:ir.actions.act_window,name:exp_hr_appraisal.appraisal_action_view
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__manager_appraisal_id
+#: model:ir.ui.menu,name:exp_hr_appraisal.appraisal_menu
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "Manager Appraisal"
+msgstr "تقييم المدارء"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__manager_appraisal_line_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal__manager_appraisal_line
+msgid "Manager Appraisal Line"
+msgstr "تقييم المدارء"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete__manager_appraisal_line_for_employee
+msgid "Manager Appraisal Line For Employee"
+msgstr "عناصر التقييم "
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_has_error
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_has_error
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_has_error
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_has_error
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_has_error
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__appraisal_setting__appraisal_type__mission
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_employee_appraisal__appraisal_type__mission
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_group_employee_appraisal__appraisal_type__mission
+msgid "Mission"
+msgstr "مهام العمل"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_result__name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete_line__name
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__name
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_degree_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_degree_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_tree_view
+msgid "Name"
+msgstr "الاسم"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__activity_summary
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__activity_summary
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__activity_summary
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__activity_summary
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__activity_summary
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__activity_type_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__activity_type_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__activity_type_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__activity_type_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__activity_type_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_degree__message_needaction_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_plan__message_needaction_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_customize_appraisal__message_needaction_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_employee_appraisal__message_needaction_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_group_employee_appraisal__message_needaction_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_manager_appraisal_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_degree__message_has_error_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_plan__message_has_error_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_customize_appraisal__message_has_error_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_employee_appraisal__message_has_error_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_group_employee_appraisal__message_has_error_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_manager_appraisal_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_degree__message_unread_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_plan__message_unread_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_customize_appraisal__message_unread_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_employee_appraisal__message_unread_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_group_employee_appraisal__message_unread_counter
+#: model:ir.model.fields,help:exp_hr_appraisal.field_manager_appraisal_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#, python-format
+msgid "Only %s should approve this appraisal!"
+msgstr "فقط %s من يجب أن يوافق على هذا!"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#, python-format
+msgid "Only %s should reject this appraisal!"
+msgstr "فقط %s من يجب أن يرفض هذا!"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__appraisal_setting__appraisal_type__other
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_employee_appraisal__appraisal_type__other
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_group_employee_appraisal__appraisal_type__other
+msgid "Other"
+msgstr "اخـــرى"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__appraisal_setting__appraisal_type__performance
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_employee_appraisal__appraisal_type__performance
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_group_employee_appraisal__appraisal_type__performance
+msgid "Performance"
+msgstr "الاداء الوظيفي"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_form_view
+msgid "Plan name"
+msgstr "اسم الخطة"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal_settings.py:0
+#: code:addons/exp_hr_appraisal/models/appraisal_settings.py:0
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#: code:addons/exp_hr_appraisal/models/employees_appraisal.py:0
+#: code:addons/exp_hr_appraisal/models/employees_appraisal.py:0
+#: code:addons/exp_hr_appraisal/models/employees_appraisal.py:0
+#, python-format
+msgid ""
+"Please check appraisal result configuration , there is more than result for "
+"percentage %s  are %s "
+msgstr "  لـ %s  هنالك اكثر من نتيجة للتقييم %s  التاكد من اعدد نتائج التقييم "
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal_settings.py:0
+#: code:addons/exp_hr_appraisal/models/employees_appraisal.py:0
+#, python-format
+msgid "Please select at least one employee to make appraisal."
+msgstr "يجب ادخال الموظفين للتقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__question
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_complete_appraisal__question
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal__question_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete__question_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal__question
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal_line__question
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.manager_appraisal_complete_line_form_view
+msgid "Question"
+msgstr "سؤال"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete__question_complete_id
+msgid "Question Complete"
+msgstr "اكمال السؤال"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_plan_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "Re-compute"
+msgstr "اعادة حساب التقييم"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "Re-draft"
+msgstr "إرجاع لمبدئي"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+msgid "Reject"
+msgstr "رفض"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_employee_appraisal__state__employee_rejection
+msgid "Rejected by the Employee"
+msgstr "مرفوض من الموظف"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__activity_user_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__activity_user_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__activity_user_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__activity_user_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__activity_user_id
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_result__result_from
+msgid "Result From"
+msgstr "الدرجة من"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_result__result_to
+msgid "Result To"
+msgstr "الدرجة الى"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_result_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_result_tree_view
+msgid "Result from"
+msgstr "الدرجة من"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_result_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_result_tree_view
+msgid "Result name"
+msgstr "اسم النتيجة"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_result_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.appraisal_result_tree_view
+msgid "Result to"
+msgstr "الدرجة الى"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal_result.py:0
+#, python-format
+msgid "Result values must be greater than zero."
+msgstr "يجب ان تكون النتيجة اكبر من صفر"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal_result.py:0
+#, python-format
+msgid "Result values must be less than 100."
+msgstr "يجب ان تكون النتيجة اقل من 100"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.manager_appraisal_complete_line_form_view
+msgid "Save"
+msgstr "حفظ"
+
+#. module: exp_hr_appraisal
+#: model:ir.model,name:exp_hr_appraisal.model_manager_appraisal
+#: model:ir.model,name:exp_hr_appraisal.model_manager_appraisal_line
+#: model:ir.model,name:exp_hr_appraisal.model_standard_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__standard_appraisal_id
+msgid "Standard Appraisal"
+msgstr "التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__standard_appraisal_employee_line_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal_line__standard_appraisal_employee_line
+msgid "Standard Appraisal Employee Line"
+msgstr "عناصر التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_standard_appraisal__standard_appraisal_line
+msgid "Standard Appraisal Line"
+msgstr "عناصر التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.model,name:exp_hr_appraisal.model_standard_appraisal_line
+msgid "Standard Appraisal line"
+msgstr "عناصر التقييم"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/employees_appraisal.py:0
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_group_employee_appraisal__state__start_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#, python-format
+msgid "Start Appraisal"
+msgstr "ابدأ التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_setting__state
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__state
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_degree__activity_state
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_plan__activity_state
+#: model:ir.model.fields,help:exp_hr_appraisal.field_customize_appraisal__activity_state
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_employee_appraisal__activity_state
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_group_employee_appraisal__activity_state
+#: model:ir.model.fields,help:exp_hr_appraisal.field_manager_appraisal_line__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#, python-format
+msgid "There is No percentage result for employee appraisal Greater than 100%"
+msgstr "لا يمكن ان تكون نتيجة تقييم الموظف اكبر من 100% كحد اقصى"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#, python-format
+msgid "There is no contract for employee \"%s\" to update appraisal result "
+msgstr "لعكس نتيجة التقييم \"%s\" لا يوجد عقد مرتبط للموظف  "
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete__total
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_complete_line__total
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.manager_appraisal_complete_line_form_view
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_tree_view
+msgid "Total Achieved"
+msgstr "الدرجة الكلية المحققة "
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_tree_view
+msgid "Total Great"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_form_view
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.employee_appraisal_tree_view
+msgid "Total Percentage %"
+msgstr "النسبة الكلية % "
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__totals_appraisal_result
+msgid "Totals Appraisal Result"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__totals_great_level
+msgid "Totals Great Level"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__totals_level_achieved
+msgid "Totals Level Achieved"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__totals_level_achieved_percentage
+msgid "Totals Level Achieved Percentage"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__appraisal_setting__appraisal_type__training
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_employee_appraisal__appraisal_type__training
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_group_employee_appraisal__appraisal_type__training
+msgid "Training"
+msgstr "الدورة التدريبية"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__appraisal_setting__appraisal_type__trial
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_employee_appraisal__appraisal_type__trial
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_group_employee_appraisal__appraisal_type__trial
+msgid "Trial Period"
+msgstr "الفترة التجريبية"
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_degree__activity_exception_decoration
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_plan__activity_exception_decoration
+#: model:ir.model.fields,help:exp_hr_appraisal.field_customize_appraisal__activity_exception_decoration
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_employee_appraisal__activity_exception_decoration
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_group_employee_appraisal__activity_exception_decoration
+#: model:ir.model.fields,help:exp_hr_appraisal.field_manager_appraisal_line__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_unread
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_unread
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_unread
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_unread
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_unread
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__message_unread_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__message_unread_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__message_unread_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__message_unread_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__message_unread_counter
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:res.groups,name:exp_hr_appraisal.group_appraisal_user
+msgid "User"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_degree__website_message_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_appraisal_plan__website_message_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_customize_appraisal__website_message_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_employee_appraisal__website_message_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_hr_group_employee_appraisal__website_message_ids
+#: model:ir.model.fields,field_description:exp_hr_appraisal.field_manager_appraisal_line__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_degree__website_message_ids
+#: model:ir.model.fields,help:exp_hr_appraisal.field_appraisal_plan__website_message_ids
+#: model:ir.model.fields,help:exp_hr_appraisal.field_customize_appraisal__website_message_ids
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_employee_appraisal__website_message_ids
+#: model:ir.model.fields,help:exp_hr_appraisal.field_hr_group_employee_appraisal__website_message_ids
+#: model:ir.model.fields,help:exp_hr_appraisal.field_manager_appraisal_line__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#, python-format
+msgid "You Cannot The Greed Greater Than Great Level"
+msgstr "لا يمكن ان تكون نتيجة تقييم الدرجة المحققة للسؤال اكبر من الدرجة العظمة"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#, python-format
+msgid "You are only allowed to change accrued greed in this state!"
+msgstr "مسموح لك بتغيير الدرجة المستحقة فقط في هذه الحالة!"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#, python-format
+msgid ""
+"You can not Re-draft when there is appraisal not in state draft for "
+"employees."
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/employees_appraisal.py:0
+#, python-format
+msgid "You can not delete record in state not in draft"
+msgstr "لايمكن حذف السجل في حالة غير المسوده"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#, python-format
+msgid "You can not delete record in state not in draft for employee \"%s\" "
+msgstr " \"%s\"لا يمكن حذف السجل وهنالك تقييم موظف ليس في حالة مسوده "
+
+#. module: exp_hr_appraisal
+#: model:ir.model,name:exp_hr_appraisal.model_hr_contract_extension
+msgid "hr.contract.extension"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model,name:exp_hr_appraisal.model_hr_re_contract
+msgid "hr.re.contract"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model,name:exp_hr_appraisal.model_manager_appraisal_complete
+msgid "manager.appraisal.complete"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model,name:exp_hr_appraisal.model_manager_appraisal_complete_line
+msgid "manager.appraisal.complete.line"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.actions.act_window,name:exp_hr_appraisal.manager_appraisal_complete_line_action
+msgid "manager.appraisal.complete.line.action.view"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_employee_appraisal__state__state_done
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_group_employee_appraisal__state__done
+msgid "المنتهية"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_employee_appraisal__state__draft
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__hr_group_employee_appraisal__state__draft
+msgid "مسودة"
+msgstr ""
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal_settings.py:0
+#: model:ir.model.fields.selection,name:exp_hr_appraisal.selection__appraisal_setting__state__appraisal
+#, python-format
+msgid "Appraisal Created"
+msgstr "تم إنشاء تقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.actions.act_window,name:exp_hr_appraisal.appraisal_setting_action
+#: model:ir.ui.menu,name:exp_hr_appraisal.appraisal_setting_menu
+msgid "Appraisal Setting"
+msgstr "إعدادات التقييم"
+
+#. module: exp_hr_appraisal
+#: model:ir.actions.server,name:exp_hr_appraisal.ir_cron_week_appraisal_ir_actions_server
+#: model:ir.cron,cron_name:exp_hr_appraisal.ir_cron_week_appraisal
+#: model:ir.cron,name:exp_hr_appraisal.ir_cron_week_appraisal
+msgid "Appraisal ;Automatic Employee Appraisal"
+msgstr "التقييم : إنشاء تقييم الموظفين تلقائيا"
+
+#. module: exp_hr_appraisal
+#: model_terms:ir.ui.view,arch_db:exp_hr_appraisal.hr_appraisal_tree_view
+msgid "Level achieved"
+msgstr "الدرجة المحققة"
+
+#. module: exp_hr_appraisal
+#: code:addons/exp_hr_appraisal/models/appraisal.py:0
+#, python-format
+msgid ""
+"The evaluation is approved by the direct manager \"%s\" If you have any "
+"problems, contact your manager."
+msgstr "اعتماد التقييم من صلاحية المدير المباشر \"%s\". اذا لديك اي مشكلة تواصل مع مديرك"

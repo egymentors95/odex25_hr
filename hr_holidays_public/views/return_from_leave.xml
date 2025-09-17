@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="return_from_leave_action">
+            <field name="name">Return From Leave</field>
+            <field name="res_model">return.from.leave</field>
+
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record model="ir.ui.view" id="return_from_leave_form_view">
+            <field name="name">Return From Leave</field>
+            <field name="model">return.from.leave</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Submit" name="submit" type="object" states="draft" class="oe_highlight"
+                                groups="hr_base.group_division_manager"/>
+                        <button string="Direct Manager" name="review" type="object" states="submit" class="oe_highlight"
+                                groups="hr_base.group_division_manager"/>
+
+                        <button string="Refuse" name="refuse" type="object" states="submit" class="oe_highlight"
+                                groups="hr_base.group_division_manager"/>
+
+                        <button string="HR Manager" name="confirm" type="object" states="review" class="oe_highlight"
+                                groups="hr_holidays_community.group_hr_holidays_user,hr.group_hr_manager"/>
+
+                        <button string="Refuse" name="refuse" type="object" states="review" class="oe_highlight"
+                                groups="hr_holidays_community.group_hr_holidays_user"/>
+
+                        <button string="Approved" name="approve" type="object" states="confirm" class="oe_highlight"
+                                groups="hr_base.group_general_manager,hr_base.group_executive_manager,hr.group_hr_manager"/>
+
+                        <button string="Refuse" name="refuse" type="object" states="confirm" class="oe_highlight"
+                                groups="hr_base.group_general_manager,hr_base.group_executive_manager,hr.group_hr_manager"/>
+
+                        <button string="Rest To Draft" name="draft" type="object" states="approve" class="oe_highlight"/>
+
+                        <button string="Rest To Draft" name="draft" type="object" states="refuse" class="oe_highlight"
+                                groups="hr_holidays_community.group_hr_holidays_user" confirm="Are you sure to Reset To Draft This Record?"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="from_hr_department" string="Another Employee"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="employee_id" string="Employee"
+                                       attrs="{'readonly':['|',('from_hr_department' , '=' , False),('state','!=','draft')]}"
+                                       required="1"/>
+                                <field name="real_start_date_working" string="Real Start Date Working" widget="date"
+                                       required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="cause" string="Cause"
+                                       attrs="{'readonly':[('state','!=','draft')],'required':[('diff_days','>',0)]}"/>
+                                <field name="decision" string="Decision"
+                                       attrs="{'readonly':[('state','!=','submit')],
+                                       'required':[('diff_days', '&gt;=', 1.0),('state','=','submit')],
+                                       'invisible':[('diff_days', '&lt;=', 0.0)]}"/>
+                                <field name="alternative_emp_id"
+                                       attrs="{'readonly':[('state','!=','submit')],
+                                       'invisible':[('diff_days', '&lt;=', 0.0)]}"/>
+                            </group>
+                            <group>
+                                <field name="leave_request_id" string="Leave Request" widget="selection" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"
+                                       domain = "[('employee_id', '=', employee_id),
+                                       ('state', '=', 'validate1'),
+                                       ('return_from_leave','=',False),('type', '=', 'remove')]"/>
+                                <field name="leave_date_from" string="Leave Date from" widget="date"/>
+                                <field name="leave_date_to" string="Leave Date To" widget="date"/>
+                                <field name="diff_days" string="Different Days" readonly="1" force_save="1"/>
+                                <field name="official_days" string="Official Holidays" readonly="1" force_save="1"
+                                       attrs="{'invisible':[('official_days', '&lt;=', 0.0)]}" />
+                                 <field name="settling_leave_id"/>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Attachments">
+                                <field name="attachment_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="name" string="Attachment Name"/>
+                                        <field name="datas" string="File content"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+
+                    <!--Discuss widgets for history and communication -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="return_from_leave_tree_view">
+            <field name="name">Return From Leave</field>
+            <field name="model">return.from.leave</field>
+            <field name="arch" type="xml">
+                <tree decoration-success="state=='approve'" decoration-danger="state == 'refuse'" decoration-info="state == 'draft'" string="Return From Leave">
+                    <field name="real_start_date_working" string="Real Start Date Working"  widget="date" />
+                    <field name="employee_id" string="Employee"/>
+                    <field name="leave_request_id" string="Leave Request"/>
+                    <field name="diff_days" string="Different Days" />
+                    <field name="state" string="State" />
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

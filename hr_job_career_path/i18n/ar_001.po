@@ -1,0 +1,406 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_job_career_path
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 07:06+0000\n"
+"PO-Revision-Date: 2022-09-13 07:06+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job__certificate_ids
+msgid "Certificates"
+msgstr "الشهادات"
+
+#. module: hr_job_career_path
+#: model_terms:ir.ui.view,arch_db:hr_job_career_path.hr_job_experience_view_form
+msgid "Certification"
+msgstr "شهادة"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience__create_uid
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience_domain__create_uid
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_preference__create_uid
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_qualification__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience__create_date
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience_domain__create_date
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_preference__create_date
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_qualification__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_employee_department_jobs__department_date_to
+msgid "Department Date To"
+msgstr "تاريخ الإنتهاء الخاص بالهيكل الإداري"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_employee_department_jobs__display_name
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job__display_name
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience__display_name
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience_domain__display_name
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_preference__display_name
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_qualification__display_name
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_payroll_structure__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience__domain_id
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience_domain__name
+msgid "Domain"
+msgstr "المجال"
+
+#. module: hr_job_career_path
+#: model_terms:ir.ui.view,arch_db:hr_job_career_path.hr_job_experience_view_form
+msgid "Domains of Experience"
+msgstr "مجال الخبرة"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_employee_department_jobs__eligible
+msgid "Eligible"
+msgstr "مستوفي"
+
+#. module: hr_job_career_path
+#: model:ir.model,name:hr_job_career_path.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_job_career_path
+#: model:ir.model,name:hr_job_career_path.model_employee_department_jobs
+msgid "Employee Department and Jobs"
+msgstr "تنقلات وتغيير الوظائف"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience__job_id
+msgid "Experience"
+msgstr "الخبرة"
+
+#. module: hr_job_career_path
+#: model_terms:ir.ui.view,arch_db:hr_job_career_path.hr_job_experience_view_form
+msgid "Experiences"
+msgstr "الخبرات"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job__general_experience
+msgid "General Experience"
+msgstr "خبرة عامة"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_employee_department_jobs__id
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job__id
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience__id
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience_domain__id
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_preference__id
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_qualification__id
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_payroll_structure__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience_domain__job_id
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_preference__job_id
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_qualification__job_id
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_employee_department_jobs__job_date_to
+msgid "Job Date To"
+msgstr "تاريخ الإنتهاء الخاص بالوظيفة"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience_domain__job_ids
+msgid "Job Experiences"
+msgstr "الخبرات الخاصة بالوظيفة"
+
+#. module: hr_job_career_path
+#: model:ir.model,name:hr_job_career_path.model_hr_job
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_preference__prf_job_id
+msgid "Job Preference"
+msgstr "الوظيفة الاعلى"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_payroll_structure__job_ids
+msgid "Jobs"
+msgstr "الوظائف"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job__job_preference_ids
+msgid "Jobs Preference"
+msgstr "الوظيفة الاعلى"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_employee_department_jobs____last_update
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job____last_update
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience____last_update
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience_domain____last_update
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_preference____last_update
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_qualification____last_update
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_payroll_structure____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience__write_uid
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience_domain__write_uid
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_preference__write_uid
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_qualification__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience__write_date
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience_domain__write_date
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_preference__write_date
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_qualification__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_employee_department_jobs__permission_reason
+#: model_terms:ir.ui.view,arch_db:hr_job_career_path.custom_employee_department_jobs_form_view
+msgid "Nomination Permission Reason"
+msgstr "سبب السماح بالترشيح"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience__years
+msgid "Number of Years"
+msgstr "عدد السنوات"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job__parent_job_ids
+#: model_terms:ir.ui.view,arch_db:hr_job_career_path.hr_job_experience_view_form
+msgid "Parent Jobs"
+msgstr "الوظيفة الاعلى"
+
+#. module: hr_job_career_path
+#: model_terms:ir.ui.view,arch_db:hr_job_career_path.hr_job_experience_view_form
+msgid "Payroll Groups"
+msgstr "مجموعات سلم الرواتب"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_employee_department_jobs__permit
+msgid "Permit Nomination"
+msgstr "السماح بالترشيح"
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_payroll_structure.py:0
+#, python-format
+msgid "Please set the maximum number of degrees for group %s."
+msgstr "الرجاء تعيين الحد الأقصى لعدد الدرجات للمجموعة %s"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_preference__preference
+msgid "Preference"
+msgstr "المرجع"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_qualification__qualification_id
+#: model_terms:ir.ui.view,arch_db:hr_job_career_path.hr_job_experience_view_form
+msgid "Qualification"
+msgstr "مؤهل"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job__qualification_ids
+msgid "Qualifications"
+msgstr "مؤهلات"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job__payroll_group_ids
+msgid "Salary Group"
+msgstr "مجموعة سلم الرواتب"
+
+#. module: hr_job_career_path
+#: model:ir.model,name:hr_job_career_path.model_hr_payroll_structure
+msgid "Salary Structure"
+msgstr "سلم الرواتب"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_payroll_structure__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/employee_department_job.py:0
+#, python-format
+msgid "Sorry Employee Job %s does not Exist among The New Departments Jobs."
+msgstr "عفواً وظيفة الموظف %s غير موجوده من ضمن وظائف  الهيكل الإداري الجديد ."
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/employee_department_job.py:0
+#, python-format
+msgid ""
+"Sorry employee %s is not eligible, that you can not proceed with approval "
+"without granting him a permission to be nominated."
+msgstr "عفواً الموظف %s غير مستوفي للشروط, لذلك لا يمكن المتابعة في عملية التصديق قبل ان يتم منحه السماح بذلك."
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_job.py:0
+#, python-format
+msgid "Sorry no domains of experiences set for %s .Kindly set some."
+msgstr "عفواً لم يتم إدخال مجالات الخبرات المتخصصة للوظيفة %s فضلاً قم بإضافتها اولاً."
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_job.py:0
+#, python-format
+msgid "Sorry no job experiences set for %s .Kindly set some."
+msgstr "عفواً لم يتم إضافة الخبرات الخاصة بالوظيفة %s فضلاً قم بإضافتها أولاً"
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_job.py:0
+#, python-format
+msgid ""
+"Sorry the experience years for %s exceeds the required specialization years."
+msgstr "عفواً سنوات الخبرة الخاصة بالوظيفة %s تتجاوز السنوات المطلوبة للخبرة المتخصصة. "
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_payroll_structure.py:0
+#, python-format
+msgid ""
+"Sorry the maximum number of degrees for group %s is %s, you cant have "
+"sequence grater than this."
+msgstr "عذرًا ، الحد الأقصى لعدد الدرجات للمجموعة %s هو %s،ولا يمكنك الحصول على تردد أكبر من هذا "
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_job.py:0
+#, python-format
+msgid ""
+"Sorry the sum of years in all jobs related to %s exceeds its years of "
+"experiences."
+msgstr "عفواً مجموع سنوات الخبرة في جميع الوظائف الخاصة ب %s يتجاوز سنوات الخبرة الخاصة بها."
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_payroll_structure.py:0
+#, python-format
+msgid ""
+"Sorry this sequence is already given for another degree of this group please"
+" set another one."
+msgstr "عفواً تم إسناد هذا المتسلسل لدرجة أخرى مسبقاً, فضلاً إختر متسلسل أخر."
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_payroll_structure.py:0
+#, python-format
+msgid ""
+"Sorry this sequence is already given for another group within level %s, "
+"please set another one."
+msgstr "عفواً هذا المتسلسل تم إسناده لمجموعة أخرى في مستوى %s . فضلاً إختر متسلسل أخر."
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_qualification__specialization_id
+msgid "Specialization"
+msgstr "التخصصات"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job__domain_ids
+msgid "Specialized Domain Experience"
+msgstr "خبرة في مجال متخصص"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job__domain_experience
+msgid "Specialized Experience"
+msgstr "خبرة متخصصة"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_employee_department_jobs__unmet_condition
+#: model_terms:ir.ui.view,arch_db:hr_job_career_path.custom_employee_department_jobs_form_view
+msgid "Unmet Conditions"
+msgstr "شروط غير مستوفاة"
+
+#. module: hr_job_career_path
+#: model:ir.model.fields,field_description:hr_job_career_path.field_hr_job_experience_domain__experience_years
+msgid "Years of Experience"
+msgstr "سنوات الخبرة"
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_employee.py:0
+#, python-format
+msgid "employee degree dose not match"
+msgstr "سنوات الخبرة"
+
+#. module: hr_job_career_path
+#: model:ir.model,name:hr_job_career_path.model_hr_job_experience
+msgid "hr.job.experience"
+msgstr ""
+
+#. module: hr_job_career_path
+#: model:ir.model,name:hr_job_career_path.model_hr_job_experience_domain
+msgid "hr.job.experience.domain"
+msgstr ""
+
+#. module: hr_job_career_path
+#: model:ir.model,name:hr_job_career_path.model_hr_job_preference
+msgid "hr.job.preference"
+msgstr ""
+
+#. module: hr_job_career_path
+#: model:ir.model,name:hr_job_career_path.model_hr_job_qualification
+msgid "hr.job.qualification"
+msgstr ""
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_employee.py:0
+#, python-format
+msgid "insufficient domain experience"
+msgstr "خبرة المجال غير كافية"
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_employee.py:0
+#, python-format
+msgid "insufficient general experience years"
+msgstr "سنوات الخبرة العامة غير كافية"
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_employee.py:0
+#, python-format
+msgid "job not available for employee current department"
+msgstr "الوظيفة غير متاحة للإدارة الحالية للموظف"
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_employee.py:0
+#, python-format
+msgid "no available vacancies"
+msgstr "لا توجد وظائف شاغرة"
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_employee.py:0
+#, python-format
+msgid "no employment date to calculate general experience years"
+msgstr "لا يوجد تاريخ توظيف لحساب سنوات الخبرة العامة"
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_employee.py:0
+#, python-format
+msgid "unmet certificates"
+msgstr "الشهادات غير مستوفاة"
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_employee.py:0
+#, python-format
+msgid "unmet courses"
+msgstr "الدورات التدريبية  غير مستوفاة"
+
+#. module: hr_job_career_path
+#: code:addons/hr_job_career_path/models/hr_employee.py:0
+#, python-format
+msgid "unmet qualification"
+msgstr "المؤهلات غير مستوفاة"

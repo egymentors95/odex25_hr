@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <template id="employee_info_report_template">
+            <t t-call="web.html_container" t-translation="off">
+                <t t-call="hr_base.hr_layout">
+                    <style>
+                        @font-face {font-family: "Sakkal Majalla"; src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                        format("embedded-opentype"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype");
+                        }
+
+                    </style>
+                    <t t-foreach="docs" t-as="o">
+                        <div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:13p">
+                            <table class="table table-borderless" style="width:100%;" dir="rtl">
+                                <tr style="border: 0;">
+                                    <td style="text-align:right;border:0;width:50%;color:#2c7873;">
+                                        <h3>
+                                            <strong>بطاقة معلومات الموظف</strong>
+                                        </h3>
+                                        <br/>
+                                        <h3>
+                                            <strong>Employee Information Sheet</strong>
+                                        </h3>
+                                    </td>
+                                    <td style="text-align:left;border:0;width:50%;color:#2c7873;">
+                                        <img t-if="o.image_1920" t-att-src="image_data_uri(o.image_1920)"
+                                             style="height: 120px;width: 100px;"/>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table class="table table-bordered"
+                                   style="width:100%;border: 1px solid #DADADA; margin-bottom: 0px;">
+                                <tr>
+                                    <td style="border: 1px solid #DADADA;" colspan="8">
+                                        <span style="font-size: 18px;color:#2c7873;float:right">
+                                            <strong>مـعـلـومـات شـخـصـيـة</strong>
+                                        </span>
+                                        <span class="pull-left" style="font-size: 18px;color:#2c7873;float:left">
+                                            <strong>Personal Information</strong>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+
+                                        width="50%" colspan="4">
+                                        <strong style="float:right">الإسم :</strong>
+                                        <span style="margin-right:5%" t-field="o.name"/>
+                                    </td>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="50%" colspan="4">
+                                        <strong style="float:left">: Name</strong>
+                                        <span style="margin-right:5%" t-field="o.english_name"/>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="25%" colspan="2">
+                                        <strong style="float:right">المسمى الوظيفة :</strong>
+                                        <span style="margin-right:5%" t-field="o.job_id.name"/>
+                                    </td>
+
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="25%" colspan="2">
+                                        <strong style="float:left">: Job Title</strong>
+                                        <span style="margin-right:5%" t-field="o.job_id.english_name"/>
+                                    </td>
+
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="25%" colspan="2">
+                                        <strong style="float:right">الهيكل الإداري :</strong>
+                                        <span style="margin-right:5%" t-field="o.department_id.name"/>
+                                    </td>
+
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="25%" colspan="2">
+                                        <strong style="float:left">: Department</strong>
+                                        <span style="margin-right:5%" t-field="o.department_id.english_name"/>
+                                    </td>
+
+                                </tr>
+                            </table>
+                            <table class="table table-bordered"
+                                   style="width:100%;border: 1px solid #DADADA;">
+                                <tr>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">الجنسية :</strong>
+                                        <span style="margin-right:5%" t-field="o.country_id"/>
+                                        <strong style="float:left">: Nationality</strong>
+
+                                    </td>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">تاريخ الميلاد :</strong>
+                                        <span style="margin-right:5%" t-esc="o.birthday"/>
+                                        <strong style="float:left">: Date of Birth</strong>
+
+                                    </td>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">مكان الميلاد :</strong>
+                                        <span style="margin-right:5%" t-field="o.place_of_birth"/>
+                                        <strong style="float:left">: Place of Birth</strong>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">الكفيل :</strong>
+                                        <span style="margin-right:5%" t-field="o.company_id.name"/>
+                                        <strong style="float:left">: sponsor</strong>
+
+                                    </td>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">المدير :</strong>
+                                        <span style="margin-right:5%" t-field="o.parent_id"/>
+                                        <strong style="float:left">: Manager</strong>
+                                    </td>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">سنوات الخدمة :</strong>
+                                        <span style="margin-right:5%" t-field="o.service_year"/>
+                                        <strong style="float:left">: Service Year</strong>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">رقم الموظف :</strong>
+                                        <span style="margin-right:5%" t-field="o.emp_no"/>
+                                        <strong style="float:left">: Emp No</strong>
+                                    </td>
+
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">نوع الموظف :</strong>
+                                        <span style="margin-right:5%" t-field="o.employee_type_id.name"/>
+
+                                        <strong style="float:left">: Employee Type</strong>
+
+                                    </td>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">العمر :</strong>
+                                        <span style="margin-right:5%" t-field="o.employee_age"/>
+                                        <strong style="float:left">: Age</strong>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">مكان العمل :</strong>
+                                        <span t-if="o.branch_id" style="margin-right:5%" t-field="o.working_location"/>
+
+                                        <strong style="float:left">: Work Location</strong>
+
+                                    </td>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">المعالين :</strong>
+                                        <span style="margin-right:5%" t-field="o.contract_id.dependant_count"/>
+                                        <strong style="float:left">: Dependant</strong>
+                                    </td>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">تاريخ التعيين :</strong>
+                                        <span style="margin-right:5%" t-field="o.first_hiring_date"/>
+                                        <strong style="float:left">: Hire Date</strong>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">العقد :</strong>
+                                        <span style="margin-right:5%" t-field="o.contract_id.name"/>
+
+                                        <strong style="float:left">: Contract</strong>
+
+                                    </td>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">بداية العقد :</strong>
+                                        <span style="margin-right:5%" t-field="o.contract_id.date_start"/>
+                                        <strong style="float:left">: Contract Start</strong>
+                                    </td>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">نهاية العقد :</strong>
+                                        <span style="margin-right:5%" t-field="o.contract_id.date_end"/>
+
+                                        <strong style="float:left">: Contract End</strong>
+
+                                    </td>
+                                </tr>
+                                <tr>
+
+
+                                </tr>
+
+                                <tr>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">نهاية الخدمة :</strong>
+                                        <span style="margin-right:5%" t-field="o.leaving_date"/>
+                                        <strong style="float:left">: Termination Date</strong>
+                                    </td>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">الحالة الإجتماعية :</strong>
+                                        <span style="margin-right:5%" t-field="o.marital"/>
+
+                                        <strong style="float:left">: Marital Status</strong>
+
+                                    </td>
+                                    <td style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;"
+                                        width="33%">
+                                        <strong style="float:right">نوع الموظف :</strong>
+                                        <span style="margin-right:5%" t-field="o.contract_id.emp_type"/>
+                                        <strong style="float:left">: Ntagat Type</strong>
+                                    </td>
+
+                                </tr>
+
+                            </table>
+                            <table class="table table-bordered"
+                                   style="width:100%;border: 2px solid #DADADA;">
+                                <tr>
+                                    <td style="border: 1px solid #DADADA;" colspan="8">
+                                        <span style="font-size: 18px;color:#2c7873;float:right">
+                                            <strong>مـعـلـومـات العنوان</strong>
+                                        </span>
+                                        <span class="pull-left" style="font-size: 18px;color:#2c7873;float:left">
+                                            <strong>Address Information</strong>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="4">
+                                        <table class="table table-borderless"
+                                               style="width:100%;border-collapse:collapse;border-collapse:separate;padding:0px;margin:0px;"
+                                               dir="rtl">
+                                            <tr style="border 0;">
+                                                <td style="text-align:right;border:0;width:25%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                                    <strong>العنوان :</strong>
+                                                </td>
+                                                <td style="text-align:right;border:0;width:50%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                                    <span t-field="o.building_number"/>
+                                                    <span t-field="o.street"/>-
+                                                    <span t-field="o.address_region"/>
+                                                    -
+                                                    <span t-field="o.address_city"/>
+                                                    -
+                                                    <span t-field="o.postal_code"/>
+                                                </td>
+                                                <td style="text-align:left;border:0;width:25%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                                    <strong>: Address</strong>
+                                                </td>
+                                            </tr>
+
+                                            <tr style="border 0;">
+                                                <td style="text-align:right;border:0;width:25%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                                    <strong>المدينة :</strong>
+                                                </td>
+                                                <td style="text-align:right;border:0;width:50%;">
+                                                    <span t-field="o.address_city"/>
+                                                </td>
+                                                <td style="text-align:left;border:0;width:25%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                                    <strong>: City</strong>
+                                                </td>
+                                            </tr>
+
+                                            <tr style="border 0;">
+                                                <td style="text-align:right;border:0;width:25%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                                    <strong>الرمز البريدي :</strong>
+                                                </td>
+                                                <td style="text-align:right;border:0;width:50%;">
+                                                    <span t-field="o.postal_code"/>
+                                                </td>
+                                                <td style="text-align:left;border:0;width:25%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                                    <strong>: Zip Code</strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+
+                                    <td colspan="4">
+                                        <table class="table table-borderless"
+                                               style="width:100%;border-collapse:collapse;border-collapse:separate;padding:0px;margin:0px;"
+                                               dir="rtl">
+                                            <tr style="border 0;">
+                                                <td style="text-align:right;border:0;width:25%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                                    <strong>الهاتف :</strong>
+                                                </td>
+                                                <td style="text-align:right;border:0;width:50%;">
+                                                    <span t-field="o.work_phone"/>
+
+                                                </td>
+                                                <td style="text-align:left;border:0;width:25%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                                    <strong>: Telephone</strong>
+                                                </td>
+                                            </tr>
+
+                                            <tr style="border 0;">
+                                                <td style="text-align:right;border:0;width:25%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                                    <strong>منزل :</strong>
+                                                </td>
+                                                <td style="text-align:right;border:0;width:50%;">
+                                                    <span t-field="o.apartment_number"/>
+                                                </td>
+                                                <td style="text-align:left;border:0;width:25%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                                    <strong>: Home</strong>
+                                                </td>
+                                            </tr>
+                                            <tr style="border 0;">
+                                                <td style="text-align:right;border:0;width:25%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                                    <strong>جوال :</strong>
+                                                </td>
+                                                <td style="text-align:right;border:0;width:50%;">
+                                                    <span t-field="o.mobile_phone"/>
+                                                </td>
+                                                <td style="text-align:left;border:0;width:25%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">
+                                                    <strong>: Mobile</strong>
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <p style="page-break-after:always"></p>
+
+                            <table class="table table-bordered" style="width:100%;border: 2px solid #DADADA;">
+                                <tr>
+                                    <td style="border: 1px solid #DADADA;" colspan="8">
+                                        <span style="font-size: 18px;color:#2c7873;float:right">
+                                            <strong>مستندات الموظف</strong>
+                                        </span>
+                                        <span class="pull-left" style="font-size: 18px;color:#2c7873;float:left">
+                                            <strong>Employee Documents</strong>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>الإسم</strong>
+                                        <br/>
+                                        <strong>Name</strong>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>الرقم</strong>
+                                        <br/>
+                                        <strong>Number</strong>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>مكان الإصدار</strong>
+                                        <br/>
+                                        <strong>From</strong>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>تاريخ الإصدار</strong>
+                                        <br/>
+                                        <strong>Issue Date</strong>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>تاريخ الإنتهاء</strong>
+                                        <br/>
+                                        <strong>Expiry Date</strong>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border: 1px solid #DADADA;">
+                                        الجواز/passpord
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <span t-field="o.passport_id.passport_id"/>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <span t-field="o.passport_id.place_issue_id"/>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <span t-field="o.passport_id.issue_date"/>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <span t-field="o.passport_id.expiry_date"/>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border: 1px solid #DADADA;">هوية/Identity</td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <t t-if="o.country_id.name == 'Saudi Arabia' or o.country_id.name == 'المملكة العربية السعودية'">
+                                            <span t-field="o.saudi_number.saudi_id"/>
+                                        </t>
+                                        <t t-else="">
+                                            <span t-field="o.iqama_number.iqama_id"/>
+                                        </t>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <span t-field="o.iqama_number.place_issue_id"/>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <span t-field="o.iqama_number.issue_date"/>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <span t-field="o.iqama_number.expiry_date"/>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td style="border: 1px solid #DADADA;">رخصة/licence</td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <span t-field="o.license_number_id.license_id"/>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <span t-field="o.license_number_id.place_issue_id"/>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <span t-field="o.license_number_id.issue_date"/>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <span t-field="o.license_number_id.expiry_date"/>
+                                    </td>
+                                </tr>
+
+                            </table>
+
+                            <table class="table table-bordered" style="width:100%;border: 2px solid #DADADA;">
+                                <tr>
+                                    <td style="border: 1px solid #DADADA;" colspan="8">
+                                        <span style="font-size: 18px;color:#2c7873;float:right">
+                                            <strong>بيانات أفراد العائلة</strong>
+                                        </span>
+                                        <span class="pull-left" style="font-size: 18px;color:#2c7873;float:left">
+                                            <strong>Dependent Information</strong>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr class="text-center">
+                                    <td style="border: 1px solid #DADADA;">
+                                        <span>#</span>
+                                    </td>
+                                    <td style="width:40%;border: 1px solid #DADADA;">
+                                        <strong>الإسم</strong>
+                                        <br/>
+                                        <strong>Name</strong>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>صلة القرابة</strong>
+                                        <br/>
+                                        <strong>Relationship</strong>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>تاريخ الميلاد</strong>
+                                        <br/>
+                                        <strong>Date of Birth</strong>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>مكان الميلاد</strong>
+                                        <br/>
+                                        <strong>Place of Birth</strong>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>رقم الهوية (الجواز)</strong>
+                                        <br/>
+                                        <strong>ID (Passport) No.</strong>
+                                    </td>
+                                </tr>
+                                <t>
+                                    <t t-set="i" t-value="1"/>
+                                    <t
+                                            t-foreach="o.employee_dependant" t-as="d">
+                                        <tr class="text-center">
+                                            <td style="border: 1px solid #DADADA;">
+                                                <span t-esc="i"/>
+                                                <t t-set="i" t-value="i+1"/>
+                                            </td>
+                                            <td style="border: 1px solid #DADADA;">
+                                                <span t-field="d.name"/>
+                                            </td>
+                                            <td style="border: 1px solid #DADADA;">
+                                                <span t-field="d.relation"/>
+                                            </td>
+                                            <td style="border: 1px solid #DADADA;">
+                                                <span t-esc="d.birthday"/>
+                                            </td>
+                                            <td style="border: 1px solid #DADADA;"/>
+                                            <td style="border: 1px solid #DADADA;">
+                                                <span t-field="d.passport_no"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </table>
+                            <table class="table table-bordered" style="width:100%;border: 2px solid #DADADA;">
+                                <tr>
+                                    <td style="border: 1px solid #DADADA;" colspan="8">
+                                        <span style="font-size: 18px;color:#2c7873;float:right">
+                                            <strong>التعليم</strong>
+                                        </span>
+                                        <span class="pull-left" style="font-size: 18px;color:#2c7873;float:left">
+                                            <strong>Education</strong>
+                                        </span>
+                                    </td>
+                                </tr>
+
+                                <tr class="text-center">
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>الشهادة الحائز عليها</strong>
+                                        <br/>
+                                        <strong>Certificate Obtained</strong>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>التخصص</strong>
+                                        <br/>
+                                        <strong>Major</strong>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>اسم الجامعة أو المدرسة</strong>
+                                        <br/>
+                                        <strong>Name of University or School</strong>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>مكان الدراسة</strong>
+                                        <br/>
+                                        <strong>Location</strong>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>عدد سنوات الدراسة</strong>
+                                        <br/>
+                                        <strong>No. of Years</strong>
+                                    </td>
+                                    <td style="border: 1px solid #DADADA;">
+                                        <strong>تاريخ الحصول على الشهادة</strong>
+                                        <br/>
+                                        <strong>Date Certificate Obtained</strong>
+                                    </td>
+                                </tr>
+                                <t t-foreach="o.qualifiction_id" t-as="q">
+                                    <tr class="text-center">
+                                        <td>
+                                            <span t-field="q.qualification_id.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="q.qualification_specification_id.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="q.uni_name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="q.country_name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="q.qualification_degree"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="q.comp_date"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+
+                            <table class="table table-bordered" style="width:100%;border: 1px solid #DADADA;">
+                                <tr>
+                                    <td style="border: 1px solid #DADADA;" colspan="8">
+                                        <span style="font-size: 18px;color:#2c7873;float:right">
+                                            <strong>الدورات التدريبية و المعاهد المهنية</strong>
+                                        </span>
+                                        <span class="pull-left" style="font-size: 18px;color:#2c7873;float:left">
+                                            <strong>Training Courses and Vocational Training</strong>
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr class="text-center">
+                                    <td>
+                                        <strong>اسم المعهد</strong>
+                                        <br/>
+                                        <strong>Name of Institute</strong>
+                                    </td>
+                                    <td>
+                                        <strong>تاريخ الإصدار</strong>
+                                        <br/>
+                                        <strong>Date Issue</strong>
+                                    </td>
+                                    <td>
+                                        <strong>تاريخ إنتهاء الصلاحية</strong>
+                                        <br/>
+                                        <strong>Expiry End</strong>
+                                    </td>
+                                    <td>
+                                        <strong>نوع التدريب</strong>
+                                        <br/>
+                                        <strong>Type of Training</strong>
+                                    </td>
+                                    <td>
+                                        <strong>الشهادة</strong>
+                                        <br/>
+                                        <strong>Certificate</strong>
+                                    </td>
+                                </tr>
+                                <t t-foreach="o.certification_id" t-as="c">
+                                    <tr class="text-center">
+                                        <td>
+                                            <span t-field="c.issue_org"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="c.issue_date"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="c.exp_date"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="c.membership_type.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="c.car_name"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                                <t t-foreach="o.get_employee_mission()" t-as="tra">
+                                    <tr class="text-center">
+                                        <td>
+                                            <span t-field="tra.partner_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="tra.date_from"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="tra.date_to"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="tra.train_category"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="tra.course_name"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </table>
+
+
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+
+
+    </data>
+</openerp>
+

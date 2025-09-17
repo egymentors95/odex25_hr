@@ -1,0 +1,376 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+
+        <record id="hr_contract_form_view" model="ir.ui.view">
+            <field name="name">hr.contract.form.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="priority" eval="16"/>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <header position="replace">
+                    <header>
+                        <button name="program_directory" string="program Director" class="oe_highlight" type="object"
+                                states="employeed_aproval" groups="hr.group_hr_manager"/>
+<!--                                states="employeed_aproval" groups="hr_base.group_executive_manager"/>-->
+
+<!--                        <button name="hr_head_approval" string="HR Head Approval" class="oe_highlight"-->
+<!--                                type="object" states="employeed_aproval" groups="hr.group_hr_manager"/>-->
+
+                        <button name="employeed_aproval" string="Employee Approval" class="oe_highlight"
+                                type="object" states="draft" groups="hr.group_hr_user"/>
+                        <button name="end_contract_state" string="End Contract" class="oe_highlight"
+                                type="object" states="program_directory" groups="hr.group_hr_manager"/>
+                        <button name="draft_state" string="Set To Draft" class="oe_highlight"
+                                type="object" attrs="{'invisible':[('state','=','draft')]}" groups="hr.group_hr_user"/>
+
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,employeed_aproval,program_directory,end_contract"/>
+                    </header>
+
+<!--                               statusbar_visible="draft,employeed_aproval,hr_head_approval,program_directory,end_contract"/>-->
+<!--                    -->
+                </header>
+
+                <field name="employee_id" position="replace"/>
+                <field name="name" position="after">
+                    <field name="employee_id" domain="[('active','=',True)]"
+                           nolabel="1" required="1" placeholder="Choose Employee Number"/>
+                </field>
+                <field name="job_id" position="replace">
+                    <field name="check_nationality" invisible="1" force_save="1"/>
+                    <field name="active" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="contract_draft" invisible="1"/>
+                    <field name="employee_name" required="1" readonly="1"/>
+                    <field name="emp_type" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="saudi_emp_type" attrs="{'required': [('check_nationality', '=', True)],
+                                                        'invisible': [('check_nationality', '=', False)],'readonly':[('state','!=','draft')]}"/>
+                    <field name="is_gosi_deducted" string="Is gosi?"
+                           attrs="{'invisible':[('saudi_emp_type','!=','saudi-contract')],'required':[('saudi_emp_type','=','saudi-contract')],'readonly':[('state','!=','draft')]}"/>
+                    <field name="job_id" domain="[('department_id','=',department_id)]" required="1" readonly="1"/>
+                    <field name="nationality" readonly="1" string="Nationality "/>
+                    <field name="check_nationality" string="Saudi?" force_save="1"/>
+                    <field name="previous_contract_id" readonly="1" string="Previous Contract"/>
+                    <field name="period_ticket" string="Period Ticket"
+                           attrs="{'invisible':[('check_nationality', '=', True)]}"/>
+                </field>
+                <xpath expr="///group[@name='duration_group']" position="replace">
+                    <group name="duration_group">
+                        <field name="contract_duration_cal" invisible="1"/>
+                        <field name="trial_duration" invisible="1"/>
+                        <field name="contract_type" invisible="1"/>
+                        <field name="contract_status" string="contract description" required="1"
+                               attrs="{'readonly':[('state','!=','draft')]}"/>
+                        <field name="contract_description" string="contract type"
+                               attrs="{'required':[('contract_draft','=',False)],'readonly':[('state','!=','draft')]}"/>
+                        <field name="contract_duration"
+                               attrs="{'required':[('contract_draft','=',False),('contract_description','!=','permanent')],'invisible':[('contract_description','=','permanent')],'readonly':[('state','!=','draft')]}"/>
+                        <field name="hiring_date" string="Hiring Date"/>
+                        <field name="date_start" attrs="{'readonly':[('state','!=','draft')]}"/>
+                        <field name="date_end" string="End Date"
+                               attrs="{'required': [('contract_description','!=','permanent')],
+                                  'readonly':['|','|',('state','=','employeed_aproval'),('state','=','hr_head_approval'),('state','=','end_contract')]}"/>
+                        <field name="contractor_type" attrs="{'readonly':[('state','!=','draft')]}"/>
+                        <!--field name="salary_status" attrs="{'readonly':[('state','!=','draft')]}"/>
+                        <field name="recruited_talent" attrs="{'readonly':[('state','!=','draft')]}"/-->
+                         <field name="class_contract" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//notebook/page/group[@name='main_info']" position="replace">
+                    <group name="salary_info" groups="hr.group_hr_user">
+                        <group name="salary" attrs="{'invisible':[('consultants','=',True)]}"  >
+                            <field name="salary" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="salary_insurnce" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="ticket_allowance" attrs="{'readonly':[('state','!=','draft')]}" />
+                            <field name="last_salary_gosi" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="has_housing" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="has_transportation" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <!--field name="suspended" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="social_insurance" attrs="{'readonly':[('state','!=','draft')]}"/-->
+                        </group>
+                        <group name="consultants Salary" attrs="{'invisible':[('consultants','=',False)]}">
+                            <field name="consultants" invisible="1"/>
+                            <field name="consultant_salary" required="1" attrs="{'readonly':[('state','!=','draft')]}"
+                                  />
+                            <field name="consultant_hour" attrs="{'readonly':[('state','!=','draft')]}"
+                                   />
+                            <field name="max_consultant_hour" attrs="{'readonly':[('state','!=','draft')]}"
+                                  />
+                        </group>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                </xpath>
+
+                <xpath expr="//page[1]" position="after">
+                    <page string="Work Permit" invisible="1">
+                        <group>
+                            <group>
+                                <field name="visa_no"/>
+                                <field name="visa_expire"/>
+                                <field name="permit_no"/>
+                                <field name="passport_number" readonly="1"/>
+                                <field name="passport_issue_date"/>
+                                <field name="passport_expiry_date"/>
+                                <field name="passport_issue_place"/>
+                            </group>
+                            <group>
+                                <field name="saudi_id_iqama"/>
+                                <field name="saudi_id_iqama_date"/>
+                                <field name="saudi_id_iqama_expiry"/>
+                                <field name="saudi_com_number"/>
+                                <field name="saudi_com_date"/>
+                                <field name="saudi_com_expiry_date"/>
+                                <field name="bls_date"/>
+                                <field name="acls_date"/>
+                                <field name="insurance_date"/>
+                                <field name="specialty"/>
+                                <field name="category"/>
+                                <field name="breakdown_allowance"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//page[1]" position="after">
+
+                    <page string="Insurance"  attrs="{'invisible':[('consultants','=',True)]}">
+                        <group string="Insurance" name="Insurance" groups="hr.group_hr_user">
+                            <group>
+                                <field name="gosi_deduction" string="Percentage of employee insurance"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="gosi_employer_deduction" string="Percentage of company insurance"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="total_gosi" string="Total Insurance"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+                    </page>
+                    <page string="Dependents and Family"
+                          attrs="{'readonly':[('state','!=','draft')]}">
+                        <sheet>
+                            <field name="employee_dependant" attrs="{'readonly':[('state','!=','draft')]}">
+                                <tree string="Employee Dependants">
+                                    <field name="name" required="1"/>
+                                    <field name="age" required="1"/>
+                                    <field name="gender" required="1"/>
+                                    <field name="relation" required="1"/>
+                                    <field name="passport_no" required="1"/>
+                                    <field name="nationality" string="Nationality" required="1"/>
+                                    <field name="birthday" string="BirthDay" required="1"/>
+                                    <field name="has_ticket"/>
+                                    <field name="has_Insurance"/>
+                                    <field name="attachment" string="Attachment"
+                                           widget="many2many_binary" class="oe_inline"/>
+                                    <field name="contract_id" invisible="1"/>
+                                </tree>
+                                <form string="Create Employee Dependants">
+                                    <group>
+                                        <group>
+                                            <field name="name" required="1"/>
+                                            <field name="birthday" required="1"/>
+                                            <field name="relation" required="1"/>
+                                            <field name="has_ticket" required="1"/>
+                                            <field name="passport_no"/>
+                                            <field name="passport_expire_date"/>
+                                            <field name="identity_num" required="1"/>
+                                        </group>
+                                        <group col="2">
+                                            <field name="age" required="1"/>
+                                            <field name="gender" required="1"/>
+                                            <field name="nationality" required="1"/>
+                                            <field name="passport_issue_date"/>
+                                            <field name="has_Insurance"/>
+                                            <field name="degree_medical_insu" attrs="{'invisible': [('has_Insurance', '=', False)]}"/>
+                                            <field name="medical_insurance_num" attrs="{'invisible': [('has_Insurance', '=', False)]}"/>
+                                            <field name="attachment" string="Attachment"
+                                                   widget="many2many_binary" class="oe_inline"/>
+                                        </group>
+                                    </group>
+                                    <group>
+                                        <field name="remarks"/>
+                                    </group>
+                                </form>
+                            </field>
+                        </sheet>
+
+                    </page>
+                    <page string="Personal Information" invisible="1">
+                        <group>
+                            <group>
+                                <field name="blood_type"/>
+                                <field name="point_of_hire"/>
+                                <field name="contact_address"/>
+                                <field name="mobile_no"/>
+                                <field name="p_o_box_no"/>
+                                <field name="driving_lic_issue_date"/>
+                                <field name="driving_lic_exp_date"/>
+                                <field name="driving_lic_issue_place"/>
+                            </group>
+                            <group>
+                                <field name="religion"/>
+                                <field name="gender"/>
+                                <field name="marital"/>
+                                <field name="date_of_birth"/>
+                                <field name="birth_place"/>
+                                <field name="zip_code"/>
+                                <field name="to_contact"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+
+                <xpath expr="//field[@name='struct_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='struct_id']" position="attributes">
+                    <attribute name="required">0</attribute>
+                </xpath>
+                <xpath expr="//field[@name='structure_type_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='schedule_pay']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+
+                <xpath expr="//group" position="after">
+                    <group>
+                        <group string="Salary Scale" name="salary_scale_group">
+                            <label for="all_exper_year" string="Total All Experience"/>
+                            <div>
+                                <field name="all_exper_year" readonly="1" force_save="1" class="oe_inline"/>Years
+                                <field name="all_exper_month" readonly="1" force_save="1" class="oe_inline"/>Months
+                                <field name="all_exper_day" readonly="1" force_save="1" class="oe_inline"/>Days
+                            </div>
+                        </group>
+                        <group name="duration_group" string="Duration">
+                            <label for="trial_date_start" string="Trial Period Duration"/>
+                            <div>
+                                <field name="trial_date_start" class="oe_inline"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                -
+                                <field name="trial_date_end" class="oe_inline"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </div>
+                            <field name="trial_duration" string="Trial Duration"/>
+                            <field name="working_hours" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="join_date" invisible="1"/>
+                        </group>
+                    </group>
+                </xpath>
+
+                <!--readonly fields in state draft-->
+                <field name="name" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </field>
+                <field name="employee_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+                </field>
+                <field name="structure_type_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+                </field>
+                <field name="company_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+                </field>
+
+
+            </field>
+        </record>
+
+        <!-- view_employee_inherit_tree -->
+        <record id="hr_contract_view_tree_inherit" model="ir.ui.view">
+            <field name="name">hr.contract.inherit.tree</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_tree"/>
+            <field name="arch" type="xml">
+                <tree position="replace">
+                    <tree
+                            decoration-danger="state == 'end_contract'"
+                            decoration-info="state == 'draft'"
+                            string="Contracts"
+                    >
+                        <field name="name"/>
+                        <field name="employee_id"/>
+                        <field name="department_id"/>
+                        <field name="job_id"/>
+                        <field name="type_id" invisible="1"/>
+                        <field name="emp_type"/>
+                        <field name="resource_calendar_id" invisible="1"/>
+                        <field name="date_start"/>
+                        <field name="date_end"/>
+                        <field name="salary" invisible="1"/>
+                        <field name="message_needaction" invisible="1"/>
+                        <field name="state"/>
+                    </tree>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_contract_type_view_search" model="ir.ui.view">
+            <field name="name">hr.contract.type.search</field>
+            <field name="model">hr.contract.type</field>
+            <field name="arch" type="xml">
+                <search string="Search Contract Type">
+                    <field name="name" string="Contract Type"/>
+                    <field name="sequence" string="Sequence"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="hr_contract_type_view_form" model="ir.ui.view">
+            <field name="name">hr.contract.type.form</field>
+            <field name="model">hr.contract.type</field>
+            <field name="arch" type="xml">
+                <form string="Contract Type">
+                    <group col="4">
+                        <field name="name"/>
+                        <field name="salary_type"/>
+                        <field name="code"/>
+                        <field name="consultants"/>
+                        <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_hr_contract_type" model="ir.actions.act_window">
+            <field name="name">Contract Types</field>
+            <field name="res_model">hr.contract.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="hr_contract_type_view_search"/>
+        </record>
+
+        <!-- contract_view_kanban_inherit -->
+
+        <record id="hr_contract_view_kanban_inherit" model="ir.ui.view">
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_kanban"/>
+            <field name="model">hr.contract</field>
+            <field name="arch" type="xml">
+
+                <xpath expr="//kanban" position="attributes">
+                    <attribute name="records_draggable">false</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='name']" position="after">
+                    <div class="text-muted o_kanban_record_subtitle">
+                        <field name="employee_id"/>
+                    </div>
+                    <div class="text-muted o_kanban_record_subtitle">
+                        <field name="date_start"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <menuitem
+                id="hr_menu_contract_type"
+                action="action_hr_contract_type"
+                parent="hr.menu_human_resources_configuration"
+                sequence="3"
+                groups="hr.group_hr_user"/>
+
+    </data>
+</odoo>

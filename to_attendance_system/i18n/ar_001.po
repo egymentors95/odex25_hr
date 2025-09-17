@@ -1,0 +1,548 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_attendance_system
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-19 10:31+0000\n"
+"PO-Revision-Date: 2022-09-19 10:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__alias
+msgid "Alias"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__area_alias
+msgid "Area"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_area__area_id
+msgid "Area id"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__area_name
+msgid "Area name"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.ui.menu,name:to_attendance_system.attendance_systems
+msgid "Attendance Systems"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model,name:to_attendance_system.model_finger_attendance_wizard
+msgid "Attendance Wizard"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__attendance_id
+msgid "Attendance id"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.ui.menu,name:to_attendance_system.attendace_system_menu
+msgid "Attendance systems"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__attendance_ids
+msgid "Attendances"
+msgstr ""
+
+#. module: to_attendance_system
+#: code:addons/to_attendance_system/models/models.py:0
+#: model:ir.model.fields.selection,name:to_attendance_system.selection__finger_biotime_api__state__authentic
+#, python-format
+msgid "Authentic"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__crc
+msgid "CRC"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_area__code
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_department__code
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_position__code
+msgid "Code"
+msgstr ""
+
+#. module: to_attendance_system
+#: code:addons/to_attendance_system/models/models.py:0
+#, python-format
+msgid "Confirmed"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_area__create_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_attendance_wizard__create_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__create_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_department__create_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__create_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_position__create_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__create_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_area__create_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_attendance_wizard__create_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__create_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_department__create_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__create_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_position__create_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__create_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_department__department_id
+msgid "Department id"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__description
+msgid "Description"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_area__display_name
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_attendance_wizard__display_name
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__display_name
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_department__display_name
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__display_name
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_position__display_name
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__display_name
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: to_attendance_system
+#: model_terms:ir.ui.view,arch_db:to_attendance_system.biotime_action_form
+msgid "Download areas"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.actions.server,name:to_attendance_system.ir_cron_scheduler_download_system_attendance_ir_actions_server
+#: model:ir.cron,cron_name:to_attendance_system.ir_cron_scheduler_download_system_attendance
+#: model:ir.cron,name:to_attendance_system.ir_cron_scheduler_download_system_attendance
+msgid "Download attendances scheduler"
+msgstr ""
+
+#. module: to_attendance_system
+#: model_terms:ir.ui.view,arch_db:to_attendance_system.biotime_action_form
+msgid "Download attenence"
+msgstr ""
+
+#. module: to_attendance_system
+#: model_terms:ir.ui.view,arch_db:to_attendance_system.biotime_action_form
+msgid "Download departments"
+msgstr ""
+
+#. module: to_attendance_system
+#: model_terms:ir.ui.view,arch_db:to_attendance_system.biotime_action_form
+msgid "Download employees"
+msgstr ""
+
+#. module: to_attendance_system
+#: model_terms:ir.ui.view,arch_db:to_attendance_system.biotime_action_form
+msgid "Download postions"
+msgstr ""
+
+#. module: to_attendance_system
+#: model_terms:ir.ui.view,arch_db:to_attendance_system.biotime_action_form
+msgid "Download terminals"
+msgstr ""
+
+#. module: to_attendance_system
+#: code:addons/to_attendance_system/models/models.py:0
+#, python-format
+msgid "Draft"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.actions.act_window,name:to_attendance_system.biotime_system_employee_position_action
+#: model:ir.ui.menu,name:to_attendance_system.attendance_systems_employee_position
+msgid "Employee Positions"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.actions.act_window,name:to_attendance_system.biotime_system_employee_areas_action
+msgid "Employee areas"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.actions.act_window,name:to_attendance_system.biotime_system_employee_department_action
+msgid "Employee departments"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__emp_system_id
+msgid "Employee id"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__employee_ids
+#: model:ir.ui.menu,name:to_attendance_system.attendance_systems_employee
+msgid "Employees"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__hr_employee
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__hr_comployee_id
+msgid "Empolyee Name"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__emp
+msgid "Empolyee code"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__server_id
+msgid "Hr empolyee"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_area__id
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_attendance_wizard__id
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__id
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_department__id
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__id
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_position__id
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__id
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__id
+msgid "ID"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__serverUrl
+msgid "IP / Domain Name"
+msgstr ""
+
+#. module: to_attendance_system
+#: code:addons/to_attendance_system/models/models.py:0
+#, python-format
+msgid "Invalid port number"
+msgstr ""
+
+#. module: to_attendance_system
+#: code:addons/to_attendance_system/models/models.py:0
+#, python-format
+msgid "Invalid server url"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__is_attendance
+msgid "Is attendance"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_area____last_update
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_attendance_wizard____last_update
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api____last_update
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_department____last_update
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee____last_update
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_position____last_update
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance____last_update
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_area__write_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_attendance_wizard__write_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__write_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_department__write_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__write_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_position__write_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__write_uid
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_area__write_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_attendance_wizard__write_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__write_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_department__write_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__write_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_position__write_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__write_date
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__last_activity
+msgid "Last activity"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__loaded_employees
+msgid "Loaded Employees"
+msgstr ""
+
+#. module: to_attendance_system
+#: model_terms:ir.ui.view,arch_db:to_attendance_system.biotime_action_form
+msgid "Login"
+msgstr ""
+
+#. module: to_attendance_system
+#: model_terms:ir.ui.view,arch_db:to_attendance_system.biotime_action_form
+msgid "Logout"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_area__name
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__name
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_department__name
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_position__name
+msgid "Name"
+msgstr ""
+
+#. module: to_attendance_system
+#: code:addons/to_attendance_system/models/models.py:0
+#: model:ir.model.fields.selection,name:to_attendance_system.selection__finger_biotime_api__state__unauthentic
+#, python-format
+msgid "Not authentic"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__password
+msgid "Password"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__port
+msgid "Port"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_position__position_id
+msgid "Position id"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__punch_state
+msgid "Punch state"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__punch_time
+msgid "Punch time"
+msgstr ""
+
+#. module: to_attendance_system
+#: model_terms:ir.ui.view,arch_db:to_attendance_system.biotime_action_form
+msgid "Refresh"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__sn
+msgid "SN"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__state
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__state
+msgid "State"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.actions.server,name:to_attendance_system.ir_cron_scheduler_sync_system_attendance_ir_actions_server
+#: model:ir.cron,cron_name:to_attendance_system.ir_cron_scheduler_sync_system_attendance
+#: model:ir.cron,name:to_attendance_system.ir_cron_scheduler_sync_system_attendance
+msgid "Synchronize attendances scheduler"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_attendance_wizard__system_ids
+msgid "System"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.ui.menu,name:to_attendance_system.attendance_systems_employee_areas
+msgid "System Areas"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.ui.menu,name:to_attendance_system.attendance_systems_employee_attendance
+msgid "System Attendance"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__department_id
+msgid "System Deparment"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.ui.menu,name:to_attendance_system.attendance_systems_employee_department
+msgid "System Departments"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__name
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__emp_code
+msgid "System Employee Name"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.actions.act_window,name:to_attendance_system.biotime_system_employee_action
+msgid "System Employees"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__position_id
+msgid "System Position"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.actions.act_window,name:to_attendance_system.biotime_system_terminal_action
+#: model:ir.ui.menu,name:to_attendance_system.attendance_systems_terminal
+msgid "System Terminals"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.actions.act_window,name:to_attendance_system.biotime_system_attendance_action
+msgid "System attendances"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.actions.act_window,name:to_attendance_system.biotime_action
+msgid "System connector"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__code
+msgid "System employee Code"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__terminal_id
+msgid "Termainl id"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__terminal_id
+msgid "Terminal"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__name
+msgid "Terminal name"
+msgstr ""
+
+#. module: to_attendance_system
+#: model_terms:ir.ui.view,arch_db:to_attendance_system.biotime_action_form
+msgid "To system attendance"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__token
+msgid "Token"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__upload_time
+msgid "Upload time"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__username
+msgid "Username"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__verify_type
+msgid "Verify type"
+msgstr ""
+
+#. module: to_attendance_system
+#: code:addons/to_attendance_system/wizard/attendaces_wizard.py:0
+#, python-format
+msgid "You must select at least one device to continue!"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_employee__email
+msgid "email"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model,name:to_attendance_system.model_finger_area
+msgid "finger.area"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model,name:to_attendance_system.model_finger_biotime_api
+msgid "finger.biotime_api"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model,name:to_attendance_system.model_finger_employee_department
+msgid "finger.employee.department"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model,name:to_attendance_system.model_finger_employee_employee
+msgid "finger.employee.employee"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model,name:to_attendance_system.model_finger_employee_position
+msgid "finger.employee.position"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model,name:to_attendance_system.model_finger_system_attendance
+msgid "finger.system_attendance"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model,name:to_attendance_system.model_finger_terminal
+msgid "finger.terminal"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__ip_address
+msgid "ip address"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_area__server_id
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_department__server_id
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_employee_position__server_id
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_system_attendance__server_id
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_terminal__server_id
+msgid "server"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields,field_description:to_attendance_system.field_finger_biotime_api__terminals_ids
+msgid "terminals"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields.selection,name:to_attendance_system.selection__finger_system_attendance__state__confirmed
+msgid "مؤكد"
+msgstr ""
+
+#. module: to_attendance_system
+#: model:ir.model.fields.selection,name:to_attendance_system.selection__finger_system_attendance__state__draft
+msgid "مسوده"
+msgstr ""

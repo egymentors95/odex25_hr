@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="action_report_job_offer" model="ir.actions.report">
+            <field name="model">hr.offer.wizard</field>
+            <field name="name">Job Offer report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_base_reports.report_offer_job_template</field>
+            <field name="report_file">hr_base_reports.report_offer_job_template</field>
+        </record>
+
+        <record id="action_job_offer_report_xlsx" model="ir.actions.report">
+            <field name="model">hr.offer.wizard</field>
+            <field name="name">Job Offers Of Employees</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_base_reports.action_job_offer_report_xlsx</field>
+            <field name="report_file">hr_base_reports.action_job_offer_report_xlsx</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="penalty_register_action">
+            <field name="name">Penalty Register</field>
+            <field name="res_model">hr.penalty.register</field>
+            <field name="view_mode">tree,form</field>
+            <field name= "context">{"search_default_my_request":1}</field>		
+        </record>
+
+        <record id="penalty_egister_form_view" model="ir.ui.view">
+            <field name="name">Penalty Register</field>
+            <field name="model">hr.penalty.register</field>
+            <field name="arch" type="xml">
+                <form string="Penalty Register">
+                    <header>
+                        <button string="Direct Manager" name="officer" class="oe_highlight" type="object" states="draft"
+                                groups="hr_base.group_division_manager"/>
+
+                        <button string="HR Manager Approve" name="manager" class="oe_highlight" type="object"
+                                states="officer" groups="hr.group_hr_manager"/>
+                        <button string="Refuse" name="refuse_state" class="oe_highlight" type="object" states="officer"
+                                groups="hr.group_hr_manager"/>
+
+                        <button string="Services Manager Approve" name="gm" class="oe_highlight" type="object"
+                                states="manager" groups="hr_base.group_services_manager"/>
+                        <button string="Refuse" name="refuse_state" class="oe_highlight" type="object" states="manager"
+                                groups="hr_base.group_services_manager"/>
+
+                        <button string="CEO Approve" name="done" class="oe_highlight" type="object" states="gm"
+                                groups="hr_base.group_general_manager,hr_base.group_executive_manager"/>
+                        <button string="Refuse" name="refuse_state" class="oe_highlight" type="object" states="gm"
+                                groups="hr_base.group_general_manager"/>
+
+                        <button string="RE-Draft" name="draft" class="oe_highlight" type="object" states="done,refuse"
+                                groups="hr.group_hr_manager"
+                                confirm="Are you sure to Reset To Draft This Record?"/>
+
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <!--<field name="contract_advantage_ids" widget="many2many_tags" invisible="1"/>-->
+                                <field name="employee_id" string="Employee Name" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="employee_no" string="Employee Number" readonly="1"/>
+
+                                <field name="job_id" string="Job Position"/>
+                                <field name="department_id" string="Department"/>
+                                 <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="resolution_number" string="Resolution Number"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="date" string="Start Violation" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="date_to" string="End Violation"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+
+                                <field name="start_date" string="Start Date"
+                                       attrs="{'readonly':[('state','!=','officer')],'required':[('state','=','officer')]}"/>
+                                <field name="end_date" string="End Date"
+                                       attrs="{'readonly':[('state','!=','officer')],'required':[('state','=','officer')]}"/>
+                            </group>
+                        </group>
+                        <separator string="Penalty"/>
+
+                        <group>
+                            <group>
+                                <field name="penalty_id" string="Penalty" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="punishment_id" string="punishment" widget="many2many_tags" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                            <group>
+                                <!--field name="deduction_date" string="Deduction Date" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/-->
+                                <field name="penalty_number" string="Penalty number" force_save="1" store="1"
+                                       readonly="1"/>
+                                <field name="last_penalty" string="Last Penalty" readonly="1" force_save="1" store="1"/>
+                            </group>
+
+                        </group>
+
+                        <separator string="Penalty Value"/>
+                        <group>
+                            <group>
+                                <field name="deduction_value" string="Deduction Value" widget="radio"
+                                       attrs="{'readonly':[('state','not in',('draft','officer'))],'invisible':[('state','=','draft')]}"/>
+                                <field name="deduction_amount" string="Deduction Amount"
+                                       attrs="{'readonly':[('state','not in',('draft','officer'))],'invisible':[('state','=','draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="deduction_id" string="Deduction" groups="hr.group_hr_manager"
+                                       attrs="{'readonly':[('state','not in',('draft','officer'))],
+                                       'invisible':['|',('deduction_value','!=','of_salary'),('state','=','draft')],
+                                       'required': [('deduction_value', '=', 'of_salary'),('deduction_amount','>',0)
+                                                   ,('state','=','officer')]}"/>
+
+                                <field name="advantage_id" string="Deduction Employee" readonly="1"
+                                       attrs="{'invisible':['|',('deduction_value','!=','of_salary'),('state','=','draft')]}"/>
+
+                                <field name="decision" string="Decision" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="accounting_committee" string="Accounting Committee" widget="many2many_tags"
+                                   attrs="{'readonly':[('state','!=','officer')],'invisible':[('state','=','draft')]}"/>
+                            <field name="note" string="Description"
+                                   attrs="{'readonly':[('state','!=','officer')],'invisible':[('state','=','draft')]}"/>
+                        </group>
+
+                    </sheet>
+
+                    <!--Discuss widgets for history and communication -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="penalty_egister_tree_view">
+            <field name="name">Penalty Register</field>
+            <field name="model">hr.penalty.register</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'refuse'" decoration-info="state == 'draft'"   string="Penalty Register">
+                    <field name="employee_no" string="Employee Number"/>
+                    <field name="employee_id" string="Employee Name"/>
+                    <field name="department_id" />
+                    <field name="date" string="Date"/>
+                    <field name="penalty_id" string="Penalty"/>
+                    <field name="punishment_id" string="punishment" widget="many2many_tags"/>
+                    <!--field name="deduction_date" string="Deduction Date"/-->
+                    <field name="start_date" string="Start Date"/>
+                    <field name="deduction_amount" string="Deduction Amount"/>
+                    <field name="state" string="State"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--penalty_register_filter -->
+        <record id="hr_penalty_register_filter" model="ir.ui.view">
+            <field name="name">Penalty Register</field>
+            <field name="model">hr.penalty.register</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search>
+                  <field name="employee_id"/>
+                  <field name="employee_no"/>
+                  <field name="department_id" />
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                    </group>
+                    <separator/>
+                        <filter string="My Requests" name="my_request" domain="[('employee_id.user_id', '=', uid)]"/>
+                    <separator/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

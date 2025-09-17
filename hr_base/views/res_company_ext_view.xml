@@ -1,0 +1,295 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="res_company_tree_ext">
+            <field name="name">res_company_tree_ext</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="string">Name</attribute>
+                </xpath>
+                <!-- <xpath expr="//table/thead" position="replace"> -->
+                <!-- <th data-id="name" class="o_column_sortable">
+                                Name
+                </th> -->
+                <!-- </xpath> -->
+            </field>
+        </record>
+
+        <!--record model="ir.ui.view" id="company_tree_form_view">
+                   <field name="name">company_tree_form_view</field>
+                   <field name="model">res.company.tree</field>
+                   <field name="arch" type="xml">
+                       <form>
+                           <group name="group_top">
+
+                               <group name="group_left">
+                                   <field name="doc_type"/>
+                                   <field name="issue_date" widget="date"/>
+                                   <field name="latest_renewal_date" widget="date"/>
+                               </group>
+
+                               <group name="group_right">
+                                   <field name="expiry_date" widget="date"/>
+                                   <field name="renewal"/>
+                               </group>
+
+                           </group>
+                       </form>
+                   </field>
+               </record-->
+
+        <record model="ir.actions.act_window" id="res_company_branch_act">
+            <field name="name">Branch</field>
+            <field name="res_model">res.company</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'default_flip': True}</field>
+            <field name="domain">[('flip','=','True')]</field>
+        </record>
+        <record model="ir.actions.act_window" id="users_company1">
+            <field name="name">Company</field>
+            <field name="res_model">res.company</field>
+            <field name="context">{'default_flip':False}</field>
+            <field name="domain">[('flip','=',False)]</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="base.menu_action_res_company_form" model="ir.ui.menu">
+            <field name="active">false</field>
+        </record>
+
+        <record id="hr.menu_hr_employee_user" model="ir.ui.menu">
+            <field name="sequence">-12</field>
+        </record>
+
+        <record model="ir.ui.view" id="res_company_ext">
+            <field name="name">res_company_ext</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="string">Name</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="english_name"/>
+                </xpath>
+
+                <xpath expr="//field[@name='website']" position="after">
+                    <!-- <field name="sponsor_id"/> -->
+                    <field name="po_no" required="1"/>
+                    <field name="location"/>
+                </xpath>
+
+                <xpath expr="//field[@name='country_id']" position="attributes">
+                    <attribute name="required">True</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='state_id']" position="attributes">
+                    <attribute name="required">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='street']" position="attributes">
+                    <attribute name="required">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='zip']" position="attributes">
+                    <attribute name="required">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='phone']" position="attributes">
+                    <attribute name="required">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='city']" position="attributes">
+                    <attribute name="required">True</attribute>
+                </xpath>
+
+                <xpath expr="//page" position="after">
+                    <page name="hr_info" string="HR Info">
+                    <group>
+                         <field name="hr_manager_id"/>
+                         <field name="hr_email"/>
+                         <field name="financial_manager_id"/>
+                         <field name="services_manager_id"/>
+                         <field name="it_manager_id"/>
+                         <field name="cyber_security_id"/>
+                         <field name="admin_manager_id"/>
+                      </group>
+                    </page>
+                </xpath>
+                <!--xpath expr="//page" position="after">
+                    <page name="license" string="License">
+                        <field name="company_link">
+                            <tree editable="bottom">
+                                <field name="doc_type"/>
+                                <field name="issue_date" widget="date"/>
+                                <field name="latest_renewal_date" widget="date"/>
+                                <field name="expiry_date" widget="date"/>
+                                <field name="renewal"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//page" position="after">
+                    <page name="sponsor_id" string="Sponsors">
+                        <field name="sponsor_link">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                                <field name="partner_id"/>
+                                <field name="cr_no"/>
+                                <field name="email" widget="email"/>
+                                <field name="mobile" widget="phone"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath-->
+
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="inherit_res_config_settings_view_form">
+            <field name="name">res.config.settings</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="hr.res_config_settings_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='employee_rights_setting_container']" position="before">
+
+                    <div class="row mt16 o_settings_container" name="employee_login_option_container">
+                        <div class="col-12 col-lg-6 o_setting_box" title="Choose how employees log in.">
+                            <div class="o_setting_left_pane">
+                                <span class="fa fa-user-lock" aria-hidden="true"/>
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <div class="text-muted">Login Option</div>
+                                <field name="employee_login" widget="radio"/>
+                                <div class="text-muted o_field_help">Choose whether employees log in by Email or
+                                    Identity number.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='resource_calendar_id']" position="after">
+                    <h2>Saudi Percentage %</h2>
+                    <div class="row">
+                        <div class="text-muted col-md-8">
+                            Controlling The percentage of employee Saudization for Foreigners
+                        </div>
+                    </div>
+                    <div class="content-group">
+                        <div class="mt16">
+                            <field name="saudi_percentage" string="Saudi Percentage %" readonly='0'/>
+
+                            <field name="days_before_finish" invisible='1'/>
+                        </div>
+                        <!-- Add the missing field -->
+            <div class="mt16">
+                <field name="tickets_no" string="Tickets Number" readonly="0"/>
+            </div>
+                    </div>
+                    <h2>Contract And Trial Period Remider</h2>
+                    <div class="row">
+                        <div class="text-muted col-md-8">
+                            To Send Employee Email Notification For End Contract Date.
+                        </div>
+                    </div>
+                    <div class="content-group">
+
+
+                        <div class="mt16">
+                            <field name="contract_end_reminder" string="Contract End Reminder" readonly='0'/>
+                        </div>
+                        <div class="row">
+                            <div class="text-muted col-md-8">
+                                To Send Employee Email Notification For End Contract Trial Period.
+                            </div>
+                        </div>
+
+                        <div class="mt16">
+                            <field name="contract_trial_reminder" string="Contract Trial Reminder" readonly='0'/>
+                        </div>
+                    </div>
+                    <!--h2>Contract And Trial Period Remider</h2>
+                    <div class="row">
+                        <div class="text-muted col-md-8">
+                            To Send Employee Email Notification For End Contract Date.
+                        </div>
+                    </div>
+                    <div class="content-group">
+                        <div class="mt16"> 
+                            <field name="contract_end_reminder" string="Contract End Reminder" readonly='0'/>
+                        </div>
+                        <div class="row">
+                            <div class="text-muted col-md-8">
+                                To Send Employee Email Notification For End Contract Trial Period.
+                            </div>
+                        </div>
+
+                        <div class="mt16">
+                            <field name="contract_trial_reminder" string="Contract Trial Reminder" readonly='0'/>
+                        </div>
+                    </div-->
+                    <h2>Gosi Percentage Deduction %</h2>
+                    <div class="row">
+                        <div class="text-muted col-md-8">
+                            Controlling The percentage Saudi Gosi Deduction
+                        </div>
+                    </div>
+                    <div class="content-group">
+                        <div class="mt16">
+                            <field name="saudi_gosi" string="Saudi Gosi Percentage" readonly='0'/>
+                            <field name="Sanad_saudi_gosi" string="Sanad Saudi Gosi" readonly='0'/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="text-muted col-md-8">
+                            Controlling The percentage Company Saudi Gosi Deduction
+                        </div>
+                    </div>
+                    <div class="content-group">
+                        <div class="mt16">
+                            <field name="company_gosi" string="Company Gosi Percentage" readonly='0'/>
+                            <field name="Sanad_company_gosi" string="Sanad Company Gosi" readonly='0'/>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="text-muted col-md-8">
+                            Controlling The percentage Company None Saudi Gosi Deduction
+                        </div>
+                    </div>
+                    <div class="content-group">
+                        <div class="mt16">
+                            <field name="none_saudi_gosi" string="None Saudi Gosi Percentage" readonly='0'/>
+                        </div>
+                    </div>
+
+                      <div class="row">
+                        <div class="text-muted col-md-8">
+                             Controlling The Max Amount Gosi Deduction From Saudi and Company
+                         </div>
+                       </div>
+                       <div class="content-group">
+                         <div class="mt16">
+                           <field name="max_amount_saudi_gosi" string="Max Amount Saudi Gosi" readonly='0'/>
+                           <field name="max_amount_company_gosi" string="Max Amount Company Gosi" readonly='0'/>
+                         </div>
+                       </div>
+                </xpath>
+
+            </field>
+        </record>
+        <record model="ir.ui.view" id="res_country_ext">
+            <field name="name">res_country_ext</field>
+            <field name="model">res.country</field>
+            <field name="inherit_id" ref="base.view_country_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="english_name"/>
+                </xpath>
+            </field>
+
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="employee_info_report" model="ir.actions.report">
+        <field name="name">Employee Info Sheet</field>
+        <field name="model">hr.employee</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_base.employee_info_report_template</field>
+        <field name="report_file">hr_base.employee_info_report_template</field>
+         <field name="binding_model_id" ref="hr.model_hr_employee"/>
+         <field name="binding_type">report</field>
+        <field name="print_report_name">'Employee Info Sheet for - %s' % (object.name)</field>
+        <field name="groups_id" eval="[(4, ref('hr.group_hr_user'))]"/>
+    </record>
+
+    <record id="new_emp_file_report_act" model="ir.actions.report">
+        <field name="model">hr.employee</field>
+        <field name="name">New Employee File Form</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_base.new_emp_file_form_report</field>
+        <field name="report_file">hr_base.new_emp_file_form_report</field>
+        <field name="binding_model_id" ref="hr.model_hr_employee"/>
+        <field name="binding_type">report</field>
+        <field name="groups_id" eval="[(4, ref('hr.group_hr_user'))]"/>
+    </record>
+
+</odoo>

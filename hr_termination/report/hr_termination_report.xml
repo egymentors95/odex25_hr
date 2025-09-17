@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+     <template id="hr_termination_report">
+              <t t-call="web.html_container">
+        <t t-call="hr_base.hr_layout">
+            <style>
+                @font-face {font-family: "Sakkal Majalla"; src:
+                url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                format("embedded-opentype"),
+                url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"); }
+            </style>
+            <div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+                <div class="oe_structure"/>
+                <style>
+                    .page{
+                    font-family: Times New Roman;;
+                    }
+                    table{
+                    width :100%;
+                    border : 1px solid black;
+                    border-collapse : collapse;
+                    font-size : 13pt;
+
+                    }
+                    th{
+                    border : 1px solid black;
+                    background-color : #a7c4f2;
+                    text-align : center;
+                    padding : 5px;
+                    }
+                    td{
+                    border : 1px solid black;
+                    text-align : center;
+                    padding : 3px;
+                    }
+                    .cr_t{
+                    text-align : center;
+                    }
+                    tr{
+                    page-break-inside:avoid;
+                    page-break-after:auto ;
+                    }
+
+                </style>
+                <center>
+                    <h3 style="font-weight:bold">
+                        <t t-esc="cause_type.name"/>
+                        From
+                        <t t-esc="date_from"/>
+                        To
+                        <t t-esc="date_to"/>
+                    </h3>
+                </center>
+                <br/>
+                <t t-set="count" t-value="1"/>
+                <table>
+                    <tr style="background-color: #263f79;width:100%;">
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">Sequence</th>
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">Year</th>
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">Employee Number</th>
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">Iqama</th>
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">Name</th>
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">Branch</th>
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">Job</th>
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">First Hiring Date</th>
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">First Termination Date
+                        </th>
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">Last Work Date</th>
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">Duration</th>
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">Total</th>
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">Payment Method</th>
+                        <th style="background-color: #263f79;text-align:center;color:#FFFFFF">Notes</th>
+                    </tr>
+                    <tbody>
+                        <t t-foreach="docs" t-as="doc">
+                            <tr>
+                                <td>
+                                    <t t-esc="count"/>
+                                </td>
+                                <td>
+                                    <t t-esc="doc['year']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="doc['record'].employee_id.emp_no"/>
+                                </td>
+                                <td>
+                                    <t t-if="doc['record'].employee_id.country_id.code== 'SA'">
+                                        <t t-esc="doc['record'].employee_id.saudi_number.saudi_id"/>
+                                    </t>
+                                    <t t-else="">
+                                        <t t-esc="doc['record'].employee_id.iqama_number.iqama_id"/>
+                                    </t>
+                                </td>
+                                <td style="width: 1.5in;">
+                                    <t t-esc="doc['record'].employee_id.name"/>
+                                </td>
+                                <td>
+                                    <t t-esc="doc['record'].department_id.name"/>
+                                </td>
+                                <td>
+                                    <t t-esc="doc['record'].employee_id.job_id.name"/>
+                                </td>
+                                <td>
+                                    <t t-esc="doc['record'].first_hire_date"/>
+                                </td>
+                                <td>
+                                    <t t-esc="doc['record'].salary_date_from"/>
+                                </td>
+                                <td>
+                                    <t t-esc="doc['record'].last_work_date"/>
+                                </td>
+                                <td>
+                                    <t t-esc="doc['duration']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="doc['record'].net" t-esc-options="{'widget': 'float', 'precision': 2}"/>
+                                </td>
+                                <t t-if="doc['record'].employee_id.payment_method=='bank'">
+                                    <td>
+                                        <t t-esc="doc['record'].employee_id.bank_code"/>
+                                    </td>
+                                </t>
+                                <t t-else="">
+                                    <td>
+                                        <t t-esc="doc['record'].employee_id.payment_method"/>
+                                    </td>
+                                </t>
+                                <td></td>
+                            </tr>
+                            <t t-set="count" t-value="count+1"/>
+                        </t>
+                    </tbody>
+                </table>
+                <br/>
+                <div class="oe_structure"/>
+            </div>
+        </t>
+        </t>
+    </template>
+
+    <record id="action_hr_termination_report" model="ir.actions.report">
+        <field name="model">hr.termination</field>
+        <field name="name">HR Termination Report</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_termination.hr_termination_report</field>
+        <field name="report_file">hr_termination.hr_termination_report</field>
+         <field name="paperformat_id" ref="hr_termination.paperformat_termination_report"/>
+
+    </record>
+
+
+     <record id="hr_termination_action_report_xls" model="ir.actions.report">
+         <field name="model">hr.termination</field>
+         <field name="name">Print to XLSX</field>
+         <field name="report_type">xlsx</field>
+         <field name="report_name">hr_termination.hr_termination_action_report_xls</field>
+         <field name="report_file">HR Termination Report</field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <record model="ir.ui.view" id="edit_holiday_status_form_extra">
+            <field name="name">hr.holidays.status.form.view</field>
+            <field name="model">hr.holidays.status</field>
+            <field name="inherit_id" ref="hr_holidays_public.edit_holiday_status_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='overlimt']" position="after">
+                    <group name="study" string="Studying Leave">
+                        <field name="studying_leave"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_holidays_ext_form_view_extra">
+            <field name="name">hr.holidays.form.view</field>
+            <field name="model">hr.holidays</field>
+            <field name="inherit_id" ref="hr_holidays_public.hr_holidays_ext_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='holiday_limit_check']" position="after">
+                    <field name="successful_completion" groups="hr_holidays_community.group_hr_holidays_user" 
+                           invisible='1'/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

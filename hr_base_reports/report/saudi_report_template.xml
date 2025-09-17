@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="employee_saudi_report">
+
+			<t t-call="web.html_container">
+				<t t-call="hr_base.hr_layout">
+					<style>
+					    @font-face {font-family: "Sakkal Majalla"; src:
+					    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+					    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+					    format("embedded-opentype"),
+					    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+					    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+					    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"); }
+
+					</style>
+					<div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+						<table class="table table-condensed table-bordered">
+							<thead class="text-center">
+								<tr style="width:100%;">
+									<th colspan="6" class="text-center" style="font-size:18pt"> Saudi Report </th>
+								</tr>
+								<tr style="background-color:#263f79;color:#ffffff;width:100%;">
+									<th style="text-align:center;" >#</th>
+									<th style="text-align:center;">Employee ID</th>
+									<th style="text-align:center;">Employee Name</th>
+									<th style="text-align:center;">Nationality</th>
+									<th style="text-align:center;">Department</th>
+									<th style="text-align:center;">Join Date</th>
+								</tr>
+							</thead>
+							<tbody class="text-center">
+								<t t-set="sequence" t-value="0"/>
+								<t t-foreach="docs" t-as="o">
+									<tr>
+										<td>
+											<t t-set="sequence" t-value="sequence +1"/>
+											<t t-esc="sequence"/>
+										</td>
+										<td>
+											<span t-esc="o.emp_no"/>
+										</td>
+										<td>
+											<span t-esc="o.name"/>
+										</td>
+										<td>
+											<span t-esc="o.country_id.name"/>
+										</td>
+										<td>
+											<t t-esc="o.department_id.name"/>
+										</td>
+										<td>
+											<span t-esc="o.first_hiring_date"/>
+										</td>
+
+									</tr>
+								</t>
+							</tbody>
+						</table>
+						<table class="table table-condensed table-bordered" align="right">
+                            <tr>
+                                <td span="1" style="background-color:#b8bcbf; width:10%;">Saudi Employee</td>
+                                <td style="width:10%;">
+                                    <span t-esc="i"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td span="1" style="background-color:#b8bcbf;width:5%;">Non Saudi Employee</td>
+                                <td style="width:10%;">
+                                    <t t-esc="j"/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td span="1" style="background-color:#b8bcbf;width:5%;">Total Number of Employee</td>
+                                <td style="width:10%;">
+                                    <span t-esc="k"/>
+                                </td>
+                            </tr>
+                        </table>
+					</div>
+				</t>
+			</t>
+		</template>
+        <record id="employee_saudi_report_act" model="ir.actions.report">
+            <field name="model">hr.employee</field>
+            <field name="name">Saudi Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_base_reports.employee_saudi_report</field>
+            <field name="report_file">hr_base_reports.employee_saudi_report</field>
+        </record>
+        <record id="employee_saudi_report_act_xlsx" model="ir.actions.report">
+            <field name="model">hr.employee</field>
+            <field name="name">Saudi Report</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_base_reports.employee_saudi_report_xlsx</field>
+            <field name="report_file">hr_base_reports.employee_saudi_report_xlsx</field>
+        </record>
+    </data>
+</odoo>

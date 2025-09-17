@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+	<data>
+
+		<template id="employee_cost_report">
+			<t t-call="web.html_container">
+				<t t-call="web.external_layout">
+					<div class="page">
+						<!--						<h1 class="text-center"> Employee Cost </h1>-->
+						<!--						<h3 class="text-center"><span t-esc="date_from"/> - <span t-esc="date_to"/></h3>-->
+						<table class="table table-condensed table-bordered">
+							<thead class="text-center">
+								<tr style="background-color:#0f80d6;width:100%;">
+									<th colspan="12" class="text-center" style="color:#f7f7f7;font-size:20px"> Employee Cost Report <span t-esc="date_from"/> - <span t-esc="date_to"/></th>
+								</tr>
+								<tr style="background-color: #b8bcbf;width:100%;">
+									<th >#</th>
+									<th >Department</th>
+									<th >Employee ID</th>
+									<th >Employee Name</th>
+									<th >Employee Basic Wage</th>
+									<th >House Allowance</th>
+									<th >Other Benefits</th>
+									<th >Employee GOSI</th>
+									<th >Employer GOSI</th>
+									<th >Daily Wage</th>
+									<th >Total</th>
+									<th>Annual Cost</th>
+								</tr>
+							</thead>
+							<tbody class="text-center">
+								<t t-set="sequence" t-value="0"/>
+								<t t-foreach="docs" t-as="o">
+									<t t-set="salary_value" t-value="o.get_employee_data_report(o.contract_id,date_from,date_to)"/>
+									<tr>
+										<td>
+											<t t-set="sequence" t-value="sequence +1"/>
+											<t t-esc="sequence"/>
+										</td>
+										<td>
+											<t t-esc="o.department_id.name"/>
+										</td>
+										<td>
+											<span t-esc="o.emp_no"/>
+										</td>
+										<td>
+											<span t-esc="o.name"/>
+										</td>
+										<td>
+											<span t-esc="o.contract_id.salary"/>
+										</td>
+										<td>
+											<span t-esc="o.contract_id.house_allowance_temp"/>
+										</td>
+										<td>
+											<t t-esc="salary_value[1]"/>
+										</td>
+										<td>
+											<span t-esc="o.contract_id.gosi_deduction"/>
+										</td>
+										<td>
+											<span t-esc="o.contract_id.gosi_employer_deduction"/>
+										</td>
+										<td>
+											<span t-esc="salary_value[0]"/>
+										</td>
+										<td>
+											<span t-esc="o.contract_id.total_net"/>
+										</td>
+										<td>
+											<span t-esc="salary_value[2]"/>
+										</td>
+									</tr>
+								</t>
+							</tbody>
+						</table>
+					</div>
+				</t>
+			</t>
+		</template>
+
+		<record id ="employee_cost_report_act" model="ir.actions.report">
+			<field name="model">hr.contract</field>
+			<field name="name">Employee Cost Report</field>
+			<field name="report_type">qweb-pdf</field>
+			<field name="report_name">exp_payroll_custom.employee_cost_report</field>
+			<field name="report_file">exp_payroll_custom.employee_cost_report</field>
+		</record>
+		<record id ="employee_cost_report_act_xlsx" model="ir.actions.report">
+			<field name="model">hr.contract</field>
+			<field name="name">Employee Cost Report</field>
+			<field name="report_type">xlsx</field>
+			<field name="report_name">exp_payroll_custom.employee_cost_report_xlsx</field>
+			<field name="report_file">exp_payroll_custom.employee_cost_report_xlsx</field>
+		</record>
+
+	</data>
+</odoo>

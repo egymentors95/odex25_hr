@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_report_reminded" model="ir.actions.report">
+            <field name="name">"Reminded Employee</field>
+            <field name="model">hr.employee.history.reminder</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">exp_timesheet_missing_reminder.reminded_report_template</field>
+            <field name="report_file">exp_timesheet_missing_reminder.reminded_report_template</field>
+        </record>
+    </data>
+</odoo>

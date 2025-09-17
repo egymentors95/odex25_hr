@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="salary_scale_sequence_form_view" model="ir.ui.view">
+            <field name="name">Salary Scale sequence</field>
+            <field name="model">hr.payroll.structure</field>
+            <field name="inherit_id" ref="exp_payroll_custom.salary_scale_form_view"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//field[@name='code']" position="after">
+                     <field name="sequence"  attrs="{'invisible':[('type', 'not in', ('degree', 'group'))],
+                                                    'required': [('type', 'in', ('degree', 'group'))]}"/>
+                 </xpath>
+                 <xpath expr="//notebook" position="before">
+                     <group>
+                         <field name="job_ids" attrs="{'invisible':[('type', '!=', 'group')]}" widget="many2many_tags"/>
+                     </group>
+                 </xpath>
+             </field>
+        </record>
+    </data>
+</odoo>

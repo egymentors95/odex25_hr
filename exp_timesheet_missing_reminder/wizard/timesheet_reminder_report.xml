@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Reminded Employees wizard form -->
+        <record id="wizard_reminded_employees_form" model="ir.ui.view">
+            <field name="name">Reminded Employees</field>
+            <field name="model">timesheet.reminded</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group colspan="2">
+                            <group>
+                                <field name="date_from" required="1"/>
+                                <field name="department_ids" widget="many2many_tags"/>
+                            </group>
+                            <group>
+                                <field name="date_to" required="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="print_report" string="Print" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-default" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <!-- Reminded Employees wizard action -->
+        <record id="wizard_reminded_employees_action" model="ir.actions.act_window">
+            <field name="name">Reminded Employees</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">timesheet.reminded</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+        <!-- Reminded Employees wizard menu -->
+        <menuitem
+                id="report_reminded_employees_menu"
+                name="Reminded Employees Report"
+                parent="hr_timesheet.menu_timesheets_reports"
+                action="wizard_reminded_employees_action"
+        />
+
+        <!--        &lt;!&ndash; Reminded Employees wizard action &ndash;&gt;-->
+        <!--        <act_window id="wizard_history_reminder_action"-->
+        <!--                    target="new"-->
+        <!--                    name="Reminded Employees"-->
+        <!--                    res_model="hr.employee.history.reminder"-->
+        <!--                    view_mode="form"/>-->
+        <!-- Reminded Employees wizard menu -->
+        <!--        <menuitem-->
+        <!--            id= "report_history_reminder_menu"-->
+        <!--            name= "Reminded Employees Report"-->
+        <!--            parent= "hr_timesheet.menu_timesheets_reports"-->
+        <!--            action= "wizard_history_reminder_action"-->
+        <!--        />-->
+    </data>
+</odoo>

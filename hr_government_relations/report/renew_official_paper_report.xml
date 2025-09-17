@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+          <record id="hr_government_relations_report" model="ir.actions.report">
+              <field name="model">hr.renew.official.paper</field>
+              <field name="name">Report Renewed Papers</field>
+              <field name="report_type">qweb-pdf</field>
+              <field name="report_name">hr_government_relations.renew_official_paper_report_template</field>
+              <field name="report_file">hr_government_relations.renew_official_paper_report_template</field>
+          </record>
+    </data>
+</odoo>

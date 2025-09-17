@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="extra_employee_offcail_mission_form_view" model="ir.ui.view">
+            <field name="name">hr.official.mission</field>
+            <field name="model">hr.official.mission</field>
+            <field name="inherit_id" ref="exp_official_mission.employee_official_mission_form_view"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//field[@name='destination']" position="after">
+                     <field name="include_in_experience"  attrs="{'readonly':[('state','not in',('direct_manager','depart_manager'))]}" invisible='1'/>
+                 </xpath>
+                 <xpath expr="//field/tree/field[@name='account_move_id']" position="after">
+                     <field name="include_in_experience" attrs="{'column_invisible':[('parent.include_in_experience','!=',True)],'readonly':[('parent.state','not in',('direct_manager','depart_manager'))]}"/>
+                     <field name="successfully_completed" readonly="1" force_save="1" attrs="{'column_invisible':[('parent.include_in_experience','!=',True)]}"/>
+                     <button  string="Completed Successfully"
+                              name="act_successful_complete"
+                             attrs="{'invisible': ['|', '|', ('parent.state', '!=', 'approve'),
+                                                            ('successfully_completed', '=', True),
+                                                            ('include_in_experience', '!=', True)]}"
+                              class="oe_stat_button"
+                              icon="fa-check"
+                              type="object"/>
+                 </xpath>
+             </field>
+        </record>
+
+        <record id="extra_employee_oficial_mission_line_form_view" model="ir.ui.view">
+            <field name="name">hr.official.mission.employee</field>
+            <field name="model">hr.official.mission.employee</field>
+            <field name="inherit_id" ref="exp_official_mission.employee_official_mission_line_form_view"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//group" position="inside">
+                     <group>
+                         <field name="include_in_experience" />
+
+                         <field name="successfully_completed" readonly="1" force_save="1" />
+                         <button  string="Completed Successfully"
+                                    attrs="{'invisible': ['|', '|', ('parent.state', '!=', 'approve'),
+                                                            ('successfully_completed', '=', True),
+                                                            ('include_in_experience', '!=', True)]}"
+                                  name="act_successful_complete"
+                                  class="oe_stat_button"
+                                  icon="fa-check"
+                                  type="object" groups="hr.group_hr_user"/>
+                     </group>
+                 </xpath>
+             </field>
+        </record>
+    </data>
+</odoo>

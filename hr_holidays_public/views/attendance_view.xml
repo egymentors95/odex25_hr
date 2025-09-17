@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="attendance_transaction_inherited_form_view" model="ir.ui.view">
+            <field name="name">attendance.transaction.form.inherited</field>
+            <field name="model">hr.attendance.transaction</field>
+            <field name="inherit_id" ref="attendances.employee_attendance_transactions_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='attendance']" position="after">
+                    <group>
+                        <group>
+                            <field name="is_absent" readonly="1" force_save="1" store="1"/>
+                            <field name="total_absent_hours" widget="float_time" invisible="1"/>
+                            <field name="normal_leave" required="1" readonly="1"/>
+                            <field name="leave_id" readonly="1"/>
+                            <field name="total_leave_hours" widget="float_time" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="public_holiday" required="1" readonly="1"/>
+                            <field name="public_holiday_id" readonly="1"/>
+                        </group>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="attendance_transaction_inherited_tree2">
+            <field name="name">attendance.transaction.tree2.inherit</field>
+            <field name="model">hr.attendance.transaction</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="attendances.attendance_transaction_tree_view"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//tree" position="attributes">
+                    <attribute name="decoration-info">normal_leave==True</attribute>
+                    <attribute name="decoration-success">public_holiday==True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='additional_hours']" position="after">
+                    <field name="normal_leave" invisible="1"/>
+                    <field name="holiday_name"/>
+                    <field name="public_holiday"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

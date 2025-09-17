@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="penalty_type_action">
+            <field name="name">penalty</field>
+            <field name="res_model">hr.penalty.ss</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="penalty_type_form_view" model="ir.ui.view">
+            <field name="name">penalty</field>
+            <field name="model">hr.penalty.ss</field>
+            <field name="arch" type="xml">
+                <form string="Employee Deductions">
+                    <sheet>
+                        <group>
+                            <field name="name" string="Penalty Name" required="1"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="penalty_name" string="Penalty Type" required="1"/>
+                                <field name="have_penalty" string="Have Punishment ?"/>
+                            </group>
+                            <group>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                                <field name="code" string="Code" readonly="1"/>
+                            </group>
+                        </group>
+
+                        <separator string="Sanctions" attrs="{'invisible':[('have_penalty','=',False)]}"/>
+                        <group attrs="{'invisible':[('have_penalty','=',False)]}">
+                            <group>
+                                <field name="first_time" string="First Time" widget="many2many_tags"/>
+                                <field name="third_time" string="Third Time " widget="many2many_tags"/>
+                                <field name="fifth_time" string="Fifth Time" widget="many2many_tags"/>
+                            </group>
+                            <group>
+                                <field name="second_time" string="Second Time" widget="many2many_tags"/>
+                                <field name="fourth_time" string="Fourth Time" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <!--Discuss widgets for history and communication -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="penalty_type_tree_view">
+            <field name="name">penalty</field>
+            <field name="model">hr.penalty.ss</field>
+            <field name="arch" type="xml">
+                <tree string="Penalty type">
+                    <field name="name" string="Penalty Name"/>
+                    <field name="first_time" string="First Time" widget="many2many_tags"/>
+                    <field name="second_time" string="Second Time" widget="many2many_tags"/>
+                    <field name="third_time" string="Third Time" widget="many2many_tags"/>
+                    <field name="fourth_time" string="Fourth Time" widget="many2many_tags"/>
+                    <field name="fifth_time" string="Fifth Time" widget="many2many_tags"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_employee_document_inherit_form_view">
+            <field name="name">hr.employee.form.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook//page[@name='hr_settings']" position="after">
+                    <page string="Penalties">
+
+                        <field name="penalty_history_ids" readonly="1" >
+                            <tree string="penalty History">
+                                <field name="penalty_id" string="Penalty"/>
+                                <field name="punishment_id" string="punishment" widget="many2many_tags"/>
+                                <!--field name="date" string="Date" required="True"/-->
+                                <field name="start_date" string="Start Date"/>
+                                <field name="deduction_amount" string="deduction amount"/>
+                                <field name="state" string="State"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

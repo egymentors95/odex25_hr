@@ -1,0 +1,4070 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* employee_requests
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-27 07:47+0000\n"
+"PO-Revision-Date: 2022-11-27 07:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid ""
+"(to be completed 2 week prior to end of service and submitted to HR regional"
+" office for final settlement )"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid ""
+"<b class=\"text-center\">notes :..................................................................................................................</b>\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t<b class=\"text-center\">main copy to Employee</b>\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t<b class=\"text-center\">a copy to Finance</b>\n"
+"\t\t\t\t\t\t\t\t<br/>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid ""
+"<b class=\"text-center\">مدير إدارة الموارد البشرية</b>\n"
+"\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t<b class=\"text-center\">HR Manager</b>\n"
+"\t\t\t\t\t\t\t<br/>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<b>Appointment Report</b><br/>"
+msgstr "<b>قرار التعيين</b><br/>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<b>Contact</b>"
+msgstr "<b> بيانات التواصل</b>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<b>Documents</b>"
+msgstr "<b>الوثائق</b>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_template
+msgid "<b>Employee Department and Jobs</b><br/>"
+msgstr "<b>قرارنقل موظف</b><br/>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<b>Notes</b>"
+msgstr "<b>ملاحظات</b>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<b>Salary Info</b>"
+msgstr "<b>بيانات الراتب</b>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<b>Work</b>"
+msgstr "<b>بيانات العمل</b>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid ""
+"<b>إخلاء طرف</b>\n"
+"\t\t\t\t\t\t\t\t   <br/>\n"
+"\n"
+"\t\t\t\t\t\t\t<b>(Clearance)</b>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid ""
+"<b>مدير إدارة الموارد البشرية</b>\n"
+"                                        <br/>\n"
+"                                        <b>Director of Human Resource</b>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+msgid ""
+"<b>مدير إدارة الموارد البشرية</b>\n"
+"                                    <br/>\n"
+"                                    <b>Director of Human Resource</b>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid ""
+"<b>نموذج إخلاء طرف</b>\n"
+"\t\t\t\t\t\t\t   <br/>\n"
+"\n"
+"\t\t\t\t\t\t<b>(DisClaimer Form)</b>\n"
+"\t\t\t\t\t\t\t\t<br/>\n"
+"\t\t\t\t\t\t\t\tREF#HR-F:"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid ""
+"<br/>\n"
+"                                    <span>This certification </span>\n"
+"                                    <span>is issued</span>\n"
+"                                    <span> upon the request of the employee without any obligation.</span>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid ""
+"<br/>\n"
+"                                    <span>ولا يزال على رأس العمل حتى تاريخه و أعطيت له هذه الشهادة بناء على طلبه دون أدنى مسئولية.</span>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.custom_external_layout_standard
+msgid ""
+"<br/>\n"
+"                                    Mobile No:"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+msgid ""
+"<br/>\n"
+"                                <span>This certification </span>\n"
+"                                <span>is issued</span>\n"
+"                                <span> upon the request of the employee without any obligation.</span>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+msgid ""
+"<br/>\n"
+"                                <span>ولا يزال على رأس العمل حتى تاريخه و أعطيت له هذه الشهادة بناء على طلبه دون أدنى مسئولية.</span>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "<span style=\"border-bottom: 1px solid #333;\">Addressed To:</span>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "<span style=\"border-bottom: 1px solid #333;\">مقدم إلى:</span>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+msgid ""
+"<span>This certification </span><br/>\n"
+"                                <span>is issued</span>\n"
+"                                <span> upon the request of the employee without any obligation.</span>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid ""
+"<span>This is to certify that Below-mentioned employee is working in </span>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+msgid "<span>ريال</span>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "<span>شهادة تعريف</span> | <span>Employment Certificate</span>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "<span>نفيدكم بأن الموظف الموضح هويته أدنا يعمل لدى</span>"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Account Number</strong>"
+msgstr "<strong>رقم الحساب البنكي</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Additional</strong>"
+msgstr "<strong>الإضافي</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Address</strong>"
+msgstr "<strong>العنوان</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Age</strong>"
+msgstr "<strong>العمر</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Allowances</strong>"
+msgstr "<strong>البدلات</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Bank 1</strong>"
+msgstr "<strong>إسم البنك</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Bank 2</strong>"
+msgstr "<strong>إسم البنك</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Base Salary</strong>"
+msgstr "<strong>الراتب الاساسي</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Birth Date</strong>"
+msgstr "<strong>تاريخ الولادة</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>City</strong>"
+msgstr "<strong>المدينة</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Company</strong>"
+msgstr "<strong>الشركة</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Contract End Date</strong>"
+msgstr "<strong>نهاية العقد</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Contract Start Date</strong>"
+msgstr "<strong>بداية العقد</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Date</strong>"
+msgstr "<strong>التاريخ</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Department</strong>"
+msgstr "<strong> الإدارة</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Email</strong>"
+msgstr "<strong>البريد الإلكتروني</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Gender</strong>"
+msgstr "<strong>الجنس</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Hiring Date</strong>"
+msgstr "<strong>تاريخ بداية العمل</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Identity End Date</strong>"
+msgstr "<strong>تاريخ انتهاء الهوية<s/trong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Iqama</strong>"
+msgstr "<strong>هوية رقم<s/trong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Job</strong>"
+msgstr "<strong>المهنة</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Manager</strong>"
+msgstr "<strong>المدير</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Mobile</strong>"
+msgstr "<strong>الجوال</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Name</strong>"
+msgstr "<strong>الاسم</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Nationality</strong>"
+msgstr "<strong>الجنسية</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Net</strong>"
+msgstr "<strong>صافي الراتب</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Number</strong>"
+msgstr "<strong>رقم الملف</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Passport Expiration Date</strong>"
+msgstr "<strong>تاريخ إنتهاء الجواز</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Passport Issuance Date</strong>"
+msgstr "<strong>تاريخ إصدار الجواز</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Passport Number</strong>"
+msgstr "<strong> رقم الجواز</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Phone</strong>"
+msgstr "<strong>رقم الهاتف:</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Real Job</strong>"
+msgstr "<strong>المهنة الفعلية</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Status</strong>"
+msgstr "<strong>الحالة الإجتماعية</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_appointment_template
+msgid "<strong>Total</strong>"
+msgstr "<strong>الإجمالي</strong>"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "ADMINISTRATION DEPARTMENT"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Accommodation and Medical insurance"
+msgstr "التأمين الصحي و الكفالة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__account_id
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__account_id
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+msgid "Account"
+msgstr "بند الصرف"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_overtime_request__transfer_type__accounting
+msgid "Accounting"
+msgstr "الحسابات"
+
+
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_classification__name
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_hr_classification_form
+msgid "Name"
+msgstr "الاسم "
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_classification__active
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_hr_classification_form
+msgid "Active"
+msgstr "نشط "
+
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_hr_classification_form
+msgid "HR Classification"
+msgstr "التصنيف"
+
+
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_classification__name
+msgid "Classification"
+msgstr "التصنيف"
+
+
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_classification__name
+msgid "Name"
+msgstr "الاسم "
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_classification__active
+msgid "Active"
+msgstr "نشط "
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_classification__name
+msgid "Classification"
+msgstr "التصنيف"
+
+
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_classification__name
+msgid "Name"
+msgstr "الاسم "
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_classification__active
+msgid "Active"
+msgstr "نشط "
+
+
+
+#. module: employee_requests
+#: model:ir.actions.act_window,name:employee_requests.employee_hr_classification_actionn
+#: model:ir.ui.menu,name:employee_requests.hr_classification_menu_item
+msgid "HR Classifications"
+msgstr "إعداد التصنيف"
+
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_needaction
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_needaction
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_needaction
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_needaction
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_needaction
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__activity_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__activity_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__activity_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__activity_ids
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__activity_ids
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__activity_exception_decoration
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__activity_exception_decoration
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__activity_exception_decoration
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__activity_state
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__activity_state
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__activity_state
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__activity_state
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__activity_state
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__activity_type_icon
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__activity_type_icon
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__activity_type_icon
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__activity_type_icon
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__activity_type_icon
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Administration Manager :"
+msgstr "المدير التنفيذي :"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "All ID/access cards returned"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "All system password cancelled."
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__advantage_id
+msgid "Allowance Employee"
+msgstr "استحقاق الموظف"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__amount
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance_line__amount_id
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+msgid "Another Employee"
+msgstr "موظف آخر"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+msgid "Approval Clearance Bank"
+msgstr "إخلاء الطرف من البنك"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+#, python-format
+msgid "HR Approve"
+msgstr "موافقة الموارد البشرية"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/house_allowance_advance.py:0
+#, python-format
+msgid "Approve Manager"
+msgstr "موافقة المدير"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+#, python-format
+msgid "Approved"
+msgstr "المشرف العام"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__approved_by
+msgid "Approved By"
+msgstr "تصديق بـ"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+msgid "Are you sure to Reset To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المسوده؟"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__attach_ids
+msgid "Attach"
+msgstr "روابط"
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_ir_attachment
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__bank_attachment_id
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_attachment_count
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_attachment_count
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_attachment_count
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_attachment_count
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_attachment_count
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_department_jobs__state__hr_officer
+msgid "BU Director"
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee.py:0
+#, python-format
+msgid "Bank"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+msgid "Bank Attach"
+msgstr "مرفق البنك"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__bank_comments
+msgid "Bank Comments"
+msgstr "ملاحظات البنك"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+msgid "Bank Reasons"
+msgstr "ملاحظات البنك"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid ""
+"Bank guarantee letters checked and clearance certificate received from "
+"bank.(if applicable)"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__employee_salary
+msgid "Base Salary"
+msgstr "الراتب الاساسي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+msgid "Basic Salary"
+msgstr "الراتب الاساسي"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__benefits_discounts
+msgid "Benefits/Discounts"
+msgstr "اسم الاستحقاق"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "BirthDay"
+msgstr "تاريخ الميلاد"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Blood Type"
+msgstr "فصليه الدم"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#, python-format
+msgid "Both"
+msgstr "تنقلات و تغيير وظيفة"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Business Card"
+msgstr "بطاقة عمل"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__calculate_from_total
+msgid "Calculate From Total"
+msgstr "الحساب من اجمالى الراتب"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Car returned"
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee.py:0
+#, python-format
+msgid "Cash"
+msgstr "كاش"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "Certificate of Employment"
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#, python-format
+msgid "Certification"
+msgstr "الشهادات"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Certification Degree"
+msgstr "درجة الشهادة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Certification Specification"
+msgstr "مواصفات الشهادة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Check out items"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.actions.report,name:employee_requests.custom_clearances_action_report
+msgid "Clearance Form"
+msgstr "نموذج إخلاء الطرف"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__clearance_type
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_tree_view
+msgid "Clearance Type"
+msgstr "نوع إخلاء الطرف"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__comment
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__comment
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Comment"
+msgstr "تعليق"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__company_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__company_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__company_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__company_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__company_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_degree_medical_issuance__company_insurance
+msgid "Company Insurance"
+msgstr "اسم شركة التأمين"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Complaint"
+msgstr "شكوى"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__contract_id
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__contract_id
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+msgid "Contract"
+msgstr "العقد"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__contract_start
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_tree_view
+msgid "Contract Start Date"
+msgstr "تاريخ بداية العقد"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__contract_statuss
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Contract Status"
+msgstr "الحالة الاجتماعية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__copy_examination_file
+msgid "Copy Examination File"
+msgstr "مرفق الإفصاح الطبي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Copy of examination file"
+msgstr "مرفق الإفصاح الطبي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Country"
+msgstr "الدوله"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Create Employee Dependants"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__create_insurance_request
+msgid "Create Insurance Request"
+msgstr "إنشاء طلب تأمين"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_degree_medical_issuance__create_uid
+#: model:ir.model.fields,field_description:employee_requests.field_document_directory__create_uid
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__create_uid
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__create_uid
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__create_uid
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__create_uid
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__create_uid
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance_line__create_uid
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__create_uid
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__create_uid
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_degree_medical_issuance__create_date
+#: model:ir.model.fields,field_description:employee_requests.field_document_directory__create_date
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__create_date
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__create_date
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__create_date
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__create_date
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__create_date
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance_line__create_date
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__create_date
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__create_date
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Credit Control."
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__contract_id
+msgid "Current contract of the employee"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "DEPARTMENT HEAD"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__daily_hourly_rate
+msgid "Daily Hourly Rate"
+msgstr "اجر الساعة بعد الدوام"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__date
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__date
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__date
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance_line__date
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__date
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__date
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_template
+msgid "Date :"
+msgstr "تاريخ :"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__date_deliver_work
+msgid "Date Deliver Work"
+msgstr "تاريخ تسليم العمل"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "Date Form Must Be Less than Date To"
+msgstr "تاريخ البداية يجب ان يكون قبل او يساوي تاريخ النهاية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__date_from
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__date_from
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_tree_view
+msgid "Date From"
+msgstr "تاريخ البداية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Insurance Date"
+msgstr "تاريخ التأمينات الاجتماعية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "New Insurance"
+msgstr "إشتراك جديد"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Insurance Years"
+msgstr "سنوات الإشتراك"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__date_of_employment
+msgid "Date Of Employment"
+msgstr "تاريخ التوظيف"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+msgid "Date Request"
+msgstr "تاريخ الطلب"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__date_to
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__date_to
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_tree_view
+msgid "Date To"
+msgstr "تاريخ النهاية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Date of issue"
+msgstr "تاريخ الإصدار"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "Days"
+msgstr "يوم"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__degree_medical_insurance
+msgid "Degree Medical Insurance"
+msgstr "درجة التأمين الصحي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Degree of medical insurance"
+msgstr "درجة التأمين الصحي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+msgid "Delivering Work Date"
+msgstr "تاريخ تسليم العمل"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__department_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__department_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__department_id
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__department_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__department_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__department_id
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_effective_form_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.hr_clearance_form_filter
+#, python-format
+msgid "Department"
+msgstr "الهيكل الإداري"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Department :"
+msgstr "الهيكل الإداري :"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Department Head :"
+msgstr "مدير الهيكل الإداري :"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#, python-format
+msgid "Department Manager"
+msgstr "موافقة مدير الإدارة"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+#, python-format
+msgid "Department Manager2"
+msgstr "مدير الإدارة المنقول إليها"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Dependants"
+msgstr "المعالين"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Dependent"
+msgstr "المعالين"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__destination
+msgid "Destination"
+msgstr "الجهــــه"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__classification_id
+msgid "Classification"
+msgstr "التصنيف"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_salary_destination__english_name
+msgid "English Name"
+msgstr "الاسم الانجليزي"
+
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_template
+msgid "Destination :"
+msgstr "الجهــــه :"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "Details"
+msgstr "تفاصيل"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "Direct Management"
+msgstr "المدير المباشر"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Direct Manager"
+msgstr "انتظار الموارد البشرية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "Direct Manager :"
+msgstr "انتظار الموارد البشرية :"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Direct Manager Approve"
+msgstr "موافقة المدير المباشر"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__direct_mg
+msgid "Direct Mg"
+msgstr "المدير المباشر"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__direct_refuse_cause
+msgid "Direct Refuse Cause"
+msgstr "سبب الرفض المباشر"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_document_directory__name
+msgid "Directory"
+msgstr "مجلس مديرين"
+
+#. module: employee_requests
+#: model:ir.actions.report,name:employee_requests.disclaimer_report_act
+msgid "Disclaimer Certificate Report"
+msgstr "شهادة إخلاء طرف"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_degree_medical_issuance__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_document_directory__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance_line__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_hr_attendance_transaction__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_hr_certification__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee_dependent__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_hr_qualification__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_ir_attachment__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_report_employee_requests_report_employee_identification__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_report_employee_requests_report_employee_identify_2__display_name
+#: model:ir.model.fields,field_description:employee_requests.field_report_employee_requests_report_employee_identify_3__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Division :"
+msgstr "قسم:"
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_document_directory
+msgid "Document Directory"
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#, python-format
+msgid "Done"
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#: code:addons/employee_requests/models/house_allowance_advance.py:0
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__duration
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__duration
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_tree_view
+msgid "Duration"
+msgstr "المدة"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "During Work"
+msgstr "أثناء الدوام"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "E-mail and internet account disabled."
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__early_exit
+#, python-format
+msgid "Early Exit"
+msgstr "زمن خروج مبكر"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__effective_form_date
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_tree_view
+msgid "Effective Form Date"
+msgstr "تاريخ مباشرة العمل"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__effective_form_type
+msgid "Effective Form Type"
+msgstr "نوع النموذج الفعال"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "Emp No."
+msgstr "رقم الموظف"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__employee_no
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__employee_no
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__employee_no
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__employee_no
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_effective_form_filter
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__employee_no
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.hr_clearance_form_filter
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__employee_no
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_filter
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_hr_employee
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__employee_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__employee_id
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__employee_id
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__employee_over_time_id
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_effective_form_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.hr_clearance_form_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid ""
+"Employee \"%s\" has no contract Please create contract to add line to "
+"advantages"
+msgstr "لا يوجد عقد يرجى إنشاء عقد لإضافة عناصر إلى المزايا \"%s\" الموظف"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_template
+msgid "Employee :"
+msgstr "حسب متطلبات العمل يعتمد نقل الموظف:"
+
+#. module: employee_requests
+#: model:ir.actions.report,name:employee_requests.employee_appointment_action_report
+msgid "Employee Appointment Report"
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Employee Certification"
+msgstr "الشهادات"
+
+#. module: employee_requests
+#: model:ir.actions.act_window,name:employee_requests.employee_clearance_form_action
+#: model:ir.ui.menu,name:employee_requests.employee_clearance_form
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_clearance_calendar
+#: model_terms:ir.ui.view,arch_db:employee_requests.hr_clearance_form_filter
+msgid "Employee Clearance Form"
+msgstr "إخلاء الطرف للموظف"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__employee_contract_id
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: employee_requests
+#: model:ir.actions.act_window,name:employee_requests.employee_department_jobs_action
+#: model:ir.model,name:employee_requests.model_employee_department_jobs
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_department_jobs_calendar
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_filter
+msgid "Employee Department and Jobs"
+msgstr "تنقلات وتغيير الوظائف"
+
+#. module: employee_requests
+#: model:ir.actions.report,name:employee_requests.employee_department_jobs_action_report
+msgid "Employee Department and Jobs Report"
+msgstr "تقريرنقل الموظف"
+
+#. module: employee_requests
+#: model:ir.ui.menu,name:employee_requests.employee_department_jobs_menu_item
+msgid "Employee Department and jobs"
+msgstr "تنقلات وتغيير الوظائف"
+
+#. module: employee_requests
+#: model_terms:ir.actions.act_window,help:employee_requests.employee_department_jobs_action
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_tree_view
+msgid "Employee Departments and jobs"
+msgstr "تنقلات وتغيير الوظائف"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#, python-format
+msgid "Employee Dependants"
+msgstr "المعالين"
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_hr_employee_dependent
+msgid "Employee Dependent"
+msgstr "موظف تابع"
+
+#. module: employee_requests
+#: model:ir.actions.act_window,name:employee_requests.employee_request_list_action
+#: model:ir.ui.menu,name:employee_requests.employee_effective_form
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_request_effective_calendar
+msgid "Employee Effective Form"
+msgstr "مباشرة العمل"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__employee_id
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__employee_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__employee_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__employee_id
+msgid "Employee Id"
+msgstr "الموظف"
+
+#. module: employee_requests
+#: model:ir.actions.report,name:employee_requests.action_report_employee_identification
+msgid "Employee Identify With details"
+msgstr "نموذج تعريف راتب بالتفاصيل"
+
+#. module: employee_requests
+#: model:ir.actions.report,name:employee_requests.action_report_employee_identify_2
+msgid "Employee Identify Without Details"
+msgstr "نموذج تعريف راتب بدون تفاصيل"
+
+#. module: employee_requests
+#: model:ir.actions.report,name:employee_requests.action_report_employee_identify_3
+msgid "Employee Identify Without Payroll"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+msgid "Employee Info"
+msgstr "معلومات الموظف"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_tree_view
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "Employee Number :"
+msgstr " :رقم الموظف"
+
+#. module: employee_requests
+#: model:ir.actions.act_window,name:employee_requests.employee_other_request_action
+#: model:ir.ui.menu,name:employee_requests.employee_other_request_menu_item
+#: model_terms:ir.actions.act_window,help:employee_requests.employee_other_request_action
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_other_request_calendar
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_filter
+msgid "Employee Other Request"
+msgstr "طلبات الموظفين الأخرى"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+msgid "Employee Over Time"
+msgstr "العمل الاضافي للموظف"
+
+#. module: employee_requests
+#: model:ir.actions.act_window,name:employee_requests.employee_overtime_request_list_action
+#: model:ir.ui.menu,name:employee_requests.employee_overtime_request_menu_item
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_filter
+msgid "Employee OverTime Request"
+msgstr "العمل الاضافي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_overtime_calendar
+msgid "Employee Overtime Request"
+msgstr "العمل الاضافي"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Employee Qualification"
+msgstr "المؤهلات"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_tree_view
+msgid "Employee Request Effective"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Employee fills exit interview and submit it."
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_tree_view
+msgid "Employee name"
+msgstr "إسم الموظف"
+
+#. module: employee_requests
+#: model:ir.actions.act_window,name:employee_requests.employee_personal_permission_action
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_permission_calendar
+msgid "Employee permission"
+msgstr "الإستئذانات"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_tree_view
+msgid "Employee personal permission"
+msgstr "نموذج الإستئذان"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+msgid "Employees Over Time"
+msgstr "معلومات العمل الاضافي"
+
+#. module: employee_requests
+#: model:ir.ui.menu,name:employee_requests.employee_request_menu_item
+msgid "Employees Requests"
+msgstr "طلبات الموظفين"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/house_allowance_advance.py:0
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "End Date must be greater than Start Date"
+msgstr "تاريخ البداية يجب ان يكون قبل تاريخ النهاية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "Equipment Delivered"
+msgstr "تسليم المعدات"
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_employee_overtime_request__exception
+msgid "Exceeding The Limit Of Overtime Hours Per Month"
+msgstr "تجاوز ساعات العمل الإضافي المسموح بها"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__exception
+msgid "Exception"
+msgstr "استثناء"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__exception
+msgid "Exception Hours"
+msgstr "إستثناء الساعات"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#, python-format
+msgid "Executive Approval"
+msgstr "إعتماد التنفيذي"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__expiration_date_residence
+msgid "Expiration Date Insurances"
+msgstr "تاريخ انتهاء الهوية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Expiration date"
+msgstr "تاريخ الانتهاء"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__expiration_date_passport
+msgid "Passport Expiry Date"
+msgstr "تاريخ انتهاء الجواز"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Expiry date of license"
+msgstr "تاريخ انتهاء رخصة القيادة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "FINANCE DEPARTMENT"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__filename
+msgid "Filename"
+msgstr "اسم الملف"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_clearance_form.py:0
+#, python-format
+msgid "Final Clearance"
+msgstr "خروج نهائية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Finance Control."
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Finance Head :"
+msgstr "المدير المالي:"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/house_allowance_advance.py:0
+#, python-format
+msgid "Financial Manager Approval"
+msgstr "موافقة المدير المالي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "First Employment Date"
+msgstr "تاريخ اول تعيين"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__first_entry_into_saudi_arabia
+msgid "First Entry Into Saudi Arabia"
+msgstr "اول دخول المملكة العربية السعودية"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#, python-format
+msgid "First Time Job"
+msgstr "بداية اول عمل"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "First date entry into Saudi Arabia"
+msgstr "تاريخ أول دخول للمملكة العربية السعودية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_follower_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_follower_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_follower_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_follower_ids
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_follower_ids
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_channel_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_channel_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_channel_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_channel_ids
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_channel_ids
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_partner_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_partner_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_partner_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_partner_ids
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_partner_ids
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_employee_department_jobs__activity_type_icon
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__activity_type_icon
+#: model:ir.model.fields,help:employee_requests.field_employee_other_request__activity_type_icon
+#: model:ir.model.fields,help:employee_requests.field_employee_overtime_request__activity_type_icon
+#: model:ir.model.fields,help:employee_requests.field_hr_clearance_form__activity_type_icon
+#: model:ir.model.fields,help:employee_requests.field_hr_personal_permission__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+msgid "Form Type"
+msgstr "نوع مباشرة العمل"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__from_hr
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__from_hr
+msgid "From Hr"
+msgstr "موظف آخر"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__from_hr_department
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__from_hr_department
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__from_hr_department
+msgid "From Hr Department"
+msgstr "من موظف آخر"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Furniture office /equipment have returned(if applicable)."
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "GOSI deletion"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Guaranty"
+msgstr "الكفالة"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#, python-format
+msgid "HR Approval"
+msgstr "موافقة الموارد البشرية"
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_hr_certification
+msgid "HR Certification"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+msgid "HR M Approve"
+msgstr "موافقة الموارد البشرية"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#: code:addons/employee_requests/models/other_request.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_personal_permission_type__approval_by__hr_manager
+#, python-format
+msgid "HR Manager"
+msgstr "مدير الموارد البشرية"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/house_allowance_advance.py:0
+#, python-format
+msgid "HR Manager Approved"
+msgstr "موافقة مدير الموارد البشرية"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+#, python-format
+msgid "HR Officer"
+msgstr "مسؤول الموارد البشرية"
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_hr_qualification
+msgid "HR Qualification"
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/house_allowance_advance.py:0
+#, python-format
+msgid "HR Specialist Approval"
+msgstr "موافقة أخصائي الموارد البشرية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "HUMAN RESOURCE DEPARTMENT"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "Hire Date"
+msgstr "تاريخ مباشرة العمل"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__holiday_hourly_rate
+msgid "Holiday Hourly Rate"
+msgstr "اجر الساعة للإجازة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__house_allowance_advance_line_ids
+msgid "House Allowance Advance Line"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+msgid "Housing Allowance"
+msgstr "بدل السكن"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#, python-format
+msgid "Hr Manager"
+msgstr "انتظار التصديق"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__hr_mg
+msgid "Hr Mg"
+msgstr "مدير الموارد البشرية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__hr_refuse_cause
+msgid "Hr Refuse Cause"
+msgstr "سبب الرفض"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_degree_medical_issuance__id
+#: model:ir.model.fields,field_description:employee_requests.field_document_directory__id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__id
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__id
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance_line__id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_attendance_transaction__id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_certification__id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee_dependent__id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_qualification__id
+#: model:ir.model.fields,field_description:employee_requests.field_ir_attachment__id
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__id
+#: model:ir.model.fields,field_description:employee_requests.field_report_employee_requests_report_employee_identification__id
+#: model:ir.model.fields,field_description:employee_requests.field_report_employee_requests_report_employee_identify_2__id
+#: model:ir.model.fields,field_description:employee_requests.field_report_employee_requests_report_employee_identify_3__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "ID No."
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "INFORMATION AND SYSTEM DEPARTMENT"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__activity_exception_icon
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__activity_exception_icon
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__activity_exception_icon
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__activity_exception_icon
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__activity_exception_icon
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_employee_department_jobs__activity_exception_icon
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__activity_exception_icon
+#: model:ir.model.fields,help:employee_requests.field_employee_other_request__activity_exception_icon
+#: model:ir.model.fields,help:employee_requests.field_employee_overtime_request__activity_exception_icon
+#: model:ir.model.fields,help:employee_requests.field_hr_clearance_form__activity_exception_icon
+#: model:ir.model.fields,help:employee_requests.field_hr_personal_permission__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Identity cards :"
+msgstr "رقم الهويه :"
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_employee_department_jobs__message_needaction
+#: model:ir.model.fields,help:employee_requests.field_employee_department_jobs__message_unread
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__message_needaction
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__message_unread
+#: model:ir.model.fields,help:employee_requests.field_employee_other_request__message_needaction
+#: model:ir.model.fields,help:employee_requests.field_employee_other_request__message_unread
+#: model:ir.model.fields,help:employee_requests.field_employee_overtime_request__message_needaction
+#: model:ir.model.fields,help:employee_requests.field_employee_overtime_request__message_unread
+#: model:ir.model.fields,help:employee_requests.field_hr_clearance_form__message_needaction
+#: model:ir.model.fields,help:employee_requests.field_hr_clearance_form__message_unread
+#: model:ir.model.fields,help:employee_requests.field_hr_personal_permission__message_needaction
+#: model:ir.model.fields,help:employee_requests.field_hr_personal_permission__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_employee_department_jobs__message_has_error
+#: model:ir.model.fields,help:employee_requests.field_employee_department_jobs__message_has_sms_error
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__message_has_error
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__message_has_sms_error
+#: model:ir.model.fields,help:employee_requests.field_employee_other_request__message_has_error
+#: model:ir.model.fields,help:employee_requests.field_employee_other_request__message_has_sms_error
+#: model:ir.model.fields,help:employee_requests.field_employee_overtime_request__message_has_error
+#: model:ir.model.fields,help:employee_requests.field_employee_overtime_request__message_has_sms_error
+#: model:ir.model.fields,help:employee_requests.field_hr_clearance_form__message_has_error
+#: model:ir.model.fields,help:employee_requests.field_hr_clearance_form__message_has_sms_error
+#: model:ir.model.fields,help:employee_requests.field_hr_personal_permission__message_has_error
+#: model:ir.model.fields,help:employee_requests.field_hr_personal_permission__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_overtime_request__overtime_plase__inside
+msgid "Inside"
+msgstr "داخل مقر العمل"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Insurance"
+msgstr "طلب تأمين"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_template
+msgid "Iqama :"
+msgstr "هوية رقم :"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Identity Expiry Date"
+msgstr "تاريخ انتهاء الهوية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Identity Issue Date"
+msgstr "تاريخ إصدار الهوية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Iqama Job"
+msgstr "المهنة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Identity No."
+msgstr "رقم الهوية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Identity returned and exit procedure completed(expatriat staff only)."
+msgstr "استكمال إجراءات العودة والخروج من الهوية (للموظفين الوافدين فقط)."
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_is_follower
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_is_follower
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_is_follower
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_is_follower
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_is_follower
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__last_record
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "Is Last Record?"
+msgstr "أخر سجل؟"
+
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__date_issuance_passport
+msgid "Passport Issue Date"
+msgstr "تاريخ اصدار الجواز"
+
+
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__date_issuance_saudi_id
+msgid "Saudi Issue Date"
+msgstr "تاريخ اصدار الهوية الوطنية "
+
+
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__it_mg
+msgid "It Mg"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__it_refuse_cause
+msgid "It Refuse Cause"
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_tree_view
+#, python-format
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+msgid "Job Name"
+msgstr "المسمى الوظيفي"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__job_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__job_id
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__job_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__job_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__job_id
+msgid "Job Position"
+msgstr "المسمى الوظيفي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+msgid "Job Title"
+msgstr "الوظيفة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Job Title :"
+msgstr "الوظيفة :"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Laptops/PC"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_degree_medical_issuance____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_document_directory____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance_line____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_hr_attendance_transaction____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_hr_certification____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee_dependent____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_hr_qualification____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_ir_attachment____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_report_employee_requests_report_employee_identification____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_report_employee_requests_report_employee_identify_2____last_update
+#: model:ir.model.fields,field_description:employee_requests.field_report_employee_requests_report_employee_identify_3____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_degree_medical_issuance__write_uid
+#: model:ir.model.fields,field_description:employee_requests.field_document_directory__write_uid
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__write_uid
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__write_uid
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__write_uid
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__write_uid
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__write_uid
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance_line__write_uid
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__write_uid
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__write_uid
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_degree_medical_issuance__write_date
+#: model:ir.model.fields,field_description:employee_requests.field_document_directory__write_date
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__write_date
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__write_date
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__write_date
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__write_date
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__write_date
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance_line__write_date
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__write_date
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__write_date
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "Last Working Day :"
+msgstr "اخر يوم عمل :"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Last working day"
+msgstr "اخر يوم عمل"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "Late Entry"
+msgstr "دخول متأخر"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Leave Date"
+msgstr "تاريخ مغادرة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__length_of_service
+msgid "Length Of Service"
+msgstr "سنين الخدمة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "License number"
+msgstr "رقم رخصة القيادة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__line_ids_over_time
+msgid "Line Ids Over Time"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_main_attachment_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_main_attachment_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_main_attachment_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__new_manager_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__old_manager_id
+msgid "Manager"
+msgstr "المدير"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__max_hours
+msgid "Max Hours"
+msgstr "اقصى ساعات"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__medical_insurance
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Medical Insurance"
+msgstr "التامين الصحي"
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_degree_medical_issuance
+msgid "Medical Insurance Degree"
+msgstr "درجة التامين الصحي"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__medical_insurance_number
+msgid "Medical Insurance Number"
+msgstr "رقم التامين الصحي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Medical cards :"
+msgstr "بطاقة التامين الصحي :"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Medical insurance"
+msgstr "التأمين الصحي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Medical insurance card."
+msgstr " بطاقة التامين الصحي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Medical insurance number"
+msgstr "رقم التامين الصحي"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_has_error
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_has_error
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_has_error
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_has_error
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_has_error
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_ids
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_ids
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__mission_purpose
+msgid "Mission Purpose"
+msgstr "الغرض من المهمة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "Months"
+msgstr "شهر"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__account_move_id
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__move_id
+msgid "Move"
+msgstr "القيد المالي"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__my_activity_date_deadline
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__my_activity_date_deadline
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__my_activity_date_deadline
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__my_activity_date_deadline
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__my_activity_date_deadline
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_degree_medical_issuance__name
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+#: model:ir.model.fields,field_description:employee_requests.field_salary_destination__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_template
+msgid "Nationality :"
+msgstr " : الجنسية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__new_department_id
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "New Department"
+msgstr "القسم الجديد"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__new_job_id
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_tree_view
+msgid "New Job"
+msgstr "الوظيفة الجديدة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_template
+msgid "New Job Title :"
+msgstr "على أن يعمل بمهنة :"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "New Manager"
+msgstr "المدير الجديد"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_tree_view
+msgid "New department"
+msgstr "القسم الجديد"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "New job"
+msgstr "الوظيفة الجديدة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__activity_date_deadline
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__activity_date_deadline
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__activity_date_deadline
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__activity_date_deadline
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__activity_date_deadline
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__activity_summary
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__activity_summary
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__activity_summary
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__activity_summary
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__activity_summary
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__activity_type_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__activity_type_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__activity_type_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__activity_type_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__activity_type_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_template
+msgid "Number :"
+msgstr "رقم :"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__number_of_visa
+msgid "Number Of Visa"
+msgstr "رقم الزيارة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_needaction_counter
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_needaction_counter
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_needaction_counter
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_needaction_counter
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_needaction_counter
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_has_error_counter
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_has_error_counter
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_has_error_counter
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_has_error_counter
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_has_error_counter
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_employee_department_jobs__message_needaction_counter
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__message_needaction_counter
+#: model:ir.model.fields,help:employee_requests.field_employee_other_request__message_needaction_counter
+#: model:ir.model.fields,help:employee_requests.field_employee_overtime_request__message_needaction_counter
+#: model:ir.model.fields,help:employee_requests.field_hr_clearance_form__message_needaction_counter
+#: model:ir.model.fields,help:employee_requests.field_hr_personal_permission__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_employee_department_jobs__message_has_error_counter
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__message_has_error_counter
+#: model:ir.model.fields,help:employee_requests.field_employee_other_request__message_has_error_counter
+#: model:ir.model.fields,help:employee_requests.field_employee_overtime_request__message_has_error_counter
+#: model:ir.model.fields,help:employee_requests.field_hr_clearance_form__message_has_error_counter
+#: model:ir.model.fields,help:employee_requests.field_hr_personal_permission__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_employee_department_jobs__message_unread_counter
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__message_unread_counter
+#: model:ir.model.fields,help:employee_requests.field_employee_other_request__message_unread_counter
+#: model:ir.model.fields,help:employee_requests.field_employee_overtime_request__message_unread_counter
+#: model:ir.model.fields,help:employee_requests.field_hr_clearance_form__message_unread_counter
+#: model:ir.model.fields,help:employee_requests.field_hr_personal_permission__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "Office Content"
+msgstr "محتوى المكتب"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__old_department_2_id
+msgid "Old Department 2"
+msgstr "الهيكل الإداري الحالي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "Old Job"
+msgstr "الوظيفة الحالية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__old_job_2_id
+msgid "Old Job 2"
+msgstr "الوظيفة الحالية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__old_job_date
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "Old Job Date"
+msgstr "تاريخ الوظيفة الحالية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_template
+msgid "Old Job Title :"
+msgstr "والذي يعمل بمهنة :"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "Old Manager"
+msgstr "المدير الحالي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "Old department"
+msgstr "الهيكل الإداري الحالي"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__on_company_guarantee
+msgid "On Company Guarantee"
+msgstr "هل الموظف على كفالة الشركة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "On company guarantee?"
+msgstr "هل الموظف على كفالة الشركة"
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_employee_other_request
+msgid "Other Request"
+msgstr "طلبات اخرى"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Other Requests"
+msgstr "طلبات اخرى"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Others"
+msgstr "اخري"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_overtime_request__overtime_plase__outside
+msgid "Outside"
+msgstr "خارج مقر العمل"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__price_hour
+msgid "Overtime Amount"
+msgstr "قيمة العمل الاضافي"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__overtime_plase
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__overtime_plase
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+msgid "Overtime Plase"
+msgstr "مكان العمل الاضافي"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__own_license
+msgid "Own License"
+msgstr "رخصة القيادة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Own a license"
+msgstr "رخصة القيادة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "PF#"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__parent_request_id
+msgid "Parent Request"
+msgstr "الطلب المرتبط به"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Passport Expiry Date"
+msgstr "تاريخ إنتهاء الجواز"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Identity Job"
+msgstr "الوظيفة على الهوية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Passport Issue Date"
+msgstr "تاريخ إصدار الجواز"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Passport or ID Information for employee"
+msgstr "معلومات الهوية والجواز"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__journal_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__payment_method
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__journal_id
+msgid "Payment Method"
+msgstr "طرق السداد"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_overtime_request__transfer_type__payroll
+msgid "Payroll"
+msgstr "الرواتب"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_attendance_transaction__approve_personal_permission
+msgid "Permission"
+msgstr "إستيذان"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+msgid "Permission Info"
+msgstr "معلومات الإستئذانات"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+msgid "Permission Limit"
+msgstr "أقل الإستئذان"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__permission_number
+msgid "Permission Number"
+msgstr "رقم الإذن"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+msgid "Permission Per Month"
+msgstr "عدد الساعات المتبقية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_attendance_transaction__personal_permission_id
+msgid "Permission Request"
+msgstr "طلب الإستئذان"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_ir_attachment__personal_permission_id
+msgid "Personal Permission"
+msgstr "إستئذان شخصي"
+
+#. module: employee_requests
+#: model:ir.ui.menu,name:employee_requests.employee_personal_permission_menu_item
+msgid "Personal Permissions/Half Day"
+msgstr "الإستئذانات/اجازة نصف يوم"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Petty Cash."
+msgstr "عهدة مالية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__place_issuance_residence
+msgid "Place Issuance Insurances"
+msgstr "مكان التامين الاجتماعي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Place Issue Passport"
+msgstr "مكان إصدار الجواز"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__place_issuance_passport
+msgid "Place of Issue"
+msgstr "مكان استخراج المستند"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Place of issue"
+msgstr "مكان استخراج المستند"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Please Insert Attachments Files Below!"
+msgstr "فضلا يجب ارفاق صورة المؤهلات او الشهادات ادناه!"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Please The dependents were not Included"
+msgstr "فضلا لم يتم ادخال المعاليين"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Please The qualification or certification were not Insert Below!"
+msgstr "فضلا لم يتم ادخال المؤهلات او الشهادات ادناه!"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "Position"
+msgstr "الوظيفة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "Print Report"
+msgstr "طباعة التقرير"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__print_type
+msgid "Print Type"
+msgstr "نوع تعريف الراتب"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Print With Details"
+msgstr "طباعة التعريف بتفاصيل"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Print Without Details"
+msgstr "طباعة التعريف بدون تفاصيل"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Print Without Salary"
+msgstr "طباعة التعريف دون راتب"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "Procedure Date"
+msgstr "تاريخ التنفيذ"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Project Manager :"
+msgstr "مدير المشروع :"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__promotion_type
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_filter
+msgid "Promotion Type"
+msgstr "نوع الإجراء"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#, python-format
+msgid "Qualification"
+msgstr "اضافة مؤهل"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Qualification Degree"
+msgstr "درجة المؤهل"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Qualification Name"
+msgstr "اسم المؤهل"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Qualification Specification"
+msgstr "مواصفات المؤهل"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "RE-Draft"
+msgstr "إرجاع للمسودة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "Re-draft"
+msgstr "إرجاع للمسودة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__reason
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+msgid "Reason"
+msgstr "السبب"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+msgid "Reason Of Clearance"
+msgstr "سبب إخلاء الطرف"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+msgid "Reasons"
+msgstr "السبب"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Receiving driving License :"
+msgstr "استلام رخصة القيادة:"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__refuse_cause
+msgid "Refuse Cause"
+msgstr "سبب الرفض"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#: code:addons/employee_requests/models/house_allowance_advance.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+#, python-format
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+#, python-format
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__refused_by
+msgid "Refused By"
+msgstr "رفض بواسطة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Religion"
+msgstr "الديانة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__remaining_hours
+msgid "Remaining Hours"
+msgstr "الساعات المتبقية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__remarks
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+msgid "Remarks"
+msgstr "ملاحظات"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_certification__request_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee_dependent__request_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_qualification__request_id
+msgid "Request"
+msgstr "رفع الطلب"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__request_date
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_tree_view
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__request_type
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_tree_view
+msgid "Request Type"
+msgstr "نوع الطلب"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Request type"
+msgstr "نوع الطلب"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Insurances"
+msgstr "التأمينات الاجتماعية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__residency_number
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Insurances Number"
+msgstr "رقم التأمينات الاجتماعية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__employee_id
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_tree_view
+msgid "Responsible"
+msgstr "مقدم الطلب"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__activity_user_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__activity_user_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__activity_user_id
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__activity_user_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__activity_user_id
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#, python-format
+msgid "Return From Leave"
+msgstr "الرجوع من الاجازة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_has_sms_error
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_has_sms_error
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_has_sms_error
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_has_sms_error
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_has_sms_error
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Salary Define"
+msgstr "طلب تعريف راتب"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.view_employee_form_leave_inherit_001
+msgid "Saudi ID"
+msgstr "الهويه الوطنية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Section Head :"
+msgstr "رئيس قسم :"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/house_allowance_advance.py:0
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "Send"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__service_day
+msgid "Service Day"
+msgstr "ايام الخدمة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__service_month
+msgid "Service Month"
+msgstr "شهور الخدمة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__service_year
+msgid "Service Year"
+msgstr "سنين الخدمة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "Signature"
+msgstr "توقيع"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Signature :/"
+msgstr "توقيع :/"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "Sorry The Employee %s Actually Has Legation Amount For this Period"
+msgstr ""
+"للأسف الموظف  %s لا يستحق بدل عمل إضافي فعليآ  لدية إستحقاق إنتداب خلال هذه "
+"الفترة"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "Sorry The Employee %s Actually On %s For this Period"
+msgstr "آسف الموظف %s بالفعل في هذه الفترة%s"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "Sorry The Employee %s Actually On Mission/Training For this Period"
+msgstr "آسف, الموظف %s فعليا في مهمة عمل/تدريب خلال هذه الفترة"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "Sorry The Employee Actually in Permission For this Period"
+msgstr "هذا الموظف فعليا في إستئذان خلال هذا اليوم"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "Sorry You Have Used All Your Permission Hours In This Month"
+msgstr "تم استخدام كل ساعات الإستئذان المسموح بها خلال هذا الشهر"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid ""
+"Sorry You Have Used All Your Permission In This Day you have one permission "
+"per a Day"
+msgstr "عذرًا ، لقد استخدمت كل الأذونات الخاصة بك في هذا اليوم ، لديك إذن واحد لكل يوم"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "Sorry, Can Not Request without The Employees"
+msgstr "لايمكن الطلب بدون ادراج موظفين"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#, python-format
+msgid "Sorry, It Must Be Approved By The %s Manager"
+msgstr "للأسف, يجب تصديقها من المدير %s"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#, python-format
+msgid "Sorry, Not possible to request a effective Form more than once"
+msgstr "للآسف, لايمكن طلب مباشرة عمل اكثر من مرة"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "Sorry, Permission Must Be within The Attendance Hours"
+msgstr "عذرًا ، يجب أن يكون الإذن خلال ساعات الحضور"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#, python-format
+msgid "Sorry, Procedure Date Must Be After Employee Hiring Date"
+msgstr "عذرًا ، يجب أن يكون تاريخ الإجراء بعد تاريخ تعيين الموظف"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#, python-format
+msgid "Sorry, Procedure Date Must Be After Old Job Date"
+msgstr "للأسف, تاريخ الإجراء يجب ان يكون بعد التاريخ الحالي للوظيفة"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#, python-format
+msgid "Sorry, The Employee Contract Must Be Approved Before Hiring Date"
+msgstr "للآسف,يجب إعتماد عقد الموظف قبل عمل مباشرة العمل"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#, python-format
+msgid "Sorry, The Employee Record Must Be Approved Before Hiring Date"
+msgstr "للآسف,يجب إعتماد بيانات الموظف قبل عمل مباشرة العمل"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#, python-format
+msgid "Sorry, The First Hiring Date must be after the Contract Start Date"
+msgstr "للآسف, تاريخ مباشرة العمل يجب ان يكون بعد تاريخ بداية العقد"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "Sorry, The overtime period Must be During the same Month for the Year"
+msgstr "للأسف، فترة العمل الإضافي يجب أن تكون خلال نفس الشهر للسنة"
+
+#. module: employee_requests
+#: code:addons/employee_requests/report/report_employee_identification.py:0
+#: code:addons/employee_requests/report/report_employee_identification1.py:0
+#: code:addons/employee_requests/report/report_employee_identification2.py:0
+#, python-format
+msgid "Sorry, you cannot print the report until final approval of the request"
+msgstr "عفواً, لا يمكنك طباعة التقرير الا بعد التصديق النهائي للطلب"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_template
+msgid "Source :"
+msgstr "من فرع :"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__contract_start
+msgid "Start date of the contract."
+msgstr "تاريخ بداية العقد"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__state
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__state
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__state
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__state
+#: model:ir.model.fields,field_description:employee_requests.field_house_allowance_advance__state
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__state
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__state
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__state
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_filter
+msgid "State"
+msgstr "الحالة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Station clearance form"
+msgstr "استمارة تخليص المحطة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_tree_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_tree_view
+msgid "Status"
+msgstr "الحالة"
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_employee_department_jobs__activity_state
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__activity_state
+#: model:ir.model.fields,help:employee_requests.field_employee_other_request__activity_state
+#: model:ir.model.fields,help:employee_requests.field_employee_overtime_request__activity_state
+#: model:ir.model.fields,help:employee_requests.field_hr_clearance_form__activity_state
+#: model:ir.model.fields,help:employee_requests.field_hr_personal_permission__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#: code:addons/employee_requests/models/other_request.py:0
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+#, python-format
+msgid "Submit"
+msgstr "إرســال"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Suggestion"
+msgstr "اقتراح"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__super_mg
+msgid "Super Mg"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__super_refuse_cause
+msgid "Super Refuse Cause"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.custom_external_layout_standard
+msgid "TAQNIA SPACE"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Telephone operator :"
+msgstr "عامل الهاتف :"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Telephones/IP Telephones returned."
+msgstr "تم إرجاع الهواتف / هواتف IP"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_clearance_form.py:0
+#: code:addons/employee_requests/models/hr_clearance_form.py:0
+#, python-format
+msgid "The Clearance to be completed after the Bank Clearance Attachment"
+msgstr "يجب ارفاق مستند إخلاء طرف البنك اولآ"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "The Number Of Overtime Hours And Days is Missing"
+msgstr "يجب ادخال  ساعات العمل وايام العمل في اعدادات الحضور والالنصراف"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid ""
+"The Number Of Overtime Hours For The Employee %s Is Greater Max Hours per "
+"Month"
+msgstr ""
+"عدد الساعات الاضافية للموظف %s اكبر من عدد الساعات المسموح بها لهذا الشهر"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid ""
+"The Overtime Publice Holiday Employee %s Exceeded The Attendance Public "
+"Holiday Hours"
+msgstr ""
+"ساعات العمل الاضافي للعطل الرسمية للموظف %s اكبر من ساعات الحضور والانصراف "
+"للعطل الرسمية لهذه الفترة"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid ""
+"The Overtime Workdays Employee %s Exceeded The Attendance workdays Hours"
+msgstr ""
+"ساعات العمل الاضافي بعد الدوام للموظف %s اكبر من ساعات الحضور والانصراف بعد "
+"الدوام لهذه الفترة"
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_hr_personal_permission__permission_number
+msgid "The Remaining Number of Hours permission This Month"
+msgstr "إذن العدد المتبقي من الساعات هذا الشهر"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#, python-format
+msgid "The record Cannot be Set To Draft Because It Is Not Last Record"
+msgstr "لايمكن إرجاع السجل للمسوده لانه ليس أخر سجل"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#, python-format
+msgid "There Is No Vacancy For This Job Name %s"
+msgstr "لا يوجد شاغر لهذا الاسم الوظيفي %s"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "This Duration Must Be Greater Than Zero"
+msgstr "فترة الإستئذان يجب ان تكون اكبر من الصفر"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "This Duration must be less than or equal to the Permission Limit"
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid ""
+"This Duration not Allowed it must be Less Than or equal Permission Hours in "
+"Month"
+msgstr ""
+"فترة الإستئذان يجب ان تكون اقل من او يساوي فترة الإستئذان المسموح بها خلال "
+"الشهر"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_template
+msgid "This is will be applied from"
+msgstr "وذلك إعتبارا من يوم"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid ""
+"Tools,equipment, uniform(old/new),locker/desk,door keys, and manualsreturned"
+msgstr "الأدوات والمعدات والزي الرسمي (قديم / جديد) وخزانة / مكتب ومفاتيح أبواب وكتيبات معادة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_attendance_transaction__total_permission_hours
+msgid "Total Permission Hours"
+msgstr "إجمالي ساعات الإذن"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+msgid "Total Salary / month"
+msgstr "إجمالي الراتب / الشهر"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid ""
+"Training courses guarantee cleared (if applicable),Employee need to pay the "
+"amount of ....... riyals to cover training expanses."
+msgstr "تمت الموافقة على ضمان الدورات التدريبية (إن وجد) ، ويحتاج الموظف إلى دفع مبلغ ....... ريال لتغطية مصاريف التدريب."
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__transfer_type
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__transfer_type
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+msgid "Transfer Type"
+msgstr "الدفع عبر"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "Transferred"
+msgstr "تم الترحيل"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+msgid "Transportation Allowance"
+msgstr "بدل النقل"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__type_exit
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+msgid "Type Exit"
+msgstr "نوع الإستئذان"
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_employee_department_jobs__activity_exception_decoration
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__activity_exception_decoration
+#: model:ir.model.fields,help:employee_requests.field_employee_other_request__activity_exception_decoration
+#: model:ir.model.fields,help:employee_requests.field_employee_overtime_request__activity_exception_decoration
+#: model:ir.model.fields,help:employee_requests.field_hr_clearance_form__activity_exception_decoration
+#: model:ir.model.fields,help:employee_requests.field_hr_personal_permission__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_unread
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_unread
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_unread
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_unread
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_unread
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__message_unread_counter
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__message_unread_counter
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__message_unread_counter
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__message_unread_counter
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__message_unread_counter
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_clearance_form.py:0
+#, python-format
+msgid "Vacation Clearance"
+msgstr "إجازة"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__over_time_vacation_hours
+msgid "Vacation days hours"
+msgstr "عدد ساعات (الإجازات)"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+msgid "Finance Approval"
+msgstr "إعتماد المــالية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_employee__validity_transfer_sponsorship
+msgid "Validity Transfer Sponsorship"
+msgstr "رعاية نقل الصلاحية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "Vehicle control :"
+msgstr "السيطرة على السيارة :"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.clearance_report_template
+msgid "Vehicle parking sticker returned(if applicable)."
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_department_jobs__website_message_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_effective_form__website_message_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__website_message_ids
+#: model:ir.model.fields,field_description:employee_requests.field_employee_overtime_request__website_message_ids
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__website_message_ids
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_employee_department_jobs__website_message_ids
+#: model:ir.model.fields,help:employee_requests.field_employee_effective_form__website_message_ids
+#: model:ir.model.fields,help:employee_requests.field_employee_other_request__website_message_ids
+#: model:ir.model.fields,help:employee_requests.field_employee_overtime_request__website_message_ids
+#: model:ir.model.fields,help:employee_requests.field_hr_clearance_form__website_message_ids
+#: model:ir.model.fields,help:employee_requests.field_hr_personal_permission__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "With Details"
+msgstr "بتفاصيل"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Without Details"
+msgstr "بدون تفاصيل"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Without Salary"
+msgstr " بدون راتب"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_clearance_form__work_delivered
+msgid "Work Delivered"
+msgstr "تسليم العمل"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "Work Related Document Delivered"
+msgstr "تم تسليم المستند المتعلق بالعمل"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "Work Related information Delivered"
+msgstr "تسليم المعلومات المتعلقة بالعمل"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_form_view
+msgid "Years"
+msgstr "سنة"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#, python-format
+msgid "You Can Not Choose The Same Department Name"
+msgstr "لايمكن إختيار نفس إسم الهيكل الإداري"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#, python-format
+msgid "You Can Not Choose The Same Job Name"
+msgstr "لايمكن إختيار نفس المسمى الوظيفي"
+
+#. module: employee_requests
+#: model:ir.model.fields,help:employee_requests.field_hr_clearance_form__bank_attachment_id
+msgid "You can attach the copy of your document"
+msgstr "يجب ارفاق المستند للملف"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "You can not Add Fimaly record Because Employee is Single"
+msgstr "لا يمكن اضافة تابع للموظف وهو في العقد اعزب"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_clearance_form.py:0
+#, python-format
+msgid "Sorry, Can Not Clearance The Employee %s Has custody %s Not Return"
+msgstr "للأسف, لايمكن إخلا طرف للموظف %s لديه عُهد إداريـــة %s يجب إرجاع العهد اولآ."
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_clearance_form.py:0
+#, python-format
+msgid "Sorry, Can Not Clearance The Employee %s Has Petty Cash %s Not Return"
+msgstr "للأسف, لايمكن إخلا طرف للموظف %s لديه عُهد مــــالــية %s يجب إرجاع العهد اولآ."
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_clearance_form.py:0
+#, python-format
+msgid "Sorry, Can not Clearance The employee %s Has delegation vehicle %s Is Valid"
+msgstr "للأسف, لايمكن إخلا طرف للموظف %s لديه تفويض على المركبة %s ساري."
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#, python-format
+msgid ""
+"You can not Request Change Department or job The Employee have Not First "
+"Hiring Date"
+msgstr "لا يمكنك طلب نقل او تغير وظيفة لموظف وليس لديه تاريخ مباشرة عمل"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_clearance_form.py:0
+#, python-format
+msgid "You can not Request Clearance The Employee have Not First Hiring Date"
+msgstr "لا يمكنك طلب إخلا طرف لموظف وليس لديه تاريخ مباشرة عمل"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid ""
+"You can not Request Other Request The Employee have Not First Hiring Date"
+msgstr "لا يمكنك طلب طلبات أخرى لموظف وليس لديه تاريخ مباشرة عمل"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "You can not Request Overtime The Employee %s have Not First Hiring Date"
+msgstr "لايمكن طلب عمل اضافي للموظف %s وليس لديه مباشرة عمل."
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "You can not Request Permission The Employee have Not First Hiring Date"
+msgstr "لايمكن طلب إستئذان للموظف وليس لديه مباشرة عمل"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "You can not cancel account move \"%s\" in state not draft"
+msgstr "لايمكن الغاء القيدالمحاسبي %s اذا كان في حالة غير مبدئي"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_department_jobs.py:0
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#: code:addons/employee_requests/models/house_allowance_advance.py:0
+#: code:addons/employee_requests/models/hr_clearance_form.py:0
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "You can not delete record in state not in draft"
+msgstr "لا يمكن حذف السجل اذا كان في حالة غير مبدئي"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee.py:0
+#, python-format
+msgid "You cannot create Employee with the same employee number"
+msgstr "لا يمكن تكرار رقم الموظف"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_request_effective_form_view
+msgid "done"
+msgstr "تم التصديق"
+
+#. module: employee_requests
+#: model:ir.actions.report,name:employee_requests.action_report_employee_clearance
+msgid "employee Clearance"
+msgstr "إخلاء طرف الموظف"
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_employee_effective_form
+msgid "employee.effective.form"
+msgstr "مباشرة العمل"
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_employee_overtime_request
+msgid "employee.overtime.request"
+msgstr "العمل الاضافي"
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_house_allowance_advance
+msgid "house.allowance.advance"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_house_allowance_advance_line
+msgid "house.allowance.advance.line"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_hr_attendance_transaction
+msgid "hr.attendance.transaction"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_hr_clearance_form
+msgid "hr.clearance.form"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_hr_personal_permission
+msgid "hr.personal.permission"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_line_ids_over_time
+msgid "line.ids.over.time"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "name :"
+msgstr ": الاسم"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_template
+msgid "number :"
+msgstr ": رقم"
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_report_employee_requests_report_employee_identification
+msgid "report.employee_requests.report_employee_identification"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_report_employee_requests_report_employee_identify_2
+msgid "report.employee_requests.report_employee_identify_2"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model,name:employee_requests.model_report_employee_requests_report_employee_identify_3
+msgid "report.employee_requests.report_employee_identify_3"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_tree_view
+msgid "state"
+msgstr "الحالة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_form_view
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_form_view
+msgid "Submit"
+msgstr "إرســال"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_line_ids_over_time__over_time_workdays_hours
+msgid "workdays hours"
+msgstr "ساعات العمل اليومية"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_personal_permission__type_exit__during_work
+msgid "أثناء الدوام"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__clearance_type__vacation
+msgid "إجازة"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__house_allowance_advance__state__send
+msgid "إرسال"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "إفادة عمل"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "اسم الموظف"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_employee__payment_method__bank
+msgid "البنك"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "التاريخ"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_department_jobs__state__confirm
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_effective_form__state__direct_manager
+msgid "المدير المباشر"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_effective_form__state__done
+msgid "الموارد البشرية"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "الجنسية"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#, python-format
+msgid "Submit"
+msgstr "إرســـال"
+
+#. module: employee_requests
+#:model:ir.model.fields.selection,name:employee_requests.selection__hr_personal_permission_type__approval_by__direct_manager
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+msgid "Direct Manager"
+msgstr "موافقة المدير المباشر"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#, python-format
+msgid "IT Department"
+msgstr "مدير التقنية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#, python-format
+msgid "Cyber ​​Security"
+msgstr "الآمن السيبراني"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#, python-format
+msgid "Admin Affairs"
+msgstr "الشؤون الادارية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#, python-format
+msgid "HR Approvals"
+msgstr "موافقة الموارد البشرية"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+#, python-format
+msgid "Approval"
+msgstr "الإعتماد النهائي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_form_form_view
+msgid "Refuse"
+msgstr "رفــض"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__state__submit
+msgid "Waiting Direct Manager"
+msgstr "إنتظار المدير المباشر"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__state__direct_manager
+msgid "Waiting IT Department"
+msgstr "إنتظار التقنية"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__state__info_system
+msgid "Waiting Cyber ​​Security"
+msgstr "إنتظار الآمن السيبراني"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__state__cyber_security
+msgid "Waiting Admin Affairs"
+msgstr "إنتظار الشؤون الإدارية"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__state__admin_manager
+msgid "Waiting Finance Approvals"
+msgstr "إنتظار المالية"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__state__wait
+msgid "Waiting HR Manager"
+msgstr "إنتظار الموارد البشرية"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__state__services_manager
+msgid "Waiting Services Manager"
+msgstr "إنتظار الخدمات المشتركة"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__state__done
+msgid "Approved"
+msgstr "تم التصديق"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__state__refuse
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+msgid "الراتب الأساسي"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+msgid "الراتب الشهري الإجمالي"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_effective_form__effective_form_type__return_from_leave
+msgid "الرجوع من الاجازة"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__qualification_employee
+msgid "المؤهلات"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__employee_dependant
+msgid "المعالـين"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_personal_permission__state__draft
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_overtime_request__state__draft
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_personal_permission__state__send
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_overtime_request__state__submit
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__state__submit
+msgid "Waiting Direct Manager"
+msgstr "إنتظار المدير المباشر"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_personal_permission__state__direct_manager
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_overtime_request__state__financial_manager
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__state__confirm
+msgid "Wait HR Department"
+msgstr "إنتظار الموارد البشرية"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_personal_permission__state__approve
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__state__approved
+msgid "Approved"
+msgstr "تم التصديق"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_overtime_request__state__refused
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_personal_permission__state__refused
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__state__refuse
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_overtime_request__state__direct_manager
+msgid "Waiting Department Manager"
+msgstr "إنتظار مدير الادارة"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_overtime_request__state__hr_aaproval
+msgid "Wait Approval"
+msgstr "إنتظار التصديق"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_overtime_request__state__executive_office
+msgid "Wait Transfer"
+msgstr "إنتظار الترحيل"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_overtime_request__state__validated
+msgid "Transferred"
+msgstr "تم الترحيل"
+
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_department_jobs__promotion_type__department
+msgid "الهيكل الاداري"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_department_jobs__promotion_type__job
+msgid "الوظيفة"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "الوظيفة الحالية"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_effective_form__state__hr_manager
+msgid "انتظار التصديق"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_effective_form__state__submit
+msgid "انتظار المدير المباشر"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_effective_form__effective_form_type__first_tim_job
+msgid "بداية اول عمل"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+msgid "بدل السكن"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+msgid "بدل النقل"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "تاريخ التعيين"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__direct_mg__approve
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__hr_mg__approve
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__it_mg__approve
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__super_mg__approve
+msgid "موافقة الموارد البشرية"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_department_jobs__promotion_type__both
+msgid "تنقلات و تغيير وظيفة"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__clearance_type__final
+msgid "Final Clearance"
+msgstr "إنهاء خدمات"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_personal_permission__type_exit__late_entry
+msgid "دخول متأخر"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__direct_mg__refuse
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__hr_mg__refuse
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__it_mg__refuse
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_clearance_form__super_mg__refuse
+msgid "رفض"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "رقم الموظف"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identification
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_2
+#: model_terms:ir.ui.view,arch_db:employee_requests.report_employee_identify_3
+msgid "رقم الهوية"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_personal_permission__type_exit__early_exit
+msgid "زمن خروج مبكر"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__hr_employee__payment_method__cash
+msgid "كاش"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_department_jobs__state__confirm2
+msgid "مدير الإدارة المنقول إليها"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_department_jobs__state__approved
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_department_jobs__state__hr_manager
+msgid "مدير الموارد البشرية"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_department_jobs__state__refused
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_effective_form__state__refused
+#: model:ir.model.fields.selection,name:employee_requests.selection__house_allowance_advance__state__refused
+msgid "مرفوض"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_department_jobs__state__draft
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_effective_form__state__draft
+#: model:ir.model.fields.selection,name:employee_requests.selection__house_allowance_advance__state__draft
+msgid "مسودة"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__house_allowance_advance__state__hr_special_approval
+msgid "موافقة أخصائي الموارد البشرية"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__house_allowance_advance__state__approve_manager
+msgid "موافقة المدير"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__house_allowance_advance__state__financial_manager
+msgid "موافقة المدير المالي"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__house_allowance_advance__state__hr_manager_approved
+msgid "موافقة مدير الموارد البشرية"
+msgstr ""
+
+#. module: employee_requests
+#: model:ir.actions.report,name:employee_requests.action_report_employee_clearance_details
+msgid "نموذج إخلاء طرف"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "‫‪ ‫‪HDD‬‬ ‫‪Usage‬‬ ‫‪Delivered‬‬‫‬‬‬‬"
+msgstr "تم تسليم استخدام الأقراص الصلبة"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "‫‪Internal‬‬ ‫‪Extension‬‬ ‫‪Stopped‬‬‬‬"
+msgstr "توقف التمديد الداخلي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "‫‪Laptop‬‬ ‫‪Delivered‬‬"
+msgstr "تسليم الكمبيوتر المحمول"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "‫‪Mobile‬‬ ‫‪Phone‬‬ ‫‪Delivered‬‬"
+msgstr "تم تسليم الهاتف المحمول"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "‫‪Server‬‬ ‫‪Account‬‬ ‫‪Stopped‬‬"
+msgstr "توقف حساب الخادم"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "‫‪User‬‬ ‫‪Deleted‬‬ ‫‪from‬‬ ‫‪Mina‬‬‬‬‬‬"
+msgstr "تم حذف المستخدم من منى"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid ""
+"‫‪User‬‬ ‫‪Deleted‬‬ ‫‪from‬‬ ‫‪Time‬‬\n"
+"‫‪Management‬‬‬‬"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid "‫‪User‬‬ ‫‪e-mail‬‬ ‫‪Stopped‬‬"
+msgstr ""
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_clearance_details_template
+msgid ""
+"‫‪Wireless‬‬ ‫‪Network‬‬ ‫‪Account‬‬\n"
+"‫‪Stopped‬‬‬‬"
+msgstr ""
+
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_form_view
+msgid "Print Salary Confirmation"
+msgstr "طباعة تثبيت الراتب"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#: code:addons/employee_requests/models/other_request.py:0
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#: code:addons/employee_requests/models/hr_clearance_form.py:0
+#, python-format
+msgid "Sorry, The Approval For The Direct Manager '%s' Only OR HR Manager!"
+msgstr "للأسف، لموافقة المدير المباشر '%s' فقط او مدير الموارد البشرية !"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "Sorry, The Approval For The Department Manager '%s' Only OR HR Manager!"
+msgstr "للأسف، لموافقة مدير الإدارة '%s' فقط او مدير الموارد البشرية !"
+
+#. module: hr_holidays_public
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#: code:addons/employee_requests/models/other_request.py:0
+#: code:addons/employee_requests/models/employee_effective_form.py:0
+#: code:addons/employee_requests/models/hr_clearance_form.py:0
+#, python-format
+msgid "Sorry, The Refuse For The Direct Manager '%s' Only OR HR Manager!"
+msgstr "للأسف، لرفض المدير المباشر '%s' فقط او مدير الموارد البشرية !"
+
+#. module: hr_holidays_public
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "Sorry, The Refuse For The Department Manager '%s' Only !"
+msgstr "للأسف، لرفض مدير الإدارة '%s' فقط او مدير الموارد البشرية !"
+
+########################################################################################
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__request_type__dependent
+msgid "Dependent"
+msgstr "المعالين"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__request_type__insurance
+msgid "Insurance"
+msgstr "طلب تأمين"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__request_type__card
+msgid "Business Card"
+msgstr "بطاقة عمل"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__request_type__qualification
+msgid "Qualification"
+msgstr "اضافة مؤهل"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_employee_other_request__certification_employee
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__request_type__certification
+msgid "Certification"
+msgstr "الشهادات"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__request_type__salary_define
+msgid "Salary Define"
+msgstr "طلب تعريف راتب"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__request_type__salary_fixing
+#, python-format
+msgid "Salary Fixing"
+msgstr "طلب تثبيت راتب"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__request_type__suggestion
+msgid "Suggestion"
+msgstr "اقتراح"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__request_type__complaint
+msgid "Complaint"
+msgstr "شكوى"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__request_type__other_requests
+msgid "Other Requests"
+msgstr "طلبات اخرى"
+
+##############################
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__print_type__detail
+msgid "With Details"
+msgstr "بتفاصيل"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__print_type__no_detail
+msgid "Without Details"
+msgstr "بدون تفاصيل"
+
+#. module: employee_requests
+#: model:ir.model.fields.selection,name:employee_requests.selection__employee_other_request__print_type__no_salary
+msgid "Without Salary"
+msgstr "بدون راتب"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_filter
+msgid "My Permissions"
+msgstr "إستئذاناتي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_department_jobs_filter
+msgid "My Requests"
+msgstr "طلبـاتي"
+
+#. module: employee_requests
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_overtime_request_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_other_request_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_filter
+msgid "Branch"
+msgstr "الفروع"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/other_request.py:0
+#, python-format
+msgid "Salary Destination"
+msgstr "وجهة تعريف الراتب"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "You can not Request Overtime The Employee %s The Overtime Amount Less Than Zero"
+msgstr "لايمكن طلب عمل إضافي للموظف %s بقيمة عمل إضافي اقل من صفر."
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "You can not Request Overtime The Employee %s The Overtime Amount Zero"
+msgstr "لايمكن طلب عمل إضافي للموظف %s بقيمة عمل إضافي صفر."
+
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "Sorry, Cannot Be Request after %s Days From The End Of The Overtime Month"
+msgstr "للأسف,لا يمكن طلب العمل الإضافى بعد أكثر من %s يوم من نهاية شهر العمل الأضافي"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission_type__approval_by
+msgid "Approval By"
+msgstr "الموافقة من قبل"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__balance
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission_type__daily_hours
+msgid "Daily Hours"
+msgstr "الساعات اليومية"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission__permission_type_id
+#: model_terms:ir.ui.view,arch_db:employee_requests.employee_personal_permission_filter
+#: model_terms:ir.ui.view,arch_db:employee_requests.hr_personal_permission_type_view_form
+msgid "Permission Type"
+msgstr "نوع الاستئذان"
+
+#. module: employee_requests
+#: model:ir.actions.act_window,name:employee_requests.action_permission_types
+#: model:ir.ui.menu,name:employee_requests.menu_view_permission_types
+#: model_terms:ir.ui.view,arch_db:employee_requests.hr_personal_permission_type_view_tree
+msgid "Permission Types"
+msgstr "أنواع الاستئذانات"
+
+#. module: employee_requests
+#: model:ir.model.fields,field_description:employee_requests.field_hr_personal_permission_type__monthly_hours
+msgid "Monthly Hours"
+msgstr "ساعات شهرية"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/hr_personal_permission.py:0
+#, python-format
+msgid "Date To must be on the same day as Date From."
+msgstr "يجب أن يكون يوم تاريخ البداية هو نفسه يوم تاريخ النهاية."
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "You Must Enter The Journal Name Overtim Setting."
+msgstr "يجب إدخال إسم دفتر اليومية لإعدادات العمل الإضافي"
+
+#. module: employee_requests
+#: code:addons/employee_requests/models/employee_overtime_request.py:0
+#, python-format
+msgid "Employee %s, has no Overtime Account Setting Base On Employee Type."
+msgstr "الموظف %s, ليس لديه إعدادات حساب بند صرف للأجر الإضافي حسب نوع الموظف."
+
+
+
+
+

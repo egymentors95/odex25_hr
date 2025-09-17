@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="employee_promotions_custom_form_view" model="ir.ui.view">
+            <field name="name">employee.promotions.form</field>
+            <field name="model">employee.promotions</field>
+            <field name="inherit_id" ref="exp_payroll_custom.employee_promotions_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date']" position="replace">
+                </xpath>
+                <xpath expr="//div" position="after">
+                    <group col="4" >
+                        <group colspan="2">
+                            <field name="date_promotion" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="type" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="last_promotion" string="Last Promotion"/>
+                        </group>
+                        <group colspan="2">
+                            <field name="date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="date_to"  readonly="1" force_save="1"
+                                   attrs="{'invisible':[('state','!=','approved')]}"/>
+                            <field name="foreign_scale" attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                    </group>
+                </xpath>
+                <xpath expr="//field[@name='new_level']" position="before">
+                    <field name="promotion_scale_id" attrs="{'readonly':[('state','!=','draft')]}" required="1"
+                           widget="selection"/>
+                 </xpath>
+                <xpath expr="//field[@name='new_degree']" position="after">
+                    <field name="new_basic_salary" string="New Basic Salary" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="new_salary" string="New Salary" readonly="1" force_save="1"/>
+                    <field name="promotion_job_id" force_save="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="changed_job_id" readonly="1" force_save="1"
+                           attrs="{'invisible':[('promotion_job_id', '=', False)]}"/>
+                    <field name="promotion_seniority" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='old_degree_2']" position="after">
+                     <field name="old_basic_salary" string="Old Basic Salary" readonly="1" force_save="1"/>
+                    <field name="current_salary" string="Current Salary" readonly="1" force_save="1"/>
+                    <field name="current_job_id" readonly="1" force_save="1"/>
+                    <field name="old_promotion_date" string="Old Promotion Date" readonly="1" force_save="1"/>
+                    <label for="service_year" string="Duration"/>
+                    <div>
+                        <field name="service_year" readonly="1" force_save="1" class="oe_inline"/>Years
+                        <field name="service_month" readonly="1" force_save="1" class="oe_inline"/>Months
+                        <field name="service_day" readonly="1" force_save="1" class="oe_inline"/>Days
+                    </div>
+                </xpath>
+                <xpath expr="//separator" position="before">
+                    <group string="Eligibility" col="4">
+                        <field name="eligible" readonly="1" force_save="1"/>
+                        <field name="permit"
+                               attrs="{'readonly':[('state','!=','draft')],
+                                        'invisible':[('eligible', '=', True),('type', '=', 'regular')]}"/>
+                        <field name="unmet_condition" readonly="1" force_save="1" colspan="4"
+                               attrs="{'invisible':[('eligible', '=', True)]}" nolabel="1"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="custom_employee_promotions_tree_view" model="ir.ui.view">
+            <field name="name">custom.employee.promotions.tree</field>
+            <field name="model">employee.promotions</field>
+            <field name="inherit_id" ref="exp_payroll_custom.employee_promotions_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='new_degree']" position="after">
+                    <field name="promotion_seniority"
+                           readonly="1"
+                           force_save="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <menuitem id="exp_payroll_custom.employee_promotions_view"
+                  name="Employee Promotions"
+                  parent="exp_payroll_promotion.hr_payroll_promotion_root"
+                  action="exp_payroll_custom.employee_promotions_action"
+                  sequence="4"/>
+
+    </data>
+</odoo>

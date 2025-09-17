@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_penalty_register_all,hr.penalty.register.all,model_hr_penalty_register,,1,1,0,0
+access_hr_penalty_register_user,hr.penalty.register.user,model_hr_penalty_register,hr.group_hr_user,1,1,1,1
+access_hr_punishment_manager,hr.punishment.manager,model_hr_punishment,hr.group_hr_manager,1,1,1,1
+access_hr_punishment_all,hr.punishment.user,model_hr_punishment,,1,0,0,0
+access_hr_penalty_ss_manager,hr.penalty.ss.manager,model_hr_penalty_ss,hr.group_hr_manager,1,1,1,1
+access_hr_penalty_ss_all,hr.penalty.ss.manager,model_hr_penalty_ss,,1,0,0,0
+access_hr_penalty_name_manager,hr.penalty.name.manager,model_hr_penalty_name,hr.group_hr_manager,1,1,1,1
+access_hr_penalty_report_user,hr.penalty.report.user,model_hr_penalty_report,base.group_user,1,1,1,0
+access_hr_deduction_user,hr.deduction.user,model_hr_deduction,hr.group_hr_user,1,1,1,1

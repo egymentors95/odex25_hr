@@ -1,0 +1,434 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="resource_calendar_inherited_action">
+            <field name="name">Attendance Configuration</field>
+            <field name="res_model">resource.calendar</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="resource_calendar_inherited_form" model="ir.ui.view">
+            <field name="name">resource.calendar.inherited.form</field>
+            <field name="model">resource.calendar</field>
+            <field name="inherit_id" ref="resource.resource_calendar_form"/>
+            <field name="priority">100</field>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet" position="replace">
+                    <header>
+                        <button name="act_confirm" string="Confirm" class="oe_highlight" type="object"
+                                states="draft" groups="hr.group_hr_user"/>
+                        <button name="act_update" string="Update" class="oe_highlight" type="object"
+                                states="confirm" groups="hr.group_hr_user"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe.title">
+                            <h>
+                                <label for="name"/>
+                                <field name="name"/>
+                            </h>
+                        </div>
+                        <group col="4" colspan="2">
+                            <group colspan="2">
+                                <field name="working_days" required="1" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="working_hours" required="1" widget="float_time"
+                                       attrs="{'invisible':[('is_full_day','=',False)],
+                                                'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="break_duration" required="1" widget="float_time"
+                                       attrs="{'invisible':['|', ('is_flexible','=',True), ('is_full_day','=',False)],
+                                                'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="end_sign_in" required="1" widget="float_time"
+                                       attrs="{'invisible':[('is_flexible','=',True)],
+                                                'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="number_of_flexi_days"
+                                       attrs="{'invisible':[('is_flexible','=',False)],
+                                                'required':[('is_flexible','=',True)],
+                                                'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="total_flexible_hours"  widget="float_time"
+                                       attrs="{'invisible':[('is_flexible','=',False)],
+                                                'required':[('is_flexible','=',True)],
+                                                'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="deduction_rule" required="1"
+                                       domain="[('category_id.rule_type','=','deduction'),('special','=',True)]"/>
+                            </group>
+                            <group colspan="2">
+                                <field name="is_full_day" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="is_flexible" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="noke" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="active"/>
+                                <field name="register_before"/>
+                            </group>
+                            <group string="Sign In Period" attrs="{'invisible':[('is_full_day','=',False)]}" colspan="2">
+                                <field name="full_min_sign_in" widget="float_time"
+                                       attrs="{'required':[('is_full_day','=',True)],
+                                                'invisible':[('is_full_day','=',False)],
+                                                'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="full_max_sign_in" widget="float_time"
+                                       attrs="{'required':[('is_full_day','=',True)],
+                                                'invisible':[('is_full_day','=',False)],
+                                                'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                            <group string="Sign Out Period" attrs="{'invisible':[('is_full_day','=',False)]}" colspan="2">
+                                <field name="full_min_sign_out" widget="float_time"
+                                       attrs="{'required':[('is_full_day','=',True)],
+                                                'invisible':[('is_full_day','=',False)],
+                                                'readonly': [('state', '!=', 'draft')]}"/>
+                                <field name="full_max_sign_out" widget="float_time"
+                                       attrs="{'required':[('is_full_day','=',True)],
+                                                'invisible':[('is_full_day','=',False)],
+                                                'readonly': [('state', '!=', 'draft')]}"/>
+                            </group>
+                            <group colspan="2">
+                                 <field name="grace_hour_before_work" widget="float_time"/>
+                            </group>
+                            <group colspan="2">
+                                 <field name="grace_hour_after_work" widget="float_time"/>
+                            </group>
+                        </group>
+                        <!--<group col="4" colspan="4">
+
+                        </group>
+
+                        <group>
+                            <group string="Sign In Period" attrs="{'invisible':[('is_full_day','=',False)]}">
+                                <field name="full_min_sign_in" widget="float_time"
+                                       attrs="{'required':[('is_full_day','=',True)],'invisible':[('is_full_day','=',False)]}"/>
+                                <field name="full_max_sign_in" widget="float_time"
+                                       attrs="{'required':[('is_full_day','=',True)],'invisible':[('is_full_day','=',False)]}"/>
+                            </group>
+                            <group string="Sign Out Period" attrs="{'invisible':[('is_full_day','=',False)]}">
+                                <field name="full_min_sign_out" widget="float_time"
+                                       attrs="{'required':[('is_full_day','=',True)],'invisible':[('is_full_day','=',False)]}"/>
+                                <field name="full_max_sign_out" widget="float_time"
+                                       attrs="{'required':[('is_full_day','=',True)],'invisible':[('is_full_day','=',False)]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+
+
+                            </group>
+                            <group>
+
+                            </group>
+                        </group>-->
+                        <notebook attrs="{'invisible':[('is_full_day','=',False)]}">
+                            <page string="Day off">
+                                <field name="full_day_off" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="name" required="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Special Days" attrs="{'invisible':[('is_flexible','=',True)]}">
+                                <field name="special_days" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="name" required="1"/>
+                                        <field name="start_sign_in" widget="float_time" required="1"/>
+                                        <field name="end_sign_in" widget="float_time" required="1"/>
+                                        <field name="start_sign_out" widget="float_time" required="1"/>
+                                        <field name="end_sign_out" widget="float_time" required="1"/>
+                                        <field name="working_hours"  widget="float_time" required="1"/>
+                                        <field name="date_from" required="0"/>
+                                        <field name="date_to" required="0"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Employees">
+                                <field name="employee_ids" widget="many2many"
+                                       domain="[('contract_id.state', '=', 'program_directory')]"/>
+                            </page>
+                            <page string="Working Hours" invisible="1">
+                                <field name="attendance_ids" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </page>
+                            <page string="Overtime Settings" name="over_time_full1">
+                                <group>
+                                    <field name="work_days" string="Work Days overtime"/>
+                                    <field name="work_hour" string="Work Hours"/>
+                                    <field name="overtime_factor_daily"/>
+                                    <field name="overtime_factor_holiday"/>
+                                    <field name="max_overtime_hour"/>
+                                    <field name="request_after_day" groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                                </group>
+                                <!--group string="Overtime Accounts Settings" >
+		                    <field name="journal_overtime_id" string="Journal Overtime"/>
+		                    <field name="account_overtime_id" string="Account Overtime"/>
+		                </group--> 
+
+                               <notebook>
+				    <page string="Accounting Info">
+				        <group>
+				            <field name="transfer_by_emp_type" />
+				            <field name="journal_overtime_id" string="Journal Overtime"/>
+				            <field name="account_overtime_id" string="Account Overtime"
+				                   attrs="{'invisible' : [('transfer_by_emp_type', '=', True)]}"/>
+				            <field name="analytic_account_id" string="Analytic Account"/>
+
+
+				        </group>
+				        <field name="account_ids" attrs="{'invisible' : [('transfer_by_emp_type', '=', False)]}">
+				            <tree editable="bottom">
+				                <field name="emp_type_id"/>
+				                <field name="debit_account_id"/>
+				            </tree>
+				        </field>
+				      </page>
+                               </notebook>
+                            </page>
+                        </notebook>
+                        <notebook attrs="{'invisible':[('is_full_day','=',True)]}">
+                            <page string="Shift One">
+                                <group>
+                                    <group string="Shift One Sign In Period"
+                                           attrs="{'invisible':[('is_full_day','=',True)]}">
+                                        <field name="shift_one_min_sign_in" widget="float_time"
+                                               attrs="{'required':[('is_full_day','=',False)],
+                                                        'invisible':[('is_full_day','=',True)],
+                                                        'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="shift_one_max_sign_in" widget="float_time"
+                                               attrs="{'required':[('is_full_day','=',False)],
+                                                        'invisible':[('is_full_day','=',True)],
+                                                        'readonly': [('state', '!=', 'draft')]}"/>
+                                    </group>
+                                    <group string="Shift One Sign Out Period"
+                                           attrs="{'invisible':[('is_full_day','=',True)]}">
+                                        <field name="shift_one_min_sign_out" widget="float_time"
+                                               attrs="{'required':[('is_full_day','=',False)],
+                                                        'invisible':[('is_full_day','=',True)],
+                                                        'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="shift_one_max_sign_out" widget="float_time"
+                                               attrs="{'required':[('is_full_day','=',False)],
+                                                        'invisible':[('is_full_day','=',True)],
+                                                        'readonly': [('state', '!=', 'draft')]}"/>
+                                    </group>
+                                </group>
+                                <group col="2" colspan="2">
+                                    <field name="shift_one_working_hours" required="1"
+                                           attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                           widget="float_time"/>
+                                    <field name="shift_one_break_duration" required="1" widget="float_time"
+                                       attrs="{'invisible':[('is_flexible','=',True)],
+                                                'readonly': [('state', '!=', 'draft')]}"/>
+                                </group>
+                            </page>
+                            <page string="Shift Two">
+                                <group>
+                                    <group string="Shift Two Sign In Period"
+                                           attrs="{'invisible':[('is_full_day','=',True)]}">
+                                        <field name="shift_two_min_sign_in" widget="float_time"
+                                               attrs="{'required':[('is_full_day','=',False)],
+                                                        'invisible':[('is_full_day','=',True)],
+                                                        'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="shift_two_max_sign_in" widget="float_time"
+                                               attrs="{'required':[('is_full_day','=',False)],
+                                                        'invisible':[('is_full_day','=',True)],
+                                                        'readonly': [('state', '!=', 'draft')]}"/>
+                                    </group>
+                                    <group string="Shift Two Sign Out Period"
+                                           attrs="{'invisible':[('is_full_day','=',True)]}">
+                                        <field name="shift_two_min_sign_out" widget="float_time"
+                                               attrs="{'required':[('is_full_day','=',False)],
+                                                        'invisible':[('is_full_day','=',True)],
+                                                        'readonly': [('state', '!=', 'draft')]}"/>
+                                        <field name="shift_two_max_sign_out" widget="float_time"
+                                               attrs="{'required':[('is_full_day','=',False)],
+                                                        'invisible':[('is_full_day','=',True)],
+                                                        'readonly': [('state', '!=', 'draft')]}"/>
+                                    </group>
+                                </group>
+                                <group col="2" colspan="2">
+                                    <field name="shift_two_working_hours" required="1"
+                                           attrs="{'readonly': [('state', '!=', 'draft')]}"
+                                           widget="float_time"/>
+                                    <field name="shift_two_break_duration" required="1" widget="float_time"
+                                       attrs="{'invisible':[('is_flexible','=',True)],
+                                                'readonly': [('state', '!=', 'draft')]}"/>
+                                </group>
+                            </page>
+                            <page string="Day off">
+                                <field name="shift_day_off" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="shift" required="1"/>
+                                        <field name="name" required="1"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Special Days" attrs="{'invisible':[('is_flexible','=',True)]}">
+                                <field name="special_days_partcial" attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="shift" required="1"/>
+                                        <field name="name" required="1"/>
+                                        <field name="start_sign_in" widget="float_time" required="1"/>
+                                        <field name="end_sign_in" widget="float_time" required="1"/>
+                                        <field name="start_sign_out" widget="float_time" required="1"/>
+                                        <field name="end_sign_out" widget="float_time" required="1"/>
+                                        <field name="working_hours"  widget="float_time" required="1"/>
+                                        <field name="date_from"/>
+                                        <field name="date_to"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Employees">
+                                <field name="employee_ids"
+                                       domain="[('contract_id.state', '=', 'program_directory')]" widget="many2many"/>
+                            </page>
+                            <page string="Working Hours" invisible="1">
+                                <field name="attendance_ids" attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            </page>
+                           <page string="Overtime Settings" name="over_time_not_full1">
+                                <group>
+                                    <field name="work_days" string="Work Days overtime"/>
+                                    <field name="work_hour" string="Work Hours"/>
+                                    <field name="overtime_factor_daily"/>
+                                    <field name="overtime_factor_holiday"/>
+                                    <field name="max_overtime_hour"/>
+                                    <field name="request_after_day" groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                                </group>
+                                <!--group string="Overtime Accounts Settings" >
+		                    <field name="journal_overtime_id" string="Journal Overtime"/>
+		                    <field name="account_overtime_id" string="Account Overtime"/>
+		                </group--> 
+                               <notebook>
+				    <page string="Accounting Info">
+				        <group>
+				            <field name="transfer_by_emp_type" />
+				            <field name="journal_overtime_id" string="Journal Overtime"/>
+				            <field name="account_overtime_id" string="Account Overtime"
+				                   attrs="{'invisible' : [('transfer_by_emp_type', '=', True)]}"/>
+				            <field name="analytic_account_id" string="Analytic Account"/>
+
+
+				        </group>
+				        <field name="account_ids" attrs="{'invisible' : [('transfer_by_emp_type', '=', False)]}">
+				            <tree editable="bottom">
+				                <field name="emp_type_id"/>
+				                <field name="debit_account_id"/>
+				            </tree>
+				        </field>
+				      </page>
+                               </notebook>
+                            </page>
+                        
+                        </notebook>
+                    </sheet>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="attendance_custom_action">
+            <field name="name">Employee Attendances</field>
+            <field name="res_model">attendance.attendance</field>
+            <field name="view_mode">tree,form</field>
+            <field name= "context">{"search_default_today_less":1}</field>		
+        </record>
+
+        <record id="attendance_custom_form" model="ir.ui.view">
+            <field name="name">attendance.custom.form</field>
+            <field name="model">attendance.attendance</field>
+            <field name="arch" type="xml">
+                <form string="Employee attendances" create="false" edit="false" delete="false">
+                    <sheet>
+                        <group>
+                            <field name="employee_id" readonly="1" force_save="1"/>
+                            <field name="employee_number"  readonly="1" force_save="1" store="1"/>
+                            <field name="department_id" string="Department" required="1" readonly="1"/>
+                            <field name="name" required="1" readonly="1" force_save="1"/>
+                            <field name="action" readonly="1" force_save="1"/>
+                            <field name="action_type" readonly="1" force_save="1"/>
+                            <field name="action_reason" readonly="1" force_save="1"/>
+                            <field name="action_date" readonly="1"/>
+                            <field name="taken" invisible="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="attendance_custom_tree" model="ir.ui.view">
+            <field name="name">attendance.custom.tree</field>
+            <field name="model">attendance.attendance</field>
+            <field name="arch" type="xml">
+                <tree create="false" edit="false" delete="false">
+                    <field name="employee_number"/>
+                    <field name="employee_id"/>
+                    <field name="department_id" string="Department"/>
+                    <field name="name" required="1"/>
+                    <field name="action"/>
+                    <field name="action_type"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="attendance_view_filter" model="ir.ui.view">
+            <field name="name">attendance_view_filter</field>
+            <field name="model">attendance.attendance</field>
+            <field name="arch" type="xml">
+                <search string="Attendance Search">
+                    <field name="employee_id"/>
+                    <field name="employee_number"/>
+                    <separator/>
+                    <!--<filter string="My Attendances" domain="[('employee_id.user_id', '=', uid)]"/>-->
+                    <group expand="0" string="Group By">
+                        <filter name="employee" string="Employee" context="{'group_by':'employee_id'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                        <filter name="group_branch" string="Branch" domain="[]" context="{'group_by': 'is_branch'}"/>
+                        <separator/>
+                       <filter string="Attendance Today" name="today_less"  domain="[('is_today', '=', 'True')]"/>
+                    <separator/>
+                    <separator/>
+                        <filter string="My Attendance" name="my_attendance" domain="[('employee_id.user_id', '=', uid)]"/>
+                    <separator/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!-- view_attendance_filter >
+        <record id="view_attendance_filter" model="ir.ui.view">
+            <field name="name">Attendance Attendance</field>
+            <field name="model">attendance.attendance</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                  <field name="employee_id"/>
+                  <field name="employee_number"/>
+            </field>
+        </record-->
+
+        <record id="attendance_action_reason_form" model="ir.ui.view">
+            <field name="name">attendance.action.reason.form</field>
+            <field name="model">attendance.action.reason</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group col="4" colspan="4">
+                            <field name="name" required="1"/>
+                            <field name="type"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="attendance_action_reason_tree" model="ir.ui.view">
+            <field name="name">attendance.action.reason.tree</field>
+            <field name="model">attendance.action.reason</field>
+            <field name="arch" type="xml">
+                <tree string="Attendance Reasons">
+                    <field name="name"/>
+                    <field name="type"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="attendance_action_reason_action">
+            <field name="name">Attendance Reasons</field>
+            <field name="res_model">attendance.action.reason</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+
+
+</odoo>

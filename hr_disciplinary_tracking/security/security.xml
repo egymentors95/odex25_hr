@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="0">
+
+
+        <record id="employee_penalty_register_form_emp_rule" model="ir.rule">
+            <field name="name">Employee: views its forms record</field>
+            <field name="model_id" ref="model_hr_penalty_register"/>
+            <field name="domain_force">[('employee_id.user_id','=', user.id)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="employee_penalty_form_division_mgr_rule" model="ir.rule">
+            <field name="name">Division manager: views forms of its subordinates</field>
+            <field name="model_id" ref="model_hr_penalty_register"/>
+            <field name="domain_force">['|',('department_id.manager_id.user_id','=', user.id),
+                ('department_id.parent_id.manager_id.user_id','child_of', [user.id])]
+            </field>
+            <field name="groups"
+                   eval="[(4, ref('hr_base.group_department_manager')),(4, ref('hr_base.group_division_manager')),]"/>
+        </record>
+
+        <record id="employee_penalty_form_hr_rule" model="ir.rule">
+            <field name="name">Allow HR : views Penalty all employees</field>
+            <field name="model_id" ref="model_hr_penalty_register"/>
+            <field name="domain_force">[(1 ,'=', 1)]</field>
+            <field name="groups" eval="[(4, ref('hr_base.group_services_manager')),
+                                        (4, ref('hr_base.group_general_manager')),
+                                        (4, ref('hr.group_hr_manager')),
+                                        (4, ref('hr.group_hr_user'))]"/>
+        </record>
+        <record id="employee_penalty_rule_comp_rule" model="ir.rule">
+            <field name="name">Penalty multi company rule</field>
+            <field name="model_id" ref="model_hr_penalty_register"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="employee_penalty_ss_rule_comp_rule" model="ir.rule">
+            <field name="name">penalty ss multi company rule</field>
+            <field name="model_id" ref="model_hr_penalty_ss"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="employee_punishment_rule_comp_rule" model="ir.rule">
+            <field name="name">punishment multi company rule</field>
+            <field name="model_id" ref="model_hr_punishment"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+    </data>
+</odoo>

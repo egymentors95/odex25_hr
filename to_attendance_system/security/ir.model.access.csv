@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_finger_system_attendance,finger_system_attendance,to_attendance_system.model_finger_system_attendance,,1,1,1,0
+access_finger_biotime_api,finger_biotime_api,to_attendance_system.model_finger_biotime_api,,1,1,1,0
+access_finger_employee_department,finger_employee_department,to_attendance_system.model_finger_biotime_api,,1,1,1,0
+access_finger_area,finger_area,to_attendance_system.model_finger_area,,1,1,1,0
+access_finger_employee_position,finger_employee_position,to_attendance_system.model_finger_employee_position,,1,1,1,0
+access_finger_employee_employee,finger_employee_employee,to_attendance_system.model_finger_employee_employee,,1,1,1,0
+access_finger_terminal,finger_terminal,to_attendance_system.model_finger_terminal,,1,1,1,0

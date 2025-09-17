@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="hr_clearance_form_custom_view" model="ir.ui.view">
+            <field name="name">hr.employee.clearance.custom</field>
+            <field name="model">hr.clearance.form</field>
+            <field name="priority" eval="16"/>
+            <field name="inherit_id" ref="employee_requests.employee_clearance_form_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='employee_info']" position="after">
+                    <group attrs="{'invisible':[('clearance_type','=','final')]}">
+                        <field name="leave_request_id" string="Leave Request"
+                               attrs="{'required':[('clearance_type','=','vacation')],'readonly':[('state','!=','draft')]}"/>
+                        <field name="start_of_vacation" string="Start of Vacation" readonly="1"/>
+                        <field name="end_of_vacation" string="End of vacation" readonly="1"/>
+                    </group>
+
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

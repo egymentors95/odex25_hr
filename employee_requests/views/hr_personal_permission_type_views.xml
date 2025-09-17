@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_personal_permission_type_view_form" model="ir.ui.view">
+        <field name="name">hr.personal.permission.type.view.form</field>
+        <field name="model">hr.personal.permission.type</field>
+        <field name="arch" type="xml">
+            <form string="Permission Type">
+                <sheet>
+                    <field name="active" invisible="1" />
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" />
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="daily_hours" widget="float_time" />
+                            <field name="monthly_hours" widget="float_time" />
+                        </group>
+                        <group>
+                            <field name="approval_by" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_personal_permission_type_view_tree" model="ir.ui.view">
+        <field name="name">hr.personal.permission.type.view.tree</field>
+        <field name="model">hr.personal.permission.type</field>
+        <field name="arch" type="xml">
+            <tree string="Permission Types">
+                <field name="active" invisible="1" />
+                <field name="sequence" widget="handle" />
+                <field name="name" />
+                <field name="daily_hours" widget="float_time" />
+                <field name="monthly_hours" widget="float_time" />
+                <field name="approval_by" options="{'no_create': True, 'no_open': True, 'no_create_edit': True}" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_permission_types" model="ir.actions.act_window">
+        <field name="type">ir.actions.act_window</field>
+        <field name="name">Permission Types</field>
+        <field name="res_model">hr.personal.permission.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>

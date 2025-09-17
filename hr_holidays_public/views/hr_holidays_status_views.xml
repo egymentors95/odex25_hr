@@ -1,0 +1,226 @@
+<odoo>
+    <data>
+        <record id="edit_holiday_status_form" model="ir.ui.view">
+            <field name="name">hr.holidays.status.form - Add compute fields</field>
+            <field name="model">hr.holidays.status</field>
+            <field name="inherit_id" ref="hr_holidays_community.edit_holiday_status_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet" position="replace">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" string="Description" />
+                                <field name="leave_annual_type" required="1" />
+                                <field name="number_of_holidays_save_years"
+                                    string="Number of saved years"
+                                    attrs="{'invisible':[('leave_annual_type','!=','save_annual_year')]}" />
+                                <field name="gender" required="1" />
+                                <field name="request_before" />
+                                <field name="advance_request_years" />
+                                <!--field
+                                name="category_id" string="Meeting Type"/-->
+                                <field name="working_days" />
+                                <field name="official_holidays" />
+                                <field name="include_weekend" />
+                                <field name="exit_return_permission" />
+                                <field name="exit_return_permission_duration"
+                                    attrs="{'invisible':[('exit_return_permission','=',False)],'required':[('exit_return_permission','=',True)]}" />
+                                <field name="issuing_ticket" />
+                                <!--                                <field name="period_ticket" string="Period Ticket"-->
+                                <!--                                       attrs="{'invisible':[('issuing_ticket','=',False)]}"/>-->
+                                <!--field
+                                name="unpaid"/-->
+                                <field name="mission_chick" string="Interference Mission/Training?" />
+                                <field name="attach_chick" string="Attachment Required?" />
+                                <field name="alternative_chick" string="Alternative Required?" />
+                                <field name="alternative_days" string="Alternative Days"
+                                    attrs="{'invisible':[('alternative_chick','=',False)]}" />
+                            </group>
+                            <group>
+                                <field name="leave_type" string="Type Of Leave" required="1" />
+                                <field name="balance_type"
+                                    attrs="{'invisible':[('leave_type','!=','annual')],'required':[('leave_type','=','annual')]}" />
+                                <field name="duration"
+                                    attrs="{'invisible':[('leave_type','=','annual')],
+                                               'required':[('leave_type','!=','annual')]}" />
+                                <field name="sickness_severity"
+                                    attrs="{'invisible':[('leave_type','!=','sick')],
+                                                                        'required': [('leave_type','=','sick')]}" />
+                                <field name="emp_type" string="Employee Type"
+                                    attrs="{
+           'invisible': [('leave_type', '!=', 'annual')],
+           'required': [('leave_type', '=', 'annual')]
+       }" />
+                                <field name="contract_duration" required="1" />
+                                <field name="minimum_duration" />
+                                <label for="number_of_days" string="Employee working days" />
+                                <div id="number_of_days">
+                                    <field name="number_of_days" string="Employee working days" />
+                                    days </div>
+                                <field name="not_balance_annual_leave"
+                                    attrs="{'invisible':[('leave_type','=','annual')]}" />
+                                <field name="visible_fields" string="Save Years?" />
+                                <field name="remained_before" required="1"
+                                    attrs="{'invisible':[('visible_fields','!=',True)]}" />
+
+                                <label for="number_of_years"
+                                    attrs="{'invisible':[('visible_fields','=',False)]}"
+                                    string="employee Save working Years" />
+                                <div id="number_of_years"
+                                    attrs="{'invisible':[('visible_fields','=',False)]}">
+                                    <field name="number_of_years"
+                                        string="employee Save working Years"
+                                        attrs="{'invisible':[('visible_fields','=',False)]}" />Years </div>
+                                <label for="number_of_save_days" string="Employee Save working days"
+                                    attrs="{'invisible':[('visible_fields','=',False)]}" />
+                                <div id="number_of_save_days"
+                                    attrs="{'invisible':[('visible_fields','=',False)]}">
+                                    <field name="number_of_save_days"
+                                        string="Employee Save working days"
+                                        attrs="{'invisible':[('visible_fields','=',False)]}" /> days </div>
+                                <field name="used_once" />
+                                <field name="issuing_clearance_form" />
+                                <field name="issuing_deliver_custody" />
+                                <field name="check_annual_holiday"
+                                    attrs="{'invisible':[('payslip_type','!=','unpaid')]}" />
+                                <field name="company_id" groups="base.group_multi_company"
+                                    readonly="1" />
+
+                            </group>
+                        </group>
+
+                        <notebook>
+                            <page string="Details">
+                                <group>
+                                    <group name="selection" string="Validation">
+                                        <!--                                        <field name="double_validation"/>-->
+                                        <field name="active" />
+                                    </group>
+                                    <!--group
+                                    name="second" string="Misc">
+                                        <field name="color_name"/>
+
+                                    </group-->
+                                    <group name="configuration" string="Payroll Configuration">
+                                        <field name="payslip_type" required="1" />
+                                        <field name="type_unpaid"
+                                            attrs="{'invisible': [('payslip_type','!=','unpaid')],
+                                                                'required': [('payslip_type','=','unpaid')]}"
+                                            string="Unpaid Types" />
+                                        <field name="period_giving_balance"
+                                            attrs="{'invisible': ['|',('type_unpaid','!=','termination'),('payslip_type','!=','unpaid')],
+                                                                'required': [('type_unpaid','=','termination')]}" />
+                                        <field name="unpaid_leave_days_per_period"
+                                            attrs="{'invisible': ['|',('type_unpaid','!=','termination'),('payslip_type','!=','unpaid')],
+                                                                'required': [('type_unpaid','=','termination')]}" />
+
+                                        <field name="period_unpaid_leave"
+                                            attrs="{'invisible': ['|',('type_unpaid','!=','termination'),('payslip_type','!=','unpaid')],
+                                                                'required': [('type_unpaid','=','termination')]}" />
+                                        <field name="percentage"
+                                            attrs="{'invisible': [('payslip_type','!=','percentage')],
+                                                      'required': [('payslip_type','=','percentage')]}" />
+                                        <field name="salary_rules_ids" widget="many2many_tags"
+                                            attrs="{'invisible': [('payslip_type','not in',['addition','exclusion','reconcile'])],
+                                                    'required': [('payslip_type','in',['addition','exclusion','reconcile'])]}" />
+                                    </group>
+                                    <group name="overlimt" string="Over Limit">
+                                        <field name="annual_holiday_id"
+                                            domain="[('id', '!=', id),
+                                                                                    ('active', '=', True),
+                                                                                    ('payslip_type', '!=', 'unpaid')]" />
+                                        <field name="unpaid_holiday_id"
+                                            domain="[('id', '!=', id),
+                                                                                    ('active', '=', True),
+                                                                                    ('payslip_type', '=', 'unpaid')]" />
+                                        <field name="limit" />
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Duration"
+                                attrs="{'invisible':[('leave_type','!=','annual')]}">
+                                <field name="duration_ids">
+                                    <tree editable="bottom">
+                                        <field name="name" />
+                                        <field name="date_from" />
+                                        <field name="date_to" />
+                                        <field name="duration" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="activity_ids" widget="mail_activity" />
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_hr_holiday_officials_tree" model="ir.ui.view">
+            <field name="name">hr.holiday.officials.tree</field>
+            <field name="model">hr.holiday.officials</field>
+            <field name="arch" type="xml">
+                <tree string="Official Holidays">
+                    <field name="official_event_id" />
+                    <field name="date_from" />
+                    <field name="date_to" />
+                    <field name="religion" />
+                    <field name="active" />
+                </tree>
+            </field>
+        </record>
+        <record id="view_hr_holiday_officials_form" model="ir.ui.view">
+            <field name="name">hr.holiday.officials.form</field>
+            <field name="model">hr.holiday.officials</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Confirm" name="confirm" type="object"
+                            attrs="{'invisible':['|',('state','!=','draft'),('active','=',False)]}"
+                            class="oe_highlight" />
+                        <button string="Reset to Draft" name="draft_state" type="object"
+                            states="refuse,confirm"
+                            class="oe_highlight"
+                            confirm="Are you sure to Reset To Draft This Record?" />
+                        <button string="Refuse" name="refuse"
+                            confirm="Are you sure to refuse This Record?"
+                            states="draft" type="object" class="oe_highlight" />
+                        <field name="state" widget="statusbar" />
+
+                    </header>
+                    <sheet>
+                        <group col="4" colspan="2">
+                            <field name="official_event_id" colspan="4"
+                                attrs="{'readonly':[('state','!=','draft')]}" />
+                            <field name="date_from" attrs="{'readonly':[('state','!=','draft')]}" />
+                            <field name="active" attrs="{'readonly':[('state','!=','draft')]}" />
+                            <field name="date_to" attrs="{'readonly':[('state','!=','draft')]}" />
+                            <field name="religion" attrs="{'readonly':[('state','!=','draft')]}" />
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" />
+                        <field name="activity_ids" widget="mail_activity" />
+                        <field name="message_ids" widget="mail_thread" />
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="action_hr_holiday_officials" model="ir.actions.act_window">
+            <field name="name">Official Holidays</field>
+            <field name="res_model">hr.holiday.officials</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem
+            id="menu_hr_holidays_official"
+            name="Official Holidays"
+            parent="hr_holidays_public.menu_holidays_configuration"
+            sequence="100"
+            groups="hr_holidays_community.group_hr_holidays_manager"
+            action="action_hr_holiday_officials" />
+
+    </data>
+</odoo>

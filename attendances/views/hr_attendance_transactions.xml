@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="hr_attendance_transaction_action">
+            <field name="name">Attendance Transactions</field>
+            <field name="res_model">hr.attendance.transaction</field>
+            <field name="view_mode">tree,form,calendar,graph</field>
+            <field name= "context">{"search_default_today_less":1,'search_default_my_attendance':1}</field>		
+        </record>
+
+        <record id="attendance_transaction_tree_view" model="ir.ui.view">
+            <field name="name">Attendance Transactions</field>
+            <field name="model">hr.attendance.transaction</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="is_absent == True" decoration-primary="approve_exit_out == True" decoration-muted="approve_lateness == True" create="false" edit="false" >
+                    <field name="employee_number" string="Employee Number"/>
+                    <field name="employee_id" string="Employee Name"/>
+                    <field name="department_id" string="Department Name" />
+                    <field name="calendar_id"/>
+                    <field name="date" string="Day"/>
+                    <field name="sign_in" string="Sign In" widget="float_time"/>
+                    <field name="sign_out" string="Sign Out" widget="float_time"/>
+                    <field name="lateness" string="Lateness" widget="float_time"/>
+                    <field name="early_exit" string="Early Exit" widget="float_time"/>
+                    <!--field name="break_duration" string="Break" widget="float_time"/-->
+                    <field name="office_hours" widget="float_time"/>
+                    <field name="additional_hours" widget="float_time"/>
+                    <field name="approve_exit_out" invisible="1"/>
+                    <field name="approve_lateness" invisible="1"/>
+                    <field name="is_absent"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_attendance_transactions_form_view">
+            <field name="name">Attendance Transaction</field>
+            <field name="model">hr.attendance.transaction</field>
+            <field name="arch" type="xml">
+                <form create="false" edit="false">
+                    <sheet>
+                        <group>
+                            <field name="employee_id" required="1" colspan="4" readonly="1"/>
+                            <field name="employee_number"  colspan="4" readonly="1" force_save="1" store="1"/>
+                            <field name="department_id" string="Department Name" colspan="4" readonly="1" force_save="1" store="1"/>
+                            <field name="company_id" groups="base.group_multi_company"  colspan="4" readonly="1"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="date" required="1" readonly="1"/>
+                                <field name="calendar_id" readonly="1"/>
+                                <field name="attending_type" readonly="1"/>
+                                <field name="sequence" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="sign_in" widget="float_time" required="1" readonly="1"/>
+                                <field name="sign_out" widget="float_time" required="1" readonly="1"/>
+                            </group>
+                        </group>
+                        <group name="attendance">
+                            <group>
+                                <field name="approve_lateness" required="1" readonly="1"/>
+                                <field name="lateness" string="Lateness" widget="float_time" readonly="1" force_save="1" store="1"/>
+                                <field name="approve_exit_out" required="1" readonly="1"/>
+                                <field name="early_exit" string="Early Exit" widget="float_time" required="1" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="plan_hours" widget="float_time" readonly="1"/>
+                                <field name="office_hours" widget="float_time" readonly="1"/>
+                                <field name="official_hours" widget="float_time" readonly="1"/>
+                                <field name="carried_hours" widget="float_time" readonly="1"/>
+                                <field name="break_duration" widget="float_time" readonly="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_attendance_calendar" model="ir.ui.view">
+            <field name="name">hr.attendance.transaction.calendar</field>
+            <field name="model">hr.attendance.transaction</field>
+            <field eval="2" name="priority"/>
+            <field name="arch" type="xml">
+                <calendar date_start="date" string="Transaction" mode="month" color="employee_id">
+                    <field name="employee_id"/>
+                    <field name="sign_in" />
+                    <field name="sign_out" />
+                </calendar>
+            </field>
+        </record>
+
+        <record id="view_transaction_graph" model="ir.ui.view">
+            <field name="name">hr.attendance.transaction.graph</field>
+            <field name="model">hr.attendance.transaction</field>
+            <field name="arch" type="xml">
+                <graph string="Attendance Transactions">
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                </graph>
+            </field>
+        </record>
+
+        <!-- view_attendance_transaction_filter -->
+        <record id="view_attendance_transaction_filter" model="ir.ui.view">
+            <field name="name">Attendance Transaction</field>
+            <field name="model">hr.attendance.transaction</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search>
+                  <field name="employee_id"/>
+                  <field name="employee_number"/>
+                  <field name="department_id" />
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                        <filter name="group_absent" string="Absent" domain="[]" context="{'group_by': 'is_absent'}"/> 
+                        <filter name="group_date" string="Date" domain="[]" context="{'group_by': 'date'}"/>
+                        <filter name="group_branch" string="Branch" domain="[]" context="{'group_by': 'is_branch'}"/>
+                    </group>
+                    <separator/>
+                       <filter string="Attendance Today" name="today_less"  domain="[('date','&gt;=',time.strftime('%%Y-%%m-%%d'))]"/>
+                       <!--filter string="Attendance Today" name="today_less" domain="[('to_date', '=', 'True')]"/-->
+                    <separator/>
+                    <separator/>
+                        <filter string="My Attendance" name="my_attendance" domain="[('employee_id.user_id', '=', uid)]"/>
+                    <separator/>
+
+                    <!--searchpanel>
+                        <field name="company_id" groups="base.group_multi_company" icon="fa-building" enable_counters="1"/>
+                        <field name="department_id" icon="fa-users" enable_counters="1"/>
+                    </searchpanel-->
+
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

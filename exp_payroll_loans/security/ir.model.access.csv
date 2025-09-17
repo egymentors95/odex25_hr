@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_reconcile_leaves_emp1,reconcile.leaves.emp,model_reconcile_leaves,base.group_user,1,1,1,1
+access_reconcile_leaves_hr2,reconcile.leaves.hr,model_reconcile_leaves,hr.group_hr_user,1,1,1,1
+access_reconcile_leaves_mgr3,reconcile.leaves.mgr,model_reconcile_leaves,hr_base.group_division_manager,1,1,1,1
+access_reconcile_allowance_deduction4,reconcile.allowance.deduction,model_reconcile_allowance_deduction,base.group_user,1,1,1,0

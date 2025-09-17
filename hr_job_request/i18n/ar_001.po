@@ -1,0 +1,467 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_job_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 07:05+0000\n"
+"PO-Revision-Date: 2022-09-13 07:05+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_applicant__priority__2
+msgid "Accept"
+msgstr "مقبول"
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_job_request__quarter__all_quarter
+msgid "All Quarter"
+msgstr "الكل"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__answer
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant__answer
+msgid "Answer"
+msgstr "إجابة"
+
+#. module: hr_job_request
+#: model_terms:ir.ui.view,arch_db:hr_job_request.hr_applicant_view_form_inherit
+msgid "Answer Question"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model,name:hr_job_request.model_hr_applicant
+msgid "Applicant"
+msgstr "المتقدم"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant__applicants_hr
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant__applicants_id
+#: model_terms:ir.ui.view,arch_db:hr_job_request.applicant_questions_form_view
+#: model_terms:ir.ui.view,arch_db:hr_job_request.hr_applicant_view_form_inherit
+msgid "Applicant Questions"
+msgstr "اسئلة المقابلة"
+
+#. module: hr_job_request
+#: model:ir.model,name:hr_job_request.model_applicant_questions_line
+msgid "Applicant Questions line"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant__priority
+msgid "Appreciation"
+msgstr "التقدير"
+
+#. module: hr_job_request
+#: model_terms:ir.ui.view,arch_db:hr_job_request.hr_job_view_form_inherit2
+msgid "Are You Sure you want to Open Jobs"
+msgstr "هل انت متاكد من فتح التوظيف"
+
+#. module: hr_job_request
+#: model_terms:ir.ui.view,arch_db:hr_job_request.job_request_form_view
+msgid "Are you sure to Reset To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المسوده؟"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__average_score
+msgid "Average Score"
+msgstr "درجة متوسطة"
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_job_request__state__confirm
+#: model_terms:ir.ui.view,arch_db:hr_job_request.job_request_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions__create_uid
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__create_uid
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant_questions__create_uid
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions__create_date
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__create_date
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant_questions__create_date
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__number_of_employees
+msgid "Current Employees"
+msgstr "الموظفون حاليا"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__department_id
+msgid "Department"
+msgstr "الإدارة"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions__display_name
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__display_name
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant__display_name
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant_questions__display_name
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job__display_name
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_applicant__priority__0
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_job_request__state__draft
+msgid "Draft"
+msgstr "مسوده"
+
+#. module: hr_job_request
+#: model:ir.model,name:hr_job_request.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_job_request
+#: model:ir.ui.menu,name:hr_job_request.hr_applicant_question
+#: model_terms:ir.ui.view,arch_db:hr_job_request.hr_applicant_view_form_inherit
+msgid "Employee Applicant Questions"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__number_of_job_empty
+msgid "Empty jobs"
+msgstr "الوظائف الشاغرة"
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_applicant__priority__5
+msgid "Excellent"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job__no_of_recruitment
+msgid "Expected New Employees"
+msgstr "الموظفين الجدد المتوقعين"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__expected_employee
+msgid "Expected jobs"
+msgstr "الوظائف المتوقعة"
+
+#. module: hr_job_request
+#: model:ir.model.fields,help:hr_job_request.field_hr_job__expected_employees
+msgid ""
+"Expected number of employees for this job position after new recruitment."
+msgstr "عدد الموظفين المتوقع أن يشغلوا هذا المنصب بعد التعيينات الجديدة."
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_job_request__quarter__first_quarter
+msgid "First Quarter"
+msgstr "الربع الاول"
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_job_request__quarter__fourth_quarter
+msgid "Fourth Quarter"
+msgstr "الربع الرابع"
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_applicant__priority__3
+msgid "Good"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__high_score
+msgid "High Score"
+msgstr "درجة عالية"
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_job_request__state__hr_approve
+#: model_terms:ir.ui.view,arch_db:hr_job_request.job_request_form_view
+msgid "Hr Approve"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions__id
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__id
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant__id
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant_questions__id
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job__id
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__job_id
+msgid "Job"
+msgstr "المهنة"
+
+#. module: hr_job_request
+#: model:ir.model,name:hr_job_request.model_hr_job
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: hr_job_request
+#: model:ir.actions.act_window,name:hr_job_request.job_request_action
+#: model:ir.ui.menu,name:hr_job_request.job_request_menu
+msgid "Job Request"
+msgstr "طلب الإحتياج الوظيفي"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job__job_request_ids
+#: model_terms:ir.ui.view,arch_db:hr_job_request.hr_job_view_form_inherit2
+msgid "Job Requests"
+msgstr "طلبات الإحتياج التوظيفي"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__job_requirements
+msgid "Job Requirements"
+msgstr "متطلبات الوظيفة"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions____last_update
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line____last_update
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant____last_update
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant_questions____last_update
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job____last_update
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions__write_uid
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__write_uid
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant_questions__write_uid
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions__write_date
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__write_date
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant_questions__write_date
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_job_request
+#: model_terms:ir.ui.view,arch_db:hr_job_request.hr_job_view_form_inherit2
+msgid "Launch Recruitment"
+msgstr "إطلاق التوظيف"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__low_score
+msgid "Low Score"
+msgstr "درجة منخفضة"
+
+#. module: hr_job_request
+#: model_terms:ir.ui.view,arch_db:hr_job_request.job_request_form_view
+msgid "Management Approve"
+msgstr "موافقة الرئيس التفيذى"
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_job_request__state__manager_approve
+msgid "Manager Approve"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions__name
+msgid "Name"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__name
+msgid "Name of Request"
+msgstr "الاسم"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__needed_employee
+msgid "Needed Employee"
+msgstr "عدد الوظائف المطلوبة"
+
+#. module: hr_job_request
+#: code:addons/hr_job_request/models/hr_base.py:0
+#, python-format
+msgid "No empty job position for this employee"
+msgstr "لا توجد وظائف شاغرة"
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_applicant__priority__1
+msgid "Normal"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__number
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant__number
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant_questions__number
+#: model_terms:ir.ui.view,arch_db:hr_job_request.applicant_questions_form_view
+msgid "Number"
+msgstr "الرقم"
+
+#. module: hr_job_request
+#: model_terms:ir.ui.view,arch_db:hr_job_request.hr_applicant_view_form_inherit
+msgid "Number Question"
+msgstr " رقم السؤال"
+
+#. module: hr_job_request
+#: model:ir.model.fields,help:hr_job_request.field_hr_job_request__number_of_employees
+msgid "Number of employees currently occupying this job position."
+msgstr "عدد الموظفون على الوظيفة"
+
+#. module: hr_job_request
+#: model:ir.model.fields,help:hr_job_request.field_hr_job__no_of_recruitment
+msgid "Number of new employees you expect to recruit."
+msgstr "عدد الموظفين المتوقع توظيفهم."
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__quarter
+msgid "Quarter"
+msgstr "الفترة"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__question
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant_questions__question
+#: model_terms:ir.ui.view,arch_db:hr_job_request.applicant_questions_form_view
+#: model_terms:ir.ui.view,arch_db:hr_job_request.hr_applicant_view_form_inherit
+msgid "Question"
+msgstr "السؤال"
+
+#. module: hr_job_request
+#: model:ir.actions.act_window,name:hr_job_request.hr_applicant_question_action
+msgid "Question applicant"
+msgstr "اسئلة المقابلة"
+
+#. module: hr_job_request
+#: model_terms:ir.ui.view,arch_db:hr_job_request.applicant_questions_form_view
+msgid "Questions Name"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_job_request__state__refused
+#: model_terms:ir.ui.view,arch_db:hr_job_request.job_request_form_view
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__date
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_job_request__quarter__second_quarter
+msgid "Second Quarter"
+msgstr "الربع الثاني"
+
+#. module: hr_job_request
+#: model_terms:ir.ui.view,arch_db:hr_job_request.job_request_form_view
+msgid "Set Draft"
+msgstr "ارجاع ل مسودة"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions__standard_applicant_id
+msgid "Standard Applicant"
+msgstr "المقابلة"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__standard_applicant_employee_line
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant__standard_applicant_employee_line_ids
+msgid "Standard Applicant Employee Line"
+msgstr "عناصر اسئلة مقابلة الموظف"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_applicant_questions_line__standard_applicant_hr_line
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant__standard_applicant_hr_line_ids
+msgid "Standard Applicant Hr Line"
+msgstr "عناصر اسئلة مقابلة الموظف"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_applicant_questions__standard_question_line
+msgid "Standard Question Line"
+msgstr "عناصر اسئلة المقابلة"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__state
+msgid "State"
+msgstr "الحـالة"
+
+#. module: hr_job_request
+#: model_terms:ir.ui.view,arch_db:hr_job_request.hr_job_view_form_inherit2
+msgid "Statistics"
+msgstr "إحصائيات"
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_job_request__quarter__third_quarter
+msgid "Third Quarter"
+msgstr "الربع الثالث"
+
+#. module: hr_job_request
+#: code:addons/hr_job_request/models/hr_base.py:0
+#, python-format
+msgid "This Job not available for this department"
+msgstr "هذه الوظيفة غير متاحة لهذا الهيكل الإداري"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__number_of_job_empty_total
+msgid "Total Empty jobs"
+msgstr "الوظائف الشاغرة"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job__expected_employees
+msgid "Total Forecasted Employees"
+msgstr "عدد الموظفين المتوقعين"
+
+#. module: hr_job_request
+#: model:ir.model.fields.selection,name:hr_job_request.selection__hr_applicant__priority__4
+msgid "Very Good"
+msgstr ""
+
+#. module: hr_job_request
+#: code:addons/hr_job_request/models/job_request.py:0
+#, python-format
+msgid "You Can not Cancel used jobs"
+msgstr "لا يمكن الغاء  طلب تم استخدام وظائفه"
+
+#. module: hr_job_request
+#: code:addons/hr_job_request/models/job_request.py:0
+#, python-format
+msgid "You can not delete record in state not in draft"
+msgstr "لا يمكن حذف سجل في حالة غير مسوده"
+
+#. module: hr_job_request
+#: code:addons/hr_job_request/models/hr_base.py:0
+#, python-format
+msgid "You need To open recruitment Before create New employee"
+msgstr "يجب فتح التوظيف قبل انشاء موظف  جديد"
+
+#. module: hr_job_request
+#: model:ir.model,name:hr_job_request.model_applicant_questions
+msgid "applicant.questions"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model,name:hr_job_request.model_hr_applicant_questions
+msgid "hr.applicant.questions"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model,name:hr_job_request.model_hr_job_request
+msgid "hr.job.request"
+msgstr ""
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request_job_requirements
+#: model_terms:ir.ui.view,arch_db:hr_job_request.job_request_form_view
+msgid "Job Requirements"
+msgstr "متطلبات الوظيفة"
+
+#. module: hr_job_request
+#: model:ir.model.fields,field_description:hr_job_request.field_hr_job_request__company_id
+msgid "Company"
+msgstr "الشركة"

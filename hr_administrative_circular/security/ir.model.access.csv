@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_terms_hr,hr.terms.hr,model_hr_terms_conditions,hr.group_hr_user,1,1,1,1
+access_hr_terms_all,hr.terms.all,model_hr_terms_conditions,base.group_user,1,0,0,0
+access_hr_administrative_circular_hr,hr.administrative.circular.hr,model_hr_administrative_circular,hr.group_hr_user,1,1,1,1
+access_hr_administrative_circular_executive,hr.administrative.circular.executive,model_hr_administrative_circular,hr_base.group_executive_manager,1,1,0,0
+access_hr_administrative_circular_manager,hr.administrative.circular.manager,model_hr_administrative_circular,hr_base.group_general_manager,1,1,0,0

@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="paperformat_attendance_landscapee" model="report.paperformat">
+            <field name="name">Attendance Landscape</field>
+            <field name="default" eval="False"/>
+            <field name="format">A4</field>
+            <field name="orientation">Landscape</field>
+<!--            <field name="margin_top">10</field>-->
+<!--            <field name="margin_bottom">10</field>-->
+<!--            <field name="margin_left">7</field>-->
+<!--            <field name="margin_right">7</field>-->
+<!--            <field name="header_line" eval="False"/>-->
+<!--            <field name="header_spacing">10</field>-->
+<!--            <field name="dpi">90</field>-->
+
+            <field name="margin_top">30</field>
+            <field name="margin_right">1</field>
+            <field name="margin_bottom">10</field>
+            <field name="margin_left">1</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">35</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="paperformat_euro_lowmarginn" model="report.paperformat">
+            <field name="name">A4 low margin</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">5</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">0</field>
+            <field name="dpi">80</field>
+        </record>
+
+
+        <template id="employee_attendance_report_template">
+            <div class="page" style="font-size:17pt">
+                <center>
+                    <h2 style="font-weight:bold">تقرير الحضور و الانصراف للعام</h2>
+                </center>
+                <br/>
+                <t t-foreach="mykey" t-as="key">
+
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th style=" border: 1px solid white; padding: 1px; font-size:0.8em;background-color: white;color: black;width:30%;text-align:center;">
+                                    الموظف
+                                </th>
+                                <th style=" border: 1px solid white; padding: 1px; font-size:0.8em;background-color: white;color: black;width:30%;text-align:center;">
+                                    مجموع التأخيرات
+                                </th>
+                                <th style=" border: 1px solid white; padding: 1px; font-size:0.8em;background-color: white;color: black;width:20%;text-align:center;">
+                                    مجموع الانصراف المبكر
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style=" border-bottom: 1px solid white; border-left: 1px solid white;border-right: 1px solid white;padding: 1px; width:20%;font-size:0.8em;background-color: white;color: black; text-align:center">
+                                    <t t-esc="key"/>
+                                </td>
+                                <td style=" border-bottom: 1px solid white; border-left: 1px solid white;border-right: 1px solid white;padding: 1px; width:20%;font-size:0.8em;background-color: white;color: black; text-align:center">
+                                    <t t-esc="total[key]['total_lateness']"/>
+                                </td>
+                                <td style=" border-bottom: 1px solid white; border-right: 1px solid white;padding: 1px;font-size:0.8em;background-color: white;color: black;width:20%;text-align:center">
+                                    <t t-esc="total[key]['total_early_exit']"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </t>
+            </div>
+        </template>
+        <template id="absent_attendance_report_template">
+            <div class="page" style="font-size:14pt">
+                <center>
+                    <h2 style="font-weight:bold">
+                        تقرير الغياب
+                        <br/>
+                        جميع الموظفين- تفصيلي
+                    </h2>
+                </center>
+                <br/>
+                <table style="width:100%">
+                    <tr>
+                        <td>
+                            <h4 style="font-weight:bold">من تاريخ</h4>
+                        </td>
+                        <td>
+                            <t t-esc="date_start"/>
+                        </td>
+                        <td>
+                            <h4 style="font-weight:bold">إلى</h4>
+                        </td>
+                        <td>
+                            <t t-esc="date_end"/>
+                        </td>
+                    </tr>
+                </table>
+                <br/>
+                <br/>
+                <t t-foreach="mykey" t-as="key">
+                    <table style="width:100%">
+                        <tr>
+                            <td style="font-weight:bold">الادارة</td>
+                            <td style="color:black">
+                                <t t-esc="key"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th style=" border: 1px solid white; padding: 1px; font-size:0.8em;background-color: white;color: black;width:30%;text-align:center;">
+                                    اسم الموظف
+                                </th>
+                                <th style=" border: 1px solid white; padding: 1px; font-size:0.8em;background-color: white;color: black;width:30%;text-align:center;">
+                                    اليوم
+                                </th>
+                                <th style=" border: 1px solid white; padding: 1px; font-size:0.8em;background-color: white;color: black;width:20%;text-align:center;">
+                                    التاريخ
+                                </th>
+                                <th style=" border: 1px solid white; padding: 1px;font-size:0.8em;background-color: white;color: black;width:20%;text-align:center;">
+                                    ملاحظات
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="data[key]" t-as="line">
+                                <tr>
+                                    <td style=" border-bottom: 1px solid gray; border-left: 1px solid white;border-right: 1px solid white;padding: 1px; width:20%;font-size:0.8em;background-color: white;color: black; text-align:center">
+                                        <t t-esc="line['employee_name']"/>
+                                    </td>
+                                    <td style=" border-bottom: 1px solid gray; border-left: 1px solid white;border-right: 1px solid white;padding: 1px; width:20%;font-size:0.8em;background-color: white;color: black; text-align:center">
+                                        <t t-esc="line['day']"/>
+                                    </td>
+                                    <td style=" border-bottom: 1px solid gray; border-left: 1px solid white;padding: 1px;font-size:0.8em;background-color: white;color: black;width:20%;text-align:center">
+                                        <t t-esc="line['date']"/>
+                                    </td>
+                                    <td style="border-bottom: 1px solid gray; border-left: 1px solid white;color:white;width:15%">
+                                        .
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                </t>
+            </div>
+        </template>
+         <template id="late_attendance_report_template">
+            <t t-foreach="mykey" t-as="key">
+                <div class="page" style="font-size:12pt" dir="rtl">
+                    <center>
+                        <h2 style="font-weight:bold">تقرير بالحضور والانصراف تفصيلى</h2>
+                    </center>
+                    <br/>
+                    <br/>
+                    <table style="width:100%;float:right">
+                        <tr style="width:100%;">
+                            <td style="font-weight:bold;width:25%;text-align:right">من تاريخ:</td>
+                            <td style="width:25%;text-align:right">
+                                <t t-esc="date_start"/>
+                            </td>
+                            <td style="font-weight:bold;width:25%;text-align:right">الى:</td>
+                            <td style="width:25%;text-align:right">
+                                <t t-esc="date_end"/>
+                            </td>
+                        </tr>
+                        <tr style="width:100%;">
+                            <td style="width:25%;font-weight:bold;text-align:right">رقم الموظف</td>
+                            <td style="width:25%;color:black;text-align:right">
+                                <t t-esc="emp_data[key][0]['emp_no']"/>
+                            </td>
+                            <td style="width:25%;font-weight:bold;text-align:right">المسمى الوظيفى</td>
+                            <td style="width:25%;color:black;text-align:right">
+                                <t t-esc="emp_data[key][0]['job']"/>
+                            </td>
+                        </tr>
+                        <tr style="width:100%;">
+                            <td style="width:25%;font-weight:bold;text-align:right">اسم الموظف</td>
+                            <td style="width:25%;color:black;text-align:right">
+                                <t t-esc="key"/>
+                            </td>
+                            <td style="width:25%;font-weight:bold;text-align:right">الادارة</td>
+                            <td style="width:25%;color:black;text-align:right">
+                                <t t-esc="emp_data[key][0]['department']"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <br/>
+                    <br/>
+                    <table class="table table-condensed" style="width:100%">
+                        <thead style="width:100%;">
+                            <tr style="width:100%;text-align:center;">
+                                <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:10%;text-align:center;">
+                                    التاريخ
+                                </th>
+                                <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:10%;text-align:center;">
+                                    اليوم
+                                </th>
+                                <th style=" border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:10%;text-align:center;">
+                                    وقت الدخول
+                                </th>
+                                <th style=" border: 1px solid gray; padding: 1px;font-size:0.8em;background-color: #b9d7d4;color: black;width:10%;text-align:center;">
+                                    وفت الخروج
+                                </th>
+                                <th style=" border: 1px solid gray; padding: 1px;font-size:0.8em;background-color: #b9d7d4;color: black;width:5%;text-align:center;">
+                                    التأخير
+                                </th>
+                                <th style=" border: 1px solid gray; padding: 1px;font-size:0.8em;background-color: #b9d7d4;color: black;width:5%;text-align:center;">
+                                    التفصير
+                                </th>
+                                <th style=" border: 1px solid gray; padding: 1px;font-size:0.8em;background-color: #b9d7d4;color: black;width:5%;text-align:center;">
+                                    الاضافى
+                                </th>
+                                <th style=" border: 1px solid gray; padding: 1px;font-size:0.8em;background-color: #b9d7d4;color: black;width:10%;text-align:center;">
+                                    ساعات العمل
+                                </th>
+                                <th style=" border: 1px solid gray; padding: 1px;font-size:0.8em;background-color: #b9d7d4;color: black;width:15%;text-align:center;">
+                                    ملاحظة
+                                </th>
+                                <th style=" border: 1px solid gray; padding: 1px;font-size:0.8em;background-color: #b9d7d4;color: black;width:20%;text-align:center;">
+                                    الوردية
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="data[key]" t-as="line">
+                                <tr style="text-align:center;">
+                                    <td style="border: 1px solid gray;padding: 1px; width:10%;font-size:0.8em;background-color: white;color: black; text-align:center">
+                                        <t t-esc="line['date']"/>
+                                    </td>
+                                    <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color:white;color: black;width:10%;text-align:center">
+                                        <t t-esc="line['day']"/>
+                                    </td>
+                                    <td style="border:1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;width:10%;text-align:center">
+                                        <t t-esc="'%02d:%02d' % (int(str(line['sig_in']).split('.')[0]), int(float(str('%.2f' % line['sig_in']).split('.')[1])/100*60))"/>
+                                    </td>
+                                    <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;width:10%;text-align:center">
+                                        <t t-esc="'%02d:%02d' % (int(str(line['sig_out']).split('.')[0]), int(float(str('%.2f' % line['sig_out']).split('.')[1])/100*60))"/>
+                                    </td>
+                                    <t t-if=" line['lateness'] > 0">
+                                        <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: red;width:5%;text-align:center">
+                                            <t t-esc="'%02d:%02d' % (int(str(line['lateness']).split('.')[0]), int(float(str('%.2f' % line['lateness']).split('.')[1])/100*60))"/>
+                                        </td>
+                                    </t>
+                                    <t t-else="">
+                                        <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;width:5%;text-align:center">
+                                            <t t-esc="'%02d:%02d' % (int(str(line['lateness']).split('.')[0]), int(float(str('%.2f' % line['lateness']).split('.')[1])/100*60))"/>
+                                        </td>
+                                    </t>
+                                    <t t-if=" line['early_exit'] > 0">
+                                        <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: red;width:5%;text-align:center">
+                                            <t t-esc="'%02d:%02d' % (int(str(line['early_exit']).split('.')[0]), int(float(str('%.2f' % line['early_exit']).split('.')[1])/100*60))"/>
+                                        </td>
+                                    </t>
+                                    <t t-else="">
+                                        <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;width:5%;text-align:center">
+                                            <t t-esc="'%02d:%02d' % (int(str(line['early_exit']).split('.')[0]), int(float(str('%.2f' % line['early_exit']).split('.')[1])/100*60))"/>
+                                        </td>
+                                    </t>
+                                    <t t-if=" line['extra_hours'] > 0">
+                                        <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: green;width:5%;text-align:center">
+                                            <t t-esc="'%02d:%02d' % (int(str(line['extra_hours']).split('.')[0]), int(float(str('%.2f' % line['extra_hours']).split('.')[1])/100*60))"/>
+                                        </td>
+
+                                    </t>
+                                    <t t-else="">
+                                        <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;width:5%;text-align:center">
+                                            <t t-esc="'%02d:%02d' % (int(str(line['extra_hours']).split('.')[0]), int(float(str('%.2f' % line['extra_hours']).split('.')[1])/100*60))"/>
+                                        </td>
+                                    </t>
+
+                                    <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;width:10%;text-align:center">
+                                        <t t-esc="'%02d:%02d' % (int(str(line['office_hours']).split('.')[0]), int(float(str('%.2f' % line['office_hours']).split('.')[1])/100*60))"/>
+                                    </td>
+
+                                    <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;width:15%;text-align:center">
+                                        <t t-esc="line['note']"/>
+                                    </td>
+                                    <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;width:20%;text-align:center">
+                                        <t t-esc="line['calendar_id']"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+
+                        <tfoot>
+                            <tr style="text-align:center;font-weight:bold;background-color: #b9d7d4">
+                                <td colspan="4" style="border: 1px solid gray; padding: 1px; font-size:0.8em;">المجموع
+                                </td>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;">
+                                    <t t-esc="'%02d:%02d' % (int(str(sum(line['lateness'] for line in data[key])).split('.')[0]), int(float(str('%.2f' % sum(line['lateness'] for line in data[key])).split('.')[1])/100*60))"/>
+                                </td>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;">
+                                    <t t-esc="'%02d:%02d' % (int(str(sum(line['early_exit'] for line in data[key])).split('.')[0]), int(float(str('%.2f' % sum(line['early_exit'] for line in data[key])).split('.')[1])/100*60))"/>
+                                </td>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;">
+                                    <t t-esc="'%02d:%02d' % (int(str(sum(line['extra_hours'] for line in data[key])).split('.')[0]), int(float(str('%.2f' % sum(line['extra_hours'] for line in data[key])).split('.')[1])/100*60))"/>
+                                </td>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;">
+                                    <t t-esc="'%02d:%02d' % (int(str(sum(line['office_hours'] for line in data[key])).split('.')[0]), int(float(str('%.2f' % sum(line['office_hours'] for line in data[key])).split('.')[1])/100*60))"/>
+                                </td>
+                                <td colspan="2" style="border: 1px solid gray;padding: 1px;font-size:0.8em;">--</td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <table class="table table-condensed" style="width:100%">
+                        <tr>
+                            <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                مجموع التأخير والتقصير
+                            </td>
+                            <td style=" border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                <t t-esc="total[key]['total_late_early'].split('.')[0]"/>
+
+                            </td>
+
+                            <td style=" border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                اجمالى ايام الغياب
+                            </td>
+                            <td style=" border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                <t t-esc="total[key]['total_absent']"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style=" border: 1px solid gray; padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                اجمالى الاضافى
+                            </td>
+                            <td style=" border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                <t t-esc="total[key]['total_extra_hours'].split('.')[0]"/>
+                            </td>
+                            <td style=" border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                اجمالى الاجازات والانتدابات
+                            </td>
+                            <td style=" border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: white;color: black;text-align:center;">
+                                <t t-esc="total[key]['total_leave']"/>
+                            </td>
+                        </tr>
+                    </table>
+                    <table style="width:100%;float:center">
+                        <tr style="width:100%;">
+                            <td style="width:50%;color:black;text-align:center">
+                                <t t-esc="print_date"/>
+                            </td>
+                            <td style="width:50%;color:black;text-align:center">
+                                <t t-esc="print_user"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div style="page-break-after: always;"/>
+
+            </t>
+
+
+        </template>
+        <template id="totals_only_attendance_report_template">
+            <div class="page" style="font-size:12pt;" dir="rtl">
+                <center>
+                    <h2 style="font-weight:bold">تقرير الحضور والانصراف للموظفين</h2>
+                </center>
+                <br/>
+
+                <div style="text-align: center; font-weight: bold; font-size: 16px;">
+                    من تاريخ : <span style="font-weight: normal;"><t t-esc="date_start"/></span>
+                    &#160;&#160;&#160;&#160;&#160; <!-- adds space between the two -->
+                    إلى : <span style="font-weight: normal;"><t t-esc="date_end"/></span>
+                </div>
+                <table  class="table table-condensed" style="width:100%">
+                    <thead  style="width:100%;">
+                        <tr style="width:100%;text-align:center; background-color: #b9d7d4 ">
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:6%;text-align:center;">الرقم الوظيفي</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:13%;text-align:center;">اسم الموظف</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:10%;text-align:center;">الدوام</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:10%;text-align:center;">رقم الهوية</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:10%;text-align:center;">اﻹدارة</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:10%;text-align:center;">المسمي الوظيفي</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:4%;text-align:center;">ايام<br/>الحضور</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:4%;text-align:center;">الاجازات</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:4%;text-align:center;">الاجازات<br/>الرسمية</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:4%;text-align:center;">الغياب</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:4%;text-align:center;">نسيان<br/>البصمة</th>
+
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:6%;text-align:center;">ساعات<br/>العمل<br/>الفعلية</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:6%;text-align:center;">ساعات<br/>العمل<br/>الاضافية</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:4%;text-align:center;">الاستئذان</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:6%;text-align:center;">مهام<br/>عمل<br/>انتداب<br/>تدريب</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:6%;text-align:center;">التأخيرات</th>
+                            <th style="border: 1px solid gray; padding: 1px; font-size:0.8em;background-color: #b9d7d4;color: black;width:6%;text-align:center;">الخروج<br/>المبكر</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="summary" t-as="row">
+                            <tr style="text-align:center;font-weight:bold;background-color: #b9d7d4">
+                                <td style="border: 1px solid gray;padding: 1px; width:6%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['employee_number']"/>
+                                <td style="border: 1px solid gray;padding: 1px; width:13%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['name']"/>
+
+                                <td style="border: 1px solid gray;padding: 1px; width:10%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['seq']"/>
+                                <td style="border: 1px solid gray;padding: 1px; width:10%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['iqama']"/>
+                                <td style="border: 1px solid gray;padding: 1px; width:10%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['department']"/>
+                                <td style="border: 1px solid gray;padding: 1px; width:10%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['job']"/>
+
+                                <td style="border: 1px solid gray;padding: 1px; width:4%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['days_present']"/>
+                                <td style="border: 1px solid gray;padding: 1px; width:4%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['leave_days']"/>
+                                <td style="border: 1px solid gray;padding: 1px; width:4%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['holiday_days']"/>
+                                <td style="border: 1px solid gray;padding: 1px; width:6%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['absent_days']"/>
+                                <td style="border: 1px solid gray;padding: 1px; width:6%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['missing_punch_days']"/>
+
+                                <td style="border: 1px solid gray;padding: 1px; width:6%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['office_hours']"/>
+                                <td style="border: 1px solid gray;padding: 1px; width:6%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['extra_hours']"/>
+                                <td style="border: 1px solid gray;padding: 1px; width:4%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['permission_hours']"/>
+                                <td style="border: 1px solid gray;padding: 1px; width:6%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['mission_hours']"/>
+                                <td style="border: 1px solid gray;padding: 1px; width:6%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['lateness_approved']"/>
+                                <td style="border: 1px solid gray;padding: 1px; width:6%;font-size:0.8em;background-color: white;color: black; text-align:center" t-esc="row['early_exit_approved']"/>
+
+                            </tr>
+
+
+                        </t>
+                        <t t-foreach="summary_totals" t-as="totals">
+                            <tr style="text-align:center;font-weight:bold;background-color: #d9ead3">
+                                <td colspan="6" style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: #f9f9f9;color: black; text-align:center">الإجمالي</td>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: #f9f9f9;color: black;" t-esc="totals['days_present']"/>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: #f9f9f9;color: black;" t-esc="totals['leave_days']"/>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: #f9f9f9;color: black;" t-esc="totals['holiday_days']"/>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: #f9f9f9;color: black;" t-esc="totals['absent_days']"/>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: #f9f9f9;color: black;" t-esc="totals['missing_punch_days']"/>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: #f9f9f9;color: black;" t-esc="totals['office_hours']"/>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: #f9f9f9;color: black;" t-esc="totals['extra_hours']"/>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: #f9f9f9;color: black;" t-esc="totals['permission_hours']"/>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: #f9f9f9;color: black;" t-esc="totals['mission_hours']"/>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: #f9f9f9;color: black;" t-esc="totals['lateness_approved']"/>
+                                <td style="border: 1px solid gray;padding: 1px;font-size:0.8em;background-color: #f9f9f9;color: black;" t-esc="totals['early_exit_approved']"/>
+                            </tr>
+
+                        </t>
+
+                    </tbody>
+                </table>
+            </div>
+        </template>
+
+        <template id="general_attendances_report_temp">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <style type="text/css">
+                        @font-face {
+                        font-family: 'ae_AlMohanad';
+                        src: local('ae_AlMohanad'), local('ae_AlMohanad'),
+                        url('/attendances/static/fonts/ae_AlMohanad.ttf') format('truetype');
+                        }
+                        *{
+                        font-family: ae_AlMohanad;
+                        }
+                    </style>
+
+<!--                    <t t-if="totals_only">-->
+<!--                        <t t-call="attendances.totals_only_attendance_report_template"/>-->
+<!--                    </t>-->
+
+<!--                    <t t-else="">-->
+                        <t t-if="type == 'late'">
+                            <t t-call="attendances.late_attendance_report_template"/>
+                        </t>
+                        <t t-if="type == 'absent'">
+                            <t t-call="attendances.absent_attendance_report_template"/>
+                        </t>
+                        <t t-if="type == 'employee'">
+                            <t t-call="attendances.employee_attendance_report_template"/>
+                        </t>
+                    </t>
+<!--                </t>-->
+            </t>
+        </template>
+
+
+        <template id="general_attendances_report_temp_land">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <style type="text/css">
+                        @font-face {
+                        font-family: 'ae_AlMohanad';
+                        src: local('ae_AlMohanad'), local('ae_AlMohanad'),
+                        url('/attendances/static/fonts/ae_AlMohanad.ttf') format('truetype');
+                        }
+                        *{
+                        font-family: ae_AlMohanad;
+                        }
+                    </style>
+
+                    <t t-call="attendances.totals_only_attendance_report_template"/>
+
+
+                </t>
+            </t>
+        </template>
+
+
+        <record id="action_totals_only_attendance_reportt" model="ir.actions.report">
+            <field name="model">employee.attendance.report</field>
+            <field name="name">Attendance Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">attendances.general_attendances_report_temp_land</field>
+            <field name="paperformat_id" ref="attendances.paperformat_attendance_landscapee"/>
+
+        </record>
+
+
+        <record id="action_general_attendance_reportt" model="ir.actions.report">
+            <field name="model">employee.attendance.report</field>
+            <field name="name">Attendance Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">attendances.general_attendances_report_temp</field>
+            <!--            <field name="paperformat_id" ref="attendances.paperformat_euro_lowmarginn"/>-->
+
+        </record>
+
+
+
+
+        <record id="general_attendance_action_xls" model="ir.actions.report">
+            <field name="model">employee.attendance.report</field>
+            <field name="name">Print to XLSX</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">attendances.general_attendance_xls</field>
+            <field name="report_file">Attendance Report</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+
+        <!--Leaves sub menu-->
+        <menuitem id="hr_holidays_community.menu_hr_holidays_my_leaves" parent="hr.menu_hr_root"
+                name="Leaves" sequence="3" />
+        <!--Leaves sub sub menu-->
+        <menuitem name="Return From Leave" id="return_from_leave"
+        parent="hr_holidays_community.menu_hr_holidays_my_leaves" sequence="4"
+        action="return_from_leave_action"/>
+        <!--Leaves sub sub menu-->
+        <menuitem name="Leave Cancellation" id="leave_cancellation"
+        parent="hr_holidays_community.menu_hr_holidays_my_leaves" sequence="5"
+        action="leave_cancellation_action"/>
+        <!--Leaves sub sub menu>
+        <menuitem name="Requests to Approve" id="requests_to_approve"
+        parent="hr_holidays.menu_hr_holidays_my_leaves" sequence="6"
+        action="hr_holidays.request_approve_holidays"/-->
+        <!--Leaves sub sub menu-->
+        <menuitem name="Leaves Balance" id="leaves_balance"
+        parent="hr_holidays_community.menu_hr_holidays_my_leaves" sequence="1"
+        action="leaves_balance_action"/>
+
+        <record model='ir.ui.menu' id='hr_holidays_community.menu_open_allocation_holidays'>
+            <field name="groups_id" eval="[ (4,ref('hr_base.group_division_manager')),
+                                            (4,ref('hr_base.group_general_manager')),
+                                            (4,ref('hr_base.group_executive_manager')),
+                                            (4,ref('hr_holidays_community.group_hr_holidays_user'))]"/>
+        </record>
+
+        <record model='ir.ui.menu' id='hr_holidays_community.menu_open_company_allocation'>
+            <field name="groups_id" eval="[(4,ref('attendances.make_invisible')),]"/>
+        </record>
+
+    </data>
+</odoo>

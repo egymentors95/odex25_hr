@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="administrative_circular_form_view" model="ir.ui.view">
+            <field name="name">Administrative Circular &amp; Decision Form</field>
+            <field name="model">hr.administrative.circular</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Submit"
+                                name="act_submit"
+                                states="draft"
+                                type="object"
+                                class="oe_highlight"
+                                groups="hr.group_hr_user"/>
+                        <button string="Confirm"
+                                name="act_hr"
+                                states="hr"
+                                type="object"
+                                class="oe_highlight"
+                                groups="hr.group_hr_manager"/>
+                        <button string="Approve"
+                                name="act_officer"
+                                states="officer"
+                                type="object"
+                                class="oe_highlight"
+                                groups="hr_base.group_executive_manager"/>
+                        <button string="Approve"
+                                name="act_manager"
+                                states="manager"
+                                type="object"
+                                class="oe_highlight"
+                                groups="hr_base.group_general_manager"/>
+                        <button string="Send"
+                                name="act_send"
+                                states="approve"
+                                type="object"
+                                class="oe_highlight"
+                                groups="hr.group_hr_user"/>
+                        <button string="Reset to Draft"
+                                name="act_reset"
+                                states="refuse,send"
+                                type="object"
+                                class="oe_highlight" confirm="Are you sure to Reset To Draft This Record?"
+                                groups="hr.group_hr_user"/>
+                        <button string="Refuse" name="act_refuse"
+                                states="draft,hr,officer,manager,approve"
+                                type="object"
+                                class="oe_highlight"
+                                groups="hr.group_hr_manager,hr_base.group_executive_manager,hr_base.group_general_manager"/>
+                        <field name="state" widget="statusbar"
+                        statusbar_visible="draft,hr,approve,send,refuse"/>
+                    </header>
+                    <sheet string="Administrative Circular/ Decision">
+                        <group col="1">
+                            <group attrs="{'readonly': [('state','!=','draft')]}" col="4" colspan="2">
+                                <field name="name" attrs="{'readonly':[('state','!=','draft')]}" colspan="4"/>
+                                <field name="responsible_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                                <field name="date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="type" attrs="{'readonly':[('state','!=','draft')]}" colspan="4"/>
+                            </group>
+                            <notebook>
+                                <page string="Employees" attrs="{'invisible': [('type','!=','internal')]}">
+                                    <field name="employee_ids" force_save="1"
+                                           attrs="{'readonly': [('state','!=','draft')]}"
+                                           nolabel="1" colspan="4"/>
+                                </page>
+                                <page string="Partners" attrs="{'invisible': [('type','!=','external')]}">
+                                    <field name="partner_ids" nolabel="1"
+                                           attrs="{'readonly': [('state','!=','draft')]}"/>
+                                </page>
+                                <page string="Terms &amp; Conditions">
+                                    <group col="2">
+                                        <field name="term_template_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                        <field name="terms"
+                                               nolabel="1"
+                                               colspan="2"
+                                               attrs="{'readonly':[('state','!=','draft')]}"
+                                               placeholder="Terms And Conditions"/>
+                                    </group>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="administrative_circular_tree_view">
+            <field name="name">Administrative Circulars &amp; Decisions Tree</field>
+            <field name="model">hr.administrative.circular</field>
+            <field name="arch" type="xml">
+                <tree string="Administrative Circulars &amp; Decisions">
+                    <field name="date"/>
+                    <field name="name"/>
+                    <field name="responsible_id"/>
+                    <field name="type"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="administrative_circular_action">
+            <field name="name">Administrative Circular &amp; Decision</field>
+            <field name="res_model">hr.administrative.circular</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="administrative_circular_menu"
+                  name="Administrative Circulars &amp; Decisions"
+                  parent="hr.menu_hr_main"
+                  sequence="3"
+                  action="administrative_circular_action"/>
+
+
+
+
+                  
+
+        <record id="terms_conditions_form_view" model="ir.ui.view">
+            <field name="name">Term/ Condition Form</field>
+            <field name="model">hr.terms.conditions</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet string="Term/ Condition">
+                        <group col="2">
+                            <field name="name"/>
+                            <field name="active"/>
+                            <label string="Description" for="name"/>
+                            <br/>
+                            <field name="description" nolabel="1" colspan="2"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

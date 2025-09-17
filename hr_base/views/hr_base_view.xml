@@ -1,0 +1,620 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+
+        <!-- employee my details record action -->
+        <!--<record model="ir.actions.act_window" id="employee_my details_list_action">-->
+        <!--<field name="name">Employees Details</field>-->
+        <!--<field name="res_model">hr.employee</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="view_mode">kanban,tree,form</field>-->
+        <!--</record>-->
+
+        <record model="ir.actions.act_window" id="employees_list_action">
+            <field name="name">Employees</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+        <!-- Qualification Form view-->
+        <record model="ir.ui.view" id="hr_qualification_form_view">
+            <field name="name">Qualification</field>
+            <field name="model">hr.qualification</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group name="hr_qualification" string="Qualifications">
+                            <group>
+                                <field name="uni_name"/>
+                                <field name="col_name"/>
+                                <field name="comp_date"/>
+                            </group>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Employees -->
+        <record id="hr_extension_form_view" model="ir.ui.view">
+            <field name="name">hr.extension.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="priority" eval="16"/>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <button  name="%(hr.plan_wizard_action)d" position="before">
+
+                    <button name="complete_state" string="Complete Employee Data" class="oe_highlight" type="object"
+                            states="draft" groups="hr.group_hr_user"/>
+
+                    <button name="open_sate" string="Approved" type="object" class="oe_highlight"
+                            states="complete" groups="hr.group_hr_manager"/>
+
+                    <button name="create_contract" string="Create Contract" class="oe_highlight" type="object"
+                            states="complete" groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                    <button name="draft_state" string="Rest TO Draft" class="oe_highlight" type="object"
+                            states="complete,open" groups="hr.group_hr_manager"
+                            confirm="Are you sure to Rest To Draft This Record?"/>
+                    <field name="state" widget="statusbar"/>
+                </button>
+
+
+                <xpath expr="//notebook//page[@name='public']" position="replace">
+                    <page name="public" string="Work Information">
+                        <div id="o_work_employee_container">
+                            <div id="o_work_employee_main">
+                                <group>
+                                    <group string="Position Info">
+                                        <!--                                <field name="Employee_type" string="Employee Type"-->
+                                        <!--                                       attrs="{'readonly':[('state','!=','draft')]}" required="True"/>-->
+                                        <field name="contract_id" string="Contract" readonly="1"
+                                               attrs="{'readonly':[('state','!=','draft')]}"/>
+                                        <field name="department_id" required="True" string="Department"
+                                               attrs="{'readonly':[('state','!=','draft')]}"/>
+                                        <field name="branch_name" string="Branch Name" invisible="1" readonly="1"/>
+                                        <field name="job_id" required="True" string="Job Position"
+                                               attrs="{'readonly':[('state','!=','draft')]}"/>
+                                        <field name="parent_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                        <field name="coach_id" attrs="{'readonly':[('state','!=','draft')]}"
+                                               string="Department Manager"/>
+                                    </group>
+                                    <group string="Contact Information">
+                                        <field name="address_id"
+                                               context="{'show_address': 1}"
+                                               options='{"always_reload": True, "highlight_first_line": True}'
+                                               groups="base.group_multi_company"
+                                               attrs="{'readonly':[('state','!=','draft')]}"/>
+                                        <field name="work_location" invisible="1"/>
+                                        <field name="working_location" attrs="{'readonly':[('state','!=','draft')]}"
+                                               string="Work Location"/>
+                                        <field name="work_email" widget="email" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                        <field name="personal_email" widget="email"
+                                               attrs="{'readonly':[('state','!=','draft')]}"/>
+                                        <field name="mobile_phone" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                        <field name="work_phone" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                        <field name="phone_ext" string="Extension Phone" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    </group>
+                                    <group name="managers" string="Approvers" class="hide-group-if-empty" invisible="1">
+                                        <!-- is overridden in other hr related modules -->
+                                    </group>
+                                </group>
+                            </div>
+                        </div>
+                        <field name="notes" placeholder="Other Information ..." colspan="4"
+                               groups="hr.group_hr_manager,hr.group_hr_user"/>
+                    </page>
+                </xpath>
+
+
+                <xpath expr="//field[@name='company_id']" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','not in','draft')]}
+                    </attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='country_id']" position="attributes">
+                    <attribute name="required">True</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="string">Display Name</attribute>
+                </xpath>
+
+                <!-- HR settings -->
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <!--field name="department" invisible="1"/-->
+                    <field name="first_hiring_date" string="First Hiring Date" readonly="1"/>
+                    <field name="joining_date" string="Job Joining Date" readonly="1"/>
+                    <field name="leaving_date" readonly="1"/>
+                    <label for="service_year" string="Total Service Year"/>
+                    <div>
+                        <field name="service_year" readonly="1" force_save="1" class="oe_inline"/>Years
+                        <field name="service_month" readonly="1" force_save="1" class="oe_inline"/>Months
+                        <field name="service_day" readonly="1" force_save="1" class="oe_inline"/>Days
+                    </div>
+                    <field name="base_salary" invisible="1"/>
+                    <field name="salary_in_words" invisible="1"/>
+
+                </xpath>
+                <xpath expr="//div[hasclass('oe_title')]" position="inside">
+                    <h3 attrs="{'readonly':[('state','!=','draft')]}">
+                        <field name="english_name" placeholder="English Name"
+                               attrs="{'readonly':[('state','!=','draft')]}"/>
+                    </h3>
+
+                    <label for="emp_no" string="Employee Number" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <h3 attrs="{'readonly':[('state','!=','draft')]}">
+                        <field name="emp_no" placeholder="Employee Number" required="True"
+                               attrs="{'readonly':[('state','!=','draft')]}"
+                        />
+                    </h3>
+                </xpath>
+
+                <xpath expr="//field[@name='category_ids']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='address_id']" position="attributes">
+                    <attribute name="attrs">{'readonly': [('state', '!=', 'draft')]}
+                    </attribute>
+                </xpath>
+
+
+                <xpath expr="//field[@name='bank_account_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//notebook//page[@name='hr_settings']" position="before">
+                    <page name="national_address" string="National Address">
+                        <group string="National Address">
+                            <group>
+                                <field name="country_address_id" options='{"no_open": True, "no_create": True}'
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="address_city" string="City Name"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="address_region" string="Address Region"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="street" string="Street" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="building_number" string="Building Number"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="postal_code" string="Postal Code"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="extra_number" string="Extra Number"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="property_type" string="Property Type"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="drug_type" string="Drug Type"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="apartment_number" string="Apartment Number"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//notebook//page[@name='hr_settings']" position="after">
+                    <page name="payroll_info" string="Payroll Info">
+                        <group name="bank_info">
+                            <field name="address_home_id"
+                                   context="{
+                                                'show_address': 1,
+                                                'default_type': 'private',
+                                                'form_view_ref': 'base.res_partner_view_form_private'}"
+                                   options='{"always_reload": True, "highlight_first_line": True}' invisible="1"/>
+                            <field name="payment_method" required="1"
+                                   attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="bank_account_id" context="{'default_partner_id': address_home_id}"
+                                   attrs="{'readonly':[('state','!=','draft')], 'required': [('payment_method','=','bank')],
+                                          'invisible': [('payment_method','=','cash')]}"/>
+                            <!--field name="iban" attrs="{'readonly':[('state','!=','draft')]}"/-->
+                            <field  name="bank_code" attrs="{'readonly':[('state','!=','draft')],'invisible': [('payment_method','=','cash')]}"/>
+                        </group>
+                    </page>
+
+                    <!-- Education and Experience -->
+                    <page string="Education and Experience" name="employee_education">
+                        <group name="qualifiction">
+                            <group name="qualification" string="Qualifications">
+                            </group>
+                            <field name="qualifiction_id" attrs="{'readonly':[('state','!=','draft')]}"
+                                   editable="bottom">
+                                <tree editable="bottom">
+                                    <field name="uni_name"/>
+                                    <field name="col_name"/>
+                                    <field name="qualification_id" string="Qualification Name"/>
+                                    <field name="qualification_specification_id" string="Qualification Specification"
+                                           context="{'default_type': 'qualification'}"/>
+                                    <field name="qualification_degree" string="Qualification Degree"/>
+                                    <field name="comp_date"/>
+                                    <field name="country_name" string="Country"/>
+                                    <field name="attachment" string="Attachment" widget="binary"/>
+                                </tree>
+                            </field>
+                        </group>
+                        <group name="certification" string="Certifications">
+                        </group>
+                        <field name="certification_id" attrs="{'readonly':[('state','!=','draft')]}">
+                            <tree string='Certification' editable="bottom">
+                                <field name="car_name"/>
+
+                                <field name="membership_type"/>
+                                <field name="category"/>
+
+                                <field name="certification_specification_id" string="certification Specification"
+                                       context="{'default_type': 'certificate'}"/>
+                                <field name="certification_degree" string="Certification Degree"/>
+                                <field name="issue_org"/>
+                                <field name="issue_date"/>
+                                <field name="exp_date"/>
+                                <field name="regis_no"/>
+                                <field name="country_name" string="Country"/>
+                                <field name="attachment" string="Attachment" widget="binary"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page name="Employment History" string="Employment history">
+                        <group>
+                            <label for="experience_year" string="Experience Duration"/>
+                            <div>
+                                <field name="experience_year" readonly="1" force_save="1" class="oe_inline"/>Years
+                                <field name="experience_month" readonly="1" force_save="1" class="oe_inline"/>Months
+                                <field name="experience_day" readonly="1" force_save="1" class="oe_inline"/>Days
+                            </div>
+                        </group>
+                        <field name="employment_history_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                            <tree>
+                                <field name="name" string="Company Name"/>
+                                <field name="position" string="Position"/>
+                                <field name="salary" string="salary"/>
+                                <field name="date_from" string="Date From" required="True"/>
+                                <field name="date_to" string="Date To" required="True"/>
+                                <field name="country" string="Country" required="True"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page name="attachments" string="Employee Attachments"
+                          groups="hr.group_hr_user">
+                        <field name="attachment_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                            <tree string="Attachments" editable="bottom">
+                                <field name="doc_name" string="Attachment Name"/>
+                                <field name="attachment" string="File"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+
+
+                <xpath expr="//page[@name='hr_settings']/group/group[1]//field[@name='job_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+
+                </xpath>
+
+                <xpath expr="//page[@name='hr_settings']/group/group[2]" position="replace">
+                    <group string="Attendance Info" name="attendance_ifo">
+                        <field name="finger_print" string="Has Fingerprint?"
+                               attrs="{'readonly':[('state','!=','draft')]}"/>
+                        <!-- <field name="barcode" string="Attendance ID" attrs="{'readonly':[('state','!=','draft')]}"/> -->
+                        <field name="resource_calendar_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                        <field name="active" string="Active" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    </group>
+                </xpath>
+
+
+                <field name="name" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}
+                    </attribute>
+                </field>
+                <field name="department_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}
+                    </attribute>
+                </field>
+                <field name="parent_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}
+                    </attribute>
+                </field>
+                <field name="coach_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}
+                    </attribute>
+                </field>
+                <field name="address_home_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}
+                    </attribute>
+                </field>
+                <field name="marital" position="after">
+                    <field name="gender" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                </field>
+                <field name="marital" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}
+                    </attribute>
+                </field>
+                <field name="children" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+
+                <field name="spouse_complete_name" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="spouse_birthdate" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+
+                <field name="birthday" position="attributes">
+                    <attribute name="required">True</attribute>
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+                </field>
+                <field name="place_of_birth" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}
+                    </attribute>
+                </field>
+
+                <field name="job_title" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+
+
+                <field name="user_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}
+                    </attribute>
+                </field>
+
+                <!--                <field name="address_home_id" position="attributes">-->
+                <!--                    <attribute name="invisible">1</attribute>-->
+                <!--                </field>-->
+
+
+                <xpath expr="//page[@name='personal_information']/group/group[2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook//page[@name='personal_information']/group/group[1]" position="replace">
+                    <group string="Citizenship">
+                        <field name="country_id" options='{"no_open": True, "no_create": True}'/>
+                        <field name="check_nationality" invisible="1"/>
+                        <field name="identity_number" string="Identity Number" force_save="1" invisible="1"/>
+                        <field name="is_address_home_a_company" invisible="1"/>
+                        <field name="identification_id" invisible="1"/>
+                        <field name="passport_id" invisible="1"/>
+                        <field name="gender" invisible="1"/>
+                        <field name="birthday" invisible="1"/>
+                        <field name="place_of_birth" invisible="1" groups="hr.group_hr_user"/>
+                        <field name="country_of_birth" invisible="1" groups="hr.group_hr_user"/>
+                    </group>
+                </xpath>
+                <xpath expr="//notebook//page[@name='personal_information']/group/group[4]" position="replace">
+                </xpath>
+
+
+                <xpath expr="//notebook//page[@name='personal_information']/group/group[6]" position="replace">
+                    <group string="Birthday">
+                        <field name="birthday"/>
+                        <field name="employee_age" string="Age"/>
+                        <field name="place_of_birth" groups="hr.group_hr_user"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//sheet/group" position="attributes">
+                    <attribute name="invisible">1</attribute>
+
+                </xpath>
+                <field name="emergency_contact" position="after">
+                    <field name="relationship"/>
+                </field>
+            </field>
+        </record>
+
+        <!-- view_employee_inherit_tree -->
+        <record id="view_employee_inherit_tree" model="ir.ui.view">
+            <field name="name">hr.employee.inherit.tree</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <tree position="replace">
+                    <tree decoration-danger="state == 'out_of_service'" decoration-info="state == 'draft'"
+                          string="Employees">
+                        <field name="emp_no"/>
+                        <field name="english_name" optional="hide"/>
+                        <field name="name"/>
+                        <field name="department_id"/>
+                        <field name="job_id"/>
+                        <field name="country_id" optional="hide" />
+                        <field name="gender" optional="hide" />
+<!--                              <field name="identity_number"  />-->
+                        <!--field name="saudi_number" string="Saudi ID"/>
+                        <field name="iqama_number" string="Identity No"/>
+                        <field name="iqama_expiy_date" string="Identity Expiry Date"/-->
+                        <field name="identity_number" string="Identity No"/>
+                        <field name="bank_code" optional="hide"/>
+                        <field name="iqama_expiy_date" string="Identity Expiry Date"  optional="hide"/>
+                        <field name="work_location" invisible="1"/>
+                        <field name="state"/>
+                    </tree>
+                </tree>
+            </field>
+        </record>
+
+        <!-- view_employee_inherit_filter -->
+        <record id="view_employee_filter_inherit" model="ir.ui.view">
+            <field name="name">Employees inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="type">search</field>
+            <field name="inherit_id" ref="hr.view_employee_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr='//field[@name="name"]' position='after'>
+                    <field name="english_name" />
+                    <field name="emp_no"/>
+                    <field name="identity_number"/>
+                    <field name="state"/>
+                </xpath>
+                <xpath expr="//field[@name='category_ids']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- employee_view_kanban_inherit -->
+
+        <record id="hr_employee_kanban_inherit" model="ir.ui.view">
+            <field name="name">hr employee kanban </field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
+            <field name="arch" type="xml">
+                <xpath expr='//field[@name="name"]' position='after'>
+                    <span t-if="record.emp_no.raw_value" class="o_kanban_record_subtitle">
+                        <field name="emp_no"/>
+                    </span>
+
+                    <span t-if="record.department_id.raw_value" class="o_kanban_record_subtitle">
+                        <field name="department_id"/>
+                    </span>
+
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_users_simple_form_inherit_hr" model="ir.ui.view">
+            <field name="name">view.users.simple.form.inherit.hr</field>
+            <field name="model">res.users</field>
+            <field name="inherit_id" ref="base.view_users_simple_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//label[@for='login']" position="attributes">
+                    <attribute name="string">Login</attribute>
+                </xpath>
+
+
+                <xpath expr="//field[@name='mobile']" position="after">
+                    <field name="create_employee_id" force_save="1" invisible="1"/>
+                    <field name="create_employee" force_save="1" string="Create Employee" invisible="not context.get('allow_create_employee', True)" attrs="{'invisible': [('create_employee_id', '>', 0)]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="action_hr_employee_create_user" model="ir.actions.server">
+            <field name="name">Create User</field>
+            <field name="model_id" ref="model_hr_employee"/>
+            <field name="binding_model_id" ref="model_hr_employee"/>
+            <field name="binding_view_types">form</field>
+            <field name="groups_id" eval="[(4, ref('hr.group_hr_user'))]"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = records.action_create_user()
+            </field>
+        </record>
+
+        <!-- end hr.employee -->
+
+        <!-- hr_employee_public_view_kanban_inherit -->
+
+        <record id="hr_employee_public_view_kanban_inherit" model="ir.ui.view">
+            <field name="name">hr employee public kanban </field>
+            <field name="model">hr.employee.public</field>
+            <field name="inherit_id" ref="hr.hr_employee_public_view_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//templates" position="before">
+                    <field name="current_leave_id"/>
+                    <field name="current_leave_state"/>
+                    <field name="leave_date_from"/>
+                    <field name="leave_date_to"/>
+                </xpath>
+                <xpath expr="//li[@id='last_login']" position="inside">
+                    <span t-if="record.current_leave_id.raw_value" style="font-size: 100%%"
+                          t-att-class="record.current_leave_state.raw_value=='validate'?'oe_kanban_button oe_kanban_color_3':'oe_kanban_button oe_kanban_color_2'"
+                          t-att-title="moment(record.leave_date_from.raw_value).format('ddd Do MMM') + ' - ' + moment(record.leave_date_to.raw_value).format('ddd Do MMM')">
+                        <field name="current_leave_id"/>
+                    </span>
+                </xpath>
+            </field>
+        </record>
+        <!-- end hr.employee.public -->
+
+        <record id="view_hr_job_form_inherit" model="ir.ui.view">
+            <field name="name">hr.job.form.inherit</field>
+            <field name="model">hr.job</field>
+            <field name="priority" eval="16"/>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+
+                <field name="department_id" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="english_name" required="1" placeholder="e.g.. Sales Manager"/>
+                </xpath>
+                <xpath expr="//notebook/page[2]" position="after">
+                    <page string="Employees">
+                        <field
+                                name="employee_ids"
+                                widget="many2many"
+                                domain="[('contract_id.state', '=', 'program_directory')]"
+                                readonly="1"
+                        />
+                    </page>
+                    <page string="Departments">
+                        <field name="department_ids" widget="many2many"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- hr_department_inherit -->
+        <record id="view_hr_department_form_inherit" model="ir.ui.view">
+            <field name="name">hr.department.form.inherit</field>
+            <field name="model">hr.department</field>
+            <field name="priority" eval="16"/>
+            <field name="inherit_id" ref="hr.view_department_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='manager_id']" position="after">
+                    <field name="email_manager"/>
+                    <field name="department_type" required="1"/>
+                    <field name="is_branch" string="Is Branch?"/>
+                    <field name="branch_name" string="Branch Name" context="{'hierarchical_naming': False}"/>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="after">
+                    <label for="english_name" class="oe_edit_only"/>
+                    <h1>
+                        <field name="english_name" required="1" placeholder="e.g.. Sales Manager"/>
+                    </h1>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="after">
+                    <field name="analytic_account_id"  options='{"no_open": True, "no_create": True}'/>
+                </xpath>
+                <xpath expr="//group" position="after">
+                    <notebook>
+                        <page string="Employees">
+                            <field
+                                    name="employee_ids"
+                                    widget="many2many"
+                                    domain="[('contract_id.state', '=', 'program_directory')]"
+                                    readonly="1"
+                            />
+                        </page>
+                        <page string="Jobs">
+                            <field name="job_ids" widget="many2many"/>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_calendar_view_form_inherit" model="ir.ui.view">
+            <field name="name">resource.calendar.form.inherit</field>
+            <field name="model">resource.calendar</field>
+            <field name="inherit_id" ref="resource.resource_calendar_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//notebook" position="inside">
+                    <page string="Overtime Settings" name="over_time_base1">
+                        <group>
+                            <field name="work_days" string="Work Days overtime"/>
+                            <field name="work_hour" string="Work Hours"/>
+                            <field name="overtime_factor_daily"/>
+                            <field name="overtime_factor_holiday"/>
+                            <field name="max_overtime_hour"/>
+                            <field name="request_after_day" groups="hr.group_hr_manager,hr.group_hr_user"/>
+                        </group>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

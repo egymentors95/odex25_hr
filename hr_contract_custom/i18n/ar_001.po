@@ -1,0 +1,3851 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_contract_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 10:04+0000\n"
+"PO-Revision-Date: 2022-09-13 10:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_contract_custom
+#: model:ir.actions.report,print_report_name:hr_contract_custom.payroll_report
+msgid "'Salary Letter for - %s' % (object.name)\""
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "( 1 )يعتبر التمهيد المذكور أعلاه جزءاً لا يتجزأ من هذا العقد."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(1)The above-mentioned preamble is considered as integral part of this\n"
+"                                            contract."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(10) Annual Vacation\n"
+"                                            <br/>\n"
+"                                            In addition to public holidays and other paid leave requires by the Saudi\n"
+"                                            Labor law, the Employee will be eligible for a vacation consisting of 30\n"
+"                                            days per year of employment in Saudi Arabia. The Employer shall have the\n"
+"                                            right to specify the starting date of the Employee’s annual vacation as\n"
+"                                            dictated by work requirements."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(10) الإجازة السنوية\n"
+"                                            <br/>\n"
+"                                            بالإضافة إلى العطل الرسمية العامة والإجازات الأخرى المدفوعة الأجر بموجب نظام\n"
+"                                            العمل السعودي، يستحق الموظف إجازة مدتها (30) ثلاثون يوماً عن كل سنة من\n"
+"                                            الخدمة في المملكة العربية السعودية على أن يحدد صاحب العمل موعدها بما يتناسب\n"
+"                                            مع ظروف العمل."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(11) Sick Leave\n"
+"                                            <br/>\n"
+"                                            Sick leave will be paid in accordance with the provisions of the Saudi\n"
+"                                            Arabian Labor Law, provided that the need for medical treatment and/or\n"
+"                                            hospitalization is confirmed in writing by an approved hospital."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(11) الإجازة المرضية\n"
+"                                            <br/>\n"
+"                                            يدفع الأجرعن الإجازة المرضية وفقاً لنظام العمل السعودي شرط أن تكون الحاجة\n"
+"                                            للعلاج الطبي و/أو الاستشفاء مثبتة كتابة من مستشفى معتمد."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(12) Social Insurance\n"
+"                                            <br/>\n"
+"                                            The Employer shall pay directly to the General Organization for Social\n"
+"                                            Insurance (\"GOSI\") an amount equal to the contribution which is required to\n"
+"                                            be made by an employer in accordance with the rules and regulations of GOSI.\n"
+"                                            The Employer will withhold contributions due by the Employee from the\n"
+"                                            Employee's salary only to the extent that the Employer is required or\n"
+"                                            permitted to do so pursuant to the rules and regulations of GOSI."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(12) التأمينات الاجتماعية\n"
+"                                            <br/>\n"
+"                                            يقتطع صاحب العمل من الراتب الشهري للموظف مبلغ النسبة المطلوبة من الموظف\n"
+"                                            لاشتراكه في نظام التأمينات الاجتماعية طبقا للوائح والأنظمة المعتمدة لدى\n"
+"                                            المؤسسة العامة للتأمينات الاجتماعية، بينما يدفع صاحب العمل نسبة الاشتراك\n"
+"                                            المطلوبة منه وفقا للوائح والأنظمة المعتمدة لدى المؤسسة العامة للتأمينات\n"
+"                                            الاجتماعية."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(13) Medical Insurance\n"
+"                                            <br/>\n"
+"                                            The Employee will be eligible to participate in medical insurance and\n"
+"                                            benefit plans in accordance with the practice in Saudi Arabia and in\n"
+"                                            accordance with the policies the Employer has in place from time to time."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(13) التأمين الطبي\n"
+"                                            <br/>\n"
+"                                            يوفر صاحب العمل للموظف تأمينا طبياً طبقاً للنظام المعمول به في المملكة\n"
+"                                            العربية السعودية ووفقا للسياسات التي يقررها صاحب العمل بين الحين والآخر."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(14) Laws and Instructions\n"
+"                                            <br/>\n"
+"                                            The Employee undertakes to comply with all policies, directives and\n"
+"                                            instructions issued by the Employer and with the laws, regulations and\n"
+"                                            customs of the Kingdom of Saudi Arabia. The Employer shall have no\n"
+"                                            responsibility for any penalties or liabilities incurred by the Employee due\n"
+"                                            the Employee's violation of such laws, regulations and customs."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(14) الأنظمة والتعليمات\n"
+"                                            <br/>\n"
+"                                            يتعهد الموظف بأن يتقيد بما يصدره صاحب العمل من سياسات وتوجيهات وتعليمات\n"
+"                                            وبكافة الأنظمة والأعراف المعمول بها في المملكة العربية السعودية. ولن يكون\n"
+"                                            صاحب العمل مسؤولاً عن أية عقوبات أو غرامات أو مطالبات نظامية يتعرض لها\n"
+"                                            الموظف نتيجةً لمخالفته أياً من هذه الأنظمة."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(15) Truth of Information\n"
+"                                            <br/>\n"
+"                                            The Employer shall have the right to verify about the correctness and truth\n"
+"                                            of information stated in the employment application and certificates\n"
+"                                            furnished by the Employee. The Employer shall have the right at any time to\n"
+"                                            terminate the contract without notice or compensation and the Employee will\n"
+"                                            bear any responsibility, losses or expenses if it has been proved that the\n"
+"                                            employment was based on cheating, misrepresentation or fraud."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(15) صحة المعلومات\n"
+"                                            <br/>\n"
+"                                            يحق لصاحب العمل أن يتأكد من صحة المعلومات وسلامتها الواردة في طلب التوظيف\n"
+"                                            والشهادات المقدمة من الموظف وفي حالة ثبوت أيّ احتيال أو تزوير أو غش فيها\n"
+"                                            فانه يحق للصاحب العمل إنهاء هذا العقد دون إشعار أو تعويض أو مكافأة وتحميله\n"
+"                                            مسئولية وتكاليف أيّ خسائر يتعرض لها صاحب العمل جراء ذلك إضافة إلى أيّ جزاءات\n"
+"                                            أو ملاحقات / مخالفات نظاميه قد تنتج عن ذلك."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(16) Other Employment and Strikes\n"
+"                                            <br/>\n"
+"                                            In accepting employment hereunder, the Employee, undertakes that he will not\n"
+"                                            engage in any other business or employment and that he will not for any\n"
+"                                            reason whatsoever engage in any strikes or other labor disputes or take part\n"
+"                                            in any industrial, political or social dispute or action involving the\n"
+"                                            cessation or withdrawal of the Employee’s labor."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(16) العمل لدى الغير والإضرابات\n"
+"                                            <br/>\n"
+"                                            بقبوله العمل بموجب هذا العقد، فإن الموظف يتعهد بأنه لن يمارس أيّ عمل أو\n"
+"                                            وظيفة أخرى لدى أيّ شخص أو جهة أخرى غير صاحب العمل، ولن يشارك، لأيّ سبب كان،\n"
+"                                            في أيّ إضراب عن العمل أو أية نزاعات عمالية أو صناعية أو سياسية أو اجتماعية،\n"
+"                                            أو في أيّ إجراء أو عمل قد يؤدي إلى توقف عمله أو انقطاعه."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(17) Other Matters\n"
+"                                            <br/>\n"
+"                                            Any stipulations, which are not specifically mentioned in this contract,\n"
+"                                            will be subject to the internal policies and procedures of the Employer and\n"
+"                                            the Saudi Labor Law. This includes all the amendments, rules, decisions and\n"
+"                                            circulars, being entered in the future."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(17) المسائل الأخرى\n"
+"                                            <br/>\n"
+"                                            كل أمر لم يرد بشأنه نص صريح على سبيل التحديد في هذا العقد يطبق عليه سياسات\n"
+"                                            ولوائح صاحب العمل الداخلية ونظام العمل السعودي ويشمل ذلك جميع التعديلات\n"
+"                                            واللوائح والقرارات والتعاميم التي أصدرت أو يتم إصدارها في المستقبل."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(18) Correspondences and Notifications\n"
+"                                            <br/>\n"
+"                                            The Employer will have the right to hand over all the notifications, or\n"
+"                                            information to the Employee directly by hand during his work or by sending\n"
+"                                            it to the Employee’s address in Saudi Arabia, or to advertise it on the\n"
+"                                            notice board in the Employer’s headquarters where the Employee works. This\n"
+"                                            delivery shall be deemed to be duly given on the date of notification and as\n"
+"                                            if it has been handed over by hand."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(18) المراسلات والإخطارات\n"
+"                                            <br/>\n"
+"                                            يحق لصاحب العمل أن يسلم جميع الإشعارات والاخطارات إلى\n"
+"                                            الموظف مباشرة باليد أثناء فترة عمله لديه أو على عنوانه (داخل المملكة) أو إلى\n"
+"                                            بريده الاليكتروني أو بوضعها على لوحة الإعلانات بمقر عمل صاحب العمل حيث يعمل\n"
+"                                            الموظف، ويعتبر هذا التسليم بمثابة إقرار باستلام تلك الإشعارات والاخطارات في\n"
+"                                            التاريخ المذكور في الإشعار وتعتبر هذه الإشعارات كأنما سلمت باليد."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(19) Confidentiality and Intellectual Property\n"
+"                                            <br/>\n"
+"                                            Without prejudice to Article (83) the Employee agrees and undertakes that\n"
+"                                            all the studies, information, statements and any other documents the\n"
+"                                            employee obtains during his work are considered the sole properties of the\n"
+"                                            Employee. Also all the research, inventions or copy rights related to the\n"
+"                                            company’s activities are considered sole properties of the company."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(19) السريـة والملكية الفكرية\n"
+"                                            <br/>\n"
+"                                            مع عدم الاخلال بما ورد في المادة (83)، يوافق الموظف على أن أيّة دراسات أو\n"
+"                                            معلومات أو بيانات أو أي مستندات يحصل عليها جراء عمله تعتبر ملكاً لصاحب العمل\n"
+"                                            وكذلك أي براءات اختراع أو أبحاث أو حقوق طبع ونشر تتعلق بنشاط صاحب العمل\n"
+"                                            يعتبر حقا خالصا له."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(2) التعيين\n"
+"                                            <br/>\n"
+"                                            يعمل الموظف على وظيفة"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(20) Termination\n"
+"                                            <br/>\n"
+"                                            Without prejudice to Article(74) (77) (80) of Saudi labor law in relation to\n"
+"                                            termination\n"
+"                                            <br/>\n"
+"                                            (a) Either party has the right to terminate a nonspecific contract provided\n"
+"                                            an appropriate reason is given and sixty (60) days’ notice written is\n"
+"                                            rendered to the other party. If the Employer decided that the Employee is no\n"
+"                                            longer suitable for the job or the position is being eliminated.\n"
+"                                            <br/>\n"
+"                                            (b) The Employer has the right to dismiss the Employee forthwith, without\n"
+"                                            notice or pay in lieu of such notice and without any right on the part of\n"
+"                                            the Employee to any other benefit, at any time while the Employee is on\n"
+"                                            probation or in the event the Employee commits any of the acts and\n"
+"                                            violations articulated into the Saudi Labor Law.\n"
+"                                            <br/>\n"
+"                                            (c ) End of service benefit shall be calculated on the basis of basic salary\n"
+"                                            and housing, transportation allowances. Commissions and other benefits such\n"
+"                                            as allowances in cash or in kind or any kind of incentives are not included\n"
+"                                            in the end of service benefit calculation."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(20) إنهاء العقد\n"
+"                                            <br/>\n"
+"                                            بما لا يتعارض مع ورد في المواد (74) (77) او (80) من نظام العمل السعودي عن\n"
+"                                            حالات الإنهاء وفسخ العقد.\n"
+"                                            <br/>\n"
+"                                            (1) يحق لأيّ من الطرفين إنهاء هذا العقد إذا كان غير محدد المدة بناء على سبب\n"
+"                                            مشروع يجب بيانه بموجب إشعار يوجه الى الطرف الاخر كتابه قبل الانهاء بمدة ستون\n"
+"                                            (60) يوما. إذا قرر صاحب العمل أن الموظف لم يعد يصلح للقيام بعمله أو أنه زائد\n"
+"                                            عن حاجة العمل.\n"
+"                                            <br/>\n"
+"                                            (2) يجوز لصاحب العمل أن ينهي خدمة الموظف فوراً وبدون فترة إنذار أو بدل فترة\n"
+"                                            إنذار، وبدون أي حق للموظف بأية تعويضات، وذلك في أي وقت أثناء فترة التجربة أو\n"
+"                                            في أي من الحالات و/أو المخالفات التي نص عليها نظام العمل السعودي.\n"
+"                                            <br/>\n"
+"\n"
+"                                            (ج) تحسب مكافأة نهاية الخدمة على أساس الراتب الأساسي مضافا إليه بدلا السكن\n"
+"                                            والنقل فقط، ولا تدخل أي بدلات أو عمولات أو أي منافع أخرى في احتساب المكافأة."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(21) Entire Contract\n"
+"                                            <br/>\n"
+"                                            This contract constitutes the entire contract between the parties with\n"
+"                                            respect to the Employee's employment by the Employer in the Kingdom of Saudi\n"
+"                                            Arabia and supersedes and render null and void all prior or contemporaneous\n"
+"                                            contract or understandings, whether oral or written."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(21) وحده العقد\n"
+"                                            <br/>\n"
+"                                            يشكل هذا العقد الاتفاق الكامل بين الطرفين فيما يخص توظيف الموظف من قبل صاحب\n"
+"                                            العمل في المملكة العربية السعودية. ويلغي هذا العقد ويحل محل جميع الاتفاقيات\n"
+"                                            والتفاهمات السابقة والحالية، كتابية كانت أم شفهية."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(22) التنازل واستقلالية النصوص\n"
+"                                            <br/>\n"
+"                                            إن عدم قيام أيّ من الطرفين في أيّ وقت بفرض تنفيذ أيّ من فقرات هذا العقد أو\n"
+"                                            لم يطالب الطرف الآخر بتنفيذ أيّ من فقراته، فإن ذلك لا يجب أن يفسر بأيّ حال\n"
+"                                            من الأحوال على أنه تنازل عن تلك الفقرة أو على أنه يؤثر على صلاحية هذا العقد\n"
+"                                            أو على حق أيّ من الطرفين في فرض تنفيذ كل فقرة من فقرات العقد وفقا لشروطه\n"
+"                                            وأحكامه. وإذا أصبح أيّ شرط من شروط هذا العقد أو جزء منه باطلاً، فإن ذلك لن\n"
+"                                            يبطل الشروط الأخرى أو الجزء المتبقي من الشرط المعني. ويظل هذا العقد في جميع\n"
+"                                            هذه الحالات سارياً ومرتب لكل اثاره النظامية."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(23) Governing Law and Disputes\n"
+"                                            <br/>\n"
+"                                            This contract shall be governed by and construed in accordance with the laws\n"
+"                                            and regulations of the Kingdom of Saudi Arabia, including without limitation\n"
+"                                            the Labor Law issued under Royal Decree No. M/51 dated 23/08/1426H. The\n"
+"                                            parties will make every effort to settle disputes amicably, but if the\n"
+"                                            parties are unable to reach an amicable settlement, the dispute will be\n"
+"                                            referred to and decided by the relevant and appropriate judicial body."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(23) النظام المطبق وتسوية المنازعات\n"
+"                                            <br/>\n"
+"                                            يخضع هذا العقد للأنظمة السعودية ويفسر وفقا لها، بما في ذلك ودون حصر نظام\n"
+"                                            العمل السعودي الصادر بموجب المرسوم الملكي رقم م/51 بتاريخ 23/08/1426هـ. وعلى\n"
+"                                            الطرفين أن يبذلا كل جهد ممكن لتسوية أيـّـة نزاعات تنشأ بينهما على خلفية هذا\n"
+"                                            العقد بالطرق الودية. وإذا تعذر ذلك، يحال النزاع إلى الجهة القضائية المختصة\n"
+"                                            للفصل في النزاع بشكل نهائي"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(24) Language\n"
+"                                            <br/>\n"
+"                                            The Arabic text shall supersede the English text in interpreting this\n"
+"                                            contract."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(24) اللغة\n"
+"                                            <br/>\n"
+"                                            اللغة المعتمدة في تفسير هذا العقد هي اللغة العربية."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(25) Copies of the contract\n"
+"                                            <br/>\n"
+"                                            This contract has been written into two copies in which each party will have\n"
+"                                            one copy after being signed by both parties."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(25) نسخ العقد\n"
+"                                            <br/>\n"
+"                                            حرر هذا العقد من نسختين أصليتين يحتفظ كل طرف بنسخة أصلية واحدة بعد التوقيع\n"
+"                                            عليها من قبل الطرفين."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(3) الراتب الشهري\n"
+"                                            <br/>\n"
+"                                            (ا) الراتب الشهري الأساسي للموظف هو ("
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(4) Allowances\n"
+"                                            <br/>\n"
+"                                            The Employee is eligible for the additional allowances specified below:\n"
+"                                            <br/>\n"
+"                                            (a) Housing Allowance\n"
+"                                            <br/>\n"
+"                                            The Employee shall be entitled to receive a housing allowance of (3) Three\n"
+"                                            basic Salary per annum, divided to 12 months and payable at the end of each\n"
+"                                            months.\n"
+"                                            <br/>\n"
+"                                            (b) Transportation\n"
+"                                            <br/>\n"
+"                                            The Employee shall be entitled to receive a car allowance of (10%) ten\n"
+"                                            percent from the basic Salary, payable at the end of each month."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(4) البدلات\n"
+"                                            <br/>\n"
+"                                            يستحق الموظف البدلات الإضافية التالية:\n"
+"                                            <br/>\n"
+"                                            (أ) السكن\n"
+"                                            <br/>\n"
+"                                            يحق للموظف الحصول على بدل سكن مقداره (3) ثلاث رواتب أساسية سنوياً، تقسم على\n"
+"                                            12 شهراَ وتدفع في آخر كل شهر.\n"
+"                                            <br/>\n"
+"                                            (ب) المواصلات\n"
+"                                            <br/>\n"
+"                                            يحق للموظف الحصول على بدل مواصلات بمقدار (10%) عشرة بالمائة من الراتب\n"
+"                                            الأساسي تدفع في آخر كل شهر."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(5) Work Location\n"
+"                                            <br/>\n"
+"                                            The Employee will be employed in the city of Riyadh21, Saudi Arabia."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(5) موقع العمل\n"
+"                                            <br/>\n"
+"                                            سيكون موقع عمل الموظف في مدينة الرياض، بالمملكة العربية السعودية."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(6) Period of Employment\n"
+"                                            <br/>\n"
+"                                            The duration of this contract is a one year, The start date is from"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(6) مدة العقد\n"
+"                                            <br/>\n"
+"                                            مدة هذا العقد سنة واحدة ميلادية، ويبدأ اعتبارا من تاريخ"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(7) Work Hours\n"
+"                                            <br/>\n"
+"                                            The number of hours actually worked in a work week shall normally be forty\n"
+"                                            (40) and the number of hours worked in each work day shall normally be eight\n"
+"                                            (8), exclusive of traveling time to and from work. If the Employee is a\n"
+"                                            Muslim, the working hour during the month of Ramadan shall normally be\n"
+"                                            thirty (30) hours and the work day shall normally be six (6) hours."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(7) ساعات العمل\n"
+"                                            <br/>\n"
+"                                            يبلغ عدد ساعات العمل الفعلي في أسبوع العمل الواحد أربعين (40) ساعة موزعة على\n"
+"                                            خمسة أيام عمل بواقع ثماني (8) ساعات لكل يوم عمل ولا يدخل فيها وقت التنقل من\n"
+"                                            وإلى موقع العمل. وفي شهر رمضان المبارك تكون ساعات العمل الأسبوعية للموظف\n"
+"                                            المسلم ثلاثين (30) ساعة بواقع ست (6) ساعات في اليوم."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(8) Overtime\n"
+"                                            <br/>\n"
+"                                            The Employee may be required to work overtime. The Employee will be\n"
+"                                            compensated for overtime in accordance with the Saudi Labor Law and the\n"
+"                                            Employer’s internal policy. The Employee shall not be able to claim overtime\n"
+"                                            unless such overtime work were authorized beforehand by his supervisor and\n"
+"                                            shall be in accordance with the Employers guidelines in this regards."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(8) العمل الإضافي\n"
+"                                            <br/>\n"
+"                                            يمكن أن يُطلب من الموظف العمل لساعات إضافية. ويعوض الموظف عن ساعات العمل\n"
+"                                            الإضافية وفقا لنظام العمل السعودي وسياسات صاحب العمل الداخلية، ولا يتم تعويض\n"
+"                                            الموظف عن العمل الإضافي إلا إذا كان ذلك العمل الإضافي قد تم بموافقة كتابية\n"
+"                                            ومسبقة من رئيس الموظف ووفقاً للوائح صاحب العمل."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(9) Holidays\n"
+"                                            <br/>\n"
+"                                            The Employee will be entitled to days off for public holidays in accordance\n"
+"                                            with the Saudi Labor Law. If the Employee is required to work on a holiday,\n"
+"                                            he shall be entitled to payment for every hour actually worked on such\n"
+"                                            holiday in accordance with the Saudi Labor Law."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"(9) العطل الرسمية\n"
+"                                            <br/>\n"
+"                                            يحق للموظف التمتع خلال السنة بالعطل الرسمية المعتمدة وفقاً لنظام العمل\n"
+"                                            السعودي. وإذا طلب منه أن يعمل خلال أيام العطل الرسمية، فإنه يستحق تعويضا عن\n"
+"                                            كل ساعة عمل فعلية وفقا لنظام العمل السعودي."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "(Hereinafter referred to as the “Employee”)."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "(ويشار إليه في هذا العقد بـ\"الموظف\")."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ") الرياض (12334). (ويشار إليها في هذا العقد بـ \"صاحب العمل\")،"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+") ريال سعودي شاملاً كافة أيام الشهر بما فيها عطلات نهاية الأسبوع والعطل\n"
+"                                            الرسمية.\n"
+"                                            <br/>\n"
+"                                            (ب) يُدفع راتب الموظف الأساسي الشهري، إضافة إلى أي بدلات أو مدفوعات أخرى،\n"
+"                                            ناقصاً أية اقتطاعات مستحقة عليه، على أساس شهري في آخر كل شهر (حسب التقويم\n"
+"                                            الميلادي)."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.salary_letter_report_template
+msgid ") ريــال فقط"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+").\n"
+"                                            <br/>\n"
+"                                            (b) The Employee's monthly salary plus any other allowances or payments\n"
+"                                            minus any deductions shall be paid monthly at the end of each month (in\n"
+"                                            accordance with the Gregorian calendar)."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+",\n"
+"                                            a Saudi company existing under the laws of the Kingdom of Saudi Arabia and\n"
+"                                            having its principal place of business in Riyadh, its postal address is P.O.\n"
+"                                            Box"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ", Riyadh 12334, (hereinafter referred to as the “Employer”)."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.salary_letter_report_template
+msgid ""
+".\n"
+"                                و يتقاضى المذكور راتـبـا اجمالي مقداره\n"
+"                                <br/>\n"
+"                                ("
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__dependent__1
+msgid "1+1 "
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__dependent__2
+msgid "1+2 "
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__dependent__3
+msgid "1+3 "
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "1. شركة"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__c_vacation__12
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__contract_duration__12_months
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__nod__12
+#, python-format
+msgid "12 Months"
+msgstr "12 شهر"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__c_vacation__18
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__nod__18
+msgid "18 Months"
+msgstr "18 شهر"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"2) Appointment\n"
+"                                            <br/>\n"
+"                                            The Employer hereby appoint the Employee to work as"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "2. Mr."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "2. السيد /"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"22)\n"
+"                                            Waiver and Severability\n"
+"                                            <br/>\n"
+"                                            The failure of either party to enforce at any time any of the provisions of\n"
+"                                            this contract or to require at any time performance by the other party of\n"
+"                                            any of the provisions hereof, shall in no way be construed to be a waiver of\n"
+"                                            the provisions or to affect the validity of this contract or the right of\n"
+"                                            either party thereafter to enforce each and every provision in accordance\n"
+"                                            with the terms of this contract. Invalidation of any provision of this\n"
+"                                            contract, or portion thereof, shall not invalidate any other provision or\n"
+"                                            the remainder of the relevant provision and the rest of this contract shall\n"
+"                                            in all such cases remain in full force and effect."
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__c_vacation__24
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__contract_duration__24_months
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__nod__24
+#, python-format
+msgid "24 Months"
+msgstr "24 شهر"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__probation__3
+msgid "3 Months"
+msgstr "3 شهور"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"3.Monthly Salary\n"
+"                                            <br/>\n"
+"                                            (a) The Employee's basic monthly salary, which includes each and every day\n"
+"                                            of the month, including the Weekend, and holidays, is SR ("
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__probation__6
+msgid "6 Months"
+msgstr "6 شهور"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.salary_letter_report_template
+msgid ""
+"<br/>\n"
+"                            <span style=\"font-size: 20px;margin-right: 8%;\">\n"
+"                                الموافق :\n"
+"                            </span>"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.salary_letter_report_template
+msgid ""
+"<span style=\"font-size: 20px;margin-right: 8%;\">\n"
+"                                <strong>\n"
+"                                    الســـادة /\n"
+"                                    -------------------------------------------------------------------------\n"
+"                                    المـحـتـرمـيـن\n"
+"                                </strong>\n"
+"                            </span>"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.salary_letter_report_template
+msgid ""
+"<span style=\"font-size: 20px;margin-right: 8%;\">\n"
+"                                التاريخ :\n"
+"                            </span>"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.salary_letter_report_template
+msgid ""
+"<span style=\"font-size: 22px;\">\n"
+"                                    <strong>شاكرين تعاونكم .. و لكم تحياتي ،،،،،،،</strong>\n"
+"                                </span>"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__blood_type__ab+
+msgid "AB+"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__blood_type__ab-
+msgid "AB−"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__acls_date
+#, python-format
+msgid "ACLS Date"
+msgstr "تاريخ الامتداد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_needaction
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__activity_ids
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__activity_state
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__activity_type_icon
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__adults
+msgid "Adult(s)"
+msgstr "البالغين"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__advatages
+msgid "Advatages"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_children_allowance__age
+#, python-format
+msgid "Age"
+msgstr "العمر"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__air_allow
+msgid "Air Allowance"
+msgstr "بدل طيران"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__air_ticket_amount
+msgid "Air Ticket Amount"
+msgstr "مبلغ تذاكر الطيران"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__air_ticket_eligible
+#, python-format
+msgid "Air Ticket Eligible"
+msgstr "تذكره طيران مؤهلة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__air_ticket_number
+msgid "Air Ticket No."
+msgstr "رقم تذكره الطيران."
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__dependent__all
+msgid "All "
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__all_exper_day
+msgid "All Exper Day"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__all_exper_month
+msgid "All Exper Month"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__all_exper_year
+msgid "All Exper Year"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__loan_allow
+msgid "Allow Loan Allowance"
+msgstr "بدلات قرض"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__allow_mbl
+msgid "Allow Mobile Allowance"
+msgstr "بدلات جوال"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract_type__salary_type__amount
+#, python-format
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__analytic_account_id
+msgid "Analytic Account"
+msgstr "مركز التكلفة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__annual_leave
+msgid "Annual Leave"
+msgstr "أجازات السنوية"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__annual_leave_days
+msgid "Annual Leave In Days"
+msgstr "أيام الاجازات السنوية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__appraisal
+#, python-format
+msgid "Appraisal"
+msgstr "توصية"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+msgid "Are you sure to Reset To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المبدئي؟"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+msgid "Are you sure to Reset To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المبدئي؟"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_employee_form_view_inherit
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_attachment_count
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "Authorized Representative:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__bls_date
+#, python-format
+msgid "BLS Date"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__status__bachelor
+msgid "Bachelor"
+msgstr "بكالوريوس"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__bk_balance
+msgid "Bank Balance"
+msgstr "رصيد البنك"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__salary
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_employee__base_salary
+msgid "Base Salary"
+msgstr "الراتب الاساسي"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__birth_place
+#, python-format
+msgid "Birth Place"
+msgstr "مكان الميلاد"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_employee_form_view_inherit
+msgid "BirthDay"
+msgstr "تاريخ الميلاد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__blood_type
+msgid "Blood Type"
+msgstr "فصليه الدم"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__breakdown_allowance
+msgid "Breakdown Allowance"
+msgstr "بدل انهيار"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__field_allowance_type__company
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__transport_allowance_type__company
+msgid "By Company"
+msgstr "بواسطه الشركة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__car_allowance
+#, python-format
+msgid "Car Allowance"
+msgstr "بدل سياره"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__cash_sales
+msgid "Cash Sales"
+msgstr "مبيعات كاش"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__category
+#, python-format
+msgid "Category"
+msgstr "الفئة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__children_allowance
+#, python-format
+msgid "Children Allowance"
+msgstr "بدلات للأطفال"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_children_allowance__name
+#, python-format
+msgid "Children Name"
+msgstr "اسم الطفل"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Choose Employee Number"
+msgstr "اختيار رقم الموظف"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__religion__christian
+#, python-format
+msgid "Christian"
+msgstr "غير مسلم"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__city
+#, python-format
+msgid "City Hired From"
+msgstr "مدينة استأجرت من"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_type__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__comments
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+msgid "Comments"
+msgstr "ملاحظات"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__communication_allowance
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__communication_allowance_temp
+#, python-format
+msgid "Communication Allowance"
+msgstr "بدل اتصال"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__communication_allowance_type
+#, python-format
+msgid "Communication Allowance Type"
+msgstr "نوع بدلات الاتصال"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__company_id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__c_accommodation
+msgid "Company Accommodation"
+msgstr "شركه الاقامة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__c_vehicle
+msgid "Company Vehicle"
+msgstr "سيارة الشركة"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+msgid "Confirm"
+msgstr "إرســال"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract_extension__state__confirm
+msgid "wait Direct Manager"
+msgstr "إنتظار المدير المباشر"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract_extension__state__emp_confirm
+msgid "wait Employee"
+msgstr "إنتظار الموظف"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract_extension__state__direct_manager
+msgid "Wait HR Approve"
+msgstr "إنتظار الموارد البشرية"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract_extension__state__refused
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract_extension__state__hr_approve
+msgid "Approved"
+msgstr "تم التصديق"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract_extension__type__confirm
+msgid "Confirm"
+msgstr "إجتاز فترة التجربة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract_extension__type__extension
+msgid "Extension"
+msgstr "تمديد فترة التجربة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract_extension__type__end
+msgid "Contract End"
+msgstr "لم يجتز فترة التجربة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__contact_address
+#, python-format
+msgid "Contact address"
+msgstr "عنوان المتصل"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_children_allowance__contract_id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__contract_id
+#: model:ir.ui.menu,name:hr_contract_custom.hr_employee_re_contract_menu_sub
+#, python-format
+msgid "Contract"
+msgstr "العقد"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#, python-format
+msgid "Contract -%s Expired End Period On %s"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__contract_date_end
+msgid "Contract Date end"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__contract_description
+#, python-format
+msgid "Contract Description"
+msgstr "وصف العقد"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__contract_draft
+#, python-format
+msgid "Contract Draft"
+msgstr "مشروع العقد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__contract_duration
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__contract_duration_cal
+msgid "Contract Duration"
+msgstr "مده العقد"
+
+#. module: hr_contract_custom
+#: model:ir.actions.act_window,name:hr_contract_custom.extension_action_view
+#: model:ir.ui.menu,name:hr_contract_custom.contract_extension_menu
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_tree_view
+msgid "Contract Extension"
+msgstr "تمديد فترة التجربة"
+
+#. module: hr_contract_custom
+#: model:ir.actions.report,name:hr_contract_custom.employee_contract_action_report
+msgid "Contract Form"
+msgstr "صيغة العقد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__name
+msgid "Contract Reference"
+msgstr "رقم إشارة العقد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__contract_status
+msgid "Contract Status"
+msgstr "حالة التعاقد"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_re_contract.py:0
+#: model:ir.model,name:hr_contract_custom.model_hr_contract_type
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__contract_type
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_type__name
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__contract_type
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_type_view_form
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_type_view_search
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+#, python-format
+msgid "Contract Type"
+msgstr "نوع العقد"
+
+#. module: hr_contract_custom
+#: model:ir.actions.act_window,name:hr_contract_custom.action_hr_contract_type
+#: model:ir.ui.menu,name:hr_contract_custom.hr_menu_contract_type
+msgid "Contract Types"
+msgstr "أنواع العقود"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#, python-format
+msgid "Contract-%s Expired Trial Period On %s"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_tree
+msgid "Contracting"
+msgstr "تعاقد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__contractor_type
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__type_id
+msgid "Contractor Type"
+msgstr "نوع التعاقد"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_view_tree_inherit
+msgid "Contracts"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__c_vacation
+msgid "Contractual Vacation"
+msgstr "إجازة تعاقدية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__country
+#, python-format
+msgid "Country Hired From"
+msgstr "بلد استأجر من"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_employee_form_view_inherit
+msgid "Create Employee Dependants"
+msgstr "إنشاء الموظفين المعالين"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_children_allowance__create_uid
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__create_uid
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_type__create_uid
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__create_uid
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_vacation_dest__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_children_allowance__create_date
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__create_date
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_type__create_date
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__create_date
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_vacation_dest__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__contract_id
+msgid "Current Contract"
+msgstr "العقود الحالية"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__eoc_date
+msgid "Current Contract End Date"
+msgstr "تاريخ انتهاء العقد الحالي"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__start_date
+msgid "Current Contract Start Date"
+msgstr "تاريخ بداية العقد الحالي"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_extension__contract_id
+msgid "Current contract of the employee"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract_extension.py:0
+#, python-format
+msgid "Date Form Must be Less Than Date To"
+msgstr "تاريخ البداية يجب ان يكون قبل تاريخ النهاية"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__date_from
+msgid "Date From"
+msgstr "تاريخ البداية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__date_of_birth
+#, python-format
+msgid "Date Of Birth"
+msgstr "تاريخ الميلاد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__date
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+msgid "Date Request"
+msgstr "تاريخ الطلب"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__date_to
+msgid "Date To"
+msgstr "تاريخ النهاية"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Days"
+msgstr "اليوم"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract__working_hours
+msgid "Define the schedule of resource"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__department_id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__department_id
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_search_view
+msgid "Department"
+msgstr "الهيكل الإداري"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__department_id
+#, python-format
+msgid "Department Name"
+msgstr "الهيكل الإداري"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__departure
+msgid "Departure Air Port"
+msgstr "مطار المغادرة"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Dependants"
+msgstr "المعالين"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__dependants_ticket_amount
+msgid "Dependants Ticket Amount"
+msgstr "مبلغ تذكره المعالين"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__dependent
+msgid "Dependent"
+msgstr "المعالين"
+
+#. module: hr_contract_custom
+#: model:ir.actions.report,name:hr_contract_custom.dependents_contract_action_report
+msgid "Dependents Report"
+msgstr "تقرير المعالين"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_employee_form_view_inherit
+msgid "Dependents and Family"
+msgstr "الأسرة والمعالين"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid "Dependents:"
+msgstr "المعالين:"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__destination
+msgid "Destination Air Port"
+msgstr "مطار الوجهة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_re_contract__state__direct_manager
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+msgid "Direct Manager"
+msgstr "المدير مباشر"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+msgid "Direct Manager approve"
+msgstr "موافقة المدير مباشر"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_children_allowance__display_name
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__dn
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__display_name
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_type__display_name
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__display_name
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_vacation_dest__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__marital__divorced
+#, python-format
+msgid "Divorced"
+msgstr "مطلق او مطلقة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract_extension__state__draft
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_re_contract__state__draft
+#, python-format
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__driving_lic_exp_date
+#, python-format
+msgid "Driving License Expiry Date"
+msgstr "تاريخ انتهاء الرخصة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__driving_lic_issue_date
+#, python-format
+msgid "Driving License Issue Date"
+msgstr "تاريخ اصدار الرخصة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__driving_lic_issue_place
+#, python-format
+msgid "Driving License Issue Place"
+msgstr "مكان اصدار الرخصة"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Duration"
+msgstr "المدة"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "EMPLOYMENT Contract"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__education_allowance
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__education_allowance_temp
+#, python-format
+msgid "Education Allowance"
+msgstr "بدلات تعليمية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__education_allowance_type
+#, python-format
+msgid "Education Allowance Type"
+msgstr "نوع البدلات التعليمية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_children_allowance__fees
+#, python-format
+msgid "Educational Fees"
+msgstr "مصاريف التعليم"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__e_date
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__effective_date
+msgid "Effective Date"
+msgstr "تاريخ التنفيذ"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__effective_from
+#, python-format
+msgid "Effective From"
+msgstr "اعتبارا من"
+
+#. module: hr_contract_custom
+#: model:ir.model,name:hr_contract_custom.model_hr_employee
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__employee_id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__employee_id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_search_view
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Employee Approval"
+msgstr "تأكيد العقد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__employee_code
+msgid "Employee Code"
+msgstr "رمز الموظف"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+msgid "Employee Confirm"
+msgstr "موافقة الموظف"
+
+#. module: hr_contract_custom
+#: model:ir.model,name:hr_contract_custom.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__employee_dependant
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_employee__employee_dependant
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_employee_form_view_inherit
+#, python-format
+msgid "Employee Dependants"
+msgstr "المعالـين"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__employee_dependent_ids
+msgid "Employee Dependent"
+msgstr "موظف تابع"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+msgid "Employee Information"
+msgstr "معلومات الموظف"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__employee_name
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__employee_type
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_employee__employee_type_id
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_employee_form_view_inherit
+#, python-format
+msgid "Employee Type"
+msgstr "نوع الموظف"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__emp_type
+#, python-format
+msgid "Annual Leave Entitlement"
+msgstr "الاستحقاق السنوي للاجازة"
+
+#. module: hr_contract_custom
+#: model:ir.actions.server,name:hr_contract_custom.contracts_mail_reminder_ir_actions_server
+#: model:ir.cron,cron_name:hr_contract_custom.contracts_mail_reminder
+#: model:ir.cron,name:hr_contract_custom.contracts_mail_reminder
+msgid "Employee contract Period Expiration"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__state__employeed_aproval
+#, python-format
+msgid "Employeed Approval"
+msgstr "الموافقة على العقد"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#, python-format
+msgid "End  date must be greater than Start date"
+msgstr "يجب أن يكون تاريخ النهاية أكبر من تاريخ البداية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__state__end_contract
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+#, python-format
+msgid "End Contract"
+msgstr "نهاية التعاقد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__date_end
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__end_date
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract__date_end
+msgid "End date of the contract (if it's a fixed-term contract)."
+msgstr "تاريخ انتهاء العقد (إذا كان عقدًا محدد المدة)."
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract__trial_date_end
+msgid "End date of the trial period (if there is one)."
+msgstr "تاريخ انتهاء الفترة التجريبية (إذا وجدت)."
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__trial_date_end
+msgid "End of Trial Period"
+msgstr "نهاية الفترة التجريبية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__state__program_directory
+#, python-format
+msgid "Executive Approval"
+msgstr "اعتماد عقد الموظف"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__exit_and_return
+#, python-format
+msgid "Exit and Return"
+msgstr " الخروج والعوده"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__exit_and_return_amount
+#, python-format
+msgid "Exit and Return Amount"
+msgstr "خروج و إرجاع المبلغ"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__experience_year
+msgid "Experience Year"
+msgstr "سنين الخبرة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract_extension.py:0
+#, python-format
+msgid "Extension Date Form Must be Greater than Old Date To"
+msgstr "تاريخ بداية تمديد التجربة يجب ان يكون بعد فترة التجربة الاولى"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+msgid "Extension Information"
+msgstr " فترة تمديد التجــربة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__gender__female
+#, python-format
+msgid "Female"
+msgstr "انثى"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__field_allowance
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__field_allowance_temp
+#, python-format
+msgid "Field Allowance"
+msgstr "بدل مجال"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__field_allowance_type
+#, python-format
+msgid "Field Allowance Type"
+msgstr "نوع علاوة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__fn
+msgid "First Name"
+msgstr "الاسم الأول"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__f_ot
+msgid "Fixed OT"
+msgstr "ثابت OT"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_follower_ids
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_channel_ids
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_partner_ids
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_extension__activity_type_icon
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_re_contract__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__f_allow
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__food_allowance2
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__food_allowance2_temp
+#, python-format
+msgid "Food Allowance"
+msgstr "بدل وجبات"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__food_allowance_type
+#, python-format
+msgid "Food Allowance Type"
+msgstr "نوع بدل وجبات"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid "For Human Resources Department"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "G by and between:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"G, subject to provisions regarding the termination of employment contained\n"
+"                                            in this contract, The Employee shall, however, be on probation for the first\n"
+"                                            three (3) Gregorian months of employment.\n"
+"                                            The probation period might be extended for no longer than 180 days excluding\n"
+"                                            all official holydays and sick leave provided the extension of the probation\n"
+"                                            period is written and agreed upon by both parties.\n"
+"                                            A party shall notify the other in writing indicating the desire to terminate\n"
+"                                            this contract, if terminated during the probation period the employee is not\n"
+"                                            entitled to end of service reward nor any kind of rewards in accordance with\n"
+"                                            Saudi labor law. If there is no termination during the probation period and\n"
+"                                            the contract continues in effect the contract will be automatically renewed\n"
+"                                            for the same term unless, either party notify the other if the intention not\n"
+"                                            to renew the contract. Renewing the contract for three consecutive times or\n"
+"                                            if the duration of the original contact including the renewal is 4years\n"
+"                                            which duration is lesser, the contract will be deemed a nonspecific\n"
+"                                            contract."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__gosi
+msgid "GOSI"
+msgstr "التأمينات الاجتماعية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__gender
+#, python-format
+msgid "Gender"
+msgstr "الجنس"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_type__sequence
+msgid "Gives the sequence when displaying a list of Contract."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__gosi_deduction
+msgid "Gosi (Employee Percentage)"
+msgstr "(نسبه الموظف ) التأمينات الاجتماعية"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__gosi_employer_deduction
+msgid "Gosi (Employer Percentage)"
+msgstr "(نسبه الموظف ) التأمينات الاجتماعية"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "H, corresponding to"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+msgid "HR Approve"
+msgstr "موافقة الموارد البشرية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__state__hr_head_approval
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+#, python-format
+msgid "HR Head Approval"
+msgstr "موافقة  الموارد البشرية"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_re_contract__state__hr_manager
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+msgid "HR Manager"
+msgstr "مدير الموارد البشرية"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__hra
+msgid "HRA"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__has_end_service_benefit
+msgid "Has end service benefits"
+msgstr "لديها فوائد خدمة نهاية"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__hire_date
+msgid "Hire Date"
+msgstr "تاريخ مباشرة العمل"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__hiring_date
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Hiring Date"
+msgstr "تاريخ مباشرة العمل"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__house_allowance
+#, python-format
+msgid "House Allowance"
+msgstr "بدل السكن"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__house_allowance_type
+#, python-format
+msgid "House Allowance Type"
+msgstr "نوع بدل السكن"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__hr_expense
+msgid "Hr Expense"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"I do hereby declare that the information provided is to the best of my "
+"knowledge true and accurate."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_children_allowance__id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_type__id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_vacation_dest__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_extension__activity_exception_icon
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_re_contract__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_extension__message_needaction
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_extension__message_unread
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_re_contract__message_needaction
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_re_contract__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_extension__message_has_error
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_extension__message_has_sms_error
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_re_contract__message_has_error
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_re_contract__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__incentive
+msgid "Incentive"
+msgstr "حافز"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__increase_salary
+msgid "Increase Salary?"
+msgstr "زياده راتب؟"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__infants
+msgid "Infants"
+msgstr "الرضع"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__infect_allowance
+#, python-format
+msgid "Infection Allowance"
+msgstr "بدل العدوى"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__infect_allowance_type
+#, python-format
+msgid "Infection Allowance Type"
+msgstr "نوع بدل العدوى"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__insurance
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+#, python-format
+msgid "Insurance"
+msgstr "التأمينات الإجتماعية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__insurance_date
+#, python-format
+msgid "Insurance Date"
+msgstr "تاريخ التامين"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__insurance_type
+#, python-format
+msgid "Insurance Type"
+msgstr "نوع التامين"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__contract_type__international
+#, python-format
+msgid "International"
+msgstr "عالمى"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_is_follower
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__is_gosi_deducted
+msgid "Is Gosi Deducted"
+msgstr "هل خصم تأمينات اجتماعية"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Is gosi?"
+msgstr "يوجد تأمينات أجتماعية؟"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__job_id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__job_id
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__join_date
+#, python-format
+msgid "Join Date"
+msgstr "تاريخ الانضمام للعمل"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_children_allowance____last_update
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension____last_update
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_type____last_update
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract____last_update
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_vacation_dest____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__ln
+msgid "Last Name"
+msgstr "اخر اسم"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__last_renewal
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+msgid "Last Renewal?"
+msgstr "أخر سجل تجديد؟"
+
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__iqama_end_date
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+msgid "Identity End Date"
+msgstr "تاريخ نهاية الهوية"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_children_allowance__write_uid
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__write_uid
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_type__write_uid
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__write_uid
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_vacation_dest__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_children_allowance__write_date
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__write_date
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_type__write_date
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__write_date
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_vacation_dest__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_re_contract__contract_id
+msgid "Latest contract of the employee"
+msgstr "اخر عقد للموظفين"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__contract_type__local
+#, python-format
+msgid "Local"
+msgstr "محلي"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__gender__male
+#, python-format
+msgid "Male"
+msgstr "ذكر"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__marital
+#, python-format
+msgid "Marital Status"
+msgstr "الحالة الاجتماعية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__marital__married
+#, python-format
+msgid "Married"
+msgstr "متزوج"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__medical
+msgid "Medical"
+msgstr "طبي"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__medical_ins_allowance
+#, python-format
+msgid "Medical Insurance Allowance"
+msgstr "بدلات التامين الطبي"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__medical_ins_exp_date
+#, python-format
+msgid "Medical Insurance Expiry Date"
+msgstr "تاريخ انتهاء التامين الطبي"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__medical_ins_issue_date
+#, python-format
+msgid "Medical Insurance Issue Date"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_has_error
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_ids
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__mn
+msgid "Middle Name"
+msgstr "الاسم الوسطى"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__mobile_no
+#, python-format
+msgid "Mobile No"
+msgstr "رقم الجوال"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__monthly_salary
+msgid "Monthly Salary"
+msgstr "المرتب الشهري"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Months"
+msgstr "شهر"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__religion__muslim
+#, python-format
+msgid "Muslim"
+msgstr "مسلم"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__my_activity_date_deadline
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_re_contract__increase_salary__no
+msgid "NO"
+msgstr "لا"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_vacation_dest__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_employee_form_view_inherit
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__nationality
+msgid "Nationality (Country)"
+msgstr "الجنسية (البلد)"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__new_contract_end_date
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+msgid "New Contract End Date"
+msgstr "تاريخ نهاية العقد الجديد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__new_contract_start_date
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+msgid "New Contract Start Date"
+msgstr "تاريخ بداية العقد الجديد"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_re_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_re_contract.py:0
+#, python-format
+msgid "New Contract must have start date after the end date of old contract"
+msgstr "يجب أن يكون تاريخ بداية العقد الجديد أكبر من تاريخ النهاية القديم"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_re_contract.py:0
+#, python-format
+msgid "New Contract start date must be before the end date"
+msgstr "يجب أن يكون تاريخ بداية العقد الجديد أكبر من تاريخ نهاية  العقد الجديد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__new_salary
+msgid "New Salary"
+msgstr "الراتب الجديد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__activity_summary
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__activity_type_id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__annual_leave__no
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__c_accommodation__no
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__c_vehicle__no
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__incentive__no
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__medical__no
+#, python-format
+msgid "No"
+msgstr "لا"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#, python-format
+msgid "None"
+msgstr "لا شيء"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__communication_allowance_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__education_allowance_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__field_allowance_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__food_allowance_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__house_allowance_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__infect_allowance_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__insurance_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__other_allowance_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__other_deduction_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__retire_allowance_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__security_allowance_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__special_allowance_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__supervision_allowance_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__transport_allowance_type__num
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__travel_allowance_type__num
+#, python-format
+msgid "Number"
+msgstr "رقم"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__nod
+msgid "Number of days"
+msgstr "عدد الأيام"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_extension__message_needaction_counter
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_re_contract__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_extension__message_has_error_counter
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_re_contract__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_extension__message_unread_counter
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_re_contract__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__other_allowance
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__other_allowance_temp
+#, python-format
+msgid "Other Allowances"
+msgstr "بدلات اخرى"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__other_allowance_type
+#, python-format
+msgid "Other Allowances Type"
+msgstr "نوع البدلات الأخرى"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__other_deduction
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__other_deductions
+#, python-format
+msgid "Other Deductions"
+msgstr "خصومات اخري"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__other_deduction_type
+#, python-format
+msgid "Other Deductions Type"
+msgstr "نوع الاستقطاعات الأخرى"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__employee_type__external
+#, python-format
+msgid "Outsource1"
+msgstr "خارجي1"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__employee_type__external2
+#, python-format
+msgid "Outsource2"
+msgstr "خارجي2"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__employee_type__displaced
+#, python-format
+msgid "Displaced Tribes"
+msgstr "قبائل نازحة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__employee_type__foreign
+#, python-format
+msgid "Foreign"
+msgstr "مقييم"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__employee_type__saudi
+#, python-format
+msgid "Saudi"
+msgstr "مواطن"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__overtime_eligible
+#, python-format
+msgid "Overtime Eligibility"
+msgstr "جداره العمل الإضافي"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__overtime_eligible_float
+#, python-format
+msgid "Overtime Eligibility Amount"
+msgstr "مبلغ الأهلية او الجدارة  الإضافية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__p_o_box_no
+#, python-format
+msgid "P. O. Box"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__package
+msgid "Package"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__passport_expiry_date
+#, python-format
+msgid "Passport Expiry Date"
+msgstr "تاريخ انتهاء جواز السفر"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__passport_issue_date
+#, python-format
+msgid "Passport Issue Date"
+msgstr "تاريخ إصدار الجواز"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__passport_issue_place
+#, python-format
+msgid "Passport Issue Place"
+msgstr "مكان اصدار جواز السفر"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__passport_number
+#, python-format
+msgid "Passport number"
+msgstr "رقم الجواز"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_employee__payslip_lines
+msgid "Payslip Lines"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#, python-format
+msgid "Percentage"
+msgstr "نسبه"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Percentage of company insurance"
+msgstr "نسبة المؤسسة من التأمينات"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Percentage of employee insurance"
+msgstr "نسبة الموظف من التأمينات"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_re_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__contract_description__permanent
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_re_contract__contract_type__permanent
+#, python-format
+msgid "Permanent"
+msgstr "غير محدد المدة"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Personal Information"
+msgstr "معلومات شخصية"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"Please complete this form indicate the Date, Month, Year in Gregorian  (If "
+"possible) and return it back to our department after your signature."
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__point_of_hire
+#, python-format
+msgid "Point of hire"
+msgstr "نقطة تأجير او توظيف"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"Position, or any work assigned to him/ her so long the Employee has all\n"
+"                                            credentials and experiences to carry out this work. The location of the job\n"
+"                                            shall be Riyadh or any other locations decided by the company in accordance\n"
+"                                            with labour law and internal procedures, provided these conditions are met\n"
+"                                            Written acceptance by the employee must be obtained if the company decide to\n"
+"                                            transfer the employee to a different location, under urgent circumstances\n"
+"                                            only, the employer may order the employee to relocate to a different\n"
+"                                            location provided these conditions are satisfied:The relocation duration\n"
+"                                            shall not exceed 30 days, the employer shall compensate the employee or the\n"
+"                                            employer incur all the cost with respect to housing and transportation as a\n"
+"                                            result of the relocation."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "Preamble:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__previous_contract_id
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Previous Contract"
+msgstr "العقد السابق"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__probation
+msgid "Probation"
+msgstr "فترة التجربة"
+
+#. module: hr_contract_custom
+#: model:ir.actions.report,name:hr_contract_custom.probationary_evaluation_report_act
+msgid "Probationary Evaluation Period  Form"
+msgstr "نموذج تقييم فترة التجربة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_re_contract__state__done
+#: model:ir.ui.menu,name:hr_contract_custom.hr_employee_re_contract_menu
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+msgid "Re-Contract"
+msgstr "تجديد العقد"
+
+#. module: hr_contract_custom
+#: model:ir.actions.act_window,name:hr_contract_custom.open_view_re_contracting_form
+msgid "Re-Contracting"
+msgstr "تجديد العقد"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+msgid "Re-Draft"
+msgstr "إرجاع الى المسوده"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__reason
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__reason
+msgid "Reason/Justification"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_re_contract__state__refuse
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__religion
+#, python-format
+msgid "Religion"
+msgstr "دين"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_children_allowance__remarks
+#, python-format
+msgid "Remarks"
+msgstr "ملاحظات"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__activity_user_id
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__retire_allowance_type
+#, python-format
+msgid "Retire Allowance Type"
+msgstr "أنواع بدل التعاقد"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__retire_allowance
+#, python-format
+msgid "Retirement Allowance"
+msgstr "بدل التقاعد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_employee__salary_in_words
+msgid "Salary In Words"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__salary_insurnce
+msgid "Salary Insurnce"
+msgstr "اساسي التأمينات"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__journal_id
+msgid "Salary Journal"
+msgstr "يومية الرواتب"
+
+#. module: hr_contract_custom
+#: model:ir.actions.report,name:hr_contract_custom.payroll_report
+msgid "Salary Letter"
+msgstr "تعريف راتب"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Salary Scale"
+msgstr "سلم الرواتب"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_type__salary_type
+msgid "Salary Type"
+msgstr "نوع الراتب"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__saudi_com_expiry_date
+#, python-format
+msgid "Saudi Commission Expiry Date"
+msgstr "تاريخ انتهاء صلاحية العمولة السعودية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__saudi_com_date
+#, python-format
+msgid "Saudi Commission Issue Date"
+msgstr "تاريخ إصدار الهيئة السعودية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__saudi_com_number
+#, python-format
+msgid "Saudi Commission Number"
+msgstr "رقم العمولة السعودية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__saudi_emp_type__saudi-contract
+#, python-format
+msgid "Saudi Contracting"
+msgstr "مواطن متعاقد"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__saudi_emp_type
+#, python-format
+msgid "Saudi Employee Type"
+msgstr "نوع الموظف المواطن"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__saudi_id_iqama_expiry
+#, python-format
+msgid "Saudi ID / Identity Expiry Date"
+msgstr "الهوية الوطنية /  تاريخ انتهاء صلاحية الهوية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__saudi_id_iqama_date
+#, python-format
+msgid "Saudi ID / Identity Issue Date"
+msgstr "الهوية الوطنية /  تاريخ إصدار الهوية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__saudi_id_iqama
+#, python-format
+msgid "Saudi ID / Identity No."
+msgstr "رقم الهوية الوطنية / الهوية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__saudi_emp_type__saudi-non
+#, python-format
+msgid "Saudi Non-Contracting"
+msgstr "مواطن غير متعاقد"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract_type__salary_type__scale
+#, python-format
+msgid "Scale"
+msgstr "سلم الرواتب"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_type_view_search
+msgid "Search Contract Type"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__security_allowance
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__security_allowance_temp
+#, python-format
+msgid "Security Allowance"
+msgstr "بدل الأمن"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__security_allowance_type
+#, python-format
+msgid "Security Allowance Type"
+msgstr "انواع بدلات الامن"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_type__sequence
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_type_view_search
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+msgid "Set To Draft"
+msgstr "إرجاع الى مبدئي"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__sign_bonous
+msgid "Sign on Bounus"
+msgstr "التوقيع على مكافأة"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid "Signature"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "Signature:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__marital__single
+#, python-format
+msgid "Single"
+msgstr "اعزب"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__social_insurance
+msgid "Social Insurance"
+msgstr "التأمينات الاجتماعية"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#, python-format
+msgid "Sorry, Can Not Create More than One contract for an Employeet %s"
+msgstr "لايمكن انشاء اكثر من عقد للموظف %s"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract_extension.py:0
+#, python-format
+msgid "Sorry, For Employee %s Confirm Only !"
+msgstr "للأسف, لموافقة الموظف %s فقط !"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract_extension.py:0
+#, python-format
+msgid "Sorry, Not possible Confirm Or Extension request After End"
+msgstr "للأسف, لايمكن اجتياز فترة التجربة او تمديها للموظف بعد إنهاء فترة التجربة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract_extension.py:0
+#, python-format
+msgid "Sorry, Not possible End Or Extension request After Confirm"
+msgstr "للأسف, لايمكن إنهاء فترة التجربة او تمديها للموظف بعد اجتياز فترة التجربة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract_extension.py:0
+#, python-format
+msgid "Sorry, Not possible to request Confirm Form more than once"
+msgstr "للأسف, لايمكن إجتياز فترة التجربة للموظف اكثر من مرة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract_extension.py:0
+#, python-format
+msgid "Sorry, Not possible to request Extension Form more than once"
+msgstr "للأسف, لايمكن تمديد فترة التجربة للموظف اكثر من مرة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract_extension.py:0
+#, python-format
+msgid "Sorry, Not possible to request Extension with Not Contract"
+msgstr "للأسف, لايمكن تمديد فترة التجربة للموظف وليس لديه عقد"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract_extension.py:0
+#, python-format
+msgid "Sorry, Not possible to request Termination Form more than once"
+msgstr "للأسف, لايمكن إنهاء فترة التجربة للموظف اكثر من مرة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__special_allowance
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__special_allowance_temp
+#, python-format
+msgid "Special Allowance"
+msgstr "بدلات خاصة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__special_allowance_type
+#, python-format
+msgid "Special Allowance Type"
+msgstr "انواع البدلات الخاصة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__specialty
+#, python-format
+msgid "Specialty"
+msgstr "تخصص"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__date_start
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract__date_start
+msgid "Start date of the contract."
+msgstr "تاريخ بدء العقد."
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__state
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__state
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_tree
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__state
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__status
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_extension__activity_state
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_re_contract__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract__state
+msgid "Status of the contract"
+msgstr "حالة العقد"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.view_re-contracting_form
+msgid "Submit"
+msgstr "إرسال"
+
+
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__supervision_allowance
+#, python-format
+msgid "Supervision Allowance"
+msgstr "بدل الإشراف"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__supervision_allowance_type
+#, python-format
+msgid "Supervision Allowance Type"
+msgstr "نوع بدل الإشراف"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__suspended
+msgid "Suspended"
+msgstr "معلق"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_re_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__contract_description__locum
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_re_contract__contract_type__temporary
+#, python-format
+msgid "Temporary"
+msgstr "محدد المدة"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "The Employee:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "The Employer:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#, python-format
+msgid "The None Saudization percentage should not exceed Percentage %s"
+msgstr "نسبة الغيرسعوديين يجب ان لا تتجاوز نسبة %s"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract__previous_contract_id
+msgid "The Previous Contract Of The Employee"
+msgstr "عقد الموظف السابق بعد تجديد العقد"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#, python-format
+msgid "The Saudization percentage should not exceed  Percentage %s"
+msgstr "نسبة السعوده يجب ان لا تتجاوز نسبة %s"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#, python-format
+msgid "The contract End Date Must Be Entered"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_re_contract.py:0
+#, python-format
+msgid ""
+"The record Cannot be Set To Draft Because It Is Not Last Renewal Record"
+msgstr "لايمكن إرجاع السجل للمبدئي لانه ليس أخر سجل تجديد"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "This contract is made and entered into this"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__ticket_allowance
+#, python-format
+msgid "Ticket Allowance"
+msgstr "بدل التذكرة السنوية"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "Title:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__to_contact
+#, python-format
+msgid "To contact in case of Emergency"
+msgstr "للاتصال في حالة الطوارئ"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__total_gosi
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__total_air_ticket_amount
+msgid "Total Air Ticket Amount"
+msgstr "إجمالي تذكرة السفر الجوي"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Total All Experience"
+msgstr "إجمالي كل سنوات الخبرات"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Total Insurance"
+msgstr "إجمالى التأمينات"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__traffic_fine
+msgid "Traffic Fine"
+msgstr "غرامة المرور"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__trial_duration
+msgid "Trail Duration"
+msgstr "مده التجربة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__t_allow
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__transport_allowance
+msgid "Transport Allowance"
+msgstr "بدل النقل"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__transport_allowance_temp
+#, python-format
+msgid "Transportation Allowance"
+msgstr "بدل النقل"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__transport_allowance_type
+#, python-format
+msgid "Transportation Allowance Type"
+msgstr "نوع بدل النقل"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__travel_allowance
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__travel_allowance_temp
+#, python-format
+msgid "Travel Allowance"
+msgstr "بدل السفر"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__travel_allowance_type
+#, python-format
+msgid "Travel Allowance Type"
+msgstr "نوع بدل السفر"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__trial_date_start
+msgid "Trial Date Start"
+msgstr "تاريخ بدء التجربة"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Trial Duration"
+msgstr "مدة الفترة التجريبية"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Trial Period Duration"
+msgstr "مدة الفترة التجريبية"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__old_date_to
+msgid "Trial end"
+msgstr "نهاية فترة التجربة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__old_date_from
+msgid "Trial start"
+msgstr "بداية فترة التجربة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__type
+msgid "Type"
+msgstr "نوع الاجراء"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_extension__activity_exception_decoration
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_re_contract__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_unread
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__message_unread_counter
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"Upon their mutual interest being in their full legal capacities to contract\n"
+"                                            with each other as employer and employee, The parties hereto agree to the\n"
+"                                            terms and conditions stipulated herein as follows:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__vac_des
+msgid "Vacation Destination"
+msgstr "مكان الاجازة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__wage
+msgid "Wage"
+msgstr "المرتب"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__website_message_ids
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_re_contract__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract_extension__website_message_ids
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_re_contract__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__marital__widower
+#, python-format
+msgid "Widower"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Work Permit"
+msgstr "تصريح عمل"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__working_hours
+msgid "Working Hours"
+msgstr "ساعات العمل"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_re_contract__increase_salary__yes
+msgid "YES"
+msgstr "نعم"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Years"
+msgstr "سنة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__annual_leave__yes
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__c_accommodation__yes
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__c_vehicle__yes
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__incentive__yes
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__medical__yes
+#, python-format
+msgid "Yes"
+msgstr "نعم"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: code:addons/hr_contract_custom/models/hr_contract_extension.py:0
+#: code:addons/hr_contract_custom/models/hr_re_contract.py:0
+#, python-format
+msgid "You can not delete record in state not in draft"
+msgstr "لا يمكنك حذف السجل في حالة ليس مبدئي"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_re_contract.py:0
+#, python-format
+msgid "You can not renewal contract is open Date"
+msgstr "لايمكن تجديد العقود الغير محددة المدة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__zip_code
+#, python-format
+msgid "Zip Code"
+msgstr "الرمز البريدي"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "contract description"
+msgstr "وصف العقد"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "contract type"
+msgstr "نوع العقد"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__status__family
+msgid "family"
+msgstr "عائلي"
+
+#. module: hr_contract_custom
+#: model:ir.model,name:hr_contract_custom.model_hr_children_allowance
+msgid "hr.children.allowance"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model,name:hr_contract_custom.model_hr_contract_extension
+msgid "hr.contract.extension"
+msgstr "تمديد فترة التجربة"
+
+#. module: hr_contract_custom
+#: model:ir.model,name:hr_contract_custom.model_hr_re_contract
+msgid "hr.re.contract"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model,name:hr_contract_custom.model_hr_vacation_dest
+msgid "hr.vacation.dest"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__contract_status__marriage
+#, python-format
+msgid "marriage contract"
+msgstr "عقد متزوج"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid "name"
+msgstr "الاسم"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "nationality, holding ID No"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "program Director"
+msgstr "اعتماد العقد"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__re_contract
+#, python-format
+msgid "re contract"
+msgstr "إعادة العقد"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__contract_status__single
+#, python-format
+msgid "single contract"
+msgstr "عقد اعزب"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#, python-format
+msgid "trial End Date  must be greater than Trial Start date"
+msgstr "يجب أن يكون تاريخ انتهاء التجربة أكبر من تاريخ بدء التجربة"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"، مع مراعاة النصوص الواردة في هذا العقد بخصوص الإنهاء، ويعتبر الموظف تحت\n"
+"                                            التجربة لمدة ثلاث أشهر من تاريخ مباشرته للعمل بموجب هذا العقد. ويجوز باتفاق\n"
+"                                            مكتوب بين الطرفين تمديد فترة التجربة بشرط إلا يزيد أجمالي فترة التجربة عن\n"
+"                                            مائة وثمانين يوماً، ولا تدخل في حساب فترة التجربة إجازة عيدي الفطر والاضحى\n"
+"                                            والإجازة المرضية. ويحق للطرفين خلالها إنهاء هذا العقد دون الحاجة إلى توجيه\n"
+"                                            اشعار مسبق ودون أن يترتب للطرف الثاني تعويض أو مكافأة نهاية الخدمة وذلك\n"
+"                                            وفقاً لنظام العمل ويتوجب على أحد الطرفين إشعار الطرف الآخر كتابيا في حالة\n"
+"                                            عدم رغبته في تجديد العقد وإلا يعدّ العقد قد تجدد تلقائياً لمدة مماثلة، وفي\n"
+"                                            حال تجدد العقد ثلاث مرات متتالية او بلغت مده العقد الأصلي مع التجديد أربع\n"
+"                                            سنوات ايهما اقل تحول العقد الى عقد غير محدد المدة."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.salary_letter_report_template
+msgid "أحـد مـنـسـوبـي الشـركـة ، والذي يـحـمـل الرقـم"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"أسم الموظف الثلاثي بالإنجليزي\n"
+"                                        <br/>\n"
+"                                        name"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid "أقر بأن هذه المعلومات المذكورة في هذه الاستمارة صحيحة."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"أو أي عمل آخر يسند اليه يتناسب مع مؤهلاته العلمية وخبراته العملية وبحسب ما\n"
+"                                            تفتضيه مصلحة العمل بشرط ألا يتعارض مع الوصف الوظيفي للوظيفة يكون مقر عمل\n"
+"                                            الموظف في مدينة الرياض أو في أي مكان آخر تحدده الشركة داخل المملكة العربية\n"
+"                                            السعودية أو خارجها إذا ما دعت الحاجة إلى ذلك طبقاً لنظام العمل والسياسات\n"
+"                                            التي تضعها الشركة مع مراعاة الاحكام التالية:\n"
+"                                            لا يكون نقل الموظف من مكان عمله الأصلي إلى مكان آخر يقتضي تغيير محل إقامته\n"
+"                                            إلا بموافقة الموظف كتابة.\n"
+"                                            يجوز للشركة في حالات الضرورة التي قد تفتضيها ظروف عارضة ولمدة لا تزيد عن\n"
+"                                            ثلاثين يوماً في السنة، تكليف الموظف ان يعمل في مكان مختلف عن المكان الأصلي\n"
+"                                            دون موافقته وتتحمل الشركة تكاليف انتقال الموظف وإقامته خلال تلك المدة.\n"
+"                                            ان يعمل في مكان مختلف عن المكان الأصلي دون موافقته وتتحمل الشركة تكاليف\n"
+"                                            انتقال الموظف وإقامته خلال تلك المدة."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.salary_letter_report_template
+msgid "اعـتـبـارا من"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid "الاسم"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"الاسم    :\n"
+"                                        <br/>\n"
+"                                        التاريخ  :"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"الاسم الثلاثي بالإنجليزي\n"
+"                                            <br/>\n"
+"                                            name"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid "التاريخ"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "التــــوقيع:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid "التوقيع"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.salary_letter_report_template
+msgid ""
+"الجـنـسـيـة\n"
+"                                ,\n"
+"                                بـموجـب الهـويـة رقـم"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"الجنس\n"
+"                                            <br/>\n"
+"                                            Sex"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"الجنسية\n"
+"                                        <br/>\n"
+"                                        Nationality"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "الجنسية بموجب هوية رقم :"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "الصفة: الرئيس التنفيذي"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid "المعالين:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "الموظف:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__communication_allowance_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__education_allowance_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__field_allowance_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__food_allowance_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__house_allowance_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__infect_allowance_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__insurance_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__other_allowance_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__other_deduction_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__retire_allowance_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__security_allowance_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__special_allowance_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__supervision_allowance_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__transport_allowance_type__perc
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__travel_allowance_type__perc
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.salary_letter_report_template
+msgid "بأن الســيــد/ة"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"بناءً على الرغبة المشتركة لطرفي هذا العقد، وهما بكامل الأهلية المعتبرة شرعاً\n"
+"                                            ونظاماً للتعاقد مع بعضهما كصاحب عمل وموظف ، فقد اتفق الطرفان على الشروط\n"
+"                                            والأحكام التالية:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "بيــــــن كل من:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"تاريخ الميلاد (بالميلادي)\n"
+"                                            <br/>\n"
+"                                            D.O.B (Gregorian)"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"تاريخ الميلاد (بالميلادي)\n"
+"                                        <br/>\n"
+"                                        D.O.B (Gregorian)"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.salary_letter_report_template
+msgid "تفيد شركة"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "تم بعون الله إبرام هذا العقد، في هذا التاريخ"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid "تمت مطابقة الأسماء حسب الجواز / الإقامة / بطاقة الأحوال"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "تمهيد:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"رقم بطاقة الأحوال / الإقامة\n"
+"                                            <br/>\n"
+"                                            Saudi ID/ Iqama No"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"رقم بطاقة الأحوال / الإقامة\n"
+"                                        <br/>\n"
+"                                        Saudi ID/ Iqama No."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.salary_letter_report_template
+msgid ""
+"ريال لاغير. و قد أعطي هذا الخطاب بناء على طلبـه دون ادني مسئولية على "
+"الشـركة."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "صاحب العمل:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"صلة القرابة\n"
+"                                            <br/>\n"
+"                                            Relation"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "عقـــــــد عمل"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__air_ticket_eligible__no
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__exit_and_return__no
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__is_gosi_deducted__no
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__overtime_eligible__no
+msgid "No"
+msgstr "لا"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__communication_allowance_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__contract_duration__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__education_allowance_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__field_allowance_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__food_allowance_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__house_allowance_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__infect_allowance_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__insurance_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__other_allowance_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__other_deduction_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__retire_allowance_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__security_allowance_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__special_allowance_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__supervision_allowance_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__transport_allowance_type__none
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__travel_allowance_type__none
+msgid "None"
+msgstr "لا شيء"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid "لاستخدام إدارة الموارد البشرية"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__state__draft
+msgid "مسودة"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"ملاحظات:\n"
+"\n"
+"                                        <br/>\n"
+"                                        التوقيع:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.dependents_contract_report_temp
+msgid ""
+"نأمل منكم تعبئة النموذج الخاص بكم موضحا فيه تواريخ الميلاد باليوم و الشهر و "
+"السنة بالميلادي (إذا أمكن) وإعادته لنا بعد التوقيع عليه، ولكم جزيل الشكر."
+msgstr ""
+
+#. module: hr_contract_custom
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__air_ticket_eligible__yes
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__exit_and_return__yes
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__is_gosi_deducted__yes
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__overtime_eligible__yes
+msgid " Yes"
+msgstr "نعم"
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "هـ، الموافق"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid ""
+"وهي شركة سعودية قائمة مؤسسة بموجب أنظمة المملكة العربية السعودية ومركزها\n"
+"                                            الرئيسي – الرياض، المملكة العربية السعودية وعنوانها البريدي ص. ب ("
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.salary_letter_report_template
+msgid ""
+"ويعـمـل علـى وظـيـفـة\n"
+"                                <br/>"
+msgstr ""
+
+#. module: hr_contract_custom
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.employee_contract_report_template
+msgid "يمثله:"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__salary_status__in
+#, python-format
+msgid "IN"
+msgstr "داخي"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__salary_status__out
+#, python-format
+msgid "OUT"
+msgstr "خارجي"
+
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__salary_status
+#, python-format
+msgid "Salary Status"
+msgstr "حالة الراتب"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__recruited_talent__un_billable
+#, python-format
+msgid "Un Billable"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__recruited_talent__billable
+#, python-format
+msgid "Billable"
+msgstr ""
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__recruited_talent
+#, python-format
+msgid "Recruited Talent"
+msgstr "المواهب المعينة"
+
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__consultant_hour
+msgid "Consultant Hour"
+msgstr "قيمة الساعة"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__consultant_salary
+msgid "Consultant Salary"
+msgstr "راتب المستشار"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__consultants
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_type__consultants
+msgid "Consultants"
+msgstr "مستشارين"
+
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__max_consultant_hour
+msgid "Max Consultant Hour"
+msgstr "الحد الأعلى للساعات"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__period_ticket
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+msgid "Period Ticket"
+msgstr "فترة التذكرة"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract_extension.py:0
+#, python-format
+msgid "The period of Extension trail duration must be not more than 3 months"
+msgstr "فترة تمديد التجربة يجب أن لا تزيد عن الثلاثة أشهر"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#, python-format
+msgid "The period of trail duration must be not more than 6 months"
+msgstr "فترة التجربة يجب أن لا تزيد عن ستة أشهر"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__check_nationality
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.hr_contract_form_view
+#, python-format
+msgid "Saudi?"
+msgstr "سعودي؟"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__class_contract
+#, python-format
+msgid "Classification Contracts"
+msgstr "تصنيف العقود"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__class_contract__employees
+#, python-format
+msgid "Employees"
+msgstr "الموظفين"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__class_contract__collect_money
+#, python-format
+msgid "Collect Money"
+msgstr "جمع أموال"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__class_contract__endowments
+#, python-format
+msgid "Endowments"
+msgstr "أوقاف"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__class_contract__researchers
+#, python-format
+msgid "Researchers"
+msgstr "الباحثين"
+
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__has_housing
+msgid "Has Housing?"
+msgstr "لديه بدل سكن؟"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__has_transportation
+msgid "Has Transportation?"
+msgstr "لدية بدل مواصلات؟"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract_extension__employee_no
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_form_view
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_contract_custom.contract_search_view
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__emp_type__saudi
+#, python-format
+msgid "Holiday1"
+msgstr "ترصيد1"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__emp_type__other
+#, python-format
+msgid "Holiday2"
+msgstr "ترصيد2"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__emp_type__displaced
+#, python-format
+msgid "Holiday3"
+msgstr "ترصيد3"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__emp_type__external
+#, python-format
+msgid "Holiday4"
+msgstr "ترصيد4"
+
+#. module: hr_contract_custom
+#: code:addons/hr_contract_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__emp_type__external2
+#: model:ir.model.fields.selection,name:hr_contract_custom.selection__hr_contract__religion__other
+#, python-format
+msgid "Other"
+msgstr "اخـــرى"
+
+#. module: hr_contract_custom
+#: model:mail.template,subject:hr_contract_custom.email_template_contract_period_expiration_reminder
+msgid "Contract- ${object.name} Expired End Period On ${object.date_end}"
+msgstr "عقد الموظف رقم- ${object.name} سوف ينتهي بتاريخ ${object.date_end}"
+
+#. module: hr_contract_custom
+#: model:mail.template,subject:hr_contract_custom.email_template_contract_trial_period_expiration_reminder
+msgid "Contract- ${object.name} Expired Trial Period On ${object.trial_date_end}"
+msgstr "عقد الموظف رقم- ${object.name} سوف تنتهي فترة التجربة بتاريخ ${object.trial_date_end}"
+
+#. module: hr_contract_custom
+#: model:mail.template,body_html:hr_contract_custom.email_template_contract_period_expiration_reminder
+msgid ""
+"\n"
+"                \n"
+"                    <p>Dear,</p>\n"
+"                    <br/>\n"
+"                    <p> The Contract of ${object.employee_id.name} is going to expire on ${object.date_end}.\n"
+"                     Please renew the contract or end it before expiry date According the notice period.\n"
+"                    <br/>\n"
+"                    <p>Best regards,</p>\n"
+"                \n"
+"            "
+msgstr ""
+"                \n"
+"                    <p>عزيزي,</p>\n"
+"                    <br/>\n"
+"                    <p> عقد الموظف ${object.employee_id.name} سوف ينتهي بتاريخ ${object.date_end}.\n"
+"                     يجب تجديد العقد للموظف او إنهاء العقد قبل تاريخ النهاية حسب فترة الاشعار المتفق عليها.\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <p>تحياتي,</p>\n"
+"                \n"
+"            "
+
+
+#. module: hr_contract_custom
+#: model:mail.template,body_html:hr_contract_custom.email_template_contract_trial_period_expiration_reminder
+msgid ""
+"\n"
+"                \n"
+"                    <p>Dear ,</p>\n"
+"                    <br/>\n"
+"                    <p> The Contract trial period of ${object.employee_id.name} is going to expire on${object.trial_date_end}.\n"
+"                     Please renew the trial contract period or contracting is Done it before expiry date  According the notice period.\n"
+"                    <br/>\n"
+"                    <p>Best regards,</p>\n"
+"                \n"
+"            "
+msgstr ""
+"                \n"
+"                    <p>عزيزي,</p>\n"
+"                    <br/>\n"
+"                    <p> فترة تجربة عقد الموظف ${object.employee_id.name} سوف تنتهي بتاريخ ${object.trial_date_end}.\n"
+"                     يجب تجديد فترة التجربة او إنهاء العقد قبل تاريخ نهاية فترة التجربة حسب فترة الاشعار المتفق عليها.\n"
+"                    <br/>\n"
+"                    <br/>\n"
+"                    <p>تحياتي,</p>\n"
+"                \n"
+"            "
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,field_description:hr_contract_custom.field_hr_contract__last_salary_gosi
+#, python-format
+msgid "Last Salary Gosi"
+msgstr "آخر راتب للتأمينات"
+
+#. module: hr_contract_custom
+#: model:ir.model.fields,help:hr_contract_custom.field_hr_contract__last_salary_gosi
+#, python-format
+msgid "The Last Salary Gosi After The Age 50 Years."
+msgstr "آخر راتب في التأمينات الاجتماعية بعد سن الخمسين"

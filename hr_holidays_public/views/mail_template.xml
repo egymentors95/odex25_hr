@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!--Email template -->
+        <record id="email_template_employee_replace" model="mail.template">
+            <field name="name">Employee Leave Replacement</field>
+            <field name="subject">بديل اجازة الموظف  ${object.employee_id.name} </field>
+            <field name="model_id" ref="model_hr_holidays"/>
+            <field name="email_to">${object.replace_by.user_id.partner_id.email}</field>
+            <field name="email_cc">${object.employee_id.parent_id.user_id.partner_id.email},
+                                   ${object.employee_id.user_id.partner_id.email}</field>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html"><![CDATA[
+<div  style="font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; ">
+
+
+    <p>  الموظف  ${object.employee_id.name} سيكون ف اجازة فى الفترة من  ${object.date_from} الى  ${object.date_to} وسيكون البديل له  ${object.replace_by.name} </p><br></br>
+
+
+</div>
+            ]]></field>
+        </record>
+        <record id="email_template_holiday_balance" model="mail.template">
+            <field name="name">Employee Leave Balance</field>
+            <field name="subject">Annual Leave Balance Notification</field>
+            <field name="model_id" ref="model_hr_holidays"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html"><![CDATA[
+<p>Dear Employee,</p>
+<p> You Have holiday ${object.holiday_status_id.name} Balance that you need to use before end of year</p>
+
+
+            ]]></field>
+        </record>
+
+        <record id="unpaid_leave_email" model="mail.template">
+            <field name="name">Unpaid Leave Email Notification</field>
+            <field name="model_id" ref="model_hr_holidays"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html">
+                <![CDATA[
+                    <p>Dear ${object.employee_id.parent_id.name},</p>
+                    <br/>
+                    <p> Greetings, we kindly inform you that employee ${object.employee_id.name} unpaid leave ${object.display_name} will be starting tomorrow.</p>
+                    <br/>
+                    <p>Best regards,</p>
+                ]]>
+            </field>
+        </record>
+
+    </data>
+</odoo>

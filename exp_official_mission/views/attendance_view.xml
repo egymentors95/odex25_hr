@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="attendance_transaction_inherited_form" model="ir.ui.view">
+            <field name="name">attendance.transaction.form.inherit</field>
+            <field name="model">hr.attendance.transaction</field>
+            <field name="inherit_id" ref="attendances.employee_attendance_transactions_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='attendance']" position="after">
+                    <group>
+                        <field name="official_id" readonly="1"/>
+                        <field name="is_official" required="1" readonly="1" force_save="1" store="1"/>
+                        <field name="total_mission_hours" widget="float_time" invisible="0" readonly="1"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="attendance_transaction_inherited_tree1">
+            <field name="name">attendance.transaction.tree1.inherit</field>
+            <field name="model">hr.attendance.transaction</field>
+            <field name="type">tree</field>
+            <field name="inherit_id" ref="attendances.attendance_transaction_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="attributes">
+                    <attribute name="decoration-warning">is_official==True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='approve_lateness']" position="after">
+                    <field name="is_official" invisible="1"/>
+                    <field name="mission_name"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

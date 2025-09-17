@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="employee_course_name_view" model="ir.ui.view">
+            <field name="name">employee.course.name.form.view</field>
+            <field name="model">employee.course.name</field>
+            <field name="arch" type="xml">
+                <form string="Course Name">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="1"/>
+                            </group>
+                            <group>
+                                <field name="code"/>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="job_ids"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="employee_course_name_tree_view" model="ir.ui.view">
+            <field name="name">employee.course.name.tree.view</field>
+            <field name="model">employee.course.name</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+        <record id="employee_course_name_action" model="ir.actions.act_window">
+            <field name="name">Course Name</field>
+            <field name="res_model">employee.course.name</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create New Course Name
+                </p>
+            </field>
+        </record>
+        <menuitem id="employee_course_name_menu" parent="exp_ticket_request.hr_employee_ticket_settining_menu"
+                  name="Course Name" sequence="4" action="employee_course_name_action"/>
+
+    </data>
+</odoo>

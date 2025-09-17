@@ -1,0 +1,511 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_docs_expiry
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 06:24+0000\n"
+"PO-Revision-Date: 2022-09-13 06:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_docs_expiry
+#: model:mail.template,body_html:hr_docs_expiry.email_template_child_age_check
+msgid ""
+"\n"
+"                \n"
+"                    <p>Dear ${object.employee_ref.name},</p>\n"
+"                    <br/>\n"
+"                    <p> Greetings, your dependant ${object.name} has turned 18.\n"
+"                    <br/>\n"
+"                    <p>Best regards,</p>\n"
+"                    <div>\n"
+"                \n"
+"            "
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee__document_count
+msgid "# Documents"
+msgstr "# المستندات"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                           Click to Create for New Documents\n"
+"                        </p>"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model,name:hr_docs_expiry.model_ir_attachment
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__doc_attachment_id
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_ir_attachment__doc_attach_rel
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model_terms:ir.ui.view,arch_db:hr_docs_expiry.employee_check_list_form_view
+msgid "Checklist"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__document_type
+msgid "Checklist Type"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__create_uid
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__create_date
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__description
+#: model_terms:ir.ui.view,arch_db:hr_docs_expiry.employee_document_form_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__display_name
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__display_name
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_ir_attachment__display_name
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_res_users__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__document_name
+msgid "Document"
+msgstr "مستند"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__name
+msgid "Document Name"
+msgstr "اسم المستند"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__name
+#: model_terms:ir.ui.view,arch_db:hr_docs_expiry.employee_document_form_view
+msgid "Document Name"
+msgstr "اسم المستند"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__document_type
+#: model_terms:ir.ui.view,arch_db:hr_docs_expiry.employee_document_form_view
+msgid "Document Type"
+msgstr "نوع المستند"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid "Documents"
+msgstr "المستندات"
+
+#. module: hr_docs_expiry
+#: model:ir.model,name:hr_docs_expiry.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_docs_expiry
+#: model:ir.actions.server,name:hr_docs_expiry.employee_docs_data_reminder_ir_actions_server
+#: model:ir.cron,cron_name:hr_docs_expiry.employee_docs_data_reminder
+#: model:ir.cron,name:hr_docs_expiry.employee_docs_data_reminder
+msgid "Employee Data Expiration"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model,name:hr_docs_expiry.model_employee_checklist
+#: model:ir.ui.menu,name:hr_docs_expiry.Employee_document_menu_item
+msgid "Employee Documents"
+msgstr "مستندات الموظف"
+
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__employee_ref
+#: model_terms:ir.ui.view,arch_db:hr_docs_expiry.employee_document_form_view
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: hr_docs_expiry
+#: model:ir.actions.act_window,name:hr_docs_expiry.employee_document_list_action
+msgid "Employee document"
+msgstr "مستندات الموظف"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields.selection,name:hr_docs_expiry.selection__employee_checklist__document_type__entry
+msgid "Entry Process"
+msgstr "مستند دخول"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields.selection,name:hr_docs_expiry.selection__employee_checklist__document_type__exit
+msgid "Exit Process"
+msgstr "مستند خروج"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee__expiry_license
+msgid "License Expiry Date"
+msgstr " تاريخ انتهاء الرخصة"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__file_examination
+msgid "File Examination"
+msgstr "ملف كشف طبي"
+
+#. module: hr_docs_expiry
+#: model_terms:ir.ui.view,arch_db:hr_docs_expiry.employee_document_form_view
+msgid "File Examination Name"
+msgstr "رقم الكشف/الإفصاح الطبي"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.actions.server,name:hr_docs_expiry.employee_data_reminder_ir_actions_server
+#: model:ir.cron,cron_name:hr_docs_expiry.employee_data_reminder
+#: model:ir.cron,name:hr_docs_expiry.employee_data_reminder
+msgid "HR Employee Data Expiration"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model,name:hr_docs_expiry.model_hr_employee_document
+msgid "HR Employee Documents"
+msgstr "مستندات الموظف"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__id
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__id
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_ir_attachment__id
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_res_users__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,help:hr_docs_expiry.field_employee_checklist__message_needaction
+#: model:ir.model.fields,help:hr_docs_expiry.field_employee_checklist__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,help:hr_docs_expiry.field_employee_checklist__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#: model:ir.model.fields.selection,name:hr_docs_expiry.selection__hr_employee_document__document_type__iqama
+#, python-format
+msgid "Identity"
+msgstr "الهوية"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#: model:ir.model.fields.selection,name:hr_docs_expiry.selection__hr_employee_document__document_type__professional_certificates
+#, python-format
+msgid "Professional Certificates"
+msgstr "شهادات مهنية"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__iqama_id
+#: model_terms:ir.ui.view,arch_db:hr_docs_expiry.employee_document_form_view
+msgid "Identity No"
+msgstr "رقم الهوية"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__issue_date
+msgid "Issue Date"
+msgstr "تاريخ الاصدار"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__job_id
+#: model_terms:ir.ui.view,arch_db:hr_docs_expiry.employee_document_form_view
+msgid "Job Position"
+msgstr "المهنة"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist____last_update
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document____last_update
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_ir_attachment____last_update
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_res_users____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__write_uid
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__write_date
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#: model:ir.model.fields.selection,name:hr_docs_expiry.selection__hr_employee_document__document_type__license
+#, python-format
+msgid "License"
+msgstr "رخصة القيادة"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__license_id
+msgid "License ID"
+msgstr "رقم رخصة القيادة"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee__license_number_id
+msgid "License Number"
+msgstr "رقم رخصة القيادة"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,help:hr_docs_expiry.field_employee_checklist__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,help:hr_docs_expiry.field_employee_checklist__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,help:hr_docs_expiry.field_employee_checklist__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#: model:ir.model.fields.selection,name:hr_docs_expiry.selection__employee_checklist__document_type__other
+#: model:ir.model.fields.selection,name:hr_docs_expiry.selection__hr_employee_document__document_type__other
+#, python-format
+msgid "Other"
+msgstr "اخرى"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee__passport_id
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_res_users__passport_id
+#: model:ir.model.fields.selection,name:hr_docs_expiry.selection__hr_employee_document__document_type__passport
+#, python-format
+msgid "Passport"
+msgstr "جواز السفر"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__passport_id
+msgid "Passport Number"
+msgstr "رقم الجواز"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__place_issue_id
+msgid "Place of Issue"
+msgstr "مكان استخراج المستند"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__reminder_before
+msgid "Reminder Before"
+msgstr "تذكير قبل (يوم)"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__saudi_id
+#: model:ir.model.fields.selection,name:hr_docs_expiry.selection__hr_employee_document__document_type__saudi
+#, python-format
+msgid "Saudi ID"
+msgstr "رقم الهوية الوطنية"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid "This Identity Number already Exiting"
+msgstr "رقم الهوية هذا موجود بالفعل"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid "This License Number already Exiting"
+msgstr "رقم  رخصة القيادة هذا موجود بالفعل"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid "This Medical Examination Number already Exiting"
+msgstr "رقم الفحص الطبي هذا موجود بالفعل"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid "This Passport Number already Exiting"
+msgstr "رقم جواز السفر هذا موجود بالفعل"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid "This Saudi Identity already Exiting"
+msgstr "رقم الهوية الوطنية هذا موجود بالفعل"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_employee_checklist__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: hr_docs_expiry
+#: model:ir.model,name:hr_docs_expiry.model_res_users
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,help:hr_docs_expiry.field_hr_employee_document__doc_attachment_id
+msgid "You can attach the copy of your document"
+msgstr "يجب ارفاق المستند للملف"
+
+#. module: hr_docs_expiry
+#: model:mail.template,subject:hr_docs_expiry.email_template_child_age_check
+msgid "Your Child ${object.name} has turned 18"
+msgstr "تاجوز عمر 18 سنة ${object.name} هذا الطفل"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__membership_type
+msgid "Membership Type"
+msgstr "نوع العضوية"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__specialization
+msgid "Specialization"
+msgstr "التخصص"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__category
+msgid "Category"
+msgstr "التصنيف"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid "Saudi ID must be 10 digits"
+msgstr "رقم الهويه الوطنية يجب ان يكون 10 ارقام"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid "The Saudi ID number should begin with 1"
+msgstr "رقم الهويه الوطنية يجب ان يبدأ ب 1"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid "Identity must be 10 digits"
+msgstr "رقم الهويه يجب ان يكون 10 ارقام"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid "Identity must begin with 2 or 3 or 4"
+msgstr "رقم الهويه يجب ان يبدأ ب 2 او 3 او 4"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid "medical Examination"
+msgstr "الكشف/الإفصاح الطبي"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid "Error, date of issue must be less than expiry date"
+msgstr "خطأ, تاريخ اصدار الهويه يجب ان تكون اقل من تاريخ النهاية"
+
+#. module: hr_docs_expiry
+#: code:addons/hr_docs_expiry/models/employee_documents.py:0
+#, python-format
+msgid "Error,the expiry date must be greater than the date of the day"
+msgstr "خطأ, تاريخ النهاية  يجب ان يكون اكبر من تاريخ اليوم"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_docs_expiry
+#: model:ir.model.fields,field_description:hr_docs_expiry.field_hr_employee_document__employee_number
+#: model_terms:ir.ui.view,arch_db:hr_docs_expiry.employee_document_form_view
+#: model_terms:ir.ui.view,arch_db:hr_docs_expiry.employee_document_inherit_view
+#: model_terms:ir.ui.view,arch_db:hr_docs_expiry.employee_document_tree_view
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+
+

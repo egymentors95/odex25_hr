@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="act_payslip_monthly_report" model="ir.actions.report">
+            <field name="model">hr.payslip</field>
+            <field name="name">Payslip PDF Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">exp_payroll_custom.payslip_monthly_report</field>
+            <field name="report_file">exp_payroll_custom.payslip_monthly_report</field>
+        </record>
+
+        <record id="payslip_monthly_report_xlsx" model="ir.actions.report">
+            <field name="model">hr.payslip</field>
+            <field name="name">Payslip Xlsx Report</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">exp_payroll_custom.payslip_monthly_report_xlsx</field>
+            <field name="report_file">exp_payroll_custom.payslip_monthly_report_xlsx</field>
+        </record>
+
+        <record id="act_payslip_monthly_report" model="ir.actions.report">
+            <field name="model">hr.payslip</field>
+            <field name="name">Payslip PDF Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">exp_payroll_custom.payslip_monthly_report</field>
+            <field name="report_file">exp_payroll_custom.payslip_monthly_report</field>
+            <field name="binding_model_id" eval="False"/>
+        </record>
+
+
+        <record id="payslip_monthly_report_xlsx" model="ir.actions.report">
+            <field name="model">hr.payslip</field>
+            <field name="name">Payslip Xlsx Report</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">exp_payroll_custom.payslip_monthly_report_xlsx</field>
+            <field name="report_file">exp_payroll_custom.payslip_monthly_report_xlsx</field>
+            <field name="binding_model_id" eval="False"/>
+        </record>
+        <record id="report_payroll_bank_xlsx" model="ir.actions.report">
+            <field name="model">payroll.bank.wiz</field>
+            <field name="name">Payroll Bank Report</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">exp_payroll_custom.report_payroll_bank_xlsx</field>
+            <field name="report_file">Payroll Bank Report</field>
+            <field name="attachment_use">False</field>
+        </record>
+
+        <record id="bank_payslip_report" model="ir.actions.report">
+            <field name="model">payroll.bank.wiz</field>
+            <field name="name">Payroll Bank Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">exp_payroll_custom.report_payroll_bank_pdf</field>
+            <field name="attachment_use">False</field>
+        </record>
+        <record id="payroll_bank_wiz_report_docx" model="ir.actions.report">
+            <field name="model">payroll.bank.wiz</field>
+            <field name="name">Print Text</field>
+            <field name="report_type">qweb-text</field>
+            <field name="report_name">exp_payroll_custom.report_payroll_bank_pdf_docx</field>
+            <field name="binding_type">report</field>
+            <field name="attachment_use">False</field>
+        </record>
+
+    </data>
+</odoo>

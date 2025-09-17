@@ -1,0 +1,117 @@
+<odoo>
+    <template id="template_report_salary_definition">
+        <t t-call="web.html_container">
+            <t t-call="hr_base.hr_layout" t-translation="off">
+                <style>
+                    @font-face {font-family: "Sakkal Majalla"; src:
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                    format("embedded-opentype"),
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype");
+                    }
+                </style>
+                <div class="page" style="font-family:'Sakkal Majalla'!important;font-size:18pt;direction:rtl">
+                    <t t-foreach="docs" t-as="o">
+
+                        <div>
+                            <span style="margin-right: 8%;">التاريخ :</span>
+                            <span t-esc="o.change_current_date_hijri()"/>
+                            <br/>
+                            <span style="margin-right: 8%;">الموافق :</span>
+                            <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/>
+                        </div>
+                        <br/>
+                        <div class="text-center">
+                            <p style="text-align:center;margin: 10px;">
+                                <span>الى من يهمه الامر</span>
+                            </p>
+                        </div>
+                        <br/>
+                        <div class="text-right">
+                            <p style="text-align:right;margin-right:8%;margin-left:8%;color:black; line-height: 1.8;">
+                                <span>السلام عليكم ورحمة الله و بركاته ,,</span>
+                            </p>
+                        </div>
+
+                        <p style="text-align:justify;margin-right:8%;margin-left:8%;color:black; line-height: 1.8;">
+                            نفيد سعاتكم بأن الموظف
+                            <span t-field="o.name"/>
+                            الجنسيه
+                            <span t-field="o.country_id.name"/>
+                            هويه رقم
+                            <t t-if="o.country_id.name == 'Saudi Arabia' or o.country_id.name == 'المملكة العربية السعودية'">
+                                <span t-field="o.saudi_number.saudi_id"/>
+                            </t>
+                            <t t-else="">
+                                <span t-field="o.iqama_number.iqama_id"/>
+                            </t>
+                            يعمل لدينابوظيفه
+                            <span t-field="o.job_id.name"/>
+                             بموجب عقد قابل للتجديد منذ تاريخ
+                            <span t-esc="o.first_hiring_date"/>
+                             وينتهى بتاريخ
+                            <span t-esc="o.contract_id.date_end"/>
+
+                            <span>ولا يزال</span>
+                            على رأس العمل .
+                        </p>
+                        <p style="text-align:justify;margin-right:8%;margin-left:8%;color:black; line-height: 1.8;">
+                            وبتقاضى راتب شهرى على النحو التالى :
+                        </p>
+<!--                        <p style="text-align:right;margin-right:5%">-->
+<!--                            <strong>▪ راتباً اساسياً قدره   <span t-field="o.contract_id.salary"/>ريال</strong>-->
+<!--                        </p>-->
+<!--                        <p style="text-align:right;margin-right:5%">-->
+<!--                            <strong>▪ بدل سكن قدره<span t-field="o.contract_id.house_allowance_temp"/> ريال</strong>-->
+<!--                        </p>-->
+<!--                        <p style="text-align:right;margin-right:5%">-->
+<!--                            <strong>▪ بدل مواصلات قدره <span t-field="o.contract_id.transport_allowance_temp"/>ريال</strong>-->
+<!--                        </p>-->
+
+                        <div style="margin-right:8%;margin-left:12%;color:black; line-height: 1.8;">
+                            <ul style="direction: rtl;">
+                                <li style="direction: rtl;">
+                                    <span dir="rtl">
+                                       راتباً اساسياً قدره   <span t-field="o.contract_id.salary"/>ريال
+                                    </span>
+                                </li>
+                                <li style="direction: rtl;">
+                                    <span dir="rtl">
+                                        بدل سكن قدره<span t-field="o.contract_id.house_allowance_temp"/> ريال
+                                    </span>
+                                </li>
+                                <li style="direction: rtl;">
+                                    <span dir="rtl">
+                                       بدل مواصلات قدره <span t-field="o.contract_id.transport_allowance_temp"/>ريال
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <p style="text-align:justify;margin-right:8%;margin-left:8%;color:black; line-height: 1.8;">
+                            ومؤمن له العلاج والتذاكره ؛ وبناء على طلبه تم منحه هذا الخطاب دون أدنى مسؤوليه على الشركه.
+
+                        </p>
+                      <h4 style="text-align: center;">
+                            <span>ولكم خالص تحياتنا،،،</span>
+                        </h4>
+
+                        <table class="table table-borderless"
+                                   style="border-spacing: 0px;padding:0px;margin:0px;margin-top:140px;font-family:'Sakkal Majalla'!important;font-size:16pt">
+                                <tr style="border:0;">
+                                    <td style="text-align:left;border:0;width:50%;padding:0px;margin:0px;">
+                                        <span>م/----------------------</span>
+                                        <p>الوظيفة</p>
+                                    </td>
+                                </tr>
+                            </table>
+                    </t>
+                </div>
+            </t>
+        </t>
+
+    </template>
+
+</odoo>

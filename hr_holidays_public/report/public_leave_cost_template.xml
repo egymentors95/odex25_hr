@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="public_leave_cost_report">
+            <t t-call="web.html_container">
+                <t t-call="hr_base.hr_layout">
+                    <style>
+                        @font-face {font-family: "Sakkal Majalla"; src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                        format("embedded-opentype"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype");
+                        }
+                    </style>
+                    <div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+                        <table class="table table-condensed table-bordered">
+                            <thead class="text-center">
+                                <tr style="width:100%;font-size:20pt">
+                                    <th colspan="12" class="text-center">Employee Leave Cost Report</th>
+                                </tr>
+                                <tr style="background-color: #263f79;width:100%;">
+                                    <th style="text-align:center;color:#FFFFFF">#</th>
+                                    <th style="text-align:center;color:#FFFFFF">Department</th>
+                                    <th style="text-align:center;color:#FFFFFF">Employee No</th>
+                                    <th style="text-align:center;color:#FFFFFF">Employee Name</th>
+                                    <th style="text-align:center;color:#FFFFFF">Department Leave Balance</th>
+                                    <th style="text-align:center;color:#FFFFFF">Employee Leave Balance</th>
+                                    <th style="text-align:center;color:#FFFFFF">Employee Cost Per Day</th>
+                                    <th style="text-align:center;color:#FFFFFF">Employee Leave Cost</th>
+                                    <th style="text-align:center;color:#FFFFFF">Department Leave Cost</th>
+
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <t t-set="sequence" t-value="0"/>
+                                <t t-foreach="docs" t-as="v">
+                                    <t t-foreach="v['data']" t-as="o">
+                                        <tr>
+                                            <td>
+                                                <t t-set="sequence" t-value="sequence +1"/>
+                                                <t t-esc="sequence"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="o['department_id']"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="o['emp_no']"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="o['employee']"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="round(v['leave'],2)"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="round(o['leave'],2)"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="round(o['day_salary'],2)"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="round(o['leave_cost'],2)"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="round(v['leave_cost'],2)"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+
+        <record id="public_leave_cost_action_report" model="ir.actions.report">
+            <field name="model">public.leave.report</field>
+            <field name="name">Leave Cost</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_holidays_public.public_leave_cost_report</field>
+            <field name="report_file">hr_holidays_public.public_leave_cost_report</field>
+        </record>
+
+        <record id="public_leave_cost_action_report_xls" model="ir.actions.report">
+            <field name="model">public.leave.report</field>
+            <field name="name">Leave Cost</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_holidays_public.public_leave_cost_report_xls</field>
+            <field name="report_file">hr_holidays_public.public_leave_cost_report_xls</field>
+        </record>
+
+        <!--        Leave Balance-->
+        <template id="public_leave_balance_report">
+            <t t-call="web.html_container">
+                <t t-call="hr_base.hr_layout">
+                    <style>
+                        @font-face {font-family: "Sakkal Majalla"; src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                        format("embedded-opentype"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype");
+                        }
+                    </style>
+                    <div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+                        <table class="table table-condensed table-bordered">
+                            <thead class="text-center">
+                                <tr style="width:100%;">
+                                    <th colspan="9" class="text-center" style="font-size:20px">Employee Leave Balance Report
+                                    </th>
+                                </tr>
+                                <tr style="background-color: #263f79;width:100%;">
+                                    <t t-foreach="docs[0]" t-as="doc">
+                                        <th style="text-align:center;color:#FFFFFF">
+                                            <t t-esc="doc"/>
+                                        </th>
+                                    </t>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <t t-set="sequence" t-value="0"/>
+                                <t t-foreach="docs[1]" t-as="o">
+                                    <tr>
+                                        <td>
+                                            <t t-set="sequence" t-value="sequence+1"/>
+                                            <t t-esc="sequence"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.employee_id.emp_no"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.employee_id.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.employee_id.first_hiring_date"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.holiday_status_id.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.employee_id.department_id.name"/>
+                                        </td>
+
+                                        <td>
+                                            <t t-esc="round(o.leaves_taken,2)"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="round(o.remaining_leaves,2)"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="round(o.leaves_taken+ o.remaining_leaves,2)"/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <record id="public_leave_balance_action_report" model="ir.actions.report">
+            <field name="model">hr.holidays</field>
+            <field name="name">Leave Balance</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_holidays_public.public_leave_balance_report</field>
+            <field name="report_file">hr_holidays_public.public_leave_balance_report</field>
+        </record>
+
+        <record id="public_leave_balance_action_report_xls" model="ir.actions.report">
+            <field name="model">hr.holidays</field>
+            <field name="name">Leave Balance</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_holidays_public.public_leave_balance_report_xls</field>
+            <field name="report_file">hr_holidays_public.public_leave_balance_report_xls</field>
+        </record>
+    </data>
+</odoo>

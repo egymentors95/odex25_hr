@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+
+        <record id="hr_allowance_deduction_form_view" model="ir.ui.view">
+            <field name="name">hr.allowance.deduction.form</field>
+            <field name="model">hr.allowance.deduction</field>
+            <field name="arch" type="xml">
+                <form string="hr allowance deduction">
+                    <group>
+                        <field name="name" string="Name"/>
+                        <field name="type" string="type"/>
+                        <field name="account_credit_id" string="Account Credit"/>
+                        <field name="account_debit_id" string="Account Debit"/>
+                        <field name="amount" string="amount"/>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

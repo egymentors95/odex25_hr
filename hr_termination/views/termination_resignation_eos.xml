@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="termination_resignation_eos_action">
+            <field name="name">Termination, Resignation &amp; EOS</field>
+            <field name="res_model">hr.termination</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="termination_resignation_eos_form_view" model="ir.ui.view">
+            <field name="name">Termination, Resignation &amp; EOS</field>
+            <field name="model">hr.termination</field>
+            <field name="arch" type="xml">
+                <form string="Termination, Resignation &amp; EOS">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                        <button class="oe_highlight" string="Submit" type="object" name="submit" states="draft"
+                                groups="base.group_user"/>
+
+                        <button class="oe_highlight" string="Direct Manager Approve" type="object" name="direct_manager"
+                                states="submit" groups="hr_base.group_division_manager"/>
+                        <button class="oe_highlight" string="Refuse" type="object" name="direct_manager_refused"
+                                states="submit" groups="hr_base.group_division_manager"/>
+
+                        <button class="oe_highlight" string="Department Manager Approve" type="object" name="hr_manager"
+                                states="direct_manager" groups="hr_base.group_department_manager"/>
+                        <button class="oe_highlight" string="Refuse" type="object" name="dep_manager_refused"
+                                states="direct_manager" groups="hr_base.group_department_manager"/>
+
+                        <button class="oe_highlight" string="HR Officer Approve" type="object" name="finance_manager"
+                                states="hr_manager" groups="hr.group_hr_user"/>
+                        <button class="oe_highlight" string="Refuse" type="object" name="refused"
+                                states="hr_manager" groups="hr.group_hr_user"/>
+
+                        <button class="oe_highlight" string="HR Approval" type="object" name="general_manager"
+                                states="finance_manager" groups="hr.group_hr_manager"/>
+                        <button class="oe_highlight" string="Refuse" type="object" name="refused"
+                                states="finance_manager" groups="hr.group_hr_manager"/>
+
+                        <button class="oe_highlight" string="CEO Approval" type="object" name="complete"
+                                states="gm_manager" groups="hr_base.group_general_manager,hr_base.group_executive_manager"/>
+                        <button class="oe_highlight" string="Refuse" type="object" name="refused"
+                                states="gm_manager" groups="hr_base.group_general_manager,hr_base.group_executive_manager"/>
+
+                        <button class="oe_highlight" string="Finance Approval" type="object" name="pay" states="done"
+                                groups="hr_base.group_account_manager"/>
+                        <button class="oe_highlight" string="Refuse" type="object" name="refused" states="done"
+                                groups="hr_base.group_account_manager"/>
+
+                        <button class="oe_highlight" string="RE-Draft" type="object" name="set_to_draft" states="refused,pay"
+                                groups="hr.group_hr_user,hr.group_hr_manager" confirm="Are you sure to Reset To Draft This Record?"/>
+
+
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="from_hr" string="Another Employee" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            <field name="employee_id" string="Employee"
+                                   attrs="{'readonly': ['|',('from_hr','=',False),('state','!=','draft')],'required':True}"/>
+                            <field name="employee_no" string="Employee Number" readonly="1"/>
+                            <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                        </group>
+                        <separator string="Employee Data"/>
+                        <group>
+                            <group>
+                                <field name="job_id" string="Job Title" readonly="1"/>
+                                <field name="contract_id" string="Contract id" readonly="1"/>
+                                <field name="contract_start_date" string="Contract Start Date" readonly="1"/>
+                                <field name="contract_end_date" string="Contract End Date" readonly="1"/>
+                                <field name="salary" string="Total Salary" readonly="1"/>
+                                <field name="leave_balance" readonly="1" force_save="1"/>
+                                <field name="leave_balance_money" readonly="1" force_save="1"  attrs="{'invisible':[('state','in',('direct_manager','submit','draft'))]}"/>
+                            </group>
+                            <group>
+                                <field name="department_id" string="Department" readonly="1"/>
+                                <field name="first_hire_date" string="First Hire Date" readonly="1"/>
+                                <field name="last_work_date" string="Last Date Working"
+                                      attrs="{'readonly':[('state','not in',('submit','hr_manager'))],'required':[('state','!=','draft')]}"/>
+                                <field name="salary_date_from" string="Salary Date From"
+                                      attrs="{'readonly':[('state','not in',('submit','hr_manager'))],'required':[('state','!=','draft')]}"/>
+                                <field name="salary_date_to" string="Salary Date To"
+                                      attrs="{'readonly':[('state','not in',('submit','hr_manager'))],'required':[('state','!=','draft')]}"/>
+                                <field name="paid_duration" string="Paid Duration" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Calculation Method" attrs="{'invisible':[('state','in',('direct_manager','submit','draft'))]}">
+                                <field name="salary_termination" attrs="{'readonly':[('state','not in',('draft','hr_manager'))]}" string="Termination salary ?"/>
+                                <field name="calculation_method" string="Calculation method"
+                                       widget="many2many_tags" options="{'not_delete': True}"
+                                       attrs="{'readonly':[('state','not in',('draft','hr_manager'))],'required':[('state','=','hr_manager'),('salary_termination','=',True)],
+                                         'invisible':[('salary_termination','=',False)]}"/>
+                                <field name="salary_for_eos" string="Salary For EOS" readonly="1"/>
+                            </group>
+                            <group string="Service Duration">
+                                <label for="service_year" string="Year"/>
+                                <div>
+                                    <field name="service_year" readonly="1" force_save="1" class="oe_inline"/>Year
+                                </div>
+                                <label for="service_month"  string="Month"/>
+                                <div>
+                                    <field name="service_month" readonly="1" force_save="1" class="oe_inline"/>Month
+                                </div>
+                                <label for="service_day" string="Day" />
+                                <div>
+                                    <field name="service_day" readonly="1" force_save="1" class="oe_inline"/>Day
+                                </div>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Cause Of Termination">
+                                <field name="cause_type" string="Cause Type"
+                                       attrs="{'readonly':[('state','not in',('draft','submit','hr_manager'))]}" required="1"/>
+                                <field name="journal" string="Journal" groups="hr.group_hr_user, hr_base.group_account_manager"
+                                       attrs="{'readonly':[('state','!=','done')],'required':[('state','=','done')]}"/>
+                                <!-- account.move fields that hold the termination account.move id-->
+                                <field name="account_move_id" string="Termination account move" readonly="1" groups="hr.group_hr_user, hr_base.group_account_manager"/>
+                                <field name="reason" string="Reason"
+                                      attrs="{'readonly':[('state','!=','draft')],'required':[('state','=','draft')]}"/>
+                                <field name="notes" string="Comment Box"
+                                      attrs="{'readonly':[('state','not in',('submit','hr_manager','direct_manager'))],
+                                      'required':[('state','in',('submit','hr_manager','direct_manager'))]}"/>
+                            </group>
+                            <group string="Unpaid Duration">
+                                <label for="unpaid_year" string="Year"/>
+                                <div>
+                                    <field name="unpaid_year" readonly="1" force_save="1" class="oe_inline"/>Year
+                                </div>
+                                <label for="unpaid_month"  string="Month"/>
+                                <div>
+                                    <field name="unpaid_month" readonly="1" force_save="1" class="oe_inline"/>Month
+                                </div>
+                                <label for="unpaid_day" string="Day" />
+                                <div>
+                                    <field name="unpaid_day" readonly="1" force_save="1" class="oe_inline"/>Day
+                                </div>
+                            </group>
+                        </group>
+                        <group>
+                            <button string="Re-Compute" icon="fa-cogs" class="oe_highlight"
+                                    name="re_compute_salary_rules_and_loans" type="object" attrs="{'invisible':[('state','not in',('hr_manager','done'))]}"/>
+                        </group>
+                        <separator string="Allowance Deduction"/>
+                        <field name="allowance_deduction_ids" string="Allowance Deduction" force_save="1" required="1"
+                               attrs="{'readonly':[('state','!=','hr_manager')],
+                               'invisible':[('state','in',('draft','submit','direct_manager','refused'))]}">
+                            <tree editable="bottom">
+                                <field name="salary_rule_id" force_save="1" string="Name"/>
+                                <field name="category_id" force_save="1" string="Category"/>
+                                <field name="account_debit_id" string="Account debit"/>
+                                <field name="account_credit_id" string="Account credit"/>
+                                <field name="amount" string="amount"/>
+                                <field name="is_advantage" string="Is Advantage" invisible="1"/>
+                            </tree>
+                        </field>
+                        <separator string="Loans" groups="hr_loans_salary_advance.group_loan_manager" />
+                        <field name="loans_ids" string="Loans" groups="hr_loans_salary_advance.group_loan_manager" readonly="1" force_save="1"
+                                 attrs="{'readonly':[('state','!=','hr_manager')],'invisible':[('state','in',('draft','submit','direct_manager','refused'))]}">
+                            <tree string="Loans" editable="top">
+                                <field name="code" string="Code"/>
+                                <field name="remaining_loan_amount" string="Remaining loan amount"/>
+                                <field name="request_type" string="Request Type"/>
+                            </tree>
+                        </field>
+
+                        <group>
+                            <group invisible="1">
+                                <separator string="EOS Award"/>
+                                <field name="remaining_accommodation" string="Remaining Accommodation" readonly="True"/>
+                                <field name="salary_amount" string="Salary Amount" readonly="True"/>
+                                <field name="deduction_balance" string="Deduction Balance" readonly="True"/>
+                                <field name="loan_deduction" string="Loan Deduction" readonly="True"/>
+                                <field name="sal_adv_deduction" string="Sal ADV Deduction" readonly="True"/>
+                                <field name="eos_calc" string="EOS Calc" readonly="True"/>
+                                <field name="leave_balance" string="Leave Balance" readonly="True"/>
+                                <field name="leave_balance_money" string="Leave Balance Money" readonly="True"/>
+                                <field name="air_ticket_amount" string="Air Tichet Amount" readonly="True"/>
+                                <field name="total_amount" string="Total Amount" readonly="True"/>
+                            </group>
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="allowance_total" string="Total allowance" readonly="1" force_save="1"
+                                    attrs="{'invisible':[('state','in',('draft','submit','direct_manager','refused'))]}"/>
+                                <field name="deduction_total" string="Total Deduction" readonly="1" force_save="1"
+                                    attrs="{'invisible':[('state','in',('draft','submit','direct_manager','refused'))]}"/>
+                                <!--field name="loans_total" string="Total Loans" readonly="1" force_save="1"
+                                    attrs="{'invisible':[('state','in',('draft','submit','direct_manager','refused'))]}"/-->
+
+                                <field name="total_loans" string="Total Loans" readonly="1" groups="hr_loans_salary_advance.group_loan_manager"
+                                    attrs="{'invisible':[('state','in',('draft','submit','direct_manager','refused'))]}"/>
+                                <field name="net" string="Net" readonly="1"
+                                    attrs="{'invisible':[('state','in',('draft','submit','direct_manager','refused'))]}"/>
+                                <field name="cause_type_amount" string="Cause type amount" invisible="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <!--Discuss widgets for history and communication -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="termination_resignation_eos_tree_view">
+            <field name="name">Termination, Resignation &amp; EOS</field>
+            <field name="model">hr.termination</field>
+            <field name="arch" type="xml">
+                <tree decoration-success="state=='pay'" decoration-danger="state == 'refused'" decoration-info="state == 'draft'" string="Termination, Resignation &amp; EOS">
+                    <field name="employee_no" string="Employee Number"/>
+                    <field name="employee_id" string="Employee"/>
+                    <field name="department_id" string="Department"/>
+                    <field name="job_id" string="Job Title"/>
+                    <field name="first_hire_date" string="First Hire Date"/>
+                    <field name="last_work_date" string="Last Date Working"/>
+                    <field name="cause_type" string="Cause Type"/>
+                    <field name="net" string="Net"/>
+                    <field name="state" string="State"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--hr_termination_filter -->
+        <record id="hr_termination_filter" model="ir.ui.view">
+            <field name="name">Employee Termination</field>
+            <field name="model">hr.termination</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search>
+                  <field name="employee_id"/>
+                  <field name="employee_no"/>
+                  <field name="department_id" />
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

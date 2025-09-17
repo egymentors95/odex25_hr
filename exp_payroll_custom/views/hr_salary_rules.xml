@@ -1,0 +1,165 @@
+<odoo>
+    <data>
+
+        <record id="hr_salary_rule_view_form_inherit" model="ir.ui.view">
+            <field name="name">hr.salary.rule.form.inherit</field>
+            <field name="model">hr.salary.rule</field>
+            <field name="inherit_id" ref="exp_hr_payroll.hr_salary_rule_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//label[@for='category_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='category_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//group[1]" position="replace">
+                    <group>
+                        <group>
+                            <field name="category_id"/>
+                            <field name="code"/>
+                            <field name="sequence"/>
+                            <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                        </group>
+                        <group>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                        </group>
+                    </group>
+                </xpath>
+                <xpath expr="//page[1]" position="replace">
+                    <field name="active" invisible="1"/>
+                    <page string="General">
+                        <separator colspan="4" string="Computation"/>
+                        <group>
+                            <group>
+                                <field name="amount_select"/>
+                                <newline/>
+                                <field colspan="4" name="amount_python_compute"
+                                       attrs="{'invisible':[('amount_select','!=','code')], 'required':[('amount_select','=','code')]}"/>
+                                <newline/>
+                                <field name="salary_type" attrs="{'invisible':[('amount_select','=','code')]}"/>
+                                <field name="fixed_amount"
+                                       attrs="{'invisible':['|',('salary_type','!=','fixed'),('amount_select','in',['percentage','code'])], 'required':[('salary_type','=','fixed')]}"/>
+                                <field name="related_benefits_discounts" widget="many2many_tags"
+                                       attrs="{'invisible':[('amount_select','!=','percentage')], 'required': [('amount_select','=','percentage')]}"/>
+                                <newline/>
+                                <field name="amount_percentage"
+                                       attrs="{'invisible':['|',('amount_select','!=','percentage'),('salary_type','in',['related_levels','related_groups','related_degrees'])], 'required':[('amount_select','=','percentage')]}"/>
+                            </group>
+                            <group>
+                                <field name="special"/>
+                                <field name="rules_type" required="1"/>
+                                <!--field name="related_qualifications"/-->
+                            </group>
+                        </group>
+
+                        <!--group col="2">
+                            <group>
+                                <separator colspan="2" string="Conditions"/>
+                                <field name="condition_select"/>
+                                <newline/>
+                                <field name="condition_python"
+                                       attrs="{'invisible':[('condition_select','!=','python')], 'required': [('condition_select','=','python')]}"
+                                       colspan="4"/>
+                                <newline/>
+                                <field name="condition_range"
+                                       attrs="{'invisible':[('condition_select','!=','range')], 'required':[('condition_select','=','range')]}"/>
+                                <newline/>
+                                <field name="condition_range_min" colspan="2"
+                                       attrs="{'invisible':[('condition_select','!=','range')], 'required':[('condition_select','=','range')]}"/>
+                                <newline/>
+                                <field name="condition_range_max" colspan="2"
+                                       attrs="{'invisible':[('condition_select','!=','range')], 'required':[('condition_select','=','range')]}"/>
+                                <newline/>
+                            </group>
+                            <group>
+                                <separator colspan="2" string="Company Contribution"/>
+                                <field name="register_id"/>
+                            </group>
+                        </group-->
+                    </page>
+
+                </xpath>
+                <!--[add] adding accounting info in salary rule -->
+                <xpath expr="//page[1]" position="after">
+                     <page string="Accounting Info">
+                        <group>
+                            <field name="transfer_by_emp_type" string="Transfer By Employee Type"/>
+                            <field name="rule_debit_account_id" string="Debit Account" attrs="{'invisible' : [('transfer_by_emp_type', '=', True)]}"/>
+                            <field name="rule_credit_account_id" string="Credit Account" attrs="{'invisible' : [('transfer_by_emp_type', '=', True)]}"/>
+                        </group>
+
+                         <field name="account_ids" attrs="{'invisible' : [('transfer_by_emp_type', '=', False)]}">
+                            <tree editable="bottom">
+                                <field name="emp_type_id" string="Employee Type"/>
+                                <field name="debit_account_id" string="Debit Account"/>
+                                <field name="credit_account_id" string="Credit Account"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//notebook/page[1]" position="after">
+                    <page name="related_salary" string="Related Salary Configuration"
+                          attrs="{'invisible':[('salary_type','in',(False, 'fixed'))]}">
+                        <field name="salary_amount_ids">
+                            <tree editable="bottom">
+                                <field name="salary_scale" required="1"
+                                       domain="[('type','=','scale')]" context="{'default_type': 'scale'}"/>
+                                <field name="salary_scale_level" required="1"
+                                       domain="[('type','=','level')]" context="{'default_type': 'level'}"/>
+                                <field name="salary_scale_group" required="1"
+                                       domain="[('type','=','group')]" context="{'default_type': 'group'}"
+                                       attrs="{'column_invisible': [('parent.salary_type', 'not in', ['related_groups','related_degrees'])]}"/>
+                                <field name="salary_scale_degree" required="1"
+                                       domain="[('type','=','degree')]" context="{'default_type': 'degree'}"
+                                       attrs="{'column_invisible': [('parent.salary_type', 'not in', ['related_degrees'])]}"/>
+                                <field name="salary" required="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+        <!-- page invisible-->
+
+                <xpath expr="//page[@name='rules']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[5]" position="replace">
+                   <page string="Inputs" invisible="1">
+                            <field name="input_ids" mode="tree">
+                                <tree string="Input Data" editable="bottom">
+                                    <field name="name"/>
+                                    <field name="code"/>
+                                </tree>
+                            </field>
+                   </page>
+                </xpath>
+        <!-- page-->
+
+            </field>
+        </record>
+
+        <!-- Salary Category-->
+        <record id="hr_salary_rule_category__inherited_form" model="ir.ui.view">
+            <field name="name">hr.salary.rule.category.inherited.form</field>
+            <field name="model">hr.salary.rule.category</field>
+            <field name="inherit_id" ref="exp_hr_payroll.hr_salary_rule_category_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='code']" position="after">
+                    <field name="rule_type" required="1"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Salary rule tree-->
+        <record id="hr_salary_rule_list2" model="ir.ui.view">
+            <field name="name">hr.salary.rule.list</field>
+            <field name="model">hr.salary.rule</field>
+            <field name="inherit_id" ref="exp_hr_payroll.hr_salary_rule_list"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='register_id']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

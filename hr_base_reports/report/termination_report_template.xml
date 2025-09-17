@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="employee_cost_template">
+            <div class="page" style="font-size:12pt;text-align:center">
+                <center>
+                    <h4 style="font-size:16pt">تقرير المخصصات حتى تاريخ
+                        <span t-esc="date_to"/>
+                    </h4>
+                </center>
+                <table style="width:1500px;border: 1 px solid gray;text-align:center">
+                    <t t-set="i" t-value="1"/>
+                    <t t-foreach="mykey" t-as="key">
+                        <t t-if="i == 1">
+                            <thead>
+                                <tr style="background-color:#263f79">
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        كود الموظف
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        رقم الهوية
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        القطاع
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        اﻹدارة
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        الفرع
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        الوظيفه
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        مهنة اﻹقامة
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        الجنسية
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        فئة التذكرة
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        اسم الكفيل
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        تأمينات إجتماعية
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        تكلفة اﻹقامة
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        تكلفة التأمين الطبي
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;width:3%;text-align:center;color:#FFFFFF">
+                                        التأمين الطبي الشهري
+                                    </th>
+                                    <th style="border: 1px solid gray; border-bottom:0px;width:5%;text-align:center;color:#FFFFFF">
+                                        تاريخ المباشرة
+                                    </th>
+                                    <t t-if="type == 'all' or type == 'salary'">
+                                        <th t-att-colspan="len_of_salary+1"
+                                            style=" border: 1px solid gray;text-align:center;color:#FFFFFF">
+                                            الراتب الشهري
+                                        </th>
+                                    </t>
+                                    <th style=" border: 1px solid gray;border-bottom:0px;text-align:center;color:#FFFFFF">
+                                        سنوات الخدمة(سنة/شهر/يوم)
+                                    </th>
+                                    <th style="border: 1px solid gray;border-bottom:0px;text-align:center;color:#FFFFFF">
+                                        سبب إنهاء الخدمة
+                                    </th>
+                                    <t t-if="type == 'all' or type == 'leave'">
+                                        <th style="border: 1px solid gray;border-bottom:0px;text-align:center;color:#FFFFFF">
+                                            رصيد الإجازة
+                                        </th>
+                                    </t>
+                                    <t t-if="type == 'all' or type == 'ticket'">
+                                        <th style="border: 1px solid gray;border-bottom:0px;text-align:center;color:#FFFFFF">
+                                            عدد تذاكر السفر المستحقة
+                                        </th>
+                                        <th style="border: 1px solid gray;border-bottom:0px;text-align:center;color:#FFFFFF">
+                                            مبلغ تذكرة السفر
+                                        </th>
+                                    </t>
+                                    <t t-if="type == 'all' or type == 'leave'">
+                                        <th style="border: 1px solid gray;border-bottom:0px;text-align:center;color:#FFFFFF">
+                                            قيمة الإجازة
+                                        </th>
+                                    </t>
+                                    <t t-if="type == 'all' or type == 'termination'">
+                                        <th t-att-colspan="2"
+                                            style="border: 1px solid gray;border-bottom:0px;text-align:center;color:#FFFFFF">
+                                            نهاية الخدمة
+                                        </th>
+                                    </t>
+                                    <t t-if="type == 'all' or type == 'termination'">
+                                        <th style="border: 1px solid gray;border-bottom:0px;text-align:center;color:#FFFFFF">
+                                            قيمة نهاية الخدمة
+                                        </th>
+                                    </t>
+
+                                    <th style="border: 1px solid gray;border-bottom:0px;text-align:center;background-color:#263f79;color:#FFFFFF">
+                                        إجمالي المستحق
+                                    </th>
+                                </tr>
+                                <t t-if="type == 'all'">
+                                    <tr>
+                                        <th style="border:1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <t t-foreach="data[key]['rule']" t-as="rule">
+                                            <th style="border: 1px solid gray;text-align:center;background-color:#263f79;color:#FFFFFF">
+                                                <t t-esc="rule"/>
+                                            </th>
+                                        </t>
+                                        <th style=" border: 1px solid gray;text-align:center;background-color:#263f79;color:#FFFFFF">
+                                            المجموع
+                                        </th>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <t t-if="type == 'all' or type == 'termination'">
+                                            <th style="border: 1px solid gray;text-align:center;background-color:#263f79;color:#FFFFFF">
+                                                نهاية الخدمة لأقل من 5 سنة
+                                            </th>
+                                            <th style="border: 1px solid gray;text-align:center;background-color:#263f79;color:#FFFFFF">
+                                                نهاية الخدمة لأكبر من 5 سنة
+                                            </th>
+                                            <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                            <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        </t>
+
+                                    </tr>
+                                </t>
+                                <t t-if="type == 'salary'">
+                                    <tr>
+                                        <th style="border:1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <t t-foreach="data[key]['rule']" t-as="rule">
+                                            <th style="border: 1px solid gray;text-align:center;background-color:#263f79;color:#FFFFFF">
+                                                <t t-esc="rule"/>
+                                            </th>
+                                        </t>
+                                        <th style=" border: 1px solid gray;text-align:center;background-color:#263f79;color:#FFFFFF">
+                                            المجموع
+                                        </th>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+
+                                    </tr>
+                                </t>
+
+                                <t t-if="type == 'termination'">
+                                    <tr>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+
+                                        <th style=" border: 1px solid gray;text-align:center;background-color: #263f79;color:#FFFFFF">
+                                            نهاية الخدمة لأقل من 5 سنة
+                                        </th>
+                                        <th style=" border: 1px solid gray;text-align:center;background-color: #263f79;color:#FFFFFF">
+                                            نهاية الخدمة لأكبر من 5 سنة
+                                        </th>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                        <th style="border: 1px solid gray;border-top:0px;background-color:#263f79;color:#FFFFFF"/>
+                                    </tr>
+                                </t>
+                            </thead>
+                        </t>
+                        <tbody>
+
+                            <tr style="page-break-inside: avoid">
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <t t-esc="data[key]['employee_code']"/>
+                                </td>
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <t t-esc="data[key]['identity']"/>
+                                </td>
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <t t-esc="data[key]['department']"/>
+                                </td>
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <t t-esc="data[key]['department_parent']"/>
+                                </td>
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <t t-esc="data[key]['branch']"/>
+                                </td>
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <t t-esc="data[key]['job']"/>
+                                </td>
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <t t-esc="data[key]['emp_iqama_job']"/>
+                                </td>
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <t t-esc="data[key]['nationality']"/>
+                                </td>
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <t t-esc="data[key]['ticket_type']"/>
+                                </td>
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <t t-esc="data[key]['company_registry']"/>
+                                </td>
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <t t-esc="data[key]['social_ins']"/>
+                                </td>
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <t t-esc="data[key]['iqama_cost']"/>
+                                </td>
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <!--                                    <t t-esc="data[key]['iqama_cost']"/>-->
+                                </td>
+                                <td style="border: 1px solid gray;width:3%;page-break-inside: avoid">
+                                    <!--                                    <t t-esc="data[key]['iqama_cost']"/>-->
+                                </td>
+                                <td style=" border: 1px solid gray;width:5%;page-break-inside: avoid">
+                                    <t t-esc="data[key]['date']"/>
+                                </td>
+                                <t t-if="type == 'all' or type == 'salary'">
+                                    <t t-foreach="data[key]['rule']" t-as="rule">
+                                        <td style=" border: 1px solid gray;page-break-inside: avoid">
+                                            <t t-esc="data[key]['rule'][rule]"/>
+                                        </td>
+                                    </t>
+                                    <td style=" border: 1px solid gray;page-break-inside: avoid">
+                                        <t t-esc="round(data[key]['total_salary'],2)"/>
+                                    </td>
+                                </t>
+                                <td style=" border: 1px solid gray;page-break-inside: avoid">
+                                    <t t-esc="data[key]['experiences_year']"/>
+                                </td>
+                                <td style="border: 1px solid gray;page-break-inside: avoid">
+                                    <t t-esc="data[key]['termination_reson']"/>
+                                </td>
+                                <t t-if="type == 'all' or type == 'leave'">
+                                    <td style=" border: 1px solid gray;page-break-inside: avoid">
+                                        <t t-esc="round(data[key]['remind_leave_day'],2)"/>
+                                    </td>
+                                </t>
+                                <t t-if="type == 'all' or type == 'ticket'">
+                                    <td style=" border: 1px solid gray;page-break-inside: avoid">
+                                        <t t-esc="data[key]['ticket']"/>
+                                    </td>
+                                    <td style=" border: 1px solid gray;page-break-inside: avoid">
+                                        <t t-esc="round(data[key]['ticket_price'],2)"/>
+                                    </td>
+                                </t>
+                                <t t-if="type == 'all' or type == 'leave'">
+                                    <td style=" border: 1px solid gray;page-break-inside: avoid">
+                                        <t t-esc="round(data[key]['leave_price'],2)"/>
+                                    </td>
+                                </t>
+
+                                <t t-if="type == 'all' or type == 'termination'">
+                                    <td style=" border: 1px solid gray;page-break-inside: avoid">
+                                        <t t-esc="round(data[key]['five_year_price'],2)"/>
+                                    </td>
+                                    <td style=" border: 1px solid gray;page-break-inside: avoid">
+                                        <t t-esc="round(data[key]['amount'],2)"/>
+                                    </td>
+                                </t>
+                                <t t-if="type == 'all' or type == 'termination'">
+                                    <td style=" border: 1px solid gray;page-break-inside: avoid">
+                                        <t t-esc="round(data[key]['termination_price'],2)"/>
+                                    </td>
+                                </t>
+                                <td style=" border: 1px solid gray;page-break-inside: avoid">
+                                    <t t-esc="round(data[key]['total'],2)"/>
+                                </td>
+
+                            </tr>
+
+                        </tbody>
+                        <t t-set="i" t-value="i+1"/>
+                    </t>
+                    <tr style="table-footer-group;">
+                        <!--                            <t t-if="i == 1">-->
+                        <tr>
+                            <td colspan="15"
+                                style="text-align:center;background-color:#263f79;color:#FFFFFF;font-size:14pt">الاجمالي
+                            </td>
+                            <t t-foreach="data['total_rule']" t-as="rule">
+                                <td style=" border: 1px solid gray;background-color:#263f79;color:#FFFFFF">
+                                    <t t-esc="round(data['total_rule'][rule],2)"/>
+                                </td>
+                            </t>
+                            <!--                            <td style="background-color:#263f79;"></td>-->
+                            <td style="background-color:#263f79;"></td>
+                            <td style="background-color:#263f79;"></td>
+
+                            <td t-if="type == 'all' or type == 'leave'"
+                                style=" border: 1px solid gray;background-color:#263f79;color:#FFFFFF">
+                                <t t-esc="round(data['total_sum']['remaining_leaves'],2)"/>
+                            </td>
+                            <td t-if="type == 'all' or type == 'ticket'"
+                                style=" border: 1px solid gray;background-color:#263f79;color:#FFFFFF">
+                                <t t-esc="round(data['total_sum']['ticket_num'],2)"/>
+                            </td>
+                            <td t-if="type == 'all' or type == 'ticket'"
+                                style=" border: 1px solid gray;background-color:#263f79;color:#FFFFFF">
+                                <t t-esc="round(data['total_sum']['ticket_price'],2)"/>
+                            </td>
+                            <td t-if="type == 'all' or type == 'leave'"
+                                style=" border: 1px solid gray;background-color:#263f79;color:#FFFFFF">
+                                <t t-esc="round(data['total_sum']['lave_price'],2)"/>
+                            </td>
+                            <td t-if="type == 'all' or type == 'termination'"
+                                style=" border: 1px solid gray;background-color:#263f79;color:#FFFFFF">
+                                <t t-esc="round(data['total_sum']['five_year_price'],2)"/>
+                            </td>
+                            <td t-if="type == 'all' or type == 'termination'"
+                                style=" border: 1px solid gray;background-color:#263f79;color:#FFFFFF">
+                                <t t-esc="round(data['total_sum']['amount'],2)"/>
+                            </td>
+                            <td t-if="type == 'all' or type == 'termination'"
+                                style=" border: 1px solid gray;background-color:#263f79;color:#FFFFFF">
+                                <t t-esc="round(data['total_sum']['termination_price'],2)"/>
+                            </td>
+                            <td style=" border: 1px solid gray;background-color:#263f79;color:#FFFFFF">
+                                <t t-esc="round(data['total_sum']['total'],2)"/>
+                            </td>
+
+                        </tr>
+                        <!--                            </t>-->
+                    </tr>
+                </table>
+                <style>
+                    td{
+                    height:5px;
+                    width:5%;
+                    }
+                    table{
+                    height:50px;
+                    width:30%;
+                    }
+                    th{
+                    height:10px;
+                    }
+
+                </style>
+
+            </div>
+        </template>
+        <template id="termination_report_temp">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <style type="text/css">
+                        @font-face {
+                        font-family: 'ae_AlMohanad';
+                        src: local('ae_AlMohanad'), local('ae_AlMohanad'),
+                        url('/hr_termination/static/fonts/ae_AlMohanad.ttf') format('truetype');
+                        }
+                        *{
+                        font-family: ae_AlMohanad;
+                        }
+                    </style>
+                    <!--                    <t t-if="type == 'all'">-->
+                    <t t-call="hr_base_reports.employee_cost_template"/>
+                    <!--                    </t>-->
+                    <!--                    <t t-if="type == 'specified'">-->
+                    <!--                        <t t-call="hr_holidays_public.specified_leave_report_template"/>-->
+                    <!--                    </t>-->
+                </t>
+            </t>
+        </template>
+
+        <record id="paperformat_termination_report" model="report.paperformat">
+            <field name="name">European A4 Termination</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">40</field>
+            <field name="margin_bottom">5</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">35</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="termination_benefits_action_report" model="ir.actions.report">
+            <field name="model">employees.cost.report</field>
+            <field name="name">Employees Cost Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_base_reports.termination_report_temp</field>
+        </record>
+
+        <record id="termination_benefits_action_report" model="ir.actions.report">
+            <field name="paperformat_id" ref="hr_base_reports.paperformat_termination_report"/>
+        </record>
+        <record id="termination_benefits_xls" model="ir.actions.report">
+            <field name="model">employees.cost.report</field>
+            <field name="name">Print to XLSX</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_base_reports.termination_benefits_xls</field>
+            <field name="report_file">Termination Report</field>
+        </record>
+    </data>
+</odoo>

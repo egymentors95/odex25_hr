@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="paperformat_hr_letters_custom_report" model="report.paperformat">
+            <field name="name">HR Letters (New)</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">50</field>
+            <field name="margin_bottom">18</field>
+            <field name="margin_left">25</field>
+            <field name="margin_right">25</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">50</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="paperformat_Know_the_salary_without_details" model="report.paperformat">
+            <field name="name">HR Letters (New)</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">50</field>
+            <field name="margin_bottom">18</field>
+            <field name="margin_left">25</field>
+            <field name="margin_right">25</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">50</field>
+            <field name="dpi">90</field>
+        </record>
+
+
+        <record id="paperformat_salary_definition" model="report.paperformat">
+            <field name="name">HR Letters (New)</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">50</field>
+            <field name="margin_bottom">18</field>
+            <field name="margin_left">25</field>
+            <field name="margin_right">25</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">50</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <record id="paperformat_report_traffic" model="report.paperformat">
+            <field name="name">HR Letters (New)</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">50</field>
+            <field name="margin_bottom">18</field>
+            <field name="margin_left">25</field>
+            <field name="margin_right">25</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">50</field>
+            <field name="dpi">90</field>
+        </record>
+
+
+        <record id="paperformat_profession_oriented_modification" model="report.paperformat">
+            <field name="name">HR Letters (New)</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">50</field>
+            <field name="margin_bottom">18</field>
+            <field name="margin_left">25</field>
+            <field name="margin_right">25</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">50</field>
+            <field name="dpi">90</field>
+        </record>
+
+
+        <record id="paperformat_ngineers_authority" model="report.paperformat">
+            <field name="name">HR Letters (New)</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">50</field>
+            <field name="margin_bottom">18</field>
+            <field name="margin_left">25</field>
+            <field name="margin_right">25</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">50</field>
+            <field name="dpi">90</field>
+        </record>
+
+        <report
+                id="report_Know_the_salary_without_details"
+                model="hr.employee"
+                string="Know the salary without details"
+                name="hr_custom_report.template_report_Know_the_salary_without_details"
+                file="hr_custom_report.template_report_Know_the_salary_without_details"
+                report_type="qweb-pdf"
+                paperformat="paperformat_Know_the_salary_without_details"
+        />
+
+        <report
+                id="report_salary_definition"
+                model="hr.employee"
+                string="Salary definition"
+                name="hr_custom_report.template_report_salary_definition"
+                file="hr_custom_report.template_report_salary_definition"
+                report_type="qweb-pdf"
+                paperformat="paperformat_salary_definition"
+        />
+
+        <report
+                id="report_traffic"
+                model="hr.employee"
+                string="report traffic"
+                name="hr_custom_report.template_report_traffic"
+                file="hr_custom_report.template_report_traffic"
+                report_type="qweb-pdf"
+                paperformat="paperformat_report_traffic"
+        />
+
+        <report
+                id="_profession_oriented_modification_tide_condition"
+                model="hr.employee"
+                string="profession oriented modification tide condition"
+                name="hr_custom_report.template_report_profession_oriented_modification_tide_condition"
+                file="hr_custom_report.template_report_profession_oriented_modification_tide_condition"
+                report_type="qweb-pdf"
+                paperformat="paperformat_profession_oriented_modification"
+        />
+
+        <report
+                id="report_engineers_authority"
+                model="hr.employee"
+                string="Engineers Authority"
+                name="hr_custom_report.template_report_engineers_authority"
+                file="hr_custom_report.template_report_engineers_authority"
+                report_type="qweb-pdf"
+                paperformat="paperformat_ngineers_authority"
+        />
+
+        <report
+                id="report_cultural_attaché"
+                model="hr.employee"
+                string="Cultural Attaché"
+                name="hr_custom_report.template_report_cultural_attaché"
+                file="hr_custom_report.template_report_cultural_attaché"
+                report_type="qweb-pdf"
+                paperformat="paperformat_hr_letters_custom_report"
+        />
+
+        <report
+                id="report_submitted_embassy"
+                model="hr.employee"
+                string="Submitted to the embassy"
+                name="hr_custom_report.template_report_submitted_embassy"
+                file="hr_custom_report.template_report_submitted_embassy"
+                report_type="qweb-pdf"/>
+
+    </data>
+</odoo>

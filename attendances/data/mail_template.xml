@@ -1,0 +1,36 @@
+<odoo>
+<!--    <record id="attendance_notification_email_template" model="mail.template">-->
+<!--            <field name="name">Attendance Notification Email Template</field>-->
+<!--            <field name="subject">Attendance Report</field>-->
+<!--            <field name="email_from">${object.employee_id.work_email}</field>-->
+<!--            <field name="model_id" ref="attendances.model_hr_attendance_transaction"/>-->
+<!--            <field name="email_to">${object.email}</field>-->
+<!--            <field name="lang">${object.lang}</field>-->
+<!--            <field name="auto_delete" eval="False"/>-->
+<!--            <field name="body_html">-->
+<!--                <![CDATA[-->
+<!--        <p>Dear ${object.employee_id.name},</p>-->
+<!--        <p>We would like to inform you of the following attendance details:</p>-->
+<!--        <table border="1" style="width:100%; border-collapse: collapse;">-->
+<!--            <tr>-->
+<!--                <th>Date</th>-->
+<!--                <th>Daya</th>-->
+<!--                <th>Lateness</th>-->
+<!--                <th>Early Exit</th>-->
+<!--                <th>Note</th>-->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                <td>${object.date.strftime('%Y-%m-%d')}</td>-->
+<!--                <td>${object.date.strftime('%A')}</td>-->
+<!--                <td>${'00:00:00' if not object.lateness else object.lateness.strftime('%H:%M:%S')}</td>-->
+<!--                <td>${'00:00:00' if not object.early_exit else object.early_exit.strftime('%H:%M:%S')}</td>-->
+<!--                <td>-->
+<!--                    ${'Missed Punch' if (not object.sign_in or not object.sign_out) else ('Absent' if object.is_absent else 'Present')}-->
+<!--                </td>-->
+<!--            </tr>-->
+<!--        </table>-->
+<!--        <p>Please adhere to work timings. Thank you for your understanding.</p>-->
+<!--        ]]>-->
+<!--            </field>-->
+<!--        </record>-->
+</odoo>

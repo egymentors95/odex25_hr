@@ -1,0 +1,362 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="model_payslip_form_view">
+            <field name="name">hr.payslip.form</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="exp_hr_payroll.view_hr_payslip_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="replace">
+                    <header>
+                        <button string="Confirm" name="confirm" type="object" states="computed"
+                                class="oe_highlight"
+                                groups="hr_base.group_executive_manager,hr_base.group_general_manager"/>
+                        <button string="Withdraw" name="withdraw" type="object" states="computed"
+                                class="oe_highlight" confirm="Are you sure to Delete Compute Salaries?"
+                                groups="hr.group_hr_manager"/>
+                        <button string="Recompute" name="compute_sheet" type="object" states="computed"
+                                class="oe_highlight" confirm="Are you sure to Recompute Salaries?"
+                                groups="exp_hr_payroll.group_hr_payroll_user"/>
+                        <button string="Transfer" name="transfer" type="object" states="confirmed"
+                                class="oe_highlight" confirm="Are you sure to Transfer Accounting?"
+                                groups="hr.group_hr_manager"/>
+                        <button string="Return" name="return_button" states="confirmed,transfered" type='object'
+                                class="oe_highlight" confirm="Are you sure to Return Compute Salaries?"
+                                groups="hr_base.group_executive_manager,hr_base.group_general_manager"/>
+                        <!--button string="Set to Draft" name="action_payslip_draft" type="object" states="close"
+                                class="oe_highlight"
+                                groups="hr_payroll.group_hr_payroll_user"/-->
+                        <button string="Compute Sheet" name="compute_sheet" type="object" states="draft"
+                                class="oe_highlight"
+                                groups="exp_hr_payroll.group_hr_payroll_user"/>
+                        <!--button string="Cancel Payslip" name="payslip_close" type="object"
+                                class="oe_highlight"
+                                states="draft,hr_check,verify"
+                                groups="hr.group_hr_manager,hr_base.group_executive_manager,hr_base.group_general_manager"/-->
+                        <field name="state" widget="statusbar" statusbar_visible="draft,computed,confirmed,transfered"/>
+                    </header>
+                </xpath>
+
+                <xpath expr="//form" position="attributes">
+                    <attribute name="edit">0</attribute>
+                    <attribute name="delete">0</attribute>
+                    <attribute name="create">0</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//group[1]" position="replace">
+                    <group col="4">
+                        <label for="date_from" string="Period"/>
+                        <div>
+                            <field name="date_from" class="oe_inline"/>
+                            -
+                            <field name="date_to" class="oe_inline"/>
+                        </div>
+                        <field name="contract_id" context="{'default_employee_id': employee_id}"/>
+                        <!--field name="number"/-->
+                        <field name="struct_id" domain="[('type','=','scale')]" string="Salary Scale"/>
+                        <field name="move_id" readonly="1"/>
+                        <!--field name="percentage" string="Percentage" attrs="{'readonly': [('state','!=','draft')]}"/-->
+                        <!--field name="credit_note"/-->
+                    </group>
+                </xpath>
+                <xpath expr="//page[4]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[3]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//page[2]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//notebook/page[1]" position="before">
+                    <page string="Allowances">
+                        <field name="allowance_ids" readonly="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="code"/>
+                                <field name="category_id"  string="Allowance"/>
+                                <field name="sequence" invisible="1"/>
+                                <field name="quantity"/>
+                                <field name="rate"/>
+                                <field name="salary_rule_id"/>
+                                <field name="amount"/>
+                                <!--field name="percentage" string="Percentage"/-->
+                                <field name="total"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Deductions">
+                        <field name="deduction_ids" readonly="1">
+                            <tree>
+                                <field name="name"/>
+                                <field name="code"/>
+                                <field name="category_id" string="Deduction" />
+                                <field name="sequence" invisible="1"/>
+                                <field name="quantity" invisible="1"/>
+                                <field name="rate" invisible="1"/>
+                                <field name="salary_rule_id" invisible="1"/>
+                                <field name="amount"/>
+                                <!--field name="percentage" string="Percentage"/-->
+                                <field name="total"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page name="loans" string="Loans" groups="hr_loans_salary_advance.group_loan_manager">
+                        <field name="loan_ids" readonly="1" groups="hr_loans_salary_advance.group_loan_manager">
+                            <tree name="loans">
+                                <field name="name"/>
+                                <field name="code"/>
+                                <field name="date"/>
+                                <field name="account_id"/>
+                                <field name="amount"/>
+                                <field name="paid" invisible="1"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+                <xpath expr="//form/sheet/notebook" position="after">
+                    <group col="4" colspan="4">
+                        <field name="total_allowances"/>
+                        <field name="total_deductions"/>
+                        <field name="total_loans"  groups="hr_loans_salary_advance.group_loan_manager"/>
+                        <field name="total_sum"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_payslip_run_inherited_form_view">
+            <field name="name">hr.payslip.run.inherit.form</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="exp_hr_payroll.hr_payslip_run_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//header" position="replace">
+                    <header>
+                        <button name="compute_sheet" type="object" states="draft" string="Generate Payslip"
+                                class="oe_highlight"
+                                groups="exp_hr_payroll.group_hr_payroll_user"/>
+                        <button name="confirm" type="object" states="computed" string="Confirm" class="oe_highlight"
+                                groups="hr_base.group_executive_manager,hr_base.group_general_manager"/>
+                        <button name="withdraw" type="object" states="computed" string="Withdraw" class="oe_highlight"
+                                groups="hr.group_hr_manager" confirm="Are you sure to Delete Compute Salaries?"/>
+                        <button name="compute_sheet" type="object" states="computed" string="Recompute"
+                                class="oe_highlight" confirm="Are you sure to Recompute Salaries?"
+                                groups="exp_hr_payroll.group_hr_payroll_user"/>
+                        <!--button string="Set to Draft" name="draft_payslip_run" type="object" states="close" class="oe_highlight"
+                                groups="hr_payroll.group_hr_payroll_user"/-->
+                        <button string="Transfer" name="transfer" type="object" states="confirmed"
+                                class="oe_highlight" confirm="Are you sure to Transfer Accounting?"
+                                groups="hr.group_hr_manager"/>
+                        <button string="Return" name="return_button" type="object" states="confirmed,transfered"
+                                class="oe_highlight" confirm="Are you sure to Return Compute Salaries?"
+                                groups="hr_base.group_executive_manager,hr_base.group_general_manager"/>
+                        <!--button name="close_payslip_run" type="object" string="Close Payslip" states="draft"
+                                class="oe_highlight"/-->
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,computed,confirmed,transfered"/>
+                    </header>
+                </xpath>
+                <xpath expr="//field[@name='credit_note']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+
+
+                <xpath expr="//field[@name='credit_note']" position="before">
+                    <label for="holiday_start_date" string="Holiday Period"/>
+                    <div>
+                        <field name="holiday_start_date" class="oe_inline"/>
+                        -
+                        <field name="holiday_end_date" class="oe_inline"/>
+                    </div>
+                    <field name="salary_scale" domain="[('type', '=', 'scale')]"
+                           attrs="{'readonly': [('state','!=','draft')]}" required="1"/>
+
+                    <field name="journal_id"
+                           attrs="{'readonly': [('state','!=','draft')], 'required': [('required_condition','=',True)]}"/>
+
+                    <field name="move_id" readonly="1" attrs="{'invisible': [('required_condition','=',False)]}"/>
+                    <field name="company_id" groups="base.group_multi_company" readonly="1" options="{'no_create': True}"/>
+                    <!--field name="percentage" string="Percentage" attrs="{'readonly': [('state','!=','draft')]}"/-->
+                    <field name="required_condition" invisible="1"/>
+                    <field name="employee_value_ids" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='slip_ids']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//separator[1]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//form/sheet" position="inside">
+                    <notebook>
+                        <page name="payslip_ids" string="Payslips">
+                            <field name="slip_ids"/>
+                        </page>
+                        <page name="employee_ids" string="Employees">
+                            <field name="employee_ids" nolabel="1" widget="many2many"
+                                   attrs="{'readonly': [('state','!=','draft')]}"/>
+                        </page>
+                        <page name="department_ids" string="Departments">
+                            <field name="department_ids" nolabel="1" widget="many2many"
+                                   attrs="{'readonly': [('state','!=','draft')]}"/>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="hr_payslip_run_tree_inherit" model="ir.ui.view">
+            <field name="name">hr.payslip.run.tree</field>
+            <field name="model">hr.payslip.run</field>
+            <field name="inherit_id" ref="exp_hr_payroll.hr_payslip_run_tree"/>
+            <field name="arch" type="xml">
+                <tree position="replace">
+                    <tree decoration-success="state=='transfered'" decoration-info="state == 'draft'">
+<!--                        <field name="name"/>-->
+                        <field name="date_start"/>
+                        <field name="date_end"/>
+                        <field name="credit_note" invisible="1"/>
+                        <field name="state"/>
+                    </tree>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="inherited_hr_payslip_line_form" model="ir.ui.view">
+            <field name="name">hr.payslip.line.form.inherited</field>
+            <field name="model">hr.payslip.line</field>
+            <field name="inherit_id" ref="exp_hr_payroll.view_hr_payslip_line_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='employee_id']" position="after">
+                    <field name="leave_request_case"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="inherited_view_hr_payslip_line_tree" model="ir.ui.view">
+            <field name="name">hr.payslip.line.tree.inherited</field>
+            <field name="model">hr.payslip.line</field>
+            <field name="inherit_id" ref="exp_hr_payroll.view_hr_payslip_line_tree"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='category_id']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='employee_id']" position="attributes">
+                    <attribute name="invisible">0</attribute>
+                </xpath>
+                <xpath expr="//field[@name='employee_id']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='sequence']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='code']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='quantity']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='rate']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='amount']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+                <!--xpath expr="//field[@name='amount']" position="after">
+                    <field name="percentage" string="Percentage" readonly="1"/>
+                </xpath-->
+                <xpath expr="//field[@name='total']" position="attributes">
+                    <attribute name="readonly">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_hr_payslip_inherit_tree" model="ir.ui.view">
+            <field name="name">hr.payslip.tree</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="exp_hr_payroll.view_hr_payslip_tree"/>
+            <field name="arch" type="xml">
+                <tree position="replace">
+                    <tree decoration-success="state=='transfered'" decoration-info="state == 'draft'" create="false" edit="false" delete="false">
+                        <!--field name="number"/-->
+                        <field name="employee_no" string="Employee Number"/>
+                        <field name="employee_id"/>
+<!--                        <field name="name"/>-->
+                        <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
+                        <field name="date_from"/>
+                        <field name="date_to"/>
+                        <field name="payslip_run_id" invisible="1"/>
+                        <field name="basic_allowances" sum="Basic Salary"/>
+                        <field name="house_allowances" sum="House Allowance"/>
+                        <field name="trans_allowances" sum="Transport Allowance"/>
+                        <field name="other_allowances" sum="Others Allowance"/>
+                        <field name="employee_insurnce" sum="Employee Insurnce"/>
+                        <field name="total_allowances" sum="Total Allowance"/>
+                        <field name="total_deductions" sum="Total Deduction"/>
+                        <field name="total_loans" sum="Total Loans"  groups="hr_loans_salary_advance.group_loan_manager"/>
+                        <!--field name="percentage" string="Percentage"/-->
+                        <field name="total_sum" sum="Total Net"/>
+                        <field name="state"/>
+                    </tree>
+                </tree>
+            </field>
+        </record>
+
+
+        <!--   hr.payslip.kanban     -->
+
+        <record id="hr_payslip_view_kanban_inherit" model="ir.ui.view">
+            <field name="name">hr.payslip.kanban</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="exp_hr_payroll.hr_payslip_view_kanban"/>
+            <field name="arch" type="xml">
+                <xpath expr="//kanban" position="attributes">
+                    <attribute name="edit">0</attribute>
+                    <attribute name="delete">0</attribute>
+                    <attribute name="create">0</attribute>
+                </xpath>
+                <xpath expr="//field[@name='employee_id']" position="after">
+                   <div class="col-12">
+                        <span>
+                            <field name="contract_id"/>
+                        </span>
+                   </div>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="after">
+                   <div class="col-12">
+                        <span>
+                            <field name="total_sum"/>
+                        </span>
+                   </div>
+                </xpath>
+
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
+        <!--   hr.payslip.search     -->
+
+        <record id="view_hr_payslip_filter_inherit" model="ir.ui.view">
+            <field name="name">hr.payslip.select</field>
+            <field name="model">hr.payslip</field>
+            <field name="inherit_id" ref="exp_hr_payroll.view_hr_payslip_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='employee_id']" position="after">
+                       <field name="employee_no" string="Employee Number"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,1095 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_government_relations
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 06:50+0000\n"
+"PO-Revision-Date: 2022-09-13 06:50+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/exit_and_return.py:0
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__contract_duration__12
+#, python-format
+msgid "12 Month"
+msgstr "12 شهر"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__one
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "15"
+msgstr "15 شهر"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__four
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "180"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__sex
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "1825"
+msgstr ""
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/exit_and_return.py:0
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__contract_duration__24
+#, python-format
+msgid "24 Month"
+msgstr "24 شهر"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__tow
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "30"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__five
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "365"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__three
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "90"
+msgstr ""
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Account"
+msgstr "حساب"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__account_debit_id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__account_debit_id
+msgid "Account Debit"
+msgstr "الحساب المدين"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__account_journal_id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__account_journal_id
+msgid "Account Journal"
+msgstr "حساب اليومية"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__account_move_id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__account_move_id
+msgid "Account Move"
+msgstr "القيود المحاسبيه"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Account move"
+msgstr "القيود المحاسبيه"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_needaction
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_needaction
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__activity_ids
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__activity_ids
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__activity
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Activity"
+msgstr "النشاط"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__activity_state
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__activity_state
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__activity_type_icon
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__activity_type_icon
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Another Employee"
+msgstr "موظف آخر"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__state__done
+msgid "Approved"
+msgstr "تم التصديق"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Are you sure to Reset To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المسوده؟"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Arrival Before"
+msgstr "الرجوع قبل تاريخ"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__arrival_before_date
+msgid "Arrival Before Date"
+msgstr "الرجوع قبل تاريخ"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__attach_ids
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__attach_ids
+msgid "Attach"
+msgstr "المرفق"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_ir_attachment__attach_ids_exit_return
+msgid "Attach Ids Exit Return"
+msgstr "مرفق الخروج والعوده"
+
+#. module: hr_government_relations
+#: model:ir.model,name:hr_government_relations.model_ir_attachment
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_attachment_count
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_attachment_count
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Attachment Name"
+msgstr "اسم المرفق"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__birth_date
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Birth Date"
+msgstr "تاريخ الميلاد"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "BirthDay"
+msgstr "تاريخ الميلاد"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_request_visa__religion__christian
+msgid "Christian"
+msgstr "غير مسلم"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__contract_duration
+msgid "Contract Duration"
+msgstr "مده العقد"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__cost
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__cost
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Cost"
+msgstr "التكلفة"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__create_uid
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__create_uid
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__create_uid
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__create_date
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__create_date
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__create_date
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__contract_id
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Current Contract"
+msgstr "العقد الحالي"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__iqama_end_date
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Identity End Date"
+msgstr "تاريخ نهاية الهوية"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__iqama_number
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Identity Number"
+msgstr "رقم الهوية"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Iqama Info"
+msgstr "معلومات الهوية"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,help:hr_government_relations.field_hr_exit_return__contract_id
+msgid "Current contract of the employee"
+msgstr ""
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/renew_official_paper.py:0
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__date
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__date
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_report_template
+#, python-format
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/exit_and_return.py:0
+#, python-format
+msgid "Date Travel Must be Less Than Date Arrival"
+msgstr "تاريخ السفر يجب ان يكون قبل تاريخ الرجوع"
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/renew_official_paper.py:0
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__days
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_form_view
+#, python-format
+msgid "Days"
+msgstr "الأيام"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__department_id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__department
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__department_id
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Department"
+msgstr "الهيكل الإداري"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_report_template
+msgid "Department Name"
+msgstr "الهيكل الإداري"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Dependants"
+msgstr "المرافقين"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__state__send
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_request_visa__state__send
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Direct Manager"
+msgstr "انتظار العلاقات الحكومية"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__display_name
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__display_name
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__display_name
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__display_name
+#: model:ir.model.fields,field_description:hr_government_relations.field_ir_attachment__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_tree_view
+msgid "Document"
+msgstr "اسم المستند"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__document_type
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__document_type
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_report_template
+msgid "Document Type"
+msgstr "نوع المستند"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__state__draft
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_request_visa__state__draft
+msgid "Draft"
+msgstr "مسوده"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Editional Data"
+msgstr "معلومات اضافية"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Employe"
+msgstr "الموظف"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__employee_id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__employee_id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__employee_dependant
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Employee Dependants"
+msgstr "المرافقين"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Employee Info"
+msgstr "معلومات الموظف"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_report_template
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__state__request
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_request_visa__state__request
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Employee Request"
+msgstr "إرســـال"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__exit_return_type
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Exit Return Type"
+msgstr "نوع الخروج والعوده"
+
+#. module: hr_government_relations
+#: model:ir.actions.act_window,name:hr_government_relations.exit_and_return_action
+#: model:ir.ui.menu,name:hr_government_relations.exit_and_return
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_tree_view
+msgid "Exit and Return"
+msgstr " الخروج والعوده"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__expire_before
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_tree_view
+msgid "Expire Before"
+msgstr "تاريخ انشاء المستند"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__expire_date
+msgid "Expire Date"
+msgstr "تاريخ النهاية"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_report_template
+msgid "Expiry Date"
+msgstr "تاريخ النهاية"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "File Content"
+msgstr "محتوى المرفق"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Files"
+msgstr "ملفات"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__exit_return_type__final
+msgid "Final Exit"
+msgstr "خروج نهائي"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__first_date
+msgid "First Date"
+msgstr "تاريخ اول دخول للمملكة"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_follower_ids
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_follower_ids
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_channel_ids
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_channel_ids
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_partner_ids
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_partner_ids
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,help:hr_government_relations.field_hr_exit_return__activity_type_icon
+#: model:ir.model.fields,help:hr_government_relations.field_hr_renew_official_paper__activity_type_icon
+#: model:ir.model.fields,help:hr_government_relations.field_hr_request_visa__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__request_for__employee
+msgid "For Employee Only"
+msgstr "الموظف فقط"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__request_for__all
+msgid "For Employee and Family"
+msgstr "الموظف والعائلة"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__request_for__family
+msgid "For Family Only"
+msgstr "العائلة فقط"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__from_hr
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__from_hr
+msgid "From Hr"
+msgstr "موظف آخر"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_form_view
+msgid "Generate Report"
+msgstr "بحث عن المستندات"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__state__confirm
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_request_visa__state__confirm
+#: model:ir.ui.menu,name:hr_government_relations.hr_government_relations_menu
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Government Relations"
+msgstr "المعاملات الحكومية"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_request_visa__state__done
+msgid "HR Approve"
+msgstr "تم التصديق"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "HR Manager"
+msgstr "الموارد البشرية"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__id
+#: model:ir.model.fields,field_description:hr_government_relations.field_ir_attachment__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,help:hr_government_relations.field_hr_exit_return__activity_exception_icon
+#: model:ir.model.fields,help:hr_government_relations.field_hr_renew_official_paper__activity_exception_icon
+#: model:ir.model.fields,help:hr_government_relations.field_hr_request_visa__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,help:hr_government_relations.field_hr_exit_return__message_needaction
+#: model:ir.model.fields,help:hr_government_relations.field_hr_exit_return__message_unread
+#: model:ir.model.fields,help:hr_government_relations.field_hr_renew_official_paper__message_needaction
+#: model:ir.model.fields,help:hr_government_relations.field_hr_renew_official_paper__message_unread
+#: model:ir.model.fields,help:hr_government_relations.field_hr_request_visa__message_needaction
+#: model:ir.model.fields,help:hr_government_relations.field_hr_request_visa__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,help:hr_government_relations.field_hr_exit_return__message_has_error
+#: model:ir.model.fields,help:hr_government_relations.field_hr_exit_return__message_has_sms_error
+#: model:ir.model.fields,help:hr_government_relations.field_hr_renew_official_paper__message_has_error
+#: model:ir.model.fields,help:hr_government_relations.field_hr_renew_official_paper__message_has_sms_error
+#: model:ir.model.fields,help:hr_government_relations.field_hr_request_visa__message_has_error
+#: model:ir.model.fields,help:hr_government_relations.field_hr_request_visa__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/official_paper_line.py:0
+#: code:addons/hr_government_relations/models/renew_official_paper.py:0
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_official_paper_line__document_type__iqama
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_renew_official_paper__document_type__iqama
+#, python-format
+msgid "Iqama"
+msgstr "إقـامـة"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_is_follower
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_is_follower
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__job_id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__job
+msgid "Job"
+msgstr "المهنة"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__job_no
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_report_template
+msgid "Job No"
+msgstr "رقم الوظيف"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__job_id
+msgid "Job Position"
+msgstr "المسمى الوظيفي"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_report_template
+msgid "Job Title"
+msgstr "الوظيفة"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return____last_update
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line____last_update
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper____last_update
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa____last_update
+#: model:ir.model.fields,field_description:hr_government_relations.field_ir_attachment____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__write_uid
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__write_uid
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__write_uid
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__write_date
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__write_date
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__write_date
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/official_paper_line.py:0
+#: code:addons/hr_government_relations/models/renew_official_paper.py:0
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_official_paper_line__document_type__license
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_renew_official_paper__document_type__license
+#, python-format
+msgid "License"
+msgstr "رخصة سياقـة"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_has_error
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_has_error
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_ids
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_ids
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__multi
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Multi"
+msgstr "متعدده"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__exit_return_type__multi
+msgid "Multi Travel"
+msgstr "عدة سفرات"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_request_visa__religion__muslim
+msgid "Muslim"
+msgstr "مسلم"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Name Job"
+msgstr "المهنة"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__nationality
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__nationality_id
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_report_template
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__nationality_id
+msgid "Nationality (Country)"
+msgstr "الجنسية (البلد)"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__activity_summary
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__activity_summary
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__activity_type_id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__activity_type_id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__note
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__note
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_tree_view
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,help:hr_government_relations.field_hr_exit_return__message_needaction_counter
+#: model:ir.model.fields,help:hr_government_relations.field_hr_renew_official_paper__message_needaction_counter
+#: model:ir.model.fields,help:hr_government_relations.field_hr_request_visa__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,help:hr_government_relations.field_hr_exit_return__message_has_error_counter
+#: model:ir.model.fields,help:hr_government_relations.field_hr_renew_official_paper__message_has_error_counter
+#: model:ir.model.fields,help:hr_government_relations.field_hr_request_visa__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,help:hr_government_relations.field_hr_exit_return__message_unread_counter
+#: model:ir.model.fields,help:hr_government_relations.field_hr_renew_official_paper__message_unread_counter
+#: model:ir.model.fields,help:hr_government_relations.field_hr_request_visa__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__official_paper_ids
+msgid "Official Paper"
+msgstr "الاوارق الرسمية"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_official_paper_line__official_paper_line
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_form_view
+msgid "Official Paper Line"
+msgstr "عناصر الاوارق الرسمية"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__on_employee_fair
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "On Employee Fair"
+msgstr "التكلفة على الموظف"
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/exit_and_return.py:0
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__exit_return_type__one
+#, python-format
+msgid "One Travel"
+msgstr "سفرة واحده"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__onece
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Onece"
+msgstr "مفردة"
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/official_paper_line.py:0
+#: code:addons/hr_government_relations/models/renew_official_paper.py:0
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_request_visa__religion__other
+#, python-format
+msgid "Other"
+msgstr "اخرى"
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/official_paper_line.py:0
+#: code:addons/hr_government_relations/models/renew_official_paper.py:0
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__passport
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_official_paper_line__document_type__passport
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_renew_official_paper__document_type__passport
+#, python-format
+msgid "Passport"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__passport_date
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Passport Date"
+msgstr "جـواز سفر"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Passport Number"
+msgstr "رقم الجواز"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Person Info"
+msgstr "معلومــــات الزائر"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Person Nmae"
+msgstr "الاسـم"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Re-draft"
+msgstr "إرجاع لمبدئي"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_exit_return__state__refuse
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_request_visa__state__refuse
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__religion
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Religion"
+msgstr "الديانة"
+
+#. module: hr_government_relations
+#: model:ir.actions.act_window,name:hr_government_relations.renew_official_paper_action
+#: model:ir.ui.menu,name:hr_government_relations.renew_official_paper
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_tree_view
+msgid "Renew Official Paper"
+msgstr "الاستعلام عن المستندات الرسمية"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.renew_official_paper_report_template
+msgid "Renew Official Papers"
+msgstr "الاستعلام عن المستندات الرسمية"
+
+#. module: hr_government_relations
+#: model:ir.actions.report,name:hr_government_relations.hr_government_relations_report
+msgid "Report Renewed Papers"
+msgstr "تقرير الاوراق الرسمية المجددة"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__request_for
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Request For"
+msgstr "المستفيد من الطلب"
+
+#. module: hr_government_relations
+#: model:ir.actions.act_window,name:hr_government_relations.request_visa_action
+#: model:ir.ui.menu,name:hr_government_relations.request_visa
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_tree_view
+msgid "Request Visa"
+msgstr "طلب تأشيرة زيارة"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Request via HR"
+msgstr "موظف آخر"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__activity_user_id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__activity_user_id
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/official_paper_line.py:0
+#: code:addons/hr_government_relations/models/renew_official_paper.py:0
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_official_paper_line__document_type__saudi
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_renew_official_paper__document_type__saudi
+#, python-format
+msgid "Saudi ID"
+msgstr "الهوية الوطنية"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__state
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__state
+msgid "State"
+msgstr "الحـالة"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,help:hr_government_relations.field_hr_exit_return__activity_state
+#: model:ir.model.fields,help:hr_government_relations.field_hr_renew_official_paper__activity_state
+#: model:ir.model.fields,help:hr_government_relations.field_hr_request_visa__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Travel Before"
+msgstr "السفر قبل تاريخ"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__travel_before_date
+msgid "Travel Before Date"
+msgstr "السفر قبل تاريخ"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,help:hr_government_relations.field_hr_exit_return__activity_exception_decoration
+#: model:ir.model.fields,help:hr_government_relations.field_hr_renew_official_paper__activity_exception_decoration
+#: model:ir.model.fields,help:hr_government_relations.field_hr_request_visa__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_unread
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_unread
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__message_unread_counter
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__message_unread_counter
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__visa_duration
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Visa Duration"
+msgstr "فترة التأشيرة (بالأيام)"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__entry_visa_no
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__visa_no
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Visa No"
+msgstr "رقم التأشيرة"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Visa Period"
+msgstr "مدة التأشيرة باليوم"
+
+#. module: hr_government_relations
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Visa Type"
+msgstr "نوع التاشيرة"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__website_message_ids
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_renew_official_paper__website_message_ids
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,help:hr_government_relations.field_hr_exit_return__website_message_ids
+#: model:ir.model.fields,help:hr_government_relations.field_hr_renew_official_paper__website_message_ids
+#: model:ir.model.fields,help:hr_government_relations.field_hr_request_visa__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__without_leave
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.exit_and_return_form_view
+msgid "Without Leave"
+msgstr "لا يتطلب اجازة"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__work_from
+msgid "Work From"
+msgstr "جهة القدوم"
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_exit_return__border_no
+msgid "Work Permit No"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields,field_description:hr_government_relations.field_hr_request_visa__working
+#: model_terms:ir.ui.view,arch_db:hr_government_relations.request_visa_form_view
+msgid "Working"
+msgstr "جهة العمل"
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/exit_and_return.py:0
+#, python-format
+msgid "You are single, can not request ticket for family"
+msgstr "الموظف اعزب لايمكن طلب تذكرة للعائله"
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/exit_and_return.py:0
+#: code:addons/hr_government_relations/models/request_visa.py:0
+#, python-format
+msgid "You can not delete record in state not in draft"
+msgstr "لا يمكن حذف السجل  اذا كان في حالة غير مسوده"
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/exit_and_return.py:0
+#: code:addons/hr_government_relations/models/request_visa.py:0
+#, python-format
+msgid ""
+"You can not re-draft Exit and return because account move with ID \"%s\" in "
+"state Posted"
+msgstr "في حالة غير مسوده \"%s\"لا يمكن ارجاع السجل للحالة المسوده اذا كان القيد المحاسبي المرتبط"
+
+#. module: hr_government_relations
+#: model:ir.model,name:hr_government_relations.model_hr_exit_return
+msgid "hr.exit.return"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model,name:hr_government_relations.model_hr_official_paper_line
+msgid "hr.official.paper.line"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model,name:hr_government_relations.model_hr_renew_official_paper
+msgid "hr.renew.official.paper"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model,name:hr_government_relations.model_hr_request_visa
+msgid "hr.request.visa"
+msgstr ""
+
+#. module: hr_government_relations
+#: code:addons/hr_government_relations/models/official_paper_line.py:0
+#: code:addons/hr_government_relations/models/renew_official_paper.py:0
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_official_paper_line__document_type__medical_examination
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_renew_official_paper__document_type__medical_examination
+#, python-format
+msgid "medical Examination"
+msgstr "كشف طبي"
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_renew_official_paper__expire_before__days
+msgid "الأيام"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_renew_official_paper__expire_before__date
+msgid "التاريخ"
+msgstr ""
+
+#. module: hr_government_relations
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_official_paper_line__document_type__other
+#: model:ir.model.fields.selection,name:hr_government_relations.selection__hr_renew_official_paper__document_type__other
+msgid "غير ذلك"
+msgstr ""

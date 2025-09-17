@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!--        Stage -->
+        <record id="workflow_stage_form" model="ir.ui.view">
+            <field name="name">workflow.stage.form</field>
+            <field name="model">workflow.stage</field>
+            <field name="arch" type="xml">
+                <form string="Workflow Stage">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="state"/>
+                            <field name="default" invisible="1"/>
+                            <field name="holiday_status_id" attrs="{'required':[('default','=',True)]}"/>
+<!--                            <field name="sequence" required="1"/>-->
+<!--                            <field name="group_id" attrs="{'invisible':[('state','!=','approved')],-->
+<!--                            'required':[('state','=','approved')]}"/>-->
+<!--                            <field name="btn_string" attrs="{'invisible':[('state','!=','approved')],-->
+<!--                            'required':[('state','=','approved')]}"/>-->
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="workflow_stage_tree" model="ir.ui.view">
+            <field name="name">workflow.stage.tree</field>
+            <field name="model">workflow.stage</field>
+            <field name="arch" type="xml">
+                <tree string="Workflow Stage">
+                    <field name="name" />
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="workflow_stage_action" model="ir.actions.act_window">
+            <field name="name">Workflow Stage</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">workflow.stage</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+<!--        <menuitem-->
+<!--                id="menu_holidays_workflow_stage"-->
+<!--                name="Workflow Stage"-->
+<!--                parent="hr_holidays_public.menu_holidays_configuration"-->
+<!--                sequence="101"-->
+<!--                groups="hr_holidays_community.group_hr_holidays_manager"-->
+<!--                action="workflow_stage_action"/>-->
+
+</data>
+        </odoo>

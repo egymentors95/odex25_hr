@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+        <record model="ir.ui.view" id="payslip_xslx_report_form">
+            <field name="name">payslip.monthly.report.form</field>
+            <field name="model">payslip.monthly.report</field>
+            <field name="arch" type="xml">
+            	<form>
+            		<sheet>
+            			<group col="4" colspan="2">
+            				<field name="date_from" />
+							<field name="detailed" />
+            				<field name="date_to" />
+							<field name="listed" attrs="{'invisible':[('detailed','=',False)]}"/>
+            			</group>
+						<group col="4" colspan="4">
+            				<notebook>
+								<page string="Salary Structures">
+									<group col="4" colspan="4">
+										<field name="salary_ids" domain="[('type','=','scale')]"
+											   widget="many2many_tags" colspan="4"/>
+										<field name="level_ids" domain="[('type','=','level'),('salary_scale_id','in',salary_ids)]"
+											   widget="many2many_tags" colspan="4"/>
+										<field name="group_ids" domain="[('type','=','group'),('salary_scale_level_id','in',level_ids)]"
+											   widget="many2many_tags" colspan="4"/>
+										<field name="degree_ids" domain="[('type','=','degree'),('salary_scale_group_id','in',group_ids)]"
+											   widget="many2many_tags" colspan="4"/>
+									</group>
+								</page>
+								<page string="Payroll Items">
+									<group col="6" colspan="2">
+										<field name="allow" />
+										<field name="deduct" />
+									</group>
+									<group>
+										<field name="rule_ids" colspan="4" nolabel="1"/>
+									</group>
+								</page>
+								<page string="Employees">
+									<field name="employee_ids" />
+								</page>
+							</notebook>
+            			</group>
+            		</sheet>
+                    <footer>
+                   		<button name="print_report" string="Print PDF" type="object" class="oe_highlight"/>
+                        <button name="print_report_xlsx" string="Print Excel" type="object" class="oe_highlight"/>
+						<button string="Cancel" class="oe_link" special="cancel"/>
+                	</footer>
+            	</form>
+            </field>
+        </record>
+
+        <record id="payslip_xslx_report_action" model="ir.actions.act_window">
+            <field name="name">Payslips Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">payslip.monthly.report</field>
+
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem
+	        id="menu_hr_payroll_report"
+	        name="Reporting"
+	        parent="exp_hr_payroll.menu_hr_payroll_root"
+	        sequence='90'
+        />
+
+		<menuitem
+				id="payslip_xslx_report_menu"
+				name="Payslips Report"
+				parent="exp_payroll_custom.menu_hr_payroll_report"
+				action="payslip_xslx_report_action"
+		/>
+
+	</data>
+</odoo>

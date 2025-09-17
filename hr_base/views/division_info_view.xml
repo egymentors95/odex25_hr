@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+
+
+        <record model="ir.actions.act_window" id="division_info_act">
+            <field name="name">Division Info</field>
+            <field name="res_model">division.info</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="division_form_view">
+            <field name="name">division_form_view</field>
+            <field name="model">division.info</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <separator/>
+                        <h4>Division Details</h4>
+                        <separator/>
+                        <group>
+                            <field name="company_name" domain="[('flip','=',False)]"/>
+                            <field name="branch_name" domain="[('flip','=',True)]"/>
+                            <field name="division"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="division_tree_view">
+            <field name="name">division_tree_view</field>
+            <field name="model">division.info</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="Division Details">
+                    <field name="company_name"/>
+                    <field name="branch_name"/>
+                    <field name="division"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

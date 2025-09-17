@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+       <record model="ir.ui.view" id="hr_employee_salary_scale_dates_form_view">
+            <field name="name">hr.employee.form.view</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="exp_payroll_custom.hr_employee_salary_scale_inherited_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='salary_scale']" position="after">
+                    <group string="Salary Scale Dates" name="salary_date">
+                        <field name="degree_date" readonly="1"/>
+                        <field name="group_date" readonly="1"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

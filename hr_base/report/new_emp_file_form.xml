@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="new_emp_file_form_report">
+        <t t-call="web.html_container" t-translation="off">
+            <t t-call="hr_base.hr_layout">
+                <style>
+                    @font-face {font-family: "Sakkal Majalla"; src:
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                    format("embedded-opentype"),
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"); }
+
+                </style>
+                <t t-foreach="docs" t-as="o">
+                    <div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:13pt">
+                        <table class="table table-borderless" style="width:100%;" dir="rtl">
+
+                            <tr style="border: 0;">
+                                <td style="text-align: right ;border: 0;width:50%">
+                                    <h3>
+                                        <strong>نموذج استكمال ملف موظف جديد</strong>
+                                    </h3>
+                                </td>
+                                <td style="text-align: left;border: 0 ;width:50%">
+                                    <h3>
+                                        <strong>New Employee File Form</strong>
+                                    </h3>
+
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="table table-condensed table-bordered"
+                               style="border: 1px solid black;border-collapse: collapse;">
+                            <tr style="background-color:#263f79;font-weight: bold;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:49%;color:white" colspan="5">
+                                    <span style="float:right;color:white">اسم الموظف :</span>
+                                    <span style="text-align:center;white-space: nowrap;margin-right:10px;margin-right:10px"
+                                          t-field="o.name"/>
+                                    <span style="float:left;color:white">: Employee Name</span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:49%;color:white" colspan="3">
+                                    <span style="float:right;color:white">الرقم الوظيفي :</span>
+
+                                    <span style="float:left;color:white;">Employee No :.
+                                        <span style="text-align: center;margin-left:10px" t-field="o.emp_no"/>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="background-color:#263f79;font-weight: bold;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:49%;;color:white" colspan="5">
+                                    <span style="float:right;color:white">الإدارة :</span>
+                                    <span style="text-align:center;white-space: nowrap;margin-right:10px"
+                                          t-field="o.department_id.name"/>
+                                    <span style="float:left;color:white">: Department</span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:49%;;color:white" colspan="3">
+                                    <span style="float:right;color:white">تاريخ النعيين :</span>
+
+                                    <span style="float:left;color:white">
+                                        <span style="margin-left:10px"
+                                              t-esc="o.contract_id.date_start"/>
+                                        : Joining date
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td style="text-align:right;width:40%;padding: 7px" colspan="3">صور شخصية</td>
+                                <td style="text-align:center;width:20%;padding: 7px" colspan="2">
+                                    <span style="margin-left:5%">
+                                        <span>☐</span>
+                                        نعم
+                                    </span>
+                                    <span style="margin-right:5%">
+                                        <span>☐</span>
+                                        لا
+                                    </span>
+                                </td>
+                                <td style="text-align:left;width:60%;padding:7px" colspan="3">Photograph</td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td style="text-align:right;width:40%;padding:7px" colspan="3">صور شهادات المؤهلات العلمية والخبرات
+                                    العملية
+                                </td>
+                                <td style="text-align:center;width:20%;padding:7px" colspan="2">
+                                    <span style="margin-left:5%">
+                                        <span>☐</span>
+                                        نعم
+                                    </span>
+                                    <span style="margin-right:5%">
+                                        <span>☐</span>
+                                        لا
+                                    </span>
+                                </td>
+                                <td style="text-align:left;width:60%;padding:7px" colspan="3">Qualification and Experiences</td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td style="text-align:right;width:40%;padding: 7px" colspan="3">السيرة الذاتية</td>
+                                <td style="text-align:center;width:20%;padding: 7px" colspan="2">
+                                    <span style="margin-left:5%">
+                                        <span>☐</span>
+                                        نعم
+                                    </span>
+                                    <span style="margin-right:5%">
+                                        <span>☐</span>
+                                        لا
+                                    </span>
+                                </td>
+                                <td style="text-align:left;width:60%;padding: 7px" colspan="3">CV</td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td style="text-align:right;width:40%;padding: 7px" colspan="3">العرض الوظيفي</td>
+                                <td style="text-align:center;width:20%;padding: 7px" colspan="2">
+                                    <span style="margin-left:5%">
+                                        <span>☐</span>
+                                        نعم
+                                    </span>
+                                    <span style="margin-right:5%">
+                                        <span>☐</span>
+                                        لا
+                                    </span>
+                                </td>
+                                <td style="text-align:left;width:60%;padding: 7px" colspan="3">Job offer</td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td style="text-align:right;width:40%;padding: 7px" colspan="3">عقد العمل النسخة الاصلية</td>
+                                <td style="text-align:center;width:20%;padding: 7px" colspan="2">
+                                    <span style="margin-left:5%">
+                                        <span>☐</span>
+                                        نعم
+                                    </span>
+                                    <span style="margin-right:5%">
+                                        <span>☐</span>
+                                        لا
+                                    </span>
+                                </td>
+                                <td style="text-align:left;width:60%;padding: 7px" colspan="3">Contract</td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td style="text-align:right;width:40%;padding: 7px" colspan="3">التقرير الطبي</td>
+                                <td style="text-align:center;width:20%;padding: 7px" colspan="2">
+                                    <span style="margin-left:5%">
+                                        <span>☐</span>
+                                        نعم
+                                    </span>
+                                    <span style="margin-right:5%">
+                                        <span>☐</span>
+                                        لا
+                                    </span>
+                                </td>
+                                <td style="text-align:left;width:60%;padding: 7px" colspan="3">Medical Report</td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td style="text-align:right;width:40%;padding: 7px" colspan="3">صورة الهوية الوطنية و بطاقة العائلة
+                                    (السعودي)
+                                </td>
+                                <td style="text-align:center;width:20%;padding: 7px" colspan="2">
+                                    <span style="margin-left:5%">
+                                        <span>☐</span>
+                                        نعم
+                                    </span>
+                                    <span style="margin-right:5%">
+                                        <span>☐</span>
+                                        لا
+                                    </span>
+                                </td>
+                                <td style="text-align:left;width:60%;padding: 7px" colspan="3">ID</td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td style="text-align:right;width:40%;padding: 7px" colspan="3">صورة جواز السفر (غير السعودي)</td>
+                                <td style="text-align:center;width:20%;padding: 7px" colspan="2">
+                                    <span style="margin-left:5%">
+                                        <span>☐</span>
+                                        نعم
+                                    </span>
+                                    <span style="margin-right:5%">
+                                        <span>☐</span>
+                                        لا
+                                    </span>
+                                </td>
+                                <td style="text-align:left;width:60%;padding: 7px" colspan="3">Passport</td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td style="text-align:right;width:40%;padding: 7px" colspan="3">صورة هوية مقيم و هويات العائلة</td>
+                                <td style="text-align:center;width:20%;padding: 7px" colspan="2">
+                                    <span style="margin-left:5%">
+                                        <span>☐</span>
+                                        نعم
+                                    </span>
+                                    <span style="margin-right:5%">
+                                        <span>☐</span>
+                                        لا
+                                    </span>
+                                </td>
+                                <td style="text-align:left;width:60%;padding: 7px" colspan="3">Iqama</td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td style="text-align:right;width:40%;padding: 7px" colspan="3">الحساب البنكي (الآيبان)</td>
+                                <td style="text-align:center;width:20%;padding: 7px" colspan="2">
+                                    <span style="margin-left:5%">
+                                        <span>☐</span>
+                                        نعم
+                                    </span>
+                                    <span style="margin-right:5%">
+                                        <span>☐</span>
+                                        لا
+                                    </span>
+                                </td>
+                                <td style="text-align:left;width:60%;direction:ltr;padding: 7px" colspan="3">Bank account (IBAN)</td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td style="text-align:right;width:40%;padding: 7px" colspan="3">صورة رخصة القيادة</td>
+                                <td style="text-align:center;width:20%;padding: 7px" colspan="2">
+                                    <span style="margin-left:5%">
+                                        <span>☐</span>
+                                        نعم
+                                    </span>
+                                    <span style="margin-right:5%">
+                                        <span>☐</span>
+                                        لا
+                                    </span>
+                                </td>
+                                <td style="text-align:left;width:60%;padding: 7px" colspan="3">Driver License</td>
+                            </tr>
+                            <tr style="height:30px">
+                                <td style="text-align:right;width:40%;padding: 7px" colspan="3">التأمينات الاجتماعية</td>
+                                <td style="text-align:center;width:20%;padding: 7px" colspan="2">
+                                    <span style="margin-left:5%">
+                                        <span>☐</span>
+                                        نعم
+                                    </span>
+                                    <span style="margin-right:5%">
+                                        <span>☐</span>
+                                        لا
+                                    </span>
+                                </td>
+                                <td style="text-align:left;width:60%;padding: 7px" colspan="3">GOSI</td>
+                            </tr>
+
+                            <tr style="background-color:#263f79;">
+                                <td style="color:white;padding:7px" colspan="8">
+                                    <span>
+                                        <center>
+                                            <strong style="color:white;">التوظيف- Recruitment</strong>
+                                        </center>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:right;width:20%;padding:7px" colspan="1">
+                                    <strong>الإسم :</strong>
+                                </td>
+                                <td style="padding:7px" colspan="6"></td>
+                                <td style="text-align:left;width:40%;padding:7px" colspan="1">
+                                    <strong>: Name</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:right;width:20%;padding:7px" colspan="1">
+                                    <strong>التوقيع :</strong>
+                                </td>
+                                <td style="padding:7px" colspan="6"></td>
+                                <td style="text-align:left;width:40%;padding:7px" colspan="1">
+                                    <strong>: Sign</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:right;width:20%;padding:7px" colspan="1">
+                                    <strong>التاريخ :</strong>
+                                </td>
+                                <td style="padding:7px" colspan="6"></td>
+                                <td style="text-align:left;width:40%;padding:7px" colspan="1">
+                                    <strong>: Date</strong>
+                                </td>
+                            </tr>
+                            <tr style="background-color:#263f79;padding:7px">
+                                <td style="color:white;;padding: 7px" colspan="8">
+                                    <span>
+                                        <center>
+                                            <strong style="color:white">الرواتب- Payroll</strong>
+                                        </center>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="height:30px;padding:7px">
+                                <td style="text-align:right;width:20%;padding:7px" colspan="1">
+                                    <strong>الإسم :</strong>
+                                </td>
+                                <td style="padding:7px" colspan="6"></td>
+                                <td style="text-align:left;width:40%;padding:7px" colspan="1">
+                                    <strong>: Name</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:right;width:20%;padding:7px " colspan="1">
+                                    <strong>التوقيع :</strong>
+                                </td>
+                                <td style="text-align:center;padding:7px" colspan="6">
+
+                                </td>
+                                <td style="text-align:left;width:40%;padding:7px" colspan="1">
+                                    <strong>: Sign</strong>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align:right;width20%;padding:7px" colspan="1">
+                                    <strong>التاريخ :</strong>
+                                </td>
+                                <td style="padding:7px" colspan="6"></td>
+                                <td style="text-align:left;width:40%;padding:7px" colspan="1">
+                                    <strong>: Date</strong>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

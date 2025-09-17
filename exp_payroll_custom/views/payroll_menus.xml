@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <menuitem id="exp_hr_payroll.menu_hr_payroll_employees_root" name="Payroll"
+                  parent="hr.menu_hr_root"
+                  groups="exp_payroll_custom.group_hr_payroll_contributor,exp_hr_payroll.group_hr_payroll_user,base.group_user"/>
+
+        <record model="ir.ui.menu" id="exp_hr_payroll.menu_department_tree">
+            <field name="groups_id"
+                   eval="[(4,ref('exp_hr_payroll.group_hr_payroll_user')),
+                         (4,ref('hr_base.group_general_manager'))]"/>
+        </record>
+
+        <record model="ir.ui.menu" id="exp_hr_payroll.menu_hr_payroll_configuration">
+            <field name="groups_id" eval="[(4, ref('exp_hr_payroll.group_hr_payroll_user'))]"/>
+        </record>
+
+    </data>
+</odoo>

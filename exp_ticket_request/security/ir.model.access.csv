@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_ticket_request,hr.ticket.request,model_hr_ticket_request,base.group_user,1,1,1,1
+access_hr_ticket_request_type,hr.ticket.request.type,model_hr_ticket_request_type,base.group_user,1,1,0,0
+access_hr_ticket_request_type_hr,hr.ticket.request.type.hr,model_hr_ticket_request_type,hr.group_hr_manager,1,1,1,1
+access_hr_airline_type,hr.airline.hr,model_hr_airline,base.group_user,1,0,0,0
+access_hr_airline_hr,hr.airline.hr.manager,model_hr_airline,hr.group_hr_manager,1,1,1,1
+access_airline_agent,airline.agent,model_airline_agent,base.group_user,1,0,0,0
+access_airline_agent_hr,airline.agent.manager,model_airline_agent,hr.group_hr_manager,1,1,1,1
+access_hr_airline_city_user,hr_airline_city_user,model_hr_airline_city,base.group_user,1,0,0,0
+access_hr_airline_city_manager,hr_airline_city_manager,model_hr_airline_city,hr.group_hr_manager,1,1,1,1

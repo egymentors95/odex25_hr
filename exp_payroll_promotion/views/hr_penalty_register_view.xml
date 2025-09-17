@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="custom_penalty_register_form_view" model="ir.ui.view">
+            <field name="name">Penalty Register</field>
+            <field name="model">hr.penalty.register</field>
+            <field name="inherit_id" ref="hr_disciplinary_tracking.penalty_egister_form_view"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//field[@name='deduction_amount']" position="after">
+                     <field name="penalty_with_days" invisible="1" readonly="1" force_save="1"/>
+                     <field name="deduction_days"
+                            attrs="{'readonly':[('state', '!=', 'draft')],
+                                    'invisible':[('penalty_with_days', '!=', True)]}"/>
+                 </xpath>
+             </field>
+        </record>
+    </data>
+</odoo>

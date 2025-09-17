@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="all_leave_report_template">
+            <div class="page" style="font-family:'Sakkal Majalla'!important;font-size:15pt">
+                <center>
+                    <h3 style="font-weight:bold">Holiday Report from
+                        <t t-esc="date_start"/>
+                        To
+                        <t t-esc="date_end"/>
+                    </h3>
+                </center>
+                <br/>
+                <br/>
+                <t t-set="count" t-value="1"/>
+                <t t-set="total_leaves" t-value="0"/>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sequence</th>
+                            <th>Iqama</th>
+                            <th>Name</th>
+                            <th>Nationality</th>
+                            <th>Job</th>
+                            <th>Department</th>
+                            <th>Leave Type</th>
+                            <th>Working begin Start Date</th>
+                            <th>Leave Start Date</th>
+                            <th>Leave end Date</th>
+                            <th>Leave Balance</th>
+                            <th>Leave days</th>
+                            <th>New Leave balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="data" t-as="line">
+                            <tr>
+                                <td>
+                                    <t t-esc="count"/>
+                                </td>
+                                <td>
+                                    <t t-esc="line['iqama_number']"/>
+                                </td>
+                                <td style="width: 1.5in;">
+                                    <t t-esc="line['employee_id']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="line['nationality']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="line['job']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="line['department']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="line['leave_type_name']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="line['start_day_work']"/>
+                                </td>
+                                <td>
+                                    <t t-esc="line['leave_start_date'].date() if line['leave_start_date'] else ''"/>
+                                </td>
+                                <td>
+                                    <t t-esc="line['leave_end_date'].date() if line['leave_end_date'] else ''"/>
+                                </td>
+                                <td>
+                                    <t t-esc="line['leave_count']" t-options="{'widget': 'float', 'precision': 2}"/>
+                                </td>
+                                <td>
+                                    <t t-esc="line['number_of_days']" t-options="{'widget': 'float', 'precision': 2}"/>
+                                </td>
+                                <td>
+                                    <t t-esc="line['remaining_leave']" t-options="{'widget': 'float', 'precision': 2}"/>
+                                </td>
+                            </tr>
+                            <t t-set="count" t-value="count+1"/>
+                            <t t-set="total_leaves" t-value="total_leaves + line['number_of_days']"/>
+                        </t>
+                    </tbody>
+                    <tfoot style="display:table-row-group;">
+                        <tr>
+                            <th colspan="13" style="text-align:center;">Total</th>
+                        </tr>
+                        <t t-foreach="total['total']" t-as="tot">
+                            <tr>
+                                <td colspan="11">
+                                    <strong>
+                                        <t t-esc="tot"/>
+                                    </strong>
+                                </td>
+                                <t t-set="i" t-value="tot"/>
+                                <td colspan="2">
+                                    <strong>
+                                        <t t-esc="total['total'][i]"/>
+                                    </strong>
+                                </td>
+                            </tr>
+                        </t>
+                        <tr>
+                            <td colspan="11">
+                                <strong>Total Leaves</strong>
+                            </td>
+                            <td colspan="2">
+                                <strong>
+                                    <t t-esc="total['sum']" t-esc-options="{'widget': 'float', 'precision': 2}"/>
+                                </strong>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </template>
+        <template id="specified_leave_report_template">
+            <t t-foreach="key" t-as="doc">
+                <div class="page" style="font-family:'Sakkal Majalla'!important;font-size:15pt">
+                    <center>
+                        <h3 style="font-weight:bold">Holiday Report for
+                            <t t-esc="doc"/>
+                            from
+                            <t t-esc="date_start"/>
+                            to
+                            <t t-esc="date_end"/>
+                        </h3>
+                    </center>
+                    <br/>
+                    <t t-set="i" t-value="1"/>
+                    <br/>
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th>Iqama</th>
+                                <th>Name</th>
+                                <th>Nationality</th>
+                                <th>Job</th>
+                                <th>Department</th>
+                                <th>Leave Type</th>
+                                <th>Working begin Start Date</th>
+                                <th>Leave Start Date</th>
+                                <th>Leave end Date</th>
+                                <th>Leave Balance</th>
+                                <th>Leave days</th>
+                                <th>New Leave balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="data[doc]" t-as="line">
+                                <tr>
+                                    <td>
+                                        <t t-esc="line['iqama_number']"/>
+                                    </td>
+                                    <td style="width: 1.5in;">
+                                        <t t-esc="line['employee_id']"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="line['nationality']"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="line['job']"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="line['department']"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="line['leave_type_name']"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="line['start_day_work']"/>
+                                    </td>
+
+                                    <td>
+                                        <t t-esc="line['leave_start_date']" t-options="{'widget': 'date'}"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="line['leave_end_date']" t-options="{'widget': 'date'}"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="line['leave_count']" t-options="{'widget': 'float', 'precision': 2}"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="line['number_of_days']"
+                                           t-options="{'widget': 'float', 'precision': 2}"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="line['remaining_leave']"
+                                           t-options="{'widget': 'float', 'precision': 2}"/>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                        <tfoot style="display:table-row-group;">
+                            <tr>
+                                <th colspan="13" style="text-align:center;">Total</th>
+                            </tr>
+                            <t t-set="tota" t-value="0.0"/>
+                            <t t-foreach="total[doc]" t-as="tot">
+                                <tr>
+                                    <td colspan="11">
+                                        <strong>
+                                            <t t-esc="tot['leave_name']"/>
+                                        </strong>
+                                    </td>
+                                    <td colspan="2">
+                                        <strong>
+                                            <t t-esc="tot['total']"/>
+                                        </strong>
+                                        <t t-set="tota" t-value="tota+tot['total']"
+                                           t-esc-options="{'widget': 'float', 'precision': 2}"/>
+                                    </td>
+                                </tr>
+                            </t>
+                            <tr>
+                                <td colspan="11">
+                                    <strong>Total Leaves</strong>
+                                </td>
+                                <td colspan="2">
+                                    <strong>
+                                        <t t-esc="tota" t-esc-options="{'widget': 'float', 'precision': 2}"/>
+                                    </strong>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <br/>
+                    <p style="page-break-after:always"></p>
+                </div>
+            </t>
+        </template>
+        <template id="public_report_temp">
+            <t t-call="web.html_container">
+                <t t-call="hr_base.hr_layout">
+
+                    <style>
+                        .page{
+                        font-family: Times New Roman;;
+                        }
+                        table{
+                        width :100%;
+                        border : 1px solid black;
+                        border-collapse : collapse;
+                        font-size : 13pt;
+
+                        }
+                        th{
+                        border : 1px solid black;
+                        background-color : #a7c4f2;
+                        text-align : center;
+                        padding : 5px;
+                        }
+                        td{
+                        border : 1px solid black;
+                        text-align : center;
+                        padding : 3px;
+                        }
+                        .cr_t{
+                        text-align : center;
+                        }
+                        tr{
+                        page-break-inside:avoid;
+                        page-break-after:auto ;
+                        }
+                        @font-face {
+                        font-family: "Sakkal Majalla"; src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                        format("embedded-opentype"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype");
+                        }
+                    </style>
+                    <t t-if="type == 'all'">
+                        <t t-call="hr_holidays_public.all_leave_report_template"/>
+                    </t>
+                    <t t-if="type == 'specified'">
+                        <t t-call="hr_holidays_public.specified_leave_report_template"/>
+                    </t>
+                </t>
+            </t>
+        </template>
+        <record id="public_leave_action_report" model="ir.actions.report">
+            <field name="model">public.leave.report</field>
+            <field name="name">Public Leave Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_holidays_public.public_report_temp</field>
+        </record>
+
+        <record id="public_leave_xls" model="ir.actions.report">
+            <field name="model">public.leave.report</field>
+            <field name="name">Print to XLSX</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_holidays_public.public_leave_xls</field>
+            <field name="report_file">Public Leave Report</field>
+        </record>
+    </data>
+</odoo>

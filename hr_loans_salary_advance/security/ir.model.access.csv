@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_loan_salary_advance_emp1,hr.loan.salary.advance.emp,model_hr_loan_salary_advance,base.group_user,1,1,1,1
+access_loan_installment_line_emp2,loan.installment.line.emp,model_loan_installment_line,base.group_user,1,1,1,1
+access_hr_account_moves_emp3,hr.account.moves.emp,model_hr_account_moves,base.group_user,1,1,1,1
+access_loan_request_type_emp4,loan.request.type.emp,model_loan_request_type,base.group_user,1,0,0,0
+access_loan_request_type_manager5,loan.request.type.manager,model_loan_request_type,hr_loans_salary_advance.group_loan_manager,1,1,1,1
+access_loan_payment_suspension_emp7,hr.loan.payment.suspension.emp,model_hr_loan_payment_suspension,base.group_user,1,1,1,1
+access_loan_payment_suspension_manager8,hr.loan.payment.suspension.manager,model_hr_loan_payment_suspension,hr_base.group_division_manager,1,1,0,0
+access_loan_payment_suspension_hr9,hr.loan.payment.suspension.hr,model_hr_loan_payment_suspension,hr.group_hr_user,1,1,1,1
+access_loan_installment_suspension_emp10,hr.loan.installment.suspension.emp,model_hr_loan_installment_suspension,base.group_user,1,1,1,1
+access_loan_installment_suspension_manager11,hr.loan.installment.suspension.manager,model_hr_loan_installment_suspension,hr_base.group_division_manager,1,1,0,0
+access_loan_installment_suspension_hr12,hr.loan.installment.suspension.hr,model_hr_loan_installment_suspension,hr.group_hr_user,1,1,1,1
+access_employee_reward_loan_user,employee.reward.loan.user,model_employee_reward_loan,hr_loans_salary_advance.group_loan_user,1,1,1,0

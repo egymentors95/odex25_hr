@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="custom_external_layout_standard">
+            <div class="header">
+                <div class="row">
+                    <div class="col-xs-3 mb4">
+                        <img t-if="company.logo" t-att-src="'data:image/png;base64,%s' % to_text(company.logo)" style="max-height:50px;"/>
+                    </div>
+                    <div class="col-xs-9 text-right" style="margin-top:22px;" t-field="company.report_header" name="moto"/>
+                </div>
+            </div>
+            <div class="article o_report_layout_standard">
+                <t t-raw="0" />
+            </div>
+            <div class="footer o_background_footer">
+                <div class="text-center">
+                    <div t-field="company.report_footer"/>
+                    <div class="text-muted">
+                        Page:
+                        <span class="page"/>
+                        of
+                        <span class="topage"/>
+                    </div>
+                </div>
+            </div>
+        </template>
+
+        <template id="custom_external_layout">
+            <!-- Multicompany -->
+            <t t-if="not o and doc">
+                <t t-set="o" t-value="doc"/>
+            </t>
+
+            <t t-if="o and 'company_id' in o">
+                <t t-set="company" t-value="o.company_id.sudo()"/>
+            </t>
+            <t t-if="not o or not 'company_id' in o">
+                <t t-set="company" t-value="res_company"/>
+            </t>
+            <t t-call="exp_official_mission.custom_external_layout_standard"><t t-raw="0"/></t>
+        </template>
+        <template id="official_tran_report_template">
+            <t t-call="web.html_container">
+                <t t-call="exp_official_mission.custom_external_layout">
+                    <style type="text/css">
+                        @font-face {
+                        font-family: 'ae_AlMohanad';
+                        src: local('ae_AlMohanad'), local('ae_AlMohanad'),
+                        url('/exp_official_mission/static/fonts/ae_AlMohanad.ttf') format('truetype');
+                        }
+                        *{
+                        font-family: ae_AlMohanad;
+                        }
+                    </style>
+                    <div class="page" style="font-size:13pt" dir="ltr">
+                        <t t-foreach="docs" t-as="o">
+                            <center><h2 style="font-weight:bold">Training Requisition Form</h2></center>
+                            <br/>
+                            <table style="width:100%;border: 1px solid gray">
+                                <tr>
+                                    <td style="padding: 5px;background-color: white;color: black;">
+                                        <h4>Remarks:</h4>
+                                        <p>Please make sure the following conditions are met before submitting to Training and Development:</p>
+                                        <p>1- Section 1-2 is FULLY COMPLETED before submission. </p>
+                                        <p>2- Approvals from Superior and HOD have been OBTAINED before submission.</p>
+                                        <p>3- Submission is done 14 days before commencement of Training.</p>
+                                        <p>4- Support course details are attached together upon submission.</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br/>
+                            <p><h4><strong>1.Application</strong></h4></p>
+                            <br/>
+                            <table style="width:100%;border: 1px solid gray">
+                                <tr style="border: 1px solid gray">
+                                    <td style="width:18%;padding: 5px;background-color:#d3d3d3;;color: black;border: 1px solid gray">
+                                        Course Title:
+                                    </td>
+                                    <td style="padding: 5px;background-color: white;color: black;border: 1px solid gray">
+                                        <span t-esc="o.course_name.name"/>
+                                    </td>
+                                    <td style="width:18%;padding: 5px;background-color:#d3d3d3;;color: black;border: 1px solid gray">
+                                        Date(s) of event:
+                                    </td >
+                                    <td style="padding: 5px;background-color: white;color: black;border: 1px solid gray">
+                                        <span t-esc="o.date"/>
+                                    </td>
+                                </tr>
+                                <tr style="border: 1px solid gray">
+                                    <td style="width:18%;padding: 5px;background-color:#d3d3d3;color: black;border: 1px solid gray">
+                                        Organiser/Provider:
+                                    </td>
+                                    <td style="padding: 5px;background-color: white;color: black;border: 1px solid gray">
+                                        <span t-esc="o.partner_id.name"/>
+                                    </td>
+                                    <td style="width:18%;padding: 5px;background-color:#d3d3d3;color: black;border: 1px solid gray">
+                                        Course fee:
+                                    </td>
+                                    <td style="padding: 5px;background-color: white;color: black;border: 1px solid gray">
+                                        <span t-esc="o.mission_type.day_price*len(o.employee_ids)*o.date_duration"/>
+                                    </td>
+                                </tr>
+                                <tr style="border: 1px solid gray">
+                                    <td style="width:18%;padding: 5px;background-color:#d3d3d3;color: black;border: 1px solid gray">
+                                        Category:
+                                    </td>
+                                    <td style="padding: 5px;background-color: white;color: black;border: 1px solid gray" colspan="3">
+                                        <span class="fas fa-box"/>
+                                        <t t-if="o.train_category=='training'">
+                                            <i class="fa fa-check-square-o"></i> Training
+                                            <i class="fa fa-square-o"></i> Workshop
+                                            <br/>
+                                            <i class="fa fa-square-o"></i> Seminar/Conference
+                                            <i class="fa fa-square-o"></i> Other
+                                        </t>
+                                        <t t-if="o.train_category=='workshop'">
+                                            <i class="fa fa-square-o"></i> Training
+                                            <i class="fa fa-check-square-o"></i> Workshop
+                                            <br/>
+                                            <i class="fa fa-square-o"></i> Seminar/Conference
+                                            <i class="fa fa-square-o"></i> Other
+                                        </t>
+                                        <t t-if="o.train_category=='seminar' or o.train_category=='conference'">
+                                            <i class="fa fa-square-o"></i> Training
+                                            <i class="fa fa-square-o"></i> Workshop
+                                            <br/>
+                                            <i class="fa fa-check-square-o"></i> Seminar/Conference
+                                            <i class="fa fa-square-o"></i> Other
+                                        </t>
+                                        <t t-if="o.train_category=='other'">
+                                            <i class="fa fa-square-o"></i> Training
+                                            <i class="fa fa-square-o"></i> Workshop
+                                            <br/>
+                                            <i class="fa fa-square-o"></i> Seminar/Conference
+                                            <i class="fa fa-check-square-o"></i> Other
+                                        </t>
+                                    </td>
+                                </tr>
+                            </table>
+                            <br/>
+                            <p>We as per details stated in below would like to attend the programme above mentioned:</p>
+                            <table class="table table-condensed">
+                                <thead>
+                                    <tr style=" border: 1px solid gray">
+                                        <th style=" border: 1px solid gray; padding: 5px;background-color:#d3d3d3;color: black;width:5%">
+                                            No.
+                                        </th>
+                                        <th style=" border: 1px solid gray; padding: 5px;background-color:#d3d3d3;color: black;width:35%">
+                                            Name(as per ID)
+                                        </th>
+                                        <th style=" border: 1px solid gray; padding: 5px;background-color:#d3d3d3;color: black;width:20%">
+                                            No:
+                                        </th>
+                                        <th style=" border: 1px solid gray; padding: 5px;background-color:#d3d3d3;color: black;width:35%">
+                                            Designation
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <t t-set="i" t-value="1"/>
+                                <tbody>
+                                    <t t-foreach="o.employee_ids" t-as="line">
+                                        <tr style=" border: 1px solid gray">
+                                            <td style=" border: 1px solid gray;padding: 5px;background-color: white;color: black;width:5%">
+                                                <span t-esc="i"/>
+                                            </td>
+                                            <td style=" border: 1px solid gray;padding: 5px;background-color: white;color: black;width:35%">
+                                                <span t-esc="line.employee_id.name"/>
+                                            </td>
+                                            <td style=" border: 1px solid gray;padding: 5px;background-color: white;color: black;width:20%">
+                                                <span t-esc="line.employee_id.emp_no"/>
+                                            </td>
+                                            <td style=" border: 1px solid gray;padding: 5px;background-color: white;color: black;width:35%">
+                                                <span t-esc="line.employee_id.job_id.name"/>
+                                            </td>
+                                        </tr>
+                                        <t t-set="i" t-value="i+1"/>
+                                    </t>
+                                </tbody>
+                            </table>
+                            <p><h4><strong>2.Objective To Attend</strong></h4></p>
+                            <br/>
+                            <table style="width:100%">
+                                <tr style="border-top: 1px solid gray;border-left: 1px solid white;padding: 1px;">
+                                    <td style="color:white">.</td>
+                                    <td style="color:white">.</td>
+                                    <td style="color:white">.</td>
+                                    <td style="color:white">.</td>
+                                    <tr style="border-top: 1px solid gray;border-left: 1px solid white;padding: 1px;">
+                                        <td style="color:white">.</td>
+                                        <td style="color:white">.</td>
+                                        <td style="color:white">.</td>
+                                        <td style="color:white">.</td>
+                                    </tr>
+                                </tr>
+                            </table>
+                            <br/>
+                            <table style="width:100%;page-break-inside: avoid">
+                                <tr style=" border: 1px solid gray">
+                                    <td colspan="2" style=" border: 1px solid gray;width:50%;background-color:#d3d3d3;">
+                                        Supported By(Immediate Manager)
+                                    </td>
+                                    <td colspan="2" style=" border: 1px solid gray;width:50%;background-color:#d3d3d3;">
+                                        Verified By (HOD)
+                                    </td>
+                                </tr>
+                                <tr style=" border: 1px solid gray">
+                                    <td colspan="2" style="color:white; border: 1px solid gray;border-bottom: 1px solid white">.</td>
+                                    <td colspan="2" style="color:white; border: 1px solid gray;border-bottom: 1px solid white">.</td>
+                                </tr>
+                                <tr style=" border: 1px solid gray">
+                                    <td colspan="2" style="color:white;border: 1px solid gray;border-bottom: 1px solid white">.</td>
+                                    <td colspan="2" style="color:white;border: 1px solid gray;border-bottom: 1px solid white">.</td>
+                                </tr>
+                                <tr style=" border: 1px solid gray">
+                                    <td colspan="2" style="color:white; border: 1px solid gray;">.</td>
+                                    <td colspan="2" style="color:white; border: 1px solid gray;">.</td>
+                                </tr>
+                                <tfoot>
+                                    <tr style=" border: 1px solid gray">
+                                        <td style=" border: 1px solid gray;width:20%">name</td>
+                                        <td style="color:white; border: 1px solid gray">.</td>
+                                        <td style=" border: 1px solid gray;width:20%">name</td>
+                                        <td style="color:white; border: 1px solid gray">.</td>
+                                    </tr>
+                                    <tr style=" border: 1px solid gray">
+                                        <td style=" border: 1px solid gray;width:20%">date</td>
+                                        <td style="color:white; border: 1px solid gray">.</td>
+                                        <td style=" border: 1px solid gray;width:20%">date</td>
+                                        <td style="color:white; border: 1px solid gray">.</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <p style="page-break-after:always"></p>
+                            <p><h4><strong>3.Final Review</strong></h4></p>
+                            <table style="width:100%">
+                                <tr style=" border: 1px solid gray">
+                                    <td colspan="2" style=" border: 1px solid gray;width:50%;background-color:#d3d3d3;">
+                                        Processed By(HR Manager)
+                                    </td>
+                                    <td colspan="2" style=" border: 1px solid gray;width:50%;background-color:#d3d3d3;">
+                                        Verified By (CSSO)
+                                    </td>
+                                </tr>
+                                <tr style=" border: 1px solid gray">
+                                    <td colspan="2" style="color:white; border: 1px solid gray;border-bottom: 1px solid white">.</td>
+                                    <td colspan="2" style="color:white; border: 1px solid gray;border-bottom: 1px solid white">.</td>
+                                </tr>
+                                <tr style=" border: 1px solid gray">
+                                    <td colspan="2" style="color:white;border: 1px solid gray;border-bottom: 1px solid white">.</td>
+                                    <td colspan="2" style="color:white;border: 1px solid gray;border-bottom: 1px solid white">.</td>
+                                </tr>
+                                <tr style=" border: 1px solid gray">
+                                    <td colspan="2" style="color:white; border: 1px solid gray;">.</td>
+                                    <td colspan="2" style="color:white; border: 1px solid gray;">.</td>
+                                </tr>
+                                <tfoot>
+                                    <tr style=" border: 1px solid gray">
+                                        <td style=" border: 1px solid gray;width:5%">name</td>
+                                        <td style="color:white; border: 1px solid gray">.</td>
+                                        <td style=" border: 1px solid gray;width:5%">name</td>
+                                        <td style="color:white; border: 1px solid gray">.</td>
+                                    </tr>
+                                    <tr style=" border: 1px solid gray">
+                                        <td style=" border: 1px solid gray;width:5%">date</td>
+                                        <td style="color:white; border: 1px solid gray">.</td>
+                                        <td style=" border: 1px solid gray;width:5%">date</td>
+                                        <td style="color:white; border: 1px solid gray">.</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                            <br/>
+                            <p><h4>Remarks</h4></p>
+                            <br/>
+                            <table style="width:95%;margin-left:5%;">
+                                <tr style="border-top: 1px solid gray;border-left: 1px solid white;padding: 1px;">
+                                    <td style="color:white">.</td>
+                                    <td style="color:white">.</td>
+                                    <td style="color:white">.</td>
+                                    <td style="color:white">.</td>
+                                    <tr style="border-top: 1px solid gray;border-left: 1px solid white;padding: 1px;">
+                                        <td style="color:white">.</td>
+                                        <td style="color:white">.</td>
+                                        <td style="color:white">.</td>
+                                        <td style="color:white">.</td>
+                                    </tr>
+                                </tr>
+                            </table>
+                            <p><h4><strong>4.Approval</strong></h4></p>
+                            <br/>
+                            <table style="width:100%">
+                                <tr style="border: 1px solid gray;padding: 1px;">
+                                    <td style="border: 1px solid gray;width:20%;background-color:#d3d3d3;">Approved</td>
+                                    <td style="color:black;border: 1px solid gray;width:80%" colspan="3">
+                                        <i class="fa fa-square-o"></i> Yes
+                                        <i class="fa fa-square-o"></i> No
+                                        .</td>
+                                </tr>
+                                <tr style="border: 1px solid gray;padding: 1px;">
+                                    <td style="border: 1px solid gray;width:20%;background-color:#d3d3d3;">Comments</td>
+                                    <td style="color:white;border: 1px solid gray;width:80%" colspan="3">.</td>
+                                </tr>
+                                <tr style="border: 1px solid gray;padding: 1px;">
+                                    <td style="border: 1px solid gray;width:20%;background-color:#d3d3d3;">Approved By CEO</td>
+                                    <td style="color:white;border: 1px solid gray;width:80%" colspan="3">.</td>
+                                </tr>
+                                <tr style="border: 1px solid gray;padding: 1px;">
+                                    <td style="border: 1px solid gray;width:5%;background-color:#d3d3d3;">name</td>
+                                    <td style="color:white;border: 1px solid gray;width:30%">.</td>
+                                    <td style="border: 1px solid gray;width:15%;background-color:#d3d3d3;">Date</td>
+                                    <td style="color:white;border: 1px solid gray;width:40%">.</td>
+                                </tr>
+                            </table>
+                            <style>
+                                i{
+                                padding:10px;
+                                padding-right:0px;
+                                }
+                                td{
+                                padding: 5px 5px 5px 5px;
+                                }
+                            </style>
+
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+        <record id="official_tran_action_report" model="ir.actions.report">
+            <field name="model">hr.official.mission</field>
+            <field name="name">Training Form</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">exp_official_mission.official_tran_report_template</field>
+        </record>
+        <record id="paperformat_official_train_report" model="report.paperformat">
+            <field name="name">European A4 Transactions</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="margin_top">20</field>
+            <field name="margin_bottom">5</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">20</field>
+            <field name="dpi">90</field>
+        </record>
+        <record id="official_tran_action_report" model="ir.actions.report">
+            <field name="paperformat_id" ref="exp_official_mission.paperformat_official_train_report"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,497 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_delegation_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-09 06:42+0000\n"
+"PO-Revision-Date: 2022-11-09 06:42+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation_line__action_id
+msgid "Action"
+msgstr "اسم الإجراء"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view
+msgid "Approve Delegate"
+msgstr "موافقة المفوض إليه"
+
+#. module: hr_delegation_management
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view
+msgid "Approve Delegator"
+msgstr "موافقة المفوض"
+
+#. module: hr_delegation_management
+#: code:addons/hr_delegation_management/models/authority_delegation.py:0
+#: model:ir.model.fields.selection,name:hr_delegation_management.selection__authority_delegation__state__approved
+#, python-format
+msgid "Approved"
+msgstr "إعتمـاد"
+
+#. module: hr_delegation_management
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view
+msgid "Are you sure to Rest To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المبدئي؟"
+
+#. module: hr_delegation_management
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view
+msgid "Are you sure to refuse This Record?"
+msgstr "هل أنت متأكد من الرفض؟"
+
+#. module: hr_delegation_management
+#: model:ir.actions.server,name:hr_delegation_management.autovacuum_job_ir_actions_server
+#: model:ir.cron,cron_name:hr_delegation_management.autovacuum_job
+#: model:ir.cron,name:hr_delegation_management.autovacuum_job
+msgid "Assign Authority Delegation"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_delegation_management
+#: model:ir.actions.act_window,name:hr_delegation_management.authority_delegation_action
+#: model:ir.model,name:hr_delegation_management.model_authority_delegation
+#: model:ir.ui.menu,name:hr_delegation_management.authority_delegation_menu
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_tree
+msgid "Authority Delegation"
+msgstr "تفويض الصلاحيات"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__comments
+msgid "Comments"
+msgstr "ملاحظـــات"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__create_uid
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation_line__create_uid
+#: model:ir.model.fields,field_description:hr_delegation_management.field_model_configuration__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__create_date
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation_line__create_date
+#: model:ir.model.fields,field_description:hr_delegation_management.field_model_configuration__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__date_from
+msgid "Date From"
+msgstr "تاريخ البداية"
+
+#. module: hr_delegation_management
+#: code:addons/hr_delegation_management/models/authority_delegation.py:0
+#, python-format
+msgid "Date From must be less than or equals to Date To."
+msgstr "تاريخ بداية التفويض يجب ان يكون قبل تاريخ نهاية التفويض"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__date_to
+msgid "Date To"
+msgstr "تاريخ النهاية"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__delegate_id
+msgid "Delegate"
+msgstr "المفوض إليه"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__department_delegate
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view_inherit
+msgid "Delegate Department"
+msgstr "إدارة المفوض إليه"
+
+#. module: hr_delegation_management
+#: code:addons/hr_delegation_management/models/authority_delegation.py:0
+#: model:ir.model.fields.selection,name:hr_delegation_management.selection__authority_delegation__state__delegate_review
+#, python-format
+msgid "Delegate Review"
+msgstr "مراجعة المفوض اليه"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation_line__delegation_id
+msgid "Delegation"
+msgstr "تفويض"
+
+#. module: hr_delegation_management
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view
+msgid "Delegation Access"
+msgstr "الصلاحيات المفوضة"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__delegation_line_ids
+msgid "Delegation Line"
+msgstr "بند التفويض"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__delegate_name
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__delegator_id
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__delegator_name
+msgid "Delegator"
+msgstr "المفوض"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__department_delegator
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view_inherit
+msgid "Delegator Department"
+msgstr "إدارة المفوض"
+
+#. module: hr_delegation_management
+#: code:addons/hr_delegation_management/models/authority_delegation.py:0
+#: model:ir.model.fields.selection,name:hr_delegation_management.selection__authority_delegation__state__delegator_review
+#, python-format
+msgid "Delegator Review"
+msgstr "مراجعة المفوض"
+
+#. module: hr_delegation_management
+#: code:addons/hr_delegation_management/models/authority_delegation.py:0
+#: model:ir.model.fields.selection,name:hr_delegation_management.selection__authority_delegation__state__direct_manager
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view
+#, python-format
+msgid "Direct Manager"
+msgstr "المدير المباشر"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__disallowed
+msgid "Disallowed"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__display_name
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation_line__display_name
+#: model:ir.model.fields,field_description:hr_delegation_management.field_ir_rule__display_name
+#: model:ir.model.fields,field_description:hr_delegation_management.field_model_configuration__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_delegation_management
+#: code:addons/hr_delegation_management/models/authority_delegation.py:0
+#: model:ir.model.fields.selection,name:hr_delegation_management.selection__authority_delegation__state__draft
+#, python-format
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,help:hr_delegation_management.field_authority_delegation__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__group_ids
+msgid "Group"
+msgstr "مجموعة"
+
+#. module: hr_delegation_management
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view
+msgid "Groups"
+msgstr "مجموعة الصلاحيات"
+
+#. module: hr_delegation_management
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view
+msgid "HR Approve"
+msgstr "موافقة الموارد البشرية"
+
+#. module: hr_delegation_management
+#: code:addons/hr_delegation_management/models/authority_delegation.py:0
+#: model:ir.model.fields.selection,name:hr_delegation_management.selection__authority_delegation__state__hr_review
+#, python-format
+msgid "HR Review"
+msgstr "الموارد البشرية"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__id
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation_line__id
+#: model:ir.model.fields,field_description:hr_delegation_management.field_ir_rule__id
+#: model:ir.model.fields,field_description:hr_delegation_management.field_model_configuration__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,help:hr_delegation_management.field_authority_delegation__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,help:hr_delegation_management.field_authority_delegation__message_needaction
+#: model:ir.model.fields,help:hr_delegation_management.field_authority_delegation__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,help:hr_delegation_management.field_authority_delegation__message_has_error
+#: model:ir.model.fields,help:hr_delegation_management.field_authority_delegation__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__is_delegate
+msgid "Is Delegate"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__is_delegator
+msgid "Is Delegator"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation____last_update
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation_line____last_update
+#: model:ir.model.fields,field_description:hr_delegation_management.field_ir_rule____last_update
+#: model:ir.model.fields,field_description:hr_delegation_management.field_model_configuration____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__write_uid
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation_line__write_uid
+#: model:ir.model.fields,field_description:hr_delegation_management.field_model_configuration__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__write_date
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation_line__write_date
+#: model:ir.model.fields,field_description:hr_delegation_management.field_model_configuration__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation_line__res_model
+msgid "Model"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation_line__model_configuration_id
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.model_configuration_form_view
+msgid "Model Configuration"
+msgstr "الصلاحية"
+
+#. module: hr_delegation_management
+#: model:ir.actions.act_window,name:hr_delegation_management.model_configuration_action
+#: model:ir.ui.menu,name:hr_delegation_management.menu_model_configuration
+msgid "Model Delegation Configuration"
+msgstr "إعداد التفويض"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_model_configuration__model_id
+msgid "Model Ref."
+msgstr "مرجع النموذج"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_model_configuration__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,help:hr_delegation_management.field_authority_delegation__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,help:hr_delegation_management.field_authority_delegation__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,help:hr_delegation_management.field_authority_delegation__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model,name:hr_delegation_management.model_ir_rule
+msgid "Record Rule"
+msgstr "قواعد صلاحيات"
+
+#. module: hr_delegation_management
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_delegation_management
+#: code:addons/hr_delegation_management/models/authority_delegation.py:0
+#: model:ir.model.fields.selection,name:hr_delegation_management.selection__authority_delegation__state__refused
+#, python-format
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_delegation_management
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view
+msgid "Reset To Draft"
+msgstr "إرجاع إلى مبدئي"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__state
+msgid "State"
+msgstr "الحالـــة"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,help:hr_delegation_management.field_authority_delegation__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_delegation_management
+#: model_terms:ir.ui.view,arch_db:hr_delegation_management.authority_delegation_form_view
+msgid "Submit"
+msgstr "ارســال"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,help:hr_delegation_management.field_authority_delegation__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__user_group_ids
+msgid "User Group"
+msgstr "مجموعة المستخدم"
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,field_description:hr_delegation_management.field_authority_delegation__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model.fields,help:hr_delegation_management.field_authority_delegation__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model,name:hr_delegation_management.model_authority_delegation_line
+msgid "authority.delegation.line"
+msgstr ""
+
+#. module: hr_delegation_management
+#: model:ir.model,name:hr_delegation_management.model_model_configuration
+msgid "model.configuration"
+msgstr ""

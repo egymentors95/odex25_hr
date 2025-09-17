@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="hr_attendance_transaction_create" model="ir.cron">
+            <field name="name">Attendance Transaction</field>
+            <field name="model_id" ref="model_hr_attendance_transaction"/>
+            <field name="state">code</field>
+            <field name="code">model.process_attendance_scheduler_queue()</field>
+            <field name="interval_number">12</field>
+            <field name="interval_type">hours</field>
+            <field name="numbercall">-1</field>
+        </record>
+
+        <record id="ir_cron_send_lateness_notifications" model="ir.cron">
+            <field name="name">Send Attendance Notifications</field>
+            <field name="model_id" ref="model_hr_attendance_transaction"/>
+            <field name="state">code</field>
+            <field name="code">model.send_lateness_notifications()</field>
+            <field name="active" eval="True"/>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+        </record>
+        <record id="attendance_notification_email_template" model="mail.template">
+            <field name="name">Attendance Notification Email Template</field>
+            <field name="subject">Attendance Notification Report</field>
+            <field name="model_id" ref="attendances.model_hr_attendance_transaction"/>
+            <field name="email_to">${object.employee_id.user_id.partner_id.email}</field>
+            <field name="email_cc">${object.employee_id.parent_id.user_id.partner_id.email},${object.employee_id.company_id.hr_email}</field>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">ar_001</field>
+            <field name="body_html">
+                <![CDATA[
+        <p>Dear ${object.employee_id.name},</p>
+        <p>We would like to inform you of the following attendance details:</p>
+        <table border="1" style="width:100%; border-collapse: collapse;">
+            <tr>
+                <th>Date</th>
+                <th>Day</th>
+                <th>Lateness</th>
+                <th>Early Exit</th>
+                <th>Note</th>
+            </tr>
+            <tr>
+                <td>${object.date.strftime('%Y-%m-%d')}</td>
+                <td>${object.date.strftime('%A')}</td>
+                <td>${ '%02d:%02d' % (((object.lateness or 0.0)), (((object.lateness or 0.0) * 60) % 60))}</td>
+                <td>${ '%02d:%02d' % ((object.early_exit or 0.0), (((object.early_exit or 0.0) * 60) % 60))}</td>>
+
+
+                <td>${'Missed Punch' if (object.sign_out == 0 and object.sign_in != 0)or(object.sign_out != 0 and object.sign_in == 0)} ${ 'Absent' if object.is_absent else 'Present'}
+                </td>
+            </tr>
+        </table>
+        <p>Please adhere to work timings. Thank you for your understanding.</p>
+        ]]>
+            </field>
+        </record>
+
+        <!--Notification Today No Sign In On time -->
+        <record id="attendance_notification_today_sign_in" model="mail.template">
+            <field name="name">Attendance Notification Today No Sign In On time</field>
+            <field name="subject">Attendance No Sign In On time</field>
+            <field name="model_id" ref="attendances.model_hr_attendance_transaction"/>
+            <field name="email_to">${object.employee_id.user_id.partner_id.email}</field>
+            <field name="email_cc">${object.employee_id.parent_id.user_id.partner_id.email},${object.employee_id.company_id.hr_email}</field>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">ar_001</field>
+            <field name="body_html"><![CDATA[
+        <p>Dear ${object.employee_id.name},</p>
+        </p>
+        <p>We will Notify You Today You Do Not Have a Sign In On Time</p>
+        </p>
+        <p>Regards,</p>
+
+            ]]></field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_delegation,access_hr_delegation,model_authority_delegation,hr.group_hr_manager,1,1,1,1
+access_employee_delegation,access_employee_delegation,model_authority_delegation,base.group_user,1,1,0,0
+access_model_configuration,access_model_configuration,model_model_configuration,base.group_user,1,1,1,1
+access_employee_delegation_line,access_employee_delegation_line,model_authority_delegation_line,base.group_user,1,1,1,1
+

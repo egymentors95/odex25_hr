@@ -1,0 +1,91 @@
+<odoo>
+    <data>
+        <!--inheriting hr_employee form view-->
+        <record id="hr_contract_salary_form_view" model="ir.ui.view">
+            <field name="name">hr.contract.salary.form.inherit</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//group[@name='salary']" position="before">
+                    <group invisible="1">
+                        <field name="hide" invisible="1"/>
+                        <field name="required_condition" invisible="1"/>
+                    </group>
+                </xpath>
+                <xpath expr="//group[@name='salary']" position="after">
+                    <group>
+                        <field name="total_allowance" readonly="1"  attrs="{'invisible':[('consultants','=',True)]}"
+                               groups="hr.group_hr_user,hr.group_hr_manager"/>
+                        <field name="total_deduction" readonly="1"  attrs="{'invisible':[('consultants','=',True)]}"
+                               groups="hr.group_hr_user,hr.group_hr_manager"/>
+                        <field name="total_net" readonly="1"  attrs="{'invisible':[('consultants','=',True)]}"
+                               groups="hr.group_hr_user,hr.group_hr_manager"/>
+                    </group>
+                </xpath>
+
+                <xpath expr="//field[@name='salary_insurnce']" position="after">
+                    <field name="house_allowance_temp" attrs="{'readonly':[('state','!=','draft')]}"
+                           groups="hr.group_hr_user,hr.group_hr_manager"/>
+                    <field name="transport_allowance" attrs="{'readonly':[('state','!=','draft')]}"
+                           groups="hr.group_hr_user,hr.group_hr_manager"/>
+                </xpath>
+
+                <xpath expr="//group[@name='salary_info']" position="after">
+                    <group name="advantage" groups="hr.group_hr_user,hr.group_hr_manager">
+                        <separator colspan="2" string="Advantages"/>
+                        <field name="advantages" nolabel="1" attrs="{'readonly':[('state','!=','draft')]}" >
+                            <tree >
+                                <field name="benefits_discounts" required="1" />
+                                <field name="type" invisible="1"/>
+                                <field name="date_from" required="1"/>
+                                <field name="date_to"/>
+                                <field name="amount" required="1"/>
+                                <field name="done" readonly="1"/>
+                                <field name="out_rule" attrs="{'invisible':[('type','!=','customize')]}"/>
+                                <!--To link employee move line from official mission to advantages line in contract-->
+                                <field name="official_mission_id" invisible="1"/>
+                                <!--To link employee move line from over time to advantages line in contract-->
+                                <field name="over_time_id" invisible="1"/>
+                                <!--To link employee move line from employee reward to advantages line in contract-->
+                                <field name="reward_id" invisible="1"/>
+                                <field name="penalty_id" invisible="1"/>
+                            </tree>
+                        </field>
+                    </group>
+                </xpath>
+
+                <xpath expr="//group[@name='duration_group']" position="after">
+                    <group name="accounting_info" string="Accounting">
+                        <field name="journal_id" attrs="{'required':[('required_condition','=',True)],'readonly':[('state','!=','draft')]}" widget="selection"/>
+ 
+                        <field name="analytic_account_id" attrs="{'required':[('required_condition','=',True)],'readonly':[('state','!=','draft')]}" widget="selection"/>
+ 
+                    </group>
+
+                </xpath>
+
+
+                <xpath expr="//group[@name='salary_scale_group']" position="inside">
+                    <field name="salary_scale" required="1" widget="selection" domain="[('type','=','scale')]"
+                           context="{'default_type': 'scale'}" attrs="{'readonly':[('state','!=','draft')]}"/>
+
+                    <field name="salary_level" string="Salary Level" widget="selection"
+                           context="{'default_type': 'level'}"
+                           attrs="{'invisible': [('hide','=',False)],'readonly':[('state','!=','draft')],'required': [('hide','=',True)]}"
+                           domain="[('type','=','level')]"/>
+
+                    <field name="salary_group" string="Salary Group" widget="selection" domain="[('type','=','group')]"
+                           attrs="{'invisible': [('hide','=',False)],'readonly':[('state','!=','draft')],'required': [('hide','=',True)]}"
+                           context="{'default_type': 'group'}"/>
+
+                    <field name="salary_degree" string="Salary Degree" widget="selection"
+                           domain="[('type','=','degree')]"
+                           attrs="{'invisible': [('hide','=',False)],'readonly':[('state','!=','draft')],'required': [('hide','=',True)]}"
+                           context="{'default_type': 'degree'}"/>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>

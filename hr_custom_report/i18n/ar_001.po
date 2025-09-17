@@ -1,0 +1,571 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_custom_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-11-20 07:13+0000\n"
+"PO-Revision-Date: 2022-11-20 07:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid ""
+"<br/>\n"
+"                                                <span>We would like to inform you\n"
+"                                                    this letter is issued to Mr. ………-…….. Nationality – Passport No.\n"
+"                                                    ………. to be submitted to Royal Saudi Embassy in …….. to work with us\n"
+"                                                    on the position Of the project engineer\n"
+"                                                </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                                        <span style=\"font-family:Arial\" dir=\"rtl\">نحيط سعادتكم بأن تم\n"
+"                                                            منح هذا\n"
+"\n"
+"                                                            الخطاب للسيد ............... الجنسيه _ جواز رقم :0000000\n"
+"\n"
+"                                                            وذلك لتقديمه لسفاره خادم الحرمين الشريفين في 00000000000\n"
+"\n"
+"                                                            للعمل لدينا على وظيفه 0000000.\n"
+"                                                        </span>\n"
+"                                                    </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                                        <span style=\"font-family:Arial\">السلام عليكم ورحمته الله\n"
+"                                                            وبركاته\n"
+"                                                        </span>\n"
+"                                                        <span>...</span>\n"
+"                                                    </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                                        <span style=\"font-family:Arial\">بسفاره خادم الحرمين الشريفين\n"
+"                                                        </span>\n"
+"                                                        <span>......</span>\n"
+"                                                    </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                            <span style=\"font-family:Arial; font-weight:bold\">عثمان سليمان الدبيجى\n"
+"                                            </span>\n"
+"                                        </span>\n"
+"                                        <span style=\"font-weight:bold\"><span dir=\"ltr\"/>/\n"
+"                                        </span>\n"
+"                                        <span style=\"font-family:Arial; font-weight:bold\" dir=\"rtl\"><span dir=\"rtl\"/>م\n"
+"                                        </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_salary_definition
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                        <span style=\"font-family:'Times New Roman'\">بدل سكن قدره</span>\n"
+"                                        <span style=\"font-family:'Times New Roman'\">(</span>\n"
+"                                        <span style=\"font-family:'Times New Roman'\">00000000000</span>\n"
+"                                        <span style=\"font-family:'Times New Roman'\">ريال</span>\n"
+"                                        <span style=\"font-family:'Times New Roman'\">).</span>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_salary_definition
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                        <span style=\"font-family:'Times New Roman'\">بدل مواصلات قدره</span>\n"
+"                                        <span style=\"font-family:'Times New Roman'\">(</span>\n"
+"                                        <span style=\"font-family:'Times New Roman'\">00000000000</span>\n"
+"                                        <span style=\"font-family:'Times New Roman'\">ريال</span>\n"
+"                                        <span style=\"font-family:'Times New Roman'\">).</span>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_salary_definition
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                        <span style=\"font-family:'Times New Roman'\">راتباً اساسياً قدره</span>\n"
+"                                        <span style=\"font-family:'Times New Roman'\">(</span>\n"
+"                                        <span style=\"font-family:'Times New Roman'\">00000000000</span>\n"
+"                                        <span style=\"font-family:'Times New Roman'\">ريال</span>\n"
+"                                        <span style=\"font-family:'Times New Roman'\">).</span>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_Know_the_salary_without_details
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_salary_definition
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                    <span style=\"font-family:'Times New Roman'\">الى ما يهمه الامر</span>\n"
+"                                </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_cultural_attaché
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                    <span style=\"font-family:'Times New Roman'\">م/ ...........................</span>\n"
+"                                </span>\n"
+"                                <br/>\n"
+"                                    <span style=\"font-family:'Times New Roman'\">Eng. ........................</span>\n"
+"                                    <br/>\n"
+"                                    <span style=\"font-family:'Times New Roman'\">الوظيفة</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_profession_oriented_modification_tide_condition
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                    <span style=\"font-family:'Times New Roman'\">ولكم خالص تحياتنا،،،</span>\n"
+"                                </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_Know_the_salary_without_details
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_cultural_attaché
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_engineers_authority
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_profession_oriented_modification_tide_condition
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_salary_definition
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_traffic
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">السلام عليكم ورحمه الله وبركاته...</span>\n"
+"                            </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_Know_the_salary_without_details
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_profession_oriented_modification_tide_condition
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_traffic
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">الوظيفة</span>\n"
+"                                <span style=\"font-family:'Times New Roman'; -aw-import:spaces\"> </span>\n"
+"                                <span style=\"font-family:'Times New Roman'; -aw-import:spaces\">                    </span>\n"
+"                                <span style=\"font-family:'Times New Roman'; -aw-import:spaces\">        </span>\n"
+"                            </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_salary_definition
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">الوظيفة</span>\n"
+"                                <span style=\"font-family:'Times New Roman'; -aw-import:spaces\">     </span>\n"
+"                                <span style=\"font-family:'Times New Roman'; -aw-import:spaces\">                        </span>\n"
+"                            </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_engineers_authority
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">الوظيفة</span>\n"
+"                                <span style=\"font-family:'Times New Roman'; -aw-import:spaces\">                     </span>\n"
+"                                <span style=\"font-family:'Times New Roman'; -aw-import:spaces\">        </span>\n"
+"                            </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_traffic
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">نفيد سعاتكم بأن الموظف/</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">.......=......</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">الجنسيه</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">......=......</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">هويه رقم</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">(00000000000)</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">صادر من جده يعمل لدينا بوظيفه</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">..............</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">ويرغب فى تصدير سيارته الخاصه التى تحمل رقم</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">(000000000)</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">ورقم الهيكل</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">(000000000)</span>\n"
+"                            </span>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_profession_oriented_modification_tide_condition
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">نفيد سعاتكم بأن الموظف/</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">.......=......</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">الجنسيه</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">......=......</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">هويه رقم</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">(00000000000)</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">يعمل لدينا بوظيفه</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">من التاريخ</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">00/00/0000</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">م</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">بموجب عقد وينتهى بتاريخ</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">00/00/0000</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">م</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">ولا يزال على رأس العمل؛نرجوا تزويده ببرنت\n"
+"                                    يفيد تعديل مهنته؛ وبناء عليه تم منحه هذا الخطاب.\n"
+"                                </span>\n"
+"                            </span>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_engineers_authority
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">نفيد سعاتكم بأن الموظف/</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">.......=......</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">الجنسيه</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">......=......</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">هويه رقم</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">(00000000000)</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">يعمل لدينابوظيفه</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">................</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">من التاريخ</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">00/00/0000</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">م</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">بموجب عقد وينتهى بتاريخ</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">00/00/0000</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">م</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">قابل للتجديد ولا يزال على رأس العمل وبناء على طلبه تم منحه هذا التعريف دون أدنى مسؤليه.\n"
+"                                </span>\n"
+"                            </span>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_salary_definition
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">نفيد سعاتكم بأن الموظف/</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">.......=......</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">الجنسيه</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">......=......</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">هويه رقم</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">(00000000000)</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">يعمل لدينابوظيفه</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">بموجب عقد وينتهى</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">قابل للتجديد منذ تاريخ</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">00/00/0000</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">م</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">وينتهى بتاريخ</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">00/00/0000</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">م</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">ولايزال على رأس العمل</span>\n"
+"                                <br/>\n"
+"\n"
+"                            </span>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_Know_the_salary_without_details
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">نفيد سعاتكم بأن الموظف/</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">.......=......</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">الجنسيه</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">......=......</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">هويه رقم</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">(00000000000)</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">يعمل لدينابوظيفه</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">من التاريخ</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">00/00/0000</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">م</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">بموجب عقد وينتهى بتاريخ</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">00/00/0000</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">م</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">قابل للتجديد ولا يزال على رأس العمل ويتقاضى\n"
+"                                    مبلغا شهريا وقدره\n"
+"                                </span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">(000000000)</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">ريال فقط فقط شاملاً الراتب وبدال السكن\n"
+"                                    والانتقال ومؤمن له العلاج والتذاكره؛وبناء على طلبه تم منجه هذا التعريف دون ادنى\n"
+"                                    مسؤليه.\n"
+"                                </span>\n"
+"                            </span>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_cultural_attaché
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">نفيد نحن شركه زهير فايز ومشاركوه الاستشارات المعماريه والهندسيه؛ بأن المهندس </span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">name_field</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">nationality_field</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">الجنسية حامل جواز رقم</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">0000000000</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">قد تعاقدنا معه للعمل لدينا بالمملكة العربية السعودية بتأشيرة عمل صادرة لدينامن وزارة العمل بالمملكة العربية السعودية برقم </span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">0000000000</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">بتاريخ</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">0000000000</span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">م</span>\n"
+"                            </span>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_salary_definition
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">وبتقاضى راتب شهرى على النحو التالى :</span>\n"
+"                                <br/>\n"
+"                            </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_cultural_attaché
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">وحيث أن المذكور يرغب فى تصديق شهادته\n"
+"                                    العملية؛ تفيد بأنه لا مانع لدينا من ذلك.</span>\n"
+"                            </span>\n"
+"                            <br/>\n"
+"                            <span>شاكرين لكم حسن تعاونكم </span>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_Know_the_salary_without_details
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_engineers_authority
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_traffic
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">ولكم خالص تحياتنا،،،</span>\n"
+"                                </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_salary_definition
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">ولكم خالص تحياتنا،،،</span>\n"
+"                            </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_salary_definition
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:'Times New Roman'\">ومؤمن له العلاج والتذاكره ؛ وبناء على طلبه\n"
+"                                    تم منحه هذا الخطاب دون أدنى مسؤوليه على الشركه.\n"
+"                                </span>\n"
+"                                <br/>\n"
+"                            </span>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_Know_the_salary_without_details
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_cultural_attaché
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_engineers_authority
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_profession_oriented_modification_tide_condition
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_salary_definition
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_traffic
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:Arial\">التاريخ :</span>\n"
+"                                <span style=\"font-family:Arial\">10/5/1449</span>\n"
+"                                <span style=\"font-family:Arial\">هـ</span>\n"
+"                            </span>\n"
+"                            <br/>\n"
+"                            <span dir=\"rtl\">\n"
+"                                <span style=\"font-family:Arial\">الموافق :</span>\n"
+"                                <span style=\"font-family:Arial\">10/5/1449</span>\n"
+"                                <span style=\"font-family:Arial\">م</span>\n"
+"                            </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_traffic
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:Arial\">الى سعاده مدير مرور الرياض\n"
+"                                </span>\n"
+"                                <span style=\"-aw-import:spaces\">                                          </span>\n"
+"                                <span style=\"font-family:Arial\">المحترم</span>\n"
+"                            </span>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_cultural_attaché
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:Arial\">سعادة/ الملحق الثقافى بسفارة خادم الحرمين الشريقين</span>\n"
+"                                <span style=\"-aw-import:spaces\">                      </span>\n"
+"                                <span style=\"font-family:Arial\">الموقر</span>\n"
+"                            </span>\n"
+"                            <br/>\n"
+"                            <span dir=\"rtl\">\n"
+"                                <span style=\"font-family:Arial\">الملحقية الثقافية سفارة خادم الحرمين الشريفين  </span>\n"
+"                                <span style=\"-aw-import:spaces\">                                   </span>\n"
+"                                <span style=\"font-family:Arial\">المحترمين</span>\n"
+"                            </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_engineers_authority
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:Arial\">سعادة/ الهيئه السعوديه للمهندسين\n"
+"                                </span>\n"
+"                                <span style=\"-aw-import:spaces\">                                      </span>\n"
+"                                <span style=\"font-family:Arial\">الموقرين</span>\n"
+"                            </span>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_profession_oriented_modification_tide_condition
+msgid ""
+"<span dir=\"rtl\">\n"
+"                                <span style=\"font-family:Arial\">سعادة/ مدير اداره الاحوال المدنيه\n"
+"                                </span>\n"
+"                                <span style=\"-aw-import:spaces\">                                      </span>\n"
+"                                <span style=\"font-family:Arial\">الموقر</span>\n"
+"                            </span>\n"
+"                            <br/>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid "<span dir=\"rtl\">0000000</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_cultural_attaché
+msgid ""
+"<span style=\"font-family:'Times New Roman'\" dir=\"rtl\">ولكم خالص "
+"تحياتنا،،،</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_cultural_attaché
+msgid ""
+"<span style=\"font-family:'Times New Roman'\">بهيئة </span>\n"
+"                                <span style=\"font-family:'Times New Roman'\">0000000000000</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid "<span style=\"font-family:Arial\" dir=\"rtl\">التاريخ انجليزى</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid "<span style=\"font-family:Arial\" dir=\"rtl\">التاريخ عربى</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid "<span style=\"font-family:Arial\" dir=\"rtl\">سعاده القنصل العام</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid ""
+"<span style=\"font-family:Arial\" dir=\"rtl\">مع شكرنا وتقديرنا لحسن\n"
+"                                                        تعاونكم معنا في حصوله على التأشيره المذكوره أعلاه.\n"
+"                                                    </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid "<span style=\"font-family:Arial; font-weight:bold\" dir=\"rtl\">مستشار</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid "<span style=\"font-weight:bold\">Advisor</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid "<span>ENG. ITHMAN S.ALDOBAIKHY</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid "<span>His Excellency</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid "<span>Saudi Embassy in …….,……….</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid "<span>The Consul General</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid ""
+"<span>You cooperation in granting him the above mentioned work Visa is highly appreciated.\n"
+"                                                    </span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model_terms:ir.ui.view,arch_db:hr_custom_report.template_report_submitted_embassy
+msgid "<span>Your Excellency:</span>"
+msgstr ""
+
+#. module: hr_custom_report
+#: model:ir.actions.report,name:hr_custom_report.report_cultural_attaché
+msgid "Cultural Attaché"
+msgstr "الملحقيه الثقافية"
+
+#. module: hr_custom_report
+#: model:ir.actions.report,name:hr_custom_report.report_engineers_authority
+msgid "Engineers Authority"
+msgstr "لهيئه المهندسين"
+
+#. module: hr_custom_report
+#: model:ir.actions.report,name:hr_custom_report.report_Know_the_salary_without_details
+msgid "Know the salary without details"
+msgstr "تعريف الراتب بدون تفاصيل"
+
+#. module: hr_custom_report
+#: model:ir.actions.report,name:hr_custom_report.report_salary_definition
+msgid "Salary definition"
+msgstr "تعريف الراتب"
+
+#. module: hr_custom_report
+#: model:ir.actions.report,name:hr_custom_report.report_submitted_embassy
+msgid "Submitted to the embassy"
+msgstr "مقدم للسفارة"
+
+#. module: hr_custom_report
+#: model:ir.actions.report,name:hr_custom_report._profession_oriented_modification_tide_condition
+msgid "profession oriented modification tide condition"
+msgstr "تعديل مهنه الموجه ﻷحوال المدنية"
+
+#. module: hr_custom_report
+#: model:ir.actions.report,name:hr_custom_report.report_traffic
+msgid "report traffic"
+msgstr "المرور"

@@ -1,0 +1,2991 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* exp_payroll_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-01 12:02+0000\n"
+"PO-Revision-Date: 2024-12-01 12:02+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_payslip__state
+msgid ""
+"* When the payslip is created the status is 'Draft'\n"
+"                \n"
+"* If the payslip is under verification, the status is 'Waiting'.\n"
+"                \n"
+"* If the payslip is confirmed then status is set to 'Done'.\n"
+"                \n"
+"* When user cancel payslip the status is 'Rejected'."
+msgstr ""
+"* عندما يتم انشاء قسيمة دفع فان الحالة تكون 'مسودة'\n"
+"                \n"
+"* إذا كانت قسيمة الدفع قيد التحقق فإن الحالة تكون 'إنتظار'.\n"
+"                \n"
+"* اذا تم تأكيد قسيمة الدفع فان الحالة تكون 'مكتملة'.\n"
+"                \n"
+"* عنمما يلغي المستخدم قسيمة الدفع فان الحالة تكون 'مرفوضة'."
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf_docx
+msgid ",,,,,,,N,N,,,,,,@SACH@,"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf_docx
+msgid ",00"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf_docx
+msgid ",P,1.0,"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf_docx
+msgid ",Salary,,@1ST@,"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf_docx
+msgid "00"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf_docx
+msgid "00,"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "<span>بنك :</span>"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payslip_details_inherit
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payslip_inherit
+msgid "<strong>NET</strong>"
+msgstr "<strong>الصافي</strong>"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payslip_inherit
+msgid "<strong>Total Allowances</strong>"
+msgstr "<strong>اجمالي استحقاقات</strong>"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payslip_inherit
+msgid "<strong>Total Deductions</strong>"
+msgstr "<strong>اجمالي خصومات</strong>"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payslip_inherit
+msgid "<strong>Total Loans</strong>"
+msgstr "<strong>اجمالي السلف</strong>"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__payroll_bank_wiz__entry_type__all
+msgid "ALL"
+msgstr "الكل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__account_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__account_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans__account_id
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_reward_form_view
+msgid "Account"
+msgstr "حساب"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "Account Number"
+msgstr "رقم الحساب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_employee_reward__transfer_type__accounting
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_contract_salary_form_view
+msgid "Accounting"
+msgstr "الحسابات"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_salary_rule_view_form_inherit
+msgid "Accounting Info"
+msgstr "معلومات الحساب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_needaction
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_needaction
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_needaction
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__activity_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__activity_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__activity_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__activity_state
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__activity_state
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__activity_state
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__activity_type_icon
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__activity_type_icon
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__activity_type_icon
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_employee_selection_wizard_form
+msgid "Add"
+msgstr "اضافه"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_reward_form_view
+msgid "Add Employees"
+msgstr "اضافة موظفين"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__advance
+msgid "Advance"
+msgstr "تقدم"
+
+#. module: exp_payroll_custom
+#: model:hr.salary.rule,name:exp_payroll_custom.hr_payslip_rule_advance
+msgid "Advance Salary"
+msgstr "راتب مقدما"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__advantages
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_contract_salary_form_view
+msgid "Advantages"
+msgstr "الاستحقاقات والخصومات الخاصة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__payroll_bank_wiz__bank_type__alahli
+msgid "Al-Ahli Bank"
+msgstr "البنك الأهلي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__payroll_bank_wiz__bank_type__rajhi
+msgid "Al-Rajhi Bank"
+msgstr "بنك الراجحي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__payroll_bank_wiz__bank_type__riyadh
+msgid "Al-Riyadh Bank"
+msgstr "بنك الرياض"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_scale.py:0
+#, python-format
+msgid "All Employee"
+msgstr "قيد لكل الموظفين"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_employee_reward__reward_type__allowance
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule_category__rule_type__allowance
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__payroll_bank_wiz__report_type__allowance
+#, python-format
+msgid "Allowance"
+msgstr "البدلات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__advantage_id
+msgid "Allowance Employee"
+msgstr "استحقاق الموظف"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__allowance_name
+msgid "Allowance Name"
+msgstr "اسم البدل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__allowance_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__allow
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Allowances"
+msgstr "البدلات"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_advantage_form_view
+msgid "Allowances Or Deductions Types"
+msgstr "نوع الإستحقاق او الخصم"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/payslip_monthly_report.py:0
+#, python-format
+msgid "Allowances and deduction Totals"
+msgstr "اجمالي البدلات والخصومات"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/payslip_monthly_report.py:0
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__amount
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__amount
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__amount
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans__amount
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_employee_reward__reward_type__amount
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+#, python-format
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__amount_base
+msgid "Amount Base"
+msgstr "اساس المبلغ"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_cost_report
+msgid "Annual Cost"
+msgstr "التكلفة السنوية"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__check_appraisal
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__check_appraisal
+msgid "Appraisal‏ Percentage"
+msgstr "النسبة حسب التقييم"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_promotions.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__salary_advance__state__approve
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+#, python-format
+msgid "Approved"
+msgstr "إعتمـاد"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Are you sure to Delete Compute Salaries?"
+msgstr "هل أنت متأكد من حذف حساب الرواتب؟"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Are you sure to Recompute Salaries?"
+msgstr "هل أنت متأكد من إعادة حساب الرواتب؟"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_reward_form_view
+msgid "Are you sure to Reset To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المسوده؟"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Are you sure to Return Compute Salaries?"
+msgstr "هل أنت متأكد من الإرجاع لمرحلة حساب الرواتب؟"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Are you sure to Transfer Accounting?"
+msgstr "هل أنت متأكد من الترحيل للمالية؟"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_attachment_count
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_attachment_count
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_attachment_count
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf_docx
+msgid "BATHDR,ACH-CR,"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__bank_id
+msgid "Bank"
+msgstr "البنك"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.act_window,name:exp_payroll_custom.action_bank_payroll_report
+#: model:ir.ui.menu,name:exp_payroll_custom.menu_bank_payroll_report
+msgid "Bank Payslip Report"
+msgstr "تقرير البنك للرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_payroll_bank_wiz
+msgid "Bank Payslips Report"
+msgstr "تقرير البنك للرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__bank_ids
+msgid "Banks"
+msgstr "المصارف"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule_category__rule_type__base
+#, python-format
+msgid "Base"
+msgstr "أساسى"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__base_salary
+msgid "Base Salary"
+msgstr "الراتب الاساسي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__basic_allowances
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_hr_payslip_inherit_tree
+msgid "Basic Salary"
+msgstr "الراتب الأساسي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__benefits_discounts_ids
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.salary_scale_form_view
+msgid "Benefits and discounts"
+msgstr "الفوائد والخصومات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__benefits_discounts
+msgid "Benefits/Discounts"
+msgstr "استحقاق/خصم"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__discount_absence__by_day
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__discount_absence__by_day
+#, python-format
+msgid "By Day"
+msgstr "باليوم"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__discount_absence__by_hour
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__discount_absence__by_hour
+#, python-format
+msgid "By Hour"
+msgstr "بالساعة"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.bank_payroll_report_form
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.payslip_xslx_report_form
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_employee_selection_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__salary_advance__state__cancel
+msgid "Cancelled"
+msgstr "ألغيت"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.actions.act_window,help:exp_payroll_custom.employee_promotions_action_hr_employee
+msgid "Click to add a Promotions..."
+msgstr "انقر على إنشاء لإضافة الترقيات ..."
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip__state__close
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_run__state__close
+msgid "Close"
+msgstr "إلغـــاء"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__comment
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+msgid "Comment"
+msgstr "تعليق"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__comments
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_advantage_form_view
+msgid "Comments"
+msgstr "ملاحظات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__company_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__company_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__company_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_run__company_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__company_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__company_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__company_insurnce
+msgid "Company Insurnce"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_res_company__company_pay_no
+msgid "Company Pay Number"
+msgstr "رقم الدفع في الشركة"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_salary_rule_view_form_inherit
+msgid "Computation"
+msgstr "طريقة الحساب"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Compute Sheet"
+msgstr "احسب الورقة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip__state__computed
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_run__state__computed
+msgid "Computed"
+msgstr "تم الحساب"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_advantage_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip__state__confirmed
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_run__state__confirmed
+#, python-format
+msgid "Confirmed"
+msgstr "تم التأكيد"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__contract_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__employee_contract_id
+msgid "Contract"
+msgstr "العقد "
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__contract_advantage_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__contract_advantage_id
+msgid "Contract Advantage"
+msgstr "العقد "
+
+#. module: exp_payroll_custom
+#: model:res.groups,name:exp_payroll_custom.group_hr_payroll_contributor
+msgid "Contributor"
+msgstr "مساهم"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.actions.act_window,help:exp_payroll_custom.employee_promotions_action
+msgid "Create Requests."
+msgstr "إنشاء طلبات."
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_selection_wizard__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_related_salary_amount__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__create_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__create_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_selection_wizard__create_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__create_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__create_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__create_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans__create_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__create_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_related_salary_amount__create_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__credit
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_salary_rule_view_form_inherit
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule_account__credit_account_id
+msgid "Credit account"
+msgstr "حساب الائتمان"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+msgid "Current Degree"
+msgstr "الدرجة  الحالية"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+msgid "Current Group"
+msgstr "المجموعة الحالية"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+msgid "Current Level"
+msgstr "المستوى الحالي"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+msgid "Current Scale"
+msgstr "سلم الرواتب الحالي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_payslip__contract_id
+msgid "Current contract of the employee"
+msgstr "عقد الموظف الحالي "
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__contract_advantage__type__customize
+#, python-format
+msgid "Customize"
+msgstr "يعدل"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_cost_report
+msgid "Daily Wage"
+msgstr "راتب اليوم"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__date
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_tree_view
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__date_from
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__date_from
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__date_from
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__date_from
+msgid "Date From"
+msgstr "تاريخ البداية"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+#: code:addons/exp_payroll_custom/wizard/payslip_monthly_report.py:0
+#, python-format
+msgid "Date From must be less than or equal Date To"
+msgstr "عفوا يجب ان يكون تاريخ البداية سابقاً لتاريخ النهاية"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__date
+msgid "Date Request"
+msgstr "تاريخ الطلب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__date_to
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__date_to
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__date_to
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__date_to
+msgid "Date To"
+msgstr "تاريخ النهاية"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__debit
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_salary_rule_view_form_inherit
+msgid "Debit account"
+msgstr "الحساب المدئن"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule_category__rule_type__deduction
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+#, python-format
+msgid "Deduction"
+msgstr "الخصم"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__deduction_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__deduct
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "Deductions"
+msgstr "الخصومات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_payslip__struct_id
+msgid ""
+"Defines the rules that have to be applied to this payslip, accordingly to "
+"the contract chosen. If you let empty the field contract, this field isn't "
+"mandatory anymore and thus the rules applied will be all the rules set on "
+"the structure of all contracts of the employee valid for the chosen period"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_scale.py:0
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__degree_id
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payroll_structure__type__degree
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.salary_scale_filter_view
+#, python-format
+msgid "Degree"
+msgstr "المؤهل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__department
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_cost_report
+msgid "Department"
+msgstr "الهيكل الإداري"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_run__department_ids
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+msgid "Departments"
+msgstr "الهيكل الإداري"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__detailed
+msgid "Detail By Employees"
+msgstr "تفصيلي بالموظفين"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_reward_form_view
+msgid "Direct Manager"
+msgstr "المدير المباشر"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__discount_absence
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__discount_absence
+msgid "Discount Absence"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_selection_wizard__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_run__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_re_contract__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule_category__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_related_salary_amount__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_payslip_monthly_report__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_payslip_monthly_report_xlsx__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_report_payroll_bank_pdf__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_report_payroll_bank_pdf_docx__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_report_payroll_bank_xlsx__display_name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__done
+msgid "Done in Payroll"
+msgstr "تم الحساب"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_promotions.py:0
+#: code:addons/exp_payroll_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_employee_reward__state__draft
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__lines_ids_reward__reward_state__draft
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__salary_advance__state__draft
+#, python-format
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/payslip_monthly_report.py:0
+#, python-format
+msgid "EMP #"
+msgstr "رقم الوظف"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/payslip_monthly_report.py:0
+#: model:ir.model,name:exp_payroll_custom.model_hr_employee
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__employee_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__employee_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__employee_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__employee_reward_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__employee_id
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_report_pdf_template
+#, python-format
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_reward.py:0
+#, python-format
+msgid ""
+"Employee \"%s\" has no contract Please create contract to add line to "
+"advantages"
+msgstr "لا يوجد عقد يرجى إنشاء عقد لإضافة عناصر إلى المزايا \"%s\" الموظف"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "Employee Address"
+msgstr "عنوان الموظف"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.act_window,name:exp_payroll_custom.employee_advantage_list_action
+#: model:ir.ui.menu,name:exp_payroll_custom.employee_advantage_menu
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_advantage_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_advantage_tree_view
+msgid "Employee Allowances and Deductions"
+msgstr "مستحقات وخصومات الموظفين الإضافية"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_cost_report
+msgid "Employee Basic Wage"
+msgstr "الراتب الاساسى"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.report,name:exp_payroll_custom.employee_cost_report_act
+#: model:ir.actions.report,name:exp_payroll_custom.employee_cost_report_act_xlsx
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_cost_report
+msgid "Employee Cost Report"
+msgstr "تقرير تكلفة الإدارة"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_cost_report
+msgid "Employee GOSI"
+msgstr "نسبة التأمينات"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_cost_report
+msgid "Employee ID"
+msgstr " رقم الموظف"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__employee_insurnce
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_hr_payslip_inherit_tree
+msgid "Employee Insurnce"
+msgstr "خصم التأمينات الإجتماعية للموظق"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__employee_id
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_advantage_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_advantage_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_cost_report
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_report_pdf_template
+msgid "Employee No"
+msgstr "رقم الموظف"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_employee_promotions
+#: model:ir.ui.menu,name:exp_payroll_custom.employee_promotions_view
+msgid "Employee Promotions"
+msgstr "ترقيات الموظف"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.act_window,name:exp_payroll_custom.employee_reward_list_action
+#: model:ir.ui.menu,name:exp_payroll_custom.employee_reward_menu
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_reward_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_reward_tree_view
+msgid "Employee Reward and Allowances"
+msgstr "مكافأة و مستحقات الموظفين"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_employee_selection_wizard
+msgid "Employee Selection Wizard"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_run__employee_value_ids
+msgid "Employee Value"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.actions.act_window,name:exp_payroll_custom.employee_promotions_action
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_tree_view
+msgid "Employee promotions"
+msgstr "ترقيات الموظف"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_selection_wizard__employee_reward_id
+msgid "Employee_reward_id"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_selection_wizard__employee_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_run__employee_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__employee_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__employee_ids
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.bank_payroll_report_form
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.payslip_xslx_report_form
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/payslip_monthly_report.py:0
+#, python-format
+msgid "Employees Paysheet"
+msgstr "كشف مرتبات الموظفين"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_cost_report
+msgid "Employer GOSI"
+msgstr "نسبة التأمينات للشركة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__end_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__end_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__end_date
+msgid "End Date"
+msgstr "تاريخ النهاية"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__rules_type__termination
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__rules_type__termination
+#, python-format
+msgid "End Of Services"
+msgstr "إستحقاق نهاية خدمة"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__rules_type__insurnce
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__rules_type__insurnce
+#, python-format
+msgid "Insurnce Deduction"
+msgstr "خصم التأمينات الاجتماعية"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__rules_type__other
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__rules_type__other
+#, python-format
+msgid "Other"
+msgstr "اخـــــرى"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule_category__rule_type__end_of_service
+#, python-format
+msgid "End of Service"
+msgstr "نهاية الخدمة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__entry_type
+msgid "Entry Type"
+msgstr "نوع القيد"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#, python-format
+msgid "Error, Select Salary type to calculate rule"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__exceed_condition
+msgid "Exceed than maximum"
+msgstr "تتجاوز من الحد الأقصى"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__contract_advantage__type__exception
+#, python-format
+msgid "Exception"
+msgstr "استثناء"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__fixed_amount
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__fixed_amount
+msgid "Fixed Amount"
+msgstr "مبلغ ثابت"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__salary_type__fixed
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__salary_type__fixed
+#, python-format
+msgid "Fixed for all"
+msgstr "ثابت للكل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_follower_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_follower_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_follower_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_channel_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_channel_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_channel_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_partner_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_partner_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_partner_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_contract_advantage__activity_type_icon
+#: model:ir.model.fields,help:exp_payroll_custom.field_employee_promotions__activity_type_icon
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_employee_reward__activity_type_icon
+#: model:ir.model.fields,help:exp_payroll_custom.field_salary_advance__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز الخط الرائع ، على سبيل المثال FA- المهام"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/bank_pdf_report.py:0
+#, python-format
+msgid "Form content is missing, this report cannot be printed."
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_employee_reward__state__done
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__lines_ids_reward__reward_state__done
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_reward_form_view
+msgid "GM Approval"
+msgstr "تم التصديق والترحيل"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_salary_rule_view_form_inherit
+msgid "General"
+msgstr "عام"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+msgid "Generate Payslip"
+msgstr "إنشاء كشوف المرتبات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__gread_max
+msgid "Gread Max"
+msgstr "الحد الاعلى للراتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__gread_min
+msgid "Gread Min"
+msgstr "الحد الاقل للراتب"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule_category__rule_type__gross
+#, python-format
+msgid "Gross"
+msgstr "إجمالي"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_scale.py:0
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__group_id
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payroll_structure__type__group
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.salary_scale_filter_view
+#, python-format
+msgid "Group"
+msgstr "المجموعة"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_promotions.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__employee_promotions__state__hr_manager
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+#, python-format
+msgid "HR Manager"
+msgstr "مدير الموارد البشرية"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_promotions.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__employee_promotions__state__confirm
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+#, python-format
+msgid "HR Officer"
+msgstr "مسؤول الموارد البشرية"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_employee_reward__state__hrm
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__lines_ids_reward__reward_state__hrm
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_reward_form_view
+msgid "HRM Approval"
+msgstr "انتظار الرئيس التنفيذي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__hide
+msgid "Hide"
+msgstr "إخفاء"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__house_allowances
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__house_allowance_temp
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__rules_type__house
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__rules_type__house
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_cost_report
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_hr_payslip_inherit_tree
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+#, python-format
+msgid "House Allowance"
+msgstr "بدل السكن"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_selection_wizard__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_run__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_re_contract__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule_category__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_related_salary_amount__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_payslip_monthly_report__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_payslip_monthly_report_xlsx__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_report_payroll_bank_pdf__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_report_payroll_bank_pdf_docx__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_report_payroll_bank_xlsx__id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf_docx
+msgid "IFH,IFILE,CSV,ABCD5953001,SASABBGSA003888815,"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_contract_advantage__activity_exception_icon
+#: model:ir.model.fields,help:exp_payroll_custom.field_employee_promotions__activity_exception_icon
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_employee_reward__activity_exception_icon
+#: model:ir.model.fields,help:exp_payroll_custom.field_salary_advance__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى استثناء النشاط"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_contract_advantage__message_needaction
+#: model:ir.model.fields,help:exp_payroll_custom.field_contract_advantage__message_unread
+#: model:ir.model.fields,help:exp_payroll_custom.field_employee_promotions__message_needaction
+#: model:ir.model.fields,help:exp_payroll_custom.field_employee_promotions__message_unread
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_employee_reward__message_needaction
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_employee_reward__message_unread
+#: model:ir.model.fields,help:exp_payroll_custom.field_salary_advance__message_needaction
+#: model:ir.model.fields,help:exp_payroll_custom.field_salary_advance__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_contract_advantage__message_has_error
+#: model:ir.model.fields,help:exp_payroll_custom.field_contract_advantage__message_has_sms_error
+#: model:ir.model.fields,help:exp_payroll_custom.field_employee_promotions__message_has_error
+#: model:ir.model.fields,help:exp_payroll_custom.field_employee_promotions__message_has_sms_error
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_employee_reward__message_has_error
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_employee_reward__message_has_sms_error
+#: model:ir.model.fields,help:exp_payroll_custom.field_salary_advance__message_has_error
+#: model:ir.model.fields,help:exp_payroll_custom.field_salary_advance__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_salary_rule_view_form_inherit
+msgid "Input Data"
+msgstr "البيانات المدخله"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_salary_rule_view_form_inherit
+msgid "Inputs"
+msgstr "المدخلات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans__date
+msgid "Installment Date"
+msgstr "تاريخ القسط"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__interval_time
+msgid "Interval Time"
+msgstr "الوقت الفاصل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_is_follower
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_is_follower
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_is_follower
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__journal
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_reward_form_view
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_selection_wizard____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_run____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_re_contract____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule_category____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_related_salary_amount____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_payslip_monthly_report____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_payslip_monthly_report_xlsx____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_report_payroll_bank_pdf____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_report_payroll_bank_pdf_docx____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_report_exp_payroll_custom_report_payroll_bank_xlsx____last_update
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_selection_wizard__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_related_salary_amount__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__write_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__write_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_selection_wizard__write_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__write_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__write_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__write_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans__write_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__write_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_related_salary_amount__write_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__leave_request_case
+msgid "Leave Request Case"
+msgstr "طلب مغادره الحالة"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "Legal #"
+msgstr "الرقم القومي/رقم الإقامة"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_scale.py:0
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__level_id
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payroll_structure__type__level
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.salary_scale_filter_view
+#, python-format
+msgid "Level"
+msgstr "المستوى"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__listed
+msgid "List By Rules"
+msgstr "كشف"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__loan_ids
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Loans"
+msgstr "القروض"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__rules_type__mandate
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__rules_type__mandate
+#, python-format
+msgid "Mandate Allowance"
+msgstr "إستحقاق إنتــداب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_has_error
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_has_error
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_has_error
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__payroll_bank_wiz__report_type__mission
+msgid "Mission"
+msgstr "الإنتدابات"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.bank_payroll_report_form
+msgid "Model"
+msgstr "الكائن"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__move_id
+msgid "Move"
+msgstr "القيد المحاسبي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__move_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_run__move_id
+msgid "Move Number"
+msgstr "القيد المحاسبي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__my_activity_date_deadline
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__my_activity_date_deadline
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__my_activity_date_deadline
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "نهاية الوقت المعين للنشاط"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/payslip_monthly_report.py:0
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans__name
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__name
+#, python-format
+msgid "Name"
+msgstr "الاسم"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "National ID/Iqama ID"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: code:addons/exp_payroll_custom/report/payslip_monthly_report.py:0
+#, python-format
+msgid "Net"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/payslip_monthly_report.py:0
+#, python-format
+msgid "Nets"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__new_degree
+msgid "New Degree"
+msgstr "درجة جديدة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__new_group
+msgid "New Group"
+msgstr "مجموعة جديدة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__new_level
+msgid "New Level"
+msgstr "مستوى جديد"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_re_contract__new_salary_degree
+msgid "New Salary Degree"
+msgstr "سلم الرواتب الجديد"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_re_contract__new_salary_group
+msgid "New Salary Group"
+msgstr "مجموعة سلم الرواتب الجديد"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_re_contract__new_salary_level
+msgid "New Salary Level"
+msgstr "مستوى سلم الرواتب الجديد"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_re_contract__new_salary_scale
+msgid "New Salary Scale"
+msgstr "سلم الرواتب الجديد"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_tree_view
+msgid "New degree"
+msgstr "درجة جديدة"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_tree_view
+msgid "New group"
+msgstr "مجموعة جديدة"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_tree_view
+msgid "New level"
+msgstr "مستوى جديد"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__activity_summary
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__activity_summary
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__activity_summary
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__activity_type_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__activity_type_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__activity_type_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__next_approve
+msgid "Next Required Approval"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__no_details
+msgid "No Details"
+msgstr "بدون تفاصيل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__no_rule
+msgid "No Rules"
+msgstr "دون البدلات والخصومات"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__discount_absence__no_discount
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__discount_absence__no_discount
+#, python-format
+msgid "No discount"
+msgstr "لا خصم"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_res_company__company_hr_no
+msgid "Number Of Company For HR"
+msgstr "رقم الشركة للموارد البشرية"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__groups_number
+msgid "Number Of Groups"
+msgstr "عدد المجموعات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__level_num
+msgid "Number Of Levels"
+msgstr "عدد المستويات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__degree_number
+msgid "Number of Degrees"
+msgstr "عدد الدرجات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_contract_advantage__message_needaction_counter
+#: model:ir.model.fields,help:exp_payroll_custom.field_employee_promotions__message_needaction_counter
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_employee_reward__message_needaction_counter
+#: model:ir.model.fields,help:exp_payroll_custom.field_salary_advance__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_contract_advantage__message_has_error_counter
+#: model:ir.model.fields,help:exp_payroll_custom.field_employee_promotions__message_has_error_counter
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_employee_reward__message_has_error_counter
+#: model:ir.model.fields,help:exp_payroll_custom.field_salary_advance__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_contract_advantage__message_unread_counter
+#: model:ir.model.fields,help:exp_payroll_custom.field_employee_promotions__message_unread_counter
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_employee_reward__message_unread_counter
+#: model:ir.model.fields,help:exp_payroll_custom.field_salary_advance__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__official_mission_id
+msgid "Official Mission"
+msgstr "مهمة عمل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__old_degree
+msgid "Old Degree"
+msgstr "درجة قديمة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__old_degree_2
+msgid "Old Degree 2"
+msgstr "الدرجة القديمة 2"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__old_group
+msgid "Old Group"
+msgstr "مجموعة قديمة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__old_group_2
+msgid "Old Group 2"
+msgstr "مجموعه قديمه 2"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__old_level
+msgid "Old Level"
+msgstr "مستوى قديم"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__old_level_2
+msgid "Old Level 2"
+msgstr " 2 مستوى قديم"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__old_scale
+msgid "Old Scale"
+msgstr "رتبة قديمة"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_cost_report
+msgid "Other Benefits"
+msgstr "بدلات اخرى"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "Other Earnings"
+msgstr "بدلات أخري"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__other_allowances
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_hr_payslip_inherit_tree
+msgid "Others Allowance"
+msgstr "البدلات الاخرى"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__out_rule
+msgid "Out of Payroll"
+msgstr "خارجي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__over_time_id
+msgid "OverTime"
+msgstr "اجر اضافي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__payroll_bank_wiz__report_type__overtime
+msgid "Overtime"
+msgstr "الأجر الإضافي"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__rules_type__overtime
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__rules_type__overtime
+#, python-format
+msgid "Overtime Allowance"
+msgstr "استحقاق اجر اضــافي"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.payslip_monthly_report
+msgid "Page:"
+msgstr "الصفحة:"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans__paid
+msgid "Paid"
+msgstr "تم دفعها"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__pay_date
+msgid "Pay Date"
+msgstr "تاريخ الدفع"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_hr_payslip
+msgid "Pay Slip"
+msgstr "ظرف المرتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__journal_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__journal_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__payment_method
+msgid "Payment Method"
+msgstr "طرق السداد"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_employee_reward__transfer_type__payroll
+msgid "Payroll"
+msgstr "المرتبــــــــات"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_report_exp_payroll_custom_report_payroll_bank_pdf
+msgid "Payroll Bank PDF report"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.actions.report,name:exp_payroll_custom.bank_payslip_report
+#: model:ir.actions.report,name:exp_payroll_custom.report_payroll_bank_xlsx
+msgid "Payroll Bank Report"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.payslip_xslx_report_form
+msgid "Payroll Items"
+msgstr "الاستحقاقات والخصومات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__payroll_month
+msgid "Payroll Month"
+msgstr "تاريخ حساب الراتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__payslip_allowance
+msgid "Payslip Allowance"
+msgstr "بدل كشوف"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "دفعات ظرف المرتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__payslip_deduction
+msgid "Payslip Deduction"
+msgstr "خصومات المرتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_hr_payslip_line
+msgid "Payslip Line"
+msgstr "خط قسيمة الدفع"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_loans__payslip_loan
+msgid "Payslip Loan"
+msgstr "قرض الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_report_exp_payroll_custom_payslip_monthly_report
+msgid "Payslip Monthly Report"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.actions.report,name:exp_payroll_custom.act_payslip_monthly_report
+msgid "Payslip PDF Report"
+msgstr "تقرير المرتبات PDF"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.report,name:exp_payroll_custom.payslip_monthly_report_xlsx
+msgid "Payslip Xlsx Report"
+msgstr "طباعة Excel"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+msgid "Payslips"
+msgstr "قسائم الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.report,name:exp_payroll_custom.hr_payslip_run_report_pdf
+msgid "Payslips Batches Report"
+msgstr "تقرير رواتب الموظفين"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_payslip_monthly_report
+msgid "Payslips Monthly Report With Loans"
+msgstr "تقرير الرواتب الشهري بالسلف"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.act_window,name:exp_payroll_custom.payslip_xslx_report_action
+#: model:ir.ui.menu,name:exp_payroll_custom.payslip_xslx_report_menu
+msgid "Payslips Report"
+msgstr "تقرير المرتبات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__penalty_id
+msgid "Penalty Name"
+msgstr "المخالفات والجزاءات"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_scale.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payroll_structure__transfer_type__per_bank
+#, python-format
+msgid "Per Bank"
+msgstr "قيد لكل بنك"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_scale.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payroll_structure__transfer_type__one_by_one
+#, python-format
+msgid "Per Employee"
+msgstr "قيد لكل موظف"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_scale.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payroll_structure__transfer_type__per_analytic_account
+#, python-format
+msgid "Per Analytic Account"
+msgstr "قيد بالحساب التحليلي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__percentage
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__percentage
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_run__percentage
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.inherited_view_hr_payslip_line_tree
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_hr_payslip_inherit_tree
+msgid "Percentage"
+msgstr "نسبة حساب الراتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__percentage
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__percentage
+msgid "Percentage%"
+msgstr "النسبة المئوية٪"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Period"
+msgstr "فترة"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+#, python-format
+msgid ""
+"Please be sure that the employee is linked to contract and contract linked "
+"with journal"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__payroll_bank_wiz__entry_type__posted
+msgid "Post"
+msgstr "مرحل"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.bank_payroll_report_form
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.payslip_xslx_report_form
+msgid "Print Excel"
+msgstr "طباعة Excel"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.bank_payroll_report_form
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.payslip_xslx_report_form
+msgid "Print PDF"
+msgstr "طباعة PDF"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.report,name:exp_payroll_custom.payroll_bank_wiz_report_docx
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.bank_payroll_report_form
+msgid "Print Text"
+msgstr "طباعة Text"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+msgid "Promotion Date"
+msgstr "تاريخ الترقية"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+msgid "Promotion Degree"
+msgstr "الدرجة الجديدة"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+msgid "Promotion Group"
+msgstr "المجموعة الجديدة"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+msgid "Promotion Level"
+msgstr "المستوى الجديد"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_employee_promotions_inherit
+msgid "Promotions"
+msgstr "الترقيـات"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.act_window,name:exp_payroll_custom.employee_promotions_action_hr_employee
+msgid "Promotions Action"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee__promotions_count
+msgid "Promotions Count"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_advantage_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_reward_form_view
+msgid "Re-Draft"
+msgstr "إعادة مسوده"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__reason
+msgid "Reason"
+msgstr "السبب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__reason
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__reason
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__reason
+msgid "Reason/Justification"
+msgstr "السببظ المبرر"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Recompute"
+msgstr "إعادة حساب"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_reward_form_view
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_contract.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__employee_promotions__state__refuse
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_employee_reward__state__refused
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__lines_ids_reward__reward_state__refused
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_advantage_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_form_view
+#, python-format
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__salary_advance__state__reject
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__related_benefits_discounts
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__related_benefits_discounts
+msgid "Related Benefits and Discount"
+msgstr "الاستحقاقات و الخصومات ذات الصلة"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_salary_rule_view_form_inherit
+msgid "Related Salary Configuration"
+msgstr "تكوين الراتب ذات الصلة"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__salary_type__related_degrees
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__salary_type__related_degrees
+#, python-format
+msgid "Related with Degrees"
+msgstr "ذات الصلة بالدرجات"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__salary_type__related_groups
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__salary_type__related_groups
+#, python-format
+msgid "Related with Groups"
+msgstr "ذات صلة بالمجموعات"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__salary_type__related_levels
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__salary_type__related_levels
+#, python-format
+msgid "Related with Levels"
+msgstr "ذات الصلة بالمستويات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__related_qualifications
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__related_qualifications
+msgid "Related with qualifications"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.ui.menu,name:exp_payroll_custom.menu_hr_payroll_report
+msgid "Reporting"
+msgstr "تقارير المرتبات"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/salary_advance.py:0
+#, python-format
+msgid "Request can be done after \"%s\" Days From previous month salary"
+msgstr "يمكن أن يتم الطلب بعد أيام \"%s\" من راتب الشهر السابق"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__required_condition
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_run__required_condition
+msgid "Required Condition"
+msgstr "الشرط المطلوب"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_res_company
+msgid "Res Company SMS Configuration"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__activity_user_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__activity_user_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__activity_user_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__retirement_age
+msgid "Retirement Age"
+msgstr "سن التقاعد"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Return"
+msgstr "إرجاع"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__reward_id
+msgid "Reward"
+msgstr "مكافأة/بدل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__line_ids_reward
+msgid "Reward Line"
+msgstr "خط المكافآت"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__reward_once
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__reward_once
+msgid "Reward Once Yearly"
+msgstr "مكافأة مرة واحدة سنويًا"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__allowance_reason
+msgid "Reward Reason"
+msgstr "سبب المكافأة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__reward_state
+msgid "Reward State"
+msgstr "حالة المكافأة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__reward_type
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__reward_type
+msgid "Reward Type"
+msgstr "نوع المكافأة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__benefits_discounts
+msgid "Rewards/Benefits"
+msgstr "مكافأة/بدل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__rule_credit_account_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__rule_credit_account_id
+msgid "Rule Credit Account"
+msgstr "قاعدة حساب الائتمان"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__rule_debit_account_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__rule_debit_account_id
+msgid "Rule Debit Account"
+msgstr "قاعدة حساب الخصم"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__rule_ids
+msgid "Rules"
+msgstr "القواعد"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__rules_type
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__rules_type
+msgid "Rules Type"
+msgstr "النــوع"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf_docx
+msgid "SECPTY,"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "SN"
+msgstr "الرقم المسلسل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__payroll_bank_wiz__report_type__salary
+msgid "Salary"
+msgstr "رواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_related_salary_amount__salary
+msgid "Salary / Percentage"
+msgstr "الراتب / النسبة المئوية"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__rules_type__salary
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__rules_type__salary
+#, python-format
+msgid "Salary Allowance"
+msgstr "الراتب الاســـاسي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__salary_amount_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__salary_amount_ids
+msgid "Salary Amount"
+msgstr "مبلغ الراتب"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "Salary Bank Payslip Report"
+msgstr "تقرير البنك للرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__degree_ids
+msgid "Salary Basice"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__salary_degree
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee__salary_degree
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_re_contract__salary_degree
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_contract_salary_form_view
+msgid "Salary Degree"
+msgstr "درجة الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__group_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__degree_ids
+msgid "Salary Degrees"
+msgstr "الدرجات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__salary_group
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee__salary_group
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_re_contract__salary_group
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_contract_salary_form_view
+msgid "Salary Group"
+msgstr "مجموعة الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__group_ids
+msgid "Salary Groups"
+msgstr "المجموعات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_run__journal_id
+msgid "Salary Journal"
+msgstr "يومية الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__salary_level
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee__salary_level
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_re_contract__salary_level
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_contract_salary_form_view
+msgid "Salary Level"
+msgstr "مستوى الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__level_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__level_ids
+msgid "Salary Levels"
+msgstr "المستويات"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_hr_salary_rule
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_related_salary_amount__salary_rule_id
+msgid "Salary Rule"
+msgstr "قاعدة المرتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_hr_salary_rule_category
+msgid "Salary Rule Category"
+msgstr "فئة قاعدة المرتب"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.act_window,name:exp_payroll_custom.salary_scale_record_action
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__salary_scale
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__salary_scale_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_run__salary_scale
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_re_contract__salary_scale
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_related_salary_amount__salary_scale
+#: model:ir.ui.menu,name:exp_payroll_custom.salary_scale_main_menu
+#: model:ir.ui.menu,name:exp_payroll_custom.salary_scale_menu
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_employee_salary_scale_inherited_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Salary Scale"
+msgstr "سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_related_salary_amount__salary_scale_degree
+msgid "Salary Scale Degree"
+msgstr "درجة سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.act_window,name:exp_payroll_custom.salary_scale_level_group_record_action
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__salary_scale_group_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_related_salary_amount__salary_scale_group
+msgid "Salary Scale Group"
+msgstr "مجموعة سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.act_window,name:exp_payroll_custom.salary_scale_level_action
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__salary_scale_level_id
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_related_salary_amount__salary_scale_level
+msgid "Salary Scale Level"
+msgstr "مستوى سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.act_window,name:exp_payroll_custom.salary_scale_level_degree_record_action
+msgid "Salary Scale Level Degree"
+msgstr "درجه مستوي سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__salary_scale_level_degrees_ids
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.salary_scale_form_view
+msgid "Salary Scale Level Degrees"
+msgstr "درجات  مستوي سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__salary_scale_level_groups_ids
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.salary_scale_form_view
+msgid "Salary Scale Level Groups"
+msgstr "مجموعات  مستوى سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__salary_scale_levels_ids
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.salary_scale_form_view
+msgid "Salary Scale Levels"
+msgstr "مستويات سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+#, python-format
+msgid "Salary Slip of %s for %s"
+msgstr "قسيمة راتب %s لشهر  %s"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_hr_payroll_structure
+msgid "Salary Structure"
+msgstr "سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__salary_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payslip_monthly_report__salary_ids
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.bank_payroll_report_form
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.payslip_xslx_report_form
+msgid "Salary Structures"
+msgstr "هيكل الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__salary_type
+msgid "Salary Type"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+#, python-format
+msgid ""
+"Salary is less than 0 this month for the following employees \n"
+" %s"
+msgstr ""
+" الراتب أقل من صفر هذا الشهر للموظفين الاتية اسماهم \n"
+" %s"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee__salary_scale
+msgid "Salary scale"
+msgstr "سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_scale.py:0
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payroll_structure__type__scale
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.salary_scale_filter_view
+#, python-format
+msgid "Scale"
+msgstr "سلم"
+
+#. module: exp_payroll_custom
+#: model:ir.ui.menu,name:exp_payroll_custom.salary_scale_level_group_menu
+msgid "Scale  Group"
+msgstr "مجموعة سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.ui.menu,name:exp_payroll_custom.salary_scale_level_menu
+msgid "Scale Levels"
+msgstr "مستوي سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.ui.menu,name:exp_payroll_custom.salary_scale_level_degree_menu
+msgid "Scale degree"
+msgstr "درجه سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.salary_scale_filter_view
+msgid "Search Salary Scale"
+msgstr "البحث عن سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__bank_type
+msgid "Select Bank"
+msgstr "حدد البنك"
+
+#. module: exp_payroll_custom
+#: model:ir.actions.act_window,name:exp_payroll_custom.action_employee_selection_wizard
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_employee_selection_wizard_form
+msgid "Select Employees"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/payslip_monthly_report.py:0
+#: code:addons/exp_payroll_custom/wizard/payslip_monthly_report.py:0
+#, python-format
+msgid "Sorry No Data To Be Printed"
+msgstr "عفواً لا توجد بيانات لتتم طباعتها"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_reward.py:0
+#, python-format
+msgid "Sorry, Can Not Request without The Employees"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+#, python-format
+msgid ""
+"Sorry, Salary has already been calculated This Month for Employees \n"
+" %s"
+msgstr ""
+" للأسف, تم حساب الراتب لهذا الشهر مسبقآ للموظفين الاتية اسماهم \n"
+" %s"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_reward.py:0
+#, python-format
+msgid ""
+"Sorry, The Employee %s Cannot be Taking More Than Once Reward In The Same "
+"Year %s"
+msgstr "للأسف, الموظف %s لايمكنه أخذ هذه المكافأة اكثر من مرة  لنفس سنـــة %s"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+#, python-format
+msgid ""
+"Sorry, The Previous month's salary has Not been calculated for Employees \n"
+" %s"
+msgstr ""
+"للأسف, لم يتم احتساب الراتب للشهر السابق للموظفين الاتية اسماهم \n"
+" %s"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+#, python-format
+msgid "Sorry, The Pyroll period Must be During the same Month"
+msgstr "للأسف، فترة الراتب يجب أن تكون خلال نفس الشهر"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__special
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__special
+msgid "Special"
+msgstr "خــاص"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/payslip_monthly_report.py:0
+#, python-format
+msgid "Specific Allowance and deduction Report"
+msgstr "تقرير استحقاق خصم معين"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__start_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__start_date
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__state
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__state
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__state
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_advantage_tree_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_promotions_tree_view
+msgid "State"
+msgstr "الحالة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__state
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_run__state
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_contract_advantage__activity_state
+#: model:ir.model.fields,help:exp_payroll_custom.field_employee_promotions__activity_state
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_employee_reward__activity_state
+#: model:ir.model.fields,help:exp_payroll_custom.field_salary_advance__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__struct_id
+msgid "Structure"
+msgstr "الهيكل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_employee_reward__state__submitted
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__lines_ids_reward__reward_state__submitted
+msgid "Submit"
+msgstr "انتظار الموارد البشرية"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__salary_advance__state__submit
+msgid "Submitted"
+msgstr "ارسال"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_salary_advance__exceed_condition
+msgid "The Advance is greater than the maximum percentage in salary structure"
+msgstr "القيمة أكبر من النسبة المئوية القصوى في سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_reward.py:0
+#, python-format
+msgid "The Amount Must Be Greater Than Zero"
+msgstr "يجب أن يكون المبلغ أكبر من الصفر"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_contract.py:0
+#, python-format
+msgid "The Amount Must be Greater Than Zero The Employee %s"
+msgstr "المبلغ يجب ان يكون اكبر من الصفر للموظف %s"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_contract.py:0
+#: code:addons/exp_payroll_custom/models/hr_salary_scale_level_degree.py:0
+#, python-format
+msgid ""
+"The Basic Salary Is Greater Than Group Gread Max Or less than Gread Min"
+msgstr ""
+" الراتب الاساسي اكبر من الحدى الاعلى او اقل من الحد الادني لمجموعة سلم "
+"الرواتب"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_contract.py:0
+#, python-format
+msgid "The Date Form Must be Less than Date To"
+msgstr "تاريخ البداية يجب ان يكون قبل تاريخ النهاية للاستحقاق او الاخصم"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_reward.py:0
+#, python-format
+msgid "The Employee %s Amount Must Be Greater Than Zero"
+msgstr "يجب ان يكون مبلغ الموظف %s  اكبر من الصفر"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_scale_level_group.py:0
+#, python-format
+msgid "The Gread Max Is Greater Than Gread Min"
+msgstr "الحد الاعلى يجب ان يكون اكبر من الحد الادنى"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_scale_level_group.py:0
+#, python-format
+msgid "The Gread Max Or Gread Min is not Negative"
+msgstr "الحد الاعلى او الاقل يجب ان لا يكون سالب"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#, python-format
+msgid "The Salary Rule is Not Deduction"
+msgstr "يجب ان يكون تصنيف قاعدة الرواتب خصمآ فقط"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+#, python-format
+msgid "The amount you put is greater than fact value of this Salary rule"
+msgstr "المبلغ الذي وضعته أكبر من القيمة الحقيقية لقاعدة الرواتب هذه"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_contract.py:0
+#, python-format
+msgid ""
+"The amount you put is greater than fact value of this Salary rule %s (%s)."
+msgstr " (%s) %s المبلغ الذي وضعته أكبر من القيمة الحقيقية لقاعدة الرواتب هذه"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/wizard/employee_selection_wizard.py:0
+#, python-format
+msgid "The following employees are already in reward lines: %s, "
+msgstr ""
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#, python-format
+msgid "There is no total for rule : %s"
+msgstr "ليس هنالك مبلغ  لقاعدة الرواتب : %s"
+
+#. module: exp_payroll_custom
+#: model:res.groups,comment:exp_payroll_custom.group_hr_payroll_contributor
+msgid "This user is a participant in payroll related processes."
+msgstr "هذا المستخدم مشارك في العمليات المتعلقة بكشوف المرتبات"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/payslip_monthly_report.py:0
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_cost_report
+#, python-format
+msgid "Total"
+msgstr "الاجمالي"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/payslip_monthly_report.py:0
+#, python-format
+msgid "Total "
+msgstr "الاجمالي"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__total_allowance
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__total_allowances
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_report_pdf_template
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_hr_payslip_inherit_tree
+msgid "Total Allowance"
+msgstr "إجمالي البدلات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__total_deduction
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__total_deductions
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_report_pdf_template
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_hr_payslip_inherit_tree
+msgid "Total Deduction"
+msgstr "اجمالي الخصومات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__total_loans
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_hr_payslip_inherit_tree
+msgid "Total Loans"
+msgstr "اجمالي القروض"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__total_net
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__total_sum
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_report_pdf_template
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_hr_payslip_inherit_tree
+msgid "Total Net"
+msgstr "صــافي الراتب"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "Total Salary"
+msgstr "إجمالي الراتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__payroll_bank_wiz__report_type__training
+msgid "Training"
+msgstr "التدريب"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "Transaction Reference"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip__state__transfered
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_run__state__transfered
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Transfer"
+msgstr "ترحيل القيد"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__transfer_type
+msgid "Transfer Type"
+msgstr "طريقة الدفع"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__transfer_type
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_lines_ids_reward__transfer_type
+msgid "Transfer type"
+msgstr "طريقة الدفع"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_contract__transport_allowance
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip__trans_allowances
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payslip_line__rules_type__transport
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule__rules_type__transport
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_hr_payslip_inherit_tree
+#, python-format
+msgid "Transport Allowance"
+msgstr "بدل النقل"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/payslip_monthly_report.py:0
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__type
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__type
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule_category__rule_type
+#, python-format
+msgid "Type"
+msgstr "النوع"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payslip_line__salary_type
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__salary_type
+msgid "Type Scale"
+msgstr "نوع سلم الرواتب"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_contract_advantage__activity_exception_decoration
+#: model:ir.model.fields,help:exp_payroll_custom.field_employee_promotions__activity_exception_decoration
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_employee_reward__activity_exception_decoration
+#: model:ir.model.fields,help:exp_payroll_custom.field_salary_advance__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل."
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__payroll_bank_wiz__entry_type__unposted
+msgid "Un Post"
+msgstr "غير مرحل"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_unread
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_unread
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_unread
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__message_unread_counter
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__message_unread_counter
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__message_unread_counter
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__salary_advance__state__waiting_approval
+msgid "Waiting Approval"
+msgstr "في انتظار الموافقة"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_contract_advantage__website_message_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_employee_promotions__website_message_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_employee_reward__website_message_ids
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_salary_advance__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,help:exp_payroll_custom.field_contract_advantage__website_message_ids
+#: model:ir.model.fields,help:exp_payroll_custom.field_employee_promotions__website_message_ids
+#: model:ir.model.fields,help:exp_payroll_custom.field_hr_employee_reward__website_message_ids
+#: model:ir.model.fields,help:exp_payroll_custom.field_salary_advance__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.model_payslip_form_view
+msgid "Withdraw"
+msgstr "تراجع"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#, python-format
+msgid "Wrong percentage base or quantity defined for salary rule %s (%s)."
+msgstr "أساس النسبة المئوية الخطأ أو القيمة المحددة لقاعدة المرتب %s (%s)."
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#, python-format
+msgid "Wrong python code defined for salary rule %s (%s)."
+msgstr "تم تحديد قيمة خاطئة لقاعدة الراتب %s (%s)."
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_salary_rules.py:0
+#, python-format
+msgid "Wrong quantity defined for salary rule %s (%s)."
+msgstr ""
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_contract.py:0
+#, python-format
+msgid ""
+"You Can Not add Same Allowance/Deduction at The Same Employee %s For The "
+"Same Month!"
+msgstr " لايمكن إضافة نفس الاستحقاق/الخصم لنفس الموظف %s في نفس الشهر"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+#, python-format
+msgid "You can not Return Payslips Patch Has account move %s"
+msgstr "لايمكن ارجاع  حساب الراتب بعد ترحيل حزمة الرواتب بالقيد %s"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+#, python-format
+msgid "You can not Return account move %s in state not draft"
+msgstr "لايمكن ارجاع  حساب الراتب و القيد %s في حالة غير مسوده"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_reward.py:0
+#, python-format
+msgid "You can not cancel account move \"%s\" in state not draft"
+msgstr "لا يمكن حذف الغاء القيد \"%s\" في حالة غير المسوده"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_promotions.py:0
+#, python-format
+msgid "You can not delete employee promotions  for  \"%s\" in state not in draft."
+msgstr "لا يمكن حذف السجل \"%s\" في حالة غير المسوده"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_reward.py:0
+#, python-format
+msgid "You can not delete record in state not in draft"
+msgstr "لا يمكن حذف السجل في حالة غير المسوده"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_promotions.py:0
+#, python-format
+msgid "You can not promotions Employee has Penalty %s in this Period."
+msgstr "لا يمكن ترقية الموظف لديه عقوبة \"%s\" في هذه الفترة"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_contract.py:0
+#, python-format
+msgid "You cannot delete The Salary rule %s For the Employee %s is Not Draft"
+msgstr "للأسف, قاعدة الراتب %s للموظف %s لايمكن حذفها في حالة غير مسوده"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+#, python-format
+msgid "You cannot delete a payslip which is not draft!"
+msgstr "لا يمكن حذف السجل في حالة غير المسوده"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_contract_advantage
+msgid "contract.advantage"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_hr_employee_reward
+msgid "hr.employee.reward"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_hr_re_contract
+msgid "hr.re.contract"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_lines_ids_reward
+msgid "lines.ids.reward"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_payslip_loans
+msgid "payslip.loans"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.employee_reward_form_view
+msgid "recalculate"
+msgstr "إعادة حساب"
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_related_salary_amount
+msgid "related.salary.amount"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_report_exp_payroll_custom_payslip_monthly_report_xlsx
+msgid "report.exp_payroll_custom.payslip_monthly_report_xlsx"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_report_exp_payroll_custom_report_payroll_bank_pdf
+msgid "report.exp_payroll_custom.report_payroll_bank_pdf"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_report_exp_payroll_custom_report_payroll_bank_pdf_docx
+msgid "report.exp_payroll_custom.report_payroll_bank_pdf_docx"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_report_exp_payroll_custom_report_payroll_bank_xlsx
+msgid "report.exp_payroll_custom.report_payroll_bank_xlsx"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf_docx
+msgid "salary of"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model,name:exp_payroll_custom.model_salary_advance
+msgid "salary.advance"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "إجمالي المبلغ"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "إسم الموظف"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__employee_promotions__state__approved
+msgid "الإعتماد النهائي"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "البنك"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "الحالة"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "الخصومات"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "الراتب الأساسي"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_salary_rule_category__rule_type__net
+msgid "الصافي"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__contract_advantage__state__refused
+msgid "مرفوض"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "العملة"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "العنوان"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "المبلغ"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "المستفيد / اسم الموظف"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "الهوية"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__payroll_bank_wiz__bank_type__sap
+msgid "SAP Bank"
+msgstr "بنك ساب"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "بدلات أخرى"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "دخل آخر"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_payroll_bank_wiz__report_type
+msgid "Report Type"
+msgstr "نوع التقرير"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "رقم الحساب"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "رقم الموظف"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "رمز البنك"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__hr_payroll_structure__transfer_type__all
+msgid "قيد لكل الموظفين"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__contract_advantage__state__confirm
+msgid "مؤكد"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "مرجع الدفع"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__contract_advantage__state__draft
+#: model:ir.model.fields.selection,name:exp_payroll_custom.selection__employee_promotions__state__draft
+msgid "مسوده"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/bank_pdf_report.py:0
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+#, python-format
+msgid "مسير البنك للتدريب"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/bank_pdf_report.py:0
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+#, python-format
+msgid "مسير البنك للحوافز"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/bank_pdf_report.py:0
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+#, python-format
+msgid "مسير البنك للرواتب"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/bank_pdf_report.py:0
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+#, python-format
+msgid "مسير البنك للعمل الإضافي"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/report/bank_pdf_report.py:0
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+#, python-format
+msgid "مسير البنك لمهام العمل"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "هوية المستفيد/ المرجع"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.report_payroll_bank_pdf
+msgid "وصف الدفع"
+msgstr ""
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:employee_requests.field_hr_payslip__employee_no
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_hr_payslip_inherit_tree
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.view_hr_payslip_filter_inherit
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+msgid "Sorry The Allowance %s is Not account Set"
+msgstr "للأسف إسم الإستحقاق %s ليس لديه إعدادات حسابات"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+msgid "Sorry The Deduction %s is Not account Set"
+msgstr "للأسف إسم الخصم %s ليس لديه إعدادات حسابات"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+msgid "Sorry The Loan %s is Not account Set"
+msgstr "للأسف إسم السلفة %s ليس لديها إعدادات حسابات"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/employee_reward.py:0
+#, python-format
+msgid "Add Employees to Reward"
+msgstr "إضافة موظفين للمكافأة و مستحقات الموظفين"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule_account__emp_type_id
+msgid "Employee Type"
+msgstr "نوع الموظف"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule_account__debit_account_id
+msgid "Debit Account"
+msgstr "الحساب المدين"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_salary_rule_view_form_inherit
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_salary_rule__transfer_by_emp_type
+msgid "Transfer By Employee Type"
+msgstr "الترحيل حسب نوع الموظف"
+
+#. module: exp_payroll_custom
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.hr_payslip_run_inherited_form_view
+msgid "Holiday Period"
+msgstr "فترة الإجازات"
+
+#. module: exp_payroll_custom
+#: model:ir.model.fields,field_description:exp_payroll_custom.field_hr_payroll_structure__analytic_account_id
+#: model_terms:ir.ui.view,arch_db:exp_payroll_custom.salary_scale_form_view
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: exp_payroll_custom
+#: code:addons/exp_payroll_custom/models/hr_advance_payslip.py:0
+msgid "Sorry The Contract Employee %s is Not Journal Set"
+msgstr "للأسف، لم يتم اعداد دفتر اليومية لعقد الموظف %s."

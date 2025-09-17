@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="hr_holidays_community.open_allocation_holidays" model="ir.actions.act_window">
+            <field name="context">{
+                'default_type':'add',
+                'default_check_allocation_view': 'allocation',
+                'search_default_my_leaves': 1,
+                'needaction_menu_ref': ['hr_holidays_community.menu_open_company_allocation', ]}
+            </field>
+            <field name="domain">[('type','=','add'),('check_allocation_view','=','allocation')]</field>
+        </record>
+
+        <record id="hr_holidays_ext_form_view" model="ir.ui.view">
+            <field name="name">hr_holidays_ext_form_view</field>
+            <field name="model">hr.holidays</field>
+            <field name="inherit_id" ref="hr_holidays_community.edit_holiday_new"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='payslip_status']" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </xpath>
+                <xpath expr="//field[@name='employee_id']" position="attributes">
+                    <attribute name="groups">
+                        hr_base.group_division_manager,hr_holidays_community.group_hr_holidays_user
+                    </attribute>
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='holiday_status_id']" position="attributes">
+                    <attribute name="context">
+                        {'employee_id':employee_id,'type':type}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="attributes">
+                    <attribute name="readonly">True</attribute>
+                    <attribute name="required">True</attribute>
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="after">
+                    <field name="create_date" readonly="1"/>
+                    <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                    <field name="emp_id" invisible="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="last_employee_contract" string="Last Employee Contract"/>
+                    <field name="employee_type" string="Employee Type" readonly="1"/>
+                    <field name="replace_by" string="Replace By"
+                           attrs="{'invisible':['|',('holiday_type','=','category'),('type','!=','remove')],
+                                  'readonly':[('state','not in',('draft','confirm','validate'))]}"
+                           groups="hr_holidays_community.group_hr_holidays_user,hr_base.group_division_manager"
+                           domain="[('id', '!=', employee_id),('state', '=', 'open')]"/>
+                    <field name="delegate_acc" attrs="{'readonly':[('state','!=','confirm')],'invisible':['|',('replace_by', '=', False),('type','!=','remove')]}"
+                           groups="hr_base.group_division_manager,hr_holidays_community.group_hr_holidays_user"/>
+                    <field name="notes" string="Notes" invisible="1"/>
+                    <field name="canceled_duration" string="Canceled Duration"
+                           attrs="{'invisible':[('type','!=','remove')]}"/>
+                    <field name="return_from_leave" string="Return From Leave"
+                           attrs="{'invisible':[('type','!=','remove')]}"/>
+                    <field name="check_allocation_view" string="type" invisible="1"/>
+                    <field name="reconcile_leave" string="Reconcile Leave?"
+                           attrs="{'readonly':[('state','!=','validate')],'invisible':[('type','!=','remove')]}"
+                           groups="hr_holidays_community.group_hr_holidays_user"/>
+                    <field name="check_unlimit" invisible="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    <field name="holiday_limit_check" string="Leave Unlimited?"
+                           attrs="{'invisible':['|',('check_unlimit','=',False),('type','!=','remove')],'readonly':[('state','!=','draft')]}"/>
+                    <!--<field name="number_days" string="number of days"/>-->
+                    <!--<field name="number_of_days_temp" force_save="1" />-->
+
+                </xpath>
+                <xpath expr="//div[2]" position="before">
+                    <div attrs="{'invisible':[('official_holiday_days', '&lt;=', 0.0)]}">
+                        <field name="official_holiday_days" class="oe_inline"
+                               readonly="1" force_save="1"/>
+                        Days Official Holidays +
+                    </div>
+                </xpath>
+                <xpath expr="//separator[1]" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//form//sheet" position="inside">
+                    <notebook>
+                        <page string="Leave Prerequisite" attrs="{'invisible':[('type','!=','remove')]}">
+                            <group>
+                                <group>
+                                    <field name="check_state" invisible="1"/>
+                                    <field name="check_related" invisible="1"/>
+                                    <field name="issuing_exit_return" string="Issuing Exit And Return?"
+                                           attrs="{'readonly':[('state','!=','draft')],'invisible':[('check_related','=',False)],
+                                                 'required':[('issuing_exit_return','=','yes')]}"/>
+                                    <field name="exit_return_duration" string=" Exit And Return Duration"
+                                           attrs="{'readonly':[('state','!=','draft')],'invisible':[('issuing_exit_return','=','no')],
+                                                 'required':[('issuing_exit_return','=','yes')]}"/>
+                                    <field name="permission_request_for" string="Permission Request For"
+                                           attrs="{'readonly':[('state','!=','draft')],'invisible':[('issuing_exit_return','=','no')],
+                                                 'required':[('issuing_exit_return','=','yes'),('type','=','remove')]}"/>
+                                    <field name="issuing_clearance_form" string="Issuing Clearance Form?"
+                                           attrs="{'readonly':[('state','!=','draft')],'required':[('issuing_clearance_form','=','yes')],
+                                                  'invisible':[('issuing_clearance_form','=','no')]}"
+                                           groups="hr_base.group_division_manager,hr_holidays_community.group_hr_holidays_user"/>
+                                    <field name="issuing_deliver_custdy" string="Issuing Custody Delivery?"
+                                           attrs="{'readonly':[('state','!=','draft')],'invisible':[('issuing_deliver_custdy','=','no')],
+                                                 'required':['|',('issuing_deliver_custdy','=','yes'),('type','=','remove')]}"
+                                           groups="hr_base.group_division_manager,hr_holidays_community.group_hr_holidays_user"/>
+                                </group>
+                                <group>
+                                    <field name="issuing_ticket" string="Issuing Ticket?"
+                                           attrs="{'readonly':[('state','!=','draft')],'invisible':[('check_related','=',False)],
+                                               'required':[('issuing_ticket','=','yes')]}"/>
+                                    <field name="ticket_cash_request_type" string="Ticket/Cash Request Type"
+                                           attrs="{'readonly':[('state','!=','draft')],'invisible':[('issuing_ticket','=','no')],
+                                                 'required':[('issuing_ticket','=','yes'),('type','=','remove')]}"/>
+                                    <field name="ticket_cash_request_for" string="Ticket/Cash Request For"
+                                           attrs="{'readonly':[('state','!=','draft')],'invisible':[('issuing_ticket','=','no')],
+                                                  'required':[('issuing_ticket','=','yes'),('type','=','remove')]}"/>
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Attachments" name="attachments">
+                            <field name="attach_ids" string="Attachments"
+                                   attrs="{'readonly':[('state','!=','draft')]}">
+                                <tree editable="bottom">
+                                    <field name="name" string="attachment Name"/>
+                                    <field name="datas" string="file content" widget="binary"/>
+                                </tree>
+                            </field>
+                        </page>
+
+                        <page string="Delegated Access Groups" groups="base.group_no_one" 
+                                     attrs="{'invisible':[('delegate_acc','=',False)]}">
+                            <field name="delegated_group_ids" string="Delegated Access Groups" readonly="1" />
+                        </page>
+                        <page string="Delegated Departments" groups="base.group_no_one"
+                                     attrs="{'invisible':[('delegate_acc','=',False)]}">
+                            <field name="delegated_department_ids" string="Delegated Departments" readonly="1" />
+                        </page>
+                        
+                    </notebook>
+                </xpath>
+                <header position="replace">
+                    <header>
+                        <button string="Submit" name="confirm" states="draft" type="object"
+                                class="oe_highlight"
+                                groups="base.group_user"/>
+
+                        <button string="Direct Manager Approve" name="hr_manager" states="confirm" type="object"
+                                groups="hr_base.group_division_manager" class="oe_highlight"/>
+                        <button string="Refuse" name="direct_manager_refused" states="confirm" type="object"
+                                groups="hr_base.group_division_manager" class="oe_highlight"/>
+
+                        <button string="HR Manager Approve" name="financial_manager" type="object"
+                                states="validate"
+                                groups="hr_holidays_community.group_hr_holidays_user"
+                                class="oe_highlight"/>
+
+                        <!--button string="Refuse" name="refuse" states="validate1" type="object"
+                                groups="hr_holidays_community.group_hr_holidays_user" class="oe_highlight"
+                                confirm="Are you sure to Refuse This Record?"/-->
+
+                        <!--button string="Cancel" name="cancel" type="object" states="validate1"
+                                class="oe_highlight"/-->
+                        <button string="Reset To Draft" name="draft_state" type="object"
+                                states="refuse,validate1"
+                                class="oe_highlight"
+                                groups="hr_holidays_community.group_hr_holidays_user"
+                                confirm="Are you sure to Reset To Draft This Record?"/>
+                        <button string="Refuse" name="refuse" states="validate" type="object"
+                                groups="hr_holidays_community.group_hr_holidays_user" class="oe_highlight"/>
+
+                        <!--button string="Refuse" name="refuse" type="object"
+                                attrs="{'invisible':['|',('state','!=','validate'),('double_validation','=',False)]}"
+                                groups="hr_base.group_department_manager,hr_base.group_executive_manager"
+                                class="oe_highlight"/-->
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,confirm,validate,validate1,refuse"
+                        />
+
+                    </header>
+                </header>
+                <!--readonly fields when state not draft-->
+                <field name="department_id" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+                </field>
+                <field name="report_note" position="attributes">
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+                </field>
+                <xpath expr="//field[@name='holiday_status_id']" position="after">
+                    <field name="leave_balance"/>
+                    <field name="leave_balance_date" string="Expected Balance"
+                           attrs="{'invisible':[('type','!=','remove')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='date_from']" position="attributes">
+                    <attribute name="widget">date</attribute>
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')],'required':[('type','=','remove')]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="attributes">
+                    <attribute name="widget">date</attribute>
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')],'required':[('type','=','remove')]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='holiday_type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='holiday_status_id']" position="attributes">
+                    <attribute name="required">True</attribute>
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='number_of_days_temp']" position="attributes">
+                    <attribute name="required">True</attribute>
+                    <attribute name="attrs">{'readonly':[('state','!=','draft')]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="custom_view_holiday" model="ir.ui.view">
+            <field name="name">hr.holidays.tree.custom</field>
+            <field name="model">hr.holidays</field>
+            <field name="inherit_id" ref="hr_holidays_community.view_holiday"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_from']" position="attributes">
+                    <attribute name="widget">date</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="attributes">
+                    <attribute name="widget">date</attribute>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='date_to']" position="after">
+                    <field name="create_date"/>
+                </xpath>
+                <xpath expr="//field[@name='employee_id']" position="after">
+                    <field name="department_id"/>
+                </xpath>
+
+                <xpath expr="//field[@name='payslip_status']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='holiday_type']" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </xpath>
+                 <field name="state" position="before">
+                     <field name="return_from_leave"/>
+                     <!--field name="canceled_duration"/-->
+                 </field>
+
+            </field>
+        </record>
+
+        <!-- view_hr_holidays_filter_inherit -->
+        <record id="view_hr_holidays_filter2" model="ir.ui.view">
+            <field name="name">hr.holidays.filter2</field>
+            <field name="model">hr.holidays</field>
+            <field name="inherit_id" ref="hr_holidays_community.view_hr_holidays_filter"/>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="emp_number"/>
+                    <field name="name"/>
+                    <separator/>
+                    <filter string="My Approved" name="my_leaves" domain="[('state', '=', 'validate1')]"/>
+                    <separator/>
+                    <group expand="0" string="Group By">
+                        <filter name="state" string="State" context="{'group_by':'state'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                        <filter name="group_branch" string="Branch" domain="[]" context="{'group_by': 'is_branch'}"/>
+                       <filter string="Holidays Today" name="today_less" domain="[('to_date', '=', 'True')]"/>
+
+                    </group>
+                </search>
+            </field>
+        </record>
+        <!-- view_hr_holidays_filter_inherit end -->
+    </data>
+</odoo>

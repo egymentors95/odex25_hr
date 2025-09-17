@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <record id="hr.group_hr_user" model="res.groups">
+            <field name="implied_ids" eval="[(4,ref('hr_holidays_community.group_hr_holidays_user'))]"/>
+        </record>
+
+        <record id="hr.group_hr_manager" model="res.groups">
+            <field name="implied_ids" eval="[(4,ref('hr_holidays_community.group_hr_holidays_manager'))]"/>
+        </record>
+
+        <record id="holidays_write_temp_all" model="ir.rule">
+            <field name="name">Leaves writing</field>
+            <field name="model_id" ref="model_hr_holidays"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_unlink" eval="False"/>
+            <field name="perm_read" eval="False"/>
+            <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+        <record id="hr_holidays_manager_rule" model="ir.rule">
+            <field name="name">Manager: views holidays of its subordinates</field>
+            <field name="model_id" ref="model_hr_holidays"/>
+            <field name="domain_force">['|','|',('department_id.manager_id','=',False),
+                ('department_id.manager_id.user_id','child_of', [user.id]),
+                ('department_id.parent_id.manager_id.user_id','child_of', [user.id])]
+            </field>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_unlink" eval="True"/>
+            <field name="groups"
+                   eval="[(4, ref('hr_base.group_department_manager')),(4, ref('hr_base.group_division_manager'))]"/>
+        </record>
+
+        <record id="hr_holidays_all_rule" model="ir.rule">
+            <field name="name">Manager: views holidays of all employee</field>
+            <field name="model_id" ref="model_hr_holidays"/>
+            <field name="domain_force">[(1 ,'=', 1)]</field>
+            <field name="groups" eval="[(3, ref('hr_base.group_account_manager')),
+                                        (4, ref('hr_base.group_executive_manager')),
+                                        (4, ref('hr_base.group_general_manager'))]"/>
+        </record>
+
+
+        <record id="employee_hr_holidays_comp_rule" model="ir.rule">
+            <field name="name">Employee holidays permission company rule</field>
+            <field name="model_id" ref="model_hr_holidays"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids),('emp_company_id', 'in', company_ids)]</field>
+        </record>
+
+
+        <record id="leave_cancellation_employee_rule" model="ir.rule">
+            <field name="name">Employee: views its holidays cancellation only</field>
+            <field name="model_id" ref="model_leave_cancellation"/>
+            <field name="domain_force">[('employee_id.user_id','=',user.id)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="leave_cancellation_manager_rule" model="ir.rule">
+            <field name="name">Manager: views holidays cancellation of its subordinates</field>
+            <field name="model_id" ref="model_leave_cancellation"/>
+            <field name="domain_force">['|','|',('department_id.manager_id','=',False),
+                ('department_id.manager_id.user_id','child_of', [user.id]),
+                ('department_id.parent_id.manager_id.user_id','child_of', [user.id])]
+            </field>
+            <field name="groups"
+                   eval="[(4, ref('hr_base.group_department_manager')),(4, ref('hr_base.group_division_manager'))]"/>
+        </record>
+
+        <record id="leave_cancellation_all_rule" model="ir.rule">
+            <field name="name">Manager: views holidays cancellation of all employee</field>
+            <field name="model_id" ref="model_leave_cancellation"/>
+            <field name="domain_force">[(1 ,'=', 1)]</field>
+            <field name="groups" eval="[(4, ref('hr_base.group_executive_manager')),
+                                        (4, ref('hr_base.group_general_manager')),
+                                        (4, ref('hr_holidays_community.group_hr_holidays_user')),
+                                        (4, ref('hr_holidays_community.group_hr_holidays_user')),]"/>
+        </record>
+
+        <record id="employee_leave_cancellation_comp_rule" model="ir.rule">
+            <field name="name">Employee holidays cancellation  company rule</field>
+            <field name="model_id" ref="model_leave_cancellation"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+        <record id="return_from_leave_employee_rule" model="ir.rule">
+            <field name="name">Employee: views its holidays returns only</field>
+            <field name="model_id" ref="model_return_from_leave"/>
+            <field name="domain_force">[('employee_id.user_id','=',user.id)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="return_from_leave_manager_rule" model="ir.rule">
+            <field name="name">Manager: views holidays returns of its subordinates</field>
+            <field name="model_id" ref="model_return_from_leave"/>
+            <field name="domain_force">['|','|',('employee_id.department_id.manager_id','=',False),
+                ('employee_id.department_id.manager_id.user_id','child_of', [user.id]),
+                ('employee_id.department_id.parent_id.manager_id.user_id','child_of', [user.id])]
+            </field>
+            <field name="groups"
+                   eval="[(4, ref('hr_base.group_department_manager')),(4, ref('hr_base.group_division_manager'))]"/>
+        </record>
+
+        <record id="return_from_leave_all_rule" model="ir.rule">
+            <field name="name">Manager: views holidays returns of all employee</field>
+            <field name="model_id" ref="model_return_from_leave"/>
+            <field name="domain_force">[(1 ,'=', 1)]</field>
+            <field name="groups" eval="[(4, ref('hr_base.group_executive_manager')),
+                                        (4, ref('hr_base.group_general_manager')),
+                                        (4, ref('hr_holidays_community.group_hr_holidays_user')),
+                                        (4, ref('hr_holidays_community.group_hr_holidays_user')),]"/>
+        </record>
+        <record id="hr_holidays_community.property_rule_holidays_employee_write" model="ir.rule">
+            <field name="perm_write" eval="False"/>
+        </record>
+
+        <record id="return_from_leave_comp_rule" model="ir.rule">
+            <field name="name">Employee holidays returns company rule</field>
+            <field name="model_id" ref="model_return_from_leave"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+<!--        <record id="hr_holidays_community.hr_holidays_status_rule_multi_company" model="ir.rule">-->
+<!--        <field name="name">Leaves multi company rule</field>-->
+<!--        <field name="model_id" ref="model_hr_holidays_status"/>-->
+<!--&lt;!&ndash;        <field name="global" eval="True"/>&ndash;&gt;-->
+<!--         <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>-->
+<!--        </record>-->
+
+
+    </data>
+</odoo>

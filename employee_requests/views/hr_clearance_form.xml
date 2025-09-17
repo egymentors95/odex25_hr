@@ -1,0 +1,195 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="employee_clearance_form_action">
+            <field name="name">Employee Clearance Form</field>
+            <field name="res_model">hr.clearance.form</field>
+            <field name="view_mode">tree,form,calendar</field>
+        </record>
+
+      <record model="ir.ui.view" id="view_clearance_calendar">
+            <field name="name">hr.clearance.form.calendar</field>
+            <field name="model">hr.clearance.form</field>
+            <field name="arch" type="xml">
+                <calendar string="Employee Clearance Form" date_start="date" color="date">
+
+                    <field name="date" type="measure"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_clearance_form_form_view">
+            <field name="name">Employee Clearance Form</field>
+            <field name="model">hr.clearance.form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="submit" string="Submit" class="oe_highlight" type="object"  states="draft" />
+
+                        <button name="direct_manager" string="Direct Manager" class="oe_highlight" type="object"
+                                states="submit" groups="hr_base.group_division_manager,hr_base.group_department_manager"/>
+                        <button name="direct_manager_refused" string="Refuse" class="oe_highlight" type="object"
+                                states="submit" groups="hr_base.group_division_manager,hr_base.group_department_manager"/>
+
+                        <button name="info_system" string="IT Department" class="oe_highlight" type="object"
+                                states="direct_manager" groups="hr_base.group_IT_manager"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object"
+                                states="direct_manager" groups="hr_base.group_IT_manager"/>
+
+                        <button name="cyber_security" string="Cyber ​​Security" class="oe_highlight" type="object"
+                                states="info_system" groups="hr_base.group_cyber_security"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object"
+                                states="info_system" groups="hr_base.group_cyber_security"/>
+
+                        <button name="admin_manager" string="Admin Affairs" class="oe_highlight" type="object"
+                                states="cyber_security" groups="hr_base.group_administrative_affairs"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object"
+                                states="cyber_security" groups="hr_base.group_administrative_affairs"/>
+
+                        <button name="wait" string="Finance Approvals" class="oe_highlight" type="object"
+                                states="admin_manager" groups="hr_base.group_account_manager"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object"
+                                states="admin_manager" groups="hr_base.group_account_manager"/>
+
+                        <button name="services_manager" string="HR Approvals" class="oe_highlight" type="object"
+                                states="wait" groups="hr.group_hr_manager"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object"
+                                states="wait" groups="hr.group_hr_manager"/>
+
+                        <button name="done" string="Approval" class="oe_highlight" type="object"
+                                states="services_manager" groups="hr_base.group_services_manager"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object"
+                                states="services_manager" groups="hr_base.group_services_manager"/>
+
+                        <button name="draft" string="RE-Draft" class="oe_highlight" type="object"
+                                states="refuse,done" groups="hr.group_hr_manager" confirm="Are you sure to Reset To Draft This Record?"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="from_hr_department" string="Another Employee"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="employee_id" string="Employee Name"
+                                       attrs="{'readonly':['|',('state','!=','draft'),('from_hr_department','!=',True)],'required':[('from_hr_department','=',True)]}"/>
+                                <field name="employee_no" string="Employee Number" readonly="1"/>
+                                <field name="date" string="Date Request" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="date_deliver_work" string="Delivering Work Date" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                            <group name="employee_info">
+                                 <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                                <field name="department_id" string="Department" readonly="1"/>
+                                <field name="job_id" string="Job Title" readonly="1"/>
+                               <field name="clearance_type" string="Clearance Type" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+                        <group>
+
+                            <!--<group>-->
+                            <!--<field name="leave_request_id" string="Leave Request" attrs="{'required':[('clearance_type','=','vacation')],'readonly':[('state','!=','draft')]}"/>-->
+                            <!--<field name="start_of_vacation" string="Start of Vacation"  attrs="{'readonly':[('state','!=','draft')]}"/>-->
+                            <!--<field name="end_of_vacation" string="End of vacation"  attrs="{'readonly':[('state','!=','draft')]}"/>-->
+                            <!--</group>-->
+                        </group>
+                        <group>
+                            <field name="work_delivered" string="Reason Of Clearance" required="1"
+                                   attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                        <group>
+                            <group>
+                                <!--separator string="Approval Comments"/>
+                                <br/>
+                                <field name="super_mg" string="Approval/rejection of direct manager"
+                                       attrs="{'required':[('state','in',['submit'])],'readonly':[('state','not in',['submit'])]}"/>
+                                <field name="super_refuse_cause" string="Refuse Cause"
+                                       attrs="{'required':[('state','in',['submit'])],'readonly':[('state','not in',['submit'])]}"/>
+
+                                <field name="it_mg" string="Approval/rejection IT Manager"
+                                       attrs="{'required':[('state','in',['direct_manager'])],'readonly':[('state','not in',['direct_manager'])]}"/>
+                                <field name="it_refuse_cause" string="IT Manager Refusal Cause"
+                                       attrs="{'required':[('state','in',['direct_manager'])],'readonly':[('state','not in',['direct_manager'])]}"/-->
+
+
+                            <separator string="Approval Clearance Bank"/>
+                                <br/>
+
+<!--                               <field name="bank_attachment_id" string="Bank Attach" widget="many2many_binary" class="oe_inline"-->
+<!--                                   attrs="{'required':[('state','in',['wait'])],'readonly':[('state','not in',('wait'))]}"/>-->
+<!--                               <field name="bank_comments" string="Bank Resons" -->
+<!--                                   attrs="{'required':[('state','in',['wait'])],'readonly':[('state','not in',('wait'))]}"/>-->
+
+                                 <field name="bank_attachment_id" string="Bank Attach" widget="many2many_binary" class="oe_inline"
+                                   attrs="{'required':[('state','in',['wait']),('clearance_type','!=','vacation')],'readonly':[('state','not in',('wait','admin_manager'))]}"/>
+                                <field name="bank_comments" string="Bank Reasons"
+                                   attrs="{'required':[('state','in',['wait']),('clearance_type','!=','vacation')],'readonly':[('state','not in',('wait'))]}"/>
+
+
+                            </group>
+                            <!--group>
+                                <separator string="Approval Comments"/>
+                                <br/>
+
+                                <field name="direct_mg" string="Approval/rejection of Administration"
+                                       attrs="{'required':[('state','in',['info_system'])],'readonly':[('state','not in',['info_system'])]}"/>
+                                <field name="direct_refuse_cause" string="Refuse Cause"
+                                       attrs="{'required':[('state','in',['info_system'])],'readonly':[('state','not in',['info_system'])]}"/>
+
+                                <field name="hr_mg" string="Approval/rejection HR Manager"
+                                       attrs="{'required':[('state','in',['wait'])],'readonly':[('state','not in',['wait'])]}"/>
+                                <field name="hr_refuse_cause" string="HR Manager Refusal Cause"
+                                       attrs="{'required':[('state','in',['wait'])],'readonly':[('state','not in',['wait'])]}"/>
+
+
+                            </group-->
+                        </group>
+
+
+                    </sheet>
+                        <!--Discuss widgets for history and communication -->
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="activity_ids" widget="mail_activity"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_clearance_form_tree_view">
+            <field name="name">Employee Clearance Form</field>
+            <field name="model">hr.clearance.form</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'refuse'" decoration-info="state == 'draft'" string="Employee Clearance Form">
+                    <field name="employee_no" string="Employee Number"/>
+                    <field name="employee_id" string="Employee Name"/>
+                    <field name="department_id" string="Department"/>
+                    <field name="job_id" string="Job Title"/>
+                    <field name="clearance_type" string="Clearance Type" required="1"/>
+                    <field name="state" string="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--hr_clearance_form_filter -->
+        <record id="hr_clearance_form_filter" model="ir.ui.view">
+            <field name="name">Employee Clearance Form</field>
+            <field name="model">hr.clearance.form</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search>
+                  <field name="employee_id"/>
+                  <field name="employee_no"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hr_ticket_request_employee_rule" model="ir.rule">
+            <field name="name">Employee: views its ticket requests only</field>
+            <field name="model_id" ref="model_hr_ticket_request"/>
+            <field name="domain_force">[('employee_id.user_id','=',user.id)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="hr_ticket_request_manager_rule" model="ir.rule">
+            <field name="name">Manager: views tickets requests of its subordinates</field>
+            <field name="model_id" ref="model_hr_ticket_request"/>
+            <field name="domain_force">['|','|',('department_id.manager_id','=',False),
+                ('department_id.manager_id.user_id','child_of', [user.id]),
+                ('department_id.parent_id.manager_id.user_id','child_of', [user.id])]
+            </field>
+            <field name="groups"
+                   eval="[(4, ref('hr_base.group_department_manager')),(4, ref('hr_base.group_division_manager'))]"/>
+        </record>
+
+        <record id="hr_ticket_request_all_rule" model="ir.rule">
+            <field name="name">Manager: views tickets requests of all employee</field>
+            <field name="model_id" ref="model_hr_ticket_request"/>
+            <field name="domain_force">[(1 ,'=', 1)]</field>
+            <field name="groups" eval="[(4, ref('hr_base.group_executive_manager')),
+                                        (4, ref('hr_base.group_general_manager')),
+                                        (4, ref('hr.group_hr_user'))]"/>
+        </record>
+
+        <record id="hr_ticket_request_rule_comp_rule" model="ir.rule">
+            <field name="name">tickets requests multi company rule</field>
+            <field name="model_id" ref="model_hr_ticket_request"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+                <record id="hr_ticket_request_type_rule_comp_rule" model="ir.rule">
+            <field name="name">tickets requests type multi company rule</field>
+            <field name="model_id" ref="model_hr_ticket_request_type"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+
+                <record id="hr_airline_rule_comp_rule" model="ir.rule">
+            <field name="name">hr airline multi company rule</field>
+            <field name="model_id" ref="model_hr_airline"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+                        <record id="airline_agent_rule_comp_rule" model="ir.rule">
+            <field name="name">hr airline agent multi company rule</field>
+            <field name="model_id" ref="model_airline_agent"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+
+
+
+
+    </data>
+</odoo>

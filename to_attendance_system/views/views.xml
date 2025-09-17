@@ -1,0 +1,246 @@
+<odoo>
+    <data>
+        <menuitem id="attendace_system_menu" name="Attendance systems"
+                  parent="hr_attendance.menu_hr_attendance_root" sequence="29"
+                  groups="hr_attendance.group_hr_attendance_manager"/>
+
+
+        <record id="biotime_action_form" model="ir.ui.view">
+            <field name="name">finger.biotime_api.form</field>
+            <field name="model">finger.biotime_api</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="To system attendance" type="object" name="to_attendace" class="oe_highlight"
+                                states="authentic"/>
+                        <button string="Logout" type="object" name="logout" states="authentic"/>
+                        <button string="Login" type="object" name="login" states="unauthentic"/>
+                        <button string="Refresh" type="object" name="refresh" states="authentic"/>
+                        <button string="Download attenence" type="object" name="sync_attenence" class="oe_highlight"
+                                states="authentic"/>
+                        <button string="Download employees" type="object" name="sync_employees" states="authentic"/>
+                        <button string="Download departments" type="object" name="sync_departments" states="authentic"/>
+                        <button string="Download areas" type="object" name="sync_areas" states="authentic"/>
+                        <button string="Download postions" type="object" name="sync_positions" states="authentic"/>
+                        <button string="Download terminals" type="object" name="sync_terminals" states="authentic"/>
+                        <field name="state" widget="statusbar" statusbar_visible="unauthentic,authentic"/>
+
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="name" required="1"/>
+                            <field name="serverUrl" required="1"/>
+                            <field name="port" required="1"/>
+                            <field name="username" required="1"/>
+                            <field name="password" password="True"/>
+                            <field name="description"/>
+                            <field name="attendance_ids" readonly="1"/>
+                            <field name="employee_ids" readonly="1"/>
+                            <field name="terminals_ids" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="biotime_action_tree" model="ir.ui.view">
+            <field name="name">finger.biotime_api.tree</field>
+            <field name="model">finger.biotime_api</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="serverUrl"/>
+                    <field name="port"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="biotime_system_terminal_tree" model="ir.ui.view">
+            <field name="name">finger.terminal.tree</field>
+            <field name="model">finger.terminal</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="alias"/>
+                    <field name="ip_address"/>
+                    <field name="sn"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="biotime_system_terminal_tree" model="ir.ui.view">
+            <field name="name">finger.terminal.tree</field>
+            <field name="model">finger.terminal</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="alias"/>
+                    <field name="ip_address"/>
+                    <field name="sn"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="biotime_action" model="ir.actions.act_window">
+            <field name="name">System connector</field>
+            <field name="res_model">finger.biotime_api</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="biotime_action_tree"/>
+        </record>
+
+        <record id="biotime_system_terminal_action" model="ir.actions.act_window">
+            <field name="name">System Terminals</field>
+            <field name="res_model">finger.terminal</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="biotime_system_terminal_tree"/>
+        </record>
+
+
+        <menuitem id="attendance_systems" name="Attendance Systems"
+                  parent="attendace_system_menu" action="biotime_action"
+                  sequence="1" groups="hr_attendance.group_hr_attendance_manager"/>
+
+        <menuitem id="attendance_systems_terminal" name="System Terminals"
+                  parent="attendace_system_menu" action="biotime_system_terminal_action"
+                  sequence="1" groups="hr_attendance.group_hr_attendance_manager"/>
+
+
+        <record id="biotime_system_employee_areas_tree" model="ir.ui.view">
+            <field name="name">finger.area.tree</field>
+            <field name="model">finger.area</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="area_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="biotime_system_employee_areas_action" model="ir.actions.act_window">
+            <field name="name">Employee areas</field>
+            <field name="res_model">finger.area</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="biotime_system_employee_areas_tree"/>
+        </record>
+
+
+        <menuitem id="attendance_systems_employee_areas" name="System Areas"
+                  parent="attendace_system_menu" action="biotime_system_employee_areas_action"
+                  sequence="1" groups="hr_attendance.group_hr_attendance_manager"/>
+
+
+        <record id="biotime_system_employee_department_areas_tree" model="ir.ui.view">
+            <field name="name">finger.employee.department.tree</field>
+            <field name="model">finger.employee.department</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="department_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="biotime_system_employee_department_action" model="ir.actions.act_window">
+            <field name="name">Employee departments</field>
+            <field name="res_model">finger.employee.department</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="biotime_system_employee_department_areas_tree"/>
+        </record>
+
+
+        <menuitem id="attendance_systems_employee_department" name="System Departments"
+                  parent="attendace_system_menu" action="biotime_system_employee_department_action"
+                  sequence="1" groups="hr_attendance.group_hr_attendance_manager"/>
+
+
+        <record id="biotime_system_employee_position_areas_tree" model="ir.ui.view">
+            <field name="name">finger.employee.position.tree</field>
+            <field name="model">finger.employee.position</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="position_id"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="biotime_system_employee_position_action" model="ir.actions.act_window">
+            <field name="name">Employee Positions</field>
+            <field name="res_model">finger.employee.position</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="biotime_system_employee_position_areas_tree"/>
+        </record>
+
+
+        <menuitem id="attendance_systems_employee_position" name="Employee Positions"
+                  parent="attendace_system_menu" action="biotime_system_employee_position_action"
+                  sequence="1" groups="hr_attendance.group_hr_attendance_manager"/>
+
+
+        <record id="biotime_system_employee_employee_tree" model="ir.ui.view">
+            <field name="name">finger.employee.employee.tree</field>
+            <field name="model">finger.employee.employee</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="code"/>
+                    <field name="hr_employee"/>
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="biotime_system_employee_action" model="ir.actions.act_window">
+            <field name="name">System Employees</field>
+            <field name="res_model">finger.employee.employee</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="biotime_system_employee_employee_tree"/>
+        </record>
+
+
+        <menuitem id="attendance_systems_employee" name="Employees"
+                  parent="attendace_system_menu" action="biotime_system_employee_action"
+                  sequence="1" groups="hr_attendance.group_hr_attendance_manager"/>
+
+
+        <record id="biotime_system_attendance_tree" model="ir.ui.view">
+            <field name="name">finger.system_attendance.tree</field>
+            <field name="model">finger.system_attendance</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="emp"/>
+                    <field name="hr_comployee_id"/>
+                    <field name="emp_code"/>
+                    <field name="attendance_id"/>
+                    <field name="punch_time"/>
+                    <field name="punch_state"/>
+                    <field name="area_alias"/>
+                    <field name="verify_type"/>
+                    <field name="terminal_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="biotime_system_attendance_action" model="ir.actions.act_window">
+            <field name="name">System attendances</field>
+            <field name="res_model">finger.system_attendance</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="biotime_system_attendance_tree"/>
+        </record>
+
+
+        <menuitem id="attendance_systems_employee_attendance" name="System Attendance"
+                  parent="attendace_system_menu" action="biotime_system_attendance_action"
+                  sequence="1" groups="hr_attendance.group_hr_attendance_manager"/>
+
+    </data>
+</odoo>

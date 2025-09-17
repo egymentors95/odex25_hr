@@ -1,0 +1,83 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_attendance_device_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-18 08:28+0000\n"
+"PO-Revision-Date: 2022-09-18 08:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_attendance_device_custom
+#: model:ir.model,name:to_attendance_device_custom.model_hr_attendance
+#: model:ir.model.fields,field_description:to_attendance_device_custom.field_attendance_attendance__attendance_id
+msgid "Attendance"
+msgstr "الحضور"
+
+#. module: to_attendance_device_custom
+#: model:ir.model.fields,field_description:to_attendance_device_custom.field_hr_attendance_transaction__checkin_device_id
+msgid "Checkin Device"
+msgstr "جهاز تسجيل الحضور"
+
+#. module: to_attendance_device_custom
+#: model:ir.model.fields,field_description:to_attendance_device_custom.field_hr_attendance_transaction__checkout_device_id
+msgid "Checkout Device"
+msgstr "جهاز تسجيل الخروج"
+
+#. module: to_attendance_device_custom
+#: model:ir.model.fields,field_description:to_attendance_device_custom.field_attendance_attendance__device_id
+msgid "Device"
+msgstr "جهاز"
+
+#. module: to_attendance_device_custom
+#: model:ir.model.fields,field_description:to_attendance_device_custom.field_attendance_attendance__display_name
+#: model:ir.model.fields,field_description:to_attendance_device_custom.field_hr_attendance__display_name
+#: model:ir.model.fields,field_description:to_attendance_device_custom.field_hr_attendance_transaction__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: to_attendance_device_custom
+#: model:ir.model.fields,field_description:to_attendance_device_custom.field_attendance_attendance__id
+#: model:ir.model.fields,field_description:to_attendance_device_custom.field_hr_attendance__id
+#: model:ir.model.fields,field_description:to_attendance_device_custom.field_hr_attendance_transaction__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: to_attendance_device_custom
+#: model:ir.model.fields,field_description:to_attendance_device_custom.field_attendance_attendance____last_update
+#: model:ir.model.fields,field_description:to_attendance_device_custom.field_hr_attendance____last_update
+#: model:ir.model.fields,field_description:to_attendance_device_custom.field_hr_attendance_transaction____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: to_attendance_device_custom
+#: model:ir.model.fields,help:to_attendance_device_custom.field_hr_attendance_transaction__checkin_device_id
+msgid "The device with which user took check in action"
+msgstr "الجهاز الذي قام المستخدم بتسجيل الحضور منه"
+
+#. module: to_attendance_device_custom
+#: model:ir.model.fields,help:to_attendance_device_custom.field_attendance_attendance__device_id
+msgid "The device with which user took check in/out action"
+msgstr "الجهاز الذي قام المستخدم بتسجيل الدخول/ الخروج منه"
+
+#. module: to_attendance_device_custom
+#: model:ir.model.fields,help:to_attendance_device_custom.field_hr_attendance_transaction__checkout_device_id
+msgid "The device with which user took check out action"
+msgstr "الجهاز الذي قام المستخدم بتسجيل الخروج منه"
+
+#. module: to_attendance_device_custom
+#: model:ir.model,name:to_attendance_device_custom.model_attendance_attendance
+msgid "attendance.attendance"
+msgstr ""
+
+#. module: to_attendance_device_custom
+#: model:ir.model,name:to_attendance_device_custom.model_hr_attendance_transaction
+msgid "hr.attendance.transaction"
+msgstr ""

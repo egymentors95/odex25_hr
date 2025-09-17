@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="employee_promotions_action" model="ir.actions.act_window">
+            <field name="name">Employee promotions</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.promotions</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create Requests.
+                </p>
+            </field>
+        </record>
+
+
+        <record id="employee_promotions_form_view" model="ir.ui.view">
+            <field name="name">employee.promotions.form</field>
+            <field name="model">employee.promotions</field>
+            <field name="arch" type="xml">
+                <form string="Employee promotions">
+                    <header>
+                        <button name="confirm" string="HR Officer" type="object" states="draft"
+                                class="oe_highlight" groups="hr.group_hr_user,exp_hr_payroll.group_hr_payroll_user"/>
+
+                        <button name="hr_manager" string="HR Manager" type="object" states="confirm"
+                                class="oe_highlight" groups="hr.group_hr_manager"/>
+                        <button string="Refused" name="act_refuse" states="confirm" type="object" class="oe_highlight"
+                                groups="hr.group_hr_manager"/>
+
+                        <button name="approved" string="Approved" type="object" states="hr_manager"
+                                class="oe_highlight"
+                                groups="hr_base.group_executive_manager,hr_base.group_general_manager"/>
+                        <button string="Refused" name="act_refuse" states="hr_manager" type="object"
+                                class="oe_highlight"
+                                groups="hr_base.group_general_manager,hr_base.group_executive_manager"/>
+
+                        <button name="re_draft" string="Re-Draft" type="object" states="refuse,approved"
+                                class="oe_highlight" groups="hr.group_hr_manager"
+                                confirm="Are you sure to Reset To Draft This Record?"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="employee_id"
+                                       placeholder="Employee Name"
+                                       string="Employee" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+
+                                <field name="new_level" string="Promotion Level" domain="[('type','=','level')]"
+                                       attrs="{'readonly':[('state','!=','draft')]}" required="1" widget="selection"
+                                       context="{'default_type': 'level'}"/>
+                                <field name="new_group" string="Promotion Group" domain="[('type','=','group')]"
+                                       context="{'default_type': 'group'}"
+                                       attrs="{'readonly':[('state','!=','draft')]}"
+                                       required="1" widget="selection"/>
+                                <field name="new_degree" string="Promotion Degree" domain="[('type','=','degree')]"
+                                       context="{'default_type': 'degree'}"
+                                       attrs="{'readonly':[('state','!=','draft')]}" required="1" widget="selection"/>
+                            </group>
+                            <group>
+                                <field name="date" string="Promotion Date"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                                <field name="old_scale" string="Current Scale" readonly="1" force_save="1"/>
+                                <field name="old_level" string="Current Level" invisible="1"/>
+                                <field name="old_group" string="Current Group" invisible="1"/>
+                                <field name="old_degree" string="Current Degree" invisible="1"/>
+
+                                <field name="old_level_2" string="Current Level" readonly="1" force_save="1"/>
+                                <field name="old_group_2" string="Current Group" readonly="1" force_save="1"/>
+                                <field name="old_degree_2" string="Current Degree" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                        <separator string="Comment"/>
+                        <field name="comment" string="" attrs="{'readonly':[('state','!=','draft')]}"/>
+                    </sheet>
+                    <!-- Discuss widgets for history and communication -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_promotions_tree_view">
+            <field name="name">employee.promotions.tree</field>
+            <field name="model">employee.promotions</field>
+            <field name="arch" type="xml">
+                <tree decoration-success="state=='approved'" decoration-info="state == 'draft'"
+                      decoration-danger="state == 'refuse'" string="Employee promotions">
+                    <field name="employee_id" string="Employee"/>
+                    <field name="date" string="Date"/>
+                    <field name="new_level" string="New level"/>
+                    <field name="new_group" string="New group"/>
+                    <field name="new_degree" string="New degree"/>
+                    <field name="state" string="State"/>
+                </tree>
+            </field>
+        </record>
+
+        <menuitem id="employee_promotions_view" name="Employee Promotions"
+                  parent="exp_hr_payroll.menu_hr_payroll_root"
+                  action="employee_promotions_action"
+                  sequence="11"/>
+
+        <!--######################### Smart button employee promotions #######-->
+        <record id="employee_promotions_action_hr_employee" model="ir.actions.act_window">
+            <field name="name">Promotions Action</field>
+            <field name="res_model">employee.promotions</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_employee_id': active_id, 'default_employee_id': active_id}</field>
+            <field name="domain">[('state','=','approved'), ('employee_id','=',active_id)]
+            </field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Click to add a Promotions...
+                </p>
+            </field>
+        </record>
+
+        <record id="view_employee_promotions_inherit" model="ir.ui.view">
+            <field name="name">hr.employee</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="priority">14</field>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                    <button name="%(employee_promotions_action_hr_employee)d"
+                            class="oe_stat_button"
+                            type="action" icon="fa-book">
+                        <field name="promotions_count" widget="statinfo" string="Promotions"/>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

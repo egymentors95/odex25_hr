@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+      <template id="employee_general_report">
+			<t t-call="web.html_container">
+				<t t-call="hr_base.hr_layout">
+
+				    <style>
+				      @font-face {font-family: "Sakkal Majalla"; src:
+				      url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+				      url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+				      format("embedded-opentype"),
+				      url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+				      url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+				      url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"); }
+				    </style>
+					<div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+						<table class="table table-condensed table-bordered">
+							<thead class="text-center">
+								<tr style="width:100%;">
+									<th colspan="17" class="text-center" style="font-size:24px"> General Report <span t-esc="date_from"/><span t-esc="date_to"/></th>
+								</tr>
+								<tr style="background-color: #263f79;width:100%;">
+									<th style="text-align:center;color:#FFFFFF">#</th>
+									<th style="text-align:center;color:#FFFFFF">Employee ID</th>
+									<th style="text-align:center;color:#FFFFFF">Employee Name</th>
+									<th style="text-align:center;color:#FFFFFF">Location</th>
+									<th style="text-align:center;color:#FFFFFF">Department</th>
+									<th style="text-align:center;color:#FFFFFF">Job Title</th>
+									<th style="text-align:center;color:#FFFFFF">Join Date</th>
+									<th style="text-align:center;color:#FFFFFF">Bank</th>
+									<th style="text-align:center;color:#FFFFFF">IBN</th>
+									<th style="text-align:center;color:#FFFFFF">Line Manager</th>
+									<th style="text-align:center;color:#FFFFFF">Birth Date</th>
+									<th style="text-align:center;color:#FFFFFF">Identification Number</th>
+									<th style="text-align:center;color:#FFFFFF">Basic salary</th>
+									<th style="text-align:center;color:#FFFFFF">House Allowance</th>
+									<th style="text-align:center;color:#FFFFFF">Transportation Allowance</th>
+									<th style="text-align:center;color:#FFFFFF">Other Benefits</th>
+									<th style="text-align:center;color:#FFFFFF">Leave Balance</th>
+								</tr>
+							</thead>
+							<tbody class="text-center">
+								<t t-set="sequence" t-value="0"/>
+								<t t-foreach="docs" t-as="o">
+									<t t-set="other_value" t-value="o.get_transport_allowance(o.contract_id)"/>
+									<tr>
+										<td>
+											<t t-set="sequence" t-value="sequence +1"/>
+											<t t-esc="sequence"/>
+										</td>
+										<td>
+											<span t-esc="o.emp_no"/>
+										</td>
+										<td>
+											<span t-esc="o.name"/>
+										</td>
+										<td>
+											<t t-esc="o.working_location.name"/>
+										</td>
+										<td>
+											<t t-esc="o.department_id.name"/>
+										</td>
+										<td>
+											<t t-esc="o.job_id.name"/>
+										</td>
+										<td>
+											<t t-esc="o.first_hiring_date"/>
+										</td>
+										<td>
+											<span t-esc="o.bank_account_id.acc_number"/>
+										</td>
+										<td>
+											<span t-esc="o.bank_code"/>
+										</td>
+										<td>
+											<t t-esc="o.parent_id.name"/>
+										</td>
+										<td>
+											<t t-esc="o.birthday"/>
+										</td>
+										<td>
+											<t t-esc="o.saudi_number.saudi_id  if o.check_nationality == True else o.iqama_number.iqama_id"/>
+										</td>
+										<td>
+											<t t-esc="o.contract_id.salary"/>
+										</td>
+										<td>
+											<span t-esc="round(o.contract_id.house_allowance_temp)"/>
+										</td>
+										<td>
+											<span t-esc="round(other_value[1])"/>
+										</td>
+										<td>
+											<span t-esc="round(other_value[0])"/>
+										</td>
+										<td>
+											<span t-esc="round(other_value[2],2)"/>
+										</td>
+
+									</tr>
+								</t>
+							</tbody>
+						</table>
+					</div>
+				</t>
+			</t>
+		</template>
+
+        <record id="paperformat_general_report_landscape" model="report.paperformat">
+            <field name="name">General Report Landscape</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">10</field>
+            <field name="margin_bottom">15</field>
+            <field name="margin_left">7</field>
+            <field name="margin_right">7</field>
+            <field name="header_line" eval="False"/>
+            <field name="header_spacing">20</field>
+            <field name="dpi">90</field>
+        </record>
+
+
+        <record id="employee_general_report_act" model="ir.actions.report">
+            <field name="model">hr.employee</field>
+            <field name="name">Employee General Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_base_reports.employee_general_report</field>
+            <field name="report_file">hr_base_reports.employee_general_report</field>
+            <field name="paperformat_id" ref="paperformat_general_report_landscape"/>
+        </record>
+        <record id="employee_general_report_act_xlsx" model="ir.actions.report">
+            <field name="model">hr.employee</field>
+            <field name="name">Employee General Report</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_base_reports.employee_general_report_xlsx</field>
+            <field name="report_file">hr_base_reports.employee_general_report_xlsx</field>
+        </record>
+    </data>
+</odoo>

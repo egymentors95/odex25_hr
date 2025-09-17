@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="reconcile_leaves_action" model="ir.actions.act_window">
+            <field name="name">Reconcile leaves</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">reconcile.leaves</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Create Requests.
+                </p>
+            </field>
+        </record>
+
+        <record id="reconcile_leaves_form_view" model="ir.ui.view">
+            <field name="name">reconcile.leaves.form</field>
+            <field name="model">reconcile.leaves</field>
+            <field name="arch" type="xml">
+                <form string="Reconcile leaves">
+                    <header>
+                        <button name="submit" string="Submit" type="object" states="draft" class="oe_highlight"
+                                groups="base.group_user"/>
+
+                        <button name="direct_manager" string="Direct Manager" type="object" states="submit"
+                                class="oe_highlight"
+                                groups="hr_base.group_division_manager,hr_base.group_department_manager"/>
+                        <button name="refuse" string="Refuse" type="object" states="submit" class="oe_highlight"
+                                groups="hr_base.group_division_manager,hr_base.group_department_manager"/>
+
+                        <button name="hr_manager" string="HR Manager" type="object" states="direct_manager"
+                                class="oe_highlight"
+                                groups="hr.group_hr_manager,hr.group_hr_user"/>
+                        <button name="refuse" string="Refuse" type="object" states="direct_manager" class="oe_highlight"
+                                groups="hr.group_hr_manager,hr.group_hr_user"/>
+
+                        <button name="finance_manager" string="Finance Manager" type="object" states="hr_manager"
+                                class="oe_highlight"
+                                groups="hr.group_hr_manager,hr_base.group_account_manager"/>
+                        <button name="refuse" string="Refuse" type="object" states="hr_manager" class="oe_highlight"
+                                groups="hr.group_hr_manager,hr_base.group_account_manager"/>
+
+                        <button name="gm_manager" string="GM Manager" type="object" states="finance_manager"
+                                class="oe_highlight"
+                                groups="hr_base.group_executive_manager,hr_base.group_general_manager"/>
+                        <button name="refuse" string="Refuse" type="object" states="finance_manager"
+                                class="oe_highlight"
+                                groups="hr_base.group_executive_manager,hr_base.group_general_manager"/>
+
+                        <button name="pay" string="Pay" type="object" states="gm_manager" class="oe_highlight"
+                                groups="hr.group_hr_manager,hr_base.group_account_manager"
+                                confirm="Are you sure to Transfer Accounting?"/>
+                        <button name="refuse" string="Refuse" type="object" states="gm_manager" class="oe_highlight"
+                                groups="hr.group_hr_manager,hr_base.group_account_manager"/>
+
+
+                        <button name="re_draft" string="Re-Draft" type="object" class="oe_highlight" states="refuse,pay"
+                                groups="hr.group_hr_manager,hr.group_hr_user"
+                                confirm="Are you sure to Reset To Draft This Record?"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="date" string="Date" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Employee Info">
+                                <field name="employee_id" string="Employee name" required="1" default_focus="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="department_id" string="Department" readonly="1"/>
+                                <field name="job_id" string="Job Title" readonly="1"/>
+                            </group>
+                            <group string="Contract">
+                                <field name="contract_id" string="Contract" readonly="1"/>
+                                <field name="contract_start_date" string="Contract start date" readonly="1"/>
+                                <field name="contract_end_date" string="Contract end date" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Reconcile Info">
+                                <field name="yearly_vacation" string="Yearly Vacation" required="1" widget="selection"
+                                       attrs="{'readonly':[('state','!=','draft')]}"
+                                       domain="[('employee_id','=',employee_id),('state', '=', 'validate1'), ('type', '=', 'remove')]"/>
+                                <field name="start_vacation_date" string="Start vacation date" readonly="1"/>
+                                <field name="end_vacation_date" string="End vacation date" readonly="1"/>
+                                <field name="leave_duration" string="Vacation Duration" readonly="1" force_save="1"/>
+                                <field name="leave_amount" string="Vacation Amount" readonly="1" force_save="1"
+                                       attrs="{'invisible':[('state','in',('submit','draft'))]}"/>
+                            </group>
+                            <group string="Calculation method" attrs="{'invisible':[('state','in',('submit','draft'))]}">
+                                <field name="calculation_method" string="Calculation method" widget="many2many_tags"
+                                       attrs="{'readonly':[('state','not in',('draft','direct_manager'))],'required':[('state','=','direct_manager')]}"/>
+                                <field name="salary" string="Salary" readonly="1" force_save="1" groups="hr.group_hr_manager,hr_base.group_account_manager"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group string="Accounting Info" attrs="{'invisible':[('state','in',('submit','draft'))]}">
+                                <field name="journal_id" string="Journal"
+                                       attrs="{'readonly':[('state','!=','hr_manager')],'required':[('state','=','hr_manager')]}"/>
+                                <field name="account_id" string="Account" invisible='1'/>
+                                <field name="account_move_id" string="Account move" readonly="1" force_save="1"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Allowance and Deductions"
+                                  attrs="{'invisible':[('state','in',('submit','draft'))]}">
+                                <group>
+                                    <button name="compute_employee_salary_fom_calculation_method" string=" Re-compute"
+                                            type="object"
+                                            icon="fa-cogs" class="oe_highlight"
+                                            attrs="{'invisible':[('state','!=','direct_manager')]}"/>
+                                </group>
+                                <field name="allowance_deduction" string="Allowance and Deductions"
+                                       attrs="{'readonly':[('state','not in',('direct_manager','draft'))]}">
+                                    <tree string="Allowance and Deductions" editable="bottom">
+                                        <field name="salary_rule_id" string="Name"/>
+                                        <field name="category_id" string="Category" readonly="1"/>
+                                        <field name="amount" string="Amount"/>
+                                    </tree>
+                                </field>
+                                <separator string="Loans"/>
+                                <field name="loans_ids" string="Loans"
+                                       attrs="{'readonly':[('state','not in',('direct_manager','draft'))]}"  groups="hr_loans_salary_advance.group_loan_manager">
+                                    <tree string="Loans" editable="top">
+                                        <field name="code" string="Code" readonly="1"/>
+                                        <field name="remaining_loan_amount" string="Remaining loan amount"
+                                               readonly="1"/>
+                                        <field name="request_type" string="Request Type" readonly="1"/>
+                                    </tree>
+                                </field>
+
+                                <group col="4" colspan="4" attrs="{'invisible':[('state','in',('submit','draft'))]}">
+                                    <field name="total_allowance" string="Total allowance" readonly="1" force_save="1"/>
+                                    <field name="total_deduction" string="Total deduction" readonly="1" force_save="1"/>
+                                    <field name="total_loans" string="Total loans" readonly="1" force_save="1" groups="hr_loans_salary_advance.group_loan_manager"/>
+                                    <field name="net" string="Total Net" readonly="1" force_save="1"/>
+                                </group>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                    <!-- Discuss widgets for history and communication -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="reconcile_leaves_tree_view">
+            <field name="name">reconcile.leaves.tree</field>
+            <field name="model">reconcile.leaves</field>
+            <field name="arch" type="xml">
+                <tree decoration-success="state=='pay'" decoration-danger="state == 'refuse'"
+                      decoration-info="state == 'draft'" string="Reconcile leaves">
+                    <field name="date" string="Date"/>
+                    <field name="employee_id" string="Employee Name"/>
+                    <field name="calculation_method" string="Calculation method" widget="many2many_tags"/>
+                    <field name="yearly_vacation" string="Yearly Vacation"/>
+                    <field name="net" string="Total Net"/>
+                    <field name="state" string="State"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <menuitem id="reconcile_leaves_menuitem" name="Reconcile Leaves"
+                  parent="exp_hr_payroll.menu_hr_payroll_root"
+                  action="reconcile_leaves_action"
+                  sequence="12"
+                  groups="base.group_user"/>
+    </data>
+</odoo>

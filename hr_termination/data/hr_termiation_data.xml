@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="0">
+
+        <!--################# termination_duration type1 ####################### -->
+
+         <record id="termination_duration_type1_1" model="hr.termination.duration">
+            <field name="name">نهاية العقد أو اتفاق الطرفين على إنهاء التعاقد</field>
+            <field name="date_from">1</field>
+            <field name="date_to">3</field>
+            <field name="factor">0</field>
+            <field name="amount">0</field>
+
+          </record>
+
+         <record id="termination_duration_type1_2" model="hr.termination.duration">
+            <field name="name">نهاية العقد أو اتفاق الطرفين على إنهاء التعاقد</field>
+            <field name="date_from">3</field>
+            <field name="date_to">24</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type1_3" model="hr.termination.duration">
+            <field name="name">نهاية العقد أو اتفاق الطرفين على إنهاء التعاقد</field>
+            <field name="date_from">24</field>
+            <field name="date_to">60</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type1_4" model="hr.termination.duration">
+            <field name="name">نهاية العقد أو اتفاق الطرفين على إنهاء التعاقد</field>
+            <field name="date_from">60</field>
+            <field name="date_to">120</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type1_5" model="hr.termination.duration">
+            <field name="name">نهاية العقد أو اتفاق الطرفين على إنهاء التعاقد</field>
+            <field name="date_from">120</field>
+            <field name="date_to">99999</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+<!--################# termination_duration type2 ####################### -->
+
+         <!--record id="termination_duration_type2_1" model="hr.termination.duration">
+            <field name="name">عامل الاستقالة</field>
+            <field name="date_from">1</field>
+            <field name="date_to">3</field>
+            <field name="factor">0</field>
+            <field name="amount">0</field>
+
+          </record-->
+
+         <record id="termination_duration_type2_2" model="hr.termination.duration">
+            <field name="name">عامل الاستقالة</field>
+            <field name="date_from">0</field>
+            <field name="date_to">24</field>
+            <field name="factor">0.5</field>
+            <field name="amount">0.0</field>
+
+          </record>
+
+         <record id="termination_duration_type2_3" model="hr.termination.duration">
+            <field name="name">عامل الاستقالة</field>
+            <field name="date_from">24</field>
+            <field name="date_to">60</field>
+            <field name="factor">0.5</field>
+            <field name="amount">0.34</field>
+
+          </record>
+
+         <record id="termination_duration_type2_4" model="hr.termination.duration">
+            <field name="name">عامل الاستقالة</field>
+            <field name="date_from">60</field>
+            <field name="date_to">120</field>
+            <field name="factor">0.5</field>
+            <field name="amount">0.67</field>
+
+          </record>
+
+         <record id="termination_duration_type2_5" model="hr.termination.duration">
+            <field name="name">عامل الاستقالة</field>
+            <field name="date_from">120</field>
+            <field name="date_to">99999</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+
+<!--################# termination_duration type3 ####################### -->
+
+         <record id="termination_duration_type3_1" model="hr.termination.duration">
+            <field name="name">فسخ العقد من قبل صاحب العمل</field>
+            <field name="date_from">1</field>
+            <field name="date_to">3</field>
+            <field name="factor">0</field>
+            <field name="amount">0</field>
+
+          </record>
+
+         <record id="termination_duration_type3_2" model="hr.termination.duration">
+            <field name="name">فسخ العقد من قبل صاحب العمل</field>
+            <field name="date_from">3</field>
+            <field name="date_to">24</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type3_3" model="hr.termination.duration">
+            <field name="name">فسخ العقد من قبل صاحب العمل</field>
+            <field name="date_from">24</field>
+            <field name="date_to">60</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type3_4" model="hr.termination.duration">
+            <field name="name">فسخ العقد من قبل صاحب العمل</field>
+            <field name="date_from">60</field>
+            <field name="date_to">120</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type3_5" model="hr.termination.duration">
+            <field name="name">فسخ العقد من قبل صاحب العمل</field>
+            <field name="date_from">120</field>
+            <field name="date_to">99999</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+
+<!--################# termination_duration type4 ####################### -->
+
+         <record id="termination_duration_type4_1" model="hr.termination.duration">
+            <field name="name">فسخ العقد من قبل صاحب العمل لأحد الحالات الواردة في المادة (80)</field>
+            <field name="date_from">1</field>
+            <field name="date_to">3</field>
+            <field name="factor">0</field>
+            <field name="amount">0</field>
+
+          </record>
+
+         <record id="termination_duration_type4_2" model="hr.termination.duration">
+            <field name="name">فسخ العقد من قبل صاحب العمل لأحد الحالات الواردة في المادة (80)</field>
+            <field name="date_from">3</field>
+            <field name="date_to">24</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type4_3" model="hr.termination.duration">
+            <field name="name">فسخ العقد من قبل صاحب العمل لأحد الحالات الواردة في المادة (80)</field>
+            <field name="date_from">24</field>
+            <field name="date_to">60</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type4_4" model="hr.termination.duration">
+            <field name="name">فسخ العقد من قبل صاحب العمل لأحد الحالات الواردة في المادة (80)</field>
+            <field name="date_from">60</field>
+            <field name="date_to">120</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type4_5" model="hr.termination.duration">
+            <field name="name">فسخ العقد من قبل صاحب العمل لأحد الحالات الواردة في المادة (80)</field>
+            <field name="date_from">120</field>
+            <field name="date_to">99999</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+
+<!--################# termination_duration type5 ####################### -->
+
+         <record id="termination_duration_type5_1" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل نتيجة لقوة قاهرة</field>
+            <field name="date_from">1</field>
+            <field name="date_to">3</field>
+            <field name="factor">0</field>
+            <field name="amount">0</field>
+
+          </record>
+
+         <record id="termination_duration_type5_2" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل نتيجة لقوة قاهرة</field>
+            <field name="date_from">3</field>
+            <field name="date_to">24</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type5_3" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل نتيجة لقوة قاهرة</field>
+            <field name="date_from">24</field>
+            <field name="date_to">60</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type5_4" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل نتيجة لقوة قاهرة</field>
+            <field name="date_from">60</field>
+            <field name="date_to">120</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type5_5" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل نتيجة لقوة قاهرة</field>
+            <field name="date_from">120</field>
+            <field name="date_to">99999</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+
+<!--################# termination_duration type6 ####################### -->
+
+         <record id="termination_duration_type6_1" model="hr.termination.duration">
+            <field name="name">إنهاء العاملة لعقد العمل خلال ستة أشهر من عقد الزواج أو خلال ثلاثة أشهر من الوضع</field>
+            <field name="date_from">1</field>
+            <field name="date_to">3</field>
+            <field name="factor">0</field>
+            <field name="amount">0</field>
+
+          </record>
+
+         <record id="termination_duration_type6_2" model="hr.termination.duration">
+            <field name="name">إنهاء العاملة لعقد العمل خلال ستة أشهر من عقد الزواج أو خلال ثلاثة أشهر من الوضع</field>
+            <field name="date_from">3</field>
+            <field name="date_to">24</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type6_3" model="hr.termination.duration">
+            <field name="name">إنهاء العاملة لعقد العمل خلال ستة أشهر من عقد الزواج أو خلال ثلاثة أشهر من الوضع</field>
+            <field name="date_from">24</field>
+            <field name="date_to">60</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type6_4" model="hr.termination.duration">
+            <field name="name">إنهاء العاملة لعقد العمل خلال ستة أشهر من عقد الزواج أو خلال ثلاثة أشهر من الوضع</field>
+            <field name="date_from">60</field>
+            <field name="date_to">120</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type6_5" model="hr.termination.duration">
+            <field name="name">إنهاء العاملة لعقد العمل خلال ستة أشهر من عقد الزواج أو خلال ثلاثة أشهر من الوضع</field>
+            <field name="date_from">120</field>
+            <field name="date_to">99999</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+
+
+<!--################# termination_duration type7 ####################### -->
+
+         <record id="termination_duration_type7_1" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل لأحد الحالات الواردة في المادة (81)</field>
+            <field name="date_from">1</field>
+            <field name="date_to">3</field>
+            <field name="factor">0</field>
+            <field name="amount">0</field>
+
+          </record>
+
+         <record id="termination_duration_type7_2" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل لأحد الحالات الواردة في المادة (81)</field>
+            <field name="date_from">3</field>
+            <field name="date_to">24</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type7_3" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل لأحد الحالات الواردة في المادة (81)</field>
+            <field name="date_from">24</field>
+            <field name="date_to">60</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type7_4" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل لأحد الحالات الواردة في المادة (81)</field>
+            <field name="date_from">60</field>
+            <field name="date_to">120</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type7_5" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل لأحد الحالات الواردة في المادة (81)</field>
+            <field name="date_from">120</field>
+            <field name="date_to">99999</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+
+
+<!--################# termination_duration type8 ####################### -->
+
+         <record id="termination_duration_type8_1" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل دون تقديم استقالة لغير الحالات الواردة في المادة (81)</field>
+            <field name="date_from">1</field>
+            <field name="date_to">3</field>
+            <field name="factor">0</field>
+            <field name="amount">0</field>
+
+          </record>
+
+         <record id="termination_duration_type8_2" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل دون تقديم استقالة لغير الحالات الواردة في المادة (81)</field>
+            <field name="date_from">3</field>
+            <field name="date_to">24</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type8_3" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل دون تقديم استقالة لغير الحالات الواردة في المادة (81)</field>
+            <field name="date_from">24</field>
+            <field name="date_to">60</field>
+            <field name="factor">0.5</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type8_4" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل دون تقديم استقالة لغير الحالات الواردة في المادة (81)</field>
+            <field name="date_from">60</field>
+            <field name="date_to">120</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+
+         <record id="termination_duration_type8_5" model="hr.termination.duration">
+            <field name="name">ترك العامل العمل دون تقديم استقالة لغير الحالات الواردة في المادة (81)</field>
+            <field name="date_from">120</field>
+            <field name="date_to">99999</field>
+            <field name="factor">1</field>
+            <field name="amount">1</field>
+
+          </record>
+<!--################# termination_type ####################### -->
+
+
+         <record id="termination_type_1" model="hr.termination.type">
+            <field name="name">نهاية العقد أو اتفاق الطرفين على إنهاء التعاقد</field>
+            <field name="clearance">True</field>
+            <field name="termination_duration_ids" eval="[(6, 0, [ref('termination_duration_type1_1'),
+                         ref('termination_duration_type1_2'),
+                         ref('termination_duration_type1_3'),
+                         ref('termination_duration_type1_4'),
+                         ref('termination_duration_type1_5')])]" />
+
+          </record>
+
+         <record id="termination_type_2" model="hr.termination.type">
+            <field name="name">عامل الاستقالة</field>
+            <field name="clearance">True</field>
+            <field name="termination_duration_ids" eval="[(6, 0, [ref('termination_duration_type2_2'),
+                         ref('termination_duration_type2_3'),
+                         ref('termination_duration_type2_4'),
+                         ref('termination_duration_type2_5')])]" />
+
+          </record>
+
+         <record id="termination_type_3" model="hr.termination.type">
+            <field name="name">فسخ العقد من قبل صاحب العمل</field>
+            <field name="clearance">True</field>
+            <field name="termination_duration_ids" eval="[(6, 0, [ref('termination_duration_type3_1'),
+                         ref('termination_duration_type3_2'),
+                         ref('termination_duration_type3_3'),
+                         ref('termination_duration_type3_4'),
+                         ref('termination_duration_type3_5')])]" />
+
+          </record>
+
+         <record id="termination_type_4" model="hr.termination.type">
+            <field name="name">فسخ العقد من قبل صاحب العمل لأحد الحالات الواردة في المادة (80)	</field>
+            <field name="clearance">True</field>
+            <field name="termination_duration_ids" eval="[(6, 0, [ref('termination_duration_type4_1'),
+                         ref('termination_duration_type4_2'),
+                         ref('termination_duration_type4_3'),
+                         ref('termination_duration_type4_4'),
+                         ref('termination_duration_type4_5')])]" />
+
+          </record>
+
+         <record id="termination_type_5" model="hr.termination.type">
+            <field name="name">ترك العامل العمل نتيجة لقوة قاهرة</field>
+            <field name="clearance">True</field>
+            <field name="termination_duration_ids" eval="[(6, 0, [ref('termination_duration_type5_1'),
+                         ref('termination_duration_type5_2'),
+                         ref('termination_duration_type5_3'),
+                         ref('termination_duration_type5_4'),
+                         ref('termination_duration_type5_5')])]" />
+
+          </record>
+
+         <record id="termination_type_6" model="hr.termination.type">
+            <field name="name">إنهاء العاملة لعقد العمل خلال ستة أشهر من عقد الزواج أو خلال ثلاثة أشهر من الوضع</field>
+            <field name="clearance">True</field>
+            <field name="termination_duration_ids" eval="[(6, 0, [ref('termination_duration_type6_1'),
+                         ref('termination_duration_type6_2'),
+                         ref('termination_duration_type6_3'),
+                         ref('termination_duration_type6_4'),
+                         ref('termination_duration_type6_5')])]" />
+
+          </record>
+
+         <record id="termination_type_7" model="hr.termination.type">
+            <field name="name">ترك العامل العمل لأحد الحالات الواردة في المادة (81)</field>
+            <field name="clearance">True</field>
+            <field name="termination_duration_ids" eval="[(6, 0, [ref('termination_duration_type7_1'),
+                         ref('termination_duration_type7_2'),
+                         ref('termination_duration_type7_3'),
+                         ref('termination_duration_type7_4'),
+                         ref('termination_duration_type7_5')])]" />
+
+          </record>
+
+         <record id="termination_type_8" model="hr.termination.type">
+            <field name="name">ترك العامل العمل دون تقديم استقالة لغير الحالات الواردة في المادة (81)</field>
+            <field name="clearance">True</field>
+            <field name="termination_duration_ids" eval="[(6, 0, [ref('termination_duration_type8_1'),
+                         ref('termination_duration_type8_2'),
+                         ref('termination_duration_type8_3'),
+                         ref('termination_duration_type8_4'),
+                         ref('termination_duration_type8_5')])]" />
+
+          </record>
+
+
+
+    </data>
+</odoo>

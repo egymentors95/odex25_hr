@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="hr_punishment_action">
+            <field name="name">Punishment</field>
+            <field name="res_model">hr.punishment</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="hr_punishment_form_view" model="ir.ui.view">
+            <field name="name">hr.punishmentpunishment</field>
+            <field name="model">hr.punishment</field>
+            <field name="arch" type="xml">
+                <form string="Employee Deductions">
+                    <sheet>
+                        <group>
+                            <field name="name" string="Punishment name" required="1"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="type" string="Type"/>
+                                <field name="punishment_type" string="Punishment type"
+                                       attrs="{'invisible':[('type','!=','penalty')]}"/>
+                                <field name="with_or_not_reward" widget="radio"
+                                       attrs="{'invisible':[('type','!=','termination')]}"/>
+                            </group>
+                            <group>
+                                <field name="amount" string="Amount"
+                                       attrs="{'invisible':['|',('punishment_type','!=','fixed_amount'),('type','!=','penalty')]}"/>
+                                <field name="allowance" string="Allowance" widget="many2many_tags"
+                                       attrs="{'invisible':['|',('punishment_type','!=','depend_on_salary'),('type','!=','penalty')]}"/>
+                                <field name="termination_type" string="Termination type"
+                                       attrs="{'invisible':[('type','!=','termination')]}"/>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="punishment_type_amount" string="Amount of Punishment type"
+                                       attrs="{'invisible':['|',('punishment_type','!=','depend_on_salary'),('type','!=','penalty')]}"/>
+                            </group>
+                            <group>
+                                <field name="duration" string="Duration"
+                                       attrs="{'invisible':['|','|',('punishment_type','=','fixed_amount'),('punishment_type_amount','!=','duration'),('type','!=','penalty')]}"/>
+                                <field name="percentage" string="Percentage"
+                                       attrs="{'invisible':['|','|',('punishment_type_amount','!=','percentage'),
+                                       ('punishment_type','=','fixed_amount'),('type','!=','penalty')]}"/>
+                                <field name="days_deduction"
+                                       attrs="{'invisible':[('type','!=','penalty')]}"/>
+                            </group>
+                        </group>
+
+                    </sheet>
+                    <!--Discuss widgets for history and communication -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_punishment_tree_view">
+            <field name="name">punishment</field>
+            <field name="model">hr.punishment</field>
+            <field name="arch" type="xml">
+                <tree string="Penalty type">
+                    <field name="name" string="Punishment Name"/>
+                    <field name="type" string="Type"/>
+                </tree>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

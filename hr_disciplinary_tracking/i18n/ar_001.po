@@ -1,0 +1,1335 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_disciplinary_tracking
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 06:59+0000\n"
+"PO-Revision-Date: 2022-09-13 06:59+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__accounting_committee
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "Accounting Committee"
+msgstr "لجنة المخالفات والجزاءات"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_needaction
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_needaction
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_needaction
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__activity_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__activity_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__activity_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__activity_state
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__activity_state
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__activity_state
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__activity_type_icon
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__activity_type_icon
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__activity_type_icon
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__allowance
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_punishment_form_view
+msgid "Allowance"
+msgstr "الاستحقاقات"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__amount
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__amount
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_punishment_form_view
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_punishment_form_view
+msgid "Amount of Punishment type"
+msgstr "طريقة حساب الخصم"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "Are you sure to Reset To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المسوده؟"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_attachment_count
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_attachment_count
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_attachment_count
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__bank_branch
+msgid "Bank Branch"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__bank_loan
+msgid "Bank Loan"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__code
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_form_view
+msgid "Code"
+msgstr "الرمز"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__con_end
+msgid "Con End"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__con_end_hijri
+msgid "Con End Hijri"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__con_start
+msgid "Con Start"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__con_start_hijri
+msgid "Con Start Hijri"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.ui.menu,name:hr_disciplinary_tracking.penalty_configuration
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__create_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_name__create_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__create_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_report__create_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__create_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__create_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_name__create_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__create_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_report__create_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__create_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__date
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_tree_view
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_report__date_from
+msgid "Date From"
+msgstr "تاريخ البداية"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_report__date_to
+msgid "Date To"
+msgstr "تاريخ النهاية"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__days_deduction
+msgid "Days Deduction"
+msgstr "خصم ايام للترقية"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__decision
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "Decision"
+msgstr "القرار"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__deduction_id
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#, python-format
+msgid "Deduction"
+msgstr "الخصم"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__deduction_amount
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_tree_view
+msgid "Deduction Amount"
+msgstr "قيمة الخصم"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__deduction_date
+msgid "Deduction Date"
+msgstr "تاريخ التنفيذ"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__advantage_id
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "Deduction Employee"
+msgstr "خصم الموظف"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_penalty_register__deduction_value__of_salary
+#, python-format
+msgid "Deduction From Salary"
+msgstr "خصم من الراتب"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__deduction_value
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "Deduction Value"
+msgstr "طريقة الخصم"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__deductions_line
+msgid "Deductions Line"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__department_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__department_id
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_register_filter
+#, python-format
+msgid "Department"
+msgstr "الهيكل الإداري"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/punishment.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_punishment__punishment_type__depend_on_salary
+#, python-format
+msgid "Depend on salary"
+msgstr "تعتمد على الراتب"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/punishment.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_punishment__type__deprivation
+#, python-format
+msgid "Deprivation of promotion and promotion"
+msgstr "ليس لديه ترقية"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "Description"
+msgstr "ملاحظات اللجنة"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_penalty_register__deduction_value__extra_salary
+#, python-format
+msgid "Direct Payment Deduction"
+msgstr "خصم خارج الراتب"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__display_name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_name__display_name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__display_name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_report__display_name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__display_name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__display_name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_report_hr_disciplinary_tracking_hr_penalty_action_report_xls__display_name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_report_hr_disciplinary_tracking_hr_penalty_report__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_deduction__next_state__done
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_deduction__state__done
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#, python-format
+msgid "Done"
+msgstr "إعتماد نهائي"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_deduction__next_state__draft
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_deduction__state__draft
+#, python-format
+msgid "Draft"
+msgstr "مسوده"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/punishment.py:0
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__duration
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_punishment_form_view
+#, python-format
+msgid "Duration"
+msgstr "خصم ايام من الراتب"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model,name:hr_disciplinary_tracking.model_hr_employee
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__employee_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__employee_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_report__employee_ids
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_register_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_punishment_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_form_view
+msgid "Employee Deductions"
+msgstr "خصومات الموظف"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_tree_view
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report_view_form
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__end_date
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "End Date"
+msgstr "تاريخ نهاية الجزاء"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#, python-format
+msgid "Error"
+msgstr "خطآ"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__fifth_time
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_penalty_register__penalty_number__fifth_time
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_tree_view
+#, python-format
+msgid "Fifth Time"
+msgstr "المره الخامسة"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+#, python-format
+msgid "First Hiring Date"
+msgstr "تاريخ مباشرة العمل"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__first_time
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_penalty_register__penalty_number__first_time
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_tree_view
+#, python-format
+msgid "First Time"
+msgstr "المرة الاولى"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/punishment.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_punishment__punishment_type__fixed_amount
+#, python-format
+msgid "Fixed amount"
+msgstr "مبلغ ثابت"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_follower_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_follower_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_follower_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_channel_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_channel_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_channel_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_partner_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_partner_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_partner_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_deduction__activity_type_icon
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_register__activity_type_icon
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_ss__activity_type_icon
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_punishment__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__fourth_time
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_penalty_register__penalty_number__fourth_time
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_tree_view
+#, python-format
+msgid "Fourth Time"
+msgstr "المرة الرابعة"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#, python-format
+msgid "From date"
+msgstr "من تاريخ"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_deduction__next_state__gm
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_deduction__state__gm
+#, python-format
+msgid "GM"
+msgstr "المدير التنفيذي"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_deduction__next_state__manager
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_deduction__state__manager
+#, python-format
+msgid "HR Manager"
+msgstr "تصديق الموارد البشرية"
+
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_penalty_register__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_penalty_register__state__officer
+#, python-format
+msgid "Wait HR Manager"
+msgstr "إنتظار مدير الموارد البشرية"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_penalty_register__state__manager
+#, python-format
+msgid "Wait Services Manager"
+msgstr "إنتظار مدير الخدمات المشتركة"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_penalty_register__state__gm
+#, python-format
+msgid "Wait CEO Manager"
+msgstr "إنتظار الرئيس التنفيذي"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_penalty_register__state__done
+msgid "Approved"
+msgstr "تم التصديق"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_penalty_register__state__refuse
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#, python-format
+msgid "Direct Manager"
+msgstr "موافقة المدير المباشر"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "HR Manager Approve"
+msgstr "موافقة الموارد البشرية"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#, python-format
+msgid "Services Manager Approve"
+msgstr "موافقة الخدمات المشتركة"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#, python-format
+msgid "CEO Approve"
+msgstr "موافقة الرئيس التنفيذي"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "Refuse"
+msgstr "رفــض"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "RE-Draft"
+msgstr "إرجاع للمسودة"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.actions.report,name:hr_disciplinary_tracking.action_hr_penalty_report
+#: model:ir.model,name:hr_disciplinary_tracking.model_hr_penalty_report
+#: model:ir.model,name:hr_disciplinary_tracking.model_report_hr_disciplinary_tracking_hr_penalty_report
+#: model:ir.ui.menu,name:hr_disciplinary_tracking.hr_penalty_report_menu
+msgid "HR Penalty Report"
+msgstr "تقرير المخالفات و الجزاءات"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+msgid "HR Penalty Report from"
+msgstr " تقرير المخالفات و الجزاءات من"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__have_penalty
+msgid "Have Penalty"
+msgstr "لديه جزاء"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_form_view
+msgid "Have Punishment ?"
+msgstr "جزاءات مترتبة"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_name__id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_report__id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_report_hr_disciplinary_tracking_hr_penalty_action_report_xls__id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_report_hr_disciplinary_tracking_hr_penalty_report__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_deduction__activity_exception_icon
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_register__activity_exception_icon
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_ss__activity_exception_icon
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_punishment__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_deduction__message_needaction
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_deduction__message_unread
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_register__message_needaction
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_register__message_unread
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_ss__message_needaction
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_ss__message_unread
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_punishment__message_needaction
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_punishment__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_deduction__message_has_error
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_deduction__message_has_sms_error
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_register__message_has_error
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_register__message_has_sms_error
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_ss__message_has_error
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_ss__message_has_sms_error
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_punishment__message_has_error
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_punishment__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+#, python-format
+msgid "Iqama"
+msgstr "الهوية"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_is_follower
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_is_follower
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_is_follower
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__job_id
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+#, python-format
+msgid "Job"
+msgstr "العمل"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__job_id
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "Job Position"
+msgstr "المسمى الوظيفي"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction____last_update
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_name____last_update
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register____last_update
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_report____last_update
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss____last_update
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment____last_update
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_report_hr_disciplinary_tracking_hr_penalty_action_report_xls____last_update
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_report_hr_disciplinary_tracking_hr_penalty_report____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__last_penalty
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "Last Penalty"
+msgstr "أخر مخالفة"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__write_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_name__write_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__write_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_report__write_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__write_uid
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__write_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_name__write_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__write_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_report__write_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__write_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__loan_number
+msgid "Loan Number"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_has_error
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_has_error
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_has_error
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__months
+msgid "Months"
+msgstr "شهور"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_name__name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__name
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__name
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+#, python-format
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+#, python-format
+msgid "Nationality"
+msgstr "الجنسية"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__activity_summary
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__activity_summary
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__activity_summary
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__activity_type_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__activity_type_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__activity_type_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__next_state
+msgid "Next State"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__note
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_deduction__message_needaction_counter
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_register__message_needaction_counter
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_ss__message_needaction_counter
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_punishment__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_deduction__message_has_error_counter
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_register__message_has_error_counter
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_ss__message_has_error_counter
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_punishment__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_deduction__message_unread_counter
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_register__message_unread_counter
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_ss__message_unread_counter
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_punishment__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_employee_document_inherit_form_view
+msgid "Penalties"
+msgstr "المخالفات والجزاءات"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/punishment.py:0
+#: model:ir.model,name:hr_disciplinary_tracking.model_hr_penalty_register
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__penalty_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_report__penalty_ids
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_employee_document_inherit_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_tree_view
+#, python-format
+msgid "Penalty"
+msgstr "المخـــالـفة والجزاء"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.ui.menu,name:hr_disciplinary_tracking.penalty_deductions
+msgid "Penalty & Deductions"
+msgstr "المخالفات والجزاءات"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_employee__penalty_history_ids
+msgid "Penalty History"
+msgstr "سجل المخالفات"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__penalty_name
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_tree_view
+msgid "Penalty Name"
+msgstr "اسم المخالفة"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__penalty_number
+msgid "Penalty Number"
+msgstr "رقم المخالفة"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.actions.act_window,name:hr_disciplinary_tracking.penalty_register_action
+#: model:ir.ui.menu,name:hr_disciplinary_tracking.penalty_egister
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_register_filter
+msgid "Penalty Register"
+msgstr "المخالفات والجزاءات"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#: model:ir.actions.act_window,name:hr_disciplinary_tracking.hr_penalty_report_wizard
+#, python-format
+msgid "Penalty Report"
+msgstr "تقرير المخالفات والجزاءات"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.ui.menu,name:hr_disciplinary_tracking.penalty_reports
+msgid "Penalty Reports"
+msgstr "تقاريرالمخالفات و الجزاءات"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_form_view
+msgid "Penalty Type"
+msgstr "نوع المخالفة"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "Penalty Value"
+msgstr "قيمة الخصم"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "Penalty number"
+msgstr "رقم المخالفة"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_punishment_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_tree_view
+msgid "Penalty type"
+msgstr "نوع المخالفة"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+msgid "Penalty:"
+msgstr "المخالفة:"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/punishment.py:0
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__percentage
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_punishment_form_view
+#, python-format
+msgid "Percentage"
+msgstr "نسبة مئوية"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/punishment.py:0
+#, python-format
+msgid "Please Enter duration less than 30 "
+msgstr "يجب ادخال الفترة اقل من او يساوي 30 يوم "
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report_view_form
+msgid "Print"
+msgstr "طباعة PDF"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report_view_form
+msgid "Print Excel Report"
+msgstr "طباعة Excel"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.actions.report,name:hr_disciplinary_tracking.hr_penalty_action_report_xls
+msgid "Print to XLSX"
+msgstr "طباعة Excel"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.actions.act_window,name:hr_disciplinary_tracking.hr_punishment_action
+#: model:ir.model,name:hr_disciplinary_tracking.model_hr_punishment
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__punishment_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_report__punishment_ids
+msgid "Punishment"
+msgstr "الجزاءات"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+#, python-format
+msgid "Punishment Date"
+msgstr " تاريخ الإنذار"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_punishment_tree_view
+msgid "Punishment Name"
+msgstr "اسم الجزاء"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__punishment_type
+msgid "Punishment Type"
+msgstr "نوع الجزاء المالي"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__punishment_type_amount
+msgid "Punishment Type Amount"
+msgstr "نوع قيم الجزاء"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_punishment_form_view
+msgid "Punishment name"
+msgstr "اسم الجزاء"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_punishment_form_view
+msgid "Punishment type"
+msgstr "نوع الجزاء المالي"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.ui.menu,name:hr_disciplinary_tracking.hr_punishmnet
+msgid "Punishmnet"
+msgstr "الجزاءات"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+#, python-format
+msgid "Reason"
+msgstr " سبب الإنذار"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_deduction__next_state__refuse
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_deduction__state__refuse
+msgid "Refuse"
+msgstr "رفــض"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__remaining_loan_amount
+msgid "Remaining Loan Amount"
+msgstr "متبقي قيمة السلفية"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__activity_user_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__activity_user_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__activity_user_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_form_view
+msgid "Sanctions"
+msgstr "الجـــزاءات"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__second_time
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_penalty_register__penalty_number__second_time
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_tree_view
+#, python-format
+msgid "Second Time"
+msgstr "المرة الثانية"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+#, python-format
+msgid "Sequence"
+msgstr "#"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__start_date
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__start_date
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_employee_document_inherit_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_tree_view
+msgid "Start Date"
+msgstr "تاريخ بداية الجزاء"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__state
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__state
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_employee_document_inherit_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_tree_view
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_deduction__activity_state
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_register__activity_state
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_ss__activity_state
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_punishment__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_deduction__next_state__submit
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_deduction__state__submit
+msgid "Submit"
+msgstr " إرسال"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_punishment__type__penalty
+msgid "Penalty"
+msgstr "خصــــم مالي"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/punishment.py:0
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__termination_id
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_punishment__type__termination
+#, python-format
+msgid "Termination"
+msgstr "انهاء خدمة"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__termination_type
+msgid "Termination Type"
+msgstr "نوع انهاء الخدمة"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_punishment_form_view
+msgid "Termination type"
+msgstr "نوع انهاء الخدمة"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#, python-format
+msgid "There is no Data"
+msgstr "لا توجد بيانات"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#, python-format
+msgid "There is no total for rule : %s"
+msgstr " %s لا توجد قيمة لقاعدة الراتب"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__third_time
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_penalty_register__penalty_number__third_time
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_type_tree_view
+#, python-format
+msgid "Third Time"
+msgstr "المرة الثالثة"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report
+msgid "To"
+msgstr "إلى"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/wizard/hr_penalty_report.py:0
+#, python-format
+msgid "To date"
+msgstr "الى تاريخ"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__total_paid_installment
+msgid "Total Paid Installment"
+msgstr "مجموع الاقساط"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__type
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_punishment_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_punishment_tree_view
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_deduction__activity_exception_decoration
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_register__activity_exception_decoration
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_ss__activity_exception_decoration
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_punishment__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_unread
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_unread
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_unread
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__message_unread_counter
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__message_unread_counter
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__message_unread_counter
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/punishment.py:0
+#, python-format
+msgid "Warning"
+msgstr "إنـــذار"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_deduction__website_message_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__website_message_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__website_message_ids
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_deduction__website_message_ids
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_register__website_message_ids
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_penalty_ss__website_message_ids
+#: model:ir.model.fields,help:hr_disciplinary_tracking.field_hr_punishment__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__with_or_not_reward
+msgid "With Or Not Reward"
+msgstr "مستحقات نهاية الخدمة"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/punishment.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_punishment__with_or_not_reward__with_reward
+#, python-format
+msgid "With reward"
+msgstr "لدية مستحقات"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#, python-format
+msgid "Wrong percentage base or quantity defined for salary rule %s (%s)."
+msgstr " %s (%s)خطآ التاكد من اعداد النسبة او القيمة لـ"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#, python-format
+msgid "Wrong python code defined for salary rule %s (%s)."
+msgstr " %s (%s)خطآ التاكد من اعداد كود بايثون لـ"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#, python-format
+msgid "Wrong quantity defined for salary rule %s (%s)."
+msgstr " %s (%s)خطآ التاكد من اعداد النسبة او القيمة لـ"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#, python-format
+msgid "You Can Not Add Penalty With Later Date"
+msgstr "لا يمكن اضافة مخالفة للموظف بتاريخ لاحقآ"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/punishment.py:0
+#, python-format
+msgid "You can not delete record There is a related other Penalty record %s"
+msgstr "لايمكن حذف السجل وهنالك سجل مخالفة مرتبطة به باسم مخالفة %s "
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/punishment.py:0
+#, python-format
+msgid "You Can Not Delete Record There is a related Penalty Employee Name %s"
+msgstr "لايمكن حذف السجل وهنالك سجل مخالفة مرتبطة به بإسم الموظف %s "
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/employee_deductions.py:0
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#, python-format
+msgid "You can not delete record in state not in draft"
+msgstr "لا يمكن حذف سجل المخالفة في حالة غير مسوده"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#, python-format
+msgid "You can set to draft when like termination in state not in draft"
+msgstr "لا يمكن ارجاع للمسوده وطلب انهاء الخدمة المرتبط في حالة غير مسوده"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_employee_document_inherit_form_view
+msgid "deduction amount"
+msgstr "قيمة الخصم"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model,name:hr_disciplinary_tracking.model_hr_deduction
+msgid "hr.deduction"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model,name:hr_disciplinary_tracking.model_hr_penalty_name
+msgid "hr.penalty.name"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model,name:hr_disciplinary_tracking.model_hr_penalty_ss
+msgid "hr.penalty.ss"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_report_view_form
+msgid "or"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.actions.act_window,name:hr_disciplinary_tracking.penalty_type_action
+#: model:ir.ui.menu,name:hr_disciplinary_tracking.penalty_type
+msgid "penalty"
+msgstr "المخالفات"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_employee_document_inherit_form_view
+msgid "penalty History"
+msgstr "سجل المخالفات"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_employee_document_inherit_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_tree_view
+msgid "punishment"
+msgstr "الجزاءات"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model,name:hr_disciplinary_tracking.model_report_hr_disciplinary_tracking_hr_penalty_action_report_xls
+msgid "report.hr_disciplinary_tracking.hr_penalty_action_report_xls"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/punishment.py:0
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_punishment__with_or_not_reward__without_reward
+#, python-format
+msgid "without_reward"
+msgstr "ليس لديه مستحقات"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_punishment__punishment_type_amount__duration
+msgid "الفترة"
+msgstr ""
+
+
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_punishment__punishment_type_amount__percentage
+msgid "النسبة"
+msgstr ""
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields.selection,name:hr_disciplinary_tracking.selection__hr_punishment__type__warning
+msgid "Warning"
+msgstr "إنـــذار"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "End Violation"
+msgstr "نهاية المخالفة"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "Start Violation"
+msgstr "بداية المخالفة"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+msgid "Resolution Number"
+msgstr "رقم القرار"
+
+#. module: hr_disciplinary_tracking
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_register_filter
+msgid "My Requests"
+msgstr "طلبـاتي"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__employee_no
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_form_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.penalty_egister_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_disciplinary_tracking.hr_penalty_register_filter
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+#. module: hr_disciplinary_tracking
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_register__company_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_punishment__company_id
+#: model:ir.model.fields,field_description:hr_disciplinary_tracking.field_hr_penalty_ss__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_disciplinary_tracking
+#: code:addons/hr_disciplinary_tracking/models/penalty_register.py:0
+#, python-format
+msgid "Sorry, The Approval For The Direct Manager '%s' Only OR HR Manager!"
+msgstr "للأسف، لموافقة المدير المباشر '%s' فقط او مدير الموارد البشرية !"

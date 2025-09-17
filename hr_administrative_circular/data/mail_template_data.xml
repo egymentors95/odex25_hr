@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="mail_circulars" model="mail.template">
+            <field name="name">Administrative circulars and decisions publication e-mail.</field>
+            <field name="subject">${(object.name)}</field>
+            <field name="partner_to">${str(object.message_partner_ids.ids).replace('[', '').replace(']', '')}</field>
+            <field name="report_template" ref="hr_administrative_circular.action_report_circular_decision"/>
+            <field name="report_name">${(object.name)}_Details</field>
+            <field name="lang">${object.responsible_id.user_id.lang}</field>
+            <field name="model_id" ref="hr_administrative_circular.model_hr_administrative_circular"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html">
+                ${object.terms | safe}
+            </field>
+        </record>
+    </data>
+</odoo>

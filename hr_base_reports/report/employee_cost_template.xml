@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="employee_cost_report">
+			<t t-call="web.html_container">
+				<t t-call="hr_base.hr_layout">
+
+				    <style>
+				      @font-face {font-family: "Sakkal Majalla"; src:
+				      url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+				      url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+				      format("embedded-opentype"),
+				      url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+				      url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+				      url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"); }
+				   </style>
+					<div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+						<table class="table table-condensed table-bordered">
+							<thead class="text-center">
+								<tr style="background-color:#ffffff;width:100%;">
+								<th colspan="14" class="text-center" style="color:#100c08;font-size:22px"> Department Cost Report
+                                                                    <span t-esc="date_from"/>  _  <span t-esc="date_to"/></th>
+								</tr>
+								<tr style="background-color: #263f79;width:100%;color:#ffffff;font-size:18px">
+									<t t-foreach="docs[0]" t-as="doc">
+									<th style="text-align:center;"><span t-esc="doc"/> </th>
+									</t>
+								</tr>
+							</thead>
+							<tbody class="text-center">
+								<t t-set="sequence" t-value="0"/>
+								<t t-foreach="docs[1]" t-as="o">
+
+									<t t-set="salary_value" t-value="o.get_employee_data_report(o.contract_id,date_from,date_to)"/>
+									<t t-set="i" t-value="0"/>
+									<tr>
+										<td>
+											<t t-set="sequence" t-value="sequence +1"/>
+											<t t-esc="sequence"/>
+										</td>
+										<td>
+											<t t-esc="o.department_id.name"/>
+										</td>
+										<td>
+											<span t-esc="o.emp_no"/>
+										</td>
+										<td>
+											<span t-esc="o.name"/>
+										</td>
+										<td>
+											<span t-esc="round(o.contract_id.salary,2)"/>
+										</td>
+										<td>
+											<span t-esc="round(o.contract_id.house_allowance_temp,2)"/>
+										</td>
+										<td>
+											<span t-esc="round(o.contract_id.transport_allowance,2)"/>
+										</td>
+										<td>
+											<t t-esc="round(salary_value[1],2)"/>
+										</td>
+										<td>
+											<span t-esc="round(o.contract_id.gosi_deduction,2)"/>
+										</td>
+										<td>
+											<span t-esc="round(o.contract_id.gosi_employer_deduction,2)"/>
+										</td>
+										<td>
+											<span t-esc="round(salary_value[0],2)"/>
+										</td>
+										<td>
+											<span t-esc="round(o.contract_id.total_allowance,2)"/>
+										</td>
+										<td>
+											<span t-esc="round(salary_value[2],2)"/>
+										</td>
+
+										<t t-foreach="department" t-as="d" >
+
+										<td t-if="o.department_id.id==d.id">
+											<t >
+												<span t-esc="round(docs[2][i],2)"/>
+											</t>
+
+										</td>
+											<t t-set="i" t-value="i+1"/>
+										</t>
+									</tr>
+								</t>
+							</tbody>
+						</table>
+					</div>
+				</t>
+			</t>
+		</template>
+
+        <record id="employee_cost_report_act" model="ir.actions.report">
+            <field name="model">hr.employee</field>
+            <field name="name">Employee Cost Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_base_reports.employee_cost_report</field>
+            <field name="report_file">hr_base_reports.employee_cost_report</field>
+        </record>
+        <record id="employee_cost_report_act_xlsx" model="ir.actions.report">
+            <field name="model">hr.employee</field>
+            <field name="name">Employee Cost Report</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_base_reports.employee_cost_report_xlsx</field>
+            <field name="report_file">hr_base_reports.employee_cost_report_xlsx</field>
+        </record>
+    </data>
+</odoo>

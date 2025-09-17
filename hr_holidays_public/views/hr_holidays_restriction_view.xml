@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="hr_holidays_restriction_form_view">
+            <field name="name">Leave Restriction Form</field>
+            <field name="model">hr.holidays.restriction</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group col="1">
+                            <group string="Restriction Info" col="4" colspan="2">
+                                <field name="date_from"/>
+                                <field name="date_to"/>
+                                <field name="leave_ids" widget="many2many_tags" colspan="4"/>
+                            </group>
+                            <group string="Employees" col="4" colspan="2">
+                                <field name="employee_ids" nolabel="1" colspan="4"/>
+                            </group>
+                        </group>
+                    </sheet>
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_holidays_restriction_tree_view">
+            <field name="name">Leave Restriction Tree</field>
+            <field name="model">hr.holidays.restriction</field>
+            <field name="arch" type="xml">
+                <tree string="Leave Restriction">
+                    <field name="date_from"  />
+                    <field name="date_to"  />
+                    <field name="leave_ids"  widget="many2many_tags" required="True"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hr_holidays_restriction_action">
+            <field name="name">Leave Restriction</field>
+            <field name="res_model">hr.holidays.restriction</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="hr_holidays_restriction_menu"
+                  name="Leave Restriction"
+                  parent="hr_holidays_public.menu_holidays_configuration"
+                  sequence="107"
+                  groups="hr_holidays_community.group_hr_holidays_manager"
+                  action="hr_holidays_restriction_action"/>
+    </data>
+</odoo>

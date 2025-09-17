@@ -1,0 +1,465 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_administrative_circular
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 06:48+0000\n"
+"PO-Revision-Date: 2022-09-13 06:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_administrative_circular
+#: model:mail.template,body_html:hr_administrative_circular.mail_circulars
+msgid ""
+"\n"
+"            <div style=\"margin: 10px auto;\">\n"
+"            <table style=\"width:100%;text-align:justify;margin:0 auto;border-collapse:collapse;border-top:1px solid lightgray\"\">\n"
+"                <tbody>\n"
+"                    <tr>\n"
+"                        <td style=\"padding:15px 10px;font-size:20px\">\n"
+"                            <p dir=\"ltr\" style=\"font-size:15px;margin-top:0pt;margin-bottom:0pt;\">\n"
+"                            <span></span></p><br>\n"
+"                            <p style=\"color:#875A7B;margin:0\" >Dear All,</p><br>\n"
+"                            <p dir=\"ltr\" style=\"font-size:15px;margin-top:0pt;margin-bottom:0pt;\">\n"
+"                                <span>Greetings, we would like to inform you with the details of our administrative decision\n"
+"                                 <strong>${object.name}</strong>, kindly find the attached document.</span></p><br>\n"
+"                            <p dir=\"ltr\" style=\"font-size:15px;margin-top:0pt;margin-bottom:0pt;\">\n"
+"                            <p dir=\"ltr\" style=\"font-size:15px;margin-top:0pt;margin-bottom:0pt;\">\n"
+"                                <span>Thank you,</span></p><br>\n"
+"                                <span>Best Regards,</span></p><br>\n"
+"                        </td>\n"
+"                    </tr>\n"
+"                </tbody>\n"
+"            </table>\n"
+"            </div>"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:mail.template,report_name:hr_administrative_circular.mail_circulars
+msgid "${(object.name)}_Details"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_terms_conditions__active
+msgid "Active"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.actions.act_window,name:hr_administrative_circular.administrative_circular_action
+msgid "Administrative Circular & Decision"
+msgstr "التعميم و القرار الإداري"
+
+#. module: hr_administrative_circular
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.administrative_circular_form_view
+msgid "Administrative Circular/ Decision"
+msgstr "تعميم/ قرار إداري"
+
+#. module: hr_administrative_circular
+#: model:ir.actions.report,name:hr_administrative_circular.action_report_circular_decision
+msgid "Administrative Circular/Decision"
+msgstr "تعميم/ قرار إداري"
+
+#. module: hr_administrative_circular
+#: model:ir.ui.menu,name:hr_administrative_circular.administrative_circular_menu
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.administrative_circular_tree_view
+msgid "Administrative Circulars & Decisions"
+msgstr "التعميم و القرار الإداري"
+
+#. module: hr_administrative_circular
+#: model:ir.model,name:hr_administrative_circular.model_hr_administrative_circular
+msgid "Administrative Circulars And Decisions"
+msgstr "التعميم و القرار الإداري"
+
+#. module: hr_administrative_circular
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.administrative_circular_form_view
+msgid "Approve"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields.selection,name:hr_administrative_circular.selection__hr_administrative_circular__state__approve
+msgid "Approved"
+msgstr "تم التصديق"
+
+#. module: hr_administrative_circular
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.administrative_circular_form_view
+msgid "Are you sure to Reset To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المسوده؟"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.administrative_circular_form_view
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__create_uid
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_terms_conditions__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__create_date
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_terms_conditions__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_terms_conditions__description
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.terms_conditions_form_view
+msgid "Description"
+msgstr "الوصف"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__display_name
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_terms_conditions__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields.selection,name:hr_administrative_circular.selection__hr_administrative_circular__state__draft
+msgid "Draft"
+msgstr "مبدئي"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__employee_ids
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.administrative_circular_form_view
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields.selection,name:hr_administrative_circular.selection__hr_administrative_circular__state__manager
+msgid "Executive Manager"
+msgstr "الرئيس التنفيذي"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields.selection,name:hr_administrative_circular.selection__hr_administrative_circular__state__officer
+msgid "Executive Officer"
+msgstr "المدير التنفيذي"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields.selection,name:hr_administrative_circular.selection__hr_administrative_circular__type__external
+msgid "External"
+msgstr "خارجي"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,help:hr_administrative_circular.field_hr_administrative_circular__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields.selection,name:hr_administrative_circular.selection__hr_administrative_circular__state__hr
+msgid "Human Resource"
+msgstr " مدير الموارد البشرية"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__id
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_terms_conditions__id
+msgid "ID"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,help:hr_administrative_circular.field_hr_administrative_circular__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,help:hr_administrative_circular.field_hr_administrative_circular__message_needaction
+#: model:ir.model.fields,help:hr_administrative_circular.field_hr_administrative_circular__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,help:hr_administrative_circular.field_hr_administrative_circular__message_has_error
+#: model:ir.model.fields,help:hr_administrative_circular.field_hr_administrative_circular__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields.selection,name:hr_administrative_circular.selection__hr_administrative_circular__type__internal
+msgid "Internal"
+msgstr "داخلي"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular____last_update
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_terms_conditions____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__write_uid
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_terms_conditions__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__write_date
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_terms_conditions__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__name
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_terms_conditions__name
+msgid "Name"
+msgstr "الإسم"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,help:hr_administrative_circular.field_hr_administrative_circular__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,help:hr_administrative_circular.field_hr_administrative_circular__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,help:hr_administrative_circular.field_hr_administrative_circular__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__partner_ids
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.administrative_circular_form_view
+msgid "Partners"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: code:addons/hr_administrative_circular/models/administrative_circular.py:0
+#, python-format
+msgid "Please set recipients for the circular."
+msgstr "فضلا أضف مستلمي التعميم/ القرار الإداري"
+
+#. module: hr_administrative_circular
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.administrative_circular_form_view
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields.selection,name:hr_administrative_circular.selection__hr_administrative_circular__state__refuse
+msgid "Refused"
+msgstr "تم الرفض"
+
+#. module: hr_administrative_circular
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.administrative_circular_form_view
+msgid "Reset to Draft"
+msgstr "إعادة الى وضع المسودة"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__responsible_id
+msgid "Responsible"
+msgstr "مسؤول"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.administrative_circular_form_view
+msgid "Send"
+msgstr "إرسال البريد الإليكتروني"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields.selection,name:hr_administrative_circular.selection__hr_administrative_circular__state__send
+msgid "Sent"
+msgstr "تم الإرسال"
+
+#. module: hr_administrative_circular
+#: code:addons/hr_administrative_circular/models/administrative_circular.py:0
+#, python-format
+msgid ""
+"Sorry no terms has been set, kindly set them to be able to send the E-mail."
+msgstr "عفواً لم يتم تحديد البنود الخاصة بالقرار فضلا قم بإضافتها حتى تتمكن من إرسال البريد الإليكتروني. "
+
+#. module: hr_administrative_circular
+#: code:addons/hr_administrative_circular/models/administrative_circular.py:0
+#, python-format
+msgid "Sorry you cannot delete a document is not in draft state."
+msgstr "عفواً لا يمكن حذف مستند الا في حالة مبدئي"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,help:hr_administrative_circular.field_hr_administrative_circular__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.administrative_circular_form_view
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__term_template_id
+msgid "Template"
+msgstr "قالب"
+
+#. module: hr_administrative_circular
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.terms_conditions_form_view
+msgid "Term/ Condition"
+msgstr "البنود/ الشروط"
+
+#. module: hr_administrative_circular
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.administrative_circular_form_view
+msgid "Terms & Conditions"
+msgstr "المحتوى"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__terms
+#: model_terms:ir.ui.view,arch_db:hr_administrative_circular.administrative_circular_form_view
+msgid "Terms And Conditions"
+msgstr "المحتوى"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,help:hr_administrative_circular.field_hr_administrative_circular__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,field_description:hr_administrative_circular.field_hr_administrative_circular__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model.fields,help:hr_administrative_circular.field_hr_administrative_circular__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_administrative_circular
+#: model:ir.model,name:hr_administrative_circular.model_hr_terms_conditions
+msgid "hr.terms.conditions"
+msgstr ""

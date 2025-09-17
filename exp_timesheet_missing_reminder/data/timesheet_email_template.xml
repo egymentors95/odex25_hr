@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <!-- daily email reminder -->
+
+        <record id="timesheet_daily_reminder_email_notify" model="mail.template">
+            <field name="name">Daily Timesheet Reminder  Message</field>
+            <field name="model_id" ref="hr_timesheet_sheet.model_hr_employee"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="email_from"><![CDATA[${user.company_id.name} <${(user.company_id.email or user.email)|safe}>]]></field>
+            <field name="subject"><![CDATA[  تذكير يومي بتقرير المهام اليومية  ]]></field>
+            <field name="body_html">
+                <![CDATA[
+                    <div style="text-align: right;direction:rtl">
+                         <p style="text-align: right">السادة الفضلاء:}</p>
+                        <p style="text-align: left">حفظهم الله،،</p>
+                        <p style="font-size: 1.1em;text-align: right">
+                            السلام عليكم ورحمة الله.
+
+                        </p>
+                        <p style="font-size: 1.1em;text-align: right">
+                           الرجاء تعبئة الايام المفقوده
+                        </p><br/>
+                        <p style="font-size: 1em;text-align: right">
+                        </p><br/>
+                        <p style="font-size: 1.1em;text-align: right">
+ <a href="${user.company_id.website}">${user.company_id.name}</a>
+                        </p>
+                    </div>
+                ]]>
+            </field>
+        </record>
+
+        <!--week email reminder-->
+
+        <record id="timesheet_week_reminder_email_notify" model="mail.template">
+            <field name="name">Weekly Timesheet Reminder  Message</field>
+            <field name="model_id" ref="hr_timesheet_sheet.model_hr_employee"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="email_from"><![CDATA[${user.company_id.name} <${(user.company_id.email or user.email)|safe}>]]></field>
+            <field name="subject"><![CDATA[  تذكير اسبوعي بتقرير المهام اليومية  ]]></field>
+            <field name="body_html">
+                <![CDATA[
+                    <div style="text-align: right;direction:rtl">
+                         <p style="text-align: right">السادة الفضلاء:}</p>
+                        <p style="text-align: left">حفظهم الله،،</p>
+                        <p style="font-size: 1.1em;text-align: right">
+                            السلام عليكم ورحمة الله.
+                        </p>
+                        <p style="font-size: 1.1em;text-align: right">
+                           الرجاء تعبئة الايام المفقوده
+                        </p><br/>
+                        <p style="font-size: 1em;text-align: right">
+                        </p><br/>
+                        <p style="font-size: 1.1em;text-align: right">
+                            <a href="${user.company_id.website}">${user.company_id.name}</a>
+                        </p>
+                    </div>
+                ]]>
+            </field>
+        </record>
+
+        <!--monthly email reminder -->
+
+        <record id="timesheet_monthly_reminder_email_notify" model="mail.template">
+            <field name="name">Monthly Timesheet Reminder  Message</field>
+            <field name="model_id" ref="hr_timesheet_sheet.model_hr_employee"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="email_from"><![CDATA[${user.company_id.name} <${(user.company_id.email or user.email)|safe}>]]></field>
+            <field name="subject"><![CDATA[  تذكير شهري بتقرير المهام اليومية  ]]></field>
+            <field name="body_html">
+                <![CDATA[
+                      <div style="text-align: right;direction:rtl">
+                         <p style="text-align: right">السادة الفضلاء:}</p>
+                        <p style="text-align: left">حفظهم الله،،</p>
+                        <p style="font-size: 1.1em;text-align: right">
+                            السلام عليكم ورحمة الله.
+                        </p>
+                        <p style="font-size: 1.1em;text-align: right">
+                           الرجاء تعبئة الايام المفقوده
+                        </p><br/>
+                        <p style="font-size: 1em;text-align: right">
+                        </p><br/>
+                        <p style="font-size: 1.1em;text-align: right">
+                            <a href="${user.company_id.website}">${user.company_id.name}</a>
+                        </p>
+                    </div>
+                ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

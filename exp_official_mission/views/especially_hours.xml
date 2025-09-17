@@ -1,0 +1,246 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="employee_especially_hours_action">
+            <field name="name">Employee Especially Hours</field>
+            <field name="res_model">hr.official.mission</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('process_type','=','especially_hours')]</field>
+            <field name="context">{'default_process_type':'especially_hours'}</field>
+
+        </record>
+
+
+        <menuitem name="Employee Especially Hours" id="employee_especially_hours_menu_item"
+                  parent="employee_requests.employee_request_menu_item"
+                  action="employee_especially_hours_action"
+                  sequence="9"/>
+
+        <record model="ir.ui.view" id="employee_especially_hours_form_view">
+            <field name="name">Employee Especially Hours</field>
+            <field name="model">hr.official.mission</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="send" string="Submit" class="oe_highlight" type="object"
+                                states="draft" groups="base.group_user"/>
+
+                        <button name="direct_manager" string="Direct Manager Approve" class="oe_highlight" type="object"
+                                states="send" groups="hr_base.group_division_manager"/>
+                        <button name="direct_manager_refused" string="Refused" class="oe_highlight" type="object"
+                                states="send" groups="hr_base.group_division_manager"/>
+
+                        <button name="approve" string="HR Approval" class="oe_highlight" type="object"
+                                states="depart_manager" groups="hr.group_hr_user"/>
+                        <button name="refused" string="Refused" class="oe_highlight" type="object"
+                                states="depart_manager" groups="hr.group_hr_user"/>
+
+                        <button name="draft_state" string="RE-Draft" class="oe_highlight" type="object"
+                                states="approve,refused" groups="hr.group_hr_user"
+                                confirm="Are you sure to Reset To Draft This Record?"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,send,depart_manager,approve,refused"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="process_type" invisible="1"/>
+                                <field name="mission_type" string="Mission Type" required="1"
+                                       domain="[('special_hours', '=', True)]"
+                                       attrs="{'readonly':[('state','not in',('draft','direct_manager','send'))] }"/>
+
+
+                                <field name="duration_type" string="Duration Type" invisible="1"/>
+                                <field name="date_from" string="Date From" required="1"
+                                       attrs="{'readonly':[('state','not in',('draft','direct_manager','send'))] }"/>
+
+                                <field name="date_to" string="Date To" required="1"
+                                       attrs="{'readonly':[('state','not in',('draft','direct_manager','send'))] }"/>
+
+                                <field name="date_duration" string="Duration Days" readonly="1" force_save="1"
+                                       attrs="{'required':[('duration_type','=','days')]}"/>
+                                <field name="hour_from" string="Hour From" widget="float_time"
+                                       attrs="{'required': [('state', '=', 'direct_manager')],
+                                               'readonly':[('state','not in',('draft','direct_manager','send'))] }"/>
+                                <field name="hour_to" string="Hour To" widget="float_time"
+                                       attrs="{'required': [('state', '=', 'direct_manager')],
+                                               'readonly':[('state','not in',('draft','direct_manager','send'))] }"/>
+                                <field name="hour_duration" string="Duration Hours" readonly="1" force_save="1"
+                                       widget="float_time"
+                                       attrs="{'required':[('duration_type','=','hours')]}"/>
+                            </group>
+                            <group>
+                                 <field name="company_id" groups="base.group_multi_company" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                                <field name="date" string="Date Request" attrs="{'readonly':[('state','!=','draft')]}"
+                                       required="1"/>
+                                <field name="employee_id" string="Responsible" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="employee_no" string="Employee Number" readonly="1"/>
+                                <field name="department_id2" string="Department" readonly="1"/>
+                                <field name="destination" string="Destination" widget="selection" 
+                                        domain="[('destination_type','in',('mission','all'))]" />
+                                <!--field name="note"  string='Comments' attrs="{'readonly':[('state','!=','draft')]}" /-->
+                            </group>
+                        </group>
+                        <group string="Mission Purpose">
+                            <field name="mission_purpose" nolabel="1"
+                                   attrs="{'readonly':[('state','!=','draft')], 'required':[('state','=','draft')]}"/>
+                        </group>
+
+                        <notebook>
+                            <page string="Employees" name="employees">
+                                <field name="related_with_financial" invisible="1"/>
+
+                                <field name="employee_ids"
+                                       attrs="{'readonly':[('state','not in',('direct_manager','send','draft'))]}">
+                                    <tree editable="bottom">
+                                        <field name="employee_id" string="Employee Name" required="1"/>
+                                        <field name="date_from" string="Date from"/>
+                                        <field name="date_to" string="Date to"/>
+                                        <field name="days" string="Days" readonly="0"/>
+
+
+                                        <field name="hour_from" string="Hour from" widget="float_time"
+                                        />
+                                        <field name="hour_to" string="Hour to" widget="float_time"
+                                        />
+                                        <field name="hours" string="Hours" readonly="0" widget="float_time"/>
+                                        <field name="total_hours" string="Total Hours" readonly="0"
+                                               widget="float_time"/>
+
+
+                                    </tree>
+                                </field>
+                            </page>
+
+
+                            <page string="Attachments" name="attachments">
+                                <field name="attach_ids" string="Attachments"
+                                       attrs="{'readonly':[('state','!=','draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="name" string="attachment Name"/>
+                                        <field name="datas" string="file content"/>
+                                    </tree>
+                                </field>
+                            </page>
+
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_especially_hours_tree_view">
+            <field name="name">Employee Especially Hours</field>
+            <field name="model">hr.official.mission</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'refused'" decoration-info="state == 'draft'"
+                      string="Employee Especially Hours">
+                    <field name="employee_no" string="Employee Number"/>
+                    <field name="employee_id" string="Responsible"/>
+                    <field name="department_id2" />
+                    <field name="mission_type" string="Mission Type"/>
+                    <field name="date" string="Date Request"/>
+                    <field name="date_from" string="Date From"/>
+                    <field name="date_to" string="Date To"/>
+                    <field name="state" string="Status"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- view_employee_Especially Hours_filter -->
+        <record id="view_employee_filter_especially_hours" model="ir.ui.view">
+            <field name="name">Employee Especially Hours</field>
+            <field name="model">hr.official.mission</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search>
+                  <field name="mission_type"/>
+                  <field name="employee_id"/>
+                  <field name="employee_no"/>
+                  <field name="state"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Responsible" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <filter name="group_type" string="Mission Type" domain="[]" context="{'group_by': 'mission_type'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id2'}"/>
+                        <filter name="group_branch" string="Branch" domain="[]" context="{'group_by': 'is_branch'}"/>
+                        <filter name="group_state" string="State" domain="[]" context="{'group_by': 'state'}"/>
+
+                    </group>
+                    <separator/>
+                        <filter string="My Requests" name="my_request" domain="[('employee_id.user_id', '=', uid)]"/>
+                    <separator/>
+                </search>
+
+
+            </field>
+        </record>
+
+
+        <record id="action_especially_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="employee_especially_hours_tree_view"/>
+            <field name="act_window_id" ref="employee_especially_hours_action"/>
+        </record>
+
+        <record id="action_especially_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="employee_especially_hours_form_view"/>
+            <field name="act_window_id" ref="employee_especially_hours_action"/>
+        </record>
+
+
+        <record model="ir.ui.view" id="employee_especially_line_form_view">
+            <field name="name">Employee Especially form</field>
+            <field name="model">hr.official.mission.employee</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id" readonly="1"/>
+                                <field name="official_mission_id" readonly="1" string='Mission Type'/>
+                                <field name="days" readonly="1"/>
+                                <field name="hours" readonly="1" widget="float_time"/>
+                            </group>
+                            <group>
+
+                                <field name="date_from" readonly="1"/>
+                                <field name="date_to" readonly="1"/>
+                                <field name="account_move_id" string="Account Move" readonly="1" force_save="1"
+                                               groups="hr_base.group_account_manager,hr.group_hr_user"
+                                               attrs="{'invisible': [('account_move_id', '=', False)]}"/>
+
+
+                            </group>
+                            <group>
+                                <field name="hour_from" readonly="1" widget="float_time"/>
+                                <field name="hour_to" readonly="1" widget="float_time"/>
+                                <field name="total_hours" string="Total Hours" readonly="0" widget="float_time"/>
+                                <field name="state"/>
+
+                            </group>
+
+                        </group>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <data>
+        <record model="ir.ui.view" id="attendance_system_wizard_form_view">
+            <field name="name">Attendance Device Synchronization wizard</field>
+            <field name="model">finger.attendance_wizard</field>
+            <field name="arch" type="xml">
+                <form string="Synchronize Data">
+                    <div>
+                        This wizard will synchronize all data from all of your systems
+                        into Odoo.
+                        <br/>
+                        Download employee into Odoo; Map those with Odoo
+                        Employees and create
+                        additional Employees from device data; Download attendance data
+                        from the devices and create Odoo attendance data from such data
+                    </div>
+                    <group>
+                        <group>
+                            <field name="system_ids" widget="many2many_tags" options="{'no_create_edit': True}"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button name="download_attendance_manually" type="object"
+                                string="Download Attendance" class="oe_highlight"/>
+                        <button name="sync_attendance" type="object"
+                                string="Synchronize Attendance" class="oe_highlight" groups="base.group_no_one"/>
+                        <button special="cancel" string="Cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window id="action_sync_system_attendance" name="Synchronize Data"
+                    res_model="finger.attendance_wizard" view_mode="form" target="new"/>
+
+        <menuitem id="sync_system_attendance_menu" parent="attendace_system_menu"
+                  sequence="110" name="Synchronize" action="action_sync_system_attendance"/>
+
+    </data>
+</odoo>

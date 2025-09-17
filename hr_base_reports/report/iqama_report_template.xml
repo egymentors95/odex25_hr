@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="employee_iqama_report">
+			<t t-call="web.html_container">
+				<t t-call="hr_base.hr_layout">
+	          <style>
+			@font-face {font-family: "Sakkal Majalla"; src:
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+			format("embedded-opentype"),
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"); }
+		    </style>
+					<div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+						<table class="table table-condensed table-bordered">
+							<thead class="text-center">
+								<tr style="width:100%;">
+									<th colspan="12" class="text-center" style="font-size:20px"> Identity Report <span t-esc="date_from"/> - <span t-esc="date_to"/></th>
+								</tr>
+								<tr style="background-color: #263f79;color:#FFFFFF;width:100%;">
+									<t t-foreach="docs[0]" t-as="doc">
+										<th style="text-align:center;" ><t t-esc="doc"/></th>
+									</t>
+								</tr>
+							</thead>
+							<tbody class="text-center">
+								<t t-set="sequence" t-value="0"/>
+								<t t-foreach="docs[1]" t-as="o">
+									<tr>
+										<td>
+											<t t-set="sequence" t-value="sequence +1"/>
+											<t t-esc="sequence"/>
+										</td>
+										<td>
+											<span t-esc="o.employee_id.emp_no"/>
+										</td>
+										<td>
+											<span t-esc="o.employee_id.name"/>
+										</td>
+										<td>
+											<t t-esc="o.employee_id.working_location"/>
+										</td>
+										<td>
+											<t t-esc="o.employee_id.department_id.name"/>
+										</td>
+										<td>
+											<t t-esc="o.employee_id.job_id.name"/>
+										</td>
+										<td>
+											<span t-esc="o.employee_id.first_hiring_date"/>
+										</td>
+										<td>
+											<t t-esc="o.employee_id.parent_id.name"/>
+										</td>
+										<td>
+											<t t-esc="o.line_id.date"/>
+										</td>
+										<td>
+											<t t-esc="round(o.total)"/>
+										</td>
+										<td>
+											<span t-esc="o.employee_id.country_id.name"/>
+										</td>
+										<td>
+											<t t-esc="o.employee_id.iqama_expiy_date"/>
+										</td>
+									</tr>
+								</t>
+							</tbody>
+						</table>
+					</div>
+				</t>
+			</t>
+		</template>
+
+
+        <record id="employee_iqama_report_act" model="ir.actions.report">
+            <field name="model">employee.iqama.renewal.line</field>
+            <field name="name">Saudi Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_base_reports.employee_iqama_report</field>
+            <field name="report_file">hr_base_reports.employee_iqama_report</field>
+        </record>
+        <record id="employee_iqama_report_act_xlsx" model="ir.actions.report">
+            <field name="model">employee.iqama.renewal.line</field>
+            <field name="name">Saudi Report</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_base_reports.employee_iqama_report_xlsx</field>
+            <field name="report_file">hr_base_reports.employee_iqama_report_xlsx</field>
+        </record>
+    </data>
+</odoo>

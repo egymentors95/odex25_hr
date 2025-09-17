@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="hr_lateness_reasons_action">
+            <field name="name">Lateness/Exit Reasons</field>
+            <field name="res_model">hr.reasons.lateness</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record id="hr_lateness_tree_view" model="ir.ui.view">
+            <field name="name">lateness reason</field>
+            <field name="model">hr.reasons.lateness</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <group>
+                    <field name="employee_no" string="Employee Number"/>
+                    <field name="employee_id" string="Employee"/>
+                    <field name="department_id" string="Department"/>
+                    <field name="job_id" string="Job"/>
+                    <field name="request_date" string="Request Date"/>
+                    <field name="latest_date" string="lateness Date"/>
+                    <field name="reasons" string="Reasons"/>
+                    <field name="state" string="State"/>
+                </group>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="employee_lateness_reasons_form_view">
+            <field name="name">Lateness/Exit Reasons</field>
+            <field name="model">hr.reasons.lateness</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="button_submit" string="Send" class="oe_highlight" type="object"
+                                states="draft" groups="base.group_user"/>
+
+                        <button name="direct_manager" string="Direct Manager" class="oe_highlight" type="object"
+                                states="send" groups="hr_base.group_division_manager"/>
+                        <button name="refused" string="Refused" class="oe_highlight" type="object"
+                                states="send" groups="hr_base.group_division_manager"/>
+
+                        <button name="hr_manager" string="HR Manager" class="oe_highlight" type="object"
+                                states="direct_manager" groups="hr.group_hr_user"/>
+                        <button name="refused" string="Refused" class="oe_highlight" type="object"
+                                states="direct_manager" groups="hr.group_hr_user"/>
+
+                        <button name="set_to_draft" string="Set To Draft" class="oe_highlight" type="object"
+                                states="refused,hr_manager" groups="hr.group_hr_user" confirm="Are you sure to Reset To Draft This Record?"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,send,direct_manager,hr_manager,refused"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="request_date" string="Request Date" readonly="1" />
+                                <field name="latest_date" string="lateness Date" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="reasons" string="Reasons" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                 <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="from_hr_depart" string="Another Employee"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="employee_id" string="Employee"
+                                       attrs="{'readonly': ['|',('from_hr_depart','=',False),('state','!=','draft')],'required':True}"/>
+                                <field name="employee_no" string="Employee Number" readonly="1"/>
+                                <field name="department_id" string="Department" required="1" readonly="1"/>
+                                <field name="job_id" string="Job" required="1" readonly="1"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Attendance_Register_filter -->
+        <record id="hr_reasons_lateness_filter" model="ir.ui.view">
+            <field name="name">Lateness/Exit Reasons</field>
+            <field name="model">hr.reasons.lateness</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search>
+                  <field name="employee_id"/>
+                  <field name="employee_no"/>
+                  <field name="department_id" />
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <!--filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/-->
+                        <filter name="group_branch" string="Branch" domain="[]" context="{'group_by': 'is_branch'}"/>
+                        <filter name="group_state" string="State" domain="[]" context="{'group_by': 'state'}"/>
+                    </group>
+                    <!--separator/>
+                        <filter string="My Attendance" name="my_attendance" domain="[('employee_id.user_id', '=', uid)]"/>
+                    <separator/-->
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

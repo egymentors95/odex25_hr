@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="employee_request_list_action">
+            <field name="name">Employee Effective Form</field>
+            <field name="res_model">employee.effective.form</field>
+            <field name="view_mode">tree,form,calendar</field>
+        </record>
+
+        <record model="ir.ui.view" id="view_request_effective_calendar">
+            <field name="name">employee.effective.form.calendar</field>
+            <field name="model">employee.effective.form</field>
+            <field name="arch" type="xml">
+                <calendar string="Employee Effective Form" date_start="effective_form_date" color="effective_form_date">
+
+                    <field name="effective_form_date" type="measure"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_request_effective_form_view">
+            <field name="name">Employee Request Effective</field>
+            <field name="model">employee.effective.form</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="submit" string="Submit" class="oe_highlight" type="object"
+                                states="draft"
+                                groups="base.group_user"/>
+                        <button name="direct_manager" string="Direct Manager Approve" class="oe_highlight" type="object"
+                                states="submit"
+                                groups="hr_base.group_division_manager"/>
+                        <button name="refused" string="Refused" class="oe_highlight" type="object"
+                                states="submit"
+                                groups="hr_base.group_division_manager"/>
+                        <button name="hr_manager" string="HR M Approve" class="oe_highlight" type="object"
+                                states="direct_manager"
+                                groups="hr.group_hr_user"/>
+                        <button name="refused" string="Refused" class="oe_highlight" type="object"
+                                states="direct_manager"
+                                groups="hr.group_hr_user"/>
+                        <button name="done" string="done" class="oe_highlight" type="object"
+                                states="hr_manager"
+                                groups="hr_base.group_general_manager,hr_base.group_executive_manager"/>
+                        <button name="refused" string="Refused" class="oe_highlight" type="object"
+                                states="hr_manager"
+                                groups="hr_base.group_general_manager,hr_base.group_executive_manager"/>
+                        <button name="draft_state" string="RE-Draft" class="oe_highlight" type="object"
+                                states="refused,done"
+                                groups="hr.group_hr_user" confirm="Are you sure to Reset To Draft This Record?"/>
+
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="from_hr" string="Another Employee" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="employee_id" string="Employee" groups="hr.group_hr_user,hr_base.group_division_manager"
+                                       attrs="{'readonly': ['|',('from_hr','=',False),('state','!=','draft')],'required':True}"/>
+                                <field name="employee_no" string="Employee Number" readonly="1"/>
+                                <field name="contract_id" string="Contract" readonly="True" groups="hr.group_hr_user"/>
+                                <field name="job_id" string="Job Name" readonly="True"/>
+                                <field name="department_id" string="Department" readonly="True"/>
+                                <!--field name="employee_salary" string="Salary" readonly="True"
+                                       attrs="{'invisible':[('effective_form_type','=','return_from_leave')]}"/>
+                                <field name="employee_house_all" string="House expends " readonly="True"
+                                       attrs="{'invisible':[('effective_form_type','=','return_from_leave')]}"/>
+
+                                <field name="total_salary" string="Total Salary" readonly="True"
+                                       attrs="{'invisible':[('effective_form_type','=','return_from_leave')]}"/-->
+                            </group>
+                            <group>
+                                <field name="company_id" groups="base.group_multi_company" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                                <field name="effective_form_type" string="Form Type" readonly="True" invisible="1"/>
+                                <field name="contract_start" string="Contract Start Date" />
+                                <field name="effective_form_date" string="Effective Form Date" required="True"
+                                       attrs="{'readonly':[('state','not in',('draft'))]}"/>
+                            </group>
+                            <group>
+                                <field name="remarks" string="Remarks" attrs="{'readonly':[('state','!=','draft')]}" groups="hr.group_hr_user"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_request_effective_tree_view">
+            <field name="name">Employee Request Effective</field>
+            <field name="model">employee.effective.form</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'refused'" decoration-info="state == 'draft'" string="Employee Request Effective">
+                    <field name="employee_no" string="Employee Number"/>
+                    <field name="employee_id" string="Employee"/>
+                    <field name="department_id" string="Department"/>
+                    <field name="contract_start" string="Contract Start Date"/>
+                    <field name="effective_form_date" string="Effective Form Date"/>
+                    <field name="state" string="Status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--employee_effective_form_filter -->
+        <record id="employee_effective_form_filter" model="ir.ui.view">
+            <field name="name">Employee Request Effective</field>
+            <field name="model">employee.effective.form</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search>
+                  <field name="employee_id"/>
+                  <field name="employee_no"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                    </group>
+
+                </search>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

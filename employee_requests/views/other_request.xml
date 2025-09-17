@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="employee_other_request_action" model="ir.actions.act_window">
+            <field name="name">Employee Other Request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.other.request</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name= "context">{"search_default_my_request":1}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    Employee Other Request
+                </p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_employee_other_request_calendar">
+            <field name="name">employee.other.request.calendar</field>
+            <field name="model">employee.other.request</field>
+            <field name="arch" type="xml">
+                <calendar string="Employee Other Request" date_start="date" color="date">
+
+                    <field name="date" type="measure"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record id="employee_other_request_form_view" model="ir.ui.view">
+            <field name="name">employee.other.request.form.view</field>
+            <field name="model">employee.other.request</field>
+            <field name="arch" type="xml">
+                <form string="Employee Other Request">
+                    <header>
+                        <button name="submit" string="Submit" class="oe_highlight" states="draft" type="object"/>
+
+                        <button name="confirm" string="Direct Manager Approve" class="oe_highlight" states="submit"
+                                type="object" groups="hr_base.group_division_manager"/>
+                        <button name="direct_manager_refused" string="Refuse" class="oe_highlight" states="submit" type="object"
+                                groups="hr_base.group_division_manager"/>
+
+                        <button name="approved" string="HR Approval" class="oe_highlight" states="confirm" type="object"
+                                groups="hr.group_hr_user"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" states="confirm"
+                                type="object" groups="hr.group_hr_user"/>
+
+                        <button name="draft" string="RE-Draft" class="oe_highlight" states="approved,refuse" type="object"
+                                groups="hr.group_hr_user" confirm="Are you sure to Reset To Draft This Record?"/>
+
+
+
+                        <button name="print_with_details" string="Print With Details" type="object" id="with_details"
+                                attrs="{'invisible': ['|','|',('request_type', '!=', 'salary_define'),('state', '!=', 'approved'),
+                                                      ('print_type', '!=', 'detail')]}"
+                                class="oe_highlight" groups="base.group_user"/>
+
+                        <button name="print_with_details2" string="Print Without Details" type="object"
+                                id="with_details2"
+                                attrs="{'invisible': ['|','|',('request_type', '!=', 'salary_define'),('state', '!=', 'approved'),
+                                                      ('print_type', '!=', 'no_detail')]}"
+                                class="oe_highlight" groups="base.group_user"/>
+
+                        <button name="print_with_details3" string="Print Without Salary" type="object"
+                                id="with_details2" class="oe_highlight"
+                                attrs="{'invisible': ['|','|',('request_type', '!=', 'salary_define'),('state', '!=', 'approved'),
+                                                      ('print_type', '!=', 'no_salary')]}"/>
+
+                        <button name="print_salary_confirmation" string="Print Salary Confirmation" type="object"
+                                id="with_details2"
+                                attrs="{'invisible': ['|',('request_type', '!=', 'salary_fixing'),('state', '!=', 'approved')]}"
+                                class="oe_highlight" groups="base.group_user"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft,confirm,approved,refuse"
+                               statusbar_colors="{'KEY_IS_STATE':'VALUE_IS_COLOR'}"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="from_hr" string="Another Employee"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="employee_id" string="Employee Name"
+                                       attrs="{'readonly': ['|',('from_hr','=',False),('state','!=','draft')],'required':True}"/>
+                                <field name="employee_no" string="Employee Number" readonly="1"/>
+
+                                <field name="department_id" string="Department"/>
+                                <field name="job_id" string="Job"/>
+                                <!--field name="type_contract" string="Type Of Contract" /-->
+                                <!--<field name="salary_attachment" string="Salary Attachment" widget="many2many_binary" class="oe_inline"-->
+                                <!--attrs="{'invisible': ['|',('type_contract', '=', 'self_employment'),('state', 'not in', ('confirm','approved'))],-->
+                                <!--'readonly': [('state', '!=', 'confirm')]}"/>-->
+                                <field name="contract_statuss" string="Contract Status"/>
+
+                            </group>
+                            <group>
+                                <field name="company_id" groups="base.group_multi_company"
+                                       attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                                <field name="date" string="Date Request" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="request_type" string="Request type" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="create_insurance_request"
+                                       attrs="{'invisible':[('request_type','!=','dependent')]}"/>
+                                <field name="parent_request_id" attrs="{'invisible':['|',('parent_request_id','=','False'),
+                                ('request_type','!=','insurance')]}" readonly="1"/>
+                                <field name="destination" attrs="{'invisible': [('request_type', 'not in', ('salary_define','salary_fixing'))],
+                                                                  'required': [('request_type', 'in', ('salary_define','salary_fixing'))],
+                                                                  'readonly': [('state', '!=', 'draft')]}"/>
+
+
+
+<!--                                <field name="classification_id" string="Classification"  required="1"/>-->
+                                <field name="classification_id"  string="التصنيف"
+                                       attrs="{'invisible': [('request_type', 'not in',  ('suggestion','complaint'))],'required': [('request_type', 'in', ('suggestion','complaint'))],
+                                                                  }"/>
+
+
+
+                                <field name="print_type" attrs="{'invisible': [('request_type', '!=',  'salary_define')], 'required': [('request_type', '=',  'salary_define')],
+                                      'readonly': [('state', '!=', 'draft')]}"/>
+                                <!--field name="new_department_id" string="New department"
+                                       attrs="{'readonly':[('state','!=','draft')],
+                                       'invisible':[('request_type','not in',['department','both'])],
+                                       'required':[('request_type','in',['department','both'])]}"/>
+                                <field name="new_job_id" string="New job"
+                                       attrs="{'readonly':[('state','!=','draft')],
+                                       'invisible':[('request_type','not in',['job','both'])],
+                                       'required':[('request_type','in',['job','both'])]}"/-->
+                            </group>
+                        </group>
+                        <separator string="Comment"/>
+                        <field name="comment" string="Comment" attrs="{'readonly':[('state','!=','draft')]}"/>
+                        <separator string="Dependants" attrs="{'invisible':[('request_type','!=','dependent')]}"/>
+                        <field name="employee_dependant"
+                               attrs="{'invisible':[('request_type','!=','dependent')],'readonly':[('state','!=','draft')]}">
+                            <tree string="Employee Dependants" editable="bottom">
+                                <field name="name" required="1"/>
+                                <field name="age" required="1"/>
+                                <field name="gender" required="1"/>
+                                <field name="relation" required="1"/>
+                                <field name="passport_no" required="1"/>
+                                <field name="nationality" string="Nationality" required="1"/>
+                                <field name="birthday" string="BirthDay" required="1"/>
+                                <field name="attachment" string="Attachment" class="oe_inline"
+                                       widget="many2many_binary"/>
+                                <field name="contract_id" invisible="1"/>
+                            </tree>
+                            <form string="Create Employee Dependants">
+                                <group>
+                                    <group>
+                                        <field name="name" required="1"/>
+                                        <field name="birthday" required="1"/>
+                                        <field name="relation" required="1"/>
+                                        <field name="passport_no"/>
+                                        <field name="passport_issue_date"/>
+                                    </group>
+                                    <group col="2">
+                                        <field name="age" required="1"/>
+                                        <field name="gender" required="1"/>
+                                        <field name="nationality" required="1"/>
+                                        <field name="identity_num" required="1"/>
+                                        <field name="passport_expire_date"/>
+                                        <!--field name="degree_medical_insu"  />
+                                        <field name="medical_insurance_num" /-->
+                                        <field name="attachment" string="Attachment"
+                                               class="oe_inline"/>
+                                        <!--                                            <field name="attachment" string="Attachment"-->
+                                        <!--                                              widget="many2many_binary" class="oe_inline"/>-->
+                                    </group>
+
+                                </group>
+                            </form>
+                        </field>
+
+                        <separator string="Qualification"
+                                   attrs="{'invisible':[('request_type','!=','qualification')]}"/>
+                        <field name="qualification_employee"
+                               attrs="{'invisible':[('request_type','!=','qualification')],'readonly':[('state','!=','draft')]}">
+                            <tree editable="bottom">
+                                <field name="uni_name" required="1"/>
+                                <field name="col_name" required="1"/>
+                                <field name="qualification_id" string="Qualification Name" required="1"/>
+                                <field name="qualification_specification_id" string="Qualification Specification"
+                                       required="1"/>
+                                <field name="qualification_degree" string="Qualification Degree" required="1"/>
+                                <field name="comp_date" required="1"/>
+                                <!--field name="contact_name"/>
+                                <field name="contact_phn" widget="phone"/>
+                                <field name="contact_email" widget="email"/-->
+                                <field name="country_name" string="Country"/>
+                                <field name="attachment" string="Attachment" widget="binary"/>
+                            </tree>
+
+                        </field>
+
+                        <separator string="Certification"
+                                   attrs="{'invisible':[('request_type','!=','certification')],'readonly':[('state','!=','draft')]}"/>
+                        <field name="certification_employee"
+                               attrs="{'invisible':[('request_type','!=','certification')],'readonly':[('state','!=','draft')]}">
+                            <tree string='Certification' editable="bottom">
+                                <field name="car_name"/>
+                                <field name="certification_specification_id" string="Certification Specification"
+                                       required="1"/>
+                                <field name="issue_org"/>
+                                <field name="certification_degree" string="Certification Degree"/>
+                                <field name="issue_date" required="1"/>
+                                <field name="exp_date"/>
+                                <field name="regis_no"/>
+                                <!--field name="contact_name" />
+                                <field name="contact_phn"  widget="phone"/>
+                                <field name="contact_email"  widget="email"/-->
+                                <field name="country_name" string="Country"/>
+                                <field name="attachment" string="Attachment" widget="binary"/>
+                            </tree>
+
+                        </field>
+                    </sheet>
+
+
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="employee_other_request_tree_view" model="ir.ui.view">
+            <field name="name">employee.other.request.tree.view</field>
+            <field name="model">employee.other.request</field>
+            <field name="arch" type="xml">
+                <tree decoration-info="state == 'draft'" string="Employee Other Request">
+                    <field name="employee_no" string="Employee Number"/>
+                    <field name="employee_id" string="Employee Name"/>
+                    <field name="department_id" string="Department"/>
+                    <field name="job_id" string="Job"/>
+                    <field name="date" string="Date"/>
+                    <field name="request_type" string="Request Type"/>
+                    <field name="state" string="State"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Other_request_filter -->
+        <record id="employee_other_request_filter" model="ir.ui.view">
+            <field name="name">Employee Other Request</field>
+            <field name="model">employee.other.request</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="employee_id"/>
+                    <field name="employee_no"/>
+                    <field name="department_id" />
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                        <filter name="group_branch" string="Branch" domain="[]" context="{'group_by': 'is_branch'}"/>
+                        <filter name="group_state" string="State" domain="[]" context="{'group_by': 'state'}"/>
+                    </group>
+                    <separator/>
+                    <filter string="My Requests" name="my_request" domain="[('employee_id.user_id', '=', uid)]"/>
+                    <separator/>
+                </search>
+            </field>
+        </record>
+
+
+
+        <record id="view_hr_classification_form" model="ir.ui.view">
+            <field name="name">hr.classification.form</field>
+            <field name="model">hr.classification</field>
+            <field name="arch" type="xml">
+                <form string="تصنيفات المقترحات والشكاوي">
+                    <sheet>
+                        <group>
+                            <field name="name" string="الاسم"/>
+                            <field name="active" string="نشط"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="employee_hr_classification_actionn">
+            <field name="name">تصنيفات المقترحات والشكاوي</field>
+            <field name="res_model">hr.classification</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+        <menuitem name="اعداد التصنيف " id="hr_classification_menu_item"
+                  parent="hr.hr_menu_configuration"
+                  action="employee_hr_classification_actionn"
+        />
+
+    </data>
+</odoo>

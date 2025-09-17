@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="employee_overtime_request_list_action">
+            <field name="name">Employee OverTime Request</field>
+            <field name="res_model">employee.overtime.request</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name= "context">{"search_default_my_request":1}</field>		
+        </record>
+
+        <record model="ir.ui.view" id="view_overtime_calendar">
+            <field name="name">employee.overtime.request.calendar</field>
+            <field name="model">employee.overtime.request</field>
+            <field name="arch" type="xml">
+                <calendar string="Employee Overtime Request" date_start="request_date" color="request_date">
+
+                    <field name="request_date" type="measure"/>
+                </calendar>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_overtime_request_form_view">
+            <field name="name">Employee Overtime Request</field>
+            <field name="model">employee.overtime.request</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>f
+                        <button name="submit" string="Submit" class="oe_highlight" type="object"
+                                states="draft" groups="base.group_user"/>
+
+                        <button name="direct_manager" string="Direct Manager Approve" class="oe_highlight" type="object"
+                                states="submit" groups="hr_base.group_division_manager"/>
+                        <button name="direct_manager_refused" string="Refuse" class="oe_highlight" type="object"
+                                states="submit" groups="hr_base.group_division_manager"/>
+
+                        <button name="financial_manager" string="Department Manager" class="oe_highlight" type="object"
+                                states="direct_manager" groups="hr_base.group_department_manager"/>
+                        <button name="dep_manager_refused" string="Refuse" class="oe_highlight" type="object"
+                                states="direct_manager" groups="hr_base.group_department_manager"/>
+
+                        <button name="hr_aaproval" string="HR Approval" class="oe_highlight" type="object"
+                                states="financial_manager" groups="hr.group_hr_user, hr.group_hr_manager"/>
+                        <button name="refused" string="Refuse" class="oe_highlight" type="object"
+                                states="financial_manager" groups="hr.group_hr_user, hr.group_hr_manager"/>
+
+                        <button name="executive_office" string="Executive Approval" class="oe_highlight" type="object"
+                                groups="hr_base.group_general_manager,hr_base.group_executive_manager"
+                                attrs="{'invisible':['|',('state','!=','hr_aaproval'),('exception','!=',True)]}"/>
+                        <button name="refused" string="Refuse" class="oe_highlight" type="object"
+                                groups="hr_base.group_general_manager,hr_base.group_executive_manager"
+                                attrs="{'invisible':['|',('state','!=','hr_aaproval'),('exception','!=',True)]}"/>
+
+                        <button name="validated" string="Approval" class="oe_highlight" type="object"
+                                groups="hr_base.group_services_manager"
+                                states="executive_office"/>
+                        <button name="refused" string="Refuse" class="oe_highlight" type="object"
+                                states="executive_office" groups="hr_base.group_services_manager"/>
+
+                        <button name="re_draft" string="RE-Draft" class="oe_highlight" type="object"
+                                states="refused,validated"
+                                groups="hr.group_hr_user" confirm="Are you sure to Reset To Draft This Record?"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="transfer_type" attrs="{'readonly':[('state','!=','financial_manager')], 'required': [('state', '=', 'financial_manager')]}"/>
+                                <field name="employee_id" string="Responsible " required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="employee_no" string="Employee Number" readonly="1"/>
+
+                                <field name="date_from" string="Date From"
+                                       attrs="{'readonly':[('state','not in',('financial_manager','draft','submit'))], 'required': [('state', 'in', ('financial_manager','draft','submit'))]}"/>
+                                <field name="date_to" string="Date To"
+                                       attrs="{'readonly':[('state','not in',('financial_manager','draft','submit'))], 'required': [('state', 'in', ('financial_manager','draft','submit'))]}"/>
+                                <field name="benefits_discounts"
+                                       attrs="{'invisible':[('transfer_type','!=','payroll')], 'readonly':[('state','!=','financial_manager')], 'required': [('transfer_type', '=', 'payroll'),('state','=','financial_manager')]}"/>
+                            </group>
+                            <group>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                                <field name="request_date" string="Request Date" required="1" readonly="1"/>
+                                <field name="department_id" string="Department" attrs="{'readonly':[('state','not in',('submit','draft'))]}"/>
+
+                                <field name="overtime_plase" string="Overtime Plase" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+                                <field name="reason" string="Reason" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="exception" groups="hr_base.group_executive_manager,hr.group_hr_user" attrs="{'readonly':[('state','!=','draft')]}"/>
+
+                                <!--field name="journal_id" string="Journal"
+                                       attrs="{'invisible':[('transfer_type','!=','accounting')], 'readonly':[('state','!=','executive_office')], 'required': [('state', '=', 'executive_office'),('transfer_type','=','accounting')]}" force_save="1"/>
+                                <field name="account_id" string="Account"
+                                       attrs="{'invisible':[('transfer_type','!=','accounting')], 'readonly':[('state','!=','executive_office')], 'required': [('state', '=', 'executive_office'),('transfer_type','=','accounting')]}" force_save="1"/-->
+
+                            </group>
+                        </group>
+                        <separator string="Employees Over Time"/>
+                        <field name="line_ids_over_time"  force_save="1"
+                               attrs="{'readonly':[('state','not in',('submit','draft'))], 'required': [('state', '=', 'hr_aaproval')]}">
+                            <tree string="Employee Over Time" editable="bottom">
+                                <field name="employee_id"/>
+                                <field name="transfer_type"  invisible='1' string="Transfer Type"/>
+                                <field name="account_id" string="Account" groups="hr_base.group_account_manager" force_save="1" readonly="1"
+                                                   attrs="{'invisible':[('transfer_type','!=','accounting')]}" invisible='1'/>
+                                <field name="journal_id" string="Journal" groups="hr_base.group_account_manager" force_save="1" readonly="1"
+                                                   attrs="{'invisible':[('transfer_type','!=','accounting')]}" invisible='1'/>
+                                <!--field name="calculate_from_total"  groups="hr.group_hr_user"/-->
+                                <field name="exception" readonly="1" invisible='1'/>
+                                <field name="remaining_hours" force_save="1" readonly="1"/>
+                                <field name="max_hours" force_save="1" readonly="1"/>
+                                <field name="over_time_workdays_hours" />
+                                <field name="over_time_vacation_hours"/>
+                                <field name="daily_hourly_rate" groups="hr_base.group_account_manager,hr.group_hr_user"/>
+                                <field name="holiday_hourly_rate" groups="hr_base.group_account_manager,hr.group_hr_user"/>
+                                <field name="price_hour" groups="hr_base.group_account_manager,hr.group_hr_user"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_overtime_request_tree_view">
+            <field name="name">Employee Overtime Request</field>
+            <field name="model">employee.overtime.request</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'refused'" decoration-info="state == 'draft'" string="Employee Overtime Request">
+                    <field name="employee_no" string="Employee Number"/>
+                    <field name="employee_id" string="Responsible"/>
+                    <field name="department_id" string="Department"/>
+                    <field name="request_date" string="Request Date"/>
+                    <field name="date_from" string="Date From"/>
+                    <field name="date_to" string="Date To"/>
+                    <field name="state" string="Status"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--employee_overtime_filter -->
+        <record id="employee_overtime_request_filter" model="ir.ui.view">
+            <field name="name">Employee OverTime Request</field>
+            <field name="model">employee.overtime.request</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search>
+                  <field name="employee_id"/>
+                  <field name="employee_no"/>
+                  <field name="department_id" />
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                        <filter name="group_branch" string="Branch" domain="[]" context="{'group_by': 'is_branch'}"/>
+                        <filter name="group_state" string="State" domain="[]" context="{'group_by': 'state'}"/>
+                    </group>
+                    <separator/>
+                        <filter string="My Requests" name="my_request" domain="[('employee_id.user_id', '=', uid)]"/>
+                    <separator/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

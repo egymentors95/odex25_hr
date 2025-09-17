@@ -1,0 +1,131 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="authority_delegation_tree">
+            <field name="name">authority.delegation.tree</field>
+            <field name="model">authority.delegation</field>
+            <field name="arch" type="xml">
+                <tree string="Authority Delegation">
+                    <field name="delegator_id"/>
+                    <field name="delegate_id"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="authority_delegation_form_view" model="ir.ui.view">
+            <field name="name">Authority Delegation</field>
+            <field name="model">authority.delegation</field>
+            <field name="arch" type="xml">
+                <form string="Authority Delegation">
+                    <header>
+                        <field name="is_delegator" invisible="1"/>
+                        <field name="is_delegate" invisible="1"/>
+                        <button name="submit" string="Submit" class="oe_highlight" type="object"
+                                states="draft"
+                                groups="hr.group_hr_user"/>
+
+                        <button name="delegator_approve" string="Approve Delegator" class="oe_highlight" type="object"
+                                 attrs="{'invisible': ['|',('state', '!=', 'delegator_review'),
+                                 ('is_delegator', '!=', True)]}"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object"
+                                 confirm="Are you sure to refuse This Record?"
+                                attrs="{'invisible': ['|',('state', '!=', 'delegator_review'),
+                                 ('is_delegator', '!=', True)]}" />
+
+                        <button name="direct_manager_approve" string="Direct Manager" class="oe_highlight" type="object"
+                                states="direct_manager" groups="hr_base.group_division_manager"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object"
+                                 confirm="Are you sure to refuse This Record?"
+                         states="direct_manager" groups="hr_base.group_division_manager"  />
+
+                        <button name="delegate_approve" string="Approve Delegate" class="oe_highlight" type="object"
+                               />
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object"
+                                 confirm="Are you sure to refuse This Record?"
+                                attrs="{'invisible': ['|',('state', '!=', 'delegate_review'),
+                                 ('is_delegate', '!=', True)]}"/>
+
+                        <button name="approve" string="HR Approve" class="oe_highlight" type="object"
+                                groups="hr.group_hr_user"
+                                states="hr_review"/>
+                        <button name="refuse" string="Refuse" class="oe_highlight" type="object"
+                                 confirm="Are you sure to refuse This Record?"
+                                groups="hr.group_hr_user"
+                                states="hr_review"/>
+                        <button string="Reset To Draft"  name="reset_to_draft" class="oe_highlight"
+                                 confirm="Are you sure to Rest To Draft This Record?"
+                                states="refused,approved" type="object" groups="hr.group_hr_user" />
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="delegator_name"  readonly="1"/>
+                                <field name="date_from"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="comments"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="delegate_name"  readonly="1"/>
+                                <field name="date_to"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+
+                        </group>
+                            <notebook>
+                                <page string="Groups" name="group">
+                                        <field name="group_ids" no_label="1"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                                </page>
+                                <page string="Delegation Access" name="model_config">
+                                        <field name="delegation_line_ids"
+                                               attrs="{'readonly':[('state','!=','draft')]}"
+                                               no_label="1" >
+                                                <tree editable="bottom">
+                                                    <field name="res_model" invisible="1" />
+                                                    <field name="model_configuration_id" />
+                                                    <field name="action_id" domain="[('res_model', '=', res_model)]" />
+                                                </tree>
+                                        </field>
+                                </page>
+                            </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="authority_delegation_form_view_inherit" model="ir.ui.view">
+            <field name="name">Authority Delegation</field>
+            <field name="model">authority.delegation</field>
+			<field name="inherit_id" ref="authority_delegation_form_view" />
+			<field name="groups_id" eval="[(6, 0, [ref('hr.group_hr_user'),ref('hr_base.group_division_manager')])]"/>
+            <field name="arch" type="xml">
+                <field name="delegate_name" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="delegator_name" position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+                <field name="delegate_name" position="before">
+                        <field name="delegate_id"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                        <field name="department_delegate" string="Delegate Department" />
+                </field>
+                <field name="delegator_name" position="before">
+                        <field name="delegator_id"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                        <field name="department_delegator" string="Delegator Department" />
+                </field>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="authority_delegation_action">
+            <field name="name">Authority Delegation</field>
+            <field name="res_model">authority.delegation</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Authority Delegation" id="authority_delegation_menu"
+                  parent="employee_requests.employee_request_menu_item"
+                  sequence="7"
+                  action="authority_delegation_action"/>
+    </data>
+</odoo>

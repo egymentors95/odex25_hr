@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="hr_promotion_setting_form_view" model="ir.ui.view">
+            <field name="name">Promotion Setting Form</field>
+            <field name="model">hr.payroll.promotion.setting</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet string="Promotion Setting">
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Name ... " />
+                            </h1>
+                        </div>
+                        <group col="1">
+                            <group col="4" >
+                                <field name="date_from"/>
+                                <field name="active"/>
+                                <field name="date_to"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Uncounted Experience" name="uncounted_exp">
+                                <group col="2">
+                                    <field name="excluded_leave_ids" widget="many2many_tags"/>
+                                    <field name="excluded_penalty_ids" widget="many2many_tags"/>
+                                </group>
+                            </page>
+                            <page string="Promotion Deterrent" name="deterrent_exp">
+                                <group col="4">
+                                    <field name="deterrent_evaluation_id"/>
+                                    <field name="deterrent_delegation_period"/>
+                                    <field name="deterrent_leave_ids" widget="many2many_tags"/>
+                                    <field name="deterrent_violation_ids" widget="many2many_tags"/>
+                                    <label for="deterrent_penalty_ids"/>
+                                    <field name="deterrent_penalty_ids" nolabel="1" colspan="4">
+                                        <tree editable="top">
+                                            <field name="penalty_id"/>
+                                            <field name="days"/>
+                                            <field name="active_years"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Constrained Groups" name="constrained_group">
+                                <group>
+                                    <label for="current_group_ids"/>
+                                    <field name="current_group_ids" nolabel="1" colspan="4">
+                                        <tree editable="top">
+                                            <field name="group_id"/>
+                                            <field name="active_years"/>
+                                        </tree>
+                                    </field>
+                                    <label for="previous_group_ids"/>
+                                    <field name="previous_group_ids" nolabel="1" colspan="4">
+                                        <tree editable="top">
+                                            <field name="group_id"/>
+                                            <field name="prv_group_no"/>
+                                            <field name="years"/>
+                                            <field name="total_years"/>
+                                        </tree>
+                                    </field>
+                                </group>
+                            </page>
+                            <page string="Exceptional Promotion">
+                                <group col="4" >
+                                    <group colspan="2">
+                                        <field name="max_age"/>
+                                        <field name="current_group_years"/>
+                                        <field name="last_evaluation_id"/>
+                                    </group>
+                                    <group colspan="2">
+                                        <field name="max_nominees_no"/>
+                                        <field name="max_exceptional_nomination"/>
+                                    </group>
+                                    <group colspan="2">
+                                        <field name="exceptional_timeframe"/>
+                                        <field name="regular_timeframe"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_promotion_setting_tree_view">
+            <field name="name">Promotion Setting Tree</field>
+            <field name="model">hr.payroll.promotion.setting</field>
+            <field name="arch" type="xml">
+                <tree string="Promotion Setting">
+                    <field name="name"/>
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <field name="active"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hr_promotion_setting_action">
+            <field name="name">Promotion Setting</field>
+            <field name="res_model">hr.payroll.promotion.setting</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="hr_promotion_setting_menu"
+                  name="Promotion Setting"
+                  parent="exp_payroll_promotion.hr_payroll_promotion_root"
+                  sequence="8"
+                  action="hr_promotion_setting_action"/>
+
+    </data>
+</odoo>

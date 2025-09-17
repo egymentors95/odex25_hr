@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+        <record id="salary_scale_level_degree_record_action" model="ir.actions.act_window">
+            <field name="name">Salary Scale Level Degree</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.payroll.structure</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('type','=','degree')]</field>
+            <field name="context">{'default_type':'degree', 'search_default_degree': 1}</field>
+            <field name="search_view_id" ref="salary_scale_filter_view"/>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <template id="report_employee_reward_template">
+
+            <t t-call="web.html_container">
+                <t t-call="hr_base.hr_layout">
+
+                    <style>
+                        @font-face {font-family: "Sakkal Majalla"; src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                        format("embedded-opentype"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype");
+                        }
+                    </style>
+
+                    <div style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:18pt">
+                        <h3 class="text-center">Employees Reward Report</h3>
+                        <h4 class="text-center">
+                            <strong style="color:#003c79">From</strong>:
+                            <span style="color:#999">
+                                <t t-esc="date_start"/>
+                            </span>
+                            <strong style="color:#003c79">To</strong>:
+                            <span style="color:#999">
+                                <t t-esc="date_end"/>
+                            </span>
+
+                        </h4>
+                    </div>
+
+                    <div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+                        <table class="table table-condensed table-bordered" style="width: 100%">
+                            <thead>
+                                <thead>
+                                    <th class="text-center" style="width: 20%;background:#263f79;color:#FFFFFF">Employee Number</th>
+                                    <th class="text-center" style="width: 20%;background:#263f79;color:#FFFFFF">Employee Name</th>
+                                    <th class="text-center" style="width: 20%;background:#263f79;color:#FFFFFF">Department Name</th>
+                                    <th class="text-center" style="width: 20%;background:#263f79;color:#FFFFFF">Job Title</th>
+                                    <th class="text-center" style="width: 20%;background:#263f79;color:#FFFFFF">Reward Reason</th>
+                                    <th class="text-center" style="width: 20%;background:#263f79;color:#FFFFFF">Amount</th>
+                                </thead>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="docs" t-as="doc">
+                                    <tr>
+                                        <td>
+                                            <span t-esc="doc['employee_no']"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="doc['employee_name']"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="doc['employee_depart']"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="doc['employee_job']"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="doc['rewrad_reason']"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="doc['amount']"/>
+                                        </td>
+
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

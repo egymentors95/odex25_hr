@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="employee_termination_report">
+             <t t-call="web.html_container" t-translation="off">
+            <t t-call="hr_base.hr_layout">
+                <style>
+                    @font-face {font-family: "Sakkal Majalla"; src:
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                    format("embedded-opentype"),
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"); }
+
+                </style>
+                <t t-foreach="docs" t-as="o">
+                <div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:13pt">
+
+                        <h3 style="text-align: center;">
+                            <strong>
+                                إحتساب مستحقات مخالصة نهائية
+                            </strong>
+                        </h3>
+                        <t t-set="total_allow" t-value="0"/>
+                        <t t-set="total_deduct" t-value="0"/>
+                        <table style="width:99%;border: 2px solid #DADADA;">
+                            <tr style="background-color: #eef0f0;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:49%;" colspan="3">
+                                    <span>
+                                        <strong>التاريخ: <t t-esc="o.current_date_hijri()"/></strong>
+                                    </span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:49%;" colspan="3">
+                                    <span>
+                                        <strong>الموافق: <t t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/></strong>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: #eef0f0;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="6">
+                                    <span>
+                                        <center>
+                                            <strong>(1) البيانات العامة</strong>
+                                        </center>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:33%;" colspan="2">
+                                    <span>
+                                        <strong>الاسم:</strong>
+                                    </span>
+                                    <span t-esc="o.employee_id.name"/>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:33%;" colspan="2">
+                                    <span>
+                                        <strong>رقم الموظف:</strong>
+                                    </span>
+                                    <span t-esc="o.employee_id.emp_no"/>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:33%;" colspan="2">
+                                    <span>
+                                        <strong>الإدارة:</strong>
+                                    </span>
+                                    <span t-esc="o.employee_id.department_id.name"/>
+                                </td>
+                            </tr>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:33%;" colspan="2">
+                                    <span>
+                                        <strong>مسمى الوظيفة:</strong>
+                                    </span>
+                                    <span t-esc="o.employee_id.job_id.name"/>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:33%;" colspan="2">
+                                    <span>
+                                        <strong>الجنسية:</strong>
+                                    </span>
+                                    <span t-esc="o.employee_id.country_id.name"/>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:33%;" colspan="2">
+                                    <span>
+                                        <strong>تاريخ التعيين:</strong>
+                                    </span>
+                                    <span t-esc="o.first_hire_date"/>
+                                </td>
+                            </tr>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:33%;" colspan="2">
+                                    <span>
+                                        <strong>تاريخ إنتهاء الخدمة:</strong>
+                                    </span>
+                                    <span t-esc="o.last_work_date"/>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:33%;" colspan="2">
+                                    <span>
+                                        <strong>نوع و مدة العقد:</strong>
+                                    </span>
+                                    <span t-if="o.contract_id.contract_description == 'locum'">مؤقت</span>
+                                    <span t-if="o.contract_id.contract_description == 'permanent'">دائم</span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:33%;" colspan="2">
+                                    <span>
+                                        <strong>سبب إنتهاء الخدمة:</strong>
+                                    </span>
+                                    <span t-esc="o.cause_type.name"/>
+                                </td>
+                            </tr>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="6">
+                                    <span>
+                                        <strong>متبقي رصيد الاجازة السنوية:</strong>
+                                    </span>
+                                    <span>
+                                        <span t-esc="o.leave_balance"/><span> يوم</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="6">
+                                    <span>
+                                        <strong>فترات خدمة مستبعدة:</strong>
+                                    </span>
+                                    <span>
+                                        <span t-esc="o.unpaid_year"/><span> سنة</span>
+                                        <span t-esc="o.unpaid_month"/><span> شهر</span>
+                                        <span t-esc="o.unpaid_day"/><span> يوم</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="6">
+                                    <span>
+                                        <strong>مدة الخدمة الكلية:</strong>
+                                    </span>
+                                    <span>
+                                        <span t-esc="o.service_year"/><span> سنة</span>
+                                        <span t-esc="o.service_month"/><span> شهر</span>
+                                        <span t-esc="o.service_day"/><span> يوم</span>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="6">
+                                    <span>
+                                        الأجر الذي سيتم إحتساب مكافأة نهاية الخدمة على أساسه
+                                        (<span t-esc="round(o.salary,2)"/>)
+                                        ريال سعودي.
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: #eef0f0;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="6">
+                                    <span>
+                                        <center>
+                                            <strong>(2) المستحقات المتبقية</strong>
+                                        </center>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:11%">
+                                    <span>
+                                        <strong>ريال سعودي</strong>
+                                    </span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="5">
+                                    <span>
+                                        <strong>البيان</strong>
+                                    </span>
+                                </td>
+                            </tr>
+                            <t t-foreach="o.allowance_deduction_ids" t-as="allow">
+                                <tr style="background-color: white;">
+                                    <t t-if="allow.category_id.rule_type == 'allowance' and allow.amount &gt; 0">
+                                        <td style="padding: 7px; border: 1px solid #DADADA;width:11%">
+                                            <span t-esc="round(allow.amount,2)"/>
+                                            <t t-set="total_allow" t-value="total_allow+allow.amount"/>
+                                        </td>
+                                        <td style="padding: 7px; border: 1px solid #DADADA;" colspan="5">
+                                            <span t-esc="allow.salary_rule_id.name"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </t>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:11%">
+                                    <span t-esc="round(total_allow,2)"/>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="5">
+                                    <span>إجمالي الاستحقاقات فقط:</span>
+                                    <span t-esc="o.amount_to_word(round(total_allow,2))"/>
+                                    <span>لا غير</span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: #eef0f0;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="6">
+                                    <span>
+                                        <center>
+                                            <strong>(3) الخصومات</strong>
+                                        </center>
+                                    </span>
+                                </td>
+                            </tr>
+                            <t t-foreach="o.allowance_deduction_ids" t-as="social">
+
+                                <tr>
+                                    <t t-if="social.category_id.rule_type == 'deduction' and social.salary_rule_id.rules_type !='termination' and not social.salary_rule_id.special">
+                                        <td style="padding: 7px; border: 1px solid #DADADA;width:11%">
+                                            <span t-esc="round(social.amount,2)"/>
+                                            <t t-set="total_deduct" t-value="total_deduct+social.amount"/>
+                                        </td>
+                                        <td style="padding: 7px; border: 1px solid #DADADA;" colspan="5">
+                                            <span t-esc="social.salary_rule_id.name"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </t>
+                            <t t-foreach="o.allowance_deduction_ids" t-as="deduct">
+                                <tr style="background-color: white;">
+                                    <t t-if="deduct.category_id.rule_type == 'deduction' and (deduct.salary_rule_id.rules_type =='termination' or deduct.salary_rule_id.special)">
+                                        <td style="padding: 7px; border: 1px solid #DADADA;width:11%">
+                                            <span t-esc="round(deduct.amount,2)"/>
+                                            <t t-set="total_deduct" t-value="total_deduct+deduct.amount"/>
+                                        </td>
+                                        <td style="padding: 7px; border: 1px solid #DADADA;" colspan="5">
+                                            <span t-esc="deduct.salary_rule_id.name"/>
+                                        </td>
+                                    </t>
+                                    <t t-if="deduct.category_id.rule_type == 'allowance' and deduct.amount &lt; 0">
+                                        <td style="padding: 7px; border: 1px solid #DADADA;width:11%">
+                                            <span t-esc="deduct.amount"/>
+                                            <t t-set="total_deduct" t-value="total_deduct+deduct.amount"/>
+                                        </td>
+                                        <td style="padding: 7px; border: 1px solid #DADADA;" colspan="5">
+                                            <span t-esc="deduct.salary_rule_id.name"/>
+                                        </td>
+                                    </t>
+                                </tr>
+                            </t>
+                            <t t-foreach="o.loans_ids" t-as="loan">
+                                <tr style="background-color: white;">
+                                    <td style="padding: 7px; border: 1px solid #DADADA;width:11%">
+                                        <span t-esc="round(loan.remaining_loan_amount,2)"/>
+                                        <t t-set="total_deduct" t-value="total_deduct+loan.remaining_loan_amount"/>
+                                    </td>
+                                    <td style="padding: 7px; border: 1px solid #DADADA;" colspan="5">
+                                        <span t-esc="loan.request_type.name"/>
+                                    </td>
+                                </tr>
+                            </t>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;width:11%">
+                                    <span t-esc="round(total_deduct,2)"/>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="5">
+                                    <span>إجمالي الخصومات فقط:</span>
+                                    <span t-esc="o.amount_to_word(round(total_deduct,2))"/>
+                                    <span>لا غير</span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: #eef0f0;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="6">
+                                    <span>
+                                        <center>
+                                            <strong>(4) صافي المستحقات</strong>
+                                        </center>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: white;">
+                                <strong>
+                                    <td style="padding: 7px; border: 1px solid #DADADA;width:11%">
+                                        <span t-esc="round(o.net,2)"/>
+                                    </td>
+                                    <td style="padding: 7px; border: 1px solid #DADADA;" colspan="5">
+                                        <span>الرصيد النهائي فقط:</span>
+                                        <span t-esc="o.amount_to_word(round(o.net,2))"/>
+                                        <span>لا غير</span>
+                                    </td>
+                                </strong>
+                            </tr>
+                            <tr style="background-color: #eef0f0;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;"></td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;">
+                                    <span>
+                                        <center>
+                                            <strong>إعداد: الموارد البشرية</strong>
+                                        </center>
+                                    </span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="2">
+                                    <span>
+                                        <center>
+                                            <strong>مراجعة: مدير الشئون المالية </strong>
+                                        </center>
+                                    </span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="2">
+                                    <span>
+                                        <center>
+                                            <strong>إعتماد: المدير التنفيذي</strong>
+                                        </center>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; background-color: #eef0f0;border: 1px solid #DADADA;">
+                                    <span>الإسم:</span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;">
+                                    <span></span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="2">
+                                    <span></span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="2">
+                                    <span></span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; background-color: #eef0f0;border: 1px solid #DADADA;">
+                                    <span>التوقيع:</span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;">
+                                    <span></span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="2">
+                                    <span></span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="2">
+                                    <span></span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; background-color: #eef0f0;border: 1px solid #DADADA;">
+                                    <span>التاريخ:</span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;">
+                                    <span></span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="2">
+                                    <span></span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="2">
+                                    <span></span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: #eef0f0;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="6">
+                                    <span>
+                                        <center>
+                                            <strong>(5) موافقة الموظف على صحة إحتساب المستحقات</strong>
+                                        </center>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr style="background-color: white;">
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="2">
+                                    <span>
+                                        <strong>الإسم:
+                                            <span t-esc="o.employee_id.name"/>
+                                        </strong>
+                                    </span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="2">
+                                    <span>
+                                        <strong>التوقيع:..................</strong>
+                                    </span>
+                                </td>
+                                <td style="padding: 7px; border: 1px solid #DADADA;" colspan="2">
+                                    <span>
+                                        <strong>التاريخ:..../..../........</strong>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </t>
+            </t>
+            </t>
+        </template>
+
+        <record id="act_employee_termination_report" model="ir.actions.report">
+            <field name="name">Termination Report</field>
+            <field name="model">hr.termination</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_termination.employee_termination_report</field>
+            <field name="report_file">hr_termination.employee_termination_report</field>
+            <field name="print_report_name">"'%s - مخالصة نهاية الخدمة' % (object.employee_id.name)"</field>
+              <field name="binding_model_id" ref="hr_termination.model_hr_termination"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="hr_view_form_inherit_permissions_holiday" model="ir.ui.view">
+            <field name="model">hr.personal.permission</field>
+            <field name="name">Employee permissions</field>
+            <field name="inherit_id" ref="employee_requests.employee_personal_permission_form_view"/>
+            <field name="priority">100</field>
+            <field name="arch" type="xml">
+                <field name="department_id" position="after">
+                    <field name="deduct_from_holiday" readonly='1'/>
+                    <field name="holiday" invisible="1"/>
+                    <field name="permission_amount" invisible="1"/>
+                </field>
+
+                <xpath expr="//field[@name='balance']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('deduct_from_holiday','=',True)]}</attribute>
+                </xpath>
+
+                <xpath expr="//field[@name='permission_number']" position="attributes">
+                    <attribute name="attrs">{'invisible':[('deduct_from_holiday','=',True)]}</attribute>
+                </xpath>
+
+            </field>
+        </record>
+
+        <!--record model="ir.ui.view" id="hr_view_tree_inherit_permissions_holiday">
+            <field name="name">Employee personal permission</field>
+            <field name="model">hr.personal.permission</field>
+            <field name="inherit_id" ref="employee_requests.employee_personal_permission_tree_view"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='duration']" position="after">
+                    <field name="deduct_from_holiday" string="Half Day Off"/>
+                </xpath>
+
+            </field>
+        </record-->
+
+       <!-- permission type -->
+        <record model="ir.ui.view" id="hr_personal_permission_type_view_form_inherit">
+            <field name="name">Permission Types</field>
+            <field name="model">hr.personal.permission.type</field>
+            <field name="inherit_id" ref="employee_requests.hr_personal_permission_type_view_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='approval_by']" position="after">
+                    <field name="half_holiday" string="Half Holiday"/>
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

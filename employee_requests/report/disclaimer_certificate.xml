@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <template id="disclaimer_certificate_report">
+            <t t-call="web.html_container" t-translation="off">
+                <t t-call="hr_base.hr_layout">
+                    <div class="page" style="font-size:18pt;direction:rtl">
+                         <style>
+                            @font-face {font-family: "Sakkal Majalla"; src: url("/exp_socpa_hr_report/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src: url("/exp_socpa_hr_report/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix") format("embedded-opentype"), url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"), url("/exp_socpa_hr_report/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"), url("/exp_socpa_hr_report/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"); }
+                        </style>
+                        <t t-foreach="docs" t-as="o">
+                            <br/>
+                            <br/>
+                            <div class="row"
+                                 style="margin-bottom: 10px;font-family: 'Sakkal Majalla'!important;font-size: 17pt;">
+
+                                <div class="row">
+                                    <span style="margin-right: 8%;">
+                                        التاريخ :
+                                    </span>
+                                    <span style="font-size: 18px;" t-esc="o.employee_id.change_current_date_hijri()"/>
+                                    <br/>
+                                    <span style="margin-right: 8%;">
+                                        الموافق :
+                                    </span>
+                                    <span t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d')"/>
+                                </div>
+                                <br/>
+
+                                <div class="row">
+                                    <p style="text-align: center;color:#204a87">
+                                        <strong>
+                                            شهادة إخلاء طرف
+                                        </strong>
+                                        <br/>
+                                    </p>
+                                    <br/>
+                                </div>
+                                <br/>
+                                <br/>
+
+
+                                <p style="text-align:justify;margin-right:6%;margin-left:6%;color:black; line-height: 1.7;">
+                                    <span style="color:black; font-weight: bold;">السلام عليكم ورحمة الله و بركاته:
+                                    </span>
+                                </p>
+
+                                <br/>
+                                <div>
+                                    <p style="text-align:justify;margin-right:6%;margin-left:6%;color:black; line-height: 1.7;">
+                                        تشهد
+                                        <span t-esc="o.employee_id.company_id.name"/>
+                                        بأن السيد /<span
+                                            t-field="o.employee_id.name"/>, يحمل بطاقة
+                                        أحوال رقم
+                                        <t t-if="o.employee_id.country_id.name == 'Saudi Arabia' or o.employee_id.country_id.name == 'المملكة العربية السعودية'">
+                                            <span t-field="o.employee_id.saudi_number.saudi_id"/>
+                                        </t>
+                                        <t t-else="">
+                                            <span t-field="o.employee_id.iqama_number.iqama_id"/>
+                                        </t>
+                                        و الذي تقدم بإستقالته في تاريخ
+                                        <span t-esc="o.date"/>
+                                        بأنه ليس للهيئة أي
+                                        إلتزامات عليه أو له خلال فترة عمله لدينا من تاريخ
+                                        <span t-esc="o.employee_id.contract_id.date_start"/>
+                                        وحتى تاريخ
+                                        <span t-esc="o.date_deliver_work"/>
+                                        , ويعتبر خالي
+                                        الطرف لدينا .
+                                    </p>
+                                    <p style="text-align:justify;margin-right:6%;margin-left:6%;color:black; line-height: 1.7;">
+                                        هذا وقد أعطي هذه الشهادة لتقديمها إلى من يهمه الأمر
+                                    </p>
+                                    <br/>
+                                    <br/>
+                                </div>
+                                <div class="row">
+                                    <h2 style="text-align: center;">
+                                        <strong>و الله ولي التوفيق ,,,</strong>
+                                        <br/>
+                                        <br/>
+                                        <strong>إدارة الموارد البشرية</strong>
+                                    </h2>
+                                    <br/>
+                                </div>
+                            </div>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+        <record id="disclaimer_report_act" model="ir.actions.report">
+            <field name="model">hr.clearance.form</field>
+            <field name="name">Disclaimer Certificate Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">employee_requests.disclaimer_certificate_report</field>
+            <field name="report_file">employee_requests.disclaimer_certificate_report</field>
+            <field name="groups_id" eval="[(4, ref('hr.group_hr_user'))]"/>
+        </record>
+    </data>
+</odoo>

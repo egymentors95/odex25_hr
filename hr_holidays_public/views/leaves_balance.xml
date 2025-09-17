@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="leaves_balance_action">
+            <field name="name">Leaves Balance</field>
+            <field name="res_model">hr.holidays</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('type','=','add'),('check_allocation_view','=','balance')]</field>
+            <field name="context">{'default_type':'add', 'default_check_allocation_view': 'balance'}</field>
+            <field name="search_view_id" ref="hr_holidays_community.view_hr_holidays_filter"/>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="leaves_balancee_action">
+            <field name="name">Leaves Balance</field>
+            <field name="res_model">hr.holidays</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('type','=','add'),('check_allocation_view','=','balance')]</field>
+            <field name="context">{'default_type':'add', 'default_check_allocation_view': 'balance'}</field>
+            <field name="search_view_id" ref="hr_holidays_community.view_hr_holidays_filter"/>
+
+        </record>
+
+
+
+
+        <!--        <record id="view_employee_form_leave_inherit_custome" model="ir.ui.view">-->
+        <!--            <field name="name">hr.employee.leave.form.inherit.custom</field>-->
+        <!--            <field name="model">hr.employee</field>-->
+        <!--            <field name="inherit_id" ref="hr_holidays_community.view_employee_form_leave_inherit"/>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <xpath expr="//button[@name='%(hr_holidays_community.act_hr_employee_holiday_request)d']" position="attributes">-->
+        <!--                    <attribute name="name">%(hr_holidays_public.leaves_balancee_action)d</attribute>-->
+        <!--&lt;!&ndash;                    <attribute name="name">%(hr_holidays_public.leaves_balance_action)d</attribute>&ndash;&gt;-->
+        <!--&lt;!&ndash;                    <attribute name="context">{'search_default_employee_id': active_id}</attribute>&ndash;&gt;-->
+        <!--                </xpath>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+
+
+        <record id="view_employee_form_leave_inherit_actionn" model="ir.ui.view">
+            <field name="name">hr.employee.leave.form.inherit.custom</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr_holidays_community.view_employee_form_leave_inherit"/>
+            <field name="arch" type="xml">
+                  <xpath expr="//button[child::field[@name='leaves_count']]" position="attributes">
+                <attribute name="name">%(hr_holidays_public.leaves_balance_action)d</attribute>
+                <attribute name="context">{'search_default_employee_id': active_id}</attribute>
+            </xpath>
+            </field>
+
+
+        </record>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <record model="ir.ui.view" id="leaves_balance_form_view">
+            <field name="name">Leaves Balance</field>
+            <field name="model">hr.holidays</field>
+            <field name="arch" type="xml">
+                <form create="false" edit="false" delete="false">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="employee_id" string="Employee" readonly="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="hiring_date" string="Hiring Date" />
+                                <field name="holiday_status_id" string="Leave Type" readonly="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                                <field name="state" invisible="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+
+                            </group>
+                            <group>
+                                <!--<field name="number_of_days_temp" string="Number of days temp" readonly="1"/>-->
+                                <field name="leaves_taken" string="Leaves Taken" readonly="1"/>
+                                <field name="remaining_leaves" string="Remaining Balance" readonly="1"/>
+                                <field name="check_allocation_view" string="type" invisible="1"/>
+
+                                <field name="holiday_ids" string="Cron Run Times" groups="hr_holidays_community.group_hr_holidays_manager" >
+                                    <tree editable="bottom">
+                                        <field name="cron_run_date" force_save="1" string="cron run date" />
+                                        <field name="balance_leaves" force_save="1" string="Balance" />
+                                        <field name="no_balance_leaves" force_save="1" string="No Balance" />
+                                    </tree>
+                                </field>
+                            </group>
+                        </group>
+                    </sheet>
+                    <!--div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div-->
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="leaves_balance_tree_view">
+            <field name="name">Leaves Balance</field>
+            <field name="model">hr.holidays</field>
+            <field name="arch" type="xml">
+                <tree create="false" edit="false" delete="false">
+                    <field name="emp_number" string="Employee number"/>
+                    <field name="employee_id" string="Employee"/>
+                    <field name="department_id" string="Department" optional="hide"/>
+                    <field name="holiday_status_id" string="Leave Type"/>
+                    <field name="state" invisible="1"/>
+                    <field name="leaves_taken" string="Leaves Taken"/>
+                    <field name="remaining_leaves" string="Remaining Balance"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id="action_tagwaarden_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="leaves_balance_tree_view"/>
+            <field name="act_window_id" ref="leaves_balance_action"/>
+        </record>
+
+        <record id="action_tagwaarden_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="leaves_balance_form_view"/>
+            <field name="act_window_id" ref="leaves_balance_action"/>
+        </record>
+        <record id="ir_cron_scheduler_holidays_action" model="ir.cron">
+            <field name="name">holidays scheduler</field>
+            <field name="model_id" ref="hr_holidays_community.model_hr_holidays"/>
+            <field name="state">code</field>
+            <field name="code">model.process_holidays_scheduler_queue()</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="doall" eval="False"/>
+        </record>
+
+
+    </data>
+</odoo>

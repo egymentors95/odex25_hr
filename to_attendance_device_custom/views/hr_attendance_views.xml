@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  	<data>
+      	<record model="ir.ui.view" id="hr_attendance_custom_form">
+		    <field name="name">attendance.form</field>
+		    <field name="model">attendance.attendance</field>
+		    <field name="inherit_id" ref="attendances.attendance_custom_form"/>
+		    <field name="arch" type="xml">
+		    	<field name="action" position="after">
+		            <field name="device_id"/>
+		        </field>
+		   </field>
+		</record>
+
+      	<record model="ir.ui.view" id="hr_attendance_transaction_custom_form">
+		    <field name="name">hr.attendance.transaction.form</field>
+		    <field name="model">hr.attendance.transaction</field>
+		    <field name="inherit_id" ref="attendances.employee_attendance_transactions_form_view"/>
+		    <field name="arch" type="xml">
+		    	<field name="sign_in" position="after">
+		            <field name="checkin_device_id"/>
+				</field>
+				<field name="sign_out" position="after">
+		            <field name="checkout_device_id"/>
+		        </field>
+		   </field>
+		</record>
+		
+  	</data>
+</odoo>

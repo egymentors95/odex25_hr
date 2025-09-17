@@ -1,0 +1,47 @@
+<odoo>
+    <data>
+        <!--MENU ITEM SALARY SCALE main-->
+        <menuitem
+                id="salary_scale_main_menu"
+                name="Salary Scale"
+                parent="exp_hr_payroll.menu_hr_payroll_configuration"
+                sequence="1"
+        />
+        <!--MENU ITEM SALARY SCALE child-->
+        <menuitem
+                id="salary_scale_menu"
+                name="Salary Scale"
+                parent="salary_scale_main_menu"
+                sequence="1"
+                action="salary_scale_record_action"
+        />
+
+        <!--MENU ITEM SALARY SCALE level degree child-->
+        <menuitem
+                id="salary_scale_level_degree_menu"
+                name="Scale degree"
+                parent="salary_scale_main_menu"
+                sequence="4"
+                action="salary_scale_level_degree_record_action"
+        />
+
+        <!--MENU ITEM SALARY SCALE level group -->
+        <menuitem
+                id="salary_scale_level_group_menu"
+                name="Scale  Group"
+                parent="salary_scale_main_menu"
+                sequence="3"
+                action="salary_scale_level_group_record_action"
+        />
+
+
+        <!--MENU ITEM SALARY SCALE level -->
+        <menuitem
+                id="salary_scale_level_menu"
+                name="Scale Levels"
+                parent="salary_scale_main_menu"
+                sequence="2"
+                action="salary_scale_level_action"
+        />
+    </data>
+</odoo>

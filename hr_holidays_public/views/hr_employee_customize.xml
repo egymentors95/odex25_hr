@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+
+<record id="hr_employee_custom_view" model="ir.ui.view">
+            <field name="name">hr.extension.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="priority" eval="16"/>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//notebook//page[@name='hr_settings']" position="after">
+                    <page name="employee_leaves" string="Employee Leaves">
+                        <field name="leave_line"  readonly="1">
+                            <tree string="Employee Leaves">
+                                <field name="holiday_status_id" string="Leave request"/>
+                                <field name="date_from" string="Allocation start date" />
+                                <field name="date_to" string="allocation End Date" />
+                                <field name="number_of_days_temp" string="Duration"/>
+                                <field name="state" string="Status" />
+
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+</record>
+    </data>
+</odoo>

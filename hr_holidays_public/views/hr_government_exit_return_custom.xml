@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+
+
+<record id="hr_employee_government_exit_return" model="ir.ui.view">
+            <field name="name">hr.extension.form.inherit</field>
+            <field name="model">hr.exit.return</field>
+            <field name="priority" eval="16"/>
+            <field name="inherit_id" ref="hr_government_relations.exit_and_return_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//group[3]" position="after">
+                     <group>
+                                <field name="leave_request_id" string="Leave Request" widget="selection"
+                                       attrs="{'readonly':[('state','!=','draft')],
+                                       'required':['&amp;',('request_for','in',['employee','all']),('without_leave','!=',True)],
+                                       'invisible':['|',('request_for','=','family'),('without_leave','=',True)]}"
+                                        domain = "[('employee_id', '=', employee_id),('state', '=', 'validate1'), 
+                                                  ('type', '=', 'remove'),('issuing_exit_return','=','yes')]"/>
+
+                                <field name="vacation_start_date" string="Vacation Start Date"
+                                       attrs="{'invisible':['|',('request_for','=','family'),('without_leave','=',True)]}" readonly="1"/>
+
+                                <field name="vacation_end_date" string="Vacation End Date"
+                                       attrs="{'invisible':['|',('request_for','=','family'),('without_leave','=',True)]}" readonly="1"/>
+
+                                <field name="vacation_duration" string="Vacation Duration"
+                                       attrs="{'invisible':['|',('request_for','=','family'),('without_leave','=',True)]}" readonly="1"/>
+                            </group>
+                </xpath>
+
+            </field>
+</record>
+    </data>
+</odoo>

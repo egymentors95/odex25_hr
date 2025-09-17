@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="deduct_permission_status_forms" model="ir.ui.view">
+            <field name="name">hr.holidays.status.forms - Permission</field>
+            <field name="model">hr.holidays.status</field>
+            <field name="inherit_id" ref="hr_holidays_public.edit_holiday_status_form"/>
+            <field name="priority">100</field>
+            <field name="arch" type="xml">
+                <field name="check_annual_holiday" position="after">
+                    <field name="permission_annual_holiday" attrs="{'invisible':['|',('payslip_type','!=','paid'),('leave_type','!=','annual')]}"/>
+                </field>
+            </field>
+        </record>
+
+         <record id="hr_holidays_permission_form_views" model="ir.ui.view">
+            <field name="name">hr_holidays_permission_form_views</field>
+            <field name="model">hr.holidays</field>
+            <field name="inherit_id" ref="hr_holidays_public.leaves_balance_form_view"/>
+                    <field name="priority">100</field>
+            <field name="arch" type="xml">
+                <field name="remaining_leaves" position="after">
+                    <field name="permission_ids" invisible="1" />
+                </field>
+
+            </field>
+         </record>
+    </data>
+</odoo>

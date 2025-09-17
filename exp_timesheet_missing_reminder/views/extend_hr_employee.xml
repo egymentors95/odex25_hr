@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--Hr Department Inherit form view-->
+        <!--        <record id="hr_department_view_custom" model="ir.ui.view">-->
+        <!--            <field name="name">hr.department.form.inherit</field>-->
+        <!--            <field name="model">hr.department</field>-->
+        <!--            <field name="inherit_id" ref="hr.view_department_form"/>-->
+        <!--            <field name="arch" type="xml">-->
+        <!--                <xpath expr="//field[@name='parent_id']" position="before">-->
+        <!--                    <field name="reminder_type"/>-->
+        <!--                </xpath>-->
+        <!--            </field>-->
+        <!--        </record>-->
+
+        <!--Hr Employee Inherit form view-->
+
+        <record id="hr_employee_view_custom" model="ir.ui.view">
+            <field name="name">hr.employee.form.inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='work_phone']" position="before">
+                    <field name="skipp_timesheet_reminder" groups="hr.group_hr_user"
+                           attrs="{'readonly':[('state','!=','draft')]}"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!--Hr resource calendar Inherit form view add field -->
+
+        <record id="resource_calendar_inherited_timesheet_form" model="ir.ui.view">
+            <field name="name">resource.calendar.form.timesheet.inherit</field>
+            <field name="model">resource.calendar</field>
+            <field name="inherit_id" ref="attendances.resource_calendar_inherited_form"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//field[@name='active']" position="after">
+
+                    <field name="check_timesheet" groups="hr.group_hr_user" string="Check Timesheet"/>
+                    <field name="timesheet_day_before" groups="hr.group_hr_user" string="Timesheet Days Before"
+                           attrs="{'invisible':[('check_timesheet','=',False)]}"/>
+                    <field name="timesheet_hour_before" groups="hr.group_hr_user" string="Timesheet Hours Before"
+                           attrs="{'invisible':[('check_timesheet','=',False)]}"/>
+                    <field name="exc_user_id" groups="hr.group_hr_user" string="User Exception"
+                           attrs="{'invisible':[('check_timesheet','=',False)]}"/>
+
+                </xpath>
+
+            </field>
+        </record>
+
+    </data>
+</odoo>

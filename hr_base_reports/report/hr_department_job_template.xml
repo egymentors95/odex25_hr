@@ -1,0 +1,74 @@
+<odoo>
+    <data>
+        <template id="department_job_report_view">
+            <t t-call="web.html_container">
+                <t t-call="hr_base.hr_layout">
+
+                    <style>
+                        @font-face {font-family: "Sakkal Majalla"; src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                        format("embedded-opentype"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                        url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype");
+                        }
+                    </style>
+                    <div style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:18pt">
+                        <h3 class="text-center">Departments And jobs Of Employee Report</h3>
+                    </div>
+
+                    <div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+                        <table class="table table-condensed table-bordered" style="width: 100%">
+                            <thead>
+                                <t t-if="report_new_type=='departments'">
+                                    <th class="text-center" style="width: 70%;background:#263f79;color:#FFFFFF">
+                                        Department
+                                    </th>
+                                    <th class="text-center" style="width: 70%;background:#263f79;color:#FFFFFF">Total
+                                    </th>
+                                </t>
+                                <t t-if="report_new_type=='jobs'">
+                                    <th class="text-center" style="width: 70%;background:#263f79;color:#FFFFFF">Job Title
+                                    </th>
+                                    <th class="text-center" style="width: 70%;background:#263f79;color:#FFFFFF">Total
+                                    </th>
+                                </t>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="docs" t-as="doc">
+                                    <t t-if="report_new_type=='departments'">
+                                        <tr>
+                                            <td>
+                                                <span t-esc="doc['department_name']"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="doc['employee_number']"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                    <t t-if="report_new_type=='jobs'">
+                                        <tr>
+                                            <td>
+                                                <span t-esc="doc['job_name']"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="doc['employee_number']"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                                <tr>
+                                    <td><span/></td>
+                                    <td><span t-esc="total_amount"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+
+    </data>
+</odoo>

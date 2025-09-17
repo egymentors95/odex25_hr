@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="employee_deductions_action">
+            <field name="name">Employee Deductions</field>
+            <field name="res_model">hr.deduction</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="employee_deductions_form_view" model="ir.ui.view">
+            <field name="name">Employee Deductions</field>
+            <field name="model">hr.deduction</field>
+            <field name="arch" type="xml">
+                <form string="Employee Deductions">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                        <button class="oe_highlight" string="Submit" type="object" name="submit" states="draft">Submit</button>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" string="Deduction Name" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="bank_loan" string="From Bank?" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="loan_number" string="Loan No."
+                                       attrs="{'invisible':[('bank_loan','=',False)],'required':[('bank_loan','=',True)],'readonly':[('state','!=','draft')]}"  />
+                                <field name="bank_branch" string="Bank Branch No."
+                                       attrs="{'invisible':[('bank_loan','=',False)],'required':[('bank_loan','=',True)],'readonly':[('state','!=','draft')]}"  />
+                            </group>
+                            <group>
+                                <field name="employee_id" string="Employee Name"  required="1"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="department_id" string="Department Name"  required="1"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="job_id" string="Job Title"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <!--<group col="4">-->
+                                <!--<field name="con_start" string="Contract Duration"/>-->
+                                <!--<field name="con_end" string=""/>-->
+                                <!--</group>-->
+                                <!--<group>-->
+                                <!--<field name="con_start_hijri"/>-->
+                                <!--<field name="con_end_hijri" />-->
+                                <!--</group>-->
+                            </group>
+                        </group>
+
+                        <group>
+                            <group>
+                                <field name="amount" string="Amount"  required="1"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="months" string="Number Of Months"  required="1"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                            <group>
+                                <field name="total_paid_installment" string="Total Paid installment"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="remaining_loan_amount" string="Remaining Loan Amount"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+
+                        <button class="">Generate lines</button>
+
+                        <group>
+                            <notebook>
+                                <page string="Deductions Over Months">
+                                    <separator string="Deductions Over Months"/>
+                                    <group>
+                                        <group>
+                                            <field name="start_date" string="Start Date For Deductions"  required="1"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                                            <field name="deductions_line" string="Deductions line"  attrs="{'readonly':[('state','!=','draft')]}"/>
+                                        </group>
+                                    </group>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                    <!--Discuss widgets for history and communication -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_deductions_tree_view">
+            <field name="name">Employee Deductions</field>
+            <field name="model">hr.deduction</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Deductions">
+                    <field name="name" string="Deduction Name"/>
+                    <field name="employee_id" string="Employee Name"/>
+                    <field name="department_id" string="Department Name"/>
+                    <field name="job_id" string="Job Title"/>
+                    <field name="amount" string="Amount"/>
+                    <field name="months" string="Number Of Months"/>
+                    <field name="state" string="State"/>
+                    <field name="next_state" string="Next Required Approval"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

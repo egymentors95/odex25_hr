@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<odoo>
+	<data noupdate="1">
+        <record id="delegation_employee_rule" model="ir.rule">
+            <field name="name">Employee: View his own requests</field>
+            <field name="model_id" ref="model_authority_delegation"/>
+            <field name="domain_force">
+                ['|',('delegate_id.user_id', '=', user.id),
+                ('delegator_id.user_id', '=', user.id)]
+            </field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+        <record id="delegation_manager_rule" model="ir.rule">
+            <field name="name">Manager: View his employee's requests</field>
+            <field name="model_id" ref="model_authority_delegation"/>
+            <field name="domain_force">
+                ['|','|',('delegate_id.user_id', '=', user.id),
+                ('delegator_id.user_id', '=', user.id),('delegate_id.department_id.manager_id','=',False),
+            ('delegate_id.department_id.manager_id.user_id','child_of', [user.id]),
+            ('delegate_id.department_id.parent_id.manager_id.user_id','child_of', [user.id])
+                ]
+            </field>
+            <field name="groups" eval="[(4, ref('hr_base.group_division_manager'))]"/>
+        </record>
+        <record id="delegation_hr_rule" model="ir.rule">
+            <field name="name">HR Manager: View All requests</field>
+            <field name="model_id" ref="model_authority_delegation"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+            <field name="groups" eval="[(4, ref('hr.group_hr_user'))]"/>
+        </record>
+    </data>
+</odoo>

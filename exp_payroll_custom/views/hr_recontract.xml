@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--inheriting re-contract form view-->
+        <record model="ir.ui.view" id="re_contract_inherited_form_view">
+            <field name="name">hr.re.contract.inherited.form.view</field>
+            <field name="model">hr.re.contract</field>
+            <field name="inherit_id" ref="hr_contract_custom.view_re-contracting_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='contract_id']" position="after">
+                    <field name="salary_scale" invisible="1" readonly="1"/>
+                    <field name="salary_level" invisible="1" readonly="1"/>
+                    <field name="salary_group" invisible="1" readonly="1"/>
+                    <field name="salary_degree" invisible="1" readonly="1"/>
+                </xpath>
+
+                <!--xpath expr="//field[@name='increase_salary']" position="after">
+                    <field name="new_salary_scale" widget="selection"  domain="[('type','=','scale')]"
+                           string="New Salary Scale" context="{'default_type': 'scale'}"
+                           attrs="{'invisible':[('state','=','draft'),('increase_salary','in',['no',''])],
+                                  'required':[('state','!=','draft'),('increase_salary','=','yes')],'readonly':[('state','!=','submitted')]}"/>
+
+                    <field name="new_salary_level" widget="selection"
+                           domain="[('type','=','level'),('salary_scale_id', '=',new_salary_scale)]"
+                           string="New Salary Level" context="{'default_type': 'level'}"
+                           attrs="{'invisible':[('state','=','draft'),('increase_salary','in',['no',''])],
+                                 'required':[('state','!=','draft'),('increase_salary','=','yes')],'readonly':[('state','!=','submitted')]}"/>
+
+                    <field name="new_salary_group" widget="selection"
+                           domain="[('type','=','group'),('salary_scale_level_id', '=', new_salary_level)]"
+                           string="New Salary Group" context="{'default_type': 'group'}"
+                           attrs="{'invisible':[('state','=','draft'),('increase_salary','in',['no',''])],
+                                  'required':[('state','!=','draft'),('increase_salary','=','yes')],'readonly':[('state','!=','submitted')]}"/>
+
+                    <field name="new_salary_degree" widget="selection"
+                           domain="[('type','=','degree'),('salary_scale_group_id', '=', new_salary_group)]"
+                           string="New Salary Degree" context="{'default_type': 'degree'}"
+                           attrs="{'invisible':[('state','=','draft'),('increase_salary','in',['no',''])],
+                                  'required':[('state','!=','draft'),('increase_salary','=','yes')],'readonly':[('state','!=','submitted')]}"/>
+                </xpath-->
+            </field>
+        </record>
+    </data>
+</odoo>

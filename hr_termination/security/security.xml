@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_termination_employee_rule" model="ir.rule">
+            <field name="name">Employee: views its termination</field>
+            <field name="model_id" ref="model_hr_termination"/>
+            <field name="domain_force">[('employee_id.user_id','=',user.id)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>
+
+        <record id="hr_termination_manager_rule" model="ir.rule">
+            <field name="name">Manager: views terminations of its subordinates</field>
+            <field name="model_id" ref="model_hr_termination"/>
+            <field name="domain_force">['|',('department_id.manager_id.user_id','child_of', [user.id]),
+                ('department_id.parent_id.manager_id.user_id','child_of', [user.id])]
+            </field>
+            <field name="groups"
+                   eval="[(4, ref('hr_base.group_department_manager')),(4, ref('hr_base.group_division_manager'))]"/>
+        </record>
+
+        <record id="hr_termination_all_rule" model="ir.rule">
+            <field name="name">Manager: views terminations of all employee</field>
+            <field name="model_id" ref="model_hr_termination"/>
+            <field name="domain_force">[(1 ,'=', 1)]</field>
+            <field name="groups" eval="[(4, ref('hr_base.group_executive_manager')),
+                                        (4, ref('hr_base.group_general_manager')),
+                                        (4, ref('hr.group_hr_manager')),
+                                        (4, ref('hr.group_hr_user'))]"/>
+        </record>
+
+        <record id="hr_termination_comp_rule" model="ir.rule">
+            <field name="name">hr termination company rule</field>
+            <field name="model_id" ref="model_hr_termination"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+        <!--<record id="hr_termination_personal_rule" model="ir.rule">
+            <field name="name">Employee Termination</field>
+            <field ref="hr_termination.model_hr_termination" name="model_id"/>
+            <field name="domain_force">['|',('employee_id.user_id','=',user.id),('employee_id.user_id','=',False)]</field>
+            <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        </record>-->
+
+        <record id="hr_termination_type_comp_rule" model="ir.rule">
+            <field name="name">hr termination Type company rule</field>
+            <field name="model_id" ref="model_hr_termination_type"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+        </record>
+    </data>
+</odoo>

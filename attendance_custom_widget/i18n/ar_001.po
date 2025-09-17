@@ -1,0 +1,92 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* attendance_custom_widget
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-31 10:53+0000\n"
+"PO-Revision-Date: 2024-10-31 10:53+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: attendance_custom_widget
+#: model:ir.model.fields,field_description:attendance_custom_widget.field_hr_employee__attendance_state
+#: model:ir.model.fields,field_description:attendance_custom_widget.field_hr_employee_base__attendance_state
+#: model:ir.model.fields,field_description:attendance_custom_widget.field_hr_employee_public__attendance_state
+msgid "Attendance Status"
+msgstr "حالة الحضور"
+
+#. module: attendance_custom_widget
+#: model:ir.model,name:attendance_custom_widget.model_hr_employee_base
+msgid "Basic Employee"
+msgstr "الموظف الأساسي"
+
+#. module: attendance_custom_widget
+#: model:ir.model.fields.selection,name:attendance_custom_widget.selection__hr_employee__attendance_state__checked_in
+#: model:ir.model.fields.selection,name:attendance_custom_widget.selection__hr_employee_base__attendance_state__checked_in
+#: model:ir.model.fields.selection,name:attendance_custom_widget.selection__hr_employee_public__attendance_state__checked_in
+msgid "Checked in"
+msgstr "تم تسجيل الحضور"
+
+#. module: attendance_custom_widget
+#: model:ir.model.fields.selection,name:attendance_custom_widget.selection__hr_employee__attendance_state__checked_out
+#: model:ir.model.fields.selection,name:attendance_custom_widget.selection__hr_employee_base__attendance_state__checked_out
+#: model:ir.model.fields.selection,name:attendance_custom_widget.selection__hr_employee_public__attendance_state__checked_out
+msgid "Checked out"
+msgstr "تم تسجيل الخروج"
+
+#. module: attendance_custom_widget
+#: model:ir.model.fields,field_description:attendance_custom_widget.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:attendance_custom_widget.field_hr_employee_base__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: attendance_custom_widget
+#: model:ir.model,name:attendance_custom_widget.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: attendance_custom_widget
+#: model:ir.model.fields,field_description:attendance_custom_widget.field_hr_employee__id
+#: model:ir.model.fields,field_description:attendance_custom_widget.field_hr_employee_base__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: attendance_custom_widget
+#: model:ir.model.fields,field_description:attendance_custom_widget.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:attendance_custom_widget.field_hr_employee_base____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: attendance_custom_widget
+#: code:addons/attendance_custom_widget/models/hr_employee.py:0
+#, python-format
+msgid "Wrong PIN"
+msgstr ""
+
+#. module: attendance_custom_widget
+#. openerp-web
+#: code:addons/attendance_custom_widget/static/src/xml/attendance.xml:0
+#, python-format
+msgid "Default"
+msgstr "الإفتراضي"
+
+#. module: attendance_custom_widget
+#. openerp-web
+#: code:addons/attendance_custom_widget/static/src/xml/attendance.xml:0
+#, python-format
+msgid "Sign In"
+msgstr "تسجيل الدخول"
+
+#. module: attendance_custom_widget
+#. openerp-web
+#: code:addons/attendance_custom_widget/static/src/xml/attendance.xml:0
+#, python-format
+msgid "Sign Out"
+msgstr "تسجيل الخروج"

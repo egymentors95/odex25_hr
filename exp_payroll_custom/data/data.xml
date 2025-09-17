@@ -1,0 +1,36 @@
+<odoo>
+    <data>
+        <!--Level sequence-->
+        <record id="level_sequence" model="ir.sequence">
+            <field name="name">level_sequence_name</field>
+            <field name="code">hr.salary.scale.level</field>
+            <field name="prefix">LO</field>
+            <field name="padding">5</field>
+        </record>
+
+        <!--Degree sequence-->
+        <record id="degree_sequence" model="ir.sequence">
+            <field name="name">degree_sequence_name</field>
+            <field name="code">hr.salary.scale.level.degree</field>
+            <field name="prefix">DO</field>
+            <field name="padding">5</field>
+        </record>
+
+        <!--Group sequence-->
+        <record id="group_sequence" model="ir.sequence">
+            <field name="name">group_sequence_name</field>
+            <field name="code">hr.salary.scale.level.group</field>
+            <field name="prefix">GO</field>
+            <field name="padding">5</field>
+        </record>
+
+        <!--Salary sequence-->
+        <record id="salary_scale_sequence" model="ir.sequence">
+            <field name="name">salary_sequence_name</field>
+            <field name="code">hr.payroll.structure</field>
+            <field name="prefix">SO</field>
+            <field name="padding">5</field>
+        </record>
+
+    </data>
+</odoo>

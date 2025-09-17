@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="custom_employee_reward_form_view" model="ir.ui.view">
+            <field name="name">custom.hr.employee.reward</field>
+            <field name="model">hr.employee.reward</field>
+            <field name="inherit_id" ref="exp_payroll_custom.employee_reward_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='line_ids_reward']" position="replace">
+                    <field name="line_ids_reward"
+                           context="{'percentage': percentage, 'account_id': account_id, 'journal_id': journal_id}"
+                           attrs="{'readonly':['|','|',('state','=','submitted'),('state','=','done'),
+                           ('state','=','refused')], 'required': [('state', '=', 'hrm')]}">
+                        <tree string="Employee Reward and Allowances" editable="bottom">
+                            <field name="employee_id"/>
+                            <field name="amount_base" groups="hr_base.group_executive_manager,hr.group_hr_user"
+                                   attrs="{'readonly':[('reward_type','!=','amount')]}" sum="Totals"/>
+                            <field name="percentage"/>
+                            <field name="gross_amount"
+                                   readonly="1"
+                                   force_save="1"
+                                   attrs="{'column_invisible':[('parent.reward_type','!=','allowance')]}" sum="Totals"/>
+                            <field name="installment"
+                                   readonly="1"
+                                   force_save="1"
+                                   attrs="{'column_invisible':[('parent.reward_type','!=','allowance')]}" sum="Totals"/>
+                            <field name="amount" groups="hr_base.group_executive_manager,hr.group_hr_user" sum="Totals"/>
+                            <!--field name="account_id" string="Account"
+                                   groups="hr_base.group_executive_manager,hr.group_hr_user"
+                                   attrs="{'readonly':[('reward_state','!=','hrm')],'column_invisible':[('parent.transfer_type','!=','accounting')]}"/>
+                            <field name="journal_id" string="Journal"
+                                   groups="hr_base.group_executive_manager,hr.group_hr_user"
+                                   attrs="{'readonly':[('reward_state','!=','hrm')],'column_invisible':[('parent.transfer_type','!=','accounting')]}"/-->
+                            <field name="move_id" attrs="{'readonly':[('reward_state','!=','draft')],'column_invisible':[('parent.transfer_type','!=','accounting')]}"/>
+                            <field name="due_loan"
+                                   readonly="1"
+                                   force_save="1"
+                                   attrs="{'column_invisible':[('parent.reward_type','!=','allowance')]}"/>
+                            <field name="reward_state" invisible="1"/>
+                            <field name="reward_type" invisible="1"/>
+
+                        </tree>
+                        <form string="Employee Reward and Allowances">
+                            <group>
+                                <field name="employee_id"/>
+                                <!--field name="account_id" string="Account"
+                                       groups="hr_base.group_executive_manager,hr.group_hr_user"
+                                       attrs="{'readonly':[('reward_state','!=','hrm')]}"/>
+                                <field name="journal_id" string="Journal"
+                                       groups="hr_base.group_executive_manager,hr.group_hr_user"
+                                       attrs="{'readonly':[('reward_state','!=','hrm')]}"/-->
+                                <field name="move_id" string='Journal Move'/>
+                                <field name="check_appraisal"/>
+                                <field name="percentage"/>
+                                <field name="gross_amount"
+                                       readonly="1"
+                                       force_save="1"
+                                       attrs="{'invisible':[('parent.reward_type','!=','allowance')]}"/>
+                                <field name="due_loan"
+                                       readonly="1"
+                                       force_save="1"
+                                       attrs="{'invisible':[('parent.reward_type','!=','allowance')]}"/>
+                                <field name="amount"/>
+                                <field name="reward_state" invisible="1"/>
+                                <field name="advantage_id" string='Allowance Employee'/>
+                                <field name="loan_ids">
+                                    <tree>
+                                        <field name="loan_id" groups="hr_loans_salary_advance.group_loan_manager"/>
+                                        <field name="loan_amount"  groups="hr_loans_salary_advance.group_loan_manager"/>
+                                    </tree>
+
+                                </field>
+                            </group>
+                        </form>
+                    </field>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

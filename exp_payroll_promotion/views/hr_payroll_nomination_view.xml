@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="hr_payroll_nomination_form_view" model="ir.ui.view">
+            <field name="name">Payroll Nomination Form</field>
+            <field name="model">hr.payroll.nomination</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Nominate"
+                                name="act_nominate"
+                                states="draft"
+                                type="object"
+                                class="oe_highlight"
+                                groups="hr.group_hr_user"/>
+                        <button string="Approve"
+                                name="act_approve"
+                                type="object"
+                                class="oe_highlight"
+                                groups="hr.group_hr_manager"
+                                attrs="{'invisible': ['|', ('approval','!=', 'congregational'),
+                                                            ('state','!=', 'nominate')]}"/>
+                        <button string="Reset To Draft"
+                                name="act_reset"
+                                class="oe_highlight"
+                                states="refuse"
+                                type="object"
+                                groups="hr.group_hr_user" />
+                        <button string="Refuse"
+                                name="act_refuse"
+                                class="oe_highlight"
+                                attrs="{'invisible': [('state','in', ('draft','refuse'))]}"
+                                type="object"
+                                groups="hr.group_hr_manager"/>
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet string="Administrative Circular/ Decision">
+                        <div class="oe.title">
+                            <h>
+                                <label for="name"/>
+                                <field name="name"  attrs="{'readonly':[('state','!=','draft')]}" colspan="4"/>
+                            </h>
+                        </div>
+                        <group col="1">
+                            <group>
+                                <group>
+                                    <field name="process" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="margin" attrs="{'readonly':[('state','!=','draft')],
+                                                                'invisible':[('process','!=','raise')]}"/>
+                                    <field name="promotion_date" attrs="{'readonly':[('state','!=','draft')],
+                                                                        'invisible':[('process','!=','promotion')],
+                                                                        'required':[('process','=','promotion')]}"/>
+                                </group>
+                                <group>
+                                    <field name="date" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="approval" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                </group>
+                            </group>
+                            <group col="1">
+                                <group string="..." col="4">
+                                    <group col ="1" colspan="1">
+                                        <label for="scale_ids"/>
+                                        <field name="scale_ids" nolabel="1" widget="many2many_tags" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    </group>
+                                    <group col ="1" colspan="1">
+                                        <label for="level_ids"/>
+                                        <field name="level_ids" nolabel="1" widget="many2many_tags" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    </group>
+                                    <group col ="1" colspan="1">
+                                        <label for="group_ids"/>
+                                        <field name="group_ids" nolabel="1" widget="many2many_tags" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    </group>
+                                    <group col ="1" colspan="1">
+                                        <label for="degree_ids"/>
+                                        <field name="degree_ids" nolabel="1" widget="many2many_tags" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    </group>
+                                </group>
+                                <group string="Annual Raise Nominees" attrs="{'invisible':[('process','!=','raise')]}">
+                                   <field name="raise_nominee_ids" readonly="1" force_save="1" nolabel="1" >
+                                        <tree string="Payroll Raise">
+					    <field name="employee_id"/>
+					    <field name="application_date"/>
+					    <field name="scale_id"/>
+					    <field name="level_id"/>
+					    <field name="group_id"/>
+					    <field name="degree_id"/>
+					    <field name="nominated_degree_id"/>
+					    <field name="deviation"/>
+					    <field name="raise_type"/>
+					    <field name="state"/>
+					    <button string="Confirm" name="act_confirm" states="draft" type="object" class="oe_highlight"
+						        groups="hr.group_hr_user"/>
+					    <button string="Approve" name="act_approve" states="confirm" type="object" class="oe_highlight"
+						    groups="hr.group_hr_manager"/>
+					    <button string="Refuse" name="act_refuse" states="draft,confirm" type="object"
+						        groups="hr.group_hr_manager"/>
+					</tree>
+				     </field>
+                                </group>
+                                <group string="Promotion Nominees" attrs="{'invisible':[('process','!=','promotion')]}">
+                                    <field name="promotion_nominee_ids" readonly="1" force_save="1" nolabel="1" />
+                                </group>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="hr_payroll_nomination_tree_view">
+            <field name="name">Payroll Nomination Tree</field>
+            <field name="model">hr.payroll.nomination</field>
+            <field name="arch" type="xml">
+                <tree string="Payroll Nomination">
+                    <field name="date"/>
+                    <field name="name"/>
+                    <field name="process"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record model="ir.actions.act_window" id="hr_payroll_nomination_action">
+            <field name="name">Payroll Nomination</field>
+            <field name="res_model">hr.payroll.nomination</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="hr_payroll_nomination_menu"
+                  name="Promotion/ Raise Nomination"
+                  parent="exp_payroll_promotion.hr_payroll_promotion_root"
+                  sequence="4"
+                  action="hr_payroll_nomination_action"/>
+
+    </data>
+</odoo>

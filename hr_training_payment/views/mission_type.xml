@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+
+
+       <record id="hr_official_mission_type_view_form" model="ir.ui.view">
+        <field name="name">hr.official.mission.type.view.form</field>
+        <field name="model">hr.official.mission.type</field>
+        <field name="inherit_id" ref="exp_official_mission.employee_official_mission_type_form_view"/>
+        <field name="arch" type="xml">
+                <xpath expr="//field[@name='work_state']" position="after">
+                    <field name="pr_product_id" attrs="{'invisible':[('work_state','!=','training')],'required':[('work_state','=','training')]}"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    </data>
+</odoo>

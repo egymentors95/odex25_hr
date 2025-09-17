@@ -1,0 +1,2822 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* attendances
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-05-20 07:11+0000\n"
+"PO-Revision-Date: 2025-05-20 07:11+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: attendances
+#: model:mail.template,body_html:attendances.emapproval
+msgid ""
+"\n"
+"        \n"
+"\n"
+"          <p>Dear ${ ctx.get('employee_name')},</p>\n"
+"          <p>تم تصديق الحضور والانصراف من ${object.date_from} إلى ${object.date_to}.</p>\n"
+"          <p>وشكرًا.</p>\n"
+"        \n"
+"      "
+msgstr ""
+
+#. module: attendances
+#: model:mail.template,body_html:attendances.attendance_notification_email_template
+msgid ""
+"\n"
+"                \n"
+"        <p>Dear ${object.employee_id.name},</p>\n"
+"        <p>We would like to inform you of the following attendance details:</p>\n"
+"        <table border=\"1\" style=\"width:100%; border-collapse: collapse;\">\n"
+"            <tr>\n"
+"                <th>Date</th>\n"
+"                <th>Day</th>\n"
+"                <th>Lateness</th>\n"
+"                <th>Early Exit</th>\n"
+"                <th>Note</th>\n"
+"            </tr>\n"
+"            <tr>\n"
+"                <td>${object.date.strftime('%Y-%m-%d')}</td>\n"
+"                <td>${object.date.strftime('%A')}</td>\n"
+"                <td>${ '%02d:%02d' % (((object.lateness or 0.0)), (((object.lateness or 0.0) * 60) % 60))}</td>\n"
+"                <td>${ '%02d:%02d' % ((object.early_exit or 0.0), (((object.early_exit or 0.0) * 60) % 60))}</td>>\n"
+"\n"
+"\n"
+"                <td>${'Missed Punch' if (object.sign_out == 0 and object.sign_in != 0)or(object.sign_out != 0 and object.sign_in == 0)} ${ 'Absent' if object.is_absent else 'Present'}\n"
+"                </td>\n"
+"            </tr>\n"
+"        </table>\n"
+"        <p>Please adhere to work timings. Thank you for your understanding.</p>\n"
+"        \n"
+"            "
+msgstr ""
+"                \n"
+"        <p style=\"margin:0px;font-size:13px;font-family:bukra, serif;\">Dear ${object.employee_id.name},</p>\n"
+"        <p style=\"margin:0px;font-size:13px;font-family:bukra, serif;\">We would like to inform you of the following attendance details:</p>\n"
+"        &gt;\n"
+"\n"
+"\n"
+"                <table border=\"1\" style=\"border-collapse:collapse;font-family:bukra, serif;width:100%; border-collapse: collapse;\">\n"
+"            <tbody style=\"font-family:bukra, serif;\"><tr style=\"font-family:bukra, serif;\">\n"
+"                <th style=\"font-family:bukra, serif;text-align:right;\">Date</th>\n"
+"                <th style=\"font-family:bukra, serif;text-align:right;\">Day</th>\n"
+"                <th style=\"font-family:bukra, serif;text-align:right;\">Lateness</th>\n"
+"                <th style=\"font-family:bukra, serif;text-align:right;\">Early Exit</th>\n"
+"                <th style=\"font-family:bukra, serif;text-align:right;\">Note</th>\n"
+"            </tr>\n"
+"            <tr style=\"font-family:bukra, serif;\">\n"
+"                <td style=\"font-family:bukra, serif;\">${object.date.strftime('%Y-%m-%d')}</td>\n"
+"                <td style=\"font-family:bukra, serif;\">${object.date.strftime('%A')}</td>\n"
+"                <td style=\"font-family:bukra, serif;\">${ '%02d:%02d' % (((object.lateness or 0.0)), (((object.lateness or 0.0) * 60) % 60))}</td>\n"
+"                <td style=\"font-family:bukra, serif;\">${ '%02d:%02d' % ((object.early_exit or 0.0), (((object.early_exit or 0.0) * 60) % 60))}</td><td style=\"font-family:bukra, serif;\">${'Missed Punch' if (object.sign_out == 0 and object.sign_in != 0)or(object.sign_out != 0 and object.sign_in == 0)} ${ 'Absent' if object.is_absent else 'Present'}\n"
+"                </td>\n"
+"            </tr>\n"
+"        </tbody></table>\n"
+"        <p style=\"margin:0px;font-size:13px;font-family:bukra, serif;\">Please adhere to work timings. Thank you for your understanding.</p>\n"
+"        \n"
+"            "
+
+#. module: attendances
+#: model:mail.template,body_html:attendances.attendance_notification_today_sign_in
+msgid ""
+"\n"
+"        <p>Dear ${object.employee_id.name},</p>\n"
+"        </p>\n"
+"        <p>We will Notify You Today You Do Not Have a Sign In On Time</p>\n"
+"        </p>\n"
+"        <p>Regards,</p>\n"
+"\n"
+"            "
+msgstr ""
+"        <p style=\"margin:0px;font-size:13px;font-family:bukra, serif;\"> ${object.employee_id.name},</p>\n"
+"        <p style=\"margin:0px;font-size:13px;font-family:bukra, serif;\"></p>\n"
+"        <p style=\"margin:0px;font-size:13px;font-family:bukra, serif;\">افتقدنا وجودك بالمكتب هذا الصباح، ودعواتنا أن تكون بخير وبأفضل حال. في حال كان لديك أي ظرف حال دون حضورك،</p>\n"
+"        <p style=\"margin:0px;font-size:13px;font-family:bukra, serif;\"></p>\n"
+"        <p style=\"margin:0px;font-size:13px;font-family:bukra, serif;\">ونرجو منك التكرم بتقديم ذلك من خلال النظام</p>\n"
+"\n"
+"        <p style=\"margin:0px;font-size:13px;font-family:bukra, serif;\">وتقبلوا أجمل تحياتنا،</p>\n"
+"        <p style=\"margin:0px;font-size:13px;font-family:bukra, serif;\">الموارد البشرية</p>\n"
+"\n"
+"            "
+
+#. module: attendances
+#: model:ir.ui.menu,name:attendances.hr_attendance_register_menu_item
+msgid " Attendance Registration"
+msgstr "طلبات الحضور والانصراف"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_report_line.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report_line.py:0
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__absent
+#, python-format
+msgid " Hours of Absent"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_action_reason__type__sign_in
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_attendance__action__sign_in
+msgid " Sign In"
+msgstr "تسجيل دخول"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_register__action_type__sign_out
+msgid " الإنصراف"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.view_employee_attendance_form_inherit
+msgid "<span class=\"o_stat_text\">Attendance</span>"
+msgstr "<span class=\"o_stat_text\">الحضور</span>"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__is_absent
+#: model:ir.model.fields.selection,name:attendances.selection__employee_attendance_report__type__absent
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee__hr_icon_display__presence_absent
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_base__hr_icon_display__presence_absent
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_public__hr_icon_display__presence_absent
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.view_attendance_transaction_filter
+msgid "Absent"
+msgstr "غياب"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Absent Days By HR"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Absent Hours"
+msgstr "ساعات "
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_report_line.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report_line.py:0
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__absent_days_by_hr
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+#, python-format
+msgid "Absent Hours By HR"
+msgstr "إستثناء الساعات "
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Select Employee"
+msgstr "إختيار الموظفين"
+
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Missing Punch Hours"
+msgstr "نسيان البصمة"
+
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "Absent Report"
+msgstr ""
+
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Account Overtime"
+msgstr "حساب الصرف"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Accounting Info"
+msgstr "اعداد الحسابات"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__action
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_attendance__action__action
+msgid "Action"
+msgstr "الإجراء"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__action_date
+msgid "Action Date"
+msgstr "تاريخ الاجراء"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_needaction
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_needaction
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_needaction
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__action_reason
+msgid "Action Reason"
+msgstr "سبب الاجراء"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_action_reason__type
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__action_type
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__action_type
+msgid "Action Type"
+msgstr "نوع الإجراء"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__activity_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__activity_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__activity_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__activity_exception_decoration
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__activity_exception_decoration
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__activity_exception_decoration
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "زخرفة استثناء النشاط"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__activity_state
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__activity_state
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__activity_state
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__activity_type_icon
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__activity_type_icon
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__activity_type_icon
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "أيقونة نوع النشاط"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_report_line.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report_line.py:0
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__actual_absent_hours
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+#, python-format
+msgid "Actual Absent Hours"
+msgstr " ساعات الغياب"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__additional_hours
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__additional_hours
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Additional Hours"
+msgstr "ساعات إضافية"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "All Employee - Details"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__all_employees
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+msgid "All Employees"
+msgstr "لكل الموظفين"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__amount_per_hour
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Amount Per Hour"
+msgstr "مبلغ الساعة"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__from_hr_depart
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__from_hr_depart
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+msgid "Another Employee"
+msgstr "من موظف آخر"
+
+#. module: attendances
+#: model:ir.actions.act_window,name:attendances.hr_lateness_absence_overtime_action
+msgid "Approval Of Attendance"
+msgstr "تصديق الحضور والانصراف"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__approve_exit_out
+msgid "Approve Early Exit"
+msgstr "خروج مبكر"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__approve_lateness
+msgid "Approve Lateness"
+msgstr "التأخيرات"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_report.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report.py:0
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+#, python-format
+msgid "Approved"
+msgstr "تم التصديق"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Are you sure to Refuse this Request?"
+msgstr "هل أنت متأكد من إلغاء هذا الطلب؟"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+msgid "Are you sure to Reset To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المسوده؟"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_attachment_count
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_attachment_count
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_attachment_count
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_action_reason__attachment_ids
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__attachment_ids
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__attachment_ids
+#: model:ir.model.fields,field_description:attendances.field_days_off__attachment_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__attachment_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__attachment_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__attachment_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__attachment_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__attachment_ids
+msgid "Attachments"
+msgstr ""
+
+#. module: attendances
+#: model:ir.actions.act_window,name:attendances.resource_calendar_inherited_action
+#: model:ir.ui.menu,name:attendances.resource_calendar_inherited_menu_item
+msgid "Attendance Configuration"
+msgstr "اعداد جدول الحضور"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__action_date
+msgid "Attendance Date"
+msgstr "تاريخ الحضور"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Attendance Date From"
+msgstr "تاريخ الحضور من"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Attendance Date To"
+msgstr "تاريخ الحضور إلى"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.view_employee_attendance_form_inherit
+msgid "Attendance Green"
+msgstr ""
+
+#. module: attendances
+#: model:mail.template,subject:attendances.attendance_notification_today_sign_in
+msgid "Attendance No Sign In On time"
+msgstr ""
+
+#. module: attendances
+#: model:mail.template,subject:attendances.attendance_notification_email_template
+msgid "Attendance Notification Report"
+msgstr "تقرير الحضور"
+
+#. module: attendances
+#: model:ir.actions.act_window,name:attendances.attendance_action_reason_action
+#: model:ir.ui.menu,name:attendances.attendance_action_reason_menu_item
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_action_reason_tree
+msgid "Attendance Reasons"
+msgstr "اسباب الحضور والانصراف"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.view_employee_attendance_form_inherit
+msgid "Attendance Red"
+msgstr ""
+
+#. module: attendances
+#: model:ir.actions.act_window,name:attendances.hr_attendance_register_action
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_tree_view
+msgid "Attendance Register"
+msgstr "طلبات الحضور والانصراف"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__register_before
+msgid "Attendance Register Before"
+msgstr "تسجيل الحضور قبل"
+
+#. module: attendances
+#: model:ir.actions.report,name:attendances.general_attendance_action_report
+msgid "Attendance Report"
+msgstr "تقرير الحضور"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: model:ir.ui.menu,name:attendances.attendance_report_emp_menu
+#: model:ir.ui.menu,name:attendances.parent_attendance_report_employee
+#, python-format
+msgid "Attendance Reports"
+msgstr " تقرير الحضور و الانصراف للموظفين"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_view_filter
+msgid "Attendance Search"
+msgstr "بحث الحضور"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_employee__hr_presence_state
+#: model:ir.model.fields,field_description:attendances.field_hr_employee_base__hr_presence_state
+#: model:ir.model.fields,field_description:attendances.field_hr_employee_public__hr_presence_state
+msgid "Attendance State"
+msgstr "حالة الحضور"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_view_filter
+#: model_terms:ir.ui.view,arch_db:attendances.view_attendance_transaction_filter
+msgid "Attendance Today"
+msgstr "حضور اليوم"
+
+#. module: attendances
+#: model:ir.actions.server,name:attendances.hr_attendance_transaction_create_ir_actions_server
+#: model:ir.cron,cron_name:attendances.hr_attendance_transaction_create
+#: model:ir.cron,name:attendances.hr_attendance_transaction_create
+msgid "Attendance Transaction"
+msgstr "سجلات الحضور والانصراف"
+
+#. module: attendances
+#: model:ir.actions.act_window,name:attendances.hr_attendance_transaction_action
+#: model:ir.ui.menu,name:attendances.employee_attendance_transaction_menu_item
+#: model_terms:ir.ui.view,arch_db:attendances.view_transaction_graph
+msgid "Attendance Transactions"
+msgstr "سجلات الحضور والانصراف"
+
+#. module: attendances
+#: model:ir.ui.menu,name:attendances.attendance_custom_menu_item
+msgid "Attendances"
+msgstr "الحضور و الإنصراف"
+
+#. module: attendances
+#: model:ir.actions.act_window,name:attendances.hr_attendance_action_hr_employee
+msgid "Attendances Action"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__office_hours
+msgid "Attending Hours"
+msgstr "ساعات الحضور"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__attending_type
+msgid "Attending Type"
+msgstr "نوع الحضور"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__available_employee_ids
+msgid "Available Employee"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_hr_employee_base
+msgid "Basic Employee"
+msgstr "الموظف الأساسي"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__days_off__shift__both
+msgid "Both"
+msgstr "الشفتين معا"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.view_attendance_transaction_filter
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_view_filter
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_filter
+#: model_terms:ir.ui.view,arch_db:attendances.hr_reasons_lateness_filter
+#: model_terms:ir.ui.view,arch_db:attendances.view_attendance_transaction_filter
+msgid "Branch"
+msgstr "الفروع"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__is_branch
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__is_branch
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__is_branch
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__is_branch
+msgid "Branch Name"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__break_duration
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__break_duration
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_one_break_duration
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_two_break_duration
+msgid "Break Duration"
+msgstr "فترة الراحة"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__calendar_id
+msgid "Calendar"
+msgstr "جدول الحضور والإنصراف"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__calendar_ids
+msgid "Calendars"
+msgstr "جداول الحضور والإنصراف"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.employee_attendance_report_wizard_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__carried_hours
+msgid "Carried Hours"
+msgstr "ساعات مرحلة"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__company_id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__company_id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__company_id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__company_id
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: attendances
+#: model:ir.ui.menu,name:attendances.menu_hr_attendance_configurations
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Confirmed"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_wizard_form_view
+msgid "Create or Update"
+msgstr "انشاء و تحديث"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_action_reason__create_uid
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__create_uid
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__create_uid
+#: model:ir.model.fields,field_description:attendances.field_days_off__create_uid
+#: model:ir.model.fields,field_description:attendances.field_employee_attendance_report__create_uid
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__create_uid
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__create_uid
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__create_uid
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__create_uid
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_wizard__create_uid
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_action_reason__create_date
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__create_date
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__create_date
+#: model:ir.model.fields,field_description:attendances.field_days_off__create_date
+#: model:ir.model.fields,field_description:attendances.field_employee_attendance_report__create_date
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__create_date
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__create_date
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__create_date
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__create_date
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_wizard__create_date
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__name
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__date_from
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__date_from
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_wizard__date_from
+msgid "Date From"
+msgstr "تاريخ البداية"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__date_to
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__date_to
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_wizard__date_to
+msgid "Date To"
+msgstr "تاريخ النهاية"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__date
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_transaction_tree_view
+#, python-format
+msgid "Day"
+msgstr "التاريخ"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__name
+#: model:ir.model.fields,field_description:attendances.field_days_off__name
+msgid "Day Off"
+msgstr "عطلة رسمية"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_days_off__day_off_attendance
+msgid "Day Off Attendance"
+msgstr "حضور العطلة"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Day off"
+msgstr "عطلة رسمية"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__deduct_date_from
+msgid "Deduct Date From"
+msgstr "تاريخ الخصم من"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__deduct_date_to
+msgid "Deduct Date To"
+msgstr "تاريخ الخصم إلى"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Deduction Date From"
+msgstr "تاريخ الخصم من"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Deduction Date To"
+msgstr "تاريخ الخصم إلى"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__advantage_id
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Deduction Employee"
+msgstr "موظف استقطاع"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__deduction_rule
+msgid "Deduction Rule"
+msgstr "قاعدة الخصم"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__delay
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Delay"
+msgstr "التاخيرات"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__department_id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__department_id
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__department_id
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_custom_form
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_custom_tree
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_view_filter
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_filter
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_tree_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_lateness_tree_view
+#: model_terms:ir.ui.view,arch_db:attendances.view_attendance_transaction_filter
+#, python-format
+msgid "Department"
+msgstr "الهيكل الإداري"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__department_id
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_transaction_tree_view
+#: model_terms:ir.ui.view,arch_db:attendances.employee_attendance_transactions_form_view
+msgid "Department Name"
+msgstr "إسم القسم"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__department_ids
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Departments"
+msgstr "الأقسام"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/attendances/models/hr_reasons_lateness.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_reasons_lateness.py:0
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+#, python-format
+msgid "Direct Manager"
+msgstr "المدير المباشر"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_action_reason__display_name
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__display_name
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__display_name
+#: model:ir.model.fields,field_description:attendances.field_days_off__display_name
+#: model:ir.model.fields,field_description:attendances.field_employee_attendance_report__display_name
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__display_name
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__display_name
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__display_name
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__display_name
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_wizard__display_name
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__display_name
+#: model:ir.model.fields,field_description:attendances.field_report_attendances_general_attendance_xls__display_name
+#: model:ir.model.fields,field_description:attendances.field_report_attendances_general_attendances_report_temp__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/attendances/models/hr_attendance_report.py:0
+#: code:addons/attendances/models/hr_reasons_lateness.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_reasons_lateness.py:0
+#, python-format
+msgid "Draft"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__dummy_field
+msgid "Dummy Field"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Early Exist"
+msgstr "خروج مبكر"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__early_exit
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_transaction_tree_view
+#: model_terms:ir.ui.view,arch_db:attendances.employee_attendance_transactions_form_view
+#, python-format
+msgid "Early Exit"
+msgstr "خروج مبكر"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid ""
+"Edit Shift(One)  Min  sign in and min sign out to match working hours \"%s\""
+msgstr ""
+"الرجاء تعديل اقل وقت دخول ف الدوام الاول ليتناسب مع عدد ساعات العمل  \"%s\""
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_hr_employee
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__employee_id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__employee_id
+#: model:ir.model.fields.selection,name:attendances.selection__employee_attendance_report__type__employee
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_view_filter
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_filter
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_tree_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_lateness_tree_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_reasons_lateness_filter
+#: model_terms:ir.ui.view,arch_db:attendances.view_attendance_transaction_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: model:ir.actions.act_window,name:attendances.employee_attendance_report_wizard_action
+#: model:ir.model,name:attendances.model_employee_attendance_report
+#: model_terms:ir.ui.view,arch_db:attendances.employee_attendance_report_wizard_view
+#, python-format
+msgid "Employee Attendance Report"
+msgstr "تقرير الحضور و الانصراف للموظفيين"
+
+#. module: attendances
+#: model:ir.actions.act_window,name:attendances.attendance_custom_action
+msgid "Employee Attendances"
+msgstr "الحضور والانصراف"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__employee_id
+msgid "Employee Id"
+msgstr "الموظف"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__employee_name
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__employee_id
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_transaction_tree_view
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+#, python-format
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__employee_number
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__employee_no
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__employee_number
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__employee_no
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_transaction_tree_view
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_tree_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_lateness_tree_view
+#, python-format
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_custom_form
+msgid "Employee attendances"
+msgstr "حضور الموظفين"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_employee_attendance_report__resource_calender_id
+msgid "Employee work record"
+msgstr "سجل دوام الموظف"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_employee_attendance_report__employee_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__employee_ids
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__employee_ids
+#: model_terms:ir.ui.view,arch_db:attendances.employee_attendance_report_wizard_view
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_report.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report.py:0
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__selected_employee_ids
+#, python-format
+msgid "Employees in Report"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__end_sign_in
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__full_end_sign_in
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_one_end_sign_in
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_two_end_sign_in
+msgid "End Sign In"
+msgstr "اعلى وقت دخول"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__end_sign_out
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__full_end_sign_out
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_one_end_sign_out
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_two_end_sign_out
+msgid "End Sign Out"
+msgstr "اعلى وقت خروج"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__exists
+msgid "Exists"
+msgstr "خروج مبكر"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__extra_break_duration
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Extra Break Duration"
+msgstr "مدة الاستراحة الإضافية"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "Extra hours"
+msgstr "الاضافى"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_attendance__action_type__finger_print
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_wizard__get_attendance_from__finger_print
+msgid "Finger Print"
+msgstr "جهاز بصمة"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.view_employee_attendance_form_inherit
+msgid "Fingerprint Number"
+msgstr "رقم  البصمة"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_special_days__shift__one
+#: model:ir.model.fields.selection,name:attendances.selection__days_off__shift__one
+msgid "First Shift"
+msgstr "الشفت الاول"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__number_of_flexi_days
+msgid "Flexible Days"
+msgstr "أيام مرنة"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_follower_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_follower_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_follower_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_channel_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_channel_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_channel_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_partner_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_partner_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_partner_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: attendances
+#: model:ir.model.fields,help:attendances.field_hr_attendance_register__activity_type_icon
+#: model:ir.model.fields,help:attendances.field_hr_attendance_report__activity_type_icon
+#: model:ir.model.fields,help:attendances.field_hr_attendance_transaction__activity_type_icon
+#: model:ir.model.fields,help:attendances.field_hr_reasons_lateness__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "رمز الخط الرائع ، على سبيل المثال FA- المهام"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_special_days__name__friday
+#: model:ir.model.fields.selection,name:attendances.selection__days_off__name__friday
+msgid "Friday"
+msgstr "الجمعة"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Friday Evening"
+msgstr "مساء الجمعة"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Friday Morning"
+msgstr "صباح الجمعة"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_employee_attendance_report__from_date
+msgid "From Date"
+msgstr "من تاريخ"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "From date"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__full_day_off
+msgid "Full Day Off"
+msgstr "دوام كامل"
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_report_attendances_general_attendances_report_temp
+msgid "General Attendances Report"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Generate Report"
+msgstr "انشاء المستندات"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_report.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report.py:0
+#, python-format
+msgid "Generated"
+msgstr "انشــاء"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_wizard__get_attendance_from
+msgid "Get Attendances From"
+msgstr "عكس من"
+
+#. module: attendances
+#: model:ir.actions.act_window,name:attendances.hr_attendance_wizard_action
+#: model:ir.ui.menu,name:attendances.hr_attendance_wizard_menu_item
+msgid "Get Missing Attendances"
+msgstr "معالجة الحضور والانصراف"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_view_filter
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_filter
+#: model_terms:ir.ui.view,arch_db:attendances.hr_reasons_lateness_filter
+#: model_terms:ir.ui.view,arch_db:attendances.view_attendance_transaction_filter
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/attendances/models/hr_reasons_lateness.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_reasons_lateness.py:0
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+#, python-format
+msgid "HR Manager"
+msgstr "مدير الموارد البشرية"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_report.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report.py:0
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+#, python-format
+msgid "HR Manager Approval"
+msgstr "تصديق الموارد البشرية"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__has_sign_in
+msgid "Has Sign In"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__has_sign_out
+msgid "Has Sign Out"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_report_line.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report_line.py:0
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__leave
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+#, python-format
+msgid "Holiday Hours"
+msgstr "عدد ساعات الإجازة"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_employee__hr_icon_display
+#: model:ir.model.fields,field_description:attendances.field_hr_employee_base__hr_icon_display
+#: model:ir.model.fields,field_description:attendances.field_hr_employee_public__hr_icon_display
+msgid "Hr Icon Display"
+msgstr "عرض أيقونة الموارد البشرية "
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_action_reason__id
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__id
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__id
+#: model:ir.model.fields,field_description:attendances.field_days_off__id
+#: model:ir.model.fields,field_description:attendances.field_employee_attendance_report__id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_wizard__id
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__id
+#: model:ir.model.fields,field_description:attendances.field_report_attendances_general_attendance_xls__id
+#: model:ir.model.fields,field_description:attendances.field_report_attendances_general_attendances_report_temp__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__activity_exception_icon
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__activity_exception_icon
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__activity_exception_icon
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: attendances
+#: model:ir.model.fields,help:attendances.field_hr_attendance_register__activity_exception_icon
+#: model:ir.model.fields,help:attendances.field_hr_attendance_report__activity_exception_icon
+#: model:ir.model.fields,help:attendances.field_hr_attendance_transaction__activity_exception_icon
+#: model:ir.model.fields,help:attendances.field_hr_reasons_lateness__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "الأيقونة للإشارة إلى استثناء النشاط"
+
+#. module: attendances
+#: model:ir.model.fields,help:attendances.field_hr_attendance_register__message_needaction
+#: model:ir.model.fields,help:attendances.field_hr_attendance_register__message_unread
+#: model:ir.model.fields,help:attendances.field_hr_attendance_report__message_needaction
+#: model:ir.model.fields,help:attendances.field_hr_attendance_report__message_unread
+#: model:ir.model.fields,help:attendances.field_hr_attendance_transaction__message_needaction
+#: model:ir.model.fields,help:attendances.field_hr_attendance_transaction__message_unread
+#: model:ir.model.fields,help:attendances.field_hr_reasons_lateness__message_needaction
+#: model:ir.model.fields,help:attendances.field_hr_reasons_lateness__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: attendances
+#: model:ir.model.fields,help:attendances.field_hr_attendance_register__message_has_error
+#: model:ir.model.fields,help:attendances.field_hr_attendance_register__message_has_sms_error
+#: model:ir.model.fields,help:attendances.field_hr_attendance_report__message_has_error
+#: model:ir.model.fields,help:attendances.field_hr_attendance_report__message_has_sms_error
+#: model:ir.model.fields,help:attendances.field_hr_attendance_transaction__message_has_error
+#: model:ir.model.fields,help:attendances.field_hr_attendance_transaction__message_has_sms_error
+#: model:ir.model.fields,help:attendances.field_hr_reasons_lateness__message_has_error
+#: model:ir.model.fields,help:attendances.field_hr_reasons_lateness__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: attendances
+#: model:ir.model.fields,help:attendances.field_resource_calendar__active
+msgid ""
+"If the active field is set to false, it will allow you to hide the Working "
+"Time without removing it."
+msgstr ""
+"إذا تم تحويل قيمة الحقل النشط إلى خطأ، يمكنك إخفاء وقت العمل دون إزالته. "
+
+#. module: attendances
+#: model:res.groups,name:attendances.make_invisible
+msgid "Invisible"
+msgstr "غير مرئى"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__is_flexible
+msgid "Is Flexible?"
+msgstr "مرن؟"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_is_follower
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_is_follower
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_is_follower
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__is_full_day
+msgid "Is Full Day ?"
+msgstr "دوام كامل؟"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__is_today
+msgid "Is Today"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_tree_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_lateness_tree_view
+msgid "Job"
+msgstr "المسمى الوظيفي"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__job_id
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__job_id
+msgid "Job Position"
+msgstr "المسمى الوظيفي"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Journal Overtime"
+msgstr "دفتر اليومية"
+
+#. module: attendences
+#: model:ir.model.fields,field_description:hr_base.field_resource_calendar__analytic_account_id
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_action_reason____last_update
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance____last_update
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days____last_update
+#: model:ir.model.fields,field_description:attendances.field_days_off____last_update
+#: model:ir.model.fields,field_description:attendances.field_employee_attendance_report____last_update
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register____last_update
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report____last_update
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line____last_update
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction____last_update
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_wizard____last_update
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness____last_update
+#: model:ir.model.fields,field_description:attendances.field_report_attendances_general_attendance_xls____last_update
+#: model:ir.model.fields,field_description:attendances.field_report_attendances_general_attendances_report_temp____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_action_reason__write_uid
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__write_uid
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__write_uid
+#: model:ir.model.fields,field_description:attendances.field_days_off__write_uid
+#: model:ir.model.fields,field_description:attendances.field_employee_attendance_report__write_uid
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__write_uid
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__write_uid
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__write_uid
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__write_uid
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_wizard__write_uid
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_action_reason__write_date
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__write_date
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__write_date
+#: model:ir.model.fields,field_description:attendances.field_days_off__write_date
+#: model:ir.model.fields,field_description:attendances.field_employee_attendance_report__write_date
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__write_date
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__write_date
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__write_date
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__write_date
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_wizard__write_date
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__employee_attendance_report__type__late
+msgid "Late and Early exit"
+msgstr "التأخيرات والخروج المبكر"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__lateness
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_transaction_tree_view
+#: model_terms:ir.ui.view,arch_db:attendances.employee_attendance_transactions_form_view
+msgid "Lateness"
+msgstr "التأخيرات"
+
+#. module: attendances
+#: model:ir.ui.menu,name:attendances.employee_lateness_reasons_menu_item
+msgid "Lateness Reasons"
+msgstr "تبرير التأخير والخروج"
+
+#. module: attendances
+#: model:ir.ui.menu,name:attendances.employee_lateness_absence_overtime_menu_item
+msgid "Lateness,Absence &Overtime"
+msgstr "تصديق الحضور والانصراف"
+
+#. module: attendances
+#: model:ir.actions.act_window,name:attendances.hr_lateness_reasons_action
+msgid "Lateness/Exit Reasons"
+msgstr "تبرير التأخير والخروج"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__latest_date
+msgid "Latest Date"
+msgstr "تاريخ التأخير"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Leave"
+msgstr "الإجازات"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__line_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__line_id
+msgid "Line"
+msgstr "بند"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_main_attachment_id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_main_attachment_id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_main_attachment_id
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_attendance__action_type__manual
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_wizard__get_attendance_from__manual
+msgid "Manual"
+msgstr "يدوي"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__full_max_sign_in
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_one_max_sign_in
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_two_max_sign_in
+msgid "Max Sign In"
+msgstr "اكبر وقت دخول"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__full_max_sign_out
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_one_max_sign_out
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_two_max_sign_out
+msgid "Max Sign out"
+msgstr "اكبر وقت خروج"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Max sign in should be greater than or equal min sign in"
+msgstr "اكبر وقت دخول يجب ان يكون اكبر من او يساوى اقل وقت دخول"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Max sign in should be greater than or equal min sign in in shift one"
+msgstr ""
+"اكبر وقت دخول يجب ان يكون اكبر من اقل وقت دخول واقل من اقل وقت خروج ف الدوام"
+" الاول"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Max sign in should be greater than or equal min sign in in shift two"
+msgstr ""
+"اكبر وقت دخول يجب ان يكون اكبر من اقل وقت دخول واقل من اقل وقت خروج ف الدوام"
+" الثانى"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Max sign out should be greater than or equal min sign out"
+msgstr "اكبر وقت خروج يجب ان يكون اكبر من او يساوى اقل وقت خروج"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Max sign out should be greater than or equal min sign out in shift one"
+msgstr ""
+"اكبر وقت خروج يجب ان يكون اكبر من او يساوى اقل وقت خروج فى الدوام الاول"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Max sign out should be greater than or equal min sign out in shift two"
+msgstr ""
+"اكبر وقت خروج يجب ان يكون اكبر من او يساوى اقل وقت خروج فى الدوام الثانى"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_has_error
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_has_error
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_has_error
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__full_min_sign_in
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_one_min_sign_in
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_two_min_sign_in
+msgid "Min Sign In"
+msgstr "اقل وقت دخول"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__full_min_sign_out
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_one_min_sign_out
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_two_min_sign_out
+msgid "Min Sign out"
+msgstr "اقل وقت خروج"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__mission_by_days
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Mission Hours"
+msgstr "عدد ساعات المهمة"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Missions By Days"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_special_days__name__monday
+#: model:ir.model.fields.selection,name:attendances.selection__days_off__name__monday
+msgid "Monday"
+msgstr "الاثنين"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Monday Evening"
+msgstr "مساء الاثنين"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Monday Morning"
+msgstr "صباح الاثنين"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__my_activity_date_deadline
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__my_activity_date_deadline
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__my_activity_date_deadline
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "نهاية الوقت المعين للنشاط"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_view_filter
+#: model_terms:ir.ui.view,arch_db:attendances.view_attendance_transaction_filter
+msgid "My Attendance"
+msgstr "حضوري"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__noke
+msgid "NOC"
+msgstr "الشفتات"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_report.py:0
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "Name"
+msgstr "الاسم"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__activity_date_deadline
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__activity_date_deadline
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__activity_date_deadline
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__activity_summary
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__activity_summary
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__activity_summary
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__activity_type_id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__activity_type_id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__activity_type_id
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: attendances
+#: model_terms:ir.actions.act_window,help:attendances.hr_attendance_action_hr_employee
+msgid "No attendance records to display."
+msgstr "لاتوجد تسجيلات لاظهارها."
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee__hr_icon_display__presence_to_define
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee__hr_presence_state__to_define
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_base__hr_icon_display__presence_to_define
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_base__hr_presence_state__to_define
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_public__hr_icon_display__presence_to_define
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_public__hr_presence_state__to_define
+msgid "Not Present"
+msgstr "غير متواجـد"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__note_text
+msgid "Note Text"
+msgstr "ملاحظات"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+#, python-format
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_needaction_counter
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_needaction_counter
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_needaction_counter
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_has_error_counter
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_has_error_counter
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_has_error_counter
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: attendances
+#: model:ir.model.fields,help:attendances.field_hr_attendance_register__message_needaction_counter
+#: model:ir.model.fields,help:attendances.field_hr_attendance_report__message_needaction_counter
+#: model:ir.model.fields,help:attendances.field_hr_attendance_transaction__message_needaction_counter
+#: model:ir.model.fields,help:attendances.field_hr_reasons_lateness__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: attendances
+#: model:ir.model.fields,help:attendances.field_hr_attendance_register__message_has_error_counter
+#: model:ir.model.fields,help:attendances.field_hr_attendance_report__message_has_error_counter
+#: model:ir.model.fields,help:attendances.field_hr_attendance_transaction__message_has_error_counter
+#: model:ir.model.fields,help:attendances.field_hr_reasons_lateness__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: attendances
+#: model:ir.model.fields,help:attendances.field_hr_attendance_register__message_unread_counter
+#: model:ir.model.fields,help:attendances.field_hr_attendance_report__message_unread_counter
+#: model:ir.model.fields,help:attendances.field_hr_attendance_transaction__message_unread_counter
+#: model:ir.model.fields,help:attendances.field_hr_reasons_lateness__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "Office Hours"
+msgstr "ساعات العمل"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__official_hours
+msgid "Official Hours"
+msgstr "الساعات المعتمدة"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Overtime Settings"
+msgstr "إعداد العمل الإضافي"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__parent_calendar_id
+msgid "Parent Calender"
+msgstr "جدول الدوام الاصل"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Permission Hours"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__plan_hours
+msgid "Planned Hours"
+msgstr "الساعات المخططة"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "Please select Employees Name"
+msgstr "الرجاء إختيار أسماء الموظفين"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee__hr_icon_display__presence_present
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee__hr_presence_state__present
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_base__hr_icon_display__presence_present
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_base__hr_presence_state__present
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_public__hr_icon_display__presence_present
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_public__hr_presence_state__present
+msgid "Present"
+msgstr "متواجـد"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee__hr_icon_display__presence_absent_active
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_base__hr_icon_display__presence_absent_active
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_public__hr_icon_display__presence_absent_active
+msgid "Present but not active"
+msgstr "موجود ولكن غير نشط "
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_attendance_report_wizard_view
+msgid "Print Excel Report"
+msgstr "طباعة Excel"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_attendance_report_wizard_view
+msgid "Print Report"
+msgstr "طباعة PDF"
+
+#. module: attendances
+#: model:ir.actions.report,name:attendances.general_attendance_action_xls
+msgid "Print to XLSX"
+msgstr "طباعة Excel"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_action_reason__name
+msgid "Reason"
+msgstr "السبب"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__reason
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__reason
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__reason
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__reason
+msgid "Reason/Justification"
+msgstr "السببظ المبرر"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__reasons
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_lateness_tree_view
+msgid "Reasons"
+msgstr "الأسباب"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/attendances/models/hr_attendance_report.py:0
+#: code:addons/attendances/models/hr_reasons_lateness.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_reasons_lateness.py:0
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+#, python-format
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__register_date
+msgid "Register Date"
+msgstr "تاريخ الطلب"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Report Details"
+msgstr "معلومات الحضور والانصرف"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__request_date
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_lateness_tree_view
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_resource_calendar
+msgid "Resource Working Time"
+msgstr "فترة عمل المورد"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__activity_user_id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__activity_user_id
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__activity_user_id
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_has_sms_error
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_has_sms_error
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_has_sms_error
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_special_days__name__saturday
+#: model:ir.model.fields.selection,name:attendances.selection__days_off__name__saturday
+msgid "Saturday"
+msgstr "السبت"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Saturday Evening"
+msgstr " مساء السبت"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Saturday Morning"
+msgstr "صباح السبت"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_special_days__shift__two
+#: model:ir.model.fields.selection,name:attendances.selection__days_off__shift__two
+msgid "Second Shift"
+msgstr "الشفت الثاني"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__selected_lines
+msgid "Selected Employees Lines"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/attendances/models/hr_reasons_lateness.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_reasons_lateness.py:0
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+#, python-format
+msgid "Send"
+msgstr "إرسال"
+
+#. module: attendances
+#: model:ir.actions.server,name:attendances.ir_cron_send_lateness_notifications_ir_actions_server
+#: model:ir.cron,cron_name:attendances.ir_cron_send_lateness_notifications
+#: model:ir.cron,name:attendances.ir_cron_send_lateness_notifications
+msgid "Send Attendance Notifications"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Send Email"
+msgstr "إرسال بريد إلكتروني"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__send_email
+msgid " Is Send Email"
+msgstr "تم إرسال إيميل"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_form_view
+msgid "Set To Draft"
+msgstr "إرجاع الى المبدئي"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__shift
+#: model:ir.model.fields,field_description:attendances.field_days_off__shift
+#, python-format
+msgid "Shift"
+msgstr "الشفت"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_day_off
+msgid "Shift Day Off"
+msgstr "ايام العطلة للدوام"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Shift One"
+msgstr "الدوام الاول"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Shift One Sign In Period"
+msgstr "مواعيد دخول الدوام الاول"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Shift One Sign Out Period"
+msgstr "مواعيد خروج الدوام الاول"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Shift Two"
+msgstr "الدوام الثاني"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Shift Two Sign In Period"
+msgstr "مواعيد دخول الدوام الثاني"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Shift Two Sign Out Period"
+msgstr "مواعيد خروج الدوام الثاني"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__sign_in
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_transaction_tree_view
+#, python-format
+msgid "Sign In"
+msgstr "تسجيل الدخول"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Sign In Period"
+msgstr "ساعات الدخول"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__sign_out
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_action_reason__type__sign_out
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_attendance__action__sign_out
+#: model_terms:ir.ui.view,arch_db:attendances.attendance_transaction_tree_view
+#, python-format
+msgid "Sign Out"
+msgstr "تسجيل الخروج"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Sign Out Period"
+msgstr "ساعات الخروج"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "Sign in"
+msgstr "تسجيل الدخول"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "Sign out"
+msgstr "تسجيل خروج"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#, python-format
+msgid "Sorry, The Approval For The Direct Manager '%s' Only OR HR Manager!"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#, python-format
+msgid "Sorry, The Refuse For The Direct Manager '%s' Only OR HR Manager!"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#, python-format
+msgid "Sorry, You can not Register Attendance Before %s Days."
+msgstr "للأسف, لايمكن إنشاء تسجيل حضور وإنصراف قبل %s يوم."
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#, python-format
+msgid "Sorry,You must enter the Names Of Employees!"
+msgstr "للأسف، يجب ادخال اسماء الموظفين!"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__special_days
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Special Days"
+msgstr "ايام خاصة"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__special_days_attendance
+msgid "Special Days Attendance"
+msgstr "أيام خاصة للحضور"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__special_days_partcial
+msgid "Special Days Partcial"
+msgstr "الساعات الخاصة"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__start_sign_in
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__full_start_sign_in
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_one_start_sign_in
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_two_start_sign_in
+msgid "Start Sign In"
+msgstr "اقل وقت دخول"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__start_sign_out
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__full_start_sign_out
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_one_start_sign_out
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_two_start_sign_out
+msgid "Start Sign Out"
+msgstr "اقل وقت خروج"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__state
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__state
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__state
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__state
+#: model_terms:ir.ui.view,arch_db:attendances.hr_attendance_register_filter
+#: model_terms:ir.ui.view,arch_db:attendances.hr_lateness_tree_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_reasons_lateness_filter
+msgid "State"
+msgstr "الحالة"
+
+#. module: attendances
+#: model:ir.model.fields,help:attendances.field_hr_attendance_register__activity_state
+#: model:ir.model.fields,help:attendances.field_hr_attendance_report__activity_state
+#: model:ir.model.fields,help:attendances.field_hr_attendance_transaction__activity_state
+#: model:ir.model.fields,help:attendances.field_hr_reasons_lateness__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_special_days__name__sunday
+#: model:ir.model.fields.selection,name:attendances.selection__days_off__name__sunday
+msgid "Sunday"
+msgstr "الاحد"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Sunday Evening"
+msgstr "مساء الاحد"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Sunday Morning"
+msgstr "صباح الاحد"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_attendance__taken
+msgid "Taken"
+msgstr "اخذت"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__temp_exit
+msgid "Temporary Exit Hours"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__temp_lateness
+msgid "Temporary Lateness Hours"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,help:attendances.field_resource_calendar__register_before
+msgid "The Maximum Number of Days to Request Missing Attendance"
+msgstr "الحد الأقصى لعدد الأيام لطلب تسجيل بصمة مفقوده"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_special_days__name__thursday
+#: model:ir.model.fields.selection,name:attendances.selection__days_off__name__thursday
+msgid "Thursday"
+msgstr "الخميس"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Thursday Evening"
+msgstr "مساء الخميس"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Thursday Morning"
+msgstr "صباح الخميس"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__end_sign_in
+msgid "Time to calculate today as absence"
+msgstr "وقت احتساب الغياب"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_employee_attendance_report__to_date
+msgid "To Date"
+msgstr "تاريخ النهاية"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "To date"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__to_date
+msgid "Today"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_report_line.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report_line.py:0
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__total_hours
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+#, python-format
+msgid "Total Absence Hours"
+msgstr "مجموع الساعات "
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "Total Absent"
+msgstr "اجمالي الغياب"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__total_absent_hours
+msgid "Total Absent Hours"
+msgstr "مجموع الساعات "
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__total_deduction
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Total Deduction"
+msgstr "اجمالي الخصم"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "Total Extra"
+msgstr "اجمالى الاضافى"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__total_flexible_hours
+msgid "Total Hours For Flexible Days"
+msgstr "مجموع ساعات لأيام مرن"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "Total Leave"
+msgstr "اجمالى الاجازات"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_report_line.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report_line.py:0
+#, python-format
+msgid "Total Permission Hours"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_report_line.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report_line.py:0
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__total_amount
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+#, python-format
+msgid "Total Salary"
+msgstr "إجمالي الراتب"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Total Working Hours"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "Total lateness"
+msgstr "إجمالي التأخيرات"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "Total of Early Exit"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "Total of Lateness "
+msgstr "إجمالي عدد التأخيرات"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "Total:"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_employee_attendance_report__print_totals_only
+msgid "Totals only (one line per employee)"
+msgstr "اجمالي بدون تفاصيل"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.view_attendance_calendar
+msgid "Transaction"
+msgstr "المعاملة"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_special_days__name__tuesday
+#: model:ir.model.fields.selection,name:attendances.selection__days_off__name__tuesday
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Tuesday Evening"
+msgstr "مساء الثلاثاء"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Tuesday Morning"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_employee_attendance_report__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: attendances
+#: model:ir.model.fields,help:attendances.field_hr_attendance_register__activity_exception_decoration
+#: model:ir.model.fields,help:attendances.field_hr_attendance_report__activity_exception_decoration
+#: model:ir.model.fields,help:attendances.field_hr_attendance_transaction__activity_exception_decoration
+#: model:ir.model.fields,help:attendances.field_hr_reasons_lateness__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي المسجل."
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee__hr_icon_display__presence_undetermined
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_base__hr_icon_display__presence_undetermined
+#: model:ir.model.fields.selection,name:attendances.selection__hr_employee_public__hr_icon_display__presence_undetermined
+msgid "Undetermined"
+msgstr "غير محدد "
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_unread
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_unread
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_unread
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__message_unread_counter
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__message_unread_counter
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__message_unread_counter
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Update"
+msgstr "تحديث"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Updated"
+msgstr "معتمد"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_register__website_message_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__website_message_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_transaction__website_message_ids
+#: model:ir.model.fields,field_description:attendances.field_hr_reasons_lateness__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: attendances
+#: model:ir.model.fields,help:attendances.field_hr_attendance_register__website_message_ids
+#: model:ir.model.fields,help:attendances.field_hr_attendance_report__website_message_ids
+#: model:ir.model.fields,help:attendances.field_hr_attendance_transaction__website_message_ids
+#: model:ir.model.fields,help:attendances.field_hr_reasons_lateness__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__attendance_special_days__name__wednesday
+#: model:ir.model.fields.selection,name:attendances.selection__days_off__name__wednesday
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Wednesday Evening"
+msgstr "مساء الأربعاء"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Wednesday Morning"
+msgstr "صباح الأربعاء"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Work Days overtime"
+msgstr "أيام العمل الاضافي"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Work Hours"
+msgstr "ساعه عمل"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__working_days
+msgid "Working Days"
+msgstr "ايام العمل"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_attendance_special_days__working_hours
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_one_working_hours
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__shift_two_working_hours
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__working_hours
+#: model_terms:ir.ui.view,arch_db:attendances.resource_calendar_inherited_form
+msgid "Working Hours"
+msgstr "مجموع ساعات العمل"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Working Hours for special days must be equal to \"%s\""
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "Working Hours must be equal to \"%s\""
+msgstr "يجب أن تكون ساعات العمل مساويه ل\"%s\""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__attendance_ids
+msgid "Working Time"
+msgstr "فترة العمل"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#, python-format
+msgid "You can not Register Attendance After Today"
+msgstr "لا يمكنك تسجيل الحضور بعد اليوم"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#, python-format
+msgid "You can not Register Attendance At Future Date"
+msgstr "للأسف. لايمكن إنشاء تسجيل حضور وإنصراف بتاريخ قادم"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#, python-format
+msgid "You can not Register Attendance Before The Time"
+msgstr "للأسف. لايمكن إنشاء تسجيل حضور وإنصراف قبل زمنه"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance_register.py:0
+#: code:addons/attendances/models/hr_attendance_report.py:0
+#: code:addons/attendances/models/hr_reasons_lateness.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_register.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance_report.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_reasons_lateness.py:0
+#, python-format
+msgid "You can not delete record in state not in draft"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_attendance_action_reason
+msgid "attendance.action.reason"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_attendance_attendance
+msgid "attendance.attendance"
+msgstr "الحضور. الحضور"
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_attendance_special_days
+msgid "attendance.special.days"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "date"
+msgstr "التاريخ"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "day"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_days_off
+msgid "days.off"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid ""
+"edit Shift(Two) Min  sign in and min sign out to match working hours \"%s\""
+msgstr ""
+"الرجاء تعديل اقل زمن دخول ف الدوام الثانى ليتناسب مع عدد ساعات العمل  \"%s\""
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_hr_attendance_register
+msgid "hr.attendance.register"
+msgstr "طلبات الحضور والانصراف"
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_hr_attendance_report
+msgid "hr.attendance.report"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_hr_attendance_report_line
+msgid "hr.attendance.report.line"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_hr_attendance_transaction
+msgid "hr.attendance.transaction"
+msgstr "سجلات الحضور والانصراف"
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_hr_attendance_wizard
+msgid "hr.attendance.wizard"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_hr_reasons_lateness
+msgid "hr.reasons.lateness"
+msgstr "تبرير التأخير والخروج"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "job "
+msgstr "المسمى الوظيفى"
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "lateness"
+msgstr "التأخيرات"
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_reasons_form_view
+#: model_terms:ir.ui.view,arch_db:attendances.hr_lateness_tree_view
+msgid "lateness Date"
+msgstr "تاريخ التأخير"
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "min sign out should be greater than or equal min sign in"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "min sign out should be greater than or equal min sign in in shift one"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/models/hr_attendance.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/models/hr_attendance.py:0
+#, python-format
+msgid "min sign out should be greater than or equal min sign in in shift two"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_attendance_report_wizard_view
+msgid "or"
+msgstr "أو"
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_transaction__attending_type__out_cal
+msgid "out Calendar"
+msgstr "خارج الدوام"
+
+#. module: attendances
+#: model:ir.model,name:attendances.model_report_attendances_general_attendance_xls
+msgid "report.attendances.general_attendance_xls"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_transaction__attending_type__in_cal
+msgid "within Calendar"
+msgstr "أثناء الدوام"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report_line__total_permission_hours
+msgid "إجمالي ساعات الإذن"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_register__state__send
+#: model:ir.model.fields.selection,name:attendances.selection__hr_reasons_lateness__state__send
+msgid "إرسال"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.absent_attendance_report_template
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "إلى"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "إلى تاريخ"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "اجمالى الاجازات والانتدابات"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "اجمالى الاضافى"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "اجمالى ايام الغياب"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_lateness_absense_overtime_form_view
+msgid "اختر الموظفين"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.absent_attendance_report_template
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "اسم الموظف"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "الاجازات"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "الاجازات الرسمية"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#, python-format
+msgid "الاجمالي"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.absent_attendance_report_template
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "الادارة"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "الاستئذان"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_hr_attendance_report__name
+msgid "الاسم"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "الاضافى"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "التأخير"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "التأخيرات"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.absent_attendance_report_template
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "التاريخ"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "التفصير"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_register__action_type__sign_in
+msgid "الحضور"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "الخروج المبكر"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "الرقم الوظيفي"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "الغياب"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "المجموع"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_register__state__direct_manager
+#: model:ir.model.fields.selection,name:attendances.selection__hr_reasons_lateness__state__direct_manager
+msgid "المدير المباشر"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "المسمى الوظيفى"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "المسمي الوظيفي"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_register__state__hr_manager
+#: model:ir.model.fields.selection,name:attendances.selection__hr_reasons_lateness__state__hr_manager
+msgid "الموارد البشرية"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_attendance_report_template
+msgid "الموظف"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "الوردية"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "الى:"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.absent_attendance_report_template
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "اليوم"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_report__state__generated
+msgid "انشــاء"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "ايام الحضور"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "اﻹدارة"
+msgstr ""
+
+#. module: attendances
+#: model:mail.template,subject:attendances.emapproval
+msgid "تصديق الحضور والانصراف - ${object.name}"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_report__state__confirmed
+msgid "تصديق الموارد البشرية"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_attendance_report_template
+msgid "تقرير الحضور و الانصراف للعام"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+#, python-format
+msgid "تقرير الحضور والانصراف للموظفين"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.absent_attendance_report_template
+msgid ""
+"تقرير الغياب\n"
+"                        <br/>\n"
+"                        جميع الموظفين- تفصيلي"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "تقرير بالحضور والانصراف تفصيلى"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_report__state__approved
+msgid "تم التصديق"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "رقم الموظف"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "رقم الهوية"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "ساعات العمل"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "ساعات العمل الاضافية"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "ساعات العمل الفعلية"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__resource_calendar__state__confirm
+msgid "مؤكد"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_attendance_report_template
+msgid "مجموع الانصراف المبكر"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "مجموع التأخير والتقصير"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.employee_attendance_report_template
+msgid "مجموع التأخيرات"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_register__state__refused
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_report__state__refused
+#: model:ir.model.fields.selection,name:attendances.selection__hr_reasons_lateness__state__refused
+msgid "مرفوض"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_register__state__draft
+#: model:ir.model.fields.selection,name:attendances.selection__hr_attendance_report__state__draft
+#: model:ir.model.fields.selection,name:attendances.selection__hr_reasons_lateness__state__draft
+#: model:ir.model.fields.selection,name:attendances.selection__resource_calendar__state__draft
+msgid "مسودة"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields.selection,name:attendances.selection__resource_calendar__state__update
+msgid "معتمد"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.absent_attendance_report_template
+msgid "ملاحظات"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "ملاحظة"
+msgstr ""
+
+#. module: attendances
+#: code:addons/attendances/wizard/attendances_report_wiz.py:0
+#: code:addons/odoo/STANDARD_MODULES/test/odex25_hr/odex25_hr/attendances/wizard/attendances_report_wiz.py:0
+#: model_terms:ir.ui.view,arch_db:attendances.absent_attendance_report_template
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+#, python-format
+msgid "من تاريخ"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "من تاريخ:"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.totals_only_attendance_report_template
+msgid "مهام عمل/انتداب/تدريب"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "وفت الخروج"
+msgstr ""
+
+#. module: attendances
+#: model_terms:ir.ui.view,arch_db:attendances.late_attendance_report_template
+msgid "وقت الدخول"
+msgstr ""
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__grace_hour_before_work
+msgid "Grace Hours Before Work"
+msgstr "ساعات السماحية قبل الدوم"
+
+#. module: attendances
+#: model:ir.model.fields,field_description:attendances.field_resource_calendar__grace_hour_after_work
+msgid "Grace Hours After Work"
+msgstr "ساعات السماحية بعد الدوام"

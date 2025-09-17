@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="hr_attendance_register_action">
+            <field name="name">Attendance Register</field>
+            <field name="res_model">hr.attendance.register</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record id="hr_attendance_register_tree_view" model="ir.ui.view">
+            <field name="name">Attendance Register</field>
+            <field name="model">hr.attendance.register</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'refused'" decoration-info="state == 'draft'"
+                      string="Attendance Register">
+                    <field name="employee_no" string="Employee Number"/>
+                    <field name="employee_id" string="Employee"/>
+                    <field name="department_id" string="Department"/>
+                    <field name="job_id" string="Job"/>
+                    <field name="action_type"/>
+                    <field name="action_date"/>
+                    <field name="register_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="hr_attendance_register_form_view">
+            <field name="name">Attendance Register</field>
+            <field name="model">hr.attendance.register</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="button_submit" string="Send" class="oe_highlight" type="object"
+                                states="draft" groups="base.group_user"/>
+
+                        <button name="direct_manager" string="Direct Manager" class="oe_highlight" type="object"
+                                states="send" groups="hr_base.group_division_manager"/>
+                        <button name="direct_manager_refused" string="Refused" class="oe_highlight" type="object"
+                                states="send" groups="hr_base.group_division_manager"/>
+
+                        <button name="hr_manager" string="HR Manager" class="oe_highlight" type="object"
+                                states="direct_manager" groups="hr.group_hr_user"/>
+                        <button name="refused" string="Refused" class="oe_highlight" type="object"
+                                states="direct_manager" groups="hr.group_hr_user"/>
+
+                        <button name="set_to_draft" string="Set To Draft" class="oe_highlight" type="object"
+                                states="refused,hr_manager" groups="hr.group_hr_user" confirm="Are you sure to Reset To Draft This Record?"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,send,direct_manager,hr_manager,refused"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="all_employees" string="All Employees" attrs="{'readonly':[('state','!=','draft')]}"
+                                       groups="hr.group_hr_user"/>
+                                <field name="action_type" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="action_date" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="date" invisible="1"/>
+                                <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="from_hr_depart" string="Another Employee" groups="hr.group_hr_user,hr_base.group_division_manager"
+                                       attrs="{'readonly':[('state','!=','draft')],'invisible':[('all_employees','=',True)]}" />
+                                <field name="employee_id" string="Employee" domain="[('state','=','open')]"
+                                       attrs="{'readonly': ['|',('from_hr_depart','=',False),('state','!=','draft')],
+                                               'required':[('all_employees','=',False)]}"/>
+                                <field name="employee_no" string="Employee Number" readonly="1" attrs="{'invisible':[('all_employees','=',True)]}"/>
+                                <field name="department_id" string="Department"  readonly="1" />
+                                <field name="job_id" string="Job"  readonly="1" attrs="{'invisible':[('all_employees','=',True)]}"/>
+                                <field name="register_date" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                        </group>
+                        <separator string="Notes"/>
+                        <field name="note_text" nolabel="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+
+                        <group>
+                            <notebook>
+                                <page string="Employees" attrs="{'readonly':[('state','!=','draft')],'invisible':[('all_employees','=',False)]}">
+                                    <field name="employee_ids" domain="[('state','=','open')]"/>
+                                </page>
+                            </notebook>
+                        </group>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Attendance_Register_filter -->
+        <record id="hr_attendance_register_filter" model="ir.ui.view">
+            <field name="name">Attendance Register</field>
+            <field name="model">hr.attendance.register</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search>
+                  <field name="employee_id"/>
+                  <field name="employee_no"/>
+                  <field name="department_id" />
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                        <filter name="group_branch" string="Branch" domain="[]" context="{'group_by': 'is_branch'}"/>
+                        <filter name="group_state" string="State" domain="[]" context="{'group_by': 'state'}"/>
+                    </group>
+                    <!--separator/>
+                        <filter string="My Attendance" name="my_attendance" domain="[('employee_id.user_id', '=', uid)]"/>
+                    <separator/-->
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

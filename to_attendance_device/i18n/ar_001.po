@@ -1,0 +1,2261 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* to_attendance_device
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-19 07:28+0000\n"
+"PO-Revision-Date: 2022-09-19 07:28+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: to_attendance_device
+#: model:mail.template,body_html:to_attendance_device.email_template_not_safe_to_clear_attendance
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"    <p>Hello ${object.user_id.partner_id.name or ''},</p>\n"
+"    \n"
+"    <p>Odoo tried to delete attendance data from the device ${object.name} but it did not find safe condition to delete since the whole data was not downloaded from the device into Odoo.</p>\n"
+"    <p>Please also ensure that all the device users have been mapped with Odoo's employees. Otherwise, it is also not safe for attendance data deletion</p>\n"
+"    <p>Please check and troubleshoot.</p>\n"
+"    <p>In a case, users are checking in/out while Odoo is downloading data, this message could appear. In such the case, you can ignore this message.</p>\n"
+"    \n"
+"    <p>Best Regard,</p>\n"
+"\n"
+"</div>\n"
+"            "
+msgstr ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"    <p>Hello ${object.user_id.partner_id.name or ''},</p>\n"
+"    \n"
+"    <p>Software tried to delete attendance data from the device ${object.name} but it did not find safe condition to delete since the whole data was not downloaded from the device into Odoo.</p>\n"
+"    <p>Please also ensure that all the device users have been mapped with Software's employees. Otherwise, it is also not safe for attendance data deletion</p>\n"
+"    <p>Please check and troubleshoot.</p>\n"
+"    <p>In a case, users are checking in/out while Software is downloading data, this message could appear. In such the case, you can ignore this message.</p>\n"
+"    \n"
+"    <p>Best Regard,</p>\n"
+"\n"
+"</div>\n"
+"            "
+
+#. module: to_attendance_device
+#: model:mail.template,body_html:to_attendance_device.email_template_attendance_device
+msgid ""
+"\n"
+"<div style=\"font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; \">\n"
+"\n"
+"    <p>Hello ${object.user_id.partner_id.name or ''},</p>\n"
+"    \n"
+"    <p>There are some problems with attendance device: ${object.name}. </p>\n"
+"    \n"
+"    <p>Please check and troubleshoot.</p>\n"
+"    \n"
+"    <p>Best Regard,</p>\n"
+"\n"
+"</div>\n"
+"            "
+msgstr ""
+
+#. module: to_attendance_device
+#: model:mail.template,body_html:to_attendance_device.email_template_error_get_attendance
+msgid ""
+"\n"
+"<div>\n"
+"    <p>Hello ${object.user_id.partner_id.name or ''},</p>\n"
+"    <p>Odoo tried to download attendance data from the device ${object.name} but failed.</p>\n"
+"    <p>NOTE:</p>\n"
+"    <p>The device might not return its whole attendance data when requested which could cause this error.</p>\n"
+"    <p>If such the case, please disconnect the device from Odoo then download the data with another mean from your local network. After that, reconnect the device with Odoo and continue the data synchronization</p>\n"
+"    <p>Best Regard,</p>\n"
+"</div>\n"
+"            "
+msgstr ""
+"\n"
+"<div>\n"
+"    <p>Hello ${object.user_id.partner_id.name or ''},</p>\n"
+"    <p>Software tried to download attendance data from the device ${object.name} but failed.</p>\n"
+"    <p>NOTE:</p>\n"
+"    <p>The device might not return its whole attendance data when requested which could cause this error.</p>\n"
+"    <p>If such the case, please disconnect the device from Software then download the data with another mean from your local network. After that, reconnect the device with Software and continue the data synchronization</p>\n"
+"    <p>Best Regard,</p>\n"
+"</div>\n"
+"            "
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"\n"
+"Data that caused the error: %s"
+msgstr ""
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/wizard/attendance_wizard.py:0
+#, python-format
+msgid ""
+"'Check Out' time cannot be earlier than 'Check In' time. Debug "
+"information:<br />* Employee: <strong>%s</strong><br />* Type: %s<br />* "
+"Attendance Check Time: %s<br />"
+msgstr ""
+"'زمن الخروج لايمكن ان يكون قبل زمن الدخول:<br />* للموظف: "
+"<strong>%s</strong><br />* النوع: %s<br />* التاكد من الزمن: %s<br />"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_needaction
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_needaction
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__active
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_state_line__activity_id
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__activity_id
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__activity_id
+msgid "Activity"
+msgstr "النشاط"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_state_line__type
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__type
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__type
+msgid "Activity Type"
+msgstr "نوع النشاط"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__map_before_dl
+msgid ""
+"Always try to map users and employees (if any new found) before downloading "
+"attendance data."
+msgstr "حاول دائمًا تعيين المستخدمين والموظفين (إن وجد) قبل تنزيل بيانات الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_state_line__code
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_state__code
+msgid "An integer to express the state code"
+msgstr ""
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Are you sure to restart this device?"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_attachment_count
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_attachment_count
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model,name:to_attendance_device.model_hr_attendance
+msgid "Attendance"
+msgstr "الحضور"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_activity_tree_view
+msgid "Attendance Activities"
+msgstr "أنشطة الحضور"
+
+#. module: to_attendance_device
+#: model:ir.actions.act_window,name:to_attendance_device.attendance_activity_tree_action
+#: model:ir.model,name:to_attendance_device.model_attendance_activity
+#: model:ir.model.fields,field_description:to_attendance_device.field_hr_attendance__activity_id
+#: model:ir.ui.menu,name:to_attendance_device.attendance_activity_menu
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_activity_form_view
+msgid "Attendance Activity"
+msgstr "أنشطة الحضور"
+
+#. module: to_attendance_device
+#: model:ir.actions.act_window,name:to_attendance_device.action_user_attendance_data
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__user_attendance_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__attendance_ids
+#: model:ir.ui.menu,name:to_attendance_device.user_attendance_data_menu
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_device_user_form_view
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_attendance_data_form
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_attendance_data_pivot
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_attendance_data_tree
+msgid "Attendance Data"
+msgstr "بيانات الحضور والانصراف"
+
+#. module: to_attendance_device
+#: model:ir.model,name:to_attendance_device.model_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__device_id
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template__device_id
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__device_id
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Attendance Device"
+msgstr "جهاز البصمة"
+
+#. module: to_attendance_device
+#: model:mail.template,subject:to_attendance_device.email_template_attendance_device
+msgid "Attendance Device Connection Problem (Ref ${object.name or 'n/a' })"
+msgstr "مشكلة اتصال جهاز الحضور (المرجع $ {object.name or 'n / a'})"
+
+#. module: to_attendance_device
+#: model:res.groups,name:to_attendance_device.group_attendance_devices_manager
+msgid "Attendance Device Manager"
+msgstr "اعداد جهاز البصمة"
+
+#. module: to_attendance_device
+#: model:ir.model,name:to_attendance_device.model_attendance_device_state_line
+msgid "Attendance Device State"
+msgstr "حالة جهاز الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model,name:to_attendance_device.model_attendance_device_user
+msgid "Attendance Device User"
+msgstr "مستخدم جهاز الحضور"
+
+#. module: to_attendance_device
+#: model:ir.ui.menu,name:to_attendance_device.attendace_device_menu
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_state_form_view
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_tree
+msgid "Attendance Devices"
+msgstr "اجهزة  البصمة"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__total_att_records
+msgid "Attendance Records"
+msgstr "سجلات الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model,name:to_attendance_device.model_attendance_state
+msgid "Attendance State"
+msgstr "حالة الحضور"
+
+#. module: to_attendance_device
+#: model:ir.actions.act_window,name:to_attendance_device.attendance_state_tree_action
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_activity__attendance_status_ids
+#: model:ir.ui.menu,name:to_attendance_device.attendance_state_menu
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_state_tree_view
+msgid "Attendance Status"
+msgstr "حالات الحضور"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Attendance Status Codes"
+msgstr "رموز حالة الحضور"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/user_attendance.py:0
+#, python-format
+msgid ""
+"Attendance Status conflict! The status number from device must match the "
+"attendance status defined in Odoo."
+msgstr ""
+"تعارض حالة الحضور! يجب أن يتطابق رقم الحالة من الجهاز مع حالة الحضور المحددة"
+" في البرنامج."
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_activity_form_view
+msgid "Attendance Statuses"
+msgstr "حالات الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model,name:to_attendance_device.model_attendance_wizard
+msgid "Attendance Wizard"
+msgstr "معالج الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_state_line__activity_id
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_state__activity_id
+#: model:ir.model.fields,help:to_attendance_device.field_user_attendance__activity_id
+msgid "Attendance activity, e.g. Normal Working, Overtime, etc"
+msgstr "نشاط الحضور ، على سبيل المثال العمل العادي ، والعمل الإضافي ، وما إلى ذلك"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__auto_clear_attendance_hour
+msgid "Auto Clear At"
+msgstr "مسح تلقائي عند"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__auto_clear_attendance
+msgid "Auto Clear Attendance Data"
+msgstr "مسح تلقائي لسجلات الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__auto_clear_attendance_error_notif
+msgid "Auto Clear Attendance Notif."
+msgstr "إشعار بمسح تلقائي الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__auto_clear_attendance_dow
+msgid "Auto Clear On"
+msgstr "تشغيل المسح التلقائي"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__auto_clear_attendance_schedule
+msgid "Auto Clear Schedule"
+msgstr "جدول مسح تلقائي"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.wizard_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__state__cancelled
+msgid "Cancelled"
+msgstr "ألغيت"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Check connection"
+msgstr "تحقق من اتصال الشبكة"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__auto_clear_attendance
+msgid ""
+"Check this to clear all device attendance data after download into Odoo"
+msgstr "تحقق من ذلك لمسح جميع بيانات حضور الجهاز بعد التنزيل في البرنامج"
+
+#. module: to_attendance_device
+#: model:attendance.state,name:to_attendance_device.attendance_device_state_code_0
+#: model:attendance.state,name:to_attendance_device.attendance_device_state_code_4
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_state__type__checkin
+msgid "Check-in"
+msgstr "تسجيل حضور"
+
+#. module: to_attendance_device
+#: model:attendance.state,name:to_attendance_device.attendance_device_state_code_1
+#: model:attendance.state,name:to_attendance_device.attendance_device_state_code_5
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_state__type__checkout
+msgid "Check-out"
+msgstr "تسجيل خروج"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_hr_attendance__checkin_device_id
+msgid "Checkin Device"
+msgstr "جهاز تسجيل الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_hr_attendance__checkout_device_id
+msgid "Checkout Device"
+msgstr "جهاز تسجيل الخروج"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_wizard_form_view
+msgid "Clear Attendance Data"
+msgstr "مسح بيانات الحضور"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Clear Data"
+msgstr "مسح البيانات"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Clear all data from the device"
+msgstr "امسح جميع البيانات من الجهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_state_line__code
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__code
+msgid "Code Number"
+msgstr "رقم الكود"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__state__confirmed
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_attendance_device_filter
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid "Connect to the device %s successfully"
+msgstr "الاتصال بالجهاز %s بنجاح"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__timeout
+msgid "Connection Timeout in second"
+msgstr "مهلة زمن الاتصال في ثواني"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid "Connection Unauthorized! The device %s may require password"
+msgstr ""
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid "Could not clear all data from the device %s"
+msgstr " %sتعذر مسح جميع البيانات من الجهاز"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not clear data from the device %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not delete finger template with fid \"%s\" of uid \"%s\" from the "
+"device %s"
+msgstr "تعذر حذف قالب الإصبع مع  \"%s\" المستخدم \"%s\" للجهاز %s"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not delete the user with uid \"%s\", user_id \"%s\" from the device %s\n"
+"%s"
+msgstr ""
+"تعذر حذف المستخدم \"%s\", باسم \"%s\" من جهاز البصمة %s\n"
+"%s"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid "Could not get attendance data from the device %s"
+msgstr "تعذر الحصول على بيانات الحضور من الجهاز %s"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get connected to the device %s. This is usually due to either the network error or wrong protocol selection or password authentication is required.\n"
+"Debugging info:\n"
+"%s"
+msgstr "تعذر الاتصال بالجهاز %s بسبب خطأ المهلة. هذا عادة بسبب خطأ في الشبكة أو اختيار بروتوكول خاطئ أو مصادقة كلمة المرور مطلوبة."
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get connected to the device '%s'. Please check your network "
+"configuration and device password and/or hard restart your device"
+msgstr ""
+"تعذر الاتصال بالجهاز '%s'. يرجى التحقق من تكوين الشبكة وكلمة مرور الجهاز و /"
+" أو إعادة تشغيل جهازك"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get finger templates from the device %s\n"
+"If you had connected to your device, perhaps your device had problem. Some bad devices allowed duplicated uid may cause such problem. In such case, if you still want to load users from that bad device, please uncheck Data Acknowledge field.\n"
+"Here is the debugging error message:\n"
+"%s"
+msgstr "تعذر الحصول على قوالب البصمة من الجهاز%s\ n "
+"إذا كنت قد اتصلت بجهازك ، فربما يكون جهازك به مشكلة. قد تتسبب بعض الأجهزة السيئة في تكرار المعرف الفريد من نوعه في حدوث هذه المشكلة. في هذه الحالة ، إذا كنت لا تزال تريد تحميل المستخدمين من هذا الجهاز السيئ ، فالرجاء إلغاء تحديد حقل إقرار البيانات."
+
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get max uid from the device %s\n"
+"If you had connected to your device, perhaps your device had problem.\n"
+"Here is the debugging error message:\n"
+"%s"
+msgstr "تعذر الحصول على uid الأقصى من الجهاز %s \ n "
+"إذا اتصلت بجهازك ، فربما واجه جهازك مشكلة. "
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get the Fingerprint Algorithm of the device %s. Here is the debugging information:\n"
+"%s"
+msgstr "تعذر الحصول على خوارزمية بصمة الجهاز %s"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get the Name of the device %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get the OEM Vendor of the device %s. Here is the debugging information:\n"
+"%s"
+msgstr "تعذر الحصول على بائع  للجهاز %s"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get the Platform of the device %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get the Work Code of the device %s. Here is the debugging information:\n"
+"%s"
+msgstr ""
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get the device %s disabled. Here is the debugging information:\n"
+"%s"
+msgstr ""
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get the device %s disconnected. Here is the debugging information:\n"
+"%s"
+msgstr "تعزر الحصول على الجهاز %s عدم الاتصال"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get the device %s enabled. Here is the debugging information:\n"
+"%s"
+msgstr ""
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get the firmware version of the device %s. Here is the debugging information:\n"
+"%s"
+msgstr "تعذر الحصول على إصدار البرنامج الثابت للجهاز %s"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get the serial number of the device %s. Here is the debugging information:\n"
+"%s"
+msgstr "تعذر الحصول على الرقم التسلسلي للجهاز %s"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get time from the device %s\n"
+"Here is the debugging error message:\n"
+"%s"
+msgstr ""
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not get users from the device %s\n"
+"If you had connected to your device, perhaps your device had problem. Some bad devices allowed duplicated uid may cause such problem. In such case, if you still want to load users from that bad device, please uncheck Data Acknowledge field.\n"
+"Here is the debugging error message:\n"
+"%s"
+msgstr "تعذر الحصول على المستخدمين من الجهاز%s\ n "
+"إذا كنت قد اتصلت بجهازك ، فربما يكون جهازك به مشكلة. قد تتسبب بعض الأجهزة السيئة في تكرار المعرف الفريد من نوعه في حدوث هذه المشكلة. في هذه الحالة ، إذا كنت لا تزال تريد تحميل المستخدمين من هذا الجهاز السيئ ، فالرجاء إلغاء تحديد حقل إقرار البيانات."
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid "Could not reach the device %s (ping %s)"
+msgstr ""
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not set finger template into the device %s. Here are the information:\n"
+"user_id: %s\n"
+"Debugging information:\n"
+"%s"
+msgstr "تعذر تعيين قالب البصمة إلى الجهاز%s. هنا المعلومات:\n"
+"المستخدم: %s\n"
+""
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Could not set user into the device %s. Here is the user information:\n"
+"uid: %s\n"
+"name: %s\n"
+"privilege: %s\n"
+"password: %s\n"
+"group_id: %s\n"
+"user_id: %s\n"
+"Here is the debugging information:\n"
+"%s"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__create_employee_during_mapping
+msgid "Create Employees During Mapping"
+msgstr "إنشاء موظفين أثناء رسم الخرائط"
+
+#. module: to_attendance_device
+#: model_terms:ir.actions.act_window,help:to_attendance_device.attendance_device_list_action
+msgid "Create the first attendance device"
+msgstr "قم بإنشاء جهاز الحضور الأول"
+
+#. module: to_attendance_device
+#: model_terms:ir.actions.act_window,help:to_attendance_device.attendance_activity_tree_action
+#: model_terms:ir.actions.act_window,help:to_attendance_device.attendance_state_tree_action
+msgid "Create the first attendance status"
+msgstr "قم بإنشاء حالة الحضور الأولى"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_activity__create_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__create_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_location__create_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_state_line__create_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__create_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__create_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_wizard__create_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_line_wizard__create_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_wizard__create_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template__create_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_hr_employee__created_from_attendance_device
+msgid "Created from Device"
+msgstr "تم إنشاؤها من الجهاز"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_employee_filter
+msgid "Created from an Attendance Device"
+msgstr "تم إنشاؤها من جهاز الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_activity__create_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__create_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_location__create_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_state_line__create_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__create_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__create_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_wizard__create_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_line_wizard__create_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_wizard__create_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template__create_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__attendance_id
+msgid "Current Attendance"
+msgstr "الحضور الحالي"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__debug_message
+msgid "Debug Message"
+msgstr "رسالة تصحيح"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__del_user
+msgid "Delete User"
+msgstr "مسح مستخدم"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_state_line__device_id
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_line_wizard__device_id
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_attendance_data_search_view
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_finger_template_search_view
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_attendance_device_filter
+msgid "Device"
+msgstr "جهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__status
+msgid "Device Attendance State"
+msgstr "حالة حضور الجهاز البصمة"
+
+#. module: to_attendance_device
+#: model:ir.model,name:to_attendance_device.model_attendance_device_location
+msgid "Device Location"
+msgstr "موقع الجهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__device_name
+msgid "Device Name"
+msgstr "اسم ومودل الجهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template__device_user_id
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__user_id
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_device_user_form_view
+msgid "Device User"
+msgstr "مستخدم الجهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__device_user_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__umapped_device_user_ids
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_users_search_view
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_users_tree_view
+msgid "Device Users"
+msgstr "مستخدمين الجهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_wizard__device_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_wizard__device_ids
+msgid "Devices"
+msgstr "الأجهزة"
+
+#. module: to_attendance_device
+#: model:ir.actions.act_window,name:to_attendance_device.attendance_device_list_action
+msgid "Devices Informations"
+msgstr "معلومات اجهزة البصمة"
+
+#. module: to_attendance_device
+#: model:ir.ui.menu,name:to_attendance_device.default_attendace_device_manager_menu
+msgid "Devices Manager"
+msgstr "ادراة اجهزة البصمة"
+
+#. module: to_attendance_device
+#: model:ir.actions.act_window,name:to_attendance_device.device_user_list_action
+#: model:ir.ui.menu,name:to_attendance_device.device_users_menu
+msgid "Devices Users"
+msgstr "مستخدمين اجهزة البصمة"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_activity__display_name
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__display_name
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_location__display_name
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_state_line__display_name
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__display_name
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__display_name
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_wizard__display_name
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_line_wizard__display_name
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_wizard__display_name
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template__display_name
+#: model:ir.model.fields,field_description:to_attendance_device.field_hr_attendance__display_name
+#: model:ir.model.fields,field_description:to_attendance_device.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Download Attendance"
+msgstr "تنزيل الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__download_error_notification
+msgid "Download Error Notification"
+msgstr "اشعار خطأ في التنزيل"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Download Fingers Template"
+msgstr "تحميل قالب البصمة"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Download Users"
+msgstr "تنزيل المستخدمين"
+
+#. module: to_attendance_device
+#: model:ir.actions.server,name:to_attendance_device.ir_cron_scheduler_download_attendance_ir_actions_server
+#: model:ir.cron,cron_name:to_attendance_device.ir_cron_scheduler_download_attendance
+#: model:ir.cron,name:to_attendance_device.ir_cron_scheduler_download_attendance
+msgid "Download attendances scheduler"
+msgstr "تحميل جدولة الحضور"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Download device users"
+msgstr "تنزيل مستخدمي الجهاز"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Download fingers template"
+msgstr "تحميل قالب البصمة"
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__state__draft
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_attendance_device_filter
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: to_attendance_device
+#: model:ir.model,name:to_attendance_device.model_hr_employee
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__employee_id
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template__employee_id
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__employee_id
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_attendance_data_search_view
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/wizard/employee_upload_wizard.py:0
+#, python-format
+msgid ""
+"Employee %s has no Badge ID (employee barcode) set. Please set it on the "
+"employee profile."
+msgstr ""
+"الموظف %s  ليس لديه مجموعة معرف شارة (رمز شريطي للموظفين). يرجى تعيينه على "
+"ملف تعريف الموظف."
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/hr_employee.py:0
+#, python-format
+msgid "Employee '%s' has no Badge ID specified!"
+msgstr "الموظف '%s' ليس لديه معرف شارة محدد!"
+
+#. module: to_attendance_device
+#: model:ir.model,name:to_attendance_device.model_employee_upload_line_wizard
+msgid "Employee Upload Details"
+msgstr "تحميل تفاصيل الموظف"
+
+#. module: to_attendance_device
+#: model:ir.model,name:to_attendance_device.model_employee_upload_wizard
+msgid "Employee Upload Wizard"
+msgstr "معالج تحميل الموظف"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_line_wizard__employee_id
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_wizard__employee_ids
+msgid "Employees to upload"
+msgstr "تحميل الموظفين"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__download_error_notification
+msgid "Enable this to get notified when data download error occurs."
+msgstr "قم بتمكين هذا ليتم إعلامك عند حدوث خطأ في تنزيل البيانات"
+
+#. module: to_attendance_device
+#: model:mail.template,subject:to_attendance_device.email_template_error_get_attendance
+msgid "Error Downloading Attendance Data (Ref ${object.name})"
+msgstr "خطأ في تنزيل بيانات الحضور (المرجع $ {object.name})"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"Error create DeviceUserAttendance record: device_id %s; user_id %s; "
+"timestamp %s; attendance_state_id %s.<br />"
+msgstr ""
+"خطا في انشاء سجل البصمة : الجهاز %s; المستخدم %s; الزمن %s; نوع الحركة "
+"%s.<br />"
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__auto_clear_attendance_dow__-1
+msgid "Everyday"
+msgstr "كل يوم"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template__fid
+msgid "Finger Id"
+msgstr "معرف البصمة"
+
+#. module: to_attendance_device
+#: model:ir.actions.act_window,name:to_attendance_device.action_finger_template
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__finger_template_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__finger_templates_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_hr_employee__finger_templates_ids
+#: model:ir.ui.menu,name:to_attendance_device.finger_template_menu
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_finger_template_search_view
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_finger_template_form
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_finger_template_tree
+msgid "Finger Template"
+msgstr "قالب البصمة للموظفين"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__total_finger_template_records
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__total_finger_template_records
+#: model:ir.model.fields,field_description:to_attendance_device.field_hr_employee__total_finger_template_records
+msgid "Finger Templates"
+msgstr "قوالب البصمة"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__fingerprint_algorithm
+msgid "Fingerprint Algorithm"
+msgstr "خوارزمية البصمة"
+
+#. module: to_attendance_device
+#: model:ir.model,name:to_attendance_device.model_finger_template
+msgid "Fingers Template"
+msgstr "قالب البصمات"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__firmware_version
+msgid "Firmware Version"
+msgstr "نسخة برنامج ثابت"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_wizard__fix_attendance_valid_before_synch
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_wizard_form_view
+msgid "Fix Attendance Valid"
+msgstr "إصلاح الحضور "
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_follower_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_follower_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_channel_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_channel_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_partner_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_partner_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__auto_clear_attendance_dow__4
+msgid "Friday"
+msgstr "الجمعة"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Get Device Info"
+msgstr "احصل على معلومات الجهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__group_id
+msgid "Group"
+msgstr "المجموعة"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_attendance_data_search_view
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_finger_template_search_view
+msgid "Group By..."
+msgstr "تجميع حسب.."
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__hr_attendance_id
+msgid "HR Attendance"
+msgstr "حضور المواردالبشرية"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_activity__id
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__id
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_location__id
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_state_line__id
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__id
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__id
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_wizard__id
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_line_wizard__id
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_wizard__id
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template__id
+#: model:ir.model.fields,field_description:to_attendance_device.field_hr_attendance__id
+#: model:ir.model.fields,field_description:to_attendance_device.field_hr_employee__id
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__user_id
+msgid "ID Number"
+msgstr "رقم المعرف"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__ip
+msgid "IP / Domain Name"
+msgstr "اي بي / اسم المجال"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_wizard__fix_attendance_valid_before_synch
+msgid ""
+"If checked, Odoo will recompute all attendance data for their valid before "
+"synchronizing with HR Attendance (upon you hit the 'Synchronize Attendance' "
+"button)"
+msgstr "إذا تم تحديده ، فسيقوم البرنامج بإعادة حساب جميع بيانات الحضور لتكون صالحة قبل المزامنة مع الموارد البشرية (يجب الضغط علي  'تزامن الحضور' زر)"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__debug_message
+msgid ""
+"If checked, debugging messages will be posted in OpenChatter for debugging "
+"purpose"
+msgstr "إذا تم تحديده ، فسيتم نشر رسائل التصحيح في الدردشة لغرض التصحيح"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__create_employee_during_mapping
+msgid ""
+"If checked, during mapping between Device's Users and company's employees, "
+"unmapped device users will try to create a new employee then map "
+"accordingly."
+msgstr "إذا تم تحديده ، أثناء التعيين بين مستخدمي الجهاز وموظفي الشركة ، فسيحاول مستخدمو الجهاز المعتمدون إنشاء موظف جديد ثم تعيينهم وفقًا لذلك."
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__message_needaction
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__message_unread
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__message_needaction
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__message_unread
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_state__message_needaction
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_state__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__message_has_error
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__message_has_sms_error
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__message_has_error
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__message_has_sms_error
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_state__message_has_error
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_state__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__del_user
+msgid ""
+"If checked, the user on the device will be deleted upon deleting this record"
+" in Odoo"
+msgstr "إذا تم تحديده ، فسيتم حذف المستخدم على الجهاز عند حذف هذا السجل في البرنامج"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__ignore_unknown_code
+msgid "Ignore Unknown Code"
+msgstr "تجاهل رمز غير معروف"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_attendance_device_filter
+msgid "Inactive"
+msgstr "غير نشط"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_is_follower
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_is_follower
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid "It was not safe to clear attendance data from the device %s.<br />"
+msgstr "لم يكن من الآمن مسح بيانات الحضور من الجهاز %s.<br />"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_activity____last_update
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device____last_update
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_location____last_update
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_state_line____last_update
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user____last_update
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state____last_update
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_wizard____last_update
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_line_wizard____last_update
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_wizard____last_update
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template____last_update
+#: model:ir.model.fields,field_description:to_attendance_device.field_hr_attendance____last_update
+#: model:ir.model.fields,field_description:to_attendance_device.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__last_attendance_download
+msgid "Last Sync."
+msgstr "آخر مزامنة."
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_activity__write_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__write_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_location__write_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_state_line__write_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__write_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__write_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_wizard__write_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_line_wizard__write_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_wizard__write_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template__write_uid
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_activity__write_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__write_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_location__write_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_state_line__write_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__write_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__write_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_wizard__write_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_line_wizard__write_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_wizard__write_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template__write_date
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__umapped_device_user_ids
+msgid "List of Device Users that have not been mapped with an employee"
+msgstr "قائمة مستخدمي الجهاز الذين لم يتم تعيينهم لأحد الموظفين"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__device_user_ids
+msgid "List of Users stored in the attendance device"
+msgstr "قائمة المستخدمين المخزنة في جهاز الحضور"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "List of attendance records retrieved from the device"
+msgstr "قائمة سجلات الحضور المستردة من الجهاز"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "List of device users that have been downloaded for this device in Odoo"
+msgstr "قائمة مستخدمي الجهاز الذين تم تنزيلهم لهذا الجهاز في البرنامج"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__mapped_employee_ids
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "List of employees that have been mapped with this device's users"
+msgstr "قائمة بالموظفين الذين تم تعيينهم مع مستخدمي هذا الجهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__location_id
+msgid "Location"
+msgstr "المكان"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_main_attachment_id
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Map Employee"
+msgstr "تفصيل الموظف"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__map_before_dl
+msgid "Map Employee Before Download"
+msgstr "تعيين الموظف قبل التنزيل"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Map Odoo Employee and Device Users"
+msgstr "تعيين موظف البرامج ومستخدمي الجهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__mapped_employees_count
+msgid "Mapped Employee Count"
+msgstr "عدد الموظفين المعين"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__mapped_employee_ids
+msgid "Mapped Employees"
+msgstr "الموظفين المعينين"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_has_error
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_has_error
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__auto_clear_attendance_dow__0
+msgid "Monday"
+msgstr "الاثنين"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_activity__name
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__name
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_location__name
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__name
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_users_search_view
+msgid "No Attendance"
+msgstr "لا يوجد حضور"
+
+#. module: to_attendance_device
+#: model:attendance.activity,name:to_attendance_device.attendance_activity_normal
+msgid "Normal Attendance"
+msgstr "الحضور العادي"
+
+#. module: to_attendance_device
+#: model:mail.template,subject:to_attendance_device.email_template_not_safe_to_clear_attendance
+msgid "Not Safe to clear Attendance Data (Ref ${object.name})"
+msgstr "غير آمن لمسح بيانات الحضور (المرجع $ {object.name})"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_attendance_data_search_view
+msgid "Not Synchronized"
+msgstr "غير متزامن"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__not_in_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_users_search_view
+msgid "Not in Device"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__auto_clear_attendance_error_notif
+msgid "Notify upon no safe found to clear attendance data"
+msgstr "الإخطار عند عدم العثور على آمن لمسح بيانات الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_needaction_counter
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_needaction_counter
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_has_error_counter
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_has_error_counter
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__message_needaction_counter
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__message_needaction_counter
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_state__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__message_has_error_counter
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__message_has_error_counter
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_state__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__message_unread_counter
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__message_unread_counter
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_state__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__oem_vendor
+msgid "OEM Vendor"
+msgstr "نوع جهاز البصمة"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__attendance_state_id
+msgid "Odoo Attendance State"
+msgstr "حالة الحضور"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid ""
+"Odoo will connect and download all fingers template from your device. Do you"
+" want to proceed?"
+msgstr "سيقوم البرنامج بتوصيل وتنزيل جميع قوالب الأصابع من جهازك. هل تريد المتابعة؟"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid ""
+"Odoo will connect and download all users from your device (without mapping "
+"those with existing Employees in Odoo). Do you want to proceed?"
+msgstr "سيقوم البرنامج بتوصيل وتنزيل جميع المستخدمين من جهازك (دون تعيين هؤلاء الموظفين الحاليين في البرنامج). هل تريد المتابعة؟"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid ""
+"Odoo will connect and download all users from your device and try to map "
+"those with you employees. Do you want to proceed?"
+msgstr "سيقوم البرنامج بتوصيل وتنزيل جميع المستخدمين من جهازك ومحاولة تعيين هؤلاء المستخدمين معك. هل تريد المتابعة؟"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid ""
+"Odoo will map existing users with Odoo's employees. Unmapped employees will "
+"be uploaded to the device as new users and then download those new users "
+"into Odoo and map them again with unmapped employees. Do you want to "
+"proceed?"
+msgstr "سيقوم البرنامج بتعيين المستخدمين الحاليين مع موظفي البرنامج. سيتم تحميل الموظفين غير المعينين على الجهاز كمستخدمين جدد ثم تنزيل هؤلاء المستخدمين الجدد في البرنامج وتعيينهم مرة أخرى مع الموظفين غير المعينين. هل تريد المتابعة؟"
+
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__omit_ping
+msgid "Omit Ping"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__omit_ping
+msgid "Omit ping ip address when connecting to device."
+msgstr "تجاهل عنوان اي بي بينق عند الاتصال بالجهاز."
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__auto_clear_attendance_schedule__on_download_complete
+msgid "On Download Completion"
+msgstr "عند اكتمال التنزيل"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__auto_clear_attendance_schedule
+msgid ""
+"On Download Completion: Delete attendance data as soon as download finished\n"
+"Time Scheduled: Delete attendance data on the time specified below"
+msgstr "عند اكتمال التنزيل: حذف بيانات الحضور بمجرد انتهاء التنزيل \ n "
+"الوقت المجدول: حذف بيانات الحضور في الوقت المحدد أدناه"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/wizard/attendance_wizard.py:0
+#, python-format
+msgid "Only HR Attendance Managers can manually clear device attendance data"
+msgstr "يمكن فقط لمدراء حضور الموارد البشرية مسح بيانات حضور الجهاز يدويًا"
+
+#. module: to_attendance_device
+#: model:attendance.activity,name:to_attendance_device.attendance_activity_overtime
+msgid "Overtime"
+msgstr "العمل الإضافي"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__password
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__password
+msgid "Password"
+msgstr "كلمة المرور"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__platform
+msgid "Platform"
+msgstr "منصة"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__port
+msgid "Port"
+msgstr "المنفذ"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__privilege
+msgid "Privilege"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__protocol
+msgid "Protocol"
+msgstr "بروتوكول"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__reason
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__reason
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__reason
+msgid "Reason/Justification"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Restart"
+msgstr "اعادة تشغيل"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_has_sms_error
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_has_sms_error
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__auto_clear_attendance_dow__5
+msgid "Saturday"
+msgstr "السبت"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_attendance_device_filter
+msgid "Search Attendance Devices"
+msgstr "البحث عن أجهزة الحضور"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_attendance_data_search_view
+msgid "Search User Attendance Data"
+msgstr "البحث في بيانات حضور المستخدم"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__serialnumber
+msgid "Serial Number"
+msgstr "الرقم المسلسل"
+
+#. module: to_attendance_device
+#: model:ir.ui.menu,name:to_attendance_device.hr_attendance_settings
+msgid "Settings"
+msgstr "إعدادات"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Show Time"
+msgstr ""
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_attendance_data_search_view
+msgid ""
+"Show attendance records that are valid for synchronizing with Odoo's HR "
+"Atteandnce"
+msgstr "إظهار سجلات الحضور الصالحة للمزامنة مع الموارد البشرية الخاص بالبرنامج"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_attendance_data_search_view
+msgid "Show attendance records that have no link to Odoo's HR Atteandnce"
+msgstr "إظهار سجلات الحضور التي لا تحتوي على ارتباط بالموارد البشرية للبرنامج"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_device_user_form_view
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_employee_form
+msgid "Show fingerprint templates of this employee"
+msgstr "عرض قوالب بصمات الأصابع لهذا الموظف"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_users_search_view
+msgid "Show users that are not in devices. They could be deleted outside Odoo"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__unique_uid
+msgid ""
+"Some Bad Devices allow uid duplication. In this case, uncheck this field. "
+"But it is recommended to change your device."
+msgstr "تسمح بعض الأجهزة السيئة بتكرار المعرف. في هذه الحالة ، قم بإلغاء تحديد هذا الحقل. ولكن يوصى بتغيير جهازك."
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__unaccent_user_name
+msgid ""
+"Some Devices support Unicode names such as the ZKTeco K50, some others do "
+"not. In addition to this, the name field on devices is usually limited at "
+"about 24 Latin characters or less Unicode characters. Unaccent is sometimes "
+"a workaround for long Unicode names"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__protocol
+msgid ""
+"Some old devices do not support TCP. In such the case, please try on "
+"switching to UDP."
+msgstr "بعض الأجهزة القديمة لا تدعم TCP. في مثل هذه الحالة ، يرجى محاولة التبديل إلى UDP."
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__ignore_unknown_code
+msgid ""
+"Sometimes you don't want to load attendance data with status codes those not"
+" declared in the table below. In such the case, check this field."
+msgstr "في بعض الأحيان لا تريد تحميل بيانات الحضور برموز الحالة التي لم يتم التصريح عنها في الجدول أدناه. في هذه الحالة ، تحقق من هذا الحقل."
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_state_line__attendance_state_id
+msgid "State Code"
+msgstr "الكود"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__attendance_device_state_line_ids
+msgid "State Codes"
+msgstr "الكود"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__state
+msgid "Status"
+msgstr "الحالة "
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_activity__status_count
+msgid "Status Count"
+msgstr "عدد الحالة"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__auto_clear_attendance_dow__6
+msgid "Sunday"
+msgstr "الاحد"
+
+#. module: to_attendance_device
+#: model:ir.ui.menu,name:to_attendance_device.sync_device_attendance_menu
+msgid "Synchronize"
+msgstr "تزامن"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_wizard_form_view
+msgid "Synchronize Attendance"
+msgstr "تزامن الحضور"
+
+#. module: to_attendance_device
+#: model:ir.actions.act_window,name:to_attendance_device.action_sync_device_attendance
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.wizard_form_view
+msgid "Synchronize Data"
+msgstr "تزامن البيانات"
+
+#. module: to_attendance_device
+#: model:ir.actions.server,name:to_attendance_device.ir_cron_scheduler_sync_attendance_ir_actions_server
+#: model:ir.cron,cron_name:to_attendance_device.ir_cron_scheduler_sync_attendance
+#: model:ir.cron,name:to_attendance_device.ir_cron_scheduler_sync_attendance
+msgid "Synchronize attendances scheduler"
+msgstr "تزامن جدولة الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__protocol__tcp
+msgid "TCP"
+msgstr ""
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Technical Settings"
+msgstr "الإعدادات الفنية"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__not_in_device
+msgid ""
+"Technical field to indicate this user is not available in device storage. It"
+" could be deleted outside Odoo."
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__user_id
+msgid "Technician"
+msgstr "المستخدم"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template__template
+msgid "Template"
+msgstr "قالب"
+
+#. module: to_attendance_device
+#: model:ir.model.constraint,message:to_attendance_device.constraint_attendance_state_name_activity_id_unique
+msgid ""
+"The Activity Type and Activity must be unique! Please recheck if you have "
+"previously defined an attendance status with the same Activity Type and "
+"Activity"
+msgstr ""
+"يجب أن يكون نوع النشاط والنشاط فريدًا! يرجى إعادة التحقق إذا كنت قد حددت "
+"سابقًا حالة حضور بنفس نوع النشاط والنشاط"
+
+#. module: to_attendance_device
+#: model:ir.model.constraint,message:to_attendance_device.constraint_attendance_device_state_line_attendance_state_id_device_id_unique
+msgid "The Code must be unique per Device"
+msgstr "يجب أن يكون الرمز فريدًا لكل جهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.constraint,message:to_attendance_device.constraint_attendance_state_code_unique
+msgid "The Code must be unique!"
+msgstr "!يجب أن يكون الكود فريد"
+
+#. module: to_attendance_device
+#: model:ir.model.constraint,message:to_attendance_device.constraint_attendance_device_user_employee_id_device_id_unique
+msgid "The Employee must be unique per Device"
+msgstr "يجب أن يكون الموظف فريدًا لكل جهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__employee_id
+#: model:ir.model.fields,help:to_attendance_device.field_user_attendance__employee_id
+msgid "The Employee who is corresponding to this device user"
+msgstr "الموظف المقابل لمستخدم الجهاز هذا"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__fingerprint_algorithm
+msgid ""
+"The Fingerprint Algorithm (aka ZKFPVersion) of the device which will be "
+"filled automatically when you hit the 'Get Device Info' button."
+msgstr "خوارزمية جهاز البصمة (زت كي) الجهاز الذي سيتم ملؤه تلقائيًا عند النقر فوق زر الحصول على معلومات الجهاز."
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__uid
+#: model:ir.model.fields,help:to_attendance_device.field_finger_template__uid
+msgid "The ID (technical field) of the user/employee in the device storage"
+msgstr "الرقم التعريفي (المجال التقني) للمستخدم / الموظف في وحدة تخزين الجهاز"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device_user.py:0
+#, python-format
+msgid ""
+"The ID Number must be unique per Device! A new user was being "
+"created/updated whose user_id and device_id is the same as the existing "
+"one's (name: %s; device: %s; user_id: %s)"
+msgstr ""
+"يجب أن يكون رقم الهوية فريدًا لكل جهاز! جاري إنشاء / تحديث مستخدم جديد يكون "
+"معرّف المستخدم الخاص به وجهاز  المستخدم هو نفسه المستخدم الحالي (الاسم:%s ؛ "
+"الجهاز:%s ؛ المستخدم:%s)"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__user_id
+msgid "The ID Number of the user/employee in the device storage"
+msgstr "الرقم التعريفي للمستخدم / الموظف في وحدة تخزين الجهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_finger_template__fid
+msgid "The ID of this finger template in attendance device."
+msgstr "معرف قالب البصمة هذا في جهاز الحضور"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid "The Machine time is %s"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.constraint,message:to_attendance_device.constraint_attendance_activity_unique_name
+msgid "The Name of the attendance activity must be unique!"
+msgstr "يجب أن يكون اسم نشاط الحضور فريدًا!"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__oem_vendor
+msgid ""
+"The OEM Vendor of the device which will be filled automatically when you hit"
+" the 'Get Device Info' button."
+msgstr "معلومات  الجهاز الذي سيتم ملؤه تلقائيًا عندما تضغط على 'جلب معلومات الجهاز' زر"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__platform
+msgid ""
+"The Platform of the device which will be filled automatically when you hit "
+"the 'Get Device Info' button."
+msgstr "النظام الأساسي للجهاز الذي سيتم ملؤه تلقائيًا عندما تضغط على 'جلب معلومات الجهاز' زر."
+
+#. module: to_attendance_device
+#: model:ir.model.constraint,message:to_attendance_device.constraint_user_attendance_unique_user_id_device_id_timestamp
+msgid "The Timestamp and User must be unique per Device"
+msgstr "يجب أن يكون الطابع الزمني والمستخدم فريدًا لكل جهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__work_code
+msgid ""
+"The Work Code of the device which will be filled automatically when you hit "
+"the 'Get Device Info' button."
+msgstr "رمز عمل الجهاز الذي سيتم ملؤه تلقائيًا عندما تضغط على 'جلب معلومات الجهاز' زر."
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__ip
+msgid ""
+"The accessible IP or Domain Name of the device to get device's attendance "
+"data"
+msgstr "عنوان IP يمكن الوصول إليه أو اسم المجال الخاص بالجهاز للحصول على بيانات الحضور للجهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_activity__attendance_status_ids
+msgid "The check-in and check-out statuses of this activity"
+msgstr "حالات تسجيل الحضور والانصراف لهذا النشاط"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_finger_template__device_user_id
+msgid "The device user who is owner of this finger template"
+msgstr "مستخدم الجهاز الذي يملك قالب بصمة هذا"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_hr_attendance__checkin_device_id
+msgid "The device with which user took check in action"
+msgstr "الجهاز الذي قام المستخدم بتسجيل الحضور منه"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_hr_attendance__checkout_device_id
+msgid "The device with which user took check out action"
+msgstr "الجهاز الذي قام المستخدم بتسجيل الخروج منه"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__tz
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_location__tz
+msgid ""
+"The device's timezone, used to output proper date and time values inside "
+"attendance reports. It is important to set a value for this field."
+msgstr "المنطقة الزمنية للجهاز ، تُستخدم لإخراج قيم التاريخ والوقت المناسبة داخل تقارير الحضور. من المهم تحديد قيمة لهذا المجال."
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_hr_employee__unamapped_attendance_device_ids
+msgid ""
+"The devices that have not store this employee as an user yet. When you map "
+"employee with a user of a device, the device will disappear from this list."
+msgstr "الأجهزة التي لم تقم بتخزين هذا الموظف كمستخدم حتى الآن. عندما تقوم بتعيين موظف مع مستخدم جهاز ، سيختفي الجهاز من هذه القائمة."
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/hr_employee.py:0
+#, python-format
+msgid ""
+"The employee '%s' is currently referred by an attendance device user. Hence,"
+" you can not change the Badge ID of the employee"
+msgstr ""
+"الموظف '%s' تتم إحالته حاليًا بواسطة مستخدم جهاز الحضور.وبالتالي ، لا يمكنك "
+"تغيير معرف شارة الموظف"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_finger_template__employee_id
+msgid "The employee who is owner of this finger template"
+msgstr "الموظف الذي يملك قالب البصمة هذا"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__unmapped_employee_ids
+msgid "The employees that have not been mapped with any user of this device"
+msgstr "الموظفون الذين لم يتم تعيينهم لأي مستخدم لهذا الجهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__firmware_version
+msgid ""
+"The firmware version of the device which will be filled automatically when "
+"you hit the 'Get Device Info' button."
+msgstr "إصدار البرنامج الثابت للجهاز الذي سيتم ملؤه تلقائيًا عندما تضغط على 'جلب معلومات الجهاز' الزر."
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid "The following attendance data has not been stored in Odoo yet:<br />"
+msgstr "لم يتم تخزين بيانات الحضور التالية في البرنامج حتى الآن:<br />"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"The following employees, who have no Badge ID defined, have not been "
+"uploaded to the corresponding device:\n"
+msgstr ""
+"لم يتم تحميل الموظفين التاليين ، الذين لم يتم تحديد معرف شارة لهم ، إلى "
+"الجهاز المقابل:\n"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__last_attendance_download
+msgid ""
+"The last time that the attendance data was downloaded from the device into "
+"Odoo."
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__location_id
+msgid "The location where the device is located"
+msgstr "الموقع الذي يوجد فيه الجهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__device_name
+msgid ""
+"The model of the device which will be filled automatically when you hit the "
+"'Get Device Info' button."
+msgstr "الموديل الجهاز الذي سيتم ملؤه تلقائيًا عندما تضغط على 'جلب معلمات الجهاز' الزر."
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_activity__name
+msgid ""
+"The name of the attendance activity. E.g. Normal Working, Overtime, etc"
+msgstr "اسم نشاط الحضور. على سبيل المثال العمل العادي ، والعمل الإضافي ، وما إلى ذلك"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__name
+msgid "The name of the attendance device"
+msgstr "اسم جهاز بصمة الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_state__name
+msgid ""
+"The name of the attendance state. E.g. Login, Logout, Overtime Start, etc"
+msgstr "اسم حالة الحضور. على سبيل المثال تسجيل الدخول ، تسجيل الخروج ، العمل الإضافي ، إلخ"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__name
+msgid "The name of the employee stored in the device"
+msgstr "اسم الموظف المخزن في الجهاز"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__password
+msgid "The password to authenticate the device, if required"
+msgstr "كلمة المرور لمصادقة الجهاز ، إذا لزم الأمر"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__serialnumber
+msgid ""
+"The serial number of the device which will be filled automatically when you "
+"hit the 'Get Device Info' button."
+msgstr "الرقم التسلسلي للجهاز الذي سيتم ملؤه تلقائيًا عندما تضغط على 'جلب معلومات الجهاز' الزر."
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_user_attendance__status
+msgid ""
+"The state which is the unique number stored in the device to indicate type "
+"of attendance (e.g. 0: Checkin, 1: Checkout, etc)"
+msgstr "الحالة التي تمثل الرقم الفريد المخزن في الجهاز للإشارة إلى نوع الحضور (مثل 0: تسجيل الحضور ، 1: تسجيل الخروج ، إلخ)"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_user_attendance__hr_attendance_id
+msgid ""
+"The technical field to link Device Attendance Data with Odoo' Attendance "
+"Data"
+msgstr "المجال التقني لربط بيانات حضور الجهاز ببيانات حضور البرامج"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__attendance_id
+msgid "The technical field to store current attendance recorded of the user."
+msgstr "المجال التقني لتخزين الحضور الحالي المسجل للمستخدم."
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__auto_clear_attendance_hour
+msgid ""
+"The time (in the attendance device's timezone) to clear attendance data "
+"after download."
+msgstr ""
+
+#. module: to_attendance_device
+#: model:res.groups,comment:to_attendance_device.group_attendance_devices_manager
+msgid ""
+"The users in this group will have full access rights to attendance devices "
+"and their data."
+msgstr ""
+"سيكون للمستخدمين في هذه المجموعة حقوق الوصول الكامل لأجهزة الحضور وبياناتهم."
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.wizard_form_view
+msgid ""
+"This action will upload the selected employees to the selected device. In "
+"case                                 you get timeout, try on reducing number"
+" of employees to upload.                                  Are you sure to "
+"proceed?"
+msgstr "سيؤدي هذا الإجراء إلى تحميل الموظفين المحددين على الجهاز المحدد. في حالة حصولك على مهلة ، حاول تقليل عدد الموظفين للتحميل. هل أنت متأكد من المتابعة؟"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_hr_employee__created_from_attendance_device
+msgid ""
+"This field indicates that the employee was created from the data of an "
+"attendance device"
+msgstr "Tيشير هذا الحقل إلى أنه تم إنشاء الموظف من بيانات جهاز الحضور"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_hr_attendance__activity_id
+msgid ""
+"This field is to group attendance into multiple Activity (e.g. Overtime, "
+"Normal Working, etc)"
+msgstr "هذا الحقل هو تجميع الحضور في أنشطة متعددة (مثل العمل الإضافي والعمل العادي وما إلى ذلك)"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_user_attendance__valid
+msgid ""
+"This field is to indicate if this attendance record is valid for HR "
+"Attendance Synchronization. E.g. The Attendances with Check out prior to "
+"Check in or the Attendances for users without employee mapped will not be "
+"valid."
+msgstr "يشير هذا الحقل إلى ما إذا كان سجل الحضور هذا صالحًا لمزامنة حضور الموارد البشرية. على سبيل المثال لن يكون الحضور مع تسجيل الخروج قبل تسجيل الوصول أو الحضور للمستخدمين دون تعيين الموظف صالحًا."
+
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"This is for experiment to check if the device contains bad data with non-unique user's uid. Turn this option off will allow mapping device user's user_id with user's user_id in Odoo.\n"
+"NOTE:\n"
+"- non-latin user_id are not suportted.\n"
+"- Do not turn this option off in production."
+msgstr ""
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "This shows the the machine's time"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_user_attendance__attendance_state_id
+msgid ""
+"This technical field is to map the attendance status stored in the device "
+"and the attendance status in Odoo"
+msgstr "هذا المجال التقني هو تعيين حالة الحضور المخزنة في الجهاز وحالة الحضور في البرنامج"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_wizard_form_view
+msgid ""
+"This will clear all attendance data from your device without taking any care"
+"                                 about whether or not the data has been "
+"downloaded into Odoo. Do you want to proceed?"
+msgstr "سيؤدي هذا إلى محو جميع بيانات الحضور من جهازك دون الاهتمام بما إذا تم تنزيل البيانات في البرنامج أم لا. هل تريد المتابعة؟"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid ""
+"This will connect the device and retrieve its information (e.g. firmware "
+"version, serial number, etc.) then store in the database."
+msgstr ""
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid ""
+"This will download all attendance data and store in the Odoo database (i.e. "
+"in the User Attendance, not Odoo's HR Attendance)"
+msgstr "سيؤدي هذا إلى توصيل الجهاز واسترداد معلوماته (مثل إصدار البرامج الثابتة والرقم التسلسلي ، وما إلى ذلك) ثم تخزينه في قاعدة البيانات."
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "This will restart this device"
+msgstr "سيؤدي هذا إلى إعادة تشغيل هذا الجهاز"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.attendance_wizard_form_view
+msgid ""
+"This wizard will synchronize all data from all of your devices\n"
+"                        into Odoo.\n"
+"                        <br/>\n"
+"                        Download users into Odoo; Map those with Odoo\n"
+"                        Employees and create\n"
+"                        additional Employees from device data; Download attendance data\n"
+"                        from the devices and create Odoo attendance data from such data"
+msgstr ""
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.wizard_form_view
+msgid ""
+"This wizard will upload selected employees to the selected device.\n"
+"                        <br/>\n"
+"                        Note: when you change the device, Odoo will attempt to download\n"
+"                        existing users data and map with existing employees."
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__auto_clear_attendance_dow__3
+msgid "Thursday"
+msgstr "الخميس"
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__auto_clear_attendance_schedule__time_scheduled
+msgid "Time Scheduled"
+msgstr "الوقت المجدول"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__tz
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_location__tz
+msgid "Time zone"
+msgstr "المناطق الزمنية"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__timeout
+msgid "Timeout"
+msgstr "نفذ الوقت"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__timestamp
+msgid "Timestamp"
+msgstr "الطابع الزمني"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_attendance_data_search_view
+msgid "Today"
+msgstr "اليوم"
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__auto_clear_attendance_dow__1
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__protocol__udp
+msgid "UDP"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__uid
+msgid "UID"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template__uid
+msgid "UId"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__unaccent_user_name
+msgid "Unaccent User Name"
+msgstr "اسم مستخدم غير لائق"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__unique_uid
+msgid "Unique UID"
+msgstr ""
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_employee_form
+msgid "Unmapped Attendance Devices"
+msgstr "أجهزة الحضور غير المعينة"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Unmapped Device Users"
+msgstr "مستخدمين الجهاز غير المعينين"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_hr_employee__unamapped_attendance_device_ids
+msgid "Unmapped Devices"
+msgstr "الأجهزة غير المعينة"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__unmapped_employee_ids
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.wizard_form_view
+msgid "Unmapped Employees"
+msgstr "الموظفين غير المعينين"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_users_search_view
+msgid "Unmapped Users"
+msgstr "المستخدمين غير المعينن"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_unread
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_unread
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__message_unread_counter
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__message_unread_counter
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_wizard__line_ids
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.wizard_form_view
+msgid "Upload Details"
+msgstr "تفاصيل التحميل"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.wizard_form_view
+msgid "Upload Employees"
+msgstr "تحميل الموظفين"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Upload Employees into the device"
+msgstr "قم بتحميل الموظفين في الجهاز"
+
+#. module: to_attendance_device
+#: model:ir.actions.server,name:to_attendance_device.action_server_upload_finger_templates
+msgid "Upload Finger Templates"
+msgstr ""
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Upload Users"
+msgstr "تحميل المستخدمين"
+
+#. module: to_attendance_device
+#: model:ir.actions.act_window,name:to_attendance_device.action_employee_upload
+msgid "Upload to Attendance Machine"
+msgstr "تحميل إلى لجهاز البصمة"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_attendance_data_search_view
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_finger_template_search_view
+msgid "User"
+msgstr "المستخدم"
+
+#. module: to_attendance_device
+#: model:ir.model,name:to_attendance_device.model_user_attendance
+msgid "User Attendance"
+msgstr "مستخدم الحضور"
+
+#. module: to_attendance_device
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.view_device_record_form
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__device_users_count
+msgid "Users Count"
+msgstr "عدد المستخدمين"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_finger_template__valid
+#: model_terms:ir.ui.view,arch_db:to_attendance_device.user_attendance_data_search_view
+msgid "Valid"
+msgstr "صالح"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_user_attendance__valid
+msgid "Valid Attendance"
+msgstr "صلاحية الحضور"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"We found attendance status code \"%s\" from your device %s but no such code found in the device's settings in Odoo. Please go to the device %s and add this attendance code.\n"
+"In case you want to ignore to load attendance data with this code,  go to the device setting in Odoo and check \"Ignore Unknown Code\"."
+msgstr ""
+"وجدنا رمز حالة الحضور \"%s\" من جهازك%s ولكن لم يتم العثور على مثل هذا الرمز في إعدادات الجهاز في البرنامج. يرجى الذهاب إلى الجهاز %s وإضافة رمز الحضور هذا.\n"
+"في حالة رغبتك في تجاهل تحميل بيانات الحضور بهذا الرمز ، انتقل إلى إعداد الجهاز في البرنامج وتحقق \"تجاهل رمز غير معروف\"."
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__website_message_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device_user__website_message_ids
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_state__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device__website_message_ids
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_device_user__website_message_ids
+#: model:ir.model.fields,help:to_attendance_device.field_attendance_state__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: to_attendance_device
+#: model:ir.model.fields.selection,name:to_attendance_device.selection__attendance_device__auto_clear_attendance_dow__2
+msgid "Wednesday"
+msgstr "الاربعاء"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_employee_upload_line_wizard__wizard_id
+msgid "Wizard"
+msgstr "المعالج"
+
+#. module: to_attendance_device
+#: model:ir.model.fields,field_description:to_attendance_device.field_attendance_device__work_code
+msgid "Work Code"
+msgstr "كود العمل"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid "You cannot delete the device '%s' while its state is not Draft."
+msgstr "في حالة غير مسوده '%s' لايمكن حذف جهاز البصمة"
+
+#. module: to_attendance_device
+#: model:ir.model.constraint,message:to_attendance_device.constraint_attendance_device_ip_and_port_unique
+msgid ""
+"You cannot have more than one device with the same ip and port of the same "
+"location!"
+msgstr "لا يمكن أن يكون لديك أكثر من جهاز واحد بنفس IP والمنفذ في نفس الموقع!"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid ""
+"You may not be able to delete the device '%s' while its data is stored in "
+"Odoo. Please remove all the related data of this device before removing it "
+"from Odoo. You may also consider to deactivate this device so that you don't"
+" have to delete it."
+msgstr ""
+"قد لا تتمكن من حذف الجهاز '%s' أثناء تخزين بياناته في البرنامج. يرجى إزالة "
+"جميع البيانات المتعلقة بهذا الجهاز قبل إزالته من البرنامج. يمكنك أيضًا إلغاء"
+" تنشيط هذا الجهاز حتى لا تضطر إلى حذفه."
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/wizard/attendance_wizard.py:0
+#: code:addons/to_attendance_device/wizard/attendance_wizard.py:0
+#, python-format
+msgid "You must select at least one device to continue!"
+msgstr "يجب تحديد جهاز واحد على الأقل للمتابعة!"
+
+#. module: to_attendance_device
+#: code:addons/to_attendance_device/models/attendance_device.py:0
+#, python-format
+msgid "user_id: %s<br />timestamp: %s<br />status: %s<br />"
+msgstr ""

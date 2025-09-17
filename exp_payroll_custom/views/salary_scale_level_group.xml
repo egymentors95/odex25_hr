@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="salary_scale_level_group_record_action" model="ir.actions.act_window">
+            <field name="name">Salary Scale Group</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.payroll.structure</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('type','=','group')]</field>
+            <field name="context">{'default_type':'group', 'search_default_group': 1}</field>
+            <field name="search_view_id" ref="salary_scale_filter_view"/>
+        </record>
+
+    </data>
+</odoo>

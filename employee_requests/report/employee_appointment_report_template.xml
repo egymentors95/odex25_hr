@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<odoo>
+<!--	<template id="employee_request_external_layout_standard" inherit_id="web.external_layout_standard">-->
+<!--		<xpath expr="//div[@class='header']" position="replace"/>-->
+<!--		<xpath expr="//div[@class='footer']" position="replace"/>-->
+<!--	</template>-->
+    <template id="employee_appointment_template">
+		<t t-call="web.html_container">
+			<t t-call="hr_base.hr_layout">
+				<t t-foreach="docs" t-as="o">
+					<div class="page" style="font-size:18;direction:ltr" >
+						<div class="oe_structure"/>
+						<div class="page-header" >
+							<div class="text-center">
+								<b>Appointment Report</b><br/>
+							</div>
+						</div>
+					</div>
+
+					<table class="table table-bordered">
+						<tr style="font-size:16;">
+							<td>
+								<strong>Number</strong>
+							</td>
+							<td class="text-center"><span t-field="o.emp_no"/></td>
+							<td colspan="4"></td>
+							<td >
+								<strong>Date</strong>
+							</td>
+							<td class="text-center"></td>
+						</tr>
+						<tr style="font-size:16;">
+							<td>
+								<strong>Iqama</strong>
+							</td>
+							<td colspan="2" class="text-center">
+								<t t-if="o.country_id.code=='SA'">
+									<t t-esc="o.saudi_number.saudi_id"/>
+								</t>
+								<t t-else="">
+									<t t-esc="o.iqama_number.iqama_id"/>
+								</t>
+							</td>
+							<td colspan="5"></td>
+						</tr>
+						<tr style="font-size:16;">
+							<td>
+								<strong>Name</strong>
+							</td>
+							<td colspan="2" class="text-center"><span t-field="o.name"/></td>
+							<td colspan="3"></td>
+							<td>
+								<strong>Status</strong>
+							</td>
+							<td class="text-center"><span t-field="o.marital"/></td>
+
+						</tr>
+						<tr style="font-size:16;">
+							<td>
+								<strong>Nationality</strong>
+							</td>
+							<td class="text-center"><span t-field="o.country_id.name"/></td>
+							<td>
+								<strong>Gender</strong>
+							</td>
+							<td class="text-center"><span t-field="o.gender"/></td>
+							<td>
+								<strong>Birth Date</strong>
+							</td>
+							<td class="text-center"><span t-field="o.birthday"/></td>
+							<td>
+								<strong>Age</strong>
+							</td>
+							<t t-if="o.birthday">
+								<td class="text-center"><span t-esc="context_timestamp(datetime.datetime.now()).year - datetime.datetime.strptime(str(o.birthday), '%Y-%m-%d').date().year"/></td>
+							</t>
+						</tr>
+						<tr style="font-size:16;">
+							<td>
+								<strong>City</strong>
+							</td>
+							<td class="text-center"><span t-field="o.address_city.name"/></td>
+							<td colspan="6"></td>
+						</tr>
+						<tr style="font-size:16;">
+							<td>
+								<strong>Job</strong>
+							</td>
+							<td class="text-center"><span t-field="o.iqama_number.job_id.name"/></td>
+							<td>
+								<strong>Real Job</strong>
+							</td>
+							<td class="text-center"><span t-field="o.job_id.name"/></td>
+							<td>
+								<strong>Department</strong>
+							</td>
+							<td colspan="3" class="text-center"><span t-field="o.department_id.name"/></td>
+						</tr>
+						<tr style="font-size:16;">
+							<td>
+								<strong>Manager</strong>
+							</td>
+							<td class="text-center"><span t-field="o.parent_id.name"/></td>
+							<td colspan="2"></td>
+							<td colspan="4"></td>
+						</tr>
+						<tr style="font-size:16;">
+							<td>
+								<strong>Company</strong>
+							</td>
+							<td class="text-center"><span t-field="o.company_id.name"/></td>
+							<td colspan="2"></td>
+							<td colspan="4"></td>
+						</tr>
+					</table>
+					<center><b>Salary Info</b></center><br/>
+					<table class="table table-bordered">
+						<tr style="font-size:16;">
+							<td><strong>Base Salary</strong></td>
+							<td class="text-center"><span t-field="o.contract_id.salary"/></td>
+							<td><strong>Additional</strong></td>
+							<td class="text-center"><span t-esc="o.contract_id.total_allowance - (o.contract_id.salary + o.contract_id.house_allowance_temp + o.contract_id.transport_allowance)"/></td>
+							<td><strong>Allowances</strong></td>
+							<td colspan="1" class="text-center"> <span t-field="o.contract_id.house_allowance_temp"/></td>
+							<td colspan="3" class="text-center"><span t-field="o.contract_id.transport_allowance"/></td>
+							<td colspan="3"><strong>Total</strong></td>
+							<td colspan="3" class="text-center"><span t-esc="o.contract_id.salary + o.contract_id.house_allowance_temp + o.contract_id.transport_allowance"/></td>
+						</tr>
+						<tr style="font-size:16;">
+							<td></td>
+							<td></td>
+							<td colspan="7"></td>
+							<td>
+								<strong>Net</strong>
+							</td>
+							<td colspan="3" class="text-center"><span t-field="o.contract_id.total_net"/></td>
+						</tr>
+						<tr style="font-size:16;">
+							<td>
+								<strong>Bank 1</strong>
+							</td>
+							<td class="text-center"><span t-field="o.bank_code"/></td>
+							<td colspan="2">
+								<strong>Bank 2</strong>
+							</td>
+							<td colspan="2">
+								<strong>Account Number</strong>
+							</td>
+							<td colspan="7" class="text-center"><span t-field="o.bank_account_id.acc_number"/></td>
+						</tr>
+					</table>
+					<center><b>Documents</b></center>
+					<br/>
+					<table class="table table-bordered">
+						<tr style="font-size:16;">
+							<td><strong>Identity End Date</strong></td>
+							<td colspan="2"><span t-field="o.iqama_number.expiry_date"/></td>
+							<td colspan="2"></td>
+							<td colspan="4"></td>
+						</tr>
+						<tr style="font-size:16;">
+							<td><strong>Passport Number</strong></td>
+							<td class="text-center"><span t-field="o.passport_id.name"/></td>
+							<td><strong>Passport Issuance Date</strong></td>
+							<td colspan="2" class="text-center"><span t-field="o.date_issuance_passport"/></td>
+							<td><strong>Passport Expiration Date</strong></td>
+							<td colspan="2" class="text-center"><span t-field="o.expiration_date_passport"/></td>
+						</tr>
+					</table>
+					<center><b>Work</b></center>
+					<br/>
+					<table class="table table-bordered">
+						<tr style="font-size:16;">
+							<td><strong>Hiring Date</strong></td>
+							<td class="text-center"><span t-field="o.first_hiring_date"/></td>
+							<td><strong>Contract Start Date</strong></td>
+							<td class="text-center"><span t-field="o.contract_id.date_start"/></td>
+							<td><strong>Contract End Date</strong></td>
+							<td class="text-center"><span t-field="o.contract_id.date_end"/></td>
+							<td></td>
+						</tr>
+					</table>
+					<center><b>Contact</b></center>
+					<br/>
+					<table class="table table-bordered">
+						<tr style="font-size:16;">
+							<td>
+								<strong>Phone</strong>
+							</td>
+							<td class="text-center"><span t-field="o.work_phone"/></td>
+							<td>
+								<strong>Mobile</strong>
+							</td>
+							<td class="text-center"><span t-field="o.mobile_phone"/></td>
+							<td colspan="2"></td>
+						</tr>
+						<tr style="font-size:16;">
+							<td>
+								<strong>Email</strong>
+							</td>
+							<td colspan="2" class="text-center"><span t-field="o.work_email"/></td>
+							<td>
+								<strong>Address</strong>
+							</td>
+							<td colspan="2" class="text-center"><span t-field="o.address_id"/></td>
+						</tr>
+					</table>
+					<center><b>Notes</b></center>
+					<br/>
+					<table class="table table-bordered">
+						<tr style="font-size:16;">
+							<td></td>
+						</tr>
+					</table>
+					<br/>
+				</t>
+			</t>
+		</t>
+	</template>
+
+	<record id="employee_appointment_action_report" model="ir.actions.report">
+		<field name="model">hr.employee</field>
+		<field name="name">Employee Appointment Report</field>
+		<field name="report_type">qweb-pdf</field>
+		<field name="report_name">employee_requests.employee_appointment_template</field>
+	</record>
+
+</odoo>

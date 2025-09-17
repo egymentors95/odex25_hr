@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_custody_receiving,access_hr_custody_receiving,exp_employee_custody.model_hr_custody_receiving,base.group_user,1,0,0,0
+access_hr_custody_receiving_emp,hr.custody.receiving.emp,exp_employee_custody.model_hr_custody_receiving,base.group_user,1,1,1,1
+access_employee_custody,access_employee_custody,exp_employee_custody.model_custom_employee_custody,base.group_user,1,1,1,1
+access_employee_custody_line,access_employee_custody_line,exp_employee_custody.model_employee_custody_line,base.group_user,1,1,1,1
+access_employee_return_custody_emp,Employee.return.custody.line.emp,exp_employee_custody.model_employee_return_custody_line,base.group_user,1,1,1,1

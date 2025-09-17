@@ -1,0 +1,137 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="employee_mission_type_settings_action">
+            <field name="name">Mission Type Settings</field>
+            <field name="res_model">hr.official.mission.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <record model="ir.actions.act_window" id="employee_mission_type_training_settings_action">
+            <field name="name">Mission Type Settings</field>
+            <field name="res_model">hr.official.mission.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('work_state','=','training')]</field>
+
+        </record>
+
+        <menuitem name="Mission Type Settings" id="mission_type_settings_menu_item"
+                  parent="hr.hr_menu_configuration"
+                  action="employee_mission_type_settings_action"
+        />
+
+        <record model="ir.ui.view" id="employee_official_mission_type_form_view">
+            <field name="name">employee official mission type</field>
+            <field name="model">hr.official.mission.type</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name" string="Name of mission" required="1"/>
+                        </group>
+                        <group>
+                            <group groups="hr.group_hr_user">
+                                <separator string="General Information"/>
+                                <field name="type_of_mission" string="Mission Place"/>
+                                <!--                                <field name="mission_place" string="Mission place"/>-->
+                                <field name="duration_type" string="Duration type"/>
+                                <field name="maximum_days" string="Maximum days"
+                                       attrs="{'invisible':[('duration_type','!=','days')]}"/>
+                                <field name="max_days_year" string="Max Days Year" 
+                                       attrs="{'invisible':['|',('duration_type','!=','days'),('related_with_financial','!=',True)]}"/>
+
+                                <field name="max_request_number" attrs="{'invisible':[('duration_type','!=','days')]}"/>
+                                <field name="total_months" attrs="{'invisible':[('duration_type','!=','days')]}"/>
+
+                                <field name="maximum_hours" string="Maximum hours"
+                                       attrs="{'invisible':[('duration_type','!=','hours')]}"/>
+                                <field name="company_id" string="Company" groups="base.group_multi_company"
+                                       readonly="1"/>
+                                <field name="work_state" required="1" string='Mission Type'/>
+                                <field name="special_hours"
+                                       attrs="{'invisible':[('work_state','not in',('others','work'))]}"/>
+
+                                <field name="absent_attendance" string='Absent Attendance' 
+                                       attrs="{'invisible':[('work_state','not in',('others','work'))]}"
+                                       help="If there are no attendance, this day will be absent."/>
+                            </group>
+                            <group groups="hr.group_hr_user">
+                                <separator string="Financial Details"/>
+                                <field name="related_with_financial" string="Related with financial"/>
+                                <field name="type_of_payment" string="Type of payment"
+                                       attrs="{'invisible':[('related_with_financial','=',False)],'required':[('related_with_financial','=',True)]}"/>
+                                <field name="hour_price" string="Hour price"
+                                       attrs="{'invisible':['|','|',('related_with_financial','=',False),('duration_type','=','days'),('type_of_payment','=','allowance')],
+                                       'required':[('duration_type','=','hours')]}"/>
+                                <field name="day_price" string="Day price"
+                                       attrs="{'invisible':['|','|',('related_with_financial','=',False),('duration_type','=','hours'),('type_of_payment','=','allowance')],
+                                       'required':[('duration_type','=','days')]}"/>
+
+                                <field name="allowance_id" string="Allowance"
+                                       attrs="{'invisible':['|',('related_with_financial','=',False),('type_of_payment','=','fixed')],
+                                       'required':[('type_of_payment','=','allowance')]}" widget="many2many_tags"/>
+
+                                <field name="max_amount" string="Maximum Amount"
+                                       attrs="{'invisible':[('related_with_financial','=',False)],'required':[('related_with_financial','=',True)]}"/>
+                                <field name="approve_by"/>
+                                <field name="working_days"/>
+
+                                <!--separator string="Accounting"
+                                           attrs="{'invisible':[('related_with_financial','=',False)]}"/>
+                                <field name="account_id" string="Account"
+                                       attrs="{'invisible':[('related_with_financial','=',False)],'required':[('related_with_financial','=',True)]}"/>
+                                <field name="journal_id" string="Journal"
+                                       attrs="{'invisible':[('related_with_financial','=',False)],'required':[('related_with_financial','=',True)]}"/-->
+                            </group>
+                        </group>
+                    <notebook>
+                    <page string="Accounting Info">
+                        <group>
+                            <field name="transfer_by_emp_type" />
+                            <field name="journal_id" string="Journal"
+                                       attrs="{'required':[('related_with_financial','=',True)]}"/>
+                            <field name="account_id" string="Account"
+                                   attrs="{'required':[('related_with_financial','=',True),('transfer_by_emp_type', '=', False)],
+                                           'invisible' : [('transfer_by_emp_type', '=', True)]}"/>
+		            <field name="analytic_account_id" string="Analytic Account"/>
+
+                        </group>
+                        <field name="account_ids" attrs="{'invisible' : [('transfer_by_emp_type', '=', False)]}">
+                            <tree editable="bottom">
+                                <field name="emp_type_id"/>
+                                <field name="debit_account_id"/>
+                            </tree>
+                        </field>
+                      </page>
+                     </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="mission_type_settings_tree_view">
+            <field name="name">Mission Type Settings</field>
+            <field name="model">hr.official.mission.type</field>
+            <field name="arch" type="xml">
+                <tree string="Mission Type Settings">
+                    <field name="name" string="Mission Name"/>
+                    <field name="work_state" string="Mission Type"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_mission_type_settings_tree" model="ir.actions.act_window.view">
+            <field eval="1" name="sequence"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="mission_type_settings_tree_view"/>
+            <field name="act_window_id" ref="employee_mission_type_settings_action"/>
+        </record>
+
+        <record id="action_mission_type_settings_form" model="ir.actions.act_window.view">
+            <field eval="2" name="sequence"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="employee_official_mission_type_form_view"/>
+            <field name="act_window_id" ref="employee_mission_type_settings_action"/>
+        </record>
+    </data>
+</odoo>

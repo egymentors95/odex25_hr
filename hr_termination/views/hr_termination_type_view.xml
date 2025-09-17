@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="termination_type_action">
+            <field name="name">Termination Type</field>
+            <field name="res_model">hr.termination.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--Termination type form vei-->
+        <record id="termination_type_form_view" model="ir.ui.view">
+            <field name="name">hr.termination.type.form</field>
+            <field name="model">hr.termination.type</field>
+            <field name="arch" type="xml">
+                <form string="Termination Type">
+                    <group>
+                        <group>
+                            <field name="name" string="Name"/>
+                            <field name="allowance_ids" string="Allowances" widget="many2many_tags"
+                                   options="{'not_delete': True}"/>
+                            <field name="allowance_id" string="Allowance" required="1"/>
+                            <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="factor" string="Factor" invisible="1"/>
+                            <field name="clearance" string="Clearance"/>
+                            <field name="holiday" string="Holiday Allowance?"/>
+                            <field name="holiday_allowance" string="Holiday Allowance"
+                                   attrs="{'invisible':[('holiday','!=',True)],'required':[('holiday','=',True)]}"/>
+                            <field name="holiday_deduction" string="Holiday Deduction"
+                                   attrs="{'invisible':[('holiday','!=',True)],'required':[('holiday','=',True)]}"/>
+                        </group>
+                    </group>
+
+                    <separator string="Termination duration"/>
+                    <field name="termination_duration_ids" string="">
+                        <tree editable="bottom">
+                            <field name="name" string="Name"/>
+                            <field name="date_from" string="From"/>
+                            <field name="date_to" string="To"/>
+                            <field name="factor" string="Factor"/>
+                            <field name="amount" string="Amount"/>
+                        </tree>
+                    </field>
+                </form>
+            </field>
+        </record>
+
+
+        <!--Termination Duration form view-->
+        <record id="termination_duration_form_view" model="ir.ui.view">
+            <field name="name">hr.termination.duration.form.view</field>
+            <field name="model">hr.termination.duration</field>
+            <field name="arch" type="xml">
+                <form string="Termination duration">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" string="Name"/>
+                            </group>
+                            <group>
+                                <field name="date_from" string="From"/>
+                            </group>
+                            <group>
+                                <field name="date_to" string="To"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="factor" string="Factor"/>
+                                <field name="amount" string="Amount"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!--Termination type tree view-->
+        <record id="termination_type_tree_view" model="ir.ui.view">
+            <field name="name">hr.termination.type.tree.view</field>
+            <field name="model">hr.termination.type</field>
+            <field name="arch" type="xml">
+                <tree string="Termination Type">
+                    <field name="name" string="Name"/>
+                    <field name="company_id" string="Company"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!--Termination duration tree view-->
+        <record id="termination_duration_tree_view" model="ir.ui.view">
+            <field name="name">hr.termination.duration.tree.view</field>
+            <field name="model">hr.termination.duration</field>
+            <field name="arch" type="xml">
+                <tree string="Termination duration">
+                    <field name="name" string="Name"/>
+                    <field name="date_from" string="From"/>
+                    <field name="date_to" string="To"/>
+                    <field name="factor" string="Factor"/>
+                    <field name="amount" string="Amount"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</odoo>

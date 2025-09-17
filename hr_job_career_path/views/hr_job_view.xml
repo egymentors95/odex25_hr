@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr_job_experience_view_form" model="ir.ui.view">
+            <field name="name">hr.job.experience.form</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr_job_request.hr_job_view_form_inherit2"/>
+            <field name="priority">100</field>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='statistics']" position="after">
+                   <group string="Experiences" name="statistics">
+                       <field name="general_experience"/>
+                       <field name="domain_experience"/>
+                   </group>
+                </xpath>
+                <xpath expr="//notebook/page[1]" position="before">
+                    <page string="Domains of Experience"
+                          name="experience"
+                          attrs="{'invisible':[('domain_experience','&lt;', 1)]}">
+                        <group col="4" colspan="2">
+                            <field name="domain_ids" colspan="4" nolabel="1"
+                                   attrs="{'required':[('domain_experience','&gt;', 0)]}">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="experience_years"/>
+                                </tree>
+                                <form>
+                                    <sheet>
+                                        <group col="1">
+                                            <group>
+                                                <field name="name"/>
+                                                <field name="experience_years"/>
+                                            </group>
+                                            <group>
+                                                <field name="job_ids" nolabel="1"
+                                                       attrs="{'required':[('experience_years','&gt;', 0)]}">
+                                                     <tree editable="top">
+                                                          <field name="job_id"/>
+                                                          <field name="years"/>
+                                                     </tree>
+                                                </field>
+                                            </group>
+                                    </group>
+                                    </sheet>
+                                </form>
+                            </field>
+                        </group>
+                    </page>
+                    <page string="Parent Jobs" name="career_path">
+                        <field name="parent_job_ids"/>
+                        <field name="job_preference_ids">
+                             <tree create="0">
+                                  <field name="prf_job_id"/>
+                                  <field name="preference"/>
+                             </tree>
+                        </field>
+                    </page>
+                    <page string="Payroll Groups" name="payroll_structure">
+                        <field name="payroll_group_ids"/>
+                    </page>
+                    <page string="Qualification" name="qualification">
+                        <field name="qualification_ids">
+                             <tree editable="top">
+                                  <field name="qualification_id"/>
+                                  <field name="specialization_id"/>
+                             </tree>
+                        </field>
+                    </page>
+                    <page string="Certification" name="Certification">
+                        <field name="certificate_ids"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

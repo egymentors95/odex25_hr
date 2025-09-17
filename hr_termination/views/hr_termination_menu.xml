@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- Termination menu  -->
+        <menuitem name="Termination" id="termination" parent="hr.menu_hr_root"
+                  sequence="6"/>
+        <!-- Termination sub_menu  -->
+        <menuitem name="Termination, Resignation &amp; EOS" id="termination_resignation_eos"
+                  parent="hr_termination.termination"
+                  sequence="1" action="termination_resignation_eos_action"/>
+
+        <!-- Termination sub_menu  -->
+        <menuitem name="EOS Patch" id="eos_patch"
+                  parent="hr_termination.termination"
+                  sequence="2" action="eos_patch_action" groups="hr.group_hr_user"/>
+
+        <!--Termination type menu item view-->
+        <menuitem name="Termination Type" id="termination_type_menu" parent="hr_termination.termination" sequence="7"
+                  action="termination_type_action"
+                  groups="hr.group_hr_user"/>
+
+    </data>
+</odoo>
+
+

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--sequence code -->
+    <record id="seq_code_penalty" model="ir.sequence">
+        <field name="name">sequence_code_penalty</field>
+        <field name="code">hr.penalty.ss</field>
+        <field name="prefix">P</field>
+        <field name="padding">5</field>
+    </record>
+</odoo>

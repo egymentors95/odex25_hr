@@ -1,0 +1,12 @@
+<odoo>
+    <data>
+        <record id="action_report_circular_decision" model="ir.actions.report">
+            <field name="model">hr.administrative.circular</field>
+            <field name="name">Administrative Circular/Decision</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_administrative_circular.report_circular_decision</field>
+            <field name="report_file">hr_administrative_circular.report_circular_decision</field>
+             <field name="binding_model_id" ref="model_hr_administrative_circular"/>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,110 @@
+<odoo>
+    <template id="template_report_submitted_embassy">
+        <t t-call="web.html_container">
+            <t t-call="hr_base.hr_layout" t-translation="off">
+                <style>
+                    @font-face {font-family: "Sakkal Majalla"; src:
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+                    format("embedded-opentype"),
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+                    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype");
+                    }
+
+                </style>
+                <div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size: 15pt;">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="row">
+                            <table class="table table-borderless"
+                                   style="width:100%;border-collapse: collapse;border-collapse:separate;border-spacing: 0 12px;"
+                                   dir="rtl">
+                                <tr style="border: 0 ;">
+                                    <td style="text-align:right;border:0;width:50%;">
+                                        <strong>سعاده القنصل العام</strong>
+                                    </td>
+                                    <td style="text-align:left;border:0;width:50%">
+                                        <strong>His Excellency</strong>
+                                    </td>
+                                </tr>
+
+                                <tr style="border: 0">
+                                    <td style="text-align: right ;border: 0;width:50%">
+                                        بسفاره خادم الحرمين الشريفين
+                                    </td>
+                                    <td style="text-align: left;border: 0 ;width:50%">
+                                        The Consul General Saudi Embassy in
+                                    </td>
+                                </tr>
+
+                                <tr style="border: 0;">
+                                    <td style="text-align: right ;border: 0;width:50%">
+                                        السلام عليكم ورحمته الله وبركاته
+                                    </td>
+                                    <td style="text-align: left;border: 0 ;width:50%">
+                                        : Your Excellency
+                                    </td>
+                                </tr>
+                                <tr style="border: 0">
+                                    <td style="text-align:right;border: 0;width:50%">
+                                        <span>
+                                            نحيط سعادتكم بأن تم منح هذا
+                                            الخطاب للسيد
+                                            <span t-field="o.name"/>
+                                            الجنسيه
+                                            <span t-field="o.country_id.name"/>
+                                            جواز رقم
+                                            <span t-field="o.passport_id.passport_id"/>
+                                            وذلك لتقديمه لسفاره خادم الحرمين الشريفين في
+                                            <span t-field="o.country_address_id"/>
+                                            للعمل لدينا على وظيفه
+                                            <span t-field="o.job_id.name"/>
+                                        </span>
+                                    </td>
+                                    <td style="text-align: left;border: 0;width:50%">
+                                        We would like to inform you this letter is issued to
+                                        Mr
+                                        <span t-field="o.english_name"/>
+                                        Nationality
+                                        <span t-field="o.country_id.name"/>
+                                        Passport No.
+                                        <span t-field="o.passport_id.passport_id"/>
+                                        to be submitted to Royal Saudi Embassy in
+                                        <span t-field="o.country_address_id"/>
+                                        to work with us on the position Of the project engineer
+                                        <span t-field="o.job_id.english_name"/>
+                                    </td>
+                                    <br/>
+                                </tr>
+                                <tr>
+                                    <td style="text-align:right;border:0;width:50%">
+                                        <span>مع شكرنا وتقديرنا لحسن
+                                            تعاونكم معنا في حصوله على التأشيره المذكوره أعلاه.
+                                        </span>
+                                    </td>
+                                    <td style="text-align: left;border: 0;width:50%">
+                                        You cooperation in granting him the above mentioned work Visa is
+                                        highly appreciated.
+
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <h4 style="text-align: center;">عثمان سليمان الدبيجى</h4>
+                        <h4 style="text-align: center;">ENG. ITHMAN S.ALDOBAIKHY</h4>
+                        <h4 style="text-align: center;">مستشار</h4>
+                        <h4 style="text-align: center;">Advisor</h4>
+
+
+                    </t>
+                </div>
+
+            </t>
+        </t>
+
+    </template>
+</odoo>
+

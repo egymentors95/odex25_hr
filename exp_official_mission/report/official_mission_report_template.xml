@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="official_mission_report_template">
+            <t t-call="web.html_container">
+                <t t-call="exp_official_mission.custom_external_layout">
+                    <style type="text/css">
+                        @font-face {
+                        font-family: 'ae_AlMohanad';
+                        src: local('ae_AlMohanad'), local('ae_AlMohanad'),
+                        url('/exp_official_mission/static/fonts/ae_AlMohanad.ttf') format('truetype');
+                        }
+                        *{
+                        font-family: ae_AlMohanad;
+                        }
+                    </style>
+                    <div class="page" style="font-size:13pt" >
+                        <t t-foreach="docs" t-as="o">
+                            <div style="width:100%">
+                                <h4 style="font-weight:bold"><span t-esc="user.company_id.name"/></h4>
+                                <h4>Date: <span t-esc="o.date"/></h4>
+                                <p style="font-weight:bold">سعادة الرئيس التنفيذي لشركة <span t-esc="user.company_id.name"/>       سلمه الله,, </p>
+                                <p style="font-weight:bold">الموضوع تعميد تكليف موظف/موظفين في مهمة رسمية</p>
+                                <p style="font-weight:bold">السلام عليكم و رحمة الله و بركاته ,,,</p>
+                                <p style="font-weight:bold">اشارة الى حاجة إدارة  <span t-esc="o.department_id.name"/> الي تنفيذ مهمة </p>
+                                <p>ارجو التكرم بإعتماد تكليف الموظفين المذكورين ادناه لتنفيذ هذه المهمة و ذلك خلال الفترة المحددة و بإستخدام متطلبات المهمة حسب ما تم ذكره ادناه.</p>
+                            </div>
+                            <br/>
+                            <table style="width:100%;border: 1px solid gray;height:60px">
+                                <thead>
+                                    <tr>
+                                        <th style=" border: 1px solid gray; padding: 1px;background-color:#d3d3d3;text-align:center;color: black;width:5%">
+                                            .م
+                                        </th>
+                                        <th style=" border: 1px solid gray; padding: 1px; background-color:#d3d3d3;text-align:center;color: black;width:40%">
+                                            الموظف
+                                        </th>
+                                        <th style=" border: 1px solid gray; padding: 1px;background-color:#d3d3d3;text-align:center;color: black;width:20%">
+                                            الادارة
+                                        </th>
+                                        <th style=" border: 1px solid gray; padding: 1px;background-color:#d3d3d3;color: black;text-align:center;width:35%">
+                                            المسمى الوظيفي
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <t t-set="i" t-value="1"/>
+                                <tbody>
+                                    <t t-foreach="o.employee_ids" t-as="line">
+                                        <tr>
+                                            <td style="color:black;border: 1px solid gray;width:5%"><span t-esc="i"/></td>
+                                            <td style="color:black;border: 1px solid gray;width:40%"><span t-esc="line.employee_id.name"/></td>
+                                            <td style="color:black;border: 1px solid gray;width:20%"><span t-esc="line.employee_id.department_id.name"/></td>
+                                            <td style="color:black;border: 1px solid gray;width:35%"><span t-esc="line.employee_id.job_id.name"/></td>
+                                        </tr>
+                                        <t t-set="i" t-value="i+1"/>
+                                    </t>
+                                </tbody>
+                            </table>
+                            <table style="width:100%;border: 1px solid gray;height:30px">
+                                <tr style=" border: 1px solid gray">
+                                    <t t-if="o.mission_type.duration_type=='days'">
+                                        <td style=" border: 1px solid gray;width:15%;background-color:#d3d3d3;">عدد الايام</td>
+                                        <td style="border: 1px solid gray;width:15%;"><span t-esc="o.date_duration">يوم</span></td>
+                                        <td style=" border: 1px solid gray;width:5%;background-color:#d3d3d3;">من</td>
+                                        <td style="border: 1px solid gray;width:30%;"><span t-esc="o.date_from"/></td>
+                                        <td style=" border: 1px solid gray;width:5%;background-color:#d3d3d3;">إلى</td>
+                                        <td style="border: 1px solid gray;width:30;"><span t-esc="o.date_to"/></td>
+                                    </t>
+                                    <t t-if="o.mission_type.duration_type=='hours'">
+                                        <td style=" border: 1px solid gray;width:15%;background-color:#d3d3d3;">عدد الساعات</td>
+                                        <td style="border: 1px solid gray;width:15%;"><span t-esc="o.hour_duration">ساعة</span></td>
+                                        <td style=" border: 1px solid gray;width:5%;background-color:#d3d3d3;">من</td>
+                                        <td style="border: 1px solid gray;width:30%;"><span t-esc="o.hour_from"/></td>
+                                        <td style=" border: 1px solid gray;width:5%;background-color:#d3d3d3;">إلى</td>
+                                        <td style="border: 1px solid gray;width:30;"><span t-esc="o.hour_to"/></td>
+                                    </t>
+                                </tr>
+                            </table>
+                            <br/>
+                            <table style="width:100%;border: 1px solid gray">
+                                <thead>
+                                    <tr>
+                                        <th style=" border: 1px solid gray; padding: 1px;background-color:#d3d3d3;text-align:center;color: black;width:10%">
+                                            ضع صح
+                                        </th>
+                                        <th clospan="7" style=" border: 1px solid gray; padding: 1px; background-color:#d3d3d3;text-align:center;color: black;width:90%">
+                                            متطلبات المهمة
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                                <tr style=" border: 1px solid gray">
+                                    <td style="color:white; border: 1px solid gray;width:10%">.</td>
+                                    <td style="color:black; border: 1px solid gray;width:90%" colspan="7">تامين تذاكر السفر و تحديد خط السير:  <span t-esc="o.ticket_insurance"/></td>
+                                </tr>
+                                <tr style=" border: 1px solid gray">
+                                    <td style="color:white; border: 1px solid gray;width:10%">.</td>
+                                    <td style="color:black; border: 1px solid gray;width:90%" colspan="7">استخدام السيارة الخاصة:  <span t-esc="o.self_car"/></td>
+                                </tr>
+                                <tr style=" border: 1px solid gray">
+                                    <td style="color:white; border: 1px solid gray;width:10%">.</td>
+                                    <td style="color:black; border: 1px solid gray;width:90%;padding:0px" colspan="7">
+                                        <table style="width:100%;height:55px">
+                                            <tr>
+                                                <td style="color:black; border: 1px solid gray;width:20%"><span>تأمين سيارة باالايجار</span></td>
+                                                <td style="color:black; border: 1px solid gray;width:15%"><span>نوع السيارة</span></td>
+                                                <td style="color:black; border: 1px solid gray;width:10%"><span t-esc="o.car_type"/></td>
+                                                <td style="color:black; border: 1px solid gray;width:15%"><span>عدد الايام</span></td>
+                                                <td style="color:black; border: 1px solid gray;width:10%"><span t-esc="o.rent_days"/></td>
+                                                <td style="color:black; border: 1px solid gray;width:15%"><span>الحد الاعلى للأيجار</span></td>
+                                                <td style="color:black; border: 1px solid gray;width:10%"><span t-esc="o.max_rent"/></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr style=" border: 1px solid gray">
+                                    <td style="color:white; border: 1px solid gray;width:10%">.</td>
+                                    <td style="color:black; border: 1px solid gray;width:90%" colspan="7">التإشيرات: <span t-esc="o.visa"/></td>
+                                </tr>
+                                <tr style=" border: 1px solid gray">
+                                    <td style="color:white; border: 1px solid gray;width:10%">.</td>
+                                    <td style="color:black; border: 1px solid gray;width:90%" colspan="7">اخرى: <span t-esc="o.note"/></td>
+                                </tr>
+                            </table>
+                            <table style="width:100%;border: 1px solid gray">
+                                <tr style=" border: 1px solid gray">
+                                    <td style=" border: 1px solid gray;width:33%;background-color:#d3d3d3;">اسم نائب الادراة الطالبة</td>
+                                    <td style=" border: 1px solid gray;width:33%;background-color:#d3d3d3;">التوقيع</td>
+                                    <td style=" border: 1px solid gray;width:33%;background-color:#d3d3d3;">التاريخ</td>
+                                </tr>
+                                <tr style=" border: 1px solid gray">
+                                    <td style="color:white; border: 1px solid gray;width:33%">.</td>
+                                    <td style="color:white; border: 1px solid gray;width:33%">.</td>
+                                    <td style="color:white; border: 1px solid gray;width:33%">.</td>
+                                </tr>
+                            </table>
+                            <table style="width:100%;border: 1px solid gray">
+                                <tr style=" border: 1px solid gray">
+                                    <td colspan="2" style=" border: 1px solid gray;width:50%;background-color:#d3d3d3;">إعتماد و توجيه سعادة الرئيس التنفيذي</td>
+                                    <td colspan="2" style="color:white; border: 1px solid gray;width:50%">.</td>
+                                </tr>
+                                <tr style=" border: 1px solid gray">
+                                    <td style="border: 1px solid gray;width:20%;background-color:#d3d3d3;">التوقيع</td>
+                                    <td style="color:white; border: 1px solid gray;width:30%">.</td>
+                                    <td style="border: 1px solid gray;width:20%;background-color:#d3d3d3;">التاريخ</td>
+                                    <td style="color:white; border: 1px solid gray;width:30">.</td>
+                                </tr>
+                            </table>
+                            <style>
+                                table{
+                                width:100%;
+                                height:70px;
+                                }
+                                td{
+                                border: 1px solid grey;
+                                padding: 5px 5px 5px 5px;
+                                min-width:20%;
+                                width:200;
+                                }
+                                th{
+                                border: 1px solid grey;
+                                padding: 5px 5px 5px 5px;
+                                font-weight: bold;
+                                background-color:#d3d3d3;
+                                }
+                            </style>
+
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </template>
+        <record id="official_mission_action_report" model="ir.actions.report">
+            <field name="model">hr.official.mission</field>
+            <field name="name">Mission Form</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">exp_official_mission.official_mission_report_template</field>
+        </record>>
+        <record id="official_mission_action_report" model="ir.actions.report">
+            <field name="paperformat_id" ref="exp_official_mission.paperformat_official_train_report"/>
+        </record>
+    </data>
+</odoo>

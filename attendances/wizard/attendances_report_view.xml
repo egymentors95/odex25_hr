@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="employee_attendance_report_wizard_view" model="ir.ui.view">
+            <field name="name">Employee Attendance Report</field>
+            <field name="model">employee.attendance.report</field>
+            <field name="arch" type="xml">
+                <form string="Employee Attendance Report">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="resource_calender_id" invisible="1"/>
+                                <field name="from_date"/>
+                                <field name="type" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="to_date"/>
+                            </group>
+                        </group>
+                        <group>
+                             <field name="print_totals_only"/>
+                        </group>
+                        <notebook>
+                            <page string="Employees" >
+                                <field name="employee_ids" nolabel="1" required="1">
+                                    <tree string="Employees" editable="bottom">
+                                        <field name="name"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <footer>
+                        <button string="Print Report" type="object" name="print_report" class="oe_highlight"/>
+                        or
+                        <button string="Print Excel Report"  invisible="0" type="object" name="print_excel_report" class="oe_highlight"/>
+<!--                        or-->
+                        <button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="employee_attendance_report_wizard_action" model="ir.actions.act_window">
+            <field name="name">Employee Attendance Report</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.attendance.report</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="employee_attendance_report_wizard_view"/>
+            <field name="target">new</field>
+        </record>
+        <menuitem name="Attendance Reports" id="parent_attendance_report_employee"
+                  parent="hr_attendance.menu_hr_attendance_root" sequence="41"/>
+        <menuitem name="Attendance Reports" id="attendance_report_emp_menu"
+                  parent="attendances.parent_attendance_report_employee"
+                  action="employee_attendance_report_wizard_action"/>
+    </data>
+</odoo>

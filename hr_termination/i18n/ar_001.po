@@ -1,0 +1,2132 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_termination
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 06:57+0000\n"
+"PO-Revision-Date: 2022-09-13 06:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#, python-format
+msgid " day(s) "
+msgstr " يوم "
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#, python-format
+msgid " month(s) "
+msgstr " شهر "
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#, python-format
+msgid " year(s) "
+msgstr " سنه "
+
+#. module: hr_termination
+#: model:ir.actions.report,print_report_name:hr_termination.act_employee_termination_report
+msgid "\"'%s - مخالصة نهاية الخدمة' % (object.employee_id.name)\""
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+")\n"
+"                                        ريال سعودي."
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>الإدارة:</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>الاسم:</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>البيان</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>التاريخ:..../..../........</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>التوقيع:..................</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>الجنسية:</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>تاريخ إنتهاء الخدمة:</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>تاريخ التعيين:</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>رقم الموظف:</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>ريال سعودي</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>سبب إنتهاء الخدمة:</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>فترات خدمة مستبعدة:</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>متبقي رصيد الاجازة السنوية:</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>مدة الخدمة الكلية:</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>مسمى الوظيفة:</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<span>\n"
+"                                        <strong>نوع و مدة العقد:</strong>\n"
+"                                    </span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<span> سنة</span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<span> شهر</span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<span> يوم</span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<span>إجمالي الاستحقاقات فقط:</span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<span>إجمالي الخصومات فقط:</span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<span>الإسم:</span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<span>التاريخ:</span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<span>التوقيع:</span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<span>الرصيد النهائي فقط:</span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<span>لا غير</span>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"<strong>\n"
+"                                إحتساب مستحقات مخالصة نهائية\n"
+"                            </strong>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<strong>(1) البيانات العامة</strong>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<strong>(2) المستحقات المتبقية</strong>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<strong>(3) الخصومات</strong>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<strong>(4) صافي المستحقات</strong>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<strong>(5) موافقة الموظف على صحة إحتساب المستحقات</strong>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<strong>إعتماد: المدير التنفيذي</strong>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<strong>إعداد: الموارد البشرية</strong>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "<strong>مراجعة: مدير الشئون المالية </strong>"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_allowance_deduction_form_view
+msgid "Account Credit"
+msgstr "الحساب الدائن"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_allowance_deduction_form_view
+msgid "Account Debit"
+msgstr "الحساب المدين"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__account_move_id
+msgid "Account Move"
+msgstr "القيود المحاسبيه"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Account credit"
+msgstr "الحساب الدائن"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Account debit"
+msgstr "الحساب المدين"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_needaction
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__activity_ids
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__activity_state
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__activity_type_icon
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Air Tichet Amount"
+msgstr "قيمة التذكرة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__air_ticket_amount
+msgid "Air Ticket Amount"
+msgstr "قيمة التذكرة"
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__employee_termination_report__type__all
+msgid "All"
+msgstr "الكــل"
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_account_move__state
+#: model:ir.model.fields,help:hr_termination.field_account_payment__state
+msgid ""
+"All manually created new journal entries are usually in the status "
+"'Unposted', but you can set the option to skip that status on the related "
+"journal. In that case, they will behave as journal entries automatically "
+"created by the system on document validation (invoices, bank statements...) "
+"and will be created in 'Posted' status."
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report__allowance_ids
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__allowance_id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__allowance_ids
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+msgid "Allowance"
+msgstr "الاستحقاقات"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__allowance_deduction_ids
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Allowance Deduction"
+msgstr "الاستحقاقات والخصومات"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line__allowance_deduction_inverse_id
+msgid "Allowance Deduction Inverse"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__allowance_total
+msgid "Allowance Total"
+msgstr "اجمالي الاستحقاقات"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+msgid "Allowances"
+msgstr "البدلات"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_allowance_deduction__amount
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line__amount
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_duration__amount
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_duration_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_duration_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+msgid "Amount"
+msgstr "قيمة الاستحقاق"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Another Employee"
+msgstr "موظف آخر"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__approved_revealing_date
+msgid "Approved Date"
+msgstr "تاريخ التصديق"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Are you sure to Reset To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المسوده؟"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_attachment_count
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#, python-format
+msgid "Branch"
+msgstr " الفرع"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__calculation_method
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__calculation_method
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Calculation Method"
+msgstr "طريقة حساب اخر راتب"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Calculation method"
+msgstr "طريقة حساب الراتب"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report_view_form
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_report_wizard_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line__category_id
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Category"
+msgstr "النوع"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Cause Of Termination"
+msgstr "اسباب نهاية الخدمة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report__cause_type
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__cause_type
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__cause_type
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_report__cause_type_id
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_tree_view
+msgid "Cause Type"
+msgstr "سبب الانهاء"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__cause_type_amount
+msgid "Cause Type Amount"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Cause type amount"
+msgstr ""
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Check account debit for salary rule \"%s\" "
+msgstr "\"%s\"التاكد من الحساب المدين للاستحقاق"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__clearance
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+msgid "Clearance"
+msgstr "إخلاء طرف"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Code"
+msgstr "الرمز"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Comment Box"
+msgstr "ملاحظات"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Contract End Date"
+msgstr "تاريخ نهاية العقد"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Contract Start Date"
+msgstr "تاريخ بداية العقد"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Contract id"
+msgstr "عقد الموظف"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report__create_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_allowance_deduction__create_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line__create_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__create_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_duration__create_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__create_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_report__create_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report__create_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_allowance_deduction__create_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line__create_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__create_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_duration__create_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__create_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_report__create_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__contract_id
+msgid "Current Contract"
+msgstr "العقود الحالية"
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__contract_id
+msgid "Current contract of the employee"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__date
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_tree_view
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_duration__date_from
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_report__date_from
+msgid "Date From"
+msgstr "من تاريخ"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_duration__date_to
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_report__date_to
+msgid "Date To"
+msgstr "إلى تاريخ"
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__resign_confirm_date
+msgid "Date on which the request is confirmed"
+msgstr "تاريخ تأكيد الطلب"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Day"
+msgstr "يوم"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__deduction_balance
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Deduction Balance"
+msgstr "رصيد الخصم"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__deduction_total
+msgid "Deduction Total"
+msgstr "اجمالي الخصومات"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__department_id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_report__department_ids
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_filter
+msgid "Department"
+msgstr "الهيكل الإداري"
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__department_id
+msgid "Department of the employee"
+msgstr "قسم الموظف"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report_view_form
+msgid "Departments"
+msgstr "الأقسام"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_account_move__display_name
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report__display_name
+#: model:ir.model.fields,field_description:hr_termination.field_hr_allowance_deduction__display_name
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line__display_name
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__display_name
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_duration__display_name
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__display_name
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_report__display_name
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__display_name
+#: model:ir.model.fields,field_description:hr_termination.field_report_hr_termination_hr_termination_action_report_xls__display_name
+#: model:ir.model.fields,field_description:hr_termination.field_report_hr_termination_hr_termination_report__display_name
+#: model:ir.model.fields,field_description:hr_termination.field_report_hr_termination_termination_benefits_xls__display_name
+#: model:ir.model.fields,field_description:hr_termination.field_report_hr_termination_termination_report_temp__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#, python-format
+msgid "Duration"
+msgstr "مدة التصفية"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Duration must be less than or equal month"
+msgstr "فترة الراتب يجب ان لا تتجاوز الشهر"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "EOS Award"
+msgstr "مكافئة نهاية الخدمة"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "EOS Calc"
+msgstr "حساب نهاية الخدمة"
+
+#. module: hr_termination
+#: model:ir.actions.act_window,name:hr_termination.eos_patch_action
+#: model:ir.ui.menu,name:hr_termination.eos_patch
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_tree_view
+msgid "EOS Patch"
+msgstr "انهاء خدمة لعدة موظفين"
+
+#. module: hr_termination
+#: model:ir.model,name:hr_termination.model_hr_termination_patch
+msgid "EOS Patch Termination"
+msgstr "انهاء خدمة لعددة موظفين"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__employee_id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__employee_ids
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_report__employee_ids
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Employee \"%s\" has no contract"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Employee Data"
+msgstr "معلومات الموظف"
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#, python-format
+msgid "Employee Number"
+msgstr " تصفية الموظف رقم"
+
+#. module: hr_termination
+#: model:ir.actions.act_window,name:hr_termination.employee_termination_report_wizard_action
+#: model:ir.model,name:hr_termination.model_employee_termination_report
+msgid "Employee Termination Report"
+msgstr "تقرير مستحقات نهاية الخدمة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report__employee_ids
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report_view_form
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_report_wizard_view
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__contract_end_date
+msgid "End Date"
+msgstr "تاريخ النهاية"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report__end_date
+msgid "End Of Service"
+msgstr "تاريخ نهاية الخدمة"
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__contract_end_date
+msgid "End date of the contract (if it's a fixed-term contract)."
+msgstr "تاريخ انتهاء العقد (إذا كان عقدًا محدد المدة)."
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__eos_calc
+msgid "Eos Calc"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_duration__factor
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__factor
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_duration_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_duration_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+msgid "Factor"
+msgstr "معدل الراتب السنوي"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_tree_view
+msgid "First Hire Date"
+msgstr "تاريخ مباشرة العمل"
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#, python-format
+msgid "First Hiring Date"
+msgstr "تاريخ مباشرة العمل"
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#, python-format
+msgid "First Termination Date"
+msgstr " تاريخ بداية التصفية"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_follower_ids
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_channel_ids
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_partner_ids
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__activity_type_icon
+#: model:ir.model.fields,help:hr_termination.field_hr_termination_patch__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_duration_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_duration_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+msgid "From"
+msgstr "مِن"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__from_hr
+msgid "From Hr"
+msgstr "موظف آخر"
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#, python-format
+msgid "From date"
+msgstr "من تاريخ"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_form_view
+msgid "Generate EOS"
+msgstr "انشاء انهاء خدمة"
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model:ir.actions.act_window,name:hr_termination.hr_termination_report_wizard
+#: model:ir.actions.report,name:hr_termination.action_hr_termination_report
+#: model:ir.model,name:hr_termination.model_hr_termination_report
+#: model:ir.ui.menu,name:hr_termination.hr_termination_report_menu
+#, python-format
+msgid "HR Termination Report"
+msgstr "تقرير نهاية الخدمة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__holiday
+msgid "Holiday"
+msgstr "الاجازة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__holiday_allowance
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+msgid "Holiday Allowance"
+msgstr "إستحقاق الاجازة"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+msgid "Holiday Allowance?"
+msgstr "بدل إجازة؟"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__holiday_deduction
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+msgid "Holiday Deduction"
+msgstr "خصم الاجازة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_account_move__id
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report__id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_allowance_deduction__id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line__id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_duration__id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_report__id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__id
+#: model:ir.model.fields,field_description:hr_termination.field_report_hr_termination_hr_termination_action_report_xls__id
+#: model:ir.model.fields,field_description:hr_termination.field_report_hr_termination_hr_termination_report__id
+#: model:ir.model.fields,field_description:hr_termination.field_report_hr_termination_termination_benefits_xls__id
+#: model:ir.model.fields,field_description:hr_termination.field_report_hr_termination_termination_report_temp__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__activity_exception_icon
+#: model:ir.model.fields,help:hr_termination.field_hr_termination_patch__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__message_needaction
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__message_unread
+#: model:ir.model.fields,help:hr_termination.field_hr_termination_patch__message_needaction
+#: model:ir.model.fields,help:hr_termination.field_hr_termination_patch__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__message_has_error
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__message_has_sms_error
+#: model:ir.model.fields,help:hr_termination.field_hr_termination_patch__message_has_error
+#: model:ir.model.fields,help:hr_termination.field_hr_termination_patch__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#, python-format
+msgid "Iqama"
+msgstr "الهوية"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line__is_advantage
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Is Advantage"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_is_follower
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#, python-format
+msgid "Job"
+msgstr "العمل"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__job_id
+msgid "Job Position"
+msgstr "المسمى الوظيفي"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_tree_view
+msgid "Job Title"
+msgstr "الوظيفة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__joined_date
+msgid "Join Date"
+msgstr "تاريخ الانضمام للعمل"
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__joined_date
+msgid "Joining date of the employee"
+msgstr "تاريخ مباشرة العمل"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__journal
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: hr_termination
+#: model:ir.model,name:hr_termination.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_tree_view
+msgid "Last Date Working"
+msgstr "اخر يوم عمل"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_account_move____last_update
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report____last_update
+#: model:ir.model.fields,field_description:hr_termination.field_hr_allowance_deduction____last_update
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line____last_update
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination____last_update
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_duration____last_update
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch____last_update
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_report____last_update
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type____last_update
+#: model:ir.model.fields,field_description:hr_termination.field_report_hr_termination_hr_termination_action_report_xls____last_update
+#: model:ir.model.fields,field_description:hr_termination.field_report_hr_termination_hr_termination_report____last_update
+#: model:ir.model.fields,field_description:hr_termination.field_report_hr_termination_termination_benefits_xls____last_update
+#: model:ir.model.fields,field_description:hr_termination.field_report_hr_termination_termination_report_temp____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report__write_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_allowance_deduction__write_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line__write_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__write_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_duration__write_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__write_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_report__write_uid
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report__write_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_allowance_deduction__write_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line__write_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__write_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_duration__write_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__write_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_report__write_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__last_work_date
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__last_work_date
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#, python-format
+msgid "Last Work Date"
+msgstr "اخر يوم عمل"
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__employee_termination_report__type__leave
+msgid "Leave"
+msgstr "الإجازات"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__leave_balance
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Leave Balance"
+msgstr "رصيد الاجازات"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__leave_balance_money
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Leave Balance Money"
+msgstr "مبلغ الاجازة"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#: code:addons/hr_termination/wizard/termination_report_wiz.py:0
+#, python-format
+msgid "Leaving Date  must be greater than First Hiring Date"
+msgstr "تاريخ الانهاء يجب ان يكون بعد تاريخ مباشرة العمل"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__loan_deduction
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Loan Deduction"
+msgstr "خصم القروض"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__loans_ids
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Loans"
+msgstr "سلف الموظف"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__loans_total
+msgid "Loans Total"
+msgstr "اجمالي السلف"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_has_error
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_ids
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Month"
+msgstr "شهر"
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model:ir.model.fields,field_description:hr_termination.field_hr_allowance_deduction__name
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_duration__name
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__name
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__name
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_allowance_deduction_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_duration_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_duration_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_tree_view
+#, python-format
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__company_id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__company_id
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_tree_view
+#, python-format
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__employee_id
+msgid "Name of the employee for whom the request is creating"
+msgstr "اسم الموظف الذي يتم إنشاء الطلب له"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__net
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_tree_view
+msgid "Net"
+msgstr "صافي المبلغ"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Net can not be negative value !!"
+msgstr ""
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__activity_summary
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__activity_type_id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__notes
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__notice_period
+msgid "Notice Period"
+msgstr "ملاحظات الفترة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__message_needaction_counter
+#: model:ir.model.fields,help:hr_termination.field_hr_termination_patch__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__message_has_error_counter
+#: model:ir.model.fields,help:hr_termination.field_hr_termination_patch__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__message_unread_counter
+#: model:ir.model.fields,help:hr_termination.field_hr_termination_patch__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__name
+msgid "Order Reference"
+msgstr "مرجع الطلب"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__paid_duration
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Paid Duration"
+msgstr "فترة الراتب"
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#, python-format
+msgid "Payment Method"
+msgstr "طريقة إستلام التصفية"
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__account_move__state__posted
+msgid "Posted"
+msgstr "مُرحل"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report_view_form
+msgid "Print"
+msgstr "طباعة PDF"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report_view_form
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_report_wizard_view
+msgid "Print Excel Report"
+msgstr "طباعة Excel"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_report_wizard_view
+msgid "Print Report"
+msgstr "طباعة التقرير"
+
+#. module: hr_termination
+#: model:ir.actions.report,name:hr_termination.hr_termination_action_report_xls
+#: model:ir.actions.report,name:hr_termination.termination_benefits_xls
+msgid "Print to XLSX"
+msgstr "طباعة Excel"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Re-Compute"
+msgstr "حســـاب"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__reason
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__term_reason
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Reason"
+msgstr "السبب"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__remaining_accommodation
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Remaining Accommodation"
+msgstr "الإقامة المتبقية"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Remaining loan amount"
+msgstr "متبقي قيمة السلفه"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Request Type"
+msgstr "اسم السلفه"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__activity_user_id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_allowance_deduction__account_credit_id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line__account_credit_id
+msgid "Rule Credit Account"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_allowance_deduction__account_debit_id
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line__account_debit_id
+msgid "Rule Debit Account"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Sal ADV Deduction"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__sal_adv_deduction
+msgid "Sal Adv Deduction"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__employee_termination_report__type__salary
+msgid "Salary"
+msgstr "الرواتب"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__salary_amount
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Salary Amount"
+msgstr "مبلغ الراتب"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report__salary_date_from
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__salary_date_from
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Salary Date From"
+msgstr "حساب اخر راتب من"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report__salary_date_to
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__salary_date_to
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Salary Date To"
+msgstr "حساب اخر راتب الى"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Salary Date to must be Less than Last Work Date"
+msgstr "تاريخ بداية الراتب يجب ان تكون قبل تاريخ نهاية الراتب"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Salary Date to must be greater than Salary Date from"
+msgstr "تاريخ بداية الراتب يجب ان تكون قبل تاريخ نهاية الراتب"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Salary For EOS"
+msgstr "اجمالي راتب نهاية الخدمة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__salary_for_eos
+msgid "Salary For Eos"
+msgstr "راتب نهاية الخدمة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_salary_rule_line__salary_rule_id
+msgid "Salary Rule"
+msgstr "قاعده الراتب"
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#, python-format
+msgid "Sequence"
+msgstr "#"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__service_day
+msgid "Service Day"
+msgstr "ايام الخدمة"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Service Duration"
+msgstr "فترة خدمة الموظف"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__service_month
+msgid "Service Month"
+msgstr "شهور الخدمة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__service_year
+msgid "Service Year"
+msgstr "سنين الخدمة"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid ""
+"Sorry ! This Employee have un approved or Reject Holiday Request : \n"
+" %s"
+msgstr " عفوآ ! هذا الموظف لدية اجازة غير مصدقة او غير مرفوضة : \n"
+" %s"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Sorry this payslip is already calculated for this employee %s"
+msgstr "لايمكن حساب أخر راتب لأنه تم حسابه لهذا الموظف %s"
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__term_reason
+msgid "Specify reason for leaving the company"
+msgstr "Specify reason for leaving the company"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__contract_start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__first_hire_date
+msgid "Start Hiring Date"
+msgstr "تاريخ بدء التوظيف"
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__contract_start_date
+msgid "Start date of the contract."
+msgstr "تاريخ بداية العقد"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__state
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__state
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_tree_view
+msgid "State"
+msgstr "الحــالة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_account_move__state
+#: model:ir.model.fields,field_description:hr_termination.field_account_payment__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__activity_state
+#: model:ir.model.fields,help:hr_termination.field_hr_termination_patch__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Submit"
+msgstr "إرســال"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Direct Manager Approve"
+msgstr "تصديق المدير المباشر"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Department Manager Approve"
+msgstr "تصديق مدير الإدارة"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "HR Officer Approve"
+msgstr "مسؤول الموارد البشرية"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "HR Approval"
+msgstr "مدير الموارد البشرية"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "CEO Approval"
+msgstr "إعتماد المدير العام"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Finance Approval"
+msgstr "تصديق المالية"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.eos_patch_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "RE-Draft"
+msgstr "إرجاع للمسودة"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Refuse"
+msgstr "رفـــض"
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__hr_termination__state__draft
+#: model:ir.model.fields.selection,name:hr_termination.selection__hr_termination_patch__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__hr_termination__state__submit
+msgid "Waiting Direct Manager"
+msgstr "إنتظار المدير المباشر"
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__hr_termination__state__direct_manager
+msgid "Waiting Department Manager"
+msgstr "إنتظار مدير الإدارة"
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__hr_termination__state__hr_manager
+msgid "Wait HR Officer"
+msgstr "إنتظار مسؤول الموارد البشرية"
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__hr_termination__state__finance_manager
+msgid "Wait HR Department"
+msgstr "إنتظار الموارد البشرية"
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__hr_termination__state__gm_manager
+msgid "Wait CEO Manager"
+msgstr "إنتظار المدير العام"
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__hr_termination__state__done
+msgid "Wait Transfer"
+msgstr "إنتظار الترحيل"
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__hr_termination__state__pay
+msgid "Transferred"
+msgstr "تم الترحيل"
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__hr_termination__state__refused
+msgid "Refused"
+msgstr "مرفـــوض"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__terminate_ids
+#: model:ir.model.fields.selection,name:hr_termination.selection__hr_termination_patch__state__terminate
+msgid "Terminate"
+msgstr "تم انشاء نهاية الخدمة"
+
+#. module: hr_termination
+#: model:ir.model,name:hr_termination.model_hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__employee_termination_report__type__termination
+#: model:ir.ui.menu,name:hr_termination.termination
+msgid "Termination"
+msgstr "إنهاء الخدمة/الإستقالة للموظفين"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_report_wizard_view
+msgid "Termination Benefits Report"
+msgstr "تقرير مستحقات نهاية الخدمة"
+
+#. module: hr_termination
+#: model:ir.ui.menu,name:hr_termination.termination_report_emp_menu
+msgid "Termination Benefits Reports"
+msgstr "تقرير مستحقات نهاية الخدمة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__termination_duration_ids
+msgid "Termination Duration"
+msgstr "فترة نهاية الخدمة"
+
+#. module: hr_termination
+#: model:ir.actions.report,name:hr_termination.act_employee_termination_report
+#: model:ir.actions.report,name:hr_termination.termination_benefits_action_report
+msgid "Termination Report"
+msgstr "تقرير مستحقات نهاية الخدمة"
+
+#. module: hr_termination
+#: model:ir.ui.menu,name:hr_termination.parent_termination_report_employee
+msgid "Termination Reports"
+msgstr "تقارير نهاية خدمة"
+
+#. module: hr_termination
+#: model:ir.actions.act_window,name:hr_termination.termination_type_action
+#: model:ir.ui.menu,name:hr_termination.termination_type_menu
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_tree_view
+msgid "Termination Type"
+msgstr "أسباب انهاء الخدمة"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Termination account move"
+msgstr "القيد المحاسبي"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__resign_confirm_date
+msgid "Termination confirm date"
+msgstr "تاريخ تأكيد الطلب"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_duration_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_duration_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+msgid "Termination duration"
+msgstr "قانون العمل لحساب فترة انهاء الخدمة"
+
+#. module: hr_termination
+#: model:ir.actions.act_window,name:hr_termination.termination_resignation_eos_action
+#: model:ir.ui.menu,name:hr_termination.termination_resignation_eos
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_tree_view
+msgid "Termination, Resignation & EOS"
+msgstr "إنهاء خدمة/إستقالة الموظف"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "The Net must be not negative value ."
+msgstr "الاجمالي يجب ان لا يكون قيمة سالبة."
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__approved_revealing_date
+msgid "The date approved for the revealing"
+msgstr ""
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "There is no total for rule : %s"
+msgstr " %s لا توجد قيمة لقاعدة الراتب"
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__employee_termination_report__type__ticket
+msgid "Ticket"
+msgstr "تذاكر السفر"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_duration_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_duration_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_type_form_view
+msgid "To"
+msgstr "إلى"
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#, python-format
+msgid "To date"
+msgstr "الى تاريخ"
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#, python-format
+msgid "Total"
+msgstr "مبلغ التصفية"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__salary
+msgid "Total Allowance"
+msgstr "اجمالي الاستحقاقات"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__total_amount
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Total Amount"
+msgstr "إجمالي المبلغ"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Total Deduction"
+msgstr "اجمالي الخصومات"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__total_loans
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Total Loans"
+msgstr "اجمالي السلف"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Total Salary"
+msgstr "اجمالي الراتب"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Total allowance"
+msgstr "اجمالي الاستحقاقات"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Transfer"
+msgstr "ترحيل للحسابات"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_employee_termination_report__type
+#: model:ir.model.fields,field_description:hr_termination.field_hr_allowance_deduction__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__activity_exception_decoration
+#: model:ir.model.fields,help:hr_termination.field_hr_termination_patch__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Undefined credit account for salary rule %s."
+msgstr "يجب ادخال الحساب الدائن للخصم %s "
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Undefined debit account for salary rule %s."
+msgstr "يجب ادخال الحساب المدين للاستحقاق %s "
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__unpaid_day
+msgid "Unpaid Day"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Unpaid Duration"
+msgstr "فترة الخدمة المستبعدة"
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__unpaid_month
+msgid "Unpaid Month"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__unpaid_year
+msgid "Unpaid Year"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__account_move__state__draft
+msgid "Unposted"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_unread
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__message_unread_counter
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination__website_message_ids
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_patch__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__website_message_ids
+#: model:ir.model.fields,help:hr_termination.field_hr_termination_patch__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Wrong percentage base or quantity defined for salary rule %s (%s)."
+msgstr " %s (%s)خطآ اعداد النسبة غير صحيحه لـ"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Wrong quantity defined for salary Rule  \" %s \" "
+msgstr " \" %s \"خطآ اعداد القيمة غير صحيح لـ "
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#: code:addons/hr_termination/models/hr_termination.py:0
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Wrong quantity defined for salary rule %s (%s)."
+msgstr " %s (%s)خطآ اعداد النسبة غير صحيح لـ"
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/hr_termination_report.py:0
+#: model:ir.model.fields,field_description:hr_termination.field_hr_termination_type__year
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+#, python-format
+msgid "Year"
+msgstr "سنه"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "You can not create termination when missing clearance for \"%s\""
+msgstr "لايمكن إجراء إنهاء الخدمة قبل إدخال إخلا الطرف للموظف %s."
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "You can not create termination when missing clearance for Employee %s"
+msgstr "لايمكن إجراء إنهاء الخدمة قبل إدخال إخلا الطرف للموظف %s."
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid ""
+"You can not create termination when there is \"%s\" employee custody in "
+"state not in state Return Done for \"%s\" please reconcile it"
+msgstr "لا يمكن إجراء إنهاء خدمة للموظف %s و لديه عدد عهد ادارية %s يجب إرجاع العهد اولآ"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid ""
+"You can not create termination when there is \"%s\" employee petty cash "
+"payment in state not in state Return Done for \"%s\" please reconcile it"
+msgstr "لا يمكن إجراء إنهاء خدمة للموظف %s ولديه عدد عهدة مالية %s يجب إرجاع العهد المالية اولآ"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid ""
+"You can not delete record There is a related other record %s termination"
+msgstr "لا يمكن حذف السجل هنالك سجل مرتبط به سجل الموظف %s لانهاء خدمة"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "You can not delete record in state not in draft"
+msgstr ""
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid ""
+"You can not re-draft termination because account move with ID \"%s\" in "
+"state Posted"
+msgstr "لا يمكن ارجاع للحالة المسوده اذا كان القيد المحاسبي\"%s\"في حالة غير مسوده"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/eos_patch.py:0
+#, python-format
+msgid "You can set to draft when like termination in state not in draft"
+msgstr "لا يمكن ارجاع للمسوده وطلب انهاء الخدمة المرتبط في حالة غير مسوده"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid ""
+"You cannot chosen The same allowance at the end of service and holiday "
+"allowance"
+msgstr "لا يمكن اختيار نفس اسم الاستحقاق في نهاية الخدمة و بدل الاجازة"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_allowance_deduction_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "amount"
+msgstr "المبلغ"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_allowance_deduction_form_view
+msgid "hr allowance deduction"
+msgstr "مستحقات وخصومات نهاية الخدمة"
+
+#. module: hr_termination
+#: model:ir.model,name:hr_termination.model_hr_allowance_deduction
+msgid "hr.allowance.deduction"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model,name:hr_termination.model_hr_salary_rule_line
+msgid "hr.salary.rule.line"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model,name:hr_termination.model_hr_termination_duration
+msgid "hr.termination.duration"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model,name:hr_termination.model_hr_termination_type
+msgid "hr.termination.type"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_report_view_form
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_report_wizard_view
+msgid "or"
+msgstr "او"
+
+#. module: hr_termination
+#: model:ir.model,name:hr_termination.model_report_hr_termination_hr_termination_action_report_xls
+msgid "report.hr_termination.hr_termination_action_report_xls"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model,name:hr_termination.model_report_hr_termination_hr_termination_report
+msgid "report.hr_termination.hr_termination_report"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model,name:hr_termination.model_report_hr_termination_termination_benefits_xls
+msgid "report.hr_termination.termination_benefits_xls"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model,name:hr_termination.model_report_hr_termination_termination_report_temp
+msgid "report.hr_termination.termination_report_temp"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_allowance_deduction_form_view
+msgid "type"
+msgstr "النوع"
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+msgid "إجمالي المستحق"
+msgstr ""
+
+#. module: hr_termination
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type6_1
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type6_2
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type6_3
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type6_4
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type6_5
+#: model:hr.termination.type,name:hr_termination.termination_type_6
+msgid ""
+"إنهاء العاملة لعقد العمل خلال ستة أشهر من عقد الزواج أو خلال ثلاثة أشهر من "
+"الوضع"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+msgid "اسم الموظف"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid ""
+"الأجر الذي سيتم إحتساب مكافأة نهاية الخدمة على أساسه\n"
+"                                        ("
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "الإسم:"
+msgstr ""
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/termination_report_wiz.py:0
+#, python-format
+msgid "الاجمالى"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+msgid "الاجمالي"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "التاريخ:"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+msgid "الراتب الشهري"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+msgid "المجموع"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "الموافق:"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+msgid "تاريخ المباشرة"
+msgstr ""
+
+#. module: hr_termination
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type8_1
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type8_2
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type8_3
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type8_4
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type8_5
+#: model:hr.termination.type,name:hr_termination.termination_type_8
+msgid "ترك العامل العمل دون تقديم استقالة لغير الحالات الواردة في المادة (81)"
+msgstr ""
+
+#. module: hr_termination
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type7_1
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type7_2
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type7_3
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type7_4
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type7_5
+#: model:hr.termination.type,name:hr_termination.termination_type_7
+msgid "ترك العامل العمل لأحد الحالات الواردة في المادة (81)"
+msgstr ""
+
+#. module: hr_termination
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type5_1
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type5_2
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type5_3
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type5_4
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type5_5
+#: model:hr.termination.type,name:hr_termination.termination_type_5
+msgid "ترك العامل العمل نتيجة لقوة قاهرة"
+msgstr ""
+
+#. module: hr_termination
+#: code:addons/hr_termination/wizard/termination_report_wiz.py:0
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+#, python-format
+msgid "جدول الإجازات والمخصصات"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "دائم"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+msgid "رصيد الإجازة"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+msgid "سبب إنهاء الخدمة"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+msgid "سنوات الخدمة(سنة/شهر/يوم)"
+msgstr ""
+
+#. module: hr_termination
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type2_1
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type2_2
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type2_3
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type2_4
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type2_5
+#: model:hr.termination.type,name:hr_termination.termination_type_2
+msgid "عامل الاستقالة"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+msgid "عدد تذاكر السفر المستحقة"
+msgstr ""
+
+#. module: hr_termination
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type3_1
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type3_2
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type3_3
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type3_4
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type3_5
+#: model:hr.termination.type,name:hr_termination.termination_type_3
+msgid "فسخ العقد من قبل صاحب العمل"
+msgstr ""
+
+#. module: hr_termination
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type4_1
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type4_2
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type4_3
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type4_4
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type4_5
+msgid "فسخ العقد من قبل صاحب العمل لأحد الحالات الواردة في المادة (80)"
+msgstr ""
+
+#. module: hr_termination
+#: model:hr.termination.type,name:hr_termination.termination_type_4
+msgid "فسخ العقد من قبل صاحب العمل لأحد الحالات الواردة في المادة (80)\t"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+msgid "قيمة الإجازة"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+msgid "قيمة نهاية الخدمة"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.employee_termination_report
+msgid "مؤقت"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.all_termination_benefits_template
+msgid "مبلغ تذكرة السفر"
+msgstr ""
+
+#. module: hr_termination
+#: model:ir.model.fields.selection,name:hr_termination.selection__account_move__state__canceled
+msgid "ملغي"
+msgstr ""
+
+#. module: hr_termination
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type1_1
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type1_2
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type1_3
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type1_4
+#: model:hr.termination.duration,name:hr_termination.termination_duration_type1_5
+#: model:hr.termination.type,name:hr_termination.termination_type_1
+msgid "نهاية العقد أو اتفاق الطرفين على إنهاء التعاقد"
+msgstr ""
+
+#. module: hr_termination
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+msgid "Termination salary ?"
+msgstr "حساب اخر راتب؟"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid ""
+"You can not create termination when there isemployee Deferred Expenses  in "
+"state not in state Return Done forplease reconcile it"
+msgstr "لايمكن اجراء انهاء خدمة  حيث يوجد طلبات مصروفات مقدمة للموظف "
+
+#. module: hr_termination
+#: model:ir.model.fields,help:hr_termination.field_hr_termination__employee_no
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_form_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.termination_resignation_eos_tree_view
+#: model_terms:ir.ui.view,arch_db:hr_termination.hr_termination_filter
+msgid "Employee Number"
+msgstr "رقم الموظف"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Sorry, The Approval For The Direct Manager '%s' Only OR HR Manager!"
+msgstr "للأسف، لموافقة المدير المباشر '%s' فقط او مدير الموارد البشرية !"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Sorry, The Refuse For The Direct Manager '%s' Only OR HR Manager!"
+msgstr "للأسف، لرفض المدير المباشر '%s' فقط او مدير الموارد البشرية !"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Sorry, The Approval For The Department Manager '%s' Only OR HR Manager!"
+msgstr "للأسف، لموافقة مدير الإدارة '%s' فقط او مدير الموارد البشرية !"
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid "Sorry, The Refuse For The Department Manager '%s' Only !"
+msgstr "للأسف، لرفض مدير الإدارة '%s' فقط او مدير الموارد البشرية !"
+
+
+#. module: hr_termination
+#: code:addons/hr_termination/models/hr_termination.py:0
+#, python-format
+msgid ""
+"You cannot terminate the employee \"%s\" because there are \"%s\" custody "
+"requests that exceeded the allowed amount and are not yet closed."
+msgstr "لا يمكن إنهاء خدمة الموظف \"%s\" حيث توجد \"%s\" عهد تجاوزت المبلغ المسموح ولم تُغلق بعد."

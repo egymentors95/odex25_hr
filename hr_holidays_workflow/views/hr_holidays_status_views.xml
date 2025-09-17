@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="edit_holiday_status_form_workflow" model="ir.ui.view">
+            <field name="name">hr.holidays.status.form - Add workflow fields</field>
+            <field name="model">hr.holidays.status</field>
+            <field name="priority">100</field>
+            <field name="inherit_id" ref="hr_holidays_community.edit_holiday_status_form"/>
+            <field name="arch" type="xml">
+                <field name="active" position="before">
+                                                            <field name="double_validation"/>
+
+                </field>
+                <xpath expr="//notebook" position="inside">
+
+                    <page string="WorkFlow"  attrs="{'invisible':[('double_validation','!=',True)]}">
+                        <button string="Update" name="update_holiday" type="object"
+                                attrs="{'invisible':[('double_validation','!=',True)]}"
+                                class="oe_highlight"/>
+                        <field name="workflow_ids" widget="one2many_list" >
+                            <tree  editable="bottom">
+                                <field name="name"/>
+                                <field name="state"/>
+                                <field name="sequence" required="1"/>
+                                <field name="group_id" attrs="{'invisible':[('state','!=','approved')],
+                            'required':[('state','=','approved')]}"/>
+                                <field name="btn_string" attrs="{'invisible':[('state','!=','approved')],
+                            'required':[('state','=','approved')]}"/>
+                            </tree>
+                        </field>
+
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

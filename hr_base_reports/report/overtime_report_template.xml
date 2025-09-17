@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <template id="employee_overtime_report">
+			<t t-call="web.html_container">
+				<t t-call="hr_base.hr_layout">
+					<style>
+					    @font-face {font-family: "Sakkal Majalla"; src:
+					    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+					    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+					    format("embedded-opentype"),
+					    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+					    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+					    url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"); }
+
+					</style>
+					<div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+						<table class="table table-condensed table-bordered">
+							<thead class="text-center">
+
+								<t t-set="span_value" t-value="len(docs['days'])+6"/>
+								<th  t-att-colspan="span_value" class="text-center" style="font-size:20px"> Overtime Report
+                                                                    <span t-esc="date_from"/>  _  <span t-esc="date_to"/></th>
+
+								<tr style="background-color: #b8bcbf;width:100%; ">
+									<th style="background-color:#263f79;text-align:center;color:#ffffff;font-size:18pt">#</th>
+									<th style="background-color:#263f79;text-align:center;color:#ffffff;font-size:18pt" >Department</th>
+									<th style="background-color:#263f79;text-align:center;color:#ffffff;font-size:18pt" >Employee Name</th>
+									<th style="background-color:#263f79;text-align:center;color:#ffffff;font-size:18pt">Job Title</th>
+									<th style="background-color:#263f79;text-align:center;color:#ffffff;font-size:18pt">Employee Basic Wage</th>
+									<t t-foreach="docs['days']" t-as="o">
+								        <th style="background-color:#263f79;text-align:center;color:#ffffff;font-size:18pt" >OT
+                                                                            <span t-esc="o.strftime('%d/%m/%Y')"    /> </th>
+									</t>
+									<th style="background-color:#263f79;text-align:center;color:#ffffff;font-size:18pt">Total</th>
+								</tr>
+							</thead>
+							<tbody class="text-center">
+								<t t-set="sequence" t-value="0"/>
+								<t t-foreach="docs['data']" t-as="o">
+									<tr>
+										<td>
+											<t t-set="sequence" t-value="sequence +1"/>
+											<t t-esc="sequence"/>
+										</td>
+										<td>
+											<t t-esc="o['department_id']"/>
+										</td>
+										<td>
+											<span t-esc="o['employee']"/>
+										</td>
+										<td>
+											<span t-esc="o['job_id']"/>
+										</td>
+										<td>
+											<span t-esc="round(o['salary'],2)"/>
+										</td>
+										<t t-foreach="o['data']" t-as="v">
+
+											<td>
+												<span t-esc="round(v,2)"/>
+											</td>
+										</t>
+										<td>
+											<span t-esc="round(o['total'],2)"/>
+										</td>
+									</tr>
+								</t>
+							</tbody>
+						</table>
+					</div>
+				</t>
+			</t>
+		</template>
+
+        <record id="employee_overtime_report_act" model="ir.actions.report">
+            <field name="model">employee.overtime.request</field>
+            <field name="name">Overtime Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_base_reports.employee_overtime_report</field>
+            <field name="report_file">hr_base_reports.employee_overtime_report</field>
+        </record>
+        <record id="employee_overtime_report_act_xlsx" model="ir.actions.report">
+            <field name="model">employee.overtime.request</field>
+            <field name="name">Overtime Report</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_base_reports.employee_overtime_report_xlsx</field>
+            <field name="report_file">hr_base_reports.employee_overtime_report_xlsx</field>
+        </record>
+    </data>
+</odoo>

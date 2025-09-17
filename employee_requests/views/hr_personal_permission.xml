@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="employee_personal_permission_action">
+            <field name="name">Employee permission</field>
+            <field name="res_model">hr.personal.permission</field>
+            <field name="view_mode">tree,form,calendar</field>
+            <field name= "context">{"search_default_my_permission":1}</field>		
+        </record>
+
+      <record model="ir.ui.view" id="view_permission_calendar">
+            <field name="name">hr.personal.permission.calendar</field>
+            <field name="model">hr.personal.permission</field>
+            <field name="arch" type="xml">
+                <calendar string="Employee permission" date_start="date" color="date">
+
+                    <field name="date" type="measure"/>
+                </calendar>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="employee_personal_permission_form_view">
+            <field name="name">employee personal permission</field>
+            <field name="model">hr.personal.permission</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="send" string="Submit" class="oe_highlight" type="object"
+                                states="draft" groups="base.group_user"/>
+
+                        <button name="direct_manager" string="Direct Manager Approve" class="oe_highlight" type="object"
+                                states="send" groups="hr_base.group_division_manager"/>
+                        <button name="direct_manager_refused" string="Refuse" class="oe_highlight" type="object"
+                                states="send" groups="hr_base.group_division_manager"/>
+
+                        <button name="approve" string="HR Approve" class="oe_highlight" type="object"
+                                states="direct_manager" groups="hr.group_hr_user"/>
+                        <button name="refused" string="Refuse" class="oe_highlight" type="object"
+                                states="direct_manager" groups="hr.group_hr_user"/>
+
+                        <button name="draft_state" string="RE-Draft" class="oe_highlight" type="object"
+                                states="refused,approve" groups="hr.group_hr_user" confirm="Are you sure to Reset To Draft This Record?"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group string="Permission Info">
+                                <field name="permission_type_id" options="{'no_create': True, 'no_open': True, 'no_create_edit': True}" attrs="{'readonly':[('state' , '!=' , 'draft')]}"/>
+                                <field name="date" string="Date Request"
+                                       attrs="{'readonly':[('state','!=','draft')],'required':1}"/>
+
+                                <!-- <label for='time_permission_from' string="Time"/>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <label for='time_permission_from' string="Time from"/>
+                                        <field name="time_permission_from" widget="float_time" attrs="{'readonly':[('state' , '!=' , 'draft')],'required':1}"/>
+                                    </div>
+                                    <div class="col-6">
+                                        <label for='time_permission_to' string="Time To"/>
+                                        <field name="time_permission_to" widget="float_time" attrs="{'readonly':[('state' , '!=' , 'draft')],'required':1}"/>
+                                    </div>
+                                </div> -->
+
+                                <field name="date_from" string="Date From"
+                                       attrs="{'readonly':[('state' , '!=' , 'draft')],'required':1}"/>
+                                <field name="date_to" string="Date To"
+                                       attrs="{'readonly':[('state' , '!=' , 'draft')],'required':1}"/>
+                                <field name="duration" string="Duration" attrs="{'readonly':1}" widget="float_time"/>
+                                <field name="balance" string="Permission Limit" readonly="1" widget="float_time"/>
+                                <field name="permission_number" force_save="True" string="Permission Per Month" widget="float_time"/>
+                                <field name="type_exit" string="Type Exit"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </group>
+                            <group string="Employee Info">
+                                 <field name="company_id" groups="base.group_multi_company" readonly="1"/>
+                                <field name="from_hr_department" string="Another Employee"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="employee_id" string="Employee"
+                                       attrs="{'readonly': ['|',('from_hr_department','=',False),('state','!=','draft')],'required':True}"/>
+                                <field name="employee_no" string="Employee Number" readonly="1"/>
+                                <field name="job_id" string="Job Title" readonly="1"/>
+                                <field name="department_id" string="Department" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="mission_purpose" string="Reasons"
+                                   attrs="{'readonly':[('state','!=','draft')]}"/>
+                        </group>
+                        <!--notebook>
+                            <page string="Attachments" name="attachments">
+                                <field name="attach_ids" string="Attachments"
+                                       attrs="{'readonly':[('state','!=','draft')]}">
+                                    <tree editable="bottom">
+                                        <field name="name" string="attachment Name"/>
+                                        <field name="datas" string="file content"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Refusal Causes" name="refusal_causes">
+                                <field name="refuse_cause" placeholder="Refuse Cause .........."
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </page>
+                            <page string="Information" name="information">
+                                <group>
+                                    <field name="approved_by" string="Approved By"
+                                           attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="refused_by" string="Refused By"
+                                           attrs="{'readonly':[('state','!=','draft')]}"/>
+                                </group>
+                            </page>
+                        </notebook-->
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_personal_permission_tree_view">
+            <field name="name">Employee personal permission</field>
+            <field name="model">hr.personal.permission</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'refused'" decoration-info="state == 'draft'" string="Employee personal permission">
+                    <!--field name="date" string="Date Request"/-->
+                    <field name="employee_no" string="Employee Number"/>
+                    <field name="employee_id" string="Employee"/>
+                    <field name="department_id" />
+                    <field name="permission_type_id" />
+                    <field name="date_from" string="Date From"/>
+                    <field name="date_to" string="Date To"/>
+                    <field name="duration" string="Duration"  widget="float_time"/>
+                    <field name="state" string="Status"/>
+                </tree>
+            </field>
+        </record>
+
+
+
+        <!-- permission_filter -->
+        <record id="employee_personal_permission_filter" model="ir.ui.view">
+            <field name="name">Employee personal permission</field>
+            <field name="model">hr.personal.permission</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                <search>
+                  <field name="employee_id"/>
+                  <field name="employee_no"/>
+                  <field name="permission_type_id"/>
+                  <field name="department_id" />
+                    <group expand="0" string="Group By">
+                        <filter name="group_employee" string="Employee" domain="[]" context="{'group_by': 'employee_id'}"/>
+                        <filter name="group_permission_type" string="Permission Type" domain="[]" context="{'group_by': 'permission_type_id'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                        <filter name="group_branch" string="Branch" domain="[]" context="{'group_by': 'is_branch'}"/>
+                        <filter name="group_state" string="State" domain="[]" context="{'group_by': 'state'}"/>
+
+
+                    </group>
+                    <separator/>
+
+
+                        <filter string="My Permissions" name="my_permission" domain="[('employee_id.user_id', '=', uid)]"/>
+                    <separator/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

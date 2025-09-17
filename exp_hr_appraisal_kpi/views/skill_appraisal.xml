@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+            <!-- Form View -->
+            <record id="view_skill_appraisal_form" model="ir.ui.view">
+                <field name="name">skill.appraisal.form</field>
+                <field name="model">skill.appraisal</field>
+                <field name="arch" type="xml">
+                    <form string="Skill Appraisal">
+                        <header>
+                            <button string="Send" groups='hr_base.group_division_manager' states="draft" class="oe_highlight" type="object" name="send"/>
+                            <button string="Accept" states='dir_manager' class="oe_highlight" type="object" name="action_approval"/>
+                            <button string="refuse" states='dir_manager' class="oe_highlight" type="object" name="action_refuse"/>
+
+                            <button string="Accept" groups='hr_base.group_department_manager' states='wait_dir_manager' class="oe_highlight" type="object" name="action_approval"/>
+                            <button string="refuse" groups='hr_base.group_department_manager' states='wait_dir_manager' class="oe_highlight" type="object" name="action_refuse"/>
+
+                            <button string="Accept" groups='hr.group_hr_user' states='wait_hr_manager' class="oe_highlight" type="object" name="action_approval"/>
+                            <button string="refuse" groups='hr.group_hr_user' states='wait_hr_manager' class="oe_highlight" type="object" name="action_refuse"/>
+                            <button string="Reset To Draft" states='approve,refuse' class="oe_highlight" type="object" name="reset_draft"/>
+                            <field name="state" required='1' statusbar_visible="draft,dir_manager,wait_dir_manager,wait_hr_manager,approve,refuse" widget="statusbar"/>
+                        </header>
+                        <sheet>
+                            <group>
+                                <group>
+                                    <field name="employee_id" attrs="{'readonly': [('state', 'not in', ['draft'])]}" required='1'/>
+                                    <field attrs="{'readonly': [('state', 'not in', ['draft'])]}" name="department_id" required='1'/>
+                                    <field attrs="{'readonly': [('state', 'not in', ['draft'])]}" name="job_id" required='1'/>
+                                    <field attrs="{'readonly': [('state', 'not in', ['draft'])]}" name="manager_id" required='1'/>
+
+                                </group>
+                                <group>
+
+                                    <field attrs="{'readonly': [('state', 'not in', ['draft'])]}" name="date_apprisal"/>
+                                    <field attrs="{'readonly': [('state', 'not in', ['draft'])]}"  name="year_id" required="1" options='{"no_open": True,"no_create_edit": True,"no_create":True}'/>
+                                    <field attrs="{'readonly': [('state', 'not in', ['draft'])],'invisible':[('year_id','=',False)]}" name="period" domain="[('kpi_period_id', '=',year_id),('kpi_goal_period_id','=',False)]" required="1"  options='{"no_open": True,"no_create_edit": True,"no_create":True}'/>
+                                    <field attrs="{'readonly': [('state', 'not in', ['draft'])]}" required='1' decoration-bf="1" name="avarage"/>
+                                </group>
+                            </group>
+                            <notebook>
+                                <page string="Items">
+                                    <field name="items_ids">
+                                          <tree create="0" delete='0' editable="bottom">
+                                            <field readonly="1" force_save='1' name="item_id" width="12" options='{"no_open": True,"no_create_edit": True}'/>
+                                            <field readonly="1" force_save='1' name="name" width="12" attrs="{'readonly': [('parent.state', 'not in', ['draft'])]}"/>
+                                            <field readonly="1" force_save='1' name="level" width="12"/>
+                                            <field force_save='1' attrs="{'readonly': [('parent.state', 'not in', ['wait_dir_manager','draft'])]}" name="mark" width="12"/>
+                                        </tree>
+                                    </field>
+                                </page>
+                                <page string="Recommendations">
+                                    <field attrs="{'readonly': [('state', 'not in', ['draft'])]}" widget="html" required="0" name="recommendations"/>
+                                </page>
+                            </notebook>
+                        </sheet>
+                        <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                        </div>
+                    </form>
+                </field>
+            </record>
+
+            <!-- Tree View -->
+            <record id="view_skill_appraisal_tree" model="ir.ui.view">
+                <field name="name">skill.appraisal.tree</field>
+                <field name="model">skill.appraisal</field>
+                <field name="arch" type="xml">
+                    <tree string="Skill Appraisal" decoration-info="state == 'draft'" decoration-danger="state == 'refuse'"  decoration-success="state== 'approve'">
+                        <field name="employee_id"/>
+                        <field name="department_id"/>
+                        <field name="job_id"/>
+                        <field name="manager_id"/>
+                        <field name="period"/>
+                        <field name="date_apprisal"/>
+                        <field name="state" widget="badge" decoration-info="state == 'draft'" decoration-danger="state == 'refuse'"  decoration-success="state== 'approve'"/>
+                        <field name="avarage" decoration-bf="1"/>
+                    </tree>
+                </field>
+            </record>
+
+            <!-- Menu Action -->
+            <record id="action_skill_appraisal" model="ir.actions.act_window">
+                <field name="name">Skill Appraisal</field>
+                <field name="res_model">skill.appraisal</field>
+                <field name="view_mode">tree,form</field>
+            </record>
+
+            <!-- Menu Item -->
+            <menuitem id="menu_skill_appraisal_list" groups="exp_hr_appraisal.group_appraisal_manager,exp_hr_appraisal.group_appraisal_user,exp_hr_appraisal.group_appraisal_employee" sequence="2" name="Employee Skill Appraisal" parent="exp_hr_appraisal.appraisal_menu_id" action="action_skill_appraisal"/>
+</odoo>

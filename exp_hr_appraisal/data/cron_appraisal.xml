@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+
+        <record id="ir_cron_week_appraisal" model="ir.cron">
+            <field name="name">Appraisal ;Automatic Employee Appraisal</field>
+            <field name="interval_number">1</field>
+            <field name="interval_type">days</field>
+            <field name="numbercall">-1</field>
+            <field name="nextcall"
+                   eval="(DateTime.now().replace(hour=2, minute=0) + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+            <field name="doall" eval="False"/>
+            <field name="model_id" ref="model_appraisal_setting"/>
+            <field name="code">model.create_automatic_appraisal()</field>
+            <field name="state">code</field>
+        </record>
+    </data>
+</odoo>

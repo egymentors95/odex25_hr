@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<odoo>
+    <template id="employee_department_jobs_template">
+		<t t-call="web.html_container">
+			<t t-call="hr_base.hr_layout">
+				<t t-foreach="docs" t-as="o">
+					<div class="page" style="font-size:18;direction:ltr" >
+						<div class="oe_structure"/>
+						<div class="page-header" >
+							<div class="text-center">
+								<b>Employee Department and Jobs</b><br/>
+							</div>
+						</div>
+					</div>
+
+					<table class="table table-bordered">
+						<tr style="font-size:16;">
+							<td>
+								Number :
+							</td>
+							<td class="text-center" ></td>
+							<td >
+								Date :
+							</td>
+							<td class="text-center"><span t-field="o.date"/></td>
+						</tr>
+					</table>
+					<br/>
+					<table class="table table-bordered">
+						<tr style="font-size:16;">
+							<td colspan="3">
+								Employee :
+							</td>
+							<td colspan="3" class="text-center"><span t-field="o.employee_id.name"/></td>
+						</tr>
+						<tr style="font-size:16;">
+							<td>
+								Iqama :
+							</td>
+							<td class="text-center">
+								<t t-if="o.employee_id.country_id.code== 'SA'">
+									<t t-esc="o.employee_id.saudi_number.saudi_id"/>
+								</t>
+								<t t-else="">
+									<t t-esc="o.employee_id.iqama_number.iqama_id"/>
+								</t>
+							</td>
+							<td>
+								Nationality :
+							</td>
+							<td class="text-center"><span t-field="o.employee_id.country_id.name"/></td>
+							<td>
+								Old Job Title :
+							</td>
+							<td class="text-center"><span t-field="o.old_job_2_id.name"/></td>
+						</tr>
+						<tr style="font-size:16;">
+							<td>
+								Source :
+							</td>
+							<td class="text-center"><span t-field="o.old_department_2_id.name"/></td>
+							<td>
+								Destination :
+							</td>
+							<td class="text-center"><span t-field="o.new_department_id.name"/></td>
+							<td>
+								New Job Title :
+							</td>
+							<td class="text-center"><span t-field="o.new_job_id.name"/></td>
+						</tr>
+						<tr style="font-size:16;">
+							<td colspan="6" class="text-center">This is will be applied from <span t-field="o.date"/></td>
+						</tr>
+					</table>
+					<br/><br/>
+				</t>
+			</t>
+		</t>
+	</template>
+
+	<record id="employee_department_jobs_action_report" model="ir.actions.report">
+		<field name="model">employee.department.jobs</field>
+		<field name="name">Employee Department and Jobs Report</field>
+		<field name="report_type">qweb-pdf</field>
+		<field name="report_name">employee_requests.employee_department_jobs_template</field>
+	</record>
+
+</odoo>

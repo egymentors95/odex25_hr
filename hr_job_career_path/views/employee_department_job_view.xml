@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="custom_employee_department_jobs_form_view" model="ir.ui.view">
+            <field name="name">Job/ Department Changing</field>
+            <field name="model">employee.department.jobs</field>
+            <field name="inherit_id" ref="employee_requests.employee_department_jobs_form_view"/>
+             <field name="arch" type="xml">
+                 <xpath expr="//div" position="after">
+                    <field name="eligible"
+                           readonly="1"
+                           force_save="1"
+                           attrs="{'invisible':[('promotion_type', '=', 'department')]}"/>
+                    <field name="permit"
+                          attrs="{'readonly':[('state','not in',('draft','confirm'))],'invisible':[('eligible', '=', True)]}"
+                           groups="hr.group_hr_user"/>
+                 </xpath>
+                 <xpath expr="//separator" position="before">
+                     <group string="Unmet Conditions"
+                            name="unmet"
+                            readonly="1"
+                            force_save="1"
+                            attrs="{'invisible':['|', ('eligible', '=', True), ('promotion_type', '=', 'department')]}">
+                         <field name="unmet_condition" nolabel="1"/>
+                     </group>
+                     <group string="Nomination Permission Reason" name="permission_reason"
+                            attrs="{'invisible':[('permit', '=', False)]}">
+                         <field name="permission_reason" nolabel="1"
+                                attrs="{'readonly':[('state','=','approved')]}"
+                                groups="hr.group_hr_user"/>
+                     </group>
+                 </xpath>
+                 <xpath expr="//field[@name='date']" position="after">
+                     <field name="job_date_to"
+                            attrs="{'invisible':['|', ('state','!=','approved'), ('promotion_type','==','department')]}"/>
+                    <field name="department_date_to"
+                        attrs="{'invisible':['|', ('state','!=','approved'), ('promotion_type','==','job')]}"/>
+                 </xpath>
+             </field>
+        </record>
+    </data>
+</odoo>

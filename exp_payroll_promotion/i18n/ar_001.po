@@ -1,0 +1,1258 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* exp_payroll_promotion
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-13 07:08+0000\n"
+"PO-Revision-Date: 2022-09-13 07:08+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_needaction
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_needaction
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_needaction
+msgid "Action Needed"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_deterrent_penalty__active_years
+msgid "Active Years"
+msgstr "السنوات المحتسبة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__activity_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__activity_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__activity_ids
+msgid "Activities"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__activity_exception_decoration
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__activity_state
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__activity_state
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__activity_state
+msgid "Activity State"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__activity_type_icon
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__activity_type_icon
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__activity_type_icon
+msgid "Activity Type Icon"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_nomination_form_view
+msgid "Administrative Circular/ Decision"
+msgstr "تعميم/ قرار إداري"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_raise__raise_type__annual
+msgid "Annual"
+msgstr "سنوي"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_raise__raise_type__discrimination
+msgid "Discrimination"
+msgstr "التميز"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_raise_form_view
+msgid "Are you sure to Rest To Draft This Record?"
+msgstr "هل أنت متأكد من إرجاع السجل لحالة المبدئي؟"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_nomination__process__raise
+msgid "Annual Raise"
+msgstr "العلاوة السنوية"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_nomination_form_view
+msgid "Annual Raise Nominees"
+msgstr "المرشحين للعلاوة السنوية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__application_date
+msgid "Application Date"
+msgstr "تاريخ العلاوه"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__approval
+msgid "Approval Mode"
+msgstr "طريقة الموافقة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__new_salary
+msgid "New Basic Salary"
+msgstr "الاساسي الجديد"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_nomination_form_view
+msgid "Approve"
+msgstr "تصديق"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_raise_form_view
+msgid "Approve"
+msgstr "تصديق"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_raise_form_view
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_raise__state__hr_officer
+msgid "HR Officer"
+msgstr "مسؤول الموارد البشرية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_raise__state__confirm
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_raise_form_view
+msgid "HR Manager"
+msgstr "مدير الموارد البشرية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_nomination__state__approve
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_raise__state__approve
+msgid "Approved"
+msgstr "تم التصديق"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_attachment_count
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_attachment_count
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_attachment_count
+msgid "Attachment Count"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__changed_job_id
+msgid "Changed Job"
+msgstr "الوظيفة المجددة"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.extra_employee_offcail_mission_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.extra_employee_oficial_mission_line_form_view
+msgid "Completed Successfully"
+msgstr "تم الإكمال بنجاح"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_nomination_form_view
+msgid "Confirm"
+msgstr "قبول"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_nomination__approval__congregational
+msgid "Congregational"
+msgstr "جماعي"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__date_promotion
+msgid "Consideration Date"
+msgstr "تاريخ النظر في الترقية"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_promotion_setting_form_view
+msgid "Constrained Groups"
+msgstr "مجموعات إستثنائية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_current_group__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_deterrent_penalty__create_uid
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_previous_group__create_uid
+msgid "Created by"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__create_date
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__create_date
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__create_date
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_current_group__create_date
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_deterrent_penalty__create_date
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_previous_group__create_date
+msgid "Created on"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__current_group_years
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_current_group__active_years
+msgid "Current Group Years"
+msgstr "السنوات في الدرجة الحالية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__current_job_id
+msgid "Current Job"
+msgstr "الوظيفة الحالية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__current_salary
+msgid "Current Salary"
+msgstr "الاساسي الحالي"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__current_salary
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.employee_promotions_custom_form_view
+msgid "Current Salary"
+msgstr "الراتب الإجمالي الحالي"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__date_from
+msgid "Date From"
+msgstr "تاريخ البداية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__date_to
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__date_to
+msgid "Date To"
+msgstr "تاريخ النهاية"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.employee_promotions_custom_form_view
+msgid "Days"
+msgstr "يوم"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_penalty_register__penalty_with_days
+msgid "Days Deducted Penalties"
+msgstr "عقوبات خصم أيام"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_penalty_register__deduction_days
+msgid "Days to Deduct"
+msgstr "الإيام المخصومة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_employee__degree_date
+msgid "Degree Joining Date"
+msgstr "تاريخ دخول الدرجة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__degree_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__degree_id
+msgid "Degrees"
+msgstr "الدرجات"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__deterrent_delegation_period
+msgid "Deterrent Delegation Period in Months"
+msgstr "الفترات المانعة للترقية بالشهور"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__deterrent_leave_ids
+msgid "Deterrent Leaves"
+msgstr "الإجازات المانعة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__deterrent_penalty_ids
+msgid "Deterrent Penalties"
+msgstr "العقوبات المانعة"
+
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__deterrent_violation_ids
+msgid "Deterrent Violations"
+msgstr "المخالفات المانعة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__deviation
+msgid "Deviation in Days"
+msgstr "الإنحراف بالأيام"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__display_name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_holidays__display_name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_holidays_status__display_name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_official_mission__display_name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_official_mission_employee__display_name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__display_name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__display_name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__display_name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_structure__display_name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_penalty_register__display_name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_current_group__display_name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_deterrent_penalty__display_name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_previous_group__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_nomination__state__draft
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_raise__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.employee_promotions_custom_form_view
+msgid "Duration"
+msgstr "مبدئي"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.employee_promotions_custom_form_view
+msgid "Eligibility"
+msgstr "الإستيفاء"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__eligible
+msgid "Eligible"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_hr_employee
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_raise_form_view
+msgid "Employee Name"
+msgstr "إسم الموظف"
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_employee_promotions
+msgid "Employee Promotions"
+msgstr "ترقيات الموظف"
+
+#. module: exp_payroll_promotion
+#: model:ir.ui.menu,name:exp_payroll_promotion.hr_payroll_raise_menu
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_raise_form_view
+msgid "Employee Raise"
+msgstr "علاوة الموظف"
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_hr_payroll_raise
+msgid "Employee annual raises"
+msgstr "علاوات الموظف السنوية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__employee_promotions__type__exceptional
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_raise__raise_type__exceptional
+msgid "Exceptional"
+msgstr "إستثنائية"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_promotion_setting_form_view
+msgid "Exceptional Promotion"
+msgstr "ترقية إستثنائية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__excluded_leave_ids
+msgid "Excluded Leaves"
+msgstr "إجازات مستبعدة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__excluded_penalty_ids
+msgid "Excluded Penalties"
+msgstr "عقوبات مستبعدة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_follower_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_follower_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_follower_ids
+msgid "Followers"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_channel_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_channel_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_channel_ids
+msgid "Followers (Channels)"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_partner_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_partner_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_partner_ids
+msgid "Followers (Partners)"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_nomination__activity_type_icon
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_promotion_setting__activity_type_icon
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_raise__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__foreign_scale
+msgid "Foreign Scale/ Level"
+msgstr "سلم/ مستوى مختلف"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__group_id
+msgid "Group"
+msgstr "المجموعة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_employee__group_date
+msgid "Group Joining Date"
+msgstr "تاريخ دخول المجموعة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__group_ids
+msgid "Groups"
+msgstr "المجموعات"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_employee__id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_holidays__id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_holidays_status__id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_official_mission__id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_official_mission_employee__id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_structure__id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_penalty_register__id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_current_group__id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_deterrent_penalty__id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_previous_group__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__activity_exception_icon
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__activity_exception_icon
+msgid "Icon"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_nomination__activity_exception_icon
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_promotion_setting__activity_exception_icon
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_raise__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_nomination__message_needaction
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_nomination__message_unread
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_needaction
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_unread
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_raise__message_needaction
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_raise__message_unread
+msgid "If checked, new messages require your attention."
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_nomination__message_has_error
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_nomination__message_has_sms_error
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_has_error
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_has_sms_error
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_raise__message_has_error
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_raise__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_official_mission__include_in_experience
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_official_mission_employee__include_in_experience
+msgid "Include Period in Experience"
+msgstr "حساب الفترة كخبرة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_nomination__approval__individual
+msgid "Individual"
+msgstr "فردية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_is_follower
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_is_follower
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_is_follower
+msgid "Is Follower"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__last_evaluation_id
+msgid "Last Evaluation Result"
+msgstr "نتيجة التقييم الأخير"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions____last_update
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_holidays____last_update
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_holidays_status____last_update
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_official_mission____last_update
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_official_mission_employee____last_update
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination____last_update
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting____last_update
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise____last_update
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_structure____last_update
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_penalty_register____last_update
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_current_group____last_update
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_deterrent_penalty____last_update
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_previous_group____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__last_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.employee_promotions_custom_form_view
+msgid "Last Promotion"
+msgstr "اخر ترقية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__last_raises
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_raise_form_view
+msgid "Last Raise"
+msgstr "اخر علاوه"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__last_raise_date
+msgid "Last Raise Date"
+msgstr "تاريخ أخر علاوة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_current_group__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_deterrent_penalty__write_uid
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_previous_group__write_uid
+msgid "Last Updated by"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__write_date
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__write_date
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__write_date
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_current_group__write_date
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_deterrent_penalty__write_date
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_previous_group__write_date
+msgid "Last Updated on"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_hr_holidays
+msgid "Leave"
+msgstr "الإجازات"
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_hr_holidays_status
+msgid "Leave Type"
+msgstr "نوع الإجازة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__level_id
+msgid "Level"
+msgstr "المستوى"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__level_ids
+msgid "Levels"
+msgstr "المستويات"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_main_attachment_id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_main_attachment_id
+msgid "Main Attachment"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__max_age
+msgid "Maximum Age"
+msgstr "أقصى عمر"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__max_exceptional_nomination
+msgid "Maximum Exceptional Nominations"
+msgstr "أقصى عدد للترقية إستثنائية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__max_nominees_no
+msgid "Maximum Nominees"
+msgstr "أقصى عدد للمرشحين"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_has_error
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_has_error
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_has_error
+msgid "Message Delivery error"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_ids
+msgid "Messages"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__deterrent_evaluation_id
+msgid "Minimum Evaluation"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.employee_promotions_custom_form_view
+msgid "Months"
+msgstr "أقل تقييم"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__name
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_promotion_setting_form_view
+msgid "Name ..."
+msgstr "...إسم إعداد الترقيات"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__new_salary
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.employee_promotions_custom_form_view
+msgid "New Salary"
+msgstr "الراتب الجديد"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__activity_date_deadline
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__activity_summary
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__activity_summary
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__activity_summary
+msgid "Next Activity Summary"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__activity_type_id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__activity_type_id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__activity_type_id
+msgid "Next Activity Type"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__next_raise_date
+msgid "Next Raise Date"
+msgstr "تاريخ إستحقاق العلاوة التالية"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_nomination_form_view
+msgid "Nominate"
+msgstr "ترشيح"
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_hr_payroll_nomination
+msgid "Nominate employee for annual raises and promotions"
+msgstr "ترشيح الموظف للعلاوات والترقيات الإستثنائية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_nomination__state__nominate
+msgid "Nominated"
+msgstr "تم الترشيح"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__nominated_degree_id
+msgid "Nominated Degree"
+msgstr "الدرجة المرشحة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__nomination_id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__nomination_id
+msgid "Nomination"
+msgstr "ترشيح"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__promotion_nominee_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__raise_nominee_ids
+msgid "Nominees"
+msgstr "المرشحين"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__note
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_raise_form_view
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_needaction_counter
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_needaction_counter
+msgid "Number of Actions"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_previous_group__prv_group_no
+msgid "Number of Previous Groups"
+msgstr "عدد المجموعات السابقة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_penalty_register__deduction_days
+msgid "Number of days not counted for candidacy for promotions"
+msgstr "عدد الايام الغير محتسبة للترشح للترقيات"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_has_error_counter
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_has_error_counter
+msgid "Number of errors"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_nomination__message_needaction_counter
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_needaction_counter
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_raise__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_nomination__message_has_error_counter
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_has_error_counter
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_raise__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_nomination__message_unread_counter
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_unread_counter
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_raise__message_unread_counter
+msgid "Number of unread messages"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_hr_official_mission
+msgid "Official mission"
+msgstr "مهام العمل الرسمية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__old_promotion_date
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.employee_promotions_custom_form_view
+msgid "Old Promotion Date"
+msgstr "تاريخ الترقية الحالية"
+
+#. module: exp_payroll_promotion
+#: model:ir.actions.act_window,name:exp_payroll_promotion.hr_payroll_nomination_action
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_nomination_tree_view
+msgid "Payroll Nomination"
+msgstr "ترشيحات المرتبات"
+
+#. module: exp_payroll_promotion
+#: model:ir.actions.act_window,name:exp_payroll_promotion.hr_payroll_raise_action
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_nomination_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_raise_tree_view
+msgid "Payroll Raise"
+msgstr "علاوة المرتب"
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_hr_penalty_register
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_deterrent_penalty__penalty_id
+msgid "Penalty"
+msgstr "العقوبة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_deterrent_penalty__days
+msgid "Penalty Deterrent Days"
+msgstr "أيام العقوبة المانعة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__percentage_bonus
+msgid "Percentage Bonus"
+msgstr "نسبة مئوية  للزيادة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__percentage_raises
+msgid "Percentage Raises"
+msgstr "نسبة الزيادة للعلاوه"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__permit
+msgid "Permit Promotion"
+msgstr "السماح بالترشيح"
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#, python-format
+msgid "Please make sure current scale details are complete."
+msgstr ".رجاءً تأكد من إكتمال المعلومات الخاصة بسلم الرواتب الحالي"
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#, python-format
+msgid "Please make sure employee has a current job."
+msgstr ".رجاءً تأكد من الموظف لديه وظيفة حالياً"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__process
+msgid "Process"
+msgstr "العملية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_nomination__process__promotion
+msgid "Promotion"
+msgstr "ترقية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__promotion_date
+msgid "Promotion Consideration Date"
+msgstr "تاريخ النظر في الترقية"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_promotion_setting_form_view
+msgid "Promotion Deterrent"
+msgstr "موانع الترقية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_current_group__group_id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_previous_group__group_id
+msgid "Promotion Group"
+msgstr "مجموعة الترقية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__promotion_job_id
+msgid "Promotion Job"
+msgstr "وظيفة الترقية"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_nomination_form_view
+msgid "Promotion Nominees"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__promotion_scale_id
+msgid "Promotion Scale"
+msgstr "المرشحين للترقية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__promotion_seniority
+msgid "Promotion Seniority"
+msgstr "أسبقية الترقية"
+
+#. module: exp_payroll_promotion
+#: model:ir.actions.act_window,name:exp_payroll_promotion.hr_promotion_setting_action
+#: model:ir.ui.menu,name:exp_payroll_promotion.hr_promotion_setting_menu
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_promotion_setting_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_promotion_setting_tree_view
+msgid "Promotion Setting"
+msgstr "إعدادات الترقية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__type
+msgid "Promotion Type"
+msgstr "نوع الترقية"
+
+#. module: exp_payroll_promotion
+#: model:ir.ui.menu,name:exp_payroll_promotion.hr_payroll_nomination_menu
+msgid "Promotion/ Raise Nomination"
+msgstr "الترشيح للعلاوة/ الترقية"
+
+#. module: exp_payroll_promotion
+#: model:ir.ui.menu,name:exp_payroll_promotion.hr_payroll_promotion_root
+msgid "Promotions"
+msgstr "الترقيات"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__margin
+msgid "Raise Time Margin"
+msgstr "الهامش الزمني"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__raise_type
+msgid "Raise Type"
+msgstr "نوع العلاوة"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_nomination_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_raise_form_view
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_nomination__state__refuse
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__hr_payroll_raise__state__refuse
+msgid "Refused"
+msgstr "مرفوض"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields.selection,name:exp_payroll_promotion.selection__employee_promotions__type__regular
+msgid "Regular"
+msgstr "عادية"
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_nomination_form_view
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_payroll_raise_form_view
+msgid "Reset To Draft"
+msgstr "إرجاع إلى مبدئي"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__activity_user_id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__activity_user_id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__activity_user_id
+msgid "Responsible User"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_has_sms_error
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__current_salary_insurance
+msgid "Salary Insurance"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_employee_salary_scale_dates_form_view
+msgid "Salary Scale Dates"
+msgstr "تواريخ سلم الرواتب"
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_hr_payroll_structure
+msgid "Salary Structure"
+msgstr "سلم الرواتب"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__scale_id
+msgid "Scale"
+msgstr "سلم الرواتب"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__scale_ids
+msgid "Scales"
+msgstr "سلم الرواتب"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__service_day
+msgid "Service Day"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__service_month
+msgid "Service Month"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__service_year
+msgid "Service Year"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_hr_payroll_promotion_setting
+msgid "Sets governor for promoting employee"
+msgstr "حوكمة ترقية الموظف"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_current_group__setting_id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_deterrent_penalty__setting_id
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_previous_group__setting_id
+msgid "Setting"
+msgstr "الإعدادات"
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#, python-format
+msgid ""
+"Sorry employee %s is not eligible, that you can not proceed with approval "
+"without granting him a permission to be nominated."
+msgstr ".عفواً الموظف  %s غير مستوفي, لذلك لا يمكن متابعة علمية التصديق دون أن يتم منحه الموافقة على الترشيح"
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#, python-format
+msgid ""
+"Sorry employee %s last exceptional promotion was in %s you can not promote "
+"him another exceptional promotion before %s years."
+msgstr ".عفواً الموظف %s تمت ترقيته ترقية إستثائية اخر مرة في %s لذلك لا يمكنك ترقيته إستثنائيا  مرة اخرى قبل مضي %s سنة"
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#, python-format
+msgid ""
+"Sorry employee %s last exceptional promotion was in %s you can not promote "
+"him before %s years."
+msgstr ".عفواً الموظف %s تمت ترقيته ترقية إستثائية اخر مرة في %s لذلك لا يمكنك ترقيته  مرة اخرى قبل مضي %s سنة"
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_raise.py:0
+#, python-format
+msgid "Sorry nominated degree %s is less than the current employee degree"
+msgstr ".عفواً درجة الترشيح %s أقل من درجة الموظف الحالية"
+
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_raise.py:0
+#, python-format
+msgid "Sorry, The Percentage Of Bonus Increase Must Be Greater Than Zero"
+msgstr "عفواً, نسبة زيادة العلاوه يجب ان تكون أكبر من الصفر"
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_employee.py:0
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#, python-format
+msgid "Sorry promotion settings are missed kindly set them first."
+msgstr "عفواً لا توجد إعدادات نشطة للترقية فضلاً قم بإضافتها اولاً."
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_nomination.py:0
+#: code:addons/exp_payroll_promotion/models/hr_payroll_raise.py:0
+#, python-format
+msgid "Sorry you can not delete a record that is not in draft state"
+msgstr "عفواً لا يمكن حذف هذا السجل وهو في حالة غير مسوده."
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#, python-format
+msgid ""
+"Sorry you can not promote employee more than once within the same year."
+msgstr ".عفواً لا يمكنك ترقية الموظف أكثر من مرة خلال نفس العام"
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#, python-format
+msgid ""
+"Sorry you can not promote employee more than one group with a regular "
+"promotion, please choose exceptional promotion to do so."
+msgstr "عفواً لا يمكنك ترقية الموظف لأكثر من درجة عند إختيار الترقية العادية, رجاءً قم بإختيار الترقية الإستثنائية لتتمكن من ذلك."
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#, python-format
+msgid "Sorry you can not set to Draft this Not last Promotion"
+msgstr "عفواً لا يمكنك اعاده الترقيات القديمة للحالة المبدئية"
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_raise.py:0
+#, python-format
+msgid "Sorry you can not set to Draft this Not last Raise"
+msgstr "عفواً لا يمكنك اعاده العلاوات القديمة للحالة المبدئية"
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#, python-format
+msgid "Sorry you can promote employee to the higher group only."
+msgstr "عفواً يمكن ترقية الموظف للدرجة الأعلى فقط."
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion_setting.py:0
+#, python-format
+msgid "Sorry you cannot have more than one active setting simultaneously."
+msgstr "عفوًا ، لا يمكنك الحصول على أكثر من إعداد نشط في ذات الوقت."
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__state
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__state
+msgid "State"
+msgstr "الحالة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_nomination__activity_state
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_promotion_setting__activity_state
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_raise__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_holidays_status__studying_leave
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.edit_holiday_status_form_extra
+msgid "Studying Leave"
+msgstr "إجازة دراسية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_holidays__successful_completion
+msgid "Successful Completion"
+msgstr "تم الإكمال بنجاح"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_official_mission_employee__successfully_completed
+msgid "Successfully Completed"
+msgstr "تم الإكمال بنجاح"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__margin
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_structure__time_margin
+msgid "Time Margin"
+msgstr "الهامش الزمني"
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#, python-format
+msgid ""
+"To promote employee to a different level please check foreign Scale/ Level "
+"box."
+msgstr "لترقية الموظف لمستوى مختلف رجاءً قم بإختيار  سلم/ مستوى مختلف."
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#: code:addons/exp_payroll_promotion/models/hr_payroll_promotion.py:0
+#, python-format
+msgid ""
+"To promote employee to a different scale please check foreign Scale/ Level "
+"box."
+msgstr "لترقية الموظف لسلم مختلف رجاءً قم بإختيار سلم/ مستوى مختلف."
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_previous_group__total_years
+msgid "Totaled Years?"
+msgstr "مجموع سنوات؟"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_nomination__activity_exception_decoration
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_promotion_setting__activity_exception_decoration
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_raise__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.hr_promotion_setting_form_view
+msgid "Uncounted Experience"
+msgstr "خبرة غير محتسبة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__unmet_condition
+msgid "Unmet Conditions"
+msgstr "شروط غير مستوفاة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_unread
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_unread
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_unread
+msgid "Unread Messages"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__message_unread_counter
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__message_unread_counter
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_nomination__website_message_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__website_message_ids
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_raise__website_message_ids
+msgid "Website Messages"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_nomination__website_message_ids
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_promotion_setting__website_message_ids
+#: model:ir.model.fields,help:exp_payroll_promotion.field_hr_payroll_raise__website_message_ids
+msgid "Website communication history"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.employee_promotions_custom_form_view
+msgid "Years"
+msgstr "سنة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__regular_timeframe
+msgid "Years Between Exceptional And Regular Promotion"
+msgstr "السنوات بين الترقية الإستثنائية والعادية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__exceptional_timeframe
+msgid "Years Between Two Exceptional Promotions"
+msgstr "السنوات بين ترقيتين إستثنائيتين"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__current_group_ids
+msgid "Years In The Current Group"
+msgstr "السنوات في المجموعة الحالية"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_payroll_promotion_setting__previous_group_ids
+msgid "Years In The Previous Groups"
+msgstr "السنوات في المجموعات السابقة"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_hr_promotion_previous_group__years
+msgid "Years Of Experience"
+msgstr "سنوات الخبرة"
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_nomination.py:0
+#: code:addons/exp_payroll_promotion/models/hr_payroll_nomination.py:0
+#, python-format
+msgid "You can not Set Draft this record some of the nominees Not in Draft."
+msgstr "عفواً لا يمكن اعادة  هذا السجل لمسوده فقد إبتدت عملية التصديق لبعض المرشحين."
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_nomination.py:0
+#, python-format
+msgid ""
+"You can not delete this record some of the nominees are under approval."
+msgstr "عفواً لا يمكن حذف هذا السجل فقد إبتدت عملية التصديق لبعض المرشحين."
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_nomination.py:0
+#: code:addons/exp_payroll_promotion/models/hr_payroll_nomination.py:0
+#, python-format
+msgid ""
+"You can not refuse this record some of the nominees gone under approval."
+msgstr "عفواً لا يمكن رفض هذا السجل فقد إبتدت عملية التصديق لبعض المرشحين."
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_hr_official_mission_employee
+msgid "hr.official.mission.employee"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_hr_promotion_current_group
+msgid "hr.promotion.current.group"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_hr_promotion_deterrent_penalty
+msgid "hr.promotion.deterrent.penalty"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model,name:exp_payroll_promotion.model_hr_promotion_previous_group
+msgid "hr.promotion.previous.group"
+msgstr ""
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__old_basic_salary
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.employee_promotions_custom_form_view
+msgid "Old Basic Salary"
+msgstr "مبلغ الاساسي الحالي"
+
+#. module: exp_payroll_promotion
+#: model:ir.model.fields,field_description:exp_payroll_promotion.field_employee_promotions__new_basic_salary
+#: model_terms:ir.ui.view,arch_db:exp_payroll_promotion.employee_promotions_custom_form_view
+msgid "New Basic Salary"
+msgstr "الأساسي الجديد"
+
+#. module: exp_payroll_promotion
+#: code:addons/exp_payroll_promotion/models/hr_payroll_nomination.py:0
+#, python-format
+msgid "Sorry, The Amount Of Basic Salary It Must be Greater than Zero"
+msgstr "للأسف, مبلغ الراتب الأساسي يجب ان يكون اكبر من الصفر"

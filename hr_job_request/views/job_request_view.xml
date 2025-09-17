@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="job_request_form_view">
+            <field name="name">job_request_form_view</field>
+            <field name="model">hr.job.request</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_confirm" type="object" string="Confirm" class="oe_highlight" states="draft"
+                                groups="hr_base.group_division_manager,hr.group_hr_user" />
+                        <button name="action_hr_approve" type="object" string="Hr Approve" class="oe_highlight" states="confirm"
+                                groups="hr.group_hr_user"/>
+                        <button name="action_manage_approve" type="object" string="Management Approve" class="oe_highlight"
+                                states="hr_approve"  groups="hr_base.group_executive_manager"/>
+                        <button name="action_set_draft" type="object" string="Set Draft" class="oe_highlight" states="refused"
+                                groups="hr.group_hr_user,hr_base.group_executive_manager" confirm="Are you sure to Reset To Draft This Record?"/>
+                        <button name="action_refused" type="object" string="Refused" class="oe_highlight"
+                                states="draft,confirm,hr_approve,manager_approve"
+                                groups="hr.group_hr_user,hr_base.group_executive_manager"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                            <field name="name"  attrs="{'readonly': [('state','!=', 'draft')]}" />
+                              <field name="date" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                              <field name="quarter" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+
+                            </group>
+                            <group>
+                              <field name="company_id" groups="base.group_multi_company" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                              <field name="department_id" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                              <field name="job_id" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                              <field name="needed_employee" attrs="{'readonly': [('state','!=', 'draft')]}"/>
+                            </group>
+
+                            <group>
+                            <field name="number_of_job_empty_total"/>
+                            <field name="expected_employee"/>
+                            <field name="number_of_employees"/>
+                            </group>
+                        </group>
+                         <notebook>
+                                <page string="Job Requirements">
+                                   <field name="job_requirements"
+                                               nolabel="1"
+                                               colspan="2"
+                                               attrs="{'readonly':[('state','!=','draft')]}"
+                                               placeholder="Job Requirements"/>
+                                </page>
+                            </notebook>
+                       
+                     </sheet>
+                     <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="job_request_tree_view">
+            <field name="name">job_request_tree_view</field>
+            <field name="model">hr.job.request</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="job_id"/>
+                    <field name="needed_employee"/>
+                    <field name="number_of_job_empty_total"/>
+                    <field name="expected_employee"/>
+                    <field name="number_of_employees"/>
+                    <field name="state"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="job_request_action">
+            <field name="name">Job Request</field>
+            <field name="res_model">hr.job.request</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+    </data>
+</odoo>

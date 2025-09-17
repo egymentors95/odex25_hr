@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="receiving_employee_custody_action">
+            <field name="name">Receiving Employee Custody</field>
+            <field name="res_model">hr.custody.receiving</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record model="ir.ui.view" id="receiving_employee_custody_form_view">
+            <field name="name">Receiving Employee Custody</field>
+            <field name="model">hr.custody.receiving</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button string="Submit" type="object" name="send" class="oe_highlight" states="draft"
+                                groups="base.group_user"/>
+                        <button string="Directed Manager" type="object" name="dr_manager" class="oe_highlight"
+                                states="submit"
+                                groups="hr_base.group_division_manager"/>
+                        <button string="HR Manager" type="object" name="dr_hr_manager" class="oe_highlight"
+                                states="direct"
+                                groups="hr.group_hr_user"/>
+                        <button string="Warehouse keeper" type="object" name="warehouse_keeper" class="oe_highlight"
+                                states="admin"
+                                groups="hr_base.group_general_manager,hr_base.group_executive_manager"/>
+                        <button string="Return Done" type="object" name="done" class="oe_highlight" states="approve"
+                                groups="hr.group_hr_user"/>
+                        <button string="Refuse" type="object" name="refuse" class="oe_highlight"
+                                attrs="{'invisible':[('state','in',['draft','done','refuse'])]}"
+                                groups="hr_base.group_division_manager,hr.group_hr_user"/>
+                        <button name="set_to_draft" string="Set to draft" class="oe_highlight" type="object"
+                                attrs="{'invisible':[('state','=','draft')]}"
+                                groups="hr.group_hr_user"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group string="Employee Info">
+                                <field name="from_hr_department" string="Other Employee"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="employee_id" string="Employee"
+                                       attrs="{'readonly': [('from_hr_department','=',False)],'required': [('from_hr_department','=', True)]}"/>
+                                <field name="employee_no" string="Employee Number" readonly="1"/>
+                                <field name="job_id" string="Job Title" readonly="1"/>
+                                <field name="department_id" string="Department" readonly="1"/>
+                                <field name="country_id" string="Nationality" readonly="1"/>
+                            </group>
+                            <group string="Receiving Info">
+                                <field name="current_date" string="Date" required="1"
+                                       attrs="{'readonly':[('state','!=','draft')]}"/>
+                                <field name="deduction_amount" string="Deduction Amount"
+                                       attrs="{'readonly':[('state','!=','draft')]}" readonly="1" force_save="1"/>
+                                <field name="salary_rule_id" string="Salary rule"
+                                       attrs="{'invisible':[('salary_rule_flag','=', False)],'readonly':[('state','!=','draft')],
+                                       'required':[('salary_rule_flag','=', True)]}"/>
+                                <field name="salary_rule_flag" string="Salary rule flag" invisible="1"/>
+                                <field name="advantage_line_id" string="Save contract advantage line" invisible="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <button name="re_fill_receive_custody_lines" string="Re-fill" icon="fa-cogs"
+                                    type="object" attrs="{'invisible':[('state','!=','draft')]}"/>
+                        </group>
+
+                        <separator string="Return Lines"/>
+                        <field name="return_custody_line_ids" attrs="{'readonly':[('state','!=','draft')]}">
+                            <tree editable="top">
+                                <field name="name" string="Statement of Custody" readonly="1" force_save="1" store="1"/>
+                                <field name="serial" readonly="1"/>
+                                <field name="quantity" force_save="1"/>
+                                <field name="note" readonly="1"/>
+                                <field name="deduction_amount" force_save="1" store="1"/>
+                                <field name="custody_line_id" string="line" invisible="1"/> <!--to save custody id-->
+                            </tree>
+                        </field>
+                        <field name="note" string="Note" attrs="{'readonly':[('state','!=','draft')]}"
+                               placeholder="Add Comments here ...."/>
+                        <group>
+                            <field name="call_compute_function" string="Invisible field to Call compute function"
+                                   invisible="1"/>
+                        </group>
+                    </sheet>
+
+                    <!--Discuss widgets for history and communication -->
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="receiving_employee_custody_tree_view">
+            <field name="name">Receiving Employee Custody</field>
+            <field name="model">hr.custody.receiving</field>
+            <field name="arch" type="xml">
+                <tree decoration-danger="state == 'refuse'" decoration-info="state == 'draft'" string="Receiving Employee Custody">
+                    <field name="current_date" string="Date"/>
+                    <field name="employee_id" string="Employee"/>
+                    <field name="department_id" string="Department"/>
+                    <!--field name="job_id" string="Job Title"/-->
+                    <field name="deduction_amount"/>
+                    <field name="state" string="Status"/>
+                </tree>
+            </field>
+        </record>
+
+         <menuitem name="Receiving Employee Custody" id="receiving_employee_custody"
+                  parent="custody_submenu" action="receiving_employee_custody_action"/>
+    </data>
+</odoo>

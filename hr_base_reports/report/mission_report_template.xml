@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!--Mission-->
+        <template id="employee_mission_report">
+            <t t-call="web.html_container">
+                <t t-call="hr_base.hr_layout">
+	          <style>
+			@font-face {font-family: "Sakkal Majalla"; src:
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+			format("embedded-opentype"),
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"); }
+		    </style>
+                    <div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+                        <table class="table table-condensed table-bordered">
+                            <thead class="text-center">
+                                <tr style="width:100%;">
+                                    <th colspan="15" class="text-center" style="font-size:20px">Employee Mission Report<span t-esc="date_from"/>
+                                        -
+                                        <span t-esc="date_to"/>
+                                    </th>
+                                </tr>
+                                <tr style="background-color: #263f79;width:100%;">
+                                    <th style="text-align:center;color:#FFFFFF">#</th>
+                                    <th style="text-align:center;color:#FFFFFF">Employee ID</th>
+                                    <th style="text-align:center;color:#FFFFFF">Employee Name</th>
+                                    <!--<th >Trip Number</th>-->
+                                    <th style="text-align:center;color:#FFFFFF">Department</th>
+                                    <th style="text-align:center;color:#FFFFFF">Mission Type</th>
+                                    <th style="text-align:center;color:#FFFFFF">Reference Number</th>
+                                    <th style="text-align:center;color:#FFFFFF">Start Trip</th>
+                                    <th style="text-align:center;color:#FFFFFF">End Of Trip</th>
+                                    <th style="text-align:center;color:#FFFFFF">Country</th>
+                                    <th style="text-align:center;color:#FFFFFF">City</th>
+                                    <th style="text-align:center;color:#FFFFFF">Per Diems</th>
+                                    <th style="text-align:center;color:#FFFFFF">Air Ticket Cost</th>
+                                    <th style="text-align:center;color:#FFFFFF">Total Cost</th>
+                                    <th style="text-align:center;color:#FFFFFF">Department Total Cost</th>
+                                    <th style="text-align:center;color:#FFFFFF">Mission Days Number</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <t t-set="sequence" t-value="0"/>
+                                <t t-set="Total" t-value="0.0"/>
+                                <t t-foreach="docs[0]" t-as="doc">
+                                    <t t-foreach="doc.employee_ids" t-as="o">
+                                        <t t-set="mission_data"
+                                           t-value="doc.get_mission_data(doc,o.employee_id,docs[1])"/>
+                                        <tr>
+                                            <td>
+                                                <t t-set="sequence" t-value="sequence +1"/>
+                                                <t t-esc="sequence"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.employee_id.emp_no"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.employee_id.name"/>
+                                            </td>
+                                            <!--										<td>-->
+                                            <!--											<t t-esc="trip"/>-->
+                                            <!--										</td>-->
+                                            <td>
+                                                <t t-esc="o.employee_id.department_id.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.official_mission_id.mission_type.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.official_mission_id.reference"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.date_from"/>
+                                            </td>
+
+                                            <td>
+                                                <span t-esc="o.date_to"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.official_mission_id.country_id.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.official_mission_id.destination.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.day_price"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="round(mission_data[0])"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="round(o.amount)"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="round(mission_data[1])"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="o.official_mission_id.date_duration"/>
+                                            </td>
+                                            <t t-set="Total" t-value="Total + round(o.amount)"/>
+                                        </tr>
+                                    </t>
+                                </t>
+                                <tr>
+                                    <td>Total</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-center">
+                                        <strong>
+                                            <span t-esc="Total"/>
+                                        </strong>
+                                    </td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <record id="employee_mission_report_act" model="ir.actions.report">
+            <field name="model">hr.official.mission</field>
+            <field name="name">Employee Mission Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_base_reports.employee_mission_report</field>
+            <field name="report_file">hr_base_reports.employee_mission_report</field>
+        </record>
+        <record id="employee_mission_report_act_xlsx" model="ir.actions.report">
+            <field name="model">hr.official.mission</field>
+            <field name="name">Employee Mission Report</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_base_reports.employee_mission_report_xlsx</field>
+            <field name="report_file">hr_base_reports.employee_mission_report_xlsx</field>
+        </record>
+        >
+
+        <!--		Training-->
+
+        <template id="employee_training_report">
+            <t t-call="web.html_container">
+                <t t-call="hr_base.hr_layout">
+	          <style>
+			@font-face {font-family: "Sakkal Majalla"; src:
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot"); src:
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.eot?#iefix")
+			format("embedded-opentype"),
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff2") format("woff2"),
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.woff") format("woff"),
+			url("/employee_requests/static/fonts/ce7b5754581057e6f7444e2192850cc8.ttf") format("truetype"); }
+		    </style>
+                    <div class="page" style="font-family:'Sakkal Majalla'!important;direction:rtl;font-size:15pt">
+                        <table class="table table-condensed table-bordered">
+                            <thead class="text-center">
+                                <tr style="width:100%;">
+                                    <th colspan="19" class="text-center" style="font-size:20px">Employee Training Report<span t-esc="date_from"/>
+                                       -<span t-esc="date_to"/>
+                                    </th>
+                                </tr>
+                                <tr style="background-color:#263f79;color:#FFFFFF;width:100%;">
+                                    <t t-foreach="docs[0]" t-as="doc">
+                                        <th style="text-align:center;">
+                                            <span t-esc="doc"/>
+                                        </th>
+                                    </t>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <t t-set="sequence" t-value="0"/>
+                                <t t-foreach="docs[1]" t-as="o">
+                                    <t t-set="i" t-value="0"/>
+                                    <tr>
+                                        <td>
+                                            <t t-set="sequence" t-value="sequence +1"/>
+                                            <t t-esc="sequence"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="o.employee_id.emp_no"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="o.employee_id.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.employee_id.working_location.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.employee_id.department_id.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.employee_id.job_id.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.employee_id.first_hiring_date"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.employee_id.parent_id.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.official_mission_id.course_name.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.official_mission_id.partner_id.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="o.official_mission_id.destination.name"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="round(o.train_cost_emp)"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="x[i]"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="round(o.day_price)"/>
+                                        </td>
+                                        <td>
+                                            <t t-esc="(o.day_price+o.train_cost_emp)+x[i]"/>
+                                        </td>
+                                        <t t-set="i" t-value="i+1"/>
+                                        <td>
+                                            <span t-esc="o.date_from"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="o.date_to"/>
+                                        </td>
+                                        <td>
+                                            <t>
+                                                <span t-esc="o.days"/>
+                                                Day
+                                            </t>
+
+                                         <td>
+                                           <t>
+<!--                                                <span t-esc="o.hours"/>-->
+                                                <span t-esc="o.total_hours"/>
+                                                Hour
+
+                                            </t>
+                                        </td>
+
+                                        </td>
+
+                                        <td>
+                                            <t t-esc="dict(o.fields_get(allfields=['state'])['state']['selection'])[o.state]"/>
+                                        </td>
+
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </template>
+
+        <record id="paperformat_employee_training_report" model="report.paperformat">
+            <field name="name">Employee Training Report A3 Landscape</field>
+            <field name="default" eval="False"/>
+            <field name="format">A3</field> <!-- You can use 'A2' or 'A1' if it's still not enough -->
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="orientation">Landscape</field>
+            <field name="margin_top">5</field>
+            <field name="margin_bottom">5</field>
+            <field name="margin_left">5</field>
+            <field name="margin_right">5</field>
+            <field name="header_line" eval="False"/>
+            <field name="dpi">90</field> <!-- Lower dpi = smaller font, more content fits -->
+        </record>
+
+
+        <record id="employee_training_report_act" model="ir.actions.report">
+            <field name="model">hr.official.mission</field>
+            <field name="name">Employee Training Report</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">hr_base_reports.employee_training_report</field>
+            <field name="report_file">hr_base_reports.employee_training_report</field>
+            <field name="paperformat_id" ref="hr_base_reports.paperformat_employee_training_report"/>
+        </record>
+        <record id="employee_training_report_act_xlsx" model="ir.actions.report">
+            <field name="model">hr.official.mission</field>
+            <field name="name">Employee Training Report</field>
+            <field name="report_type">xlsx</field>
+            <field name="report_name">hr_base_reports.employee_training_report_xlsx</field>
+            <field name="report_file">hr_base_reports.employee_training_report_xlsx</field>
+        </record>
+    </data>
+</odoo>

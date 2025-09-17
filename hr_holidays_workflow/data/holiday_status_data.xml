@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="workflow_stage_draft" model="workflow.stage">
+            <field name="name">draft</field>
+            <field name="state">draft</field>
+            <field name="sequence">1</field>
+            <field name="default">True</field>
+        </record>
+        <record id="workflow_stage_confirm" model="workflow.stage">
+            <field name="name">Confirm</field>
+            <field name="state">confirm</field>
+            <field name="sequence">2</field>
+            <field name="default">True</field>
+        </record>
+        <record id="workflow_stage_hr_manager" model="workflow.stage">
+            <field name="name">Hr Manager</field>
+            <field name="state">validate</field>
+            <field name="sequence">3</field>
+            <field name="default">True</field>
+        </record>
+        <record id="workflow_stage_validate1" model="workflow.stage">
+            <field name="name">Financial Manager</field>
+            <field name="state">validate1</field>
+            <field name="sequence">4</field>
+            <field name="default">True</field>
+        </record>
+        <record id="workflow_stage_refused" model="workflow.stage">
+            <field name="name">Refused</field>
+            <field name="state">refuse</field>
+            <field name="sequence">5</field>
+            <field name="default">True</field>
+        </record>
+
+                    <function model="hr.holidays" name="update_holiday_no_validation"/>
+
+    </data>
+</odoo>

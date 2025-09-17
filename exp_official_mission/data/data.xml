@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="seq_hr_official_mission" model="ir.sequence">
+            <field name="name">sequence.hr.official.mission</field>
+            <field name="code">hr.official.mission</field>
+            <field name="prefix"></field>
+            <field name="padding">8</field>
+        </record>
+    </data>
+</odoo>

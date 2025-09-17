@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_workflow_stage,access_workflow_stage,model_workflow_stage,hr.group_hr_user,1,1,1,0
+access_workflow_stage_public,access_workflow_stage_public,model_workflow_stage,,1,1,1,0
+access_workflow_holiday,access_workflow_holiday,model_holiday_workflow,hr.group_hr_user,1,1,1,1
+access_workflow_holiday_public,access_workflow_holiday_public,model_holiday_workflow,,1,1,1,1

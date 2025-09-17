@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+<!--        job request new menu -->
+        <menuitem id="job_request_menu" name="Job Request"
+                  action="job_request_action" parent="hr.menu_hr_main" sequence="8"
+                  groups="hr.group_hr_user,hr_base.group_division_manager,hr_base.group_executive_manager"/>
+    </data>
+</odoo>

@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_contract_executive,hr.contract.executive,model_hr_contract,hr_base.group_executive_manager,1,1,0,0
+access_hr_contract_user_employee,hr_contract_employee,model_hr_contract,base.group_user,1,1,0,0
+access_hr_contract_officer,hr_contract_officer,model_hr_contract,hr.group_hr_user,1,1,0,0
+access_hr_contract_type_manager,hr.contract.type.manager,model_hr_contract_type,hr.group_hr_manager,1,1,1,1
+access_hr_contract_type_user,hr.contract.type.user,model_hr_contract_type,hr.group_hr_user,1,0,0,0
+access_contract_extension_user,access_contract_extension_user,model_hr_contract_extension,hr.group_hr_user,1,1,1,1
+access_contract_extension_dp_manager,access_contract_extension_dp_manager,model_hr_contract_extension,hr_base.group_department_manager,1,1,1,0
+access_contract_extension_emp,access_contract_extension_emp,model_hr_contract_extension,base.group_user,1,1,0,0
+access_hr_re_contract_user,hr.re.contract.user,model_hr_re_contract,hr.group_hr_user,1,1,1,0
+access_hr_children_allowance_user,access_hr_children_allowance_user,model_hr_children_allowance,hr.group_hr_user,1,1,1,0
+access_hr_vacation_dest_user,access_hr_vacation_dest_user,model_hr_vacation_dest,hr.group_hr_user,1,1,1,0

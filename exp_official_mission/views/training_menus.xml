@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <menuitem name="Training" id="hr_employee_training_main_menu"
+                  parent="hr.menu_hr_root" sequence="3"/>
+
+        <menuitem name="Training Courses" id="exp_official_mission.employee_training_menu_item"
+                  parent="hr_employee_training_main_menu" action="exp_official_mission.employee_training_action"
+                  sequence="1" groups="base.group_user"/>
+
+        <menuitem name="Employees Training Courses" id="hr_employee_official_mission_menu"
+                  parent="hr_employee_training_main_menu"
+                  action="exp_official_mission.hr_employees_training_lines_action"
+                  sequence="2" groups="base.group_user"/>
+
+        <menuitem name="Configurations" id="hr_official_mission_config_menu"
+                  parent="hr_employee_training_main_menu" sequence="3"
+                  groups="group_hr_training_manager"/>
+
+
+        <menuitem name="Training Courses Name" id="exp_official_mission.employee_course_name_menu"
+                  parent="hr_official_mission_config_menu" action="exp_official_mission.employee_course_name_action"
+                  sequence="1"
+                  groups="group_hr_training_manager"/>
+
+        <menuitem name="Training Types" id="hr_employee_training_types_config_menu"
+                  parent="hr_official_mission_config_menu" action="employee_mission_type_training_settings_action"
+                  sequence="2"
+                  groups="group_hr_training_manager"/>
+
+
+
+        <menuitem name="Reports" id="hr_official_mission_report_menu"
+                  parent="hr_employee_training_main_menu" sequence="4"
+                  groups="group_hr_training_user"/>
+
+
+
+
+    </data>
+</odoo>
+

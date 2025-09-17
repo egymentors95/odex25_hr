@@ -1,0 +1,108 @@
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="employee_advantage_list_action">
+            <field name="name">Employee Allowances and Deductions</field>
+            <field name="res_model">contract.advantage</field>
+
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="employee_advantage_form_view" model="ir.ui.view">
+            <field name="name">Employee Allowances and Deductions</field>
+            <field name="model">contract.advantage</field>
+            <field name="arch" type="xml">
+                <form string="Employee Allowances and Deductions">
+
+                    <header>
+                        <button name="confirm" string="Confirm" class="oe_highlight" states="draft" type="object"
+                                groups="hr.group_hr_user,hr.group_hr_manager"/>
+                        <button name="refused" string="Refused" class="oe_highlight" states="confirm" type="object"
+                                groups="hr.group_hr_user,hr.group_hr_manager"/>
+                        <button name="draft" string="Re-Draft" class="oe_highlight" states="refused" type="object"
+                                groups="hr.group_hr_user,hr.group_hr_manager"/>
+                        <field name="state" widget="statusbar" statusbar_colors="{'KEY_IS_STATE':'VALUE_IS_COLOR'}"/>
+                    </header>
+
+                    <sheet>
+                        <group>
+                            <group>
+                                 <field name="employee_id" required="1" string='Employee Name' attrs="{'readonly':[('state','!=','draft')]}"/>
+                                 <field name="contract_advantage_id" readonly="1" force_save="1" store="1" />
+                                 <field name="type" required="1" attrs="{'readonly':[('state','!=','draft')]}" invisible="1"/>
+                                 <field name="benefits_discounts" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+
+
+                            </group>
+                            <group>
+                                  <field name="date_from"  required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                  <field name="date_to"  attrs="{'readonly':[('state','!=','draft')]}" />
+                                  <field name="amount" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+                                  <field name="out_rule" attrs="{'readonly':[('state','!=','draft')]}" />
+<!--                                  <field name="done" groups="hr.group_hr_user,hr.group_hr_manager" attrs="{'readonly':[('state','!=','draft')]}"/>-->
+                            </group>
+
+                            <group string="Allowances Or Deductions Types">
+                                  <field name="over_time_id" readonly="1"/>
+                                  <field name="official_mission_id" readonly="1"/>
+                                  <field name="reward_id"  readonly="1"/>
+                                  <field name="penalty_id"  readonly="1"/>
+                            </group>
+
+                            <group string="Comments">
+                                  <field name="comments" attrs="{'readonly':[('state','!=','draft')]}"/>
+
+                            </group>
+                        </group>
+
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="activity_ids" widget="mail_activity"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="employee_advantage_tree_view">
+            <field name="name">Employee Allowances and Deductions</field>
+            <field name="model">contract.advantage</field>
+            <field name="arch" type="xml">
+                <tree decoration-info="state == 'draft'" decoration-danger="state == 'refused'" string="Employee Allowances and Deductions">
+
+                    <field name="employee_id" string='Employee Name'/>
+                    <field name="type" invisible="1"/>
+                    <field name="benefits_discounts" />
+                    <field name="date_from" widget="Date From"/>
+                    <field name="date_to" widget="Date To"/>
+                    <field name="amount"/>
+                    <field name="state" string='State'/>
+                </tree>
+            </field>
+        </record>
+
+     <!-- view_employee_Allowances_filter -->
+     <record id="view_employee_filter_advantage" model="ir.ui.view">
+            <field name="name">Employee Allowances and Deductions</field>
+            <field name="model">contract.advantage</field>
+            <field name="type">search</field>
+            <field name="arch" type="xml">
+                    <field name="employee_id"/>
+                    <field name="benefits_discounts"/>
+                    <field name="date_from"/>
+
+            </field>
+         </record>
+
+
+        <menuitem id="employee_advantage_menu" name="Employee Allowances and Deductions"
+                  parent="exp_hr_payroll.menu_hr_payroll_root" action="employee_advantage_list_action" sequence="10"
+                  groups="hr_base.group_executive_manager,hr_base.group_general_manager,exp_hr_payroll.group_hr_payroll_user"/>
+
+        />
+<!--                  groups="hr.group_hr_user,hr.group_hr_manager,hr_base.group_executive_manager,hr_base.group_general_manager,exp_hr_payroll.group_hr_payroll_user"-->
+<!--        -->
+
+    </data>
+</odoo>

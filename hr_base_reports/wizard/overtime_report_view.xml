@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- Overtime Report Form View -->
+    <record id="overtime_report_view_form" model="ir.ui.view">
+        <field name="name">Overtime Report</field>
+        <field name="model">overtime.report</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <group col="4" colspan="2">
+                    <field name="date_from" required="1"/>
+                    <field name="date_to" required="1"/>
+                </group>
+                <group col="4" colspan="2">
+                    <field name="overtime_place" required="1"/>
+                </group>
+                <notebook>
+                    <page string="Departments">
+                        <field name="department_ids" nolabel="1"/>
+                    </page>
+                    <page string="Employees">
+                        <field name="employee_ids" nolabel="1"/>
+                    </page>
+                </notebook>
+
+                <footer>
+                    <div>
+                        <button name="action_print" string="Print" type="object" default_focus="1"
+                                class="oe_highlight"/>
+                        or
+                        <button string="Print Excel Report" type="object" name="print_excel_report"
+                                class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </div>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <!-- Overtime Report action window -->
+    <record id="overtime_report_wizard" model="ir.actions.act_window">
+        <field name="name">Overtime Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">overtime.report</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="overtime_report_menu" name="Overtime Report"
+              parent="hr_base_reports.employee_request_root_report_menu"
+              action="overtime_report_wizard" sequence="4"/>
+    <!--              parent="hr_base_reports.main_reports_menu"-->
+
+</odoo>
