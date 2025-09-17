@@ -22,6 +22,8 @@ class Contract(models.Model):
                                         ('hr_head_approval', _('HR Head Approval')),
                                         ('program_directory', _('Executive Approval')),
                                         ('end_contract', _('End Contract'))], default="draft", tracking=True)
+    contract_start_date = fields.Date(string='تاريخ بداية عقد قوى')
+    contract_end_date = fields.Date(string='تاريخ نهاية عقد قوى')
 
     active = fields.Boolean(default=True)
     employee_name = fields.Char(related="employee_id.name", readonly=True)

@@ -74,6 +74,8 @@
                         <!--field name="salary_status" attrs="{'readonly':[('state','!=','draft')]}"/>
                         <field name="recruited_talent" attrs="{'readonly':[('state','!=','draft')]}"/-->
                          <field name="class_contract" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+                         <field name="contract_start_date" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+                         <field name="contract_end_date" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
                     </group>
                 </xpath>
 
