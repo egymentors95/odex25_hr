@@ -1,0 +1,247 @@
+<odoo>
+    <data>
+        <record id="view_company_form" model="ir.ui.view">
+            <field name="name">res.company</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <!--                invisible fields    -->
+                    <field name="is_zatca" invisible="1"/>
+                    <field name="country_id_name" invisible="1"/>
+                    <field name="is_group_vat" invisible="1" force_save="1"/>
+                    <field name="csr_common_name" readonly="1" invisible="1"/>
+                    <field name="csr_serial_number" readonly="1" invisible="1"/>
+                    <field name="csr_organization_unit_name" invisible="1"/>
+                    <field name="csr_organization_name" readonly="1" invisible="1"/>
+                    <field name="csr_invoice_type" readonly="1" invisible="1"/>
+                    <field name="csr_location_address" readonly="1" invisible="1"/>
+                    <field name="csr_industry_business_category" readonly="1" invisible="1"/>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//field[@name='email']" position="attributes">
+                    <attribute name="attrs">{'required': [('is_zatca', '=', True)]}</attribute>
+                </xpath>
+                <xpath expr="//field[@name='vat']" position="after">
+                    <field name="csr_individual_vat"
+                           attrs="{'required': [('is_group_vat', '=', True)],
+                                   'invisible': [('is_group_vat', '!=', True)]}"
+                           groups="ksa_zatca_integration.l10n_sa_group_zatca_user"/>
+                    <field name="license" attrs="{'required': [('is_zatca', '=', True)]}"
+                           groups="ksa_zatca_integration.l10n_sa_group_zatca_user"/>
+                    <field name="license_no" attrs="{'required': [('is_zatca', '=', True)]}"
+                           groups="ksa_zatca_integration.l10n_sa_group_zatca_user"/>
+                </xpath>
+                <xpath expr="//field[@name='street2']" position="after">
+                    <field name="building_no" placeholder="Building Number" class="o_address_city"
+                           style="width: 41%;"
+                           attrs="{'required': [('country_id_name', '=', 'Saudi Arabia'), ('is_zatca', '=', True)],
+                                   'invisible': [('country_id_name', '!=', 'Saudi Arabia')]}"/>
+                    <field name="additional_no" placeholder="Additional Number" style="width: 57%;"
+                           attrs="{'invisible': [('country_id_name', '!=', 'Saudi Arabia')]}"/>
+                    <field name="district" placeholder="District" class="o_address_street"
+                           attrs="{'required': [('country_id_name', '=', 'Saudi Arabia'), ('is_zatca', '=', True)],
+                                   'invisible': [('country_id_name', '!=', 'Saudi Arabia')]}"/>
+                </xpath>
+                <xpath expr="//field[@name='street']" position="attributes">
+                    <attribute name="attrs">{'required': [('country_id_name', '=', 'Saudi Arabia'),
+                        ('is_zatca', '=', True)]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='city']" position="attributes">
+                    <attribute name="attrs">{'required': [('country_id_name', '=', 'Saudi Arabia'),
+                        ('is_zatca', '=', True)]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='zip']" position="attributes">
+                    <attribute name="attrs">{'required': [('country_id_name', '=', 'Saudi Arabia'),
+                        ('is_zatca', '=', True)]}
+                    </attribute>
+                </xpath>
+                <xpath expr="//field[@name='country_id']" position="attributes">
+                    <attribute name="required">1</attribute>
+                </xpath>
+                <xpath expr="//notebook" position="inside">
+                    <page id="zatca_configurations" string="Zatca Configurations"
+                          groups="ksa_zatca_integration.l10n_sa_group_zatca_user">
+                        <div class="app_settings_block" data-string="ZATCA" string="ZATCA"
+                             data-key="ZATCA">
+                            <h2>ZATCA</h2>
+                            <group>
+                                <field name="is_zatca"/>
+                            </group>
+                            <div class="row mt16 o_settings_container" attrs="{'invisible':[('is_zatca','!=', True)]}">
+                                <div class="col-12 col-lg-12 o_setting_box">
+                                    <field name="zatca_onboarding_status" readonly="1" invisible="1"/>
+                                    <field name="zatca_certificate_status" readonly="1" invisible="1"/>
+                                    <div>
+                                        <h6>User documentation</h6>
+                                        <p>
+                                            <a href="https://zatca.gov.sa/en/E-Invoicing/Introduction/Guidelines/Documents/Fatoora_Portal_User_Manual_English.pdf">
+                                                Onboarding the EGS and generating CSID
+                                            </a>
+                                            <br/>
+                                            <a href="https://zatca.gov.sa/en/E-Invoicing/Introduction/FAQ/Pages/default.aspx">
+                                                FAQ's
+                                            </a>
+                                            <br/>
+                                            <!--                                    <a href="https://zatca.gov.sa/en/E-Invoicing/Introduction/Guidelines/Documents/E-Invoicing_Detailed__Guideline.pdf">-->
+                                            <!--                                        Examples-->
+                                            <!--                                    </a>-->
+                                        </p>
+                                    </div>
+                                    <!--                                        ONLY FOR DEBUGGING-->
+                                    <group invisible="1">
+                                        <!--                                        <field name="zatca_status" readonly="0" force_save="1"/>-->
+                                        <!--                                        <field name="zatca_icv_counter" readonly="1"/>-->
+                                        <!--                                        <field name="zatca_onboarding_status" readonly="0"/>-->
+                                        <!--                                        <field name="zatca_certificate_status" readonly="1"/>-->
+                                        <!--                                        <field name="zatca_on_board_status_details"/>-->
+                                        <!--                                        <span colspan="2">live</span>-->
+                                        <!--                                        <field name="zatca_bsToken" readonly="0" style="word-wrap: anywhere;"/>-->
+                                        <!--                                        <field name="zatca_reqID" readonly="0"/>-->
+                                        <!--                                        <field name="zatca_secret" readonly="0"/>-->
+                                        <!--                                        <span colspan="2">sandbox</span>-->
+                                        <!--                                        <field name="zatca_sb_bsToken" readonly="0" style="word-wrap: anywhere;"/>-->
+                                        <!--                                        <field name="zatca_sb_reqID" readonly="0"/>-->
+                                        <!--                                        <field name="zatca_sb_secret" readonly="0"/>-->
+                                        <!--                                        <span colspan="2">Sensitive Zatca fields</span>-->
+                                        <!--                                        <field name="csr_certificate" required="0" force_save="1" style="word-wrap: anywhere;"-->
+                                        <!--                                               attrs="{'readonly' :[('zatca_certificate_status', '=', True)]}"/>-->
+                                        <!--                                        <field name="zatca_prod_private_key" readonly="0" style="word-wrap: anywhere;"/>-->
+                                        <!--                                        <field name="zatca_csr_base64" readonly="0" style="word-wrap: anywhere;"/>-->
+                                    </group>
+                                    <group>
+                                        <group>
+                                            <field name="l10n_sa_phase1_end_date"
+                                                   attrs="{'required':[('is_zatca','=', True)]}"/>
+                                            <field name="api_type"
+                                                   attrs="{'required':[('is_zatca','=', True)],
+                                                           'readonly' :[('zatca_certificate_status',  '=', True)]}"/>
+                                            <field name="zatca_invoice_type"
+                                                   attrs="{'required':[('is_zatca','=', True)],
+                                                           'readonly' :[('zatca_certificate_status',  '=', True)]}"/>
+                                        </group>
+                                        <group>
+                                            <field name="industry_id"
+                                                   attrs="{'required':[('is_zatca','=', True)]}"/>
+                                            <field name="l10n_sa_invoice_template"
+                                                   attrs="{'required':[('is_zatca','=', True)]}"/>
+                                            <field name="is_self_billed"/>
+                                            <field name="zatca_cron_send"/>
+                                            <p attrs="{'invisible':[('zatca_cron_send','=', False)]}"
+                                               colspan="2" style="padding: 20px 0px;">
+                                                <b style="font-size: large;">Note:</b>
+                                                <br/>
+                                                this will work only for Simplified Invoices,
+                                                <br/>
+                                                <b>For Standard Invoices,
+                                                    it is required to sent immediately, so do it yourself manually.
+                                                </b>
+                                            </p>
+                                            <field name="zatca_skip_cus_addr_val"/>
+                                            <p attrs="{'invisible':[('zatca_skip_cus_addr_val','=', False)]}"
+                                               colspan="2" style="padding: 20px 0px;">
+                                                <b style="font-size: large;">Note:</b>
+                                                <br/>
+                                                this will give warnings,
+                                                <br/>
+                                                <b>Repeated non-compliance (that result in warnings) will be
+                                                    investigated by ZATCA and may be subject to applicable penalties
+                                                </b>
+                                            </p>
+                                            <field name="csr_otp" force_save="1"
+                                                   attrs="{'invisible':[('api_type','=', 'Sandbox')]}"/>
+                                        </group>
+                                    </group>
+                                    <group style="padding-top: 25px;">
+                                        <field name="zatca_link" readonly="1" invisible="1"/>
+                                        <field name="zatca_status" readonly="1"/>
+                                    </group>
+                                    <group>
+                                        <field name="zatca_is_fatoora_simulation_portal" readonly="1" invisible="1"/>
+                                        <!--                                        <field name="zatca_is_sandbox" attrs="{'invisible' :[('api_type',  '!=', 'Sandbox')]}"/>-->
+                                        <span attrs="{'invisible':[('api_type','!=', 'Sandbox')]}" colspan="2"
+                                              style="display: block;text-align: -webkit-center;">
+                                            use values from zatca_sandbox sample_values.txt
+                                        </span>
+                                    </group>
+                                    <group col="3" style="padding-top: 25px;">
+
+                                        <button name="auto_compliance"
+                                                string="Onboard Device" type="object"
+                                                class="btn-primary" style="width: 100%;height: 100%;"
+                                                attrs="{'invisible' :[('zatca_status',  'in',
+                                                ['production credentials received.', 'production credentials renewed.'])]}"
+                                                groups="ksa_zatca_integration.l10n_sa_group_zatca_admin"
+                                        />
+                                        <span/>
+                                        <span/>
+                                        <!--                                        <button name="generate_zatca_certificate"-->
+                                        <!--                                                string="Generate Compliance CSID" type="object"-->
+                                        <!--                                                class="btn-primary" style="width: 100%;height: 100%;"-->
+                                        <!--                                                attrs="{'invisible' :['|', '|', ('zatca_onboarding_status','=', True),-->
+                                        <!--                                                ('zatca_certificate_status','=', True), ('zatca_status',  'in',-->
+                                        <!--                                                ['production credentials received.', 'production credentials renewed.'])]}"-->
+                                        <!--                                                groups="ksa_zatca_integration.l10n_sa_group_zatca_admin"-->
+                                        <!--                                        />-->
+                                        <!--                                        <span/>-->
+                                        <!--                                        <span/>-->
+                                        <!--                                        ONLY FOR DEBUGGING-->
+                                        <button name="reset_zatca" string="Reset ZATCA" type="object"
+                                                class="btn-primary" style="width: 100%;height: 100%;"
+                                                invisible="0"
+                                                confirm="Are You Sure ? This will reset zatca credentials"
+                                                groups="ksa_zatca_integration.l10n_sa_group_zatca_admin"/>
+                                        <span colspan="2">
+                                            only use when api link has to change to live, simulation or sandbox.
+                                        </span>
+                                        <!--                                        <button name="register_certificate" string="Register Certificate" type="object"-->
+                                        <!--                                                class="btn-primary" style="width: 100%;height: 100%;"-->
+                                        <!--                                                attrs="{'invisible' :[('zatca_certificate_status',  '=', True)]}"-->
+                                        <!--                                        />-->
+
+                                        <button name="production_credentials" string="Get PCSID" type="object"
+                                                class="btn-primary" style="width: 100%;height: 100%;"
+                                                attrs="{'invisible':['|', ('zatca_onboarding_status','!=', True),
+                                                ('zatca_status',  'in',
+                                                ['production credentials received.', 'production credentials renewed.'])]}"
+                                                groups="ksa_zatca_integration.l10n_sa_group_zatca_admin"
+                                        />
+                                        <span/>
+                                        <span/>
+                                        <button name="production_credentials_renew" string="Renew PCSID"
+                                                type="object" class="btn-primary" style="width: 100%;height: 100%;"
+                                                attrs="{'invisible':['|', ('zatca_onboarding_status','!=', True),
+                                                ('zatca_status',  'in',
+                                                ['Onboarding completed, request for production credentials now'])]}"
+                                                groups="ksa_zatca_integration.l10n_sa_group_zatca_admin"
+                                        />
+                                        <span/>
+                                        <span/>
+                                    </group>
+                                    <group col="3" name="zatca_configurations"
+                                           style="margin-top: 20px;border: 1px dotted black;padding: 10px;">
+                                        <group>
+                                            <field name="zatca_show_barcode"/>
+                                        </group>
+                                        <group>
+                                            <field name="l10n_sa_show_a4"/>
+                                            <field name="zatca_send_from_pos" force_save="1"/>
+                                        </group>
+                                        <group>
+                                            <field name="zatca_no_head_foot"/>
+                                            <field name="disable_odoo_invoices"/>
+                                        </group>
+                                    </group>
+                                </div>
+                            </div>
+                        </div>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

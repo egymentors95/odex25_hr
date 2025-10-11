@@ -1,0 +1,34 @@
+<odoo>
+    <data>
+        <record id="account_tax_view" model="ir.ui.view">
+            <field name="name">account.tax</field>
+            <field name="model">account.tax</field>
+            <field name="inherit_id" ref="account.view_tax_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//sheet/group" position="after">
+                    <field name="is_zatca" invisible="1"/>
+                    <group>
+                        <field name="l10n_charge_reason"
+                               attrs="{'invisible':[('amount_type','!=', 'fixed')]}"
+                               groups="ksa_zatca_integration.l10n_sa_group_zatca_user"/>
+                        <field name="classified_tax_category"
+                               attrs="{'invisible':['|', ('is_zatca','=', False), ('type_tax_use','!=', 'sale')]}"
+                               groups="ksa_zatca_integration.l10n_sa_group_zatca_user"/>
+                        <field name="tax_exemption_selection"
+                               attrs="{'required':[('classified_tax_category','in', ['E', 'Z'])],
+                                       'invisible':['|', '|', ('is_zatca','=', False), ('type_tax_use','!=', 'sale'), ('classified_tax_category','not in', ['E', 'Z', 'O'])]}"
+                               groups="ksa_zatca_integration.l10n_sa_group_zatca_user"/>
+                        <field name="tax_exemption_code" force_save="1"
+                               attrs="{'invisible':['|', '|', ('is_zatca','=', False), ('type_tax_use','!=', 'sale'), ('classified_tax_category','not in', ['E', 'Z', 'O'])]}"
+                               groups="ksa_zatca_integration.l10n_sa_group_zatca_user"/>
+                        <field name="tax_exemption_text" invisible="0" force_save="1"
+                               attrs="{'invisible':['|', '|',('is_zatca','=', False), ('type_tax_use','!=', 'sale'), ('classified_tax_category','not in', ['E', 'Z', 'O'])],
+                                       'readonly':[('classified_tax_category','not in', ['O'])],
+                                       'required':[('classified_tax_category','in', ['O'])],}"
+                               groups="ksa_zatca_integration.l10n_sa_group_zatca_user"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
