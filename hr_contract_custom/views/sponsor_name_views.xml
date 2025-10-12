@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="sponsor_name_view_form" model="ir.ui.view">
+        <field name="name">sponsor.name.view.form</field>
+        <field name="model">sponsor.name</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="sponsor_bank_number"/>
+                        </group>
+                        <group>
+                            <field name="computer_no"/>
+                            <field name="iban_number"/>
+                            <field name="labor_office_number"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="activity_ids" widget="mail_activity"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="sponsor_name_view_tree" model="ir.ui.view">
+        <field name="name">sponsor.name.view.tree</field>
+        <field name="model">sponsor.name</field>
+        <field name="arch" type="xml">
+            <tree string="Sponsor Names">
+                <field name="name"/>
+                <field name="sponsor_bank_number"/>
+                <field name="computer_no"/>
+                <field name="iban_number"/>
+                <field name="labor_office_number"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="sponsor_name_action" model="ir.actions.act_window">
+        <field name="name">Sponsor Names</field>
+        <field name="res_model">sponsor.name</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new Sponsor Name.
+            </p>
+        </field>
+    </record>
+    <menuitem id="sponsor_name_menu" name="اسم الكفيل" parent="hr.menu_hr_main"
+              action="sponsor_name_action" sequence="2"/>
+
+</odoo>

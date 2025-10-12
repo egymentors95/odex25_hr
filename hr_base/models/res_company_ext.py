@@ -10,6 +10,7 @@ class ResCompanyExt(models.Model):
     # branch = fields.Char("Branch" ,required=True)
     # branch_t = fields.Char("Branch Tagline")
     english_name = fields.Char(string='English Name')
+    arabic_name = fields.Char(string='Arabic Name')
     flip = fields.Boolean("/ ")
     # sponsor_id = fields.Char(string="SponsorID",required=True)
     po_no = fields.Char(string="P.O Box No", )

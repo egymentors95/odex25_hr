@@ -96,7 +96,7 @@ class HrEmployeeDocument(models.Model):
     specialization = fields.Char(string="Specialization")
     category = fields.Many2one(comodel_name="membership.categorys",string="Category")
 
-    company_id = fields.Many2one('res.company',string="Company", default=lambda self: self.env.user.company_id)
+    company_id = fields.Many2one('res.company',string="Company", default=lambda self: self.env.company)
 
     employee_number = fields.Char(related="employee_ref.contract_id.name", copy=False, string='Employee Number')
 

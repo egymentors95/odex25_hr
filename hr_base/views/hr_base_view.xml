@@ -43,7 +43,7 @@
             <field name="priority" eval="16"/>
             <field name="inherit_id" ref="hr.view_employee_form"/>
             <field name="arch" type="xml">
-                <button  name="%(hr.plan_wizard_action)d" position="before">
+                <button name="%(hr.plan_wizard_action)d" position="before">
 
                     <button name="complete_state" string="Complete Employee Data" class="oe_highlight" type="object"
                             states="draft" groups="hr.group_hr_user"/>
@@ -67,6 +67,7 @@
                             <div id="o_work_employee_main">
                                 <group>
                                     <group string="Position Info">
+                                        <field name="is_manager"/>
                                         <!--                                <field name="Employee_type" string="Employee Type"-->
                                         <!--                                       attrs="{'readonly':[('state','!=','draft')]}" required="True"/>-->
                                         <field name="contract_id" string="Contract" readonly="1"
@@ -89,12 +90,14 @@
                                         <field name="work_location" invisible="1"/>
                                         <field name="working_location" attrs="{'readonly':[('state','!=','draft')]}"
                                                string="Work Location"/>
-                                        <field name="work_email" widget="email" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                        <field name="work_email" widget="email"
+                                               attrs="{'readonly':[('state','!=','draft')]}"/>
                                         <field name="personal_email" widget="email"
                                                attrs="{'readonly':[('state','!=','draft')]}"/>
                                         <field name="mobile_phone" attrs="{'readonly':[('state','!=','draft')]}"/>
                                         <field name="work_phone" attrs="{'readonly':[('state','!=','draft')]}"/>
-                                        <field name="phone_ext" string="Extension Phone" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                        <field name="phone_ext" string="Extension Phone"
+                                               attrs="{'readonly':[('state','!=','draft')]}"/>
                                     </group>
                                     <group name="managers" string="Approvers" class="hide-group-if-empty" invisible="1">
                                         <!-- is overridden in other hr related modules -->
@@ -202,11 +205,21 @@
                                    options='{"always_reload": True, "highlight_first_line": True}' invisible="1"/>
                             <field name="payment_method" required="1"
                                    attrs="{'readonly':[('state','!=','draft')]}"/>
-                            <field name="bank_account_id" context="{'default_partner_id': address_home_id}"
-                                   attrs="{'readonly':[('state','!=','draft')], 'required': [('payment_method','=','bank')],
-                                          'invisible': [('payment_method','=','cash')]}"/>
+                            <!--                            <field name="bank_account_id" context="{'default_partner_id': address_home_id}"-->
+                            <!--                                   attrs="{'readonly':[('state','!=','draft')], 'required': [('payment_method','=','bank')],-->
+                            <!--                                          'invisible': [('payment_method','=','cash')]}"/>-->
+                            <!--                                                        <field name="bank_code"-->
+                            <!--                                   attrs="{'readonly':[('state','!=','draft')],'invisible': [('payment_method','=','cash')]}"/>-->
+
+                            <field name="res_partner_bank_ids" attrs="{'invisible': [('payment_method','=','cash')]}"
+                                   context="{'default_hr_employee': id}" mode="form,tree" options="{'no_create_edit': False, 'no_quick_create': True}">
+                                <tree>
+                                    <field name="acc_number" string="Account Number"/>
+                                    <field name="bank_id" options='{"no_open": True, "no_create": True}'/>
+                                </tree>
+                            </field>
+
                             <!--field name="iban" attrs="{'readonly':[('state','!=','draft')]}"/-->
-                            <field  name="bank_code" attrs="{'readonly':[('state','!=','draft')],'invisible': [('payment_method','=','cash')]}"/>
                         </group>
                     </page>
 
@@ -414,15 +427,15 @@
                         <field name="name"/>
                         <field name="department_id"/>
                         <field name="job_id"/>
-                        <field name="country_id" optional="hide" />
-                        <field name="gender" optional="hide" />
-<!--                              <field name="identity_number"  />-->
+                        <field name="country_id" optional="hide"/>
+                        <field name="gender" optional="hide"/>
+                        <!--                              <field name="identity_number"  />-->
                         <!--field name="saudi_number" string="Saudi ID"/>
                         <field name="iqama_number" string="Identity No"/>
                         <field name="iqama_expiy_date" string="Identity Expiry Date"/-->
                         <field name="identity_number" string="Identity No"/>
                         <field name="bank_code" optional="hide"/>
-                        <field name="iqama_expiy_date" string="Identity Expiry Date"  optional="hide"/>
+                        <field name="iqama_expiy_date" string="Identity Expiry Date" optional="hide"/>
                         <field name="work_location" invisible="1"/>
                         <field name="state"/>
                     </tree>
@@ -438,7 +451,7 @@
             <field name="inherit_id" ref="hr.view_employee_filter"/>
             <field name="arch" type="xml">
                 <xpath expr='//field[@name="name"]' position='after'>
-                    <field name="english_name" />
+                    <field name="english_name"/>
                     <field name="emp_no"/>
                     <field name="identity_number"/>
                     <field name="state"/>
@@ -452,7 +465,7 @@
         <!-- employee_view_kanban_inherit -->
 
         <record id="hr_employee_kanban_inherit" model="ir.ui.view">
-            <field name="name">hr employee kanban </field>
+            <field name="name">hr employee kanban</field>
             <field name="model">hr.employee</field>
             <field name="inherit_id" ref="hr.hr_kanban_view_employees"/>
             <field name="arch" type="xml">
@@ -482,7 +495,9 @@
 
                 <xpath expr="//field[@name='mobile']" position="after">
                     <field name="create_employee_id" force_save="1" invisible="1"/>
-                    <field name="create_employee" force_save="1" string="Create Employee" invisible="not context.get('allow_create_employee', True)" attrs="{'invisible': [('create_employee_id', '>', 0)]}"/>
+                    <field name="create_employee" force_save="1" string="Create Employee"
+                           invisible="not context.get('allow_create_employee', True)"
+                           attrs="{'invisible': [('create_employee_id', '>', 0)]}"/>
                 </xpath>
             </field>
         </record>
@@ -504,7 +519,7 @@
         <!-- hr_employee_public_view_kanban_inherit -->
 
         <record id="hr_employee_public_view_kanban_inherit" model="ir.ui.view">
-            <field name="name">hr employee public kanban </field>
+            <field name="name">hr employee public kanban</field>
             <field name="model">hr.employee.public</field>
             <field name="inherit_id" ref="hr.hr_employee_public_view_kanban"/>
             <field name="arch" type="xml">
@@ -575,7 +590,7 @@
                     </h1>
                 </xpath>
                 <xpath expr="//field[@name='company_id']" position="after">
-                    <field name="analytic_account_id"  options='{"no_open": True, "no_create": True}'/>
+                    <field name="analytic_account_id" options='{"no_open": True, "no_create": True}'/>
                 </xpath>
                 <xpath expr="//group" position="after">
                     <notebook>

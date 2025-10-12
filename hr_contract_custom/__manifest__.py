@@ -4,7 +4,9 @@
     "category": "Odex25-HR/Odex25-HR",
     "depends": [
         "hr_contract",
-        "hr_base"
+        "hr_base",
+        "mail",
+        "exp_hr_payroll",
     ],
     "data": [
         "security/ir.model.access.csv",
@@ -15,6 +17,7 @@
         "views/hr_re_contract_view.xml",
         "views/hr_contract_extension_view.xml",
         "views/hr_employee_view.xml",
+        "views/sponsor_name_views.xml",
         "report/employee_contract_report_template.xml",
         "report/employee_dependents_report_template.xml",
         "report/payroll_template.xml",

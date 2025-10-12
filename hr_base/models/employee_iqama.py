@@ -44,7 +44,6 @@ class Iqama(models.Model):
             self.serial_no = self.employee.serial_num
             self.name = self.employee.name_as_pass
             self.iqama_no = self.employee.iqama_num.id
-            self.arabic_name = self.employee.arabic_name
             self.nationality = self.employee.country_id.name
             self.issue_date = self.employee.iqama_num.issue_date
             self.expiry_date = self.employee.iqama_num.expiry_date

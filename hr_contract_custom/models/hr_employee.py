@@ -13,7 +13,7 @@ class HrEmployee(models.Model):
     payslip_lines = fields.One2many(comodel_name="hr.payslip.line", compute="compute_base_salary")
     employee_dependant = fields.One2many(related='contract_id.employee_dependant',readonly=False, tracking=True)
     employee_type_id = fields.Many2one('hr.contract.type', string="Employee Type", ondelete='cascade', tracking=True)
-
+    sponsor_name_id = fields.Many2one(comodel_name='sponsor.name', string="اسم الكفيل", ondelete='cascade', tracking=True)
 
     @api.depends("base_salary")
     def get_salary_amount(self):

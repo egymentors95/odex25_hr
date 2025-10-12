@@ -41,6 +41,7 @@ class HrEmployee(models.Model):
     grade = fields.Char()
     is_head = fields.Boolean("Is Head  of Function")
     is_line_man = fields.Boolean("Is Line Manager")
+    company_id = fields.Many2one('res.company', required=False)
 
     is_calender = fields.Boolean(default=False)
     spouse_no = fields.Char("Spouse Phone No.")
@@ -54,6 +55,10 @@ class HrEmployee(models.Model):
                                       domain="[('partner_id', '=', address_home_id)]",
                                       help="Employee bank salary account", groups="base.group_user")
     bank_code = fields.Char("Bank Name", related="bank_account_id.bank_id.name")
+    res_partner_bank_ids = fields.One2many(comodel_name='res.partner.bank', inverse_name='employee_id', string='Bank Accounts')
+
+
+
     issue = fields.Date("Issue Date")
     expiry = fields.Date("Expiry Date")
     # passport fields to private information page
@@ -248,6 +253,26 @@ class HrEmployee(models.Model):
     new_insurance = fields.Boolean(string="New Insurance", 
                     help='New participants who have no prior periods of contribution under the GOSI.')
     insurance_years = fields.Integer(string="Insurance Years", compute='_compute_insurance_years', store=True)
+
+
+    parent_id = fields.Many2one(
+        'hr.employee',
+        'Manager',
+        readonly=False,
+        # domain=lambda self: [('company_id', 'in', self.env.user.company_ids.ids)]
+
+    )
+    is_manager = fields.Boolean(string='Is Manager')
+
+    @api.onchange('is_manager')
+    def _onchange_is_manager(self):
+        for rec in self:
+            if rec.is_manager:
+                rec.company_id = False
+            else:
+                rec.company_id = self.env.company
+
+
 
     @api.depends('insurance_date')
     def _compute_insurance_years(self):
@@ -482,15 +507,15 @@ class HrEmployee(models.Model):
                             rec.emp_no = str(rec.employee_type_id.code) + str(fix_code)'''
 
     # get address_home_id field from user_id partner and email
-    @api.onchange('user_id','work_email','name')
-    def _get_address_home_id(self):
-        for item in self:
-            if item.user_id:
-               item.address_home_id = item.user_id.partner_id.id
-               ''' reset email in related partner user '''
-               item.user_id.write({'name': item.name})
-               if item.work_email:
-                  item.user_id.partner_id.write({'email': item.work_email, 'employee': True})
+    # @api.onchange('user_id','work_email','name')
+    # def _get_address_home_id(self):
+    #     for item in self:
+    #         if item.user_id:
+    #            item.address_home_id = item.user_id.partner_id.id
+    #            ''' reset email in related partner user '''
+    #            item.user_id.write({'name': item.name})
+    #            if item.work_email:
+    #               item.user_id.partner_id.write({'email': item.work_email, 'employee': True})
 
     @api.depends("country_id")
     def _check_nationality_type(self):

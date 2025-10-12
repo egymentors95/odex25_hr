@@ -291,5 +291,11 @@
 
         </record>
 
+         <record id="product_category_multi_company_rule" model="ir.rule">
+        <field name="name">Product Category: Multi-Company Access</field>
+        <field name="model_id" ref="product.model_product_category"/>
+        <field name="domain_force">['|', ('company_id', 'in', company_ids), ('company_id', '=', False)]</field>
+    </record>
+
     </data>
 </odoo>

@@ -49,6 +49,7 @@
         "views/employee_iqama_document_view.xml",
         "views/res_users_views.xml",
         "views/menus_view.xml",
+        "views/res_partner_bank_views.xml",
         # "views/res_config_settings.xml",
         'report/hr_layout.xml',
         "report/employee_dependents_report_template.xml",
