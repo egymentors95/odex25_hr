@@ -263,6 +263,17 @@ class HrEmployee(models.Model):
 
     )
     is_manager = fields.Boolean(string='Is Manager')
+    company_id2 = fields.Many2one(comodel_name='res.company', string='Company', default=lambda self: self.env.company)
+
+    address_id = fields.Many2one(comodel_name='res.partner', string='Work Address', compute="_compute_address_id", store=True,
+                                 readonly=True,
+                                 domain="['|', ('company_id', '=', False), ('company_id', '=', company_id)]")
+
+    @api.depends('company_id2')
+    def _compute_address_id(self):
+        for employee in self:
+            address = employee.company_id2.partner_id.address_get(['default'])
+            employee.address_id = address['default'] if address else False
 
     @api.onchange('is_manager')
     def _onchange_is_manager(self):
