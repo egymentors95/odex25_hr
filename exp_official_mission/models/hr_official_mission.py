@@ -1091,6 +1091,7 @@ class HrMissionTypeAccount(models.Model):
     mission_id = fields.Many2one('hr.official.mission.type', string="Mission Type", required=True, ondelete="cascade")
     emp_type_id = fields.Many2one('hr.contract.type', string="Employee Type", required=True)
     debit_account_id = fields.Many2one('account.account', string="Debit Account", required=True)
+    ticket_id = fields.Many2one('hr.ticket.request', string="Ticket Account")
 
 
 class HrOfficialMissionEmployee(models.Model):

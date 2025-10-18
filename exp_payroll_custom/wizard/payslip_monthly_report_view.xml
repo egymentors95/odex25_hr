@@ -70,7 +70,7 @@
 
 		<menuitem
 				id="payslip_xslx_report_menu"
-				name="Payslips Report"
+				name="شاشة المدد"
 				parent="exp_payroll_custom.menu_hr_payroll_report"
 				action="payslip_xslx_report_action"
 		/>

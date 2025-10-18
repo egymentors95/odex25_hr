@@ -39,7 +39,7 @@ class HrContractSalaryScale(models.Model):
 
     @api.depends('salary_scale.transfer_type')
     def compute_move_type(self):
-        self.compute_function()
+        # self.compute_function()
         if self.salary_scale.transfer_type == 'one_by_one':
             self.required_condition = True
         else:
@@ -275,6 +275,7 @@ class Advantages(models.Model):
 
     comments = fields.Text(string='Comments')
     payroll_month = fields.Text(string='Payroll Month', tracking=True)
+    company_id = fields.Many2one(comodel_name='res.company', string='Company', default=lambda self: self.env.user.company_id)
 
     @api.constrains('date_from', 'date_to', 'amount')
     def _chick_date(self):

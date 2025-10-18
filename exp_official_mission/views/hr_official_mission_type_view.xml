@@ -47,7 +47,7 @@
                                 <field name="maximum_hours" string="Maximum hours"
                                        attrs="{'invisible':[('duration_type','!=','hours')]}"/>
                                 <field name="company_id" string="Company" groups="base.group_multi_company"
-                                       readonly="1"/>
+                                       readonly="0"/>
                                 <field name="work_state" required="1" string='Mission Type'/>
                                 <field name="special_hours"
                                        attrs="{'invisible':[('work_state','not in',('others','work'))]}"/>

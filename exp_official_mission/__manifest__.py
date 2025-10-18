@@ -26,6 +26,7 @@
         'views/course_view.xml',
         'views/appraisal_view.xml',
         'views/res_partner_form_view.xml',
+        'views/hr_ticket_request_views.xml',
         'views/training_menus.xml',
         'wizard/employee_selection_wizard.xml',
         'wizard/training_appraisal.xml',
