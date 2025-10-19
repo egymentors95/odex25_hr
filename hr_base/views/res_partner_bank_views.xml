@@ -11,6 +11,15 @@
             <xpath expr="//group[1]/group[1]" position="inside">
                 <field name="default_number"/>
             </xpath>
+            <xpath expr="//field[@name='acc_holder_name']" position="after">
+                <field name="employee_id"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='acc_holder_name']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
 
         </field>
     </record>

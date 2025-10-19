@@ -212,7 +212,7 @@
                             <!--                                   attrs="{'readonly':[('state','!=','draft')],'invisible': [('payment_method','=','cash')]}"/>-->
 
                             <field name="res_partner_bank_ids" attrs="{'invisible': [('payment_method','=','cash')]}"
-                                   context="{'default_hr_employee': id}" mode="form,tree" options="{'no_create_edit': False, 'no_quick_create': True}">
+                                   context="{'default_employee_id': id}" mode="form,tree" options="{'no_create_edit': False, 'no_quick_create': True}">
                                 <tree>
                                     <field name="acc_number" string="Account Number"/>
                                     <field name="bank_id" options='{"no_open": True, "no_create": True}'/>
