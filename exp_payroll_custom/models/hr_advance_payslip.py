@@ -2952,9 +2952,10 @@ class HrPayslipRun(models.Model):
 
     def withdraw(self):
         for line in self.slip_ids:
-            payslip = self.env['hr.payslip'].search([('number', '=', line.number)])
+            payslip = self.env['hr.payslip'].search([('number', '=', line.number)], limit=1)
             loans = self.env['hr.loan.salary.advance'].search([('employee_id', '=', line.employee_id.id)])
-            if line.number == payslip.number:
+
+            if payslip:  # تأكد أن فيه سجل فعلاً
                 if line.loan_ids:
                     for loan in line.loan_ids:
                         loan.paid = False
@@ -2962,20 +2963,20 @@ class HrPayslipRun(models.Model):
                             for i in loans:
                                 if i.id == loan.loan_id.id:
                                     for l in i.deduction_lines:
-                                        if loan.date == l.installment_date and loan.paid is False:
+                                        if loan.date == l.installment_date and not loan.paid:
                                             l.paid = False
                                             l.payment_date = False
-                                           #i.remaining_loan_amount += l.installment_amount
                                             i.get_remaining_loan_amount()
 
-                                    # check remaining loan and change state to pay
+                                    # check remaining loan and change state
                                     if i.state == 'closed' and i.remaining_loan_amount > 0.0:
                                         i.state = 'pay'
                                     elif i.remaining_loan_amount == 0.0 and i.gm_propos_amount > 0.0:
                                         i.state = 'closed'
-                for record in payslip:
-                    record.write({'state': 'draft'})
-                    record.unlink()
+
+                payslip.write({'state': 'draft'})
+                payslip.unlink()
+
         self.write({'slip_ids': [(5,)]})
         self.write({'state': 'draft'})
 
