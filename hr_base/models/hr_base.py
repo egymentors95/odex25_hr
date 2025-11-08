@@ -99,7 +99,7 @@ class HrEmployee(models.Model):
     direct_emp = fields.Selection(selection=[("yes", "direct employee"), ("no", "not direct employee")], default="yes")
     is_marketer = fields.Boolean(string="marketer?")
     finger_print = fields.Boolean()
-    payment_method = fields.Selection(selection=[("cash", "cash"), ("bank", "bank")], default="cash")
+    payment_method = fields.Selection(selection=[("cash", "cash"), ("bank", "bank")], required=True)
     # fields of page private information in notebook in employees view
     religion = fields.Selection(selection=[("muslim", "Muslim"), ("christian", "Christian"), ("other", "Other")])
     blood_type = fields.Selection([

@@ -42,6 +42,18 @@
         </field>
     </record>
 
+    <record id="sponsor_name_view_search" model="ir.ui.view">
+       <field name="name">sponsor.name.view.search</field>
+       <field name="model">sponsor.name</field>
+        <field name="arch" type="xml">
+            <search string="">
+          <field name="name" string="اسم الكفيل"/>
+          <field name="computer_no" string="رقم الحاسب الالي"/>
+          <field name="labor_office_number" string="الرقم في مكتب العمل"/>
+        </search>
+       </field>
+    </record>
+
     <record id="sponsor_name_action" model="ir.actions.act_window">
         <field name="name">Sponsor Names</field>
         <field name="res_model">sponsor.name</field>
