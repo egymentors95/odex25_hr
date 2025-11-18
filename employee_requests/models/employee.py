@@ -42,7 +42,7 @@ class HrEmployee(models.Model):
     filename = fields.Char()
 
     # Payment method
-    payment_method = fields.Selection(selection=[("cash", _("Cash")), ("bank", _("Bank"))])
+    payment_method = fields.Selection(selection=[("cash", _("Cash")), ("bank", _("Bank")), ("itqan", _("اتقان"))])
     date_of_employment = fields.Date()
     length_of_service = fields.Integer()
 
