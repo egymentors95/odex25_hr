@@ -46,18 +46,17 @@ class EmployeeReceiveCustody(models.Model):
         else:
             return False
 
-
     @api.depends('employee_id')
     def _get_custody_line_domain(self):
         for item in self:
-            item.return_custody_line_ids = [(0, 0, val) for val in []]
+            item.return_custody_line_ids = [(5, 0, 0)]
             if item.employee_id:
                 employee_custody = self.env['custom.employee.custody'].search(
                     [('employee_id', '=', item.employee_id.id), ('state', 'in', ['approve', 'done'])])
                 items = []
                 for record in employee_custody:
-                    if ((item.state == 'done' and record.state == 'done') and (
-                            record.receiving_custody.id == item.id)) or record.state == 'approve':
+                    if ((item.state == 'done' and record.state == 'done') and
+                        (record.receiving_custody.id == item.id)) or record.state == 'approve':
                         for line in record.custody_line_ids:
                             if line.quantity - line.receiving_quantity > 0 and line.amount == 0:
                                 items.append({
@@ -67,7 +66,11 @@ class EmployeeReceiveCustody(models.Model):
                                     'quantity': line.quantity - line.receiving_quantity,
                                     'note': line.note,
                                     'custody_line_id': line.id})
-                item.return_custody_line_ids = [(0, 0, val) for val in items]
+
+            item.return_custody_line_ids = [(0, 0, v) for v in items]
+
+            # 🔥 هذا هو الحل الإجباري للخطأ:
+            item.call_compute_function = "ok"
 
     # Re-fill receive custody lines
 
