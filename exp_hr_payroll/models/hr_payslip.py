@@ -601,9 +601,14 @@ class HrPayslipRun(models.Model):
             ('state', '!=', 'open'),
             ('contract_id.state', '!=', 'program_directory'),
         ])
-        out_employee_records = []
+
+        out_employee_records = [(5, 0, 0)]  # امسح القديم كله
+
         for employee in employees:
-            out_employee_records.append((0, 0, {'employee_id': employee.id}))
+            out_employee_records.append((0, 0, {
+                'employee_id': employee.id
+            }))
+
         self.out_employees_ids = out_employee_records
 
     def draft_payslip_run(self):
