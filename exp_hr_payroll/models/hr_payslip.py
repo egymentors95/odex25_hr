@@ -598,8 +598,8 @@ class HrPayslipRun(models.Model):
 
     def get_all_out_employees(self):
         employees = self.env['hr.employee'].search([
-            ('state', '=', 'open'),
-            ('contract_id.state', '=', 'program_directory'),
+            ('state', '!=', 'open'),
+            ('contract_id.state', '!=', 'program_directory'),
         ])
         out_employee_records = []
         for employee in employees:
