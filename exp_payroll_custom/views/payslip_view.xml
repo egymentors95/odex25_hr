@@ -76,7 +76,7 @@
                             <tree>
                                 <field name="name"/>
                                 <field name="code"/>
-                                <field name="category_id"  string="Allowance"/>
+                                <field name="category_id" string="Allowance"/>
                                 <field name="sequence" invisible="1"/>
                                 <field name="quantity"/>
                                 <field name="rate"/>
@@ -92,7 +92,7 @@
                             <tree>
                                 <field name="name"/>
                                 <field name="code"/>
-                                <field name="category_id" string="Deduction" />
+                                <field name="category_id" string="Deduction"/>
                                 <field name="sequence" invisible="1"/>
                                 <field name="quantity" invisible="1"/>
                                 <field name="rate" invisible="1"/>
@@ -120,7 +120,7 @@
                     <group col="4" colspan="4">
                         <field name="total_allowances"/>
                         <field name="total_deductions"/>
-                        <field name="total_loans"  groups="hr_loans_salary_advance.group_loan_manager"/>
+                        <field name="total_loans" groups="hr_loans_salary_advance.group_loan_manager"/>
                         <field name="total_sum"/>
                     </group>
                 </xpath>
@@ -162,7 +162,6 @@
                 </xpath>
 
 
-
                 <xpath expr="//field[@name='credit_note']" position="before">
                     <label for="holiday_start_date" string="Holiday Period"/>
                     <div>
@@ -177,7 +176,8 @@
                            attrs="{'readonly': [('state','!=','draft')], 'required': [('required_condition','=',True)]}"/>
 
                     <field name="move_id" readonly="1" attrs="{'invisible': [('required_condition','=',False)]}"/>
-                    <field name="company_id" groups="base.group_multi_company" readonly="1" options="{'no_create': True}"/>
+                    <field name="company_id" groups="base.group_multi_company" readonly="1"
+                           options="{'no_create': True}"/>
                     <!--field name="percentage" string="Percentage" attrs="{'readonly': [('state','!=','draft')]}"/-->
                     <field name="required_condition" invisible="1"/>
                     <field name="employee_value_ids" invisible="1"/>
@@ -201,6 +201,16 @@
                             <field name="department_ids" nolabel="1" widget="many2many"
                                    attrs="{'readonly': [('state','!=','draft')]}"/>
                         </page>
+                        <page string="موظفون لم يحتسب لهم راتب">
+                            <button name="get_all_out_employees" string="get employees without payslip"
+                                    type="object" class="oe_highlight"
+                            />
+                            <field name="out_employees_ids" editable="bottom">
+                                <tree>
+                                    <field name="employee_id"/>
+                                </tree>
+                            </field>
+                        </page>
                     </notebook>
                 </xpath>
             </field>
@@ -213,7 +223,7 @@
             <field name="arch" type="xml">
                 <tree position="replace">
                     <tree decoration-success="state=='transfered'" decoration-info="state == 'draft'">
-<!--                        <field name="name"/>-->
+                        <!--                        <field name="name"/>-->
                         <field name="date_start"/>
                         <field name="date_end"/>
                         <field name="credit_note" invisible="1"/>
@@ -285,11 +295,12 @@
             <field name="inherit_id" ref="exp_hr_payroll.view_hr_payslip_tree"/>
             <field name="arch" type="xml">
                 <tree position="replace">
-                    <tree decoration-success="state=='transfered'" decoration-info="state == 'draft'" create="false" edit="false" delete="false">
+                    <tree decoration-success="state=='transfered'" decoration-info="state == 'draft'" create="false"
+                          edit="false" delete="false">
                         <!--field name="number"/-->
                         <field name="employee_no" string="Employee Number"/>
                         <field name="employee_id"/>
-<!--                        <field name="name"/>-->
+                        <!--                        <field name="name"/>-->
                         <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
                         <field name="date_from"/>
                         <field name="date_to"/>
@@ -301,7 +312,8 @@
                         <field name="employee_insurnce" sum="Employee Insurnce"/>
                         <field name="total_allowances" sum="Total Allowance"/>
                         <field name="total_deductions" sum="Total Deduction"/>
-                        <field name="total_loans" sum="Total Loans"  groups="hr_loans_salary_advance.group_loan_manager"/>
+                        <field name="total_loans" sum="Total Loans"
+                               groups="hr_loans_salary_advance.group_loan_manager"/>
                         <!--field name="percentage" string="Percentage"/-->
                         <field name="total_sum" sum="Total Net"/>
                         <field name="state"/>
@@ -324,18 +336,18 @@
                     <attribute name="create">0</attribute>
                 </xpath>
                 <xpath expr="//field[@name='employee_id']" position="after">
-                   <div class="col-12">
+                    <div class="col-12">
                         <span>
                             <field name="contract_id"/>
                         </span>
-                   </div>
+                    </div>
                 </xpath>
                 <xpath expr="//field[@name='name']" position="after">
-                   <div class="col-12">
+                    <div class="col-12">
                         <span>
                             <field name="total_sum"/>
                         </span>
-                   </div>
+                    </div>
                 </xpath>
 
                 <xpath expr="//field[@name='name']" position="attributes">
@@ -353,7 +365,7 @@
             <field name="inherit_id" ref="exp_hr_payroll.view_hr_payslip_filter"/>
             <field name="arch" type="xml">
                 <xpath expr="//field[@name='employee_id']" position="after">
-                       <field name="employee_no" string="Employee Number"/>
+                    <field name="employee_no" string="Employee Number"/>
                 </xpath>
             </field>
         </record>

@@ -588,6 +588,23 @@ class HrPayslipRun(models.Model):
                                  states={'draft': [('readonly', False)]},
                                  help="If its checked, indicates that all payslips generated from here are "
                                       "refund payslips.")
+    out_employees_ids = fields.One2many(
+        'out.employees',
+        'hr_payslip_run_id',
+        string='Out Employees',
+        readonly=True,
+        states={'draft': [('readonly', False)]}
+    )
+
+    def get_all_out_employees(self):
+        employees = self.env['hr.employee'].search([
+            ('state', '=', 'open'),
+            ('contract_id.state', '=', 'program_directory'),
+        ])
+        out_employee_records = []
+        for employee in employees:
+            out_employee_records.append((0, 0, {'employee_id': employee.id}))
+        self.out_employees_ids = out_employee_records
 
     def draft_payslip_run(self):
         return self.write({'state': 'draft'})
