@@ -29,7 +29,7 @@ class ParsedRequest(object):
     def __init__(self, data):
         self.__dict__ = json.loads(data)
 
-serverIP = "http://160.153.0.122:8008"
+serverIP = "http://alsahli-hq2.dyndns.org:8081/"
 loginUrl = serverIP + "/jwt-api-token-auth/"
 refreshUrl = serverIP + "/jwt-api-token-refresh/"
 employeeUrl = serverIP + "/personnel/api/employee/"
