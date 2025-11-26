@@ -231,12 +231,26 @@ class BiotimeAPI(models.Model):
     def errorHandler(self, res):
         if res.status_code == 401:
             self.logout()
-        else:
+            raise ValidationError("Unauthorized (401) – Token expired or invalid")
+
+        try:
             data = res.json()
-            err = ""
+        except Exception:
+            # لو مش JSON، نعرض المحتوى كما هو
+            raise ValidationError("API Error: " + res.text)
+
+        err = ""
+        if isinstance(data, dict):
             for key in data:
-                err += ' '.join(data[key])
-            raise ValidationError(err)
+                msg = data[key]
+                if isinstance(msg, list):
+                    err += ' '.join(msg)
+                else:
+                    err += str(msg)
+        else:
+            err = str(data)
+
+        raise ValidationError(err)
 
     def sync_terminals(self):
         if not self.token:
