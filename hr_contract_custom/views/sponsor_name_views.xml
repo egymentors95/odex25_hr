@@ -11,6 +11,7 @@
                         <group>
                             <field name="name"/>
                             <field name="sponsor_bank_number"/>
+                            <field name="iban_itqan"/>
                         </group>
                         <group>
                             <field name="computer_no"/>

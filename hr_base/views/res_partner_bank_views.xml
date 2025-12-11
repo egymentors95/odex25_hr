@@ -9,7 +9,6 @@
         <field name="arch" type="xml">
 
             <xpath expr="//group[1]/group[1]" position="inside">
-                <field name="iban_itqan"/>
                 <field name="default_number"/>
             </xpath>
             <xpath expr="//field[@name='acc_holder_name']" position="after">

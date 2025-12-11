@@ -12,3 +12,4 @@ class SponsorName(models.Model):
     computer_no = fields.Char(string="رقم الحاسب الالي", tracking=True)
     iban_number = fields.Char(string="رقم الايبان", tracking=True)
     labor_office_number = fields.Char(string="الرقم في مكتب العمل", tracking=True)
+    iban_itqan = fields.Char(string="IBAN Itqan")
