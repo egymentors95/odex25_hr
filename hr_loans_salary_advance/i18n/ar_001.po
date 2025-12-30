@@ -879,6 +879,7 @@ msgstr "تم دفعها"
 #: model:ir.model.fields,field_description:hr_loans_salary_advance.field_hr_account_moves__partner_id
 #: model_terms:ir.ui.view,arch_db:hr_loans_salary_advance.employee_loan_salary_form_view
 msgid "Partner"
+msgstr "شريك"
 
 #. module: hr_loans_salary_advance
 #: model:ir.model.fields.selection,name:hr_loans_salary_advance.selection__hr_loan_payment_suspension__type__payment
