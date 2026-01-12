@@ -1765,10 +1765,7 @@ class AccountMove(models.Model):
                 # Bypass errors.
                 _logger.info("Multi Send To Zatca Errors :: " + str(e))
 
-    def action_post(self):
-        res = super().action_post()
-        self.send_for_clearance()
-        return res
+
 
     @api.depends('country_code', 'move_type')
     def _compute_show_delivery_date(self):
@@ -1844,3 +1841,9 @@ class AccountMove(models.Model):
         else:
             report_template = self._get_zatca_invoice()[1]
         return self.env.ref(report_template).report_action(self)
+
+    def action_post(self):
+        res = super(AccountMove, self).action_post()
+        for rec in self:
+            rec.send_for_clearance()
+        return res
