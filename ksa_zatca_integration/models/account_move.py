@@ -1779,52 +1779,21 @@ class AccountMove(models.Model):
 
     def _post(self, soft=True):
         res = super()._post(soft)
-
         for record in self:
             conf = record.company_id.sudo()
-
-            record.l10n_sa_confirmation_datetime = fields.Datetime.now()
-
-            if (
-                    conf.is_zatca
-                    and record.move_type in ['out_invoice', 'out_refund']
-                    and record.l10n_sa_invoice_type
-                    and record.l10n_sa_phase1_end_date
-                    and record.invoice_date > record.l10n_sa_phase1_end_date
-            ):
-
-                if not record.zatca_invoice:
+            record.write({'l10n_sa_confirmation_datetime': fields.Datetime.now()})
+            if conf.is_zatca:
+                if record.move_type in ['out_invoice', 'out_refund']:
                     record.create_xml_file()
 
-                if record.l10n_sa_invoice_type == 'Standard':
-                    record.send_for_clearance()
-                elif record.l10n_sa_invoice_type == 'Simplified':
-                    record.send_for_reporting()
-
+                    if record.l10n_sa_invoice_type == 'Standard':
+                        record.send_for_clearance()
+                    elif record.l10n_sa_invoice_type == 'Simplified':
+                        record.send_for_reporting()
             record._l10n_sa_onchnage_l10n_sa_zatca_status()
-
         return res
 
-    # def _post(self, soft=True):
-    #     res = super()._post(soft)
-    #     for record in self:
-    #         conf = record.company_id.sudo()
-    #         record.write({'l10n_sa_confirmation_datetime': fields.Datetime.now()})
-    #         if (conf.is_zatca
-    #                 and ((not conf.is_self_billed and record.move_type in ['out_invoice', 'out_refund']) or
-    #                      (conf.is_self_billed and record.move_type in ['out_invoice', 'out_refund', 'in_invoice', 'in_refund']))
-    #                 and record.l10n_sa_invoice_type and record.l10n_sa_phase1_end_date and record.invoice_date > record.l10n_sa_phase1_end_date):
-    #             if (record.move_type in ['in_invoice', 'in_refund'] and record.l10n_is_self_billed_invoice) or record.move_type in ['out_invoice', 'out_refund']:
-    #                 record.create_xml_file()
-    #                 if conf.zatca_send_from_pos:
-    #                     if record.l10n_sa_invoice_type == 'Standard':
-    #                         record.send_for_clearance()
-    #                     elif record.l10n_sa_invoice_type == 'Simplified':
-    #                         record.send_for_reporting()
-    #         record._l10n_sa_onchnage_l10n_sa_zatca_status()
-    #     return res
-
-
+    # ZATCA Exceptions
     def unlink(self):
         for record in self:
             if record.l10n_sa_prohibited_exception() and record.state != 'draft':
@@ -1869,4 +1838,3 @@ class AccountMove(models.Model):
         else:
             report_template = self._get_zatca_invoice()[1]
         return self.env.ref(report_template).report_action(self)
-
