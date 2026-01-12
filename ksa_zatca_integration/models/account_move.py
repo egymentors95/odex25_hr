@@ -1137,7 +1137,7 @@ class AccountMove(models.Model):
                 raise exceptions.AccessError(_('Unauthorized Request, \nUpdate configuration for sandbox'))
             elif req.status_code == 503:
                 raise exceptions.AccessError(_('Zatca Api Service Down, \nkindly report to zatca.'))
-            elif req.status_code in [200, 202, 400]:
+            elif req.status_code in [200, 202, 400, 208]:
                 if not auto_compliance:
                     self.zatca_status_code = req.status_code
                 response = json.loads(req.text)
@@ -1179,8 +1179,9 @@ class AccountMove(models.Model):
                 string += "<tr><td colspan='2'><b>qrBuyertStatus </b></td><td colspan='4'>" + str(response['qrBuyertStatus']) + "</td></tr>"
                 string += "<tr><td colspan='6'></td></tr>"
 
-                if response['validationResults']['errorMessages'] == [] and response['validationResults']['status'] == 'PASS' and \
-                        (response['reportingStatus'] == "REPORTED" or response['clearanceStatus'] == "CLEARED"):
+                if response.get('validationResults', {}).get('errorMessages', []) == [] and \
+                        response.get('validationResults', {}).get('status') in ('PASS', 'WARNING') and \
+                        (response.get('reportingStatus') == "REPORTED" or response.get('clearanceStatus') == "CLEARED"):
                     zatca_on_board_status_details[is_tax_invoice][bt_3] = 1
                     conf.zatca_on_board_status_details = json.dumps(zatca_on_board_status_details)
                     total_required = []
@@ -1291,7 +1292,7 @@ class AccountMove(models.Model):
                 raise exceptions.AccessError(_('Unauthorized Request, \nUpdate configuration for production'))
             elif req.status_code == 503:
                 raise exceptions.AccessError(_('Zatca Api Service Down, \nkindly report to zatca.'))
-            elif req.status_code in [200, 202, 400]:
+            elif req.status_code in [200, 202, 400, 208]:
                 self.zatca_status_code = req.status_code
                 response = json.loads(req.text)
                 string = "<table style='width:100%'>"
@@ -1410,7 +1411,7 @@ class AccountMove(models.Model):
                 raise exceptions.AccessError(_('Unauthorized Request, \nUpdate configuration for production'))
             elif req.status_code == 503:
                 raise exceptions.AccessError(_('Zatca Api Service Down, \nkindly report to zatca.'))
-            elif req.status_code in [200, 202, 400]:
+            elif req.status_code in [200, 202, 400, 208]:
                 if self.is_enterprise and self.disable_odoo_invoices:
                     # for enterprise report preview
                     self.print_einv_auto(is_pdf=1)
@@ -1455,7 +1456,7 @@ class AccountMove(models.Model):
                 self.zatca_compliance_invoices_api = json_iterated
                 self._l10n_sa_onchnage_l10n_sa_zatca_status()
             else:
-                raise exceptions.AccessError(_("Zatca status") + ' ' + str(req.status_code) + "\n" + req.text)
+                raise exceptions.AccessDenied(_("Zatca status") + ' ' + str(req.status_code) + "\n" + req.text)
             if no_xml_generate:
                 return self.zatca_compliance_invoices_api
             return {
@@ -1584,7 +1585,7 @@ class AccountMove(models.Model):
         try:
             if not self.is_zatca or (self.l10n_sa_phase1_end_date and self.invoice_date <= self.l10n_sa_phase1_end_date):
                 return super()._compute_qr_code_str()
-            is_tax_invoice = 1 if self.l10n_sa_invoice_type == 'Standard' else 0
+            is_tax_invoice = 1 if self.mapped('l10n_sa_invoice_type') == ['Standard'] else 0
             if not self.get_zatca_onboarding_status():
                 self.l10n_sa_qr_code_str = ""
                 self.sa_qr_code_str = ""
