@@ -1741,17 +1741,6 @@ class AccountMove(models.Model):
 
     def send_multiple_to_zatca(self):
         self = self.filtered(lambda x: x.zatca_icv_counter).sorted(key='zatca_icv_counter')
-
-        # if int(self[0].zatca_icv_counter) > 1:
-        #     def get_last_zatca_invoice(self, icv):
-        #         record = self.search([('zatca_icv_counter', '=', icv -1)], limit=1)
-        #         if not record.id:
-        #             icv = icv - 1
-        #             record = get_last_zatca_invoice(self, icv)
-        #         return record
-        #     seq_id = get_last_zatca_invoice(self, int(self[0].zatca_icv_counter))
-        #     if seq_id.l10n_sa_zatca_status == 'Not Sended to Zatca':
-        #         raise exceptions.MissingError("Invoice " + str(seq_id.name) + " must be submitted first.")
         for record in self:
             try:
                 if record.state == 'posted':
@@ -1784,8 +1773,6 @@ class AccountMove(models.Model):
             record.write({'l10n_sa_confirmation_datetime': fields.Datetime.now()})
             if conf.is_zatca:
                 if record.move_type in ['out_invoice', 'out_refund']:
-                    record.create_xml_file()
-
                     if record.l10n_sa_invoice_type == 'Standard':
                         record.send_for_clearance()
                     elif record.l10n_sa_invoice_type == 'Simplified':
