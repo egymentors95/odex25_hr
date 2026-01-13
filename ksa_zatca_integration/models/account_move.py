@@ -1137,7 +1137,7 @@ class AccountMove(models.Model):
                 raise exceptions.AccessError(_('Unauthorized Request, \nUpdate configuration for sandbox'))
             elif req.status_code == 503:
                 raise exceptions.AccessError(_('Zatca Api Service Down, \nkindly report to zatca.'))
-            elif req.status_code in [200, 202, 400, 208]:
+            elif req.status_code in [200, 202, 400, 208, 409]:
                 if not auto_compliance:
                     self.zatca_status_code = req.status_code
                 response = json.loads(req.text)
@@ -1292,7 +1292,7 @@ class AccountMove(models.Model):
                 raise exceptions.AccessError(_('Unauthorized Request, \nUpdate configuration for production'))
             elif req.status_code == 503:
                 raise exceptions.AccessError(_('Zatca Api Service Down, \nkindly report to zatca.'))
-            elif req.status_code in [200, 202, 400, 208]:
+            elif req.status_code in [200, 202, 400, 208, 409]:
                 self.zatca_status_code = req.status_code
                 response = json.loads(req.text)
                 string = "<table style='width:100%'>"
@@ -1411,7 +1411,7 @@ class AccountMove(models.Model):
                 raise exceptions.AccessError(_('Unauthorized Request, \nUpdate configuration for production'))
             elif req.status_code == 503:
                 raise exceptions.AccessError(_('Zatca Api Service Down, \nkindly report to zatca.'))
-            elif req.status_code in [200, 202, 400, 208]:
+            elif req.status_code in [200, 202, 400, 208, 409]:
                 if self.is_enterprise and self.disable_odoo_invoices:
                     # for enterprise report preview
                     self.print_einv_auto(is_pdf=1)
