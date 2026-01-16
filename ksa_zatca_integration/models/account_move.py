@@ -86,6 +86,7 @@ class AccountMove(models.Model):
     l10n_sa_qr_code_str = fields.Char(string='Zatka QR Code ', copy=False)
     sa_qr_code_str = fields.Char(string='Zatka QR Code', copy=False, readonly=1)
     l10n_sa_zatca_status = fields.Char("E-Invoice status", copy=False, readonly=1)
+    is_not_zatca = fields.Boolean(string='Is Not ZATCA', default=False)
 
     def _get_zatca_ubl_functions(self):
         return ZatcaUBL
@@ -1766,19 +1767,19 @@ class AccountMove(models.Model):
                                                ((not conf.is_self_billed and move.move_type in ['out_invoice', 'out_refund']) or
                                                 (conf.is_self_billed and move.move_type in ['out_invoice', 'out_refund', 'in_invoice', 'in_refund'])))
 
-    # def _post(self, soft=True):
-    #     res = super()._post(soft)
-    #     for record in self:
-    #         conf = record.company_id.sudo()
-    #         record.write({'l10n_sa_confirmation_datetime': fields.Datetime.now()})
-    #         if conf.is_zatca:
-    #             if record.move_type in ['out_invoice', 'out_refund']:
-    #                 if record.l10n_sa_invoice_type == 'Standard':
-    #                     record.send_for_clearance()
-    #                 elif record.l10n_sa_invoice_type == 'Simplified':
-    #                     record.send_for_reporting()
-    #         record._l10n_sa_onchnage_l10n_sa_zatca_status()
-    #     return res
+    def _post(self, soft=True):
+        res = super()._post(soft)
+        for record in self:
+            conf = record.company_id.sudo()
+            record.write({'l10n_sa_confirmation_datetime': fields.Datetime.now()})
+            if conf.is_zatca:
+                if record.move_type in ['out_invoice', 'out_refund']:
+                    if record.l10n_sa_invoice_type == 'Standard':
+                        record.send_for_clearance()
+                    elif record.l10n_sa_invoice_type == 'Simplified':
+                        record.send_for_reporting()
+            record._l10n_sa_onchnage_l10n_sa_zatca_status()
+        return res
 
     # ZATCA Exceptions
     def unlink(self):
