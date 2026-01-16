@@ -34,6 +34,7 @@
                     <field name="is_self_billed" invisible="1"/>
                     <field name="zatca_invoice" invisible="1"/>
                     <field name="is_zatca" invisible="1"/>
+                    <field name="is_not_zatca" invisible="1"/>
 
                     <button name="send_for_clearance"
                             type="object"
