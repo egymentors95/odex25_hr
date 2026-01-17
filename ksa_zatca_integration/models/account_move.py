@@ -88,10 +88,6 @@ class AccountMove(models.Model):
     l10n_sa_zatca_status = fields.Char("E-Invoice status", copy=False, readonly=1)
     is_not_zatca = fields.Boolean(string='Is Not ZATCA', default=False)
 
-    def action_account_move_post(self):
-        for rec in self:
-            rec.action_post()
-
     def _get_zatca_ubl_functions(self):
         return ZatcaUBL
 
@@ -1478,152 +1474,146 @@ class AccountMove(models.Model):
             raise exceptions.AccessDenied(e)
 
     def hash_with_c14n_canonicalization(self, conf, api_invoice=0, xml=0, auto_compliance=0):
-        # invoice = base64.b64decode(self.zatca_invoice).decode() if not xml else xml
-        # try:
-        #     xml_file = ET.fromstring(invoice)
-        # except Exception as e:
-        #     try:
-        #         line_no = int([x for x in str(e).split(',') if 'line' in x][0][-3:])
-        #     except:
-        #         line_no = 0
-        #     message = _("Xml Validation error") + "\n" + _("special character may be present") + "\n" + "error reference ::: %s" % e
-        #     if line_no:
-        #         i = 0
-        #         line = "" + "\n"
-        #         for x in invoice.split('\n'):
-        #             if i == line_no - 2:
-        #                 line += x + "\n"
-        #             elif i == line_no - 1:
-        #                 line += x + "\n"
-        #             elif i == line_no:
-        #                 line += x + "\n"
-        #             i += 1
-        #         message += "\n" + "error line ::: %s" % line
-        #
-        #     raise exceptions.ValidationError(message)
-        #
-        # if not api_invoice:
-        #     xsl_file = ET.fromstring('''<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-        #                     xmlns:xs="http://www.w3.org/2001/XMLSchema"
-        #                     xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
-        #                     xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
-        #                     xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
-        #                     xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
-        #                     exclude-result-prefixes="xs"
-        #                     version="2.0">
-        #         <xsl:output omit-xml-declaration="yes" encoding="utf-8" indent="no"/>
-        #         <xsl:template match="node() | @*">
-        #             <xsl:copy>
-        #                 <xsl:apply-templates select="node() | @*"/>
-        #             </xsl:copy>
-        #         </xsl:template>
-        #         <xsl:template match="//*[local-name()='Invoice']//*[local-name()='UBLExtensions']"></xsl:template>
-        #         <xsl:template match="//*[local-name()='AdditionalDocumentReference'][cbc:ID[normalize-space(text()) = 'QR']]"></xsl:template>
-        #          <xsl:template match="//*[local-name()='Invoice']/*[local-name()='Signature']"></xsl:template>
-        #     </xsl:stylesheet>''')
-        #     transform = ET.XSLT(xsl_file.getroottree())
-        #     transformed_xml = transform(xml_file.getroottree())
-        self.zatca_invoice_hash = ""
-        self.zatca_invoice_hash_hex = ""
+        invoice = base64.b64decode(self.zatca_invoice).decode() if not xml else xml
+        try:
+            xml_file = ET.fromstring(invoice)
+        except Exception as e:
+            try:
+                line_no = int([x for x in str(e).split(',') if 'line' in x][0][-3:])
+            except:
+                line_no = 0
+            message = _("Xml Validation error") + "\n" + _("special character may be present") + "\n" + "error reference ::: %s" % e
+            if line_no:
+                i = 0
+                line = "" + "\n"
+                for x in invoice.split('\n'):
+                    if i == line_no - 2:
+                        line += x + "\n"
+                    elif i == line_no - 1:
+                        line += x + "\n"
+                    elif i == line_no:
+                        line += x + "\n"
+                    i += 1
+                message += "\n" + "error line ::: %s" % line
 
-        # def _l10n_sa_get_namespaces():
-        #         """
-        #             Namespaces used in the final UBL declaration, required to canonalize the finalized XML document of the Invoice
-        #         """
-        #         return {
-        #             'cac': 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2',
-        #             'cbc': 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2',
-        #             'ext': 'urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2',
-        #             'sig': 'urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2',
-        #             'sac': 'urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2',
-        #             'sbc': 'urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2',
-        #             'ds': 'http://www.w3.org/2000/09/xmldsig#',
-        #             'xades': 'http://uri.etsi.org/01903/v1.3.2#'
-        #         }
+            raise exceptions.ValidationError(message)
+
+        if not api_invoice:
+            xsl_file = ET.fromstring('''<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                            xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                            xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2"
+                            xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2"
+                            xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2"
+                            xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2"
+                            exclude-result-prefixes="xs"
+                            version="2.0">
+                <xsl:output omit-xml-declaration="yes" encoding="utf-8" indent="no"/>
+                <xsl:template match="node() | @*">
+                    <xsl:copy>
+                        <xsl:apply-templates select="node() | @*"/>
+                    </xsl:copy>
+                </xsl:template>
+                <xsl:template match="//*[local-name()='Invoice']//*[local-name()='UBLExtensions']"></xsl:template>
+                <xsl:template match="//*[local-name()='AdditionalDocumentReference'][cbc:ID[normalize-space(text()) = 'QR']]"></xsl:template>
+                 <xsl:template match="//*[local-name()='Invoice']/*[local-name()='Signature']"></xsl:template>
+            </xsl:stylesheet>''')
+            transform = ET.XSLT(xsl_file.getroottree())
+            transformed_xml = transform(xml_file.getroottree())
+
+            def _l10n_sa_get_namespaces():
+                """
+                    Namespaces used in the final UBL declaration, required to canonalize the finalized XML document of the Invoice
+                """
+                return {
+                    'cac': 'urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2',
+                    'cbc': 'urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2',
+                    'ext': 'urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2',
+                    'sig': 'urn:oasis:names:specification:ubl:schema:xsd:CommonSignatureComponents-2',
+                    'sac': 'urn:oasis:names:specification:ubl:schema:xsd:SignatureAggregateComponents-2',
+                    'sbc': 'urn:oasis:names:specification:ubl:schema:xsd:SignatureBasicComponents-2',
+                    'ds': 'http://www.w3.org/2000/09/xmldsig#',
+                    'xades': 'http://uri.etsi.org/01903/v1.3.2#'
+                }
+
+            # root = etree.fromstring(xml_content)
+            # invoice_xsl = etree.parse(get_module_resource('l10n_sa_edi', 'data', 'pre-hash_invoice.xsl'))
+            # transform = etree.XSLT(invoice_xsl)
+            # content = transform(root)
+            transformed_xml = ET.tostring(transformed_xml, method="c14n", exclusive=False, with_comments=False,
+                                          inclusive_ns_prefixes=_l10n_sa_get_namespaces())
+        else:
+            transformed_xml = xml_file.getroottree()
         #
-        #     # root = etree.fromstring(xml_content)
-        #     # invoice_xsl = etree.parse(get_module_resource('l10n_sa_edi', 'data', 'pre-hash_invoice.xsl'))
-        #     # transform = etree.XSLT(invoice_xsl)
-        #     # content = transform(root)
-        #     transformed_xml = ET.tostring(transformed_xml, method="c14n", exclusive=False, with_comments=False,
-        #                                   inclusive_ns_prefixes=_l10n_sa_get_namespaces())
-        # else:
-        #     transformed_xml = xml_file.getroottree()
-        # #
-        # # transformed_xml.find("//{http://uri.etsi.org/01903/v1.3.2#}SignedSignatureProperties")
-        # sha256_hash = hashlib.sha256()
-        # transformed_xml = transformed_xml if not api_invoice else ET.tostring(transformed_xml)
-        # sha256_hash.update(transformed_xml)
-        # generated_hash = base64.b64encode(sha256_hash.hexdigest().encode()).decode()
-        # base64_encoded = base64.b64encode(sha256_hash.digest()).decode()
-        # if auto_compliance:
-        #     return base64_encoded
-        #
-        # if not api_invoice:
-        #     self.zatca_invoice_hash = base64_encoded
-        #     self.zatca_invoice_hash_hex = generated_hash
-        # else:
-        #     return base64_encoded
-        #
-        # atts = self.env['ir.attachment'].sudo().search([('res_model', '=', 'account.move'),
-        #                                                 ('res_field', '=', 'zatca_hash_invoice'),
-        #                                                 ('res_id', 'in', self.ids),
-        #                                                 ('company_id', 'in', [conf.id, False])])
-        # if atts:
-        #     atts.sudo().write({'datas': base64.b64encode(transformed_xml)})
-        # else:
-        #     atts.sudo().create([{
-        #         'name': self.zatca_invoice_name.replace('.xml', '_hash.xml'),
-        #         'res_model': 'account.move',
-        #         'res_field': 'zatca_hash_invoice',
-        #         'res_id': self.id,
-        #         'type': 'binary',
-        #         'datas': base64.b64encode(transformed_xml),
-        #         'mimetype': 'text/xml',
-        #         'company_id': conf.id,
-        #     }])
-        # self.zatca_hash_invoice_name = self.zatca_invoice_name.replace('.xml', '_hash.xml')
+        # transformed_xml.find("//{http://uri.etsi.org/01903/v1.3.2#}SignedSignatureProperties")
+        sha256_hash = hashlib.sha256()
+        transformed_xml = transformed_xml if not api_invoice else ET.tostring(transformed_xml)
+        sha256_hash.update(transformed_xml)
+        generated_hash = base64.b64encode(sha256_hash.hexdigest().encode()).decode()
+        base64_encoded = base64.b64encode(sha256_hash.digest()).decode()
+        if auto_compliance:
+            return base64_encoded
+
+        if not api_invoice:
+            self.zatca_invoice_hash = base64_encoded
+            self.zatca_invoice_hash_hex = generated_hash
+        else:
+            return base64_encoded
+
+        atts = self.env['ir.attachment'].sudo().search([('res_model', '=', 'account.move'),
+                                                        ('res_field', '=', 'zatca_hash_invoice'),
+                                                        ('res_id', 'in', self.ids),
+                                                        ('company_id', 'in', [conf.id, False])])
+        if atts:
+            atts.sudo().write({'datas': base64.b64encode(transformed_xml)})
+        else:
+            atts.sudo().create([{
+                'name': self.zatca_invoice_name.replace('.xml', '_hash.xml'),
+                'res_model': 'account.move',
+                'res_field': 'zatca_hash_invoice',
+                'res_id': self.id,
+                'type': 'binary',
+                'datas': base64.b64encode(transformed_xml),
+                'mimetype': 'text/xml',
+                'company_id': conf.id,
+            }])
+        self.zatca_hash_invoice_name = self.zatca_invoice_name.replace('.xml', '_hash.xml')
 
     # TODO: multi record suppport
     @mute_logger('Zatca Debugger for account.move :')
     def _compute_qr_code_str(self):
-        self.l10n_sa_qr_code_str = ""
-        self.sa_qr_code_str = ""
-
-
-    # _zatca.info('_compute_qr_code_str')
-        # self = self.sudo()
-        # try:
-        #     if not self.is_zatca or (self.l10n_sa_phase1_end_date and self.invoice_date <= self.l10n_sa_phase1_end_date):
-        #         return super()._compute_qr_code_str()
-        #     is_tax_invoice = 1 if self.mapped('l10n_sa_invoice_type') == ['Standard'] else 0
-        #     if not self.get_zatca_onboarding_status():
-        #         self.l10n_sa_qr_code_str = ""
-        #         self.sa_qr_code_str = ""
-        #     elif is_tax_invoice:
-        #         _zatca.info("is_tax_invoice:: %s", self.l10n_sa_invoice_type)
-        #         _zatca.info("zatca_hash_cleared_invoice:: %s", self.zatca_hash_cleared_invoice)
-        #         invoice = base64.b64decode(self.zatca_hash_cleared_invoice).decode()
-        #         _zatca.info("invoice:: %s", invoice)
-        #         invoice = invoice.replace('<?xml version="1.0" encoding="UTF-8"?>', '')
-        #         _zatca.info("invoice:: %s", invoice)
-        #         xml_file = ET.fromstring(invoice).getroottree()
-        #         qr_code_str = xml_file.xpath('//*[local-name()="ID"][text()="QR"]/following-sibling::*/*')[0].text
-        #         _zatca.info("qr_code_str:: %s", qr_code_str)
-        #         self.l10n_sa_qr_code_str = qr_code_str
-        #         self.sa_qr_code_str = qr_code_str
-        #     else:
-        #         invoice = base64.b64decode(self.zatca_invoice).decode()
-        #         xml_file = ET.fromstring(invoice).getroottree()
-        #         signature_value = xml_file.find("//{http://www.w3.org/2000/09/xmldsig#}SignatureValue").text
-        #         bt_115 = xml_file.find("//{urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2}PayableAmount").text
-        #         bt_110 = xml_file.find(
-        #             "//{urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2}TaxAmount").text
-        #         self.compute_qr_code_str(signature_value, is_tax_invoice, bt_115, bt_110)
-        # except Exception as e:
-        #     _logger.info("QR code can't be generated. " + str(e))
-        #     self.l10n_sa_qr_code_str = ""
-        #     self.sa_qr_code_str = ""
+        _zatca.info('_compute_qr_code_str')
+        self = self.sudo()
+        try:
+            if not self.is_zatca or (self.l10n_sa_phase1_end_date and self.invoice_date <= self.l10n_sa_phase1_end_date):
+                return super()._compute_qr_code_str()
+            is_tax_invoice = 1 if self.mapped('l10n_sa_invoice_type') == ['Standard'] else 0
+            if not self.get_zatca_onboarding_status():
+                self.l10n_sa_qr_code_str = ""
+                self.sa_qr_code_str = ""
+            elif is_tax_invoice:
+                _zatca.info("is_tax_invoice:: %s", self.l10n_sa_invoice_type)
+                _zatca.info("zatca_hash_cleared_invoice:: %s", self.zatca_hash_cleared_invoice)
+                invoice = base64.b64decode(self.zatca_hash_cleared_invoice).decode()
+                _zatca.info("invoice:: %s", invoice)
+                invoice = invoice.replace('<?xml version="1.0" encoding="UTF-8"?>', '')
+                _zatca.info("invoice:: %s", invoice)
+                xml_file = ET.fromstring(invoice).getroottree()
+                qr_code_str = xml_file.xpath('//*[local-name()="ID"][text()="QR"]/following-sibling::*/*')[0].text
+                _zatca.info("qr_code_str:: %s", qr_code_str)
+                self.l10n_sa_qr_code_str = qr_code_str
+                self.sa_qr_code_str = qr_code_str
+            else:
+                invoice = base64.b64decode(self.zatca_invoice).decode()
+                xml_file = ET.fromstring(invoice).getroottree()
+                signature_value = xml_file.find("//{http://www.w3.org/2000/09/xmldsig#}SignatureValue").text
+                bt_115 = xml_file.find("//{urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2}PayableAmount").text
+                bt_110 = xml_file.find(
+                    "//{urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2}TaxAmount").text
+                self.compute_qr_code_str(signature_value, is_tax_invoice, bt_115, bt_110)
+        except Exception as e:
+            _logger.info("QR code can't be generated. " + str(e))
+            self.l10n_sa_qr_code_str = ""
+            self.sa_qr_code_str = ""
 
     def compute_qr_code_str(self, signature_value, is_tax_invoice, bt_115, bt_110):
         def get_qr_encoding(tag, field):
@@ -1779,16 +1769,16 @@ class AccountMove(models.Model):
 
     def _post(self, soft=True):
         res = super()._post(soft)
-        # for record in self:
-        #     conf = record.company_id.sudo()
-        #     record.write({'l10n_sa_confirmation_datetime': fields.Datetime.now()})
-        #     if conf.is_zatca:
-        #         if record.move_type in ['out_invoice', 'out_refund']:
-        #             if record.l10n_sa_invoice_type == 'Standard':
-        #                 record.send_for_clearance()
-        #             elif record.l10n_sa_invoice_type == 'Simplified':
-        #                 record.send_for_reporting()
-        #     record._l10n_sa_onchnage_l10n_sa_zatca_status()
+        for record in self:
+            conf = record.company_id.sudo()
+            record.write({'l10n_sa_confirmation_datetime': fields.Datetime.now()})
+            if conf.is_zatca:
+                if record.move_type in ['out_invoice', 'out_refund']:
+                    if record.l10n_sa_invoice_type == 'Standard':
+                        record.send_for_clearance()
+                    elif record.l10n_sa_invoice_type == 'Simplified':
+                        record.send_for_reporting()
+            record._l10n_sa_onchnage_l10n_sa_zatca_status()
         return res
 
     # ZATCA Exceptions
