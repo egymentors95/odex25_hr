@@ -88,6 +88,10 @@ class AccountMove(models.Model):
     l10n_sa_zatca_status = fields.Char("E-Invoice status", copy=False, readonly=1)
     is_not_zatca = fields.Boolean(string='Is Not ZATCA', default=False)
 
+    def action_account_move_post(self):
+        for rec in self:
+            rec.action_post()
+
     def _get_zatca_ubl_functions(self):
         return ZatcaUBL
 
